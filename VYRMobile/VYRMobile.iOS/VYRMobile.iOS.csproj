@@ -130,4 +130,7 @@
       <Name>VYRMobile</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\seahawks.jpg" />
+  </ItemGroup>
 </Project>

@@ -6,11 +6,34 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.MainPage">
 
-    <StackLayout>
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+
+            <Color x:Key="BorderColor">#FF4682B4</Color>
+            <Color x:Key="MainColor">#FF4682B4</Color>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid Grid.Row="0" BackgroundColor="#4D3BB2">
+    </Grid>-->
+
+    <StackLayout
+        Padding="10"
+        x:Name="Start"
+        >
         <!-- Place new controls here -->
-        <Label Text="Welcome to Xamarin!" 
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand" />
+        <!--Logo del inicio -->
+        <Image Source="seahawks.jpg"></Image>
+
+        <!--Ingresar datos del usuario -->
+        <Entry Placeholder="Username" PlaceholderColor="White" Keyboard="Email" MaxLength="25"/>
+        <Entry Placeholder="Password" IsPassword="True" PlaceholderColor="White" MaxLength="25" />
+        
+        
+        
     </StackLayout>
+       
+            
+            
 
 </ContentPage>
