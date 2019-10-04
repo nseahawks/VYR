@@ -16,7 +16,7 @@ namespace VYRMobile
         public MainPage()
         {
             InitializeComponent();
-            // test
+            
         }
     }
 }
