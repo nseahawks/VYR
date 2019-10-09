@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Login">
+
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+
+        </OnPlatform>
+    </ContentPage.Padding>
+
+
+    <ContentPage.Content>
+
+        <Grid BackgroundColor="#86839A">
+            <!--<local:GradientColorStack StartColor="Green" EndColor="Red">
+                <StackLayout VerticalOptions="CenterAndExpand">
+
+                </StackLayout>
+
+            </local:GradientColorStack> -->
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="80" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="50" />
+
+            </Grid.RowDefinitions>
+
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 10, 0, 0">
+                <Label Text="Bienvenido" TextColor="White"/>
+                <Image Source="seahawks.png" Opacity="0.6" VerticalOptions="Start" Margin="0, 3, 0, 0"/>
+
+            </StackLayout>
+
+            <Grid Grid.Row="1" Margin="40,0,20,0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="40"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Entry Grid.Row="1" Placeholder="Usuario" PlaceholderColor="White" FontSize="18" BackgroundColor="#033C60" TextColor="White" />
+                <Entry Grid.Row="2" Placeholder="Contraseña" PlaceholderColor="White" FontSize="18" IsPassword="True" BackgroundColor="#033C60" TextColor="White"/>
+                <Button Grid.Row="3" BorderRadius="20"  x:Name="Loginbtn" Text="Iniciar sesión" BackgroundColor="DarkGray" TextColor="White" HeightRequest="50" VerticalOptions="Start" />
+
+            </Grid>
+
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

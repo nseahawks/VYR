@@ -17,6 +17,23 @@ namespace VYRMobile
         {
             InitializeComponent();
             // test
+
+            var image = new Image { Source = "seahawks.png" };
+            var entrar = new Button { 
+                Text = "Empezar" 
+            };
+
+            entrar.Clicked += OnButtonClicked;
+            var imagenLayout = new StackLayout();
+
+            imagenLayout.Children.Add(image);
+            imagenLayout.Children.Add(entrar);
+            Content = imagenLayout;
+        }
+        private async void OnButtonClicked(object sender, EventArgs args)
+        {
+            //((NavigationPage)this.Parent).PushAsync(new Login());
+            await Navigation.PushAsync(new Login());
         }
     }
 }

@@ -4,17 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:local="clr-namespace:VYRMobile"
-             x:Class="VYRMobile.MainPage">
+             x:Class="VYRMobile.Menu"
+             Title="Menu">
 
+    <StackLayout>
+        <Button Text="Configuracion" BackgroundColor="White" BorderColor="White" Clicked="ConfiguracionClicked"/>
+        <Button Text="Historial" BackgroundColor="White" BorderColor="White" Clicked="HistorialClicked"/>
+    </StackLayout>
 
-    <!-- <ScrollView>
-        <StackLayout>
-        <Label Text="Dale a la vaina" FontSize="18"/>
-        <Button x:Name="Entrar" Text="Entrar" BackgroundColor="Gray" TextColor="White"/>
-        </StackLayout>
-    
-
-    </ScrollView>
-    -->
 </ContentPage>

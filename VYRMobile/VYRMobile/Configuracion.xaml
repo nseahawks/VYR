@@ -4,17 +4,12 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             xmlns:local="clr-namespace:VYRMobile"
-             x:Class="VYRMobile.MainPage">
-
-
-    <!-- <ScrollView>
+             x:Class="VYRMobile.Configuracion">
+    <ContentPage.Content>
         <StackLayout>
-        <Label Text="Dale a la vaina" FontSize="18"/>
-        <Button x:Name="Entrar" Text="Entrar" BackgroundColor="Gray" TextColor="White"/>
+            <Label Text="VENTANA DE CONFIGURACION"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
         </StackLayout>
-    
-
-    </ScrollView>
-    -->
+    </ContentPage.Content>
 </ContentPage>
