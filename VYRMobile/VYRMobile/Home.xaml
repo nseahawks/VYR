@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Home"
+             Title="Home">
+    <ContentPage.Content>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+
+            </Grid.RowDefinitions>
+            <StackLayout VerticalOptions="Start"
+                     HeightRequest="100">
+                <Frame
+                x:Name="CronometroView"
+                 BackgroundColor="#FF05DE15"
+                 CornerRadius="35"
+                 WidthRequest="400"
+                 HeightRequest="100"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Center"
+                 Opacity="25">
+                    <Label Text="Cronometro" FontSize="22" TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"/>
+                </Frame>
+            </StackLayout>
+
+            <Button Grid.Row="0" Text="Call" BorderColor="Orange" BorderWidth="2" FontAttributes="Bold" BackgroundColor="Orange" BorderRadius="50" TextColor="Black" HorizontalOptions="End" WidthRequest="60" HeightRequest="60" Margin="0,0,20,22" VerticalOptions="End"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

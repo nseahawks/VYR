@@ -6,17 +6,20 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using Xamarin.Forms.Maps;
 
 namespace VYRMobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Dashboard : MasterDetailPage
+    public partial class Dashboard : Xamarin.Forms.TabbedPage
     {
         public Dashboard()
         {
             InitializeComponent();
-            this.Detail = new NavigationPage(new Detail());
-            this.Master = new Menu();
+            On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            Xamarin.FormsMaps.Init(this, bundle);
+
         }
     }
 }

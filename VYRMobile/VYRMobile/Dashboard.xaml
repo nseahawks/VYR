@@ -1,9 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Dashboard">
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            x:Class="VYRMobile.Dashboard"
+            BarBackgroundColor="#2B3180"
+            BarTextColor="#FFFFFF">
+    <TabbedPage.Children>
+        <ContentPage Title="Home"
+                 IconImageSource="home.png"
+                 >
+            <ContentPage.Content>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <StackLayout VerticalOptions="Start"
+                     HeightRequest="100"
+                                 Grid.Row="0">
+                        <Frame
+                x:Name="CronometroView"
+                 BackgroundColor="#FF05DE15"
+                 CornerRadius="35"
+                 WidthRequest="400"
+                 HeightRequest="100"
+                 VerticalOptions="Start"
+                 HorizontalOptions="Center"
+                 Opacity="25"
+                            BorderColor="DarkGreen"
+                            >
+                            <Label Text="Cronometro" FontSize="22" TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="Fill"
+                                 HeightRequest="150"
+                                 Grid.Row="1">
+
+                        <Frame x:Name="InfoRuta"
+                               BackgroundColor="White"
+                               CornerRadius="5"
+                               WidthRequest="400"
+                               HeightRequest="150"
+                               VerticalOptions="Fill"
+                               HorizontalOptions="Center">
+
+                            <Label Text="INFORMACION DE RUTA" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+                        </Frame>
+                        
+                    </StackLayout>
+
+                    <StackLayout
+                        VerticalOptions="Fill"
+                        HeightRequest="50"
+                        Grid.Row="2">
+
+                        <Button Text="Empezar Ronda" BackgroundColor="#0082AA" CornerRadius="25" 
+                                HeightRequest="50"
+                                WidthRequest="175"
+                                HorizontalOptions="Center"
+                                BorderColor="DarkBlue"
+                                BorderWidth="3"/>
+
+                    </StackLayout>
+
+                    <Button Grid.Row="3" Text="Call" BorderColor="DarkBlue" BorderWidth="2" FontAttributes="Bold" BackgroundColor="#008BFF" BorderRadius="50" TextColor="Black" HorizontalOptions="End" WidthRequest="60" HeightRequest="60" Margin="0,0,20,22" VerticalOptions="End"/>
+                </Grid>
+            </ContentPage.Content>
+        </ContentPage>
+        <ContentPage Title="Mapa"
+                     IconImageSource="map.png">
+
+        </ContentPage>
+    </TabbedPage.Children>
     
-</MasterDetailPage>
+
+</TabbedPage>

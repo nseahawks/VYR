@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace VYRMobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Feed : ContentPage
+    public partial class Home : ContentPage
     {
-        public Feed()
+        public Home()
         {
             InitializeComponent();
         }
