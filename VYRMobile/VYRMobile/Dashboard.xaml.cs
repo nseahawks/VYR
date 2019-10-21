@@ -17,8 +17,8 @@ namespace VYRMobile
         public Dashboard()
         {
             InitializeComponent();
+
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
-            Xamarin.FormsMaps.Init(this, bundle);
 
         }
     }

@@ -1,14 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            mc:Ignorable="d"
             x:Class="VYRMobile.Dashboard"
             BarBackgroundColor="#2B3180"
-            BarTextColor="#FFFFFF">
+            BarTextColor="#FFFFFF"
+            BackgroundColor="White">
     <TabbedPage.Children>
+        <!--Tab de historial -->
+        <ContentPage Title="Historial"
+                     IconImageSource="">
+
+        </ContentPage>
+        <!--Tab del dashboard -->
         <ContentPage Title="Home"
                  IconImageSource="home.png"
                  >
@@ -19,29 +25,35 @@
                         <RowDefinition Height="*"/>
 
                     </Grid.RowDefinitions>
+                    
+                    <!--View del cronometro -->
                     <StackLayout VerticalOptions="Start"
                      HeightRequest="100"
                                  Grid.Row="0">
                         <Frame
                 x:Name="CronometroView"
-                 BackgroundColor="#FF05DE15"
-                 CornerRadius="35"
-                 WidthRequest="400"
-                 HeightRequest="100"
-                 VerticalOptions="Start"
-                 HorizontalOptions="Center"
-                 Opacity="25"
-                            BorderColor="DarkGreen"
+                BackgroundColor="LightGray"
+                CornerRadius="35"
+                WidthRequest="400"
+                HeightRequest="150"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                Opacity="25"
+                BorderColor="Gray"
                             >
                             <Label Text="Cronometro" FontSize="22" TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
                         </Frame>
                     </StackLayout>
 
+                    <!--Boton de pausa -->
                     <StackLayout VerticalOptions="Fill"
-                                 HeightRequest="150"
-                                 Grid.Row="1">
+                                 HeightRequest="50"
+                                 Grid.Row="1"
+                                 >
+                        <Button Grid.Row="1" ImageSource="pause.png" CornerRadius="20" HeightRequest="50"
+                                WidthRequest="100" HorizontalOptions="Center" BackgroundColor="Aqua" BorderColor="LightBlue"/>
 
-                        <Frame x:Name="InfoRuta"
+                        <!--<Frame x:Name="InfoRuta"
                                BackgroundColor="White"
                                CornerRadius="5"
                                WidthRequest="400"
@@ -51,30 +63,63 @@
 
                             <Label Text="INFORMACION DE RUTA" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
 
-                        </Frame>
+                        </Frame> -->
                         
                     </StackLayout>
 
+                    <!--View de tareas -->
                     <StackLayout
                         VerticalOptions="Fill"
-                        HeightRequest="50"
-                        Grid.Row="2">
+                        HeightRequest="500"
+                        Grid.Row="2"
+                        HorizontalOptions="Center">
 
-                        <Button Text="Empezar Ronda" BackgroundColor="#0082AA" CornerRadius="25" 
+                        <Frame x:Name="MenuTareas"
+                               BackgroundColor="White"
+                               CornerRadius="5"
+                               WidthRequest="250"
+                               HorizontalOptions="Center"
+                               HeightRequest="500">
+                            <Label Text="Tareas a solucionar:" />
+
+                        </Frame>
+                        
+                    </StackLayout>
+                    <!--Empezar Ronda -->
+                    <StackLayout
+                        VerticalOptions="End"
+                        HeightRequest="50"
+                        Grid.Row="3">
+
+                        <Button Text="Empezar Ronda" BackgroundColor="#F6BE14" CornerRadius="25" 
                                 HeightRequest="50"
                                 WidthRequest="175"
                                 HorizontalOptions="Center"
-                                BorderColor="DarkBlue"
+                                BorderColor="#9E7406"
                                 BorderWidth="3"/>
 
                     </StackLayout>
-
-                    <Button Grid.Row="3" Text="Call" BorderColor="DarkBlue" BorderWidth="2" FontAttributes="Bold" BackgroundColor="#008BFF" BorderRadius="50" TextColor="Black" HorizontalOptions="End" WidthRequest="60" HeightRequest="60" Margin="0,0,20,22" VerticalOptions="End"/>
+                    <!--Boton de llamada -->
+                    <Button Grid.Row="4" Text="Call" BorderColor="DarkBlue" BorderWidth="2" 
+                            FontAttributes="Bold" BackgroundColor="#008BFF" BorderRadius="50" 
+                            TextColor="Black" HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
+                            Margin="0,0,20,22" VerticalOptions="End"/>
                 </Grid>
             </ContentPage.Content>
         </ContentPage>
+        <!--Tab del mapa -->
         <ContentPage Title="Mapa"
                      IconImageSource="map.png">
+
+        </ContentPage>
+        <!--Tab de reportes -->
+        <ContentPage Title="Reportes"
+                     IconImageSource="">
+
+        </ContentPage>
+        <!--Tab del usuario -->
+        <ContentPage Title="Mi Usuario"
+                     IconImageSource="">
 
         </ContentPage>
     </TabbedPage.Children>

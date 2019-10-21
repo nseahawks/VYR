@@ -18,7 +18,6 @@ namespace VYRMobile
             InitializeComponent();
             // test
 
-            var image = new Image { Source = "seahawks.png" };
             var entrar = new Button { 
                 Text = "Empezar" 
             };
@@ -26,7 +25,6 @@ namespace VYRMobile
             entrar.Clicked += OnButtonClicked;
             var imagenLayout = new StackLayout();
 
-            imagenLayout.Children.Add(image);
             imagenLayout.Children.Add(entrar);
             Content = imagenLayout;
         }
