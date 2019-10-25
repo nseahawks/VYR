@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VYRMobile
+namespace VYRMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Mapa : ContentPage
+    public partial class Usuario : ContentPage
     {
-        public Mapa()
+        public Usuario()
         {
             InitializeComponent();
         }

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.CrearReporte"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid x:Name="MainGrid">
+            <Frame BackgroundColor="#005EB2" 
+                           HeightRequest="25" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="Start"
+                           CornerRadius="0"/>
+            <ImageButton   x:Name="btnAtras"
+                           Source="back2.png"
+                           BackgroundColor="#005EB2"
+                           HorizontalOptions="Start"
+                           VerticalOptions="Start"
+                           HeightRequest="35"
+                           WidthRequest="35"
+                           Margin="5, 15, 0,0"/>
+
+            <Label Text="Nuevo Reporte" 
+                           TextColor="White" 
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           Margin="50, 16, 0, 0"/>
+
+            <ScrollView VerticalOptions="FillAndExpand">
+                <StackLayout VerticalOptions="FillAndExpand" Padding="24" Spacing="0">
+                    <StackLayout VerticalOptions="CenterAndExpand">
+                        <!-- Place new controls here -->
+                        <Label x:Name="IntroLabel" Margin="0,30,0,16" FontSize="15" TextColor="Black" Text="Rellene su reporte" />
+                        <StackLayout x:Name="FormLayout" Spacing="16" VerticalOptions="CenterAndExpand">
+                           
+                            <StackLayout Spacing="6" Grid.Column="0">
+                                <Label Text="TITULO"  FontSize="12" />
+                                <Entry BackgroundColor="White" TextColor="Black"/>
+                            </StackLayout>
+            
+                            <StackLayout Spacing="6">
+                                <Label Text="DESCRIPCION" FontSize="12" />
+                                <Entry BackgroundColor="White" TextColor="Black"/>
+                            </StackLayout>
+                            <StackLayout Spacing="6">
+                                <Label Text="DIRECCION"  FontSize="12" />
+                                <Entry BackgroundColor="White" TextColor="Black" />
+                            </StackLayout>
+                            
+                            <StackLayout Spacing="6">
+                                <Label Text="ESTATUS" FontSize="12" />
+                                <Picker ItemsSource="{Binding EstatusList}" 
+                                        ItemDisplayBinding="{Binding Value}" 
+                                        TextColor="Black"/>
+                            </StackLayout>
+                          
+                        </StackLayout>
+                    </StackLayout>
+                    <Button x:Name="SubmitReport"  VerticalOptions="EndAndExpand" Text="ENVIAR" Margin="16" />
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
