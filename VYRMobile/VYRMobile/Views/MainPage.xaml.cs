@@ -33,5 +33,6 @@ namespace VYRMobile
             //((NavigationPage)this.Parent).PushAsync(new Login());
             await Navigation.PushAsync(new Login());
         }
+        
     }
 }
