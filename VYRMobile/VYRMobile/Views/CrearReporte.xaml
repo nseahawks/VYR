@@ -8,7 +8,7 @@
              NavigationPage.HasNavigationBar="False"
              BackgroundColor="White">
     <ContentPage.Content>
-        <Grid x:Name="MainGrid" RowSpacing="1">
+        <Grid x:Name="MainGrid">
             <Frame         BackgroundColor="#005EB2" 
                            Grid.Row="0"
                            HeightRequest="25" 
@@ -27,7 +27,7 @@
                            Margin="10, 15, 0,0"
                            CornerRadius="12"/>
 
-            <Label         Text="Nuevo Reporte" 
+            <Label         Text="Nuevo Reporte"
                            TextColor="White" 
                            FontSize="Large"
                            FontAttributes="Bold"
@@ -52,30 +52,33 @@
                            WidthRequest="25"
                            CornerRadius="12"
                            Margin="0, 15, 15, 0"/>
-            
-            <Entry Placeholder="Titulo"
+            <Grid Grid.Row="1">
+            <StackLayout VerticalOptions="StartAndExpand">
+                <Entry Placeholder="Titulo"
                            PlaceholderColor="DarkGray"
                            TextColor="Black"
                            HorizontalOptions="FillAndExpand"
                            VerticalOptions="Start"
-                           BackgroundColor="White"
-                           Grid.Row="1"/>
+                           BackgroundColor="White"/>
 
-            <Editor Placeholder="Descripcion"
+                <Editor Placeholder="Descripcion"
                            PlaceholderColor="DarkGray"
                            TextColor="Black"
-                           HeightRequest="100"
+                           HeightRequest="150"
                            BackgroundColor="White"
                            VerticalOptions="Start"
                            Grid.Row="2"/>
- 
-            <Image x:Name="Image1" 
+
+                <Image x:Name="Image1" 
                            HeightRequest="100"
                            WidthRequest="60"
                            HorizontalOptions="Start"
-                           Grid.Row="3"
-                           />
-            
+                           Grid.Row="3"/>
+            </StackLayout>
+            </Grid>
+
+
+
             <!--<ScrollView VerticalOptions="FillAndExpand">
                 <StackLayout VerticalOptions="FillAndExpand" Padding="24" Spacing="0">
                     <StackLayout VerticalOptions="CenterAndExpand">

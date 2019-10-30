@@ -13,6 +13,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
+using Plugin.Geolocator;
 
 namespace VYRMobile
 {
@@ -28,27 +29,21 @@ namespace VYRMobile
            
         }
         List<Place> placesList = new List<Place>();
-        /*public void OnMapReady(GoogleMap map)
-        {
-            MarkerOptions markerOpt1 = new MarkerOptions();
-            markerOpt1.SetPosition(new LatLng(50.379444, 2.773611));
-            markerOpt1.SetTitle("Vimy Ridge");
-
-            map.AddMarker(markerOpt1);
-        }*/
+ 
         private async void UpdateMap()
         {
             try
             {
+
                 var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
-                Stream stream = assembly.GetManifestResourceStream("VYRMobile.Places.json");
+                /*Stream stream = assembly.GetManifestResourceStream("VYRMobile.Places.json");
                 string text = string.Empty;
                 using (var reader = new StreamReader(stream))
                 {
                     text = reader.ReadToEnd();
                 }
 
-                var resultObject = JsonConvert.DeserializeObject<Places>(text);
+                /*var resultObject = JsonConvert.DeserializeObject<Places>(text);
 
                 foreach (var place in resultObject.results)
                 {
@@ -68,12 +63,16 @@ namespace VYRMobile
                 //PlacesListView.ItemsSource = placesList;
                 //var request = new GeolocationRequest(GeolocationAccuracy.Medium);
                 var loc = await Xamarin.Essentials.Geolocation.GetLocationAsync();
-
+                */
 
                 //var lat = (double.Parse(loc.Latitude.ToString()));
                 //var lng = (double.Parse(loc.Longitude.ToString()));
 
-                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(47.6370891183, -122.123736172), Distance.FromKilometers(100)));
+                var locator = CrossGeolocator.Current;
+                locator.DesiredAccuracy = 100;
+                var position = await locator.GetPositionAsync();
+                Position _position = new Position(position.Latitude, position.Longitude);
+                MyMap.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(_position.Latitude, _position.Longitude), Distance.FromMiles(0.2)));
 
             }
             catch (Exception ex)

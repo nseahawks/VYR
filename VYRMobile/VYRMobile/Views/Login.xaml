@@ -7,11 +7,11 @@
              x:Class="VYRMobile.Login"
              NavigationPage.HasNavigationBar="False">
 
-    <ContentPage.Padding>
+    <!--<ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
 
         </OnPlatform>
-    </ContentPage.Padding>
+    </ContentPage.Padding>-->
 
 
     <ContentPage.Content>
@@ -22,7 +22,7 @@
 
                 </StackLayout>
 
-            </local:GradientColorStack> -->
+            </local:GradientColorStack> 
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="80" />
@@ -42,14 +42,37 @@
                     <RowDefinition Height="40"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-
-                <Entry Grid.Row="1" Placeholder="Usuario" PlaceholderColor="White" FontSize="18" BackgroundColor="#033C60" TextColor="White" />
-                <Entry Grid.Row="2" Placeholder="Contraseña" PlaceholderColor="White" FontSize="18" IsPassword="True" BackgroundColor="#033C60" TextColor="White"/>
-                <Button Grid.Row="3" BorderRadius="20"  x:Name="Loginbtn" Text="Iniciar sesión" BackgroundColor="#005EB2" TextColor="White" HeightRequest="50" VerticalOptions="Start" />
-
-            </Grid>
-
+                </Grid.RowDefinitions>-->
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Label/>
+                <Entry Grid.Row="1" 
+                       FontSize="18" 
+                       BackgroundColor="White" 
+                       TextColor="Black" 
+                       HeightRequest="50" 
+                       WidthRequest="300"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="Center"/>
+                <Entry Grid.Row="2" 
+                       FontSize="18" 
+                       IsPassword="True" 
+                       BackgroundColor="White" 
+                       TextColor="Black"
+                       HeightRequest="50" 
+                       WidthRequest="300"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="Center"/>
+                <Button Grid.Row="3" 
+                       BorderRadius="20"  
+                       x:Name="Loginbtn" 
+                       Text="Iniciar sesión" 
+                       BackgroundColor="#005EB2" 
+                       TextColor="White" 
+                       HeightRequest="50" 
+                       WidthRequest="150"
+                       VerticalOptions="Start" 
+                       HorizontalOptions="Center"/>
+            </StackLayout>
 
         </Grid>
     </ContentPage.Content>

@@ -21,6 +21,12 @@
                            FontSize="Large"
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
+            <StackLayout Padding="0,20,0,0" VerticalOptions="Center" HorizontalOptions="Center">
+                <Label Text="Click Below To Get Location" TextColor="Blue" HorizontalOptions="Center"/>
+                <Button Text="Find Location" Clicked="OnButtonClicked" BackgroundColor="Azure"
+HorizontalOptions="CenterAndExpand"/>
+                <Label x:Name="addressLabel" TextColor="Navy" Margin="20,20,0,0" />
+            </StackLayout>
             </Grid>
         </ContentPage.Content>
     </ContentPage>
