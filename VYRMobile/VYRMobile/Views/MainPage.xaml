@@ -9,13 +9,5 @@
              NavigationPage.HasNavigationBar="False">
 
 
-    <!-- <ScrollView>
-        <StackLayout>
-        <Label Text="Dale a la vaina" FontSize="18"/>
-        <Button x:Name="Entrar" Text="Entrar" BackgroundColor="Gray" TextColor="White"/>
-        </StackLayout>
-    
-
-    </ScrollView>
-    -->
+  
 </ContentPage>

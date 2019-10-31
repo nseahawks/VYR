@@ -13,26 +13,40 @@ namespace VYRMobile
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
+        Image splashImage;
         public MainPage()
         {
             InitializeComponent();
-            // test
 
-            var entrar = new Button { 
-                Text = "Empezar" 
+            var sub = new AbsoluteLayout();
+            splashImage = new Image {
+            Source="seahawks.png",
+            WidthRequest = 100,
+            HeightRequest = 100
             };
 
-            entrar.Clicked += OnButtonClicked;
-            var imagenLayout = new StackLayout();
+            AbsoluteLayout.SetLayoutFlags(splashImage,
+                AbsoluteLayoutFlags.PositionProportional);
+            AbsoluteLayout.SetLayoutBounds(splashImage,
+                new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
 
-            imagenLayout.Children.Add(entrar);
-            Content = imagenLayout;
+            sub.Children.Add(splashImage);
+
+            this.BackgroundColor = Color.FromHex("#FFFFFF");
+            this.Content = sub;
+           
+           
         }
-        private async void OnButtonClicked(object sender, EventArgs args)
+        protected override async void OnAppearing() 
         {
-            //((NavigationPage)this.Parent).PushAsync(new Login());
-            await Navigation.PushAsync(new Login());
+            base.OnAppearing();
+
+            await splashImage.ScaleTo(1, 2000);
+            await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
+            await splashImage.ScaleTo(150, 1200, Easing.Linear);
+            Application.Current.MainPage = new NavigationPage(new Login());
         }
+       
         
     }
 }

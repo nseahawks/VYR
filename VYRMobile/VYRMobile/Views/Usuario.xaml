@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Usuario"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              Title="Usuario"
              IconImageSource="usuario2.png">
     <ContentPage.Content>
@@ -19,6 +20,62 @@
                            FontSize="Large"
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
+            <Grid Margin="0, 70,0,0">
+                <StackLayout HeightRequest="150">
+                    <Frame  HeightRequest="190">
+                        <StackLayout>
+                            <controls:CircleImage Source="usuario.png"
+                                      VerticalOptions="Start"
+                                      HeightRequest="150"
+                                      WidthRequest="150"/>
+                            <Label  Text="Ramon Perez"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            HorizontalOptions="Center"/>
+                            <Label  Text="9852-34644"
+                            TextColor="Black"
+                            FontSize="Small"
+                            HorizontalOptions="Center"/>
+                        </StackLayout>
+                    </Frame>
+                    <Frame HeightRequest="80">
+                        <StackLayout>
+                            <Button x:Name="Config"
+                            BackgroundColor="White"
+                            ImageSource="config.png"
+                            Text="Configuracion"
+                            TextColor="Black"
+                            FontSize="Small"
+                            HeightRequest="40"
+                            HorizontalOptions="Fill"/>
+
+                            <Button x:Name="Equipo"
+                            BackgroundColor="White"
+                            ImageSource="equipo.png"
+                            Text="Equipos utilizados"
+                            TextColor="Black"
+                            FontSize="Small"
+                            HeightRequest="40"
+                            HorizontalOptions="Fill"/>
+
+                        </StackLayout>
+                    </Frame>
+                    <Frame  HeightRequest="35"
+                            HorizontalOptions="Fill"
+                            BackgroundColor="White"
+                            VerticalOptions="End">
+                            <Button x:Name="Logout"
+                            BackgroundColor="White"
+                            ImageSource="logout.png"
+                            Text="Cerrar Sesion"
+                            TextColor="Black"
+                            FontSize="Medium"
+                            FontAttributes="Bold"
+                            HeightRequest="30"
+                            HorizontalOptions="Fill"/>
+                    </Frame>
+                </StackLayout>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

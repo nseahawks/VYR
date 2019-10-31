@@ -7,9 +7,9 @@
              x:Class="VYRMobile.Historial"
              NavigationPage.HasNavigationBar="False" 
              Title="Historial"
-             IconImageSource="historial2.png"
-                     >
+             IconImageSource="historial2.png">
         <ContentPage.Content>
+        <ScrollView>
             <Grid>
                 <Frame BackgroundColor="#005EB2" 
                            HeightRequest="25" 
@@ -28,5 +28,6 @@ HorizontalOptions="CenterAndExpand"/>
                 <Label x:Name="addressLabel" TextColor="Navy" Margin="20,20,0,0" />
             </StackLayout>
             </Grid>
-        </ContentPage.Content>
+        </ScrollView>
+    </ContentPage.Content>
     </ContentPage>
