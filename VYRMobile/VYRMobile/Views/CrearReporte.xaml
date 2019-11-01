@@ -68,13 +68,15 @@
                            BackgroundColor="White"
                            VerticalOptions="Start"
                            Grid.Row="2"/>
-
                 <Image x:Name="Image1" 
-                           HeightRequest="100"
+                       HeightRequest="100"
                            WidthRequest="60"
                            HorizontalOptions="Start"
                            Grid.Row="3"/>
-            </StackLayout>
+                   
+
+
+                </StackLayout>
             </Grid>
 
 
