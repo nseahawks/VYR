@@ -10,7 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Include="Controls\Places.json" />
+    <EmbeddedResource Include="Controllers\Places.json" />
   </ItemGroup>
 
   <ItemGroup>
@@ -58,5 +58,9 @@
     <EmbeddedResource Update="Views\Usuario.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
   </ItemGroup>
 </Project>
