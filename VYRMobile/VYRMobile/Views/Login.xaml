@@ -44,8 +44,18 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>-->
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Label/>
-                <Entry Grid.Row="1" 
+                <Image Grid.Row="0"
+                       Source="seahawks2.png"
+                       HorizontalOptions="Center"
+                       Margin="2,0,0,0"
+                       />
+                <Label Grid.Row="1" 
+                       Text="Usuario" 
+                       TextColor="#005EB2"
+                       FontSize="Subtitle"
+                       FontAttributes="Bold"
+                       Margin="33,0,0,0"/>
+                <Entry Grid.Row="2" 
                        FontSize="18" 
                        BackgroundColor="White" 
                        TextColor="Black" 
@@ -53,7 +63,13 @@
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
-                <Entry Grid.Row="2" 
+                <Label Grid.Row="3"
+                       Text="Contraseña" 
+                       TextColor="#005EB2"
+                       FontSize="Subtitle"
+                       FontAttributes="Bold"
+                       Margin="33,0,0,0"/>
+                <Entry Grid.Row="4" 
                        FontSize="18" 
                        IsPassword="True" 
                        BackgroundColor="White" 
@@ -62,7 +78,7 @@
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
-                <Button Grid.Row="3" 
+                <Button Grid.Row="5" 
                        BorderRadius="20"  
                        x:Name="Loginbtn" 
                        Text="Iniciar sesión" 

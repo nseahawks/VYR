@@ -16,7 +16,7 @@
                            HorizontalOptions="FillAndExpand" 
                            VerticalOptions="Start"
                            CornerRadius="0"/>
-            
+
             <ImageButton   x:Name="btnAtras"
                            Source="back2.png"
                            BackgroundColor="#005EB2"
@@ -52,8 +52,9 @@
                            WidthRequest="25"
                            CornerRadius="12"
                            Margin="0, 15, 15, 0"/>
-            <Grid Grid.Row="1">
-            <StackLayout VerticalOptions="StartAndExpand">
+
+            <StackLayout VerticalOptions="StartAndExpand"
+                         Margin="0, 70, 0, 0">
                 <Entry Placeholder="Titulo"
                            PlaceholderColor="DarkGray"
                            TextColor="Black"
@@ -68,52 +69,18 @@
                            BackgroundColor="White"
                            VerticalOptions="Start"
                            Grid.Row="2"/>
+                <Picker    Title="--Estatus--"
+                           ItemsSource="{Binding EstatusList}"
+                           ItemDisplayBinding="{Binding Value}"
+                           Grid.Row="3"/>
+
                 <Image x:Name="Image1" 
-                       HeightRequest="100"
+                           HeightRequest="100"
                            WidthRequest="60"
                            HorizontalOptions="Start"
-                           Grid.Row="3"/>
-                   
-
-
-                </StackLayout>
-            </Grid>
-
-
-
-            <!--<ScrollView VerticalOptions="FillAndExpand">
-                <StackLayout VerticalOptions="FillAndExpand" Padding="24" Spacing="0">
-                    <StackLayout VerticalOptions="CenterAndExpand">
-                        Place new controls here
-                        <Label x:Name="IntroLabel" Margin="0,30,0,16" FontSize="15" TextColor="Black" Text="Rellene su reporte" />
-                        <StackLayout x:Name="FormLayout" Spacing="16" VerticalOptions="CenterAndExpand">
-                           
-                            <StackLayout Spacing="6" Grid.Column="0">
-                                <Label Text="TITULO"  FontSize="12" />
-                                <Entry BackgroundColor="White" TextColor="Black"/>
-                            </StackLayout>
-            
-                            <StackLayout Spacing="6">
-                                <Label Text="DESCRIPCION" FontSize="12" />
-                                <Entry BackgroundColor="White" TextColor="Black"/>
-                            </StackLayout>
-                            <StackLayout Spacing="6">
-                                <Label Text="DIRECCION"  FontSize="12" />
-                                <Entry BackgroundColor="White" TextColor="Black" />
-                            </StackLayout>
-                            
-                            <StackLayout Spacing="6">
-                                <Label Text="ESTATUS" FontSize="12" />
-                                <Picker ItemsSource="{Binding EstatusList}" 
-                                        ItemDisplayBinding="{Binding Value}" 
-                                        TextColor="Black"/>
-                            </StackLayout>
-                          
-                        </StackLayout>
-                    </StackLayout>
-                    <Button x:Name="SubmitReport"  VerticalOptions="EndAndExpand" Text="ENVIAR" Margin="16" />
-                </StackLayout>
-            </ScrollView> -->
+                           Margin="10, 0, 0, 0"
+                           Grid.Row="4"/>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

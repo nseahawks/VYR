@@ -11,7 +11,8 @@
 
     <ContentPage.Content>
         <Grid>
-            <Frame BackgroundColor="#005EB2" 
+            <Frame         Grid.Row="0"
+                           BackgroundColor="#005EB2" 
                            HeightRequest="25" 
                            HorizontalOptions="FillAndExpand" 
                            VerticalOptions="Start"
@@ -21,7 +22,7 @@
                            FontSize="Large"
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
-            <Grid>
+            <Grid Margin="0, 66, 0, 0">
                 <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True">
                     <map:Map.ItemTemplate>
                         <DataTemplate>

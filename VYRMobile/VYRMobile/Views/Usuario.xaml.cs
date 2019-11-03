@@ -15,6 +15,13 @@ namespace VYRMobile.Views
         public Usuario()
         {
             InitializeComponent();
+
+            Logout.Clicked += Logout_clicked;
+        }
+
+        private void Logout_clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new Login());
         }
     }
 }
