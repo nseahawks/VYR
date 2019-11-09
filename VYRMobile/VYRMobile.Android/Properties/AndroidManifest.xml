@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" android:versionCode="1" android:versionName="1.0" package="com.companyname.vyrmobile" android:installLocation="preferExternal">
 	<uses-sdk android:minSdkVersion="23" android:targetSdkVersion="28" />
-	<application android:label="VYRMobile.Android" android:icon="@mipmap/icon">
+	<application android:label="VYRMobile.Android" android:icon="@drawable/seahawks">
 		<meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="AIzaSyCRKhNAkaHcGeN7rvZabsCogdupeOQ24Zc" />
 		<meta-data android:name="com.google.android.gms.version" android:value="@integer/google_play_services_version" />
 		<uses-library android:name="org.apache.http.legacy" android:required="false" />

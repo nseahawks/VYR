@@ -20,25 +20,27 @@
                            FontSize="Large"
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
-            <Grid Margin="0, 70,0,0">
+            <ScrollView>
+                <Grid Margin="0, 70,0,0">
                 <StackLayout HeightRequest="150">
                     <Frame  HeightRequest="190">
                         <StackLayout>
-                            <controls:CircleImage Source="usuario.png"
-                                      VerticalOptions="Start"
-                                      HeightRequest="150"
-                                      WidthRequest="150"/>
+                            <controls:CircleImage 
+                                    Source="usuario.png"
+                                    VerticalOptions="Start"
+                                    HeightRequest="150"
+                                    WidthRequest="150"/>
                             <Label  Text="Ramon Perez"
-                            TextColor="Black"
-                            FontSize="Medium"
-                            HorizontalOptions="Center"/>
+                                    TextColor="Black"
+                                    FontSize="Medium"
+                                    HorizontalOptions="Center"/>
                             <Label  Text="9852-34644"
-                            TextColor="Black"
-                            FontSize="Small"
-                            HorizontalOptions="Center"/>
+                                    TextColor="Black"
+                                    FontSize="Small"
+                                    HorizontalOptions="Center"/>
                         </StackLayout>
                     </Frame>
-                    <Frame HeightRequest="80">
+                    <Frame HeightRequest="120">
                         <StackLayout>
                             <Button x:Name="Config"
                             BackgroundColor="White"
@@ -49,10 +51,19 @@
                             HeightRequest="40"
                             HorizontalOptions="Fill"/>
 
-                            <Button x:Name="Equipo"
+                            <Button x:Name="Equipamiento"
                             BackgroundColor="White"
                             ImageSource="equipo.png"
-                            Text="Equipos utilizados"
+                            Text="Equipamiento"
+                            TextColor="Black"
+                            FontSize="Small"
+                            HeightRequest="40"
+                            HorizontalOptions="Fill"/>
+
+                            <Button x:Name="Estadisticas"
+                            BackgroundColor="White"
+                            ImageSource="equipo.png"
+                            Text="Estadisticas"
                             TextColor="Black"
                             FontSize="Small"
                             HeightRequest="40"
@@ -60,7 +71,7 @@
 
                         </StackLayout>
                     </Frame>
-                    <Frame  HeightRequest="35"
+                    <Frame  HeightRequest="45"
                             HorizontalOptions="Fill"
                             BackgroundColor="White"
                             VerticalOptions="End">
@@ -71,11 +82,12 @@
                             TextColor="Black"
                             FontSize="Medium"
                             FontAttributes="Bold"
-                            HeightRequest="30"
+                            HeightRequest="40"
                             HorizontalOptions="Fill"/>
                     </Frame>
                 </StackLayout>
             </Grid>
+            </ScrollView>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

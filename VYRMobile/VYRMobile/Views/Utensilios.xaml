@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Utensilios"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Frame BackgroundColor="#005EB2" 
+                           HeightRequest="25" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="Start"
+                           CornerRadius="0"/>
+            <Label Text="Mi Usuario" 
+                           TextColor="White" 
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           Margin="10, 16, 0, 0"/>
+            <StackLayout>
+                <Label Text="Gasolina"
+                       Margin="20, 40, 0, 0"/>
+                <Switch IsToggled="True"
+                    ThumbColor="#005EB2"
+                        Margin="0, 40, 20, 0"/>
+
+            </StackLayout>
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

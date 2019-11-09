@@ -3,19 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VYRMobile.ViewModels;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VYRMobile
+namespace VYRMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Home : ContentPage
+    public partial class Utensilios : ContentPage
     {
-        public Home()
+        public Utensilios()
         {
             InitializeComponent();
-            BindingContext = new CronoViewModel();
         }
     }
 }
