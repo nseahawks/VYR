@@ -21,17 +21,19 @@ namespace VYRMobile.Views
             btnReporte.Clicked += btnReporte_Clicked;
         }
 
-        /*protected async override void OnAppearing()
+        protected async override void OnAppearing()
         {
             base.OnAppearing();
 
             //HttpClient client = _api.VRAPI();
             _client = new HttpClient();
-            string url = "https://jsonplaceholder.typicode.com/todos/";
+            string url = "https://vyrapi.azurewebsites.net/api/v1/reports";
             //string url = "https://169.254.80.80:5001/api/v1/reports";
 
             try
             {
+                
+                
                 var response = await _client.GetAsync(url);
                 if (response.IsSuccessStatusCode)
                 {
@@ -50,7 +52,7 @@ namespace VYRMobile.Views
             //ReportViewModel reports = ReportViewModel.FromJson(json);
 
             //client.Dispose();
-        }*/
+        }
         private void btnReporte_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CrearReporte());

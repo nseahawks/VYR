@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.Messaging;
 
 namespace VYRMobile
 {
@@ -16,6 +17,17 @@ namespace VYRMobile
         {
             InitializeComponent();
             BindingContext = new CronoViewModel();
+            BindingContext = new CallViewModel();
+            //CallFrancisco.Clicked += CallFrancisco_clicked;
         }
+
+        /*private void CallFrancisco_clicked(object sender, EventArgs e)
+        {
+            var phoneCallTask = CrossMessaging.Current.PhoneDialer;
+            if (phoneCallTask.CanMakePhoneCall)
+            {
+                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
+            }
+        }*/
     }
 }

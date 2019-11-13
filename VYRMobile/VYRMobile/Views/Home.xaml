@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              Title="Home"
@@ -27,8 +28,7 @@
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
             </Grid>
-            <ScrollView>
-                <!--View del cronometro -->
+            <!--View del cronometro -->
                 <StackLayout VerticalOptions="Start"
                      HeightRequest="300"
                          Margin="0,69,0,0">
@@ -85,7 +85,7 @@
                     </Frame>
                 </StackLayout>
 
-            </ScrollView>
+               
             <!--View de tareas 
             <StackLayout
                         VerticalOptions="Fill"
@@ -117,10 +117,20 @@
                                 BorderWidth="3"/>
 
             </StackLayout>
-            <Button Grid.Row="4" Text="Call" BorderColor="DarkBlue" BorderWidth="2" 
-                            FontAttributes="Bold" BackgroundColor="#008BFF" BorderRadius="50" 
-                            TextColor="Black" HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
+            <Button     Grid.Row="2"         
+                x:Name="CallFrancisco"
+                         ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
                             Margin="0,0,20,22" VerticalOptions="End"/>-->
+            <!--<Grid        
+                Grid.Row="3"
+                HorizontalOptions="End"
+                Margin="0, 0, -24, 0">
+                <controls:CallMenu 
+                    SelectedCommand="{Binding ItemSelectedCommand}"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+            </Grid>-->
         </Grid>
+        
     </ContentPage.Content>
 </ContentPage>

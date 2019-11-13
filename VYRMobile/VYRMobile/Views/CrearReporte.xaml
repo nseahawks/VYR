@@ -55,7 +55,8 @@
 
             <StackLayout VerticalOptions="StartAndExpand"
                          Margin="0, 70, 0, 0">
-                <Entry Placeholder="Titulo"
+                <Entry     x:Name="titulo"
+                           Placeholder="Titulo"
                            PlaceholderColor="DarkGray"
                            TextColor="Black"
                            HorizontalOptions="FillAndExpand"

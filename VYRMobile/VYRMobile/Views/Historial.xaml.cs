@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
@@ -17,9 +17,20 @@ namespace VYRMobile
         public Historial()
         {
             InitializeComponent();
+            BindingContext = new CallViewModel();
             
+
+            /*Menu.ItemTapped += async (sender, e) =>
+            {
+                var evnt = (SelectedItemChangedEventArgs)e;
+                Notifier.Text = (string)evnt.SelectedItem;
+                await Task.Delay(2000);
+                Notifier.Text = "";
+
+            };*/
         }
-        async void OnButtonClicked(object sender, EventArgs e)
+        
+    async void OnButtonClicked(object sender, EventArgs e)
         {
             Geocoder geoCoder = new Geocoder();
             try
