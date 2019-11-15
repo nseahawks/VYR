@@ -30,7 +30,7 @@ namespace VYRMobile
             };*/
         }
         
-    async void OnButtonClicked(object sender, EventArgs e)
+    /*async void OnButtonClicked(object sender, EventArgs e)
         {
             Geocoder geoCoder = new Geocoder();
             try
@@ -53,6 +53,6 @@ namespace VYRMobile
             {
                 await DisplayAlert("Notification", "Unable to get GPS Location " + ex, "Ok");
             }
-        }
+        }*/
     }
 }

@@ -23,7 +23,11 @@
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
             <Grid Margin="0, 66, 0, 0">
-                <map:Map x:Name="MyMap" MapType="Street" HasZoomEnabled="True">
+                <map:Map x:Name="MyMap" 
+                         MapType="Street" 
+                         HasZoomEnabled="True"
+                         HasScrollEnabled="True"
+                         IsShowingUser="True">
                     <map:Map.ItemTemplate>
                         <DataTemplate>
                             <map:Pin Position="{Binding Position}"

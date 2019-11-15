@@ -103,21 +103,24 @@
 
                 </Frame>
 
-            </StackLayout>
+            </StackLayout>-->
             <StackLayout
                         VerticalOptions="End"
                         HeightRequest="50"
                         Grid.Row="3">
 
-                <Button Text="Empezar Ronda" BackgroundColor="#F6BE14" CornerRadius="25" 
-                                HeightRequest="50"
-                                WidthRequest="175"
-                                HorizontalOptions="Center"
-                                BorderColor="#9E7406"
-                                BorderWidth="3"/>
+                <Button     
+                    x:Name="QR"
+                    Text="Escanear QR" 
+                    TextColor="White"
+                    BackgroundColor="#005EB2" 
+                    CornerRadius="25" 
+                    HeightRequest="50"
+                    WidthRequest="175"           
+                    HorizontalOptions="Center"/>
 
             </StackLayout>
-            <Button     Grid.Row="2"         
+            <!--<Button     Grid.Row="2"         
                 x:Name="CallFrancisco"
                          ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
                             Margin="0,0,20,22" VerticalOptions="End"/>-->

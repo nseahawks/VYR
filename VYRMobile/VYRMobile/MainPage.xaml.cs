@@ -20,9 +20,9 @@ namespace VYRMobile
 
             var sub = new AbsoluteLayout();
             splashImage = new Image {
-            Source="solido.png",
-            WidthRequest = 150,
-            HeightRequest = 150
+            Source="solidosh.png",
+            WidthRequest = 100,
+            HeightRequest = 100
             };
 
             AbsoluteLayout.SetLayoutFlags(splashImage,

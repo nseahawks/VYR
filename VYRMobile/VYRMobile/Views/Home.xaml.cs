@@ -7,27 +7,60 @@ using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.Messaging;
+using System.Windows.Input;
+using System.ComponentModel;
+using System.Runtime.CompilerServices;
+using ZXing.Mobile;
+using ZXing;
+using ZXing.Net.Mobile.Forms;
 
 namespace VYRMobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
+        
+
         public Home()
         {
             InitializeComponent();
             BindingContext = new CronoViewModel();
             BindingContext = new CallViewModel();
+            QR.Clicked += QR_Clicked;
             //CallFrancisco.Clicked += CallFrancisco_clicked;
         }
 
-        /*private void CallFrancisco_clicked(object sender, EventArgs e)
+        private void QR_Clicked(object sender, EventArgs e)
         {
-            var phoneCallTask = CrossMessaging.Current.PhoneDialer;
-            if (phoneCallTask.CanMakePhoneCall)
+            Escaner();
+        }
+
+        private async void Escaner()
+        {
+            var scannerPage = new ZXingScannerPage();
+
+            scannerPage.Title = "Lector de QR";
+            scannerPage.OnScanResult += (result) =>
             {
-                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
-            }
-        }*/
+                scannerPage.IsScanning = false;
+
+                Device.BeginInvokeOnMainThread(() =>
+                {
+                    Navigation.PopAsync();
+                    DisplayAlert("Valor Obtenido", result.Text, "OK");
+                });
+            };
+
+            await Navigation.PushAsync(scannerPage);
+        }
+
+        /*private void CallFrancisco_clicked(object sender, EventArgs e)
+            {
+                var phoneCallTask = CrossMessaging.Current.PhoneDialer;
+                if (phoneCallTask.CanMakePhoneCall)
+                {
+                    phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
+                }
+            }*/
     }
 }
