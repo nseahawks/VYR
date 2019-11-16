@@ -19,7 +19,7 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CrearReporte : ContentPage
     {
-        HttpClient _client;
+        //HttpClient _client;
         public CrearReporte()
         {
             InitializeComponent();
