@@ -244,5 +244,8 @@
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\solidosh.png" />
   </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\antena.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

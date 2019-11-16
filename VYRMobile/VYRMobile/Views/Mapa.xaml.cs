@@ -15,6 +15,8 @@ using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
 using Plugin.Geolocator;
 using Xamarin.Forms.GoogleMaps;
+using System.Windows.Input;
+using Position = Xamarin.Forms.GoogleMaps.Position;
 
 namespace VYRMobile
 {
@@ -28,7 +30,9 @@ namespace VYRMobile
             Task.Delay(2000);
             UpdateMap();
            
+
         }
+       
         List<Place> placesList = new List<Place>();
        /*public void OnMapReady(GoogleMap map)
         {
