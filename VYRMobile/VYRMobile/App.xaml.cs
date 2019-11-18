@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Plugin.Geolocator;
+using System;
+using System.Threading.Tasks;
+using VYRMobile.ViewModels;
 using VYRMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -7,13 +10,14 @@ namespace VYRMobile
 {
     public partial class App : Application
     {
+        
         public App()
         {
             InitializeComponent();
-
             MainPage = new NavigationPage(new MainPage());
         }
-
+         
+        
         protected override void OnStart()
         {
             // Handle when your app starts
@@ -27,6 +31,7 @@ namespace VYRMobile
         protected override void OnResume()
         {
             // Handle when your app resumes
+
         }
     }
 }

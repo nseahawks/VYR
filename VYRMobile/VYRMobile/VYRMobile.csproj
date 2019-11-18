@@ -43,6 +43,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\signalR.xaml.cs">
+      <DependentUpon>SignalR.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Controls\CallMenu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -82,7 +88,7 @@
     <EmbeddedResource Update="Views\Reportes.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\signalR.xaml">
+    <EmbeddedResource Update="Views\SignalR.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\SearchPlacePage.xaml">

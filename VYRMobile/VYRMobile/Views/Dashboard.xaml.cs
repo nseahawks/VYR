@@ -10,6 +10,7 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Maps;
 using VYRMobile.Views;
 
+
 namespace VYRMobile
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
@@ -21,9 +22,8 @@ namespace VYRMobile
 
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
-
             //var historial = new Historial();
-            var signalRV = new signalR();
+            var signalRV = new SignalR();
             var home = new Home();
             var mapa = new Mapa();
             var reportes = new Reportes();
@@ -36,6 +36,5 @@ namespace VYRMobile
             this.Children.Add(usuario);
         }
 
-        
     }
 }

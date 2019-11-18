@@ -26,13 +26,14 @@ namespace VYRMobile
         public Mapa()
         {
             InitializeComponent();
-
-            Task.Delay(2000);
-            UpdateMap();
-           
-
         }
-       
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            UpdateMap();
+        }
+
         List<Place> placesList = new List<Place>();
        /*public void OnMapReady(GoogleMap map)
         {
@@ -53,6 +54,7 @@ namespace VYRMobile
                 Label = "Negocios Seahawks",
                 Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147"
             };
+            
             try
             {
 
@@ -94,7 +96,7 @@ namespace VYRMobile
                 var position = await locator.GetPositionAsync();
                 Xamarin.Forms.Maps.Position _position = new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude);
                 MyMap.MoveToRegion(Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(new Xamarin.Forms.Maps.Position(_position.Latitude, _position.Longitude), Xamarin.Forms.Maps.Distance.FromMiles(0.2)));
-
+           
             }
             catch (Exception ex)
             {

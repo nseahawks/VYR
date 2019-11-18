@@ -122,10 +122,22 @@ namespace VYRMobile.ViewModels
         {
             Device.BeginInvokeOnMainThread(() =>
             {
-                Messages.Add(new TrackMessage
+                if(Messages.Count > 8)
                 {
-                    Message = message
-                });
+                    Messages.RemoveAt(8);
+                    Messages.Insert(0, new TrackMessage
+                    {
+                        Message = message
+                    });
+                }
+                else
+                {
+                    Messages.Insert(0,new TrackMessage
+                    {
+                        Message = message
+                    });
+                }
+                
             });
         }
     }

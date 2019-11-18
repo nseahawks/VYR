@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using VYRMobile.ViewModels;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
@@ -14,6 +15,7 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Mapa1 : ContentPage
     {
+       
         public static readonly BindableProperty CalculateCommandProperty =
             BindableProperty.Create(nameof(CalculateCommand), typeof(ICommand), typeof(Mapa1), null, BindingMode.TwoWay);
 
@@ -123,6 +125,11 @@ namespace VYRMobile.Views
             GetActualLocationCommand.Execute(null);
         }
 
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+        }
+
         public static readonly BindableProperty GetActualLocationCommandProperty =
             BindableProperty.Create(nameof(GetActualLocationCommand), typeof(ICommand), typeof(Mapa1), null, BindingMode.TwoWay);
 
@@ -143,10 +150,9 @@ namespace VYRMobile.Views
                 {
                     map.MoveToRegion(MapSpan.FromCenterAndRadius(
                         new Position(location.Latitude, location.Longitude), Distance.FromMiles(0.3)));
-
                 }
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 await DisplayAlert("Error", "Unable to get actual location", "Ok");
             }

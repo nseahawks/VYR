@@ -5,7 +5,9 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.signalR">
+             x:Class="VYRMobile.Views.SignalR"
+             Title="Streaming"
+             IconImageSource="historial2.png">
     <ContentPage.BindingContext>
         <viewmodel:TrackViewModel/>
     </ContentPage.BindingContext>
