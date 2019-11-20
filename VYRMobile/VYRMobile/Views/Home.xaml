@@ -4,19 +4,23 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:VYRMobile.Controls"
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              Title="Home"
              IconImageSource="dashboard2.png">
-    <ContentPage.Content>
+    <ContentPage.BindingContext>
+        <viewmodel:QRViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
 
         <Grid>
-            <!--<Grid.RowDefinitions>
+            <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>-->
+            </Grid.RowDefinitions>
 
+            <Grid Grid.Row="0">
                 <Frame BackgroundColor="#005EB2" 
                            HeightRequest="25" 
                            HorizontalOptions="FillAndExpand" 
@@ -27,7 +31,8 @@
                            FontSize="Large"
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
-            <!--View del cronometro 
+            </Grid>
+            <!--View del cronometro -->
                 <StackLayout VerticalOptions="Start"
                      HeightRequest="300"
                          Margin="0,69,0,0">
@@ -82,7 +87,7 @@
                             </Label>
                         </StackLayout>
                     </Frame>
-                </StackLayout>-->
+                </StackLayout>
 
                
             <!--View de tareas 
@@ -103,55 +108,25 @@
                 </Frame>
 
             </StackLayout>-->
+            <StackLayout
+                        VerticalOptions="End"
+                        HeightRequest="50"
+                        Grid.Row="3">
 
-            <Picker x:Name="picker"
-                    Title="Seleccione una antena"
-                    TitleColor="Black"
-                    VerticalOptions="Start"
-                    Margin="0, 70, 0, 0">
-
-                <Picker.ItemsSource>
-                    <x:Array Type="{x:Type x:String}">
-                        <x:String>Seahawks</x:String>
-                        <x:String>Guaricano</x:String>
-                    </x:Array>
-                </Picker.ItemsSource>
-            </Picker>
-
-            
-            <Button     
+                <Button     
                     x:Name="QR"
-                    Text="Escanear QR" 
+                    Command="{Binding ConnectCommand}"
+                    Text="Scanear QR" 
                     TextColor="White"
                     BackgroundColor="#005EB2" 
                     CornerRadius="25" 
                     HeightRequest="50"
-                    WidthRequest="175"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"/>
+                    WidthRequest="175"           
+                    HorizontalOptions="Center"
+                    
+                  />
 
-            <Button      x:Name="Route"
-                         IsEnabled="False"
-                         Text="START ROUTE"
-                         BackgroundColor="#005EB2"
-                         TextColor="White"
-                         HeightRequest="50"
-                         WidthRequest="200"
-                         VerticalOptions="End"
-                         CornerRadius="2"
-                         Margin="0, 0, 0, 10"
-                         HorizontalOptions="Center"/>
-            <Button      x:Name="stopRoute"
-                         Text="STOP ROUTE"
-                         IsVisible="False"
-                         BackgroundColor="#AE220E"
-                         TextColor="White"
-                         HeightRequest="50"
-                         WidthRequest="200"
-                         VerticalOptions="End"
-                         CornerRadius="2"
-                         Margin="0, 0, 0, 10"
-                         HorizontalOptions="Center"/>
+            </StackLayout>
             <!--<Button     Grid.Row="2"         
                 x:Name="CallFrancisco"
                          ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
@@ -167,5 +142,5 @@
             </Grid>-->
         </Grid>
         
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

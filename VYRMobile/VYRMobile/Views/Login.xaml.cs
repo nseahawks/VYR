@@ -15,7 +15,7 @@ namespace VYRMobile
         public Login()
         {
             InitializeComponent();
-
+            
             Loginbtn.Clicked += Loginbtn_clicked;
         }
 

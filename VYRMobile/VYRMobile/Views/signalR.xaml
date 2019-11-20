@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.SignalR"
+             Title="Streaming"
+             IconImageSource="historial2.png">
+    <ContentPage.BindingContext>
+        <viewmodel:TrackViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Padding="10">
+        <Entry Text="{Binding TrackMessage.User}"/>
+        <Entry Text="{Binding TrackMessage.Message}"/>
+
+        <Button Text="Send Message"
+                IsEnabled="{Binding IsConnected}"
+                Command="{Binding SendMessageCommand}"/>
+
+        <ActivityIndicator IsRunning="{Binding IsBusy}"
+                           IsVisible="{Binding IsBusy}"/>
+
+        <ListView ItemsSource="{Binding Messages}">
+            <ListView.ItemTemplate>
+                <DataTemplate >
+                    <TextCell Text="{Binding Message}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+    </StackLayout>
+</ContentPage>
