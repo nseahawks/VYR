@@ -4,11 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:VYRMobile.Controls"
+             xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              Title="Home"
              IconImageSource="dashboard2.png">
-    <ContentPage.Content>
+    <ContentPage.BindingContext>
+        <viewmodel:QRViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
 
         <Grid>
             <Grid.RowDefinitions>
@@ -111,13 +115,16 @@
 
                 <Button     
                     x:Name="QR"
-                    Text="Escanear QR" 
+                    Command="{Binding ConnectCommand}"
+                    Text="Scanear QR" 
                     TextColor="White"
                     BackgroundColor="#005EB2" 
                     CornerRadius="25" 
                     HeightRequest="50"
                     WidthRequest="175"           
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    
+                  />
 
             </StackLayout>
             <!--<Button     Grid.Row="2"         
@@ -135,5 +142,5 @@
             </Grid>-->
         </Grid>
         
-    </ContentPage.Content>
+    </StackLayout>
 </ContentPage>

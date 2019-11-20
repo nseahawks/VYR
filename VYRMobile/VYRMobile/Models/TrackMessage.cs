@@ -9,10 +9,11 @@ namespace VYRMobile.Models
     {
         string user;
         public string User {
+            
             get => user;
             set => SetProperty(ref user, value);
         }
-
+        
         string message;
         public string Message  { 
             get => message; 

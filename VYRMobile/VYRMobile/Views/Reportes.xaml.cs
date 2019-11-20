@@ -26,26 +26,26 @@ namespace VYRMobile.Views
             base.OnAppearing();
 
             //HttpClient client = _api.VRAPI();
-            _client = new HttpClient();
-            string url = "https://vyrapi.azurewebsites.net/api/v1/reports";
+            //_client = new HttpClient();
+            //string url = "https://vyrapi.azurewebsites.net/api/v1/reports";
             //string url = "https://169.254.80.80:5001/api/v1/reports";
 
-            try
-            {
+            //try
+            //{
                 
                 
-                var response = await _client.GetAsync(url);
-                if (response.IsSuccessStatusCode)
-                {
-                    string json = await response.Content.ReadAsStringAsync();
-                    ReportViewModel reports = ReportViewModel.FromJson(json);
-                    reportList.ItemsSource = reports.Reports;
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(@"\tERROR {0}", ex.Message);
-            }
+            //    var response = await _client.GetAsync(url);
+            //    if (response.IsSuccessStatusCode)
+            //    {
+            //        string json = await response.Content.ReadAsStringAsync();
+            //        //ReportViewModel reports = ReportViewModel.FromJson(json);
+            //        //reportList.ItemsSource = reports.Reports;
+            //    }
+            //}
+            //catch (Exception ex)
+            //{
+            //    Debug.WriteLine(@"\tERROR {0}", ex.Message);
+            //}
 
 
             //string json = await response.Content.ReadAsStringAsync();
@@ -55,7 +55,7 @@ namespace VYRMobile.Views
         }
         private void btnReporte_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CrearReporte());
+            Navigation.PushAsync(new CreateReportPage());
         }
     }
 }

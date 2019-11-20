@@ -7,7 +7,5 @@
              xmlns:local="clr-namespace:VYRMobile"
              x:Class="VYRMobile.MainPage"
              NavigationPage.HasNavigationBar="False">
-
-
   
 </ContentPage>

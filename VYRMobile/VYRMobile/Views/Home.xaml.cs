@@ -19,17 +19,29 @@ namespace VYRMobile
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
-        
 
         public Home()
         {
             InitializeComponent();
             BindingContext = new CronoViewModel();
             BindingContext = new CallViewModel();
+            BindingContext = new QRViewModel();
             QR.Clicked += QR_Clicked;
+            
             //CallFrancisco.Clicked += CallFrancisco_clicked;
         }
 
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+        }
+
+        protected override void OnDisappearing()
+        {
+            base.OnDisappearing();
+
+        }
         private void QR_Clicked(object sender, EventArgs e)
         {
             Escaner();
@@ -38,19 +50,21 @@ namespace VYRMobile
         private async void Escaner()
         {
             var scannerPage = new ZXingScannerPage();
-
+            
             scannerPage.Title = "Lector de QR";
+
             scannerPage.OnScanResult += (result) =>
             {
                 scannerPage.IsScanning = false;
-
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     Navigation.PopAsync();
+
                     DisplayAlert("Valor Obtenido", result.Text, "OK");
                 });
-            };
 
+            };
+            
             await Navigation.PushAsync(scannerPage);
         }
 

@@ -1,33 +1,34 @@
-﻿using System;
-using VYRMobile.Controls;
+﻿using Plugin.Media;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
-using Plugin.Media;
 
 namespace VYRMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class CrearReporte : ContentPage
+    public partial class CreateReportPage : ContentPage
     {
-        //HttpClient _client;
-        public CrearReporte()
+        public CreateReportPage()
         {
             InitializeComponent();
-            btnAtras.Clicked += btnAtras_clicked;
-            btnAttach.Clicked += btnAttach_clicked;
-            //btnEnviar.Clicked += btnEnviar_clicked;
-            BindingContext = new CrearReporteModel();
-            BindingContext = new Reportes();
+            btnBack.Clicked += BtnBack_clicked;
+            btnAttach.Clicked += BtnAttach_clicked;
+            BindingContext = new CreateReportViewModel();
         }
-    
-        private async void btnAttach_clicked(object sender, EventArgs e)
+
+        private async void BtnAttach_clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
 
             if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
             {
                 await DisplayAlert("No Camera", "No camera available", "OK");
-                    return;
+                return;
             }
 
             var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
@@ -42,10 +43,9 @@ namespace VYRMobile.Views
             Image1.Source = ImageSource.FromStream(() => file.GetStream());
         }
 
-        private void btnAtras_clicked(object sender, EventArgs e)
+        private void BtnBack_clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new Reportes());
+            ((NavigationPage)this.Parent).PopAsync();
         }
-        
     }
 }

@@ -64,7 +64,6 @@ namespace VYRMobile.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
         public CronoViewModel()
         {
             stopWatch.Start();

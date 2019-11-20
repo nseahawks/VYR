@@ -29,6 +29,7 @@ namespace VYRMobile
             var reportes = new Reportes();
             var usuario = new Usuario();
 
+            
             this.Children.Add(signalRV);
             this.Children.Add(home);
             this.Children.Add(mapa);

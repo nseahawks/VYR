@@ -43,6 +43,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\CreateReportPage.xaml.cs">
+      <DependentUpon>CreateReportPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\signalR.xaml.cs">
       <DependentUpon>SignalR.xaml</DependentUpon>
     </Compile>
@@ -56,6 +59,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\CrearReporte.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\CreateReportPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Dashboard.xaml">

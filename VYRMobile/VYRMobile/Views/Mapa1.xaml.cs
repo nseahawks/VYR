@@ -37,9 +37,17 @@ namespace VYRMobile.Views
         public Mapa1()
         {
             InitializeComponent();
+           
+
+        }
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
             CalculateCommand = new Command<List<Xamarin.Forms.GoogleMaps.Position>>(Calculate);
             UpdateCommand = new Command<Xamarin.Forms.GoogleMaps.Position>(Update);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
+            GetActualLocationCommand.Execute(null);
 
         }
 
@@ -119,11 +127,7 @@ namespace VYRMobile.Views
         }
 
         //Center map in actual location 
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            GetActualLocationCommand.Execute(null);
-        }
+    
 
         protected override void OnDisappearing()
         {
