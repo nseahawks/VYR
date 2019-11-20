@@ -36,6 +36,18 @@
                                 WidthRequest="50"/>
 
             </StackLayout>
+            <StackLayout Margin="0, 50,0,0">
+                <ListView x:Name="reportList">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label Text="{Binding Id}"></Label>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

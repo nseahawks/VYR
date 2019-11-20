@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Estadisticas"
+             NavigationPage.HasNavigationBar="False"
+             BackgroundColor="White">
+    <ContentPage.Content>
+        <Grid>
+            <Frame BackgroundColor="#005EB2" 
+                           HeightRequest="25" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="Start"
+                           CornerRadius="0"/>
+            <Label Text="Mi Usuario" 
+                           TextColor="White" 
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           Margin="10, 16, 0, 0"/>
+            <StackLayout BackgroundColor="#D5D3DC"
+                         HeightRequest="600"
+                         Margin="0, 69, 0, 0">
+                    <Label Text="BarChart" FontSize="14" FontAttributes="Bold" TextColor="White" />
+                    <forms:ChartView  Chart="{Binding BarChartSample}" HeightRequest="400" />
+                </StackLayout>
+        </Grid>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

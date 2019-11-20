@@ -55,25 +55,37 @@
 
             <StackLayout VerticalOptions="StartAndExpand"
                          Margin="0, 70, 0, 0">
-                <Entry Placeholder="Titulo"
+                <Entry     x:Name="Title"
+                           Text="{Binding Title}"
+                           Placeholder="Asunto"
                            PlaceholderColor="DarkGray"
                            TextColor="Black"
                            HorizontalOptions="FillAndExpand"
                            VerticalOptions="Start"
-                           BackgroundColor="White"/>
+                           BackgroundColor="White"
+                           />
+                <Entry     x:Name="Created"
+                           Text="{Binding Created}"
+                           IsVisible="False"/>
+                
+                <Entry     x:Name="Address"
+                           Text="{Binding Address}"
+                           IsVisible="False"/>
+
+                <Picker    Title="--Estatus--"
+                           ItemsSource="{Binding EstatusList}"
+                           ItemDisplayBinding="{Binding Value}"
+                           Grid.Row="3"/>
 
                 <Editor Placeholder="Descripcion"
+                        Text="{Binding Description}"
                            PlaceholderColor="DarkGray"
                            TextColor="Black"
                            HeightRequest="150"
                            BackgroundColor="White"
                            VerticalOptions="Start"
                            Grid.Row="2"/>
-                <Picker    Title="--Estatus--"
-                           ItemsSource="{Binding EstatusList}"
-                           ItemDisplayBinding="{Binding Value}"
-                           Grid.Row="3"/>
-
+                
                 <Image x:Name="Image1" 
                            HeightRequest="100"
                            WidthRequest="60"

@@ -1,11 +1,10 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using Xamarin;
+using Xamarin.Forms.GoogleMaps.Android;
 
 namespace VYRMobile.Droid
 {
@@ -18,10 +17,17 @@ namespace VYRMobile.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(savedInstanceState);
-
-            Xamarin.FormsMaps.Init(this, savedInstanceState);
-            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            var platformConfig = new PlatformConfig
+            {
+                BitmapDescriptorFactory = new CachingNativeBitmapDescriptorFactory()
+            };
+
+            FormsMaps.Init(this, savedInstanceState);
+            
+            Xamarin.Essentials.Platform.Init(this, savedInstanceState);
+            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             LoadApplication(new App());
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);

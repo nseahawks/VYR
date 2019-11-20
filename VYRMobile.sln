@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VYRMobile.Android", "VYRMob
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VYRMobile.iOS", "VYRMobile\VYRMobile.iOS\VYRMobile.iOS.csproj", "{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VYRMobile", "VYRMobile\VYRMobile\VYRMobile.csproj", "{50D4634C-1294-4D59-AF6B-D0638B4DFDD0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VYRMobile", "VYRMobile\VYRMobile\VYRMobile.csproj", "{50D4634C-1294-4D59-AF6B-D0638B4DFDD0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -38,7 +38,6 @@ Global
 		{FB8AEFFA-AD5D-4A68-9B26-2E4E86E1D75F}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{FB8AEFFA-AD5D-4A68-9B26-2E4E86E1D75F}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Debug|Any CPU.Deploy.0 = Debug|iPhoneSimulator
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Debug|iPhone.Build.0 = Debug|iPhone

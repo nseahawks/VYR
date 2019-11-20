@@ -3,11 +3,16 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
+             xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              Title="Home"
              IconImageSource="dashboard2.png">
-    <ContentPage.Content>
+    <ContentPage.BindingContext>
+        <viewmodel:QRViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout>
 
         <Grid>
             <Grid.RowDefinitions>
@@ -27,53 +32,69 @@
                            FontAttributes="Bold"
                            Margin="10, 16, 0, 0"/>
             </Grid>
-
             <!--View del cronometro -->
-            <StackLayout VerticalOptions="Start"
-                     HeightRequest="100"
-                                 Grid.Row="1">
-                <Frame
-                        x:Name="CronometroView"
-                        BackgroundColor="LightGray"
-                        CornerRadius="35"
+                <StackLayout VerticalOptions="Start"
+                     HeightRequest="300"
+                         Margin="0,69,0,0">
+                    <Frame  x:Name="CronometroView"
+                        BackgroundColor="White"
+                        CornerRadius="0"
                         WidthRequest="400"
-                        HeightRequest="150"
+                        HeightRequest="300"
                         VerticalOptions="Start"
                         HorizontalOptions="Center"
-                        Opacity="25"
-                        BorderColor="Gray"
-                            >
-                    <Label Text="Cronometro" FontSize="22" TextColor="Black" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" VerticalOptions="Center"/>
-                </Frame>
-            </StackLayout>
+                        HasShadow="True">
 
-            <!--Boton de pausa -->
-            <StackLayout VerticalOptions="Fill"
-                                 HeightRequest="50"
-                                 Grid.Row="2"
-                                 >
-                <Button Grid.Row="2" ImageSource="pause.png" CornerRadius="20" HeightRequest="50"
-                                WidthRequest="100" HorizontalOptions="Center" BackgroundColor="Aqua" BorderColor="LightBlue"/>
+                        <StackLayout>
+                            <Label  Text="Tiempo transcurrido" 
+                                    FontSize="18" 
+                                    TextColor="Black" 
+                                    HorizontalOptions="CenterAndExpand" 
+                                    VerticalOptions="Center"/>
 
-                <!--<Frame x:Name="InfoRuta"
-                               BackgroundColor="White"
-                               CornerRadius="5"
-                               WidthRequest="400"
-                               HeightRequest="150"
-                               VerticalOptions="Fill"
-                               HorizontalOptions="Center">
+                            <Label  Grid.Column="0" 
+                                    FontSize="60" 
+                                    TextColor="#33B033" 
+                                    Margin="20,0,0,0"
+                                    HorizontalOptions="Start" 
+                                    VerticalOptions="Center"
+                                    WidthRequest="100">
 
-                            <Label Text="INFORMACION DE RUTA" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center"/>
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding StopWatchHours}"/>
+                                        <Span Text=":"/>
+                                        <Span Text="{Binding StopWatchMinutes}"/>
+                                        <Span Text=":"/>
+                                        <Span Text="{Binding StopWatchSeconds}"/>
+                                        <Span Text="."/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                                
+                            </Label>
+                            <Label  Grid.Column="1" 
+                                    FontSize="20" 
+                                    TextColor="#33B033" 
+                                    Margin="0,0,0,0"
+                                    HorizontalOptions="Start" 
+                                    VerticalOptions="Center">
 
-                        </Frame> -->
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="{Binding StopWatchMilliseconds}"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
 
-            </StackLayout>
-
-            <!--View de tareas -->
+               
+            <!--View de tareas 
             <StackLayout
                         VerticalOptions="Fill"
                         HeightRequest="500"
-                        Grid.Row="3"
+                        Grid.Row="2"
                         HorizontalOptions="Center">
 
                 <Frame x:Name="MenuTareas"
@@ -86,26 +107,40 @@
 
                 </Frame>
 
-            </StackLayout>
-            <!--Empezar Ronda -->
+            </StackLayout>-->
             <StackLayout
                         VerticalOptions="End"
                         HeightRequest="50"
-                        Grid.Row="4">
+                        Grid.Row="3">
 
-                <Button Text="Empezar Ronda" BackgroundColor="#F6BE14" CornerRadius="25" 
-                                HeightRequest="50"
-                                WidthRequest="175"
-                                HorizontalOptions="Center"
-                                BorderColor="#9E7406"
-                                BorderWidth="3"/>
+                <Button     
+                    x:Name="QR"
+                    Command="{Binding ConnectCommand}"
+                    Text="Scanear QR" 
+                    TextColor="White"
+                    BackgroundColor="#005EB2" 
+                    CornerRadius="25" 
+                    HeightRequest="50"
+                    WidthRequest="175"           
+                    HorizontalOptions="Center"
+                    
+                  />
 
             </StackLayout>
-            <!--Boton de llamada -->
-            <Button Grid.Row="5" Text="Call" BorderColor="DarkBlue" BorderWidth="2" 
-                            FontAttributes="Bold" BackgroundColor="#008BFF" BorderRadius="50" 
-                            TextColor="Black" HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
-                            Margin="0,0,20,22" VerticalOptions="End"/>
+            <!--<Button     Grid.Row="2"         
+                x:Name="CallFrancisco"
+                         ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
+                            Margin="0,0,20,22" VerticalOptions="End"/>-->
+            <!--<Grid        
+                Grid.Row="3"
+                HorizontalOptions="End"
+                Margin="0, 0, -24, 0">
+                <controls:CallMenu 
+                    SelectedCommand="{Binding ItemSelectedCommand}"
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center" />
+            </Grid>-->
         </Grid>
-    </ContentPage.Content>
+        
+    </StackLayout>
 </ContentPage>

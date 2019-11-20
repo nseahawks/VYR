@@ -1,7 +1,9 @@
 ﻿using System;
+using VYRMobile.Services;
 using VYRMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+
 
 namespace VYRMobile
 {
@@ -10,8 +12,8 @@ namespace VYRMobile
         public App()
         {
             InitializeComponent();
-
-            MainPage = new NavigationPage(new MainPage());
+            GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
+            MainPage = new NavigationPage(new Dashboard());
         }
 
         protected override void OnStart()

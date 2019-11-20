@@ -20,7 +20,7 @@ namespace VYRMobile
 
             var sub = new AbsoluteLayout();
             splashImage = new Image {
-            Source="seahawks.png",
+            Source="solidosh.png",
             WidthRequest = 100,
             HeightRequest = 100
             };
@@ -41,9 +41,9 @@ namespace VYRMobile
         {
             base.OnAppearing();
 
-            await splashImage.ScaleTo(1, 2000);
-            await splashImage.ScaleTo(0.9, 1500, Easing.Linear);
-            await splashImage.ScaleTo(150, 1200, Easing.Linear);
+            await splashImage.ScaleTo(1, 10);
+            await splashImage.ScaleTo(0.9, 50, Easing.Linear);
+            await splashImage.ScaleTo(3.5, 500, Easing.Linear);
             Application.Current.MainPage = new NavigationPage(new Login());
         }
        

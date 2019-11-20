@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VYRMobile.Controls;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -13,14 +9,17 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CrearReporte : ContentPage
     {
+        //HttpClient _client;
         public CrearReporte()
         {
             InitializeComponent();
             btnAtras.Clicked += btnAtras_clicked;
             btnAttach.Clicked += btnAttach_clicked;
+            //btnEnviar.Clicked += btnEnviar_clicked;
             BindingContext = new CrearReporteModel();
+            BindingContext = new Reportes();
         }
-
+    
         private async void btnAttach_clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
