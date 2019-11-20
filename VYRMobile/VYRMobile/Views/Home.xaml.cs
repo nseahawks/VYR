@@ -27,7 +27,13 @@ namespace VYRMobile
             BindingContext = new CronoViewModel();
             BindingContext = new CallViewModel();
             QR.Clicked += QR_Clicked;
+            Route.Clicked += Route_clicked;
             //CallFrancisco.Clicked += CallFrancisco_clicked;
+        }
+
+        private void Route_clicked(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         private void QR_Clicked(object sender, EventArgs e)

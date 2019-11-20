@@ -14,9 +14,9 @@ using Xamarin.Forms.Xaml;
 using Xamarin.Forms.Maps;
 using Xamarin.Essentials;
 using Plugin.Geolocator;
-using Xamarin.Forms.GoogleMaps;
+//using Xamarin.Forms.GoogleMaps;
 using System.Windows.Input;
-using Position = Xamarin.Forms.GoogleMaps.Position;
+//using Position = Xamarin.Forms.GoogleMaps.Position;
 
 namespace VYRMobile
 {
@@ -28,31 +28,87 @@ namespace VYRMobile
             InitializeComponent();
 
             Task.Delay(2000);
-            UpdateMap();
-           
+            //UpdateMap();
+            AddMapStyle();
+
+            /*Xamarin.Forms.GoogleMaps.Pin seahawksPin = null;
+
+
+            seahawksPin = new Xamarin.Forms.GoogleMaps.Pin()
+                {
+                    Type = Xamarin.Forms.GoogleMaps.PinType.Place,
+                    Label = "Negocios Seahawks",
+                    Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
+                    Position = new Position(18.461294d, -69.948531d),
+                    Rotation = 33.3f,
+                    Tag = "id_seahawks"
+                };
+
+                MyMap.Pins.Add(seahawksPin);
+                MyMap.MoveToRegion(Xamarin.Forms.GoogleMaps.MapSpan.FromCenterAndRadius(seahawksPin.Position, Xamarin.Forms.GoogleMaps.Distance.FromMeters(5000)));*/
+            Pin seahawks = new Pin
+            {
+                Label = "Negocios Seahawks",
+                Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
+                Type = PinType.Place,
+                Position = new Position(18.461294d, -69.948531d)
+            };
+            MyMap.Pins.Add(seahawks);
+
+            Xamarin.Forms.Maps.Polyline polyline = new Xamarin.Forms.Maps.Polyline
+            {
+                StrokeColor = Color.Blue,
+                StrokeWidth = 12,
+                Geopath =
+            {
+                new Position(18.461294d, -69.948531d),
+                new Position(18.476740d, -69.913872d),
+                new Position(18.548335d, -69.867444d)
+            }
+            };
+            MyMap.MapElements.Add(polyline);
+
 
         }
-       
-        List<Place> placesList = new List<Place>();
-       /*public void OnMapReady(GoogleMap map)
+        void AddMapStyle()
         {
-            MarkerOptions seahawks = new MarkerOptions();
-            seahawks.SetPosition(new LatLng());
-            seahawks.SetTitle("Negocios Seahawks");
+            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream($"VYRMobile.MapStyle.json");
+            string styleFile;
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                styleFile = reader.ReadToEnd();
+            }
 
-            map.AddMarker(seahawks);
-        }*/
+            //MyMap.MapStyle = MapStyle.FromJson(styleFile);
+        }
+
+        List<Place> placesList = new List<Place>();
+
+        /*public void OnMapReady(GoogleMap map)
+{
+    MarkerOptions seahawks = new MarkerOptions();
+    seahawks.SetPosition(new LatLng());
+    seahawks.SetTitle("Negocios Seahawks");
+
+    map.AddMarker(seahawks);
+}*/
         private async void UpdateMap()
         {
-            var seahawks = new Xamarin.Forms.Maps.Position(18.461294, -69.948531);
+            /*var seahawks = new Position(18.461294, -69.948531);
 
-            var seahawksPin = new Xamarin.Forms.Maps.Pin
+            var seahawksPin = new Xamarin.Forms.GoogleMaps.Pin
             {
-                Type = Xamarin.Forms.Maps.PinType.Place,
+                Type = Xamarin.Forms.GoogleMaps.PinType.Place,
                 Position = seahawks,
                 Label = "Negocios Seahawks",
                 Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147"
             };
+            MyMap.Pins.Add(seahawksPin);
+            MyMap.MoveToRegion(Xamarin.Forms.GoogleMaps.MapSpan.FromCenterAndRadius(seahawksPin.Position, Xamarin.Forms.GoogleMaps.Distance.FromMeters(5000)));
+
+            ((Button)sender).IsEnabled = false;
+            buttonRemoveSeahawksPin.IsEnabled = true;*/
             try
             {
 
@@ -86,22 +142,22 @@ namespace VYRMobile
                 var loc = await Xamarin.Essentials.Geolocation.GetLocationAsync();
                 */
 
-                //var lat = (double.Parse(loc.Latitude.ToString()));
-                //var lng = (double.Parse(loc.Longitude.ToString()));
+        //var lat = (double.Parse(loc.Latitude.ToString()));
+        //var lng = (double.Parse(loc.Longitude.ToString()));
 
-                var locator = CrossGeolocator.Current;
-                locator.DesiredAccuracy = 100;
-                var position = await locator.GetPositionAsync();
-                Xamarin.Forms.Maps.Position _position = new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude);
-                MyMap.MoveToRegion(Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(new Xamarin.Forms.Maps.Position(_position.Latitude, _position.Longitude), Xamarin.Forms.Maps.Distance.FromMiles(0.2)));
+        var locator = CrossGeolocator.Current;
+        locator.DesiredAccuracy = 100;
+        var position = await locator.GetPositionAsync();
+        Xamarin.Forms.Maps.Position _position = new Xamarin.Forms.Maps.Position(position.Latitude, position.Longitude);
+        MyMap.MoveToRegion(Xamarin.Forms.Maps.MapSpan.FromCenterAndRadius(new Xamarin.Forms.Maps.Position(_position.Latitude, _position.Longitude), Xamarin.Forms.Maps.Distance.FromMiles(0.2)));
 
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex);
-            }
+    }
+    catch (Exception ex)
+    {
+        Debug.WriteLine(ex);
+    }
 
 
-        }
+    }
     }
 }

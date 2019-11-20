@@ -12,7 +12,7 @@ using VYRMobile.Helper;
 using VYRMobile.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Maps;
+using Xamarin.Forms.GoogleMaps;
 
 namespace VYRMobile.ViewModels
 {

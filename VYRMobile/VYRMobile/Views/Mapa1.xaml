@@ -4,11 +4,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:VYRMobile.ViewModels"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
-             NavigationPage.BackButtonTitle=""
+             xmlns:local="clr-namespace:VYRMobile.Views"
+             NavigationPage.BackButtonTitle="False"
              NavigationPage.HasNavigationBar="false"
              x:Class="VYRMobile.Views.Mapa1"
              Title="Mapa"
              IconImageSource="mapa2.png">
+    <!--="{Binding CalculateCommand}"
+             UpdatePositionCommand="{Binding UpdatePositionCommand}"-->
     <ContentPage.BindingContext>
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
@@ -17,7 +20,7 @@
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"/>
 
-        <Image Source="ic_location_red.png"
+        <Image Source="attach2.png"
                  IsVisible="{Binding IsRouteNotRunning}"
                  HeightRequest="35"
                  WidthRequest="35"
@@ -30,7 +33,7 @@
                         Padding="10"
                         x:Name="searchLayout"
                         Margin="30,50,30,0">
-            <Image Source="ic_search"
+            <Image Source="quit.png"
                               HeightRequest="15"
                               WidthRequest="15"/>
             <Label HorizontalOptions="FillAndExpand"
@@ -69,5 +72,5 @@
                    VerticalOptions="EndAndExpand"
                    HorizontalOptions="FillAndExpand"/>
     </Grid>
+
 </ContentPage>
-   

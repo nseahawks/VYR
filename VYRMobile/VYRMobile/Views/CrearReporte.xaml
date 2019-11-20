@@ -70,6 +70,7 @@
                            BackgroundColor="White"
                            VerticalOptions="Start"
                            Grid.Row="2"/>
+                
                 <Picker    Title="--Estatus--"
                            ItemsSource="{Binding EstatusList}"
                            ItemDisplayBinding="{Binding Value}"
