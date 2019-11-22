@@ -3,8 +3,6 @@ using System.Threading.Tasks;
 using VYRMobile.Models;
 using VYRMobile.Data;
 using Xamarin.Forms;
-using System;
-using Plugin.Media;
 
 namespace VYRMobile.ViewModels
 {

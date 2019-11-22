@@ -2,48 +2,60 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:vm="clr-namespace:VYRMobile.ViewModels"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:map="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
-             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+             xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              x:Class="VYRMobile.Views.Mapa2"
+             IconImageSource="mapa2.png"
              Title="Mapa"
-             IconImageSource="mapa2.png">
+             CalculateCommand="{Binding CalculateRouteCommand}"
+             UpdateCommand="{Binding UpdatePositionCommand}">
+    <ContentPage.BindingContext>
+        <vm:GoogleMapsViewModel/>
+    </ContentPage.BindingContext>
     <Grid>
-        <Frame         Grid.Row="0"
-                           BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-        <Label Text="Mi ubicacion" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
-        <Grid Margin="0, 66, 0, 0">
-            <map:Map     x:Name="Mapa" 
-                         HasZoomEnabled="True"
+        <Frame Grid.Row="0"
+               BackgroundColor="#005EB2" 
+               HeightRequest="25" 
+               HorizontalOptions="FillAndExpand" 
+               VerticalOptions="Start"
+               CornerRadius="0"/>
+        <Label Text="VR Maps" 
+                TextColor="White" 
+                FontSize="Large"
+                FontAttributes="Bold"
+                Margin="10, 18, 0, 0"/>
+        <Grid Margin="0, 60, 0, 0">
+
+            <maps:Map    x:Name="map" 
+                         VerticalOptions="FillAndExpand"
+                         HorizontalOptions="FillAndExpand"
                          HasScrollEnabled="True"
                          IsShowingUser="True"
-                         IsTrafficEnabled="True"
+                         IsTrafficEnabled="False"
                          IsIndoorEnabled="True"
                          IsEnabled="True"
-                         Visual="Material">
-            </map:Map>
-            <Button      x:Name="Route"
-                         Text="START ROUTE"
-                         BackgroundColor="#005EB2"
-                         TextColor="White"
-                         HeightRequest="50"
-                         WidthRequest="200"
-                         VerticalOptions="End"
-                         CornerRadius="2"
-                         Margin="0, 0, 0, 5"
-                         HorizontalOptions="Center"/>
+                         MyLocationEnabled="True"
+                         Visual="Material"/>
+
+            <Button      x:Name="startRoute"
+                        Command="{Binding LoadRouteCommand}"
+                        Text="START ROUTE"
+                        BackgroundColor="#005EB2"
+                        TextColor="White"
+                        HeightRequest="50"
+                        WidthRequest="200"
+                        VerticalOptions="End"
+                        CornerRadius="2"
+                        Margin="0, 0, 0, 10"
+                        HorizontalOptions="Center"/>
+
             <Button      x:Name="stopRoute"
+                         Command="{Binding StopRouteCommand}"
                          Text="STOP ROUTE"
                          IsVisible="False"
                          BackgroundColor="#AE220E"
@@ -52,8 +64,9 @@
                          WidthRequest="200"
                          VerticalOptions="End"
                          CornerRadius="2"
-                         Margin="0, 0, 0, 5"
+                         Margin="0, 0, 0, 10"
                          HorizontalOptions="Center"/>
+            
         </Grid>
     </Grid>
 </ContentPage>

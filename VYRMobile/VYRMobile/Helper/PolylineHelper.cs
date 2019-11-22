@@ -1,7 +1,7 @@
-﻿using Plugin.Geolocator.Abstractions;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms.GoogleMaps;
 
 namespace VYRMobile.Helper
 {

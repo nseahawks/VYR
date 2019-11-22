@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -13,17 +14,18 @@ namespace VYRMobile.Views
     public partial class SearchPlacePage : ContentPage
     {
         public static readonly BindableProperty FocusOriginCommandProperty =
-           BindableProperty.Create(nameof(FocusOriginCommand), typeof(ICommand), typeof(SearchPlacePage), null, BindingMode.TwoWay);
+           BindableProperty.Create(nameof(FocusOriginCommand), typeof(Command), typeof(SearchPlacePage), null, BindingMode.TwoWay);
 
-        public ICommand FocusOriginCommand
+        public Command FocusOriginCommand
         {
-            get { return (ICommand)GetValue(FocusOriginCommandProperty); }
+            get { return (Command)GetValue(FocusOriginCommandProperty); }
             set { SetValue(FocusOriginCommandProperty, value); }
         }
 
         public SearchPlacePage()
         {
             InitializeComponent();
+            BindingContext = new GoogleMapsViewModel();
         }
 
         protected override void OnBindingContextChanged()

@@ -9,11 +9,14 @@ namespace VYRMobile
 {
     public partial class App : Application
     {
+        internal static bool IsUserLoggedIn;
+
         public App()
         {
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
-            MainPage = new NavigationPage(new MainPage());
+            //MainPage = new NavigationPage(new MenuPage());
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

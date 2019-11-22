@@ -1,22 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VYRMobile.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Plugin.Messaging;
-using System.Windows.Input;
-using System.ComponentModel;
-using System.Runtime.CompilerServices;
-using ZXing.Mobile;
-using ZXing;
 using ZXing.Net.Mobile.Forms;
 
 namespace VYRMobile
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Home : ContentPage
     {
 

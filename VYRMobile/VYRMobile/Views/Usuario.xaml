@@ -15,7 +15,7 @@
                            HorizontalOptions="FillAndExpand" 
                            VerticalOptions="Start"
                            CornerRadius="0"/>
-            <Label Text="Mi Usuario" 
+            <Label Text="Usuario" 
                            TextColor="White" 
                            FontSize="Large"
                            FontAttributes="Bold"
