@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace VYRMobile.Controllers
+namespace VYRMobile.Models
 {
     public class GooglePlaceAutoCompletePrediction
     {

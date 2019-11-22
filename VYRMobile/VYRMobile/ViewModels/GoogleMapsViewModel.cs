@@ -1,28 +1,25 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Input;
-using VYRMobile.Controllers;
+using VYRMobile.Models;
 using VYRMobile.Helper;
 using VYRMobile.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
+using MvvmHelpers;
 
 namespace VYRMobile.ViewModels
 {
-    public class GoogleMapsViewModel : INotifyPropertyChanged
+    public class GoogleMapsViewModel : BaseViewModel
     {
-        public ICommand CalculateRouteCommand { get; set; }
-        public ICommand UpdatePositionCommand { get; set; }
-
-        public ICommand LoadRouteCommand { get; set; }
-        public ICommand StopRouteCommand { get; set; }
+        public Command CalculateRouteCommand { get; set; }
+        public Command UpdatePositionCommand { get; set; }
+        public Command LoadRouteCommand { get; set; }
+        public Command StopRouteCommand { get; set; }
         IGoogleMapsApiService googleMapsApi = new GoogleMapsApiService();
 
         public bool HasRouteRunning { get; set; }
@@ -45,9 +42,9 @@ namespace VYRMobile.ViewModels
                     GetPlaceDetailCommand.Execute(_placeSelected);
             }
         }
-        public ICommand FocusOriginCommand { get; set; }
-        public ICommand GetPlacesCommand { get; set; }
-        public ICommand GetPlaceDetailCommand { get; set; }
+        public Command FocusOriginCommand { get; set; }
+        public Command GetPlacesCommand { get; set; }
+        public Command GetPlaceDetailCommand { get; set; }
 
         public ObservableCollection<GooglePlaceAutoCompletePrediction> Places { get; set; }
         public ObservableCollection<GooglePlaceAutoCompletePrediction> RecentPlaces { get; set; } = new ObservableCollection<GooglePlaceAutoCompletePrediction>();
@@ -85,13 +82,13 @@ namespace VYRMobile.ViewModels
                 _originText = value;
                 if (!string.IsNullOrEmpty(_originText))
                 {
-                    _isPickupFocused = false;
+                    _isPickupFocused = true;
                     GetPlacesCommand.Execute(_originText);
                 }
             }
         }
 
-        public ICommand GetLocationNameCommand { get; set; }
+        public Command GetLocationNameCommand { get; set; }
         public bool IsRouteNotRunning
         {
             get
@@ -102,6 +99,7 @@ namespace VYRMobile.ViewModels
 
         public GoogleMapsViewModel()
         {
+            //CalculateRouteCommand = new Command(async () => await Calculate());
             LoadRouteCommand = new Command(async () => await LoadRoute());
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
@@ -109,10 +107,16 @@ namespace VYRMobile.ViewModels
             GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
         }
 
+
+
+
         public async Task LoadRoute()
         {
             var positionIndex = 1;
-            var googleDirection = await googleMapsApi.GetDirections(_originLatitud, _originLongitud, _destinationLatitud, _destinationLongitud);
+            var googleDirection = await googleMapsApi.GetDirections(
+                "18.461294","-69.948531",
+                "18.47598","-69.91383"
+                );
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
             {
                 var positions = (Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points)));
@@ -121,7 +125,7 @@ namespace VYRMobile.ViewModels
                 HasRouteRunning = true;
 
                 //Location tracking simulation
-                Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+                Device.StartTimer(TimeSpan.FromSeconds(2), () =>
                 {
                     if (positions.Count > positionIndex && HasRouteRunning)
                     {

@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using VYRMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,10 +15,19 @@ namespace VYRMobile
             Loginbtn.Clicked += Loginbtn_clicked;
         }
 
-        private void Loginbtn_clicked(object sender, EventArgs e)
+        private async void Loginbtn_clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PushAsync(new Dashboard());
-            //((NavigationPage)this.Parent).PushAsync(new Dashboard());
+            var isValid = true;
+            if (isValid)
+            {
+                App.IsUserLoggedIn = true;
+                Navigation.InsertPageBefore(new MenuPage(), this);
+                await Navigation.PopAsync();
+            }
+            else
+            {
+                //Login Failed
+            }
         }
     }
 }

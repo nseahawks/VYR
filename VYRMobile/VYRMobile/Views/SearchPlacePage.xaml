@@ -3,9 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core" 
+             ios:Page.UseSafeArea="true"
              xmlns:vm="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.SearchPlacePage">
+             x:Class="VYRMobile.Views.SearchPlacePage"
+             FocusOriginCommand="{Binding FocusOriginCommand}">
+    
     <Grid VerticalOptions="FillAndExpand"
               BackgroundColor="White"
               RowSpacing="0"
@@ -61,7 +65,9 @@
                         x:Name="list"
                         ItemsSource="{Binding Places}"
                         HasUnevenRows="true"
-                        SeparatorColor="Gray">
+                        SeparatorColor="Gray"
+                        >
+            
             <ListView.Triggers>
                 <DataTrigger TargetType="ListView"
                                  Binding="{Binding ShowRecentPlaces}"
