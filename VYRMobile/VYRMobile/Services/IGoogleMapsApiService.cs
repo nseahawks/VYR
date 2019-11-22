@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
-using VYRMobile.Controllers;
+using VYRMobile.Models;
 
 namespace VYRMobile.Services
 {

@@ -3,14 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              Title="Home"
              IconImageSource="dashboard2.png">
     <ContentPage.BindingContext>
-        <viewmodel:QRViewModel/>
+        <viewmodel:CronoViewModel/>
     </ContentPage.BindingContext>
     <StackLayout>
 
