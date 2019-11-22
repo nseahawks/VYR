@@ -127,7 +127,7 @@ namespace VYRMobile.Views
         }
         void AddMapStyle()
         {
-            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            var assembly = typeof(Mapa2).GetTypeInfo().Assembly;
             var stream = assembly.GetManifestResourceStream($"VYRMobile.MapStyle.json");
             string styleFile;
             using (var reader = new System.IO.StreamReader(stream))
@@ -145,7 +145,7 @@ namespace VYRMobile.Views
             try
             {
 
-                var assembly = IntrospectionExtensions.GetTypeInfo(typeof(MainPage)).Assembly;
+                var assembly = IntrospectionExtensions.GetTypeInfo(typeof(Mapa2)).Assembly;
                
 
                 var locator = CrossGeolocator.Current;

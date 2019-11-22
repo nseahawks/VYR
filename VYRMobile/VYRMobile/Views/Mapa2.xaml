@@ -8,7 +8,9 @@
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
-             x:Class="VYRMobile.Views.Mapa2">
+             x:Class="VYRMobile.Views.Mapa2"
+             Title="Mapa"
+             IconImageSource="mapa2.png">
     <Grid>
         <Frame         Grid.Row="0"
                            BackgroundColor="#005EB2" 

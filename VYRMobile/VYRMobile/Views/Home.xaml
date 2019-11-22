@@ -36,7 +36,7 @@
                 <StackLayout VerticalOptions="Start"
                      HeightRequest="300"
                          Margin="0,69,0,0">
-                    <Frame  x:Name="CronometroView"
+                    <!--<Frame  x:Name="CronometroView"
                         BackgroundColor="White"
                         CornerRadius="0"
                         WidthRequest="400"
@@ -50,10 +50,10 @@
                                     FontSize="18" 
                                     TextColor="Black" 
                                     HorizontalOptions="CenterAndExpand" 
-                                    VerticalOptions="Center"/>
+                                    VerticalOptions="Center"/>-->
 
                             <Label  Grid.Column="0" 
-                                    FontSize="60" 
+                                    FontSize="40" 
                                     TextColor="#33B033" 
                                     Margin="20,0,0,0"
                                     HorizontalOptions="Start" 
@@ -62,11 +62,11 @@
 
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding StopWatchHours}"/>
+                                        <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
                                         <Span Text=":"/>
-                                        <Span Text="{Binding StopWatchMinutes}"/>
+                                        <Span Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
                                         <Span Text=":"/>
-                                        <Span Text="{Binding StopWatchSeconds}"/>
+                                        <Span Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
                                         <Span Text="."/>
                                     </FormattedString>
                                 </Label.FormattedText>
@@ -81,12 +81,12 @@
 
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="{Binding StopWatchMilliseconds}"/>
+                                        <Span Text="{Binding StopWatchMilliseconds, StringFormat='{0:D2}'}"/>
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
-                        </StackLayout>
-                    </Frame>
+                        <!--</StackLayout>
+                    </Frame>-->
                 </StackLayout>
 
                

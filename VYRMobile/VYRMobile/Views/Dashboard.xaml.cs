@@ -25,7 +25,7 @@ namespace VYRMobile
             //var historial = new Historial();
             var signalRV = new SignalR();
             var home = new Home();
-            var mapa = new Mapa();
+            var mapa = new Mapa2();
             var reportes = new Reportes();
             var usuario = new Usuario();
 

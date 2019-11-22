@@ -8,9 +8,8 @@ using Xamarin.Forms;
 
 namespace VYRMobile.ViewModels
 {
-    public class CronoViewModel : INotifyPropertyChanged
+    class CronometroViewModel
     {
-
         Stopwatch stopWatch = new Stopwatch();
         private Timer time = new Timer();
         private string _stopWatchHours;
@@ -64,7 +63,7 @@ namespace VYRMobile.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-        public CronoViewModel()
+        public CronometroViewModel()
         {
             stopWatch.Start();
             StopWatchHours = stopWatch.Elapsed.Hours.ToString();
@@ -81,6 +80,5 @@ namespace VYRMobile.ViewModels
                 return true;
             });
         }
-
     }
 }

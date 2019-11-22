@@ -23,11 +23,11 @@ namespace VYRMobile
         public Home()
         {
             InitializeComponent();
-            BindingContext = new CronoViewModel();
+            BindingContext = new CronometroViewModel();
             BindingContext = new CallViewModel();
             BindingContext = new QRViewModel();
             QR.Clicked += QR_Clicked;
-            
+
             //CallFrancisco.Clicked += CallFrancisco_clicked;
         }
 

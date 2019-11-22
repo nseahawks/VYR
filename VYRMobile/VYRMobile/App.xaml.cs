@@ -13,7 +13,7 @@ namespace VYRMobile
         {
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
-            MainPage = new NavigationPage(new Dashboard());
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
