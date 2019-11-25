@@ -20,9 +20,9 @@ namespace VYRMobile.Controls
             get { return (ICommand)GetValue(SelectedCommandProperty); }
             set { SetValue(SelectedCommandProperty, value); }
         }
-        public event EventHandler ItemTapped;
+        //public event EventHandler ItemTapped;
         private bool _isAnimating = false;
-        private uint _animationDelay = 150;
+        private uint _animationDelay = 50;
 
         public CallMenu()
         {
@@ -46,10 +46,14 @@ namespace VYRMobile.Controls
         {
             image.GestureRecognizers.Add(new TapGestureRecognizer()
             {
-                Command = new Command( () =>
+                Command = new Command(async () =>
                 {
-                    ItemTapped?.Invoke(this, new SelectedItemChangedEventArgs(value));
-                    CloseMenu();
+                   await CloseMenu();
+
+                    if (SelectedCommand?.CanExecute(value) ?? false)
+                    {
+                        SelectedCommand?.Execute(value);
+                    }
 
                 }),
                 NumberOfTapsRequired = 1
@@ -84,7 +88,8 @@ namespace VYRMobile.Controls
                 await Close.FadeTo(0, _animationDelay);
                 await Call.RotateTo(0, _animationDelay);
                 await Call.FadeTo(1, _animationDelay);
-                await Outer.ScaleTo(1, 100, Easing.Linear);
+                await Outer.ScaleTo(1, 150, Easing.CubicInOut);
+
                 Close.IsVisible = false;
 
                 _isAnimating = false;
@@ -108,7 +113,7 @@ namespace VYRMobile.Controls
                         await Call.FadeTo(0, _animationDelay);
                         await Close.RotateTo(360, _animationDelay);
                         await Close.FadeTo(1, _animationDelay);
-                        await Outer.ScaleTo(3.3, 1000, Easing.Linear);
+                        await Outer.ScaleTo(3.3, 450, Easing.CubicInOut);
                         await ShowButtons();
                         Call.IsVisible = false;
 

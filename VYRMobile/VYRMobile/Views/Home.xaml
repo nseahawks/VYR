@@ -49,7 +49,7 @@
                                     FontSize="18" 
                                     TextColor="Black" 
                                     HorizontalOptions="CenterAndExpand" 
-                                    VerticalOptions="Center"/>-->
+                                    VerticalOptions="Center"/>
 
                             <Label  Grid.Column="0" 
                                     FontSize="40" 
@@ -83,7 +83,7 @@
                                         <Span Text="{Binding StopWatchMilliseconds, StringFormat='{0:D2}'}"/>
                                     </FormattedString>
                                 </Label.FormattedText>
-                            </Label>
+                            </Label>-->
                         <!--</StackLayout>
                     </Frame>-->
                 </StackLayout>
@@ -126,10 +126,10 @@
                   />
 
             </StackLayout>
-            <!--<Button     Grid.Row="2"         
+            <Button     Grid.Row="2"         
                 x:Name="CallFrancisco"
                          ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
-                            Margin="0,0,20,22" VerticalOptions="End"/>-->
+                            Margin="0,0,20,22" VerticalOptions="End"/>
             <!--<Grid        
                 Grid.Row="3"
                 HorizontalOptions="End"

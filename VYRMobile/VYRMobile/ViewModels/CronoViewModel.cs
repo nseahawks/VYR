@@ -4,15 +4,31 @@ using System.ComponentModel;
 using System.Diagnostics;
 using System.Text;
 using System.Timers;
+using System.Windows.Input;
 using Xamarin.Forms;
+using MvvmHelpers;
+using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace VYRMobile.ViewModels
 {
     public class CronoViewModel : INotifyPropertyChanged
     {
 
-        Stopwatch stopWatch = new Stopwatch();
+        public Stopwatch stopWatch = new Stopwatch();
         private Timer time = new Timer();
+
+        public ICommand StopCommand { get; }
+        public ICommand StartCommand { get; }
+        public void StartStopwatch()
+        {
+            stopWatch.Restart();
+        }
+        public void StopStopwatch()
+        {
+            stopWatch.Stop();
+        }
+
         private string _stopWatchHours;
         public string StopWatchHours
         {
@@ -66,13 +82,13 @@ namespace VYRMobile.ViewModels
         }
         public CronoViewModel()
         {
-            stopWatch.Start();
+            //stopWatch.Start();
             StopWatchHours = stopWatch.Elapsed.Hours.ToString();
             StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString();
             StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString();
             StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString();
 
-            Device.StartTimer(TimeSpan.FromMilliseconds(0), () =>
+            Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
             {
                 StopWatchHours = stopWatch.Elapsed.Hours.ToString();
                 StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString();
@@ -80,6 +96,9 @@ namespace VYRMobile.ViewModels
                 StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString();
                 return true;
             });
+            //StopStopwatch();
+            StopCommand = new Command(StopStopwatch);
+            StartCommand = new Command(StartStopwatch);
         }
 
     }

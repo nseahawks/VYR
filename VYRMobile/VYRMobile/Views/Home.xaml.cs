@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Messaging;
+using System;
 using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using ZXing.Net.Mobile.Forms;
@@ -11,12 +12,12 @@ namespace VYRMobile
         public Home()
         {
             InitializeComponent();
-            BindingContext = new CronometroViewModel();
+            BindingContext = new CronoViewModel();
             BindingContext = new CallViewModel();
             BindingContext = new QRViewModel();
             QR.Clicked += QR_Clicked;
 
-            //CallFrancisco.Clicked += CallFrancisco_clicked;
+            CallFrancisco.Clicked += CallFrancisco_clicked;
         }
 
         protected override void OnAppearing()
@@ -56,13 +57,13 @@ namespace VYRMobile
             await Navigation.PushAsync(scannerPage);
         }
 
-        /*private void CallFrancisco_clicked(object sender, EventArgs e)
+        private void CallFrancisco_clicked(object sender, EventArgs e)
             {
                 var phoneCallTask = CrossMessaging.Current.PhoneDialer;
                 if (phoneCallTask.CanMakePhoneCall)
                 {
                     phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
                 }
-            }*/
+            }
     }
 }

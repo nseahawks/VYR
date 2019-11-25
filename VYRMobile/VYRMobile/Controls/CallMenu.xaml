@@ -16,21 +16,17 @@
                 HorizontalOptions="Center"
                 Source="outer"/>
             
-            <Button        
+            <Image       
                 x:Name="Call"
-                ImageSource="call.png" 
-                BackgroundColor="#005EB2" 
-                BorderRadius="50"  
+                Source="closeplano.png" 
                 VerticalOptions="Center"
                 HorizontalOptions="Center" 
                 WidthRequest="60" 
                 HeightRequest="60"/>
             
-            <Button        
+            <Image     
                 x:Name="Close"
-                ImageSource="quit.png" 
-                BackgroundColor="#005EB2" 
-                BorderRadius="50"  
+                Source="close_circle.png"  
                 VerticalOptions="Center"
                 HorizontalOptions="Center" 
                 WidthRequest="60" 
@@ -40,8 +36,9 @@
                 x:Name="Seahawks" 
                 Opacity="0"
                 Margin="0,-60,0,60"
-                Source="pause.png" 
+                Source="antena.png" 
                 Aspect="AspectFit"
+                BackgroundColor="#005EB2"
                 WidthRequest="40" 
                 HeightRequest="40" 
                 VerticalOptions="Center"

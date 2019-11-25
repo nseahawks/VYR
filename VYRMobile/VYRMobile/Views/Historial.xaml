@@ -4,11 +4,15 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:controls="clr-namespace:VYRMobile.Controls"
+             xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Historial"
              NavigationPage.HasNavigationBar="False" 
              Title="Historial"
              IconImageSource="historial2.png">
+    <ContentPage.BindingContext>
+        <local:CronoViewModel/>
+    </ContentPage.BindingContext>
         <ContentPage.Content>
         <ScrollView>
             <Grid>
@@ -28,15 +32,67 @@
 HorizontalOptions="CenterAndExpand"/>
                 <Label x:Name="addressLabel" TextColor="Navy" Margin="20,20,0,0" />
             </StackLayout>-->
+                <Label Grid.Row="1" 
+                       FontSize="40" 
+                       TextColor="#005EB2" 
+                       Margin="20,0,0,0"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Start"
+                       WidthRequest="300">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
+                            <Span Text=":"/>
+                            <Span Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
+                            <Span Text=":"/>
+                            <Span Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
+                            <Span Text="."/>
+                            <Span Text="{Binding StopWatchMilliseconds}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                
+                <Button x:Name="btnStart"
+                        Grid.Row="2"
+                        BackgroundColor="ForestGreen"
+                        Text="START"
+                        TextColor="White"
+                        FontSize="20"
+                        Margin="0, 0, 0, 0"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"
+                        CornerRadius="2"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        Command="{Binding StartCommand}"/>
+                <Button x:Name="btnStop"
+                        IsVisible="False"
+                        Grid.Row="2"
+                        BackgroundColor="DarkRed"
+                        Text="STOP"
+                        TextColor="White"
+                        FontSize="20"
+                        Margin="0, 0, 0, 0"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"
+                        CornerRadius="2"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        Command="{Binding StopCommand}"/>
+                
                 <Grid        
                 Grid.Row="3"
                 HorizontalOptions="End"
-                Margin="0, 0, -24, 0">
+                Margin="0, 0, 26, 40">
+                    
                     <controls:CallMenu 
                     SelectedCommand="{Binding ItemSelectedCommand}"
                     HorizontalOptions="Center" 
-                    VerticalOptions="Center" />
+                    VerticalOptions="Center"
+                        HeightRequest="60"
+                        WidthRequest="60"/>
                 </Grid>
+                
             </Grid>
         </ScrollView>
     </ContentPage.Content>
