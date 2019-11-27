@@ -23,17 +23,17 @@ namespace VYRMobile.Views
 
         private void Equipamiento_clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Utensilios());
+            Navigation.PushModalAsync(new Utensilios());
         }
 
         private void Estadisticas_clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Estadisticas());
+            Navigation.PushModalAsync(new Estadisticas());
         }
 
         private void Logout_clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Login());
+            Navigation.PushModalAsync(new Login());
         }
     }
 }

@@ -45,7 +45,7 @@ namespace VYRMobile.Views
 
         private void BtnBack_clicked(object sender, EventArgs e)
         {
-            ((NavigationPage)this.Parent).PopAsync();
+            Navigation.PopModalAsync();
         }
     }
 }
