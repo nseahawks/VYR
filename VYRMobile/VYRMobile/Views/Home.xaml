@@ -110,7 +110,7 @@
             <StackLayout
                         VerticalOptions="End"
                         HeightRequest="50"
-                        Grid.Row="3">
+                        Grid.Row="3"  >
 
                 <Button     
                     x:Name="QR"
@@ -124,12 +124,23 @@
                     HorizontalOptions="Center"
                     
                   />
-
+                
             </StackLayout>
+            <Button     
+                    x:Name="alert"
+                    Text="Alert" 
+                    TextColor="White"
+                    BackgroundColor="#005EB2" 
+                    Margin="0, 75, 0, 0"
+                    CornerRadius="25"
+                    HeightRequest="30"
+                    WidthRequest="125"           
+                    HorizontalOptions="Center"/>
+            
             <Button     Grid.Row="2"         
-                x:Name="CallFrancisco"
-                         ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
-                            Margin="0,0,20,22" VerticalOptions="End"/>
+                        x:Name="CallFrancisco"
+                        ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
+                        Margin="0,0,20,22" VerticalOptions="End"/>
             <!--<Grid        
                 Grid.Row="3"
                 HorizontalOptions="End"

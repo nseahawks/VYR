@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "679898678225",
+    "firebase_url": "https://vyrmobile.firebaseio.com",
+    "project_id": "vyrmobile",
+    "storage_bucket": "vyrmobile.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679898678225:android:330e7a122bab778df496f0",
+        "android_client_info": {
+          "package_name": "com.companyname.vyrmobile"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679898678225-f86oa5m2eds2mmqfuhhnpiem4br00bq6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQhOlWNtEBOwDR5i1IuMT_lJ9MdY_AtFw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679898678225-f86oa5m2eds2mmqfuhhnpiem4br00bq6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
