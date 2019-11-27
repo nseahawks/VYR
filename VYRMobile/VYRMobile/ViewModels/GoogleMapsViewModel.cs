@@ -20,11 +20,28 @@ namespace VYRMobile.ViewModels
         public Command UpdatePositionCommand { get; set; }
         public Command LoadRouteCommand { get; set; }
         public Command StopRouteCommand { get; set; }
-        IGoogleMapsApiService googleMapsApi = new GoogleMapsApiService();
+        public Command ActualLocationCommand { get; set; }
 
-        public bool HasRouteRunning { get; set; }
-        string _originLatitud;
-        string _originLongitud;
+        IGoogleMapsApiService googleMapsApi = new GoogleMapsApiService();
+        private bool hasRouteRunning;
+        public bool HasRouteRunning
+        {
+            get
+            {
+                return hasRouteRunning;
+            }
+            set
+            {
+                if (hasRouteRunning != value)
+                {
+                    hasRouteRunning = value;
+                    OnPropertyChanged("HasRouteRunning");
+                }
+            }
+        }
+            
+        public string _originLatitud { get; set; }
+        public string _originLongitud { get; set; }
         string _destinationLatitud;
         string _destinationLongitud;
 
@@ -113,9 +130,10 @@ namespace VYRMobile.ViewModels
         public async Task LoadRoute()
         {
             var positionIndex = 1;
+            ActualLocationCommand.Execute(null);
             var googleDirection = await googleMapsApi.GetDirections(
-                "18.461294","-69.948531",
-                "18.47598","-69.91383"
+               _originLatitud, _originLongitud,
+                "18.461294", "-69.948531"
                 );
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
             {
@@ -125,23 +143,32 @@ namespace VYRMobile.ViewModels
                 HasRouteRunning = true;
 
                 //Location tracking simulation
-                Device.StartTimer(TimeSpan.FromSeconds(2), () =>
+                Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                 {
                     if (positions.Count > positionIndex && HasRouteRunning)
                     {
                         UpdatePositionCommand.Execute(positions[positionIndex]);
-                        positionIndex++;
+                        //positionIndex++;
                         return true;
                     }
                     else
                     {
+                            App.Current.MainPage.DisplayAlert(":)", "Has llegado a tu destino.", "Ok");
+                        //if (positions.Count <= positionIndex && !HasRouteRunning)
+                        //{
+                        //}
+                        //else
+                        //{
+                        //    App.Current.MainPage.DisplayAlert(":(", "Tu ruta se ha cancelado, presion 'Start Route' para inicar una nueva ruta.", "Ok");
+                        //}
+                           
                         return false;
                     }
                 });
             }
             else
             {
-                await App.Current.MainPage.DisplayAlert(":(", "No route found", "Ok");
+                await App.Current.MainPage.DisplayAlert(":)", "No route found", "Ok");
             }
 
         }
@@ -227,7 +254,7 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        //public event PropertyChangedEventHandler PropertyChanged;
 
     }
 }

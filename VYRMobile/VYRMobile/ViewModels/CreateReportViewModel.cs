@@ -24,7 +24,7 @@ namespace VYRMobile.ViewModels
 
 
         }
-        bool isBusy = false;
+        public bool isBusy = false;
 
         //IMPLEMENT FROM HERE LATER
         //private async void Attach()
