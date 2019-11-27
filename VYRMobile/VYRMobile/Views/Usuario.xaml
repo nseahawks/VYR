@@ -10,7 +10,7 @@
              IconImageSource="usuario2.png">
     <ContentPage.Content>
         <Grid>
-            <Frame BackgroundColor="#005EB2" 
+            <!--<Frame BackgroundColor="#005EB2" 
                            HeightRequest="25" 
                            HorizontalOptions="FillAndExpand" 
                            VerticalOptions="Start"
@@ -19,9 +19,9 @@
                            TextColor="White" 
                            FontSize="Large"
                            FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
+                           Margin="10, 16, 0, 0"/>-->
             <ScrollView>
-                <Grid Margin="0, 70,0,0">
+                <!--<Grid Margin="0, 70,0,0">-->
                 <StackLayout HeightRequest="150">
                     <Frame  HeightRequest="190">
                         <StackLayout>
@@ -86,7 +86,7 @@
                             HorizontalOptions="Fill"/>
                     </Frame>
                 </StackLayout>
-            </Grid>
+            <!--</Grid>-->
             </ScrollView>
         </Grid>
     </ContentPage.Content>

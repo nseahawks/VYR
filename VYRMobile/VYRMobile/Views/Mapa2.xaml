@@ -13,23 +13,26 @@
              IconImageSource="mapa2.png"
              Title="Mapa"
              CalculateCommand="{Binding CalculateRouteCommand}"
-             UpdateCommand="{Binding UpdatePositionCommand}">
+             UpdateCommand="{Binding UpdatePositionCommand}"
+             GetActualLocationCommand="{Binding ActualLocationCommand}"
+             OriginLocationlat ="{Binding _originLatitud}"
+             OriginLocationlng ="{Binding _originLongitud}">
     <ContentPage.BindingContext>
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
     <Grid>
-        <Frame Grid.Row="0"
+        <!--<Frame Grid.Row="0"
                BackgroundColor="#005EB2" 
                HeightRequest="25" 
                HorizontalOptions="FillAndExpand" 
                VerticalOptions="Start"
-               CornerRadius="0"/>
-        <Label Text="VR Maps" 
+               CornerRadius="0"/>-->
+        <!--<Label Text="VR Maps" 
                 TextColor="White" 
                 FontSize="Large"
                 FontAttributes="Bold"
-                Margin="10, 18, 0, 0"/>
-        <Grid Margin="0, 60, 0, 0">
+                Margin="10, 18, 0, 0"/>-->
+        <!--<Grid Margin="0, 0, 0, 0">-->
 
             <maps:Map    x:Name="map" 
                          VerticalOptions="FillAndExpand"
@@ -42,9 +45,10 @@
                          MyLocationEnabled="True"
                          Visual="Material"/>
 
-            <Button      x:Name="startRoute"
+        <Button      x:Name="startRoute"
                         Command="{Binding LoadRouteCommand}"
                         Text="START ROUTE"
+                        IsVisible="{Binding IsRouteNotRunning}"
                         BackgroundColor="#005EB2"
                         TextColor="White"
                         HeightRequest="50"
@@ -52,12 +56,13 @@
                         VerticalOptions="End"
                         CornerRadius="2"
                         Margin="0, 0, 0, 10"
-                        HorizontalOptions="Center"/>
+                        HorizontalOptions="Center"
+                        />
 
-            <Button      x:Name="stopRoute"
+        <Button      x:Name="stopRoute"
                          Command="{Binding StopRouteCommand}"
                          Text="STOP ROUTE"
-                         IsVisible="False"
+                         IsVisible="{Binding HasRouteRunning}"
                          BackgroundColor="#AE220E"
                          TextColor="White"
                          HeightRequest="50"
@@ -67,6 +72,6 @@
                          Margin="0, 0, 0, 10"
                          HorizontalOptions="Center"/>
             
-        </Grid>
+        <!--</Grid>-->
     </Grid>
 </ContentPage>

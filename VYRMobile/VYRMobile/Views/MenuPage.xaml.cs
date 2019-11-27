@@ -11,7 +11,7 @@ namespace VYRMobile.Views
             InitializeComponent();
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
-            this.Children.Add(new Historial());
+            this.Children.Add(new SignalR());
             this.Children.Add(new Home());
             this.Children.Add(new Mapa2());
             this.Children.Add(new Reportes());
