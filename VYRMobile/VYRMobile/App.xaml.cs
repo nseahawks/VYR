@@ -3,6 +3,8 @@ using VYRMobile.Services;
 using VYRMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Push;
 
 
 namespace VYRMobile
@@ -16,12 +18,12 @@ namespace VYRMobile
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
             //MainPage = new NavigationPage(new MenuPage());
-            MainPage = new MainPage();
+            MainPage = new MenuPage();
         }
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            AppCenter.Start("bff38954-6dd9-4a23-a41a-13430c73bfd8", typeof(Push));
         }
 
         protected override void OnSleep()
