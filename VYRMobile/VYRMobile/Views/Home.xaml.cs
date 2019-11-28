@@ -14,15 +14,29 @@ namespace VYRMobile
         {
             InitializeComponent();
             BindingContext = new CronoViewModel();
-            BindingContext = new CallViewModel();
+
+            btnStart.Clicked += BtnStart_Clicked;
+            btnStop.Clicked += BtnStop_Clicked;
+            /*BindingContext = new CallViewModel();
             BindingContext = new QRViewModel();
             QR.Clicked += QR_Clicked;
 
             CallFrancisco.Clicked += CallFrancisco_clicked;
-            alert.Clicked += alert_clicked;   
+            alert.Clicked += alert_clicked;  */
+        }
+        private void BtnStop_Clicked(object sender, EventArgs e)
+        {
+            btnStop.IsVisible = false;
+            btnStart.IsVisible = true;
         }
 
-        private async void alert_clicked(object sender, EventArgs e)
+        private void BtnStart_Clicked(object sender, EventArgs e)
+        {
+            btnStart.IsVisible = false;
+            btnStop.IsVisible = true;
+        }
+
+        /*private async void alert_clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             showMap();
@@ -60,14 +74,16 @@ namespace VYRMobile
                 scannerPage.IsScanning = false;
                 Device.BeginInvokeOnMainThread(() =>
                 {
-                    Navigation.PopAsync();
+                    Navigation.PopModalAsync();
 
                     DisplayAlert("Valor Obtenido", result.Text, "OK");
+                    seaCheckbox.IsChecked = true;
                 });
+                
 
             };
             
-            await Navigation.PushAsync(scannerPage);
+            await Navigation.PushModalAsync(scannerPage);
         }
 
         private void CallFrancisco_clicked(object sender, EventArgs e)
@@ -77,6 +93,6 @@ namespace VYRMobile
                 {
                     phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
                 }
-            }
+            }*/
     }
 }

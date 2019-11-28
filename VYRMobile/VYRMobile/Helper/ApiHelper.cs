@@ -26,7 +26,7 @@ namespace VYRMobile.Helper
             {
                 DefaultRequestHeaders.Authorization =
                     new AuthenticationHeaderValue("Bearer", /*ApiHelper.Token*/
-                        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdW1tWUBlbWFpbC5jb20iLCJqdGkiOiI3ZWQ3ZGI0Mi00OGMxLTQwZDAtYjNjOS0xZjVjOWNkNWEyOWIiLCJlbWFpbCI6ImR1bW1ZQGVtYWlsLmNvbSIsImlkIjoiNTJhMjlhMWItMzNjZC00YThkLWIzMDUtY2Q3NDE1MzZlOGIzIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE1NzQ4MjE3NjUsImV4cCI6MTU3NDg5NzM2NSwiaWF0IjoxNTc0ODIxNzY1fQ.c0EWM1bnQMpqUpxsnQVfNgOrXuRAQGkCwKRXymRgqC4asp"
+                        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdW1tWUBlbWFpbC5jb20iLCJqdGkiOiI4YmE4YTU4Yi04MDViLTQ1ODktOTQzNi03NWI2Y2Y2ZjdhMmEiLCJlbWFpbCI6ImR1bW1ZQGVtYWlsLmNvbSIsImlkIjoiNTJhMjlhMWItMzNjZC00YThkLWIzMDUtY2Q3NDE1MzZlOGIzIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE1NzQ4NzMzNTIsImV4cCI6MTU3NDk0ODk1MiwiaWF0IjoxNTc0ODczMzUyfQ.PSx6m6vnAr59DlPqzWflxwOYVlWqurdQaxc7Tmzspyw"
                     );
             }
         }

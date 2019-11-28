@@ -3,24 +3,17 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
+             xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False">
     
     <ContentPage.BindingContext>
-        <viewmodel:CronoViewModel/>
+        <local:CronoViewModel/>
     </ContentPage.BindingContext>
     
     <StackLayout>
-
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-
             <!--View del cronometro -->
                 <StackLayout VerticalOptions="Start"
                      HeightRequest="300"
@@ -76,10 +69,8 @@
                             </Label>-->
                         <!--</StackLayout>
                     </Frame>-->
-                </StackLayout>
-
+                </StackLayout>        
                
-            <!--View de tareas 
             <StackLayout
                         VerticalOptions="Fill"
                         HeightRequest="500"
@@ -97,7 +88,7 @@
                 </Frame>
 
             </StackLayout>-->
-            <StackLayout
+        <!--<StackLayout
                         VerticalOptions="End"
                         HeightRequest="50"
                         Grid.Row="3"  >
@@ -113,7 +104,7 @@
                     WidthRequest="175"           
                     HorizontalOptions="Center"
                     
-                />
+                  />
                 
             </StackLayout>
             <Button     
@@ -121,17 +112,19 @@
                     Text="Alert" 
                     TextColor="White"
                     BackgroundColor="#005EB2" 
-                    Margin="0, 75, 0, 0"
+                    Margin="0, 0, 0, 40"
                     CornerRadius="25"
-                    HeightRequest="30"
+                    HeightRequest="50"
                     WidthRequest="125"           
-                    HorizontalOptions="Center"/>
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"/>
+            
             
             <Button     Grid.Row="2"         
                         x:Name="CallFrancisco"
                         ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
                         Margin="0,0,20,22" VerticalOptions="End"/>
-            <!--<Grid        
+            <Grid        
                 Grid.Row="3"
                 HorizontalOptions="End"
                 Margin="0, 0, -24, 0">
@@ -139,8 +132,8 @@
                     SelectedCommand="{Binding ItemSelectedCommand}"
                     HorizontalOptions="Center" 
                     VerticalOptions="Center" />
-            </Grid>-->
-        </Grid>
+            </Grid>
+        </Grid>-->
         
     </StackLayout>
 </ContentPage>

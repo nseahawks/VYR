@@ -54,7 +54,7 @@ namespace VYRMobile.Views
         }
         private void btnReporte_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CreateReportPage());
+            Navigation.PushModalAsync(new CreateReportPage());
 
         }
     }
