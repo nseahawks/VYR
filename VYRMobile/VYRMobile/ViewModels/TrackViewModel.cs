@@ -33,7 +33,7 @@ namespace VYRMobile.ViewModels
 
         Random random;
         string fing = Build.Fingerprint;
-        string url = "10.0.0.49";
+        //string url = "10.0.0.49";
         bool isEmulator = false;
         public TrackViewModel()
         {
@@ -44,15 +44,15 @@ namespace VYRMobile.ViewModels
             DisconnectCommand = new Command(async () => await Disconnect());
             
             random = new Random();  
-            if (fing != null)
-            {
-                isEmulator = fing.Contains("vbox") || fing.Contains("generic");
-            }
+            //if (fing != null)
+            //{
+            //    isEmulator = fing.Contains("vbox") || fing.Contains("generic");
+            //}
 
-            if (isEmulator)
-            {
-                url = "10.0.2.2";
-            }
+            //if (isEmulator)
+            //{
+            //    var url = "10.0.2.2";
+            //}
 
             _hub = new HubConnectionBuilder()
                 //.WithUrl($"http://{url}:5000/hubs/trackHub")

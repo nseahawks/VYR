@@ -13,7 +13,7 @@ namespace VYRMobile.Views
 {
     public partial class Reportes : ContentPage
     {
-        HttpClient _client;
+        //HttpClient _client;
         public Reportes()
         {
             InitializeComponent();
@@ -54,7 +54,7 @@ namespace VYRMobile.Views
         }
         private void btnReporte_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new CreateReportPage());
+            Navigation.PushAsync(new CreateReportPage());
 
         }
     }

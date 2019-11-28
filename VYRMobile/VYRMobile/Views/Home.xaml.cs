@@ -15,8 +15,8 @@ namespace VYRMobile
             InitializeComponent();
             BindingContext = new CronoViewModel();
 
-            btnStart.Clicked += BtnStart_Clicked;
-            btnStop.Clicked += BtnStop_Clicked;
+            //btnStart.Clicked += BtnStart_Clicked;
+            //btnStop.Clicked += BtnStop_Clicked;
             /*BindingContext = new CallViewModel();
             BindingContext = new QRViewModel();
             QR.Clicked += QR_Clicked;
@@ -24,17 +24,17 @@ namespace VYRMobile
             CallFrancisco.Clicked += CallFrancisco_clicked;
             alert.Clicked += alert_clicked;  */
         }
-        private void BtnStop_Clicked(object sender, EventArgs e)
-        {
-            btnStop.IsVisible = false;
-            btnStart.IsVisible = true;
-        }
+        //private void BtnStop_Clicked(object sender, EventArgs e)
+        //{
+        //    btnStop.IsVisible = false;
+        //    btnStart.IsVisible = true;
+        //}
 
-        private void BtnStart_Clicked(object sender, EventArgs e)
-        {
-            btnStart.IsVisible = false;
-            btnStop.IsVisible = true;
-        }
+        //private void BtnStart_Clicked(object sender, EventArgs e)
+        //{
+        //    btnStart.IsVisible = false;
+        //    btnStop.IsVisible = true;
+        //}
 
         /*private async void alert_clicked(object sender, EventArgs e)
         {

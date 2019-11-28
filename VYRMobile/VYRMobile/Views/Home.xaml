@@ -8,17 +8,17 @@
              x:Class="VYRMobile.Home"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False">
-    
+
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
     </ContentPage.BindingContext>
-    
+
     <StackLayout>
-            <!--View del cronometro -->
-                <StackLayout VerticalOptions="Start"
-                     HeightRequest="300"
-                         Margin="0,69,0,0">
-                    <!--<Frame  x:Name="CronometroView"
+        <!--View del cronometro -->
+        <StackLayout VerticalOptions="Start"
+                    HeightRequest="300"
+                        Margin="0,69,0,0">
+            <!--<Frame  x:Name="CronometroView"
                         BackgroundColor="White"
                         CornerRadius="0"
                         WidthRequest="400"
@@ -67,27 +67,27 @@
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>-->
-                        <!--</StackLayout>
+            <!--</StackLayout>
                     </Frame>-->
-                </StackLayout>        
-               
-            <StackLayout
+        </StackLayout>
+
+        <StackLayout
                         VerticalOptions="Fill"
                         HeightRequest="500"
                         Grid.Row="2"
                         HorizontalOptions="Center">
 
-                <Frame x:Name="MenuTareas"
+            <Frame x:Name="MenuTareas"
                                BackgroundColor="White"
                                CornerRadius="5"
                                WidthRequest="250"
                                HorizontalOptions="Center"
                                HeightRequest="500">
-                    <Label Text="Tareas a solucionar:" />
+                <Label Text="Tareas a solucionar:" />
 
-                </Frame>
+            </Frame>
 
-            </StackLayout>-->
+        </StackLayout>
         <!--<StackLayout
                         VerticalOptions="End"
                         HeightRequest="50"
@@ -134,6 +134,6 @@
                     VerticalOptions="Center" />
             </Grid>
         </Grid>-->
-        
+
     </StackLayout>
 </ContentPage>
