@@ -6,7 +6,6 @@ using Plugin.Media;
 
 namespace VYRMobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CrearReporte : ContentPage
     {
         //HttpClient _client;

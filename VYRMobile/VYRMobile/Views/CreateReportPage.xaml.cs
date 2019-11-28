@@ -10,13 +10,11 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CreateReportPage : ContentPage
     {
         public CreateReportPage()
         {
             InitializeComponent();
-            btnBack.Clicked += BtnBack_clicked;
             btnAttach.Clicked += BtnAttach_clicked;
             BindingContext = new CreateReportViewModel();
         }
@@ -41,11 +39,6 @@ namespace VYRMobile.Views
                 return;
 
             Image1.Source = ImageSource.FromStream(() => file.GetStream());
-        }
-
-        private void BtnBack_clicked(object sender, EventArgs e)
-        {
-            ((NavigationPage)this.Parent).PopAsync();
         }
     }
 }

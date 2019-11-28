@@ -11,7 +11,6 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Reportes : ContentPage
     {
         HttpClient _client;

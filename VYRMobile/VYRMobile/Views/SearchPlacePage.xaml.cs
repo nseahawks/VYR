@@ -10,7 +10,6 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SearchPlacePage : ContentPage
     {
         public static readonly BindableProperty FocusOriginCommandProperty =

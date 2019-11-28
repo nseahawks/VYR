@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Configuracion : ContentPage
     {
         public Configuracion()

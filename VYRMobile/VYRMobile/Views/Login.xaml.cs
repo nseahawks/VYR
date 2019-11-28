@@ -5,7 +5,8 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
+
+
     public partial class Login : ContentPage
     {
         public Login()

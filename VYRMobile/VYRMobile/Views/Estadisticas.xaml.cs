@@ -12,7 +12,6 @@ using Entry = Microcharts.Entry;
 
 namespace VYRMobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Estadisticas : ContentPage
     {
         public Estadisticas()

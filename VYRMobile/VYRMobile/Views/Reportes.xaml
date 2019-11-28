@@ -6,48 +6,26 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Reportes"
              Title="Reportes"
-             IconImageSource="reportes2.png"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasBackButton="False">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="more3.png" x:Name="btnReporte"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    
     <ContentPage.Content>
-        <Grid>
-            <Frame         BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-            <Label Text="Reportes" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
-
-            <StackLayout 
-                        HorizontalOptions="End"
-                        VerticalOptions="Start"
-                        HeightRequest="60"
-                        WidthRequest="50"
-                        Margin="40, 0,0,0">
-
-                <ImageButton x:Name="btnReporte"
-                                Source="more3.png"
-                                BackgroundColor="#005EB2"
-                                HorizontalOptions="End"
-                                HeightRequest="60"
-                                WidthRequest="50"/>
-
-            </StackLayout>
-            <StackLayout Margin="0, 50,0,0">
-                <ListView x:Name="reportList">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <Label Text="{Binding Id}"></Label>
-                            </ViewCell>
-
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </StackLayout>
-        </Grid>
+        
+        <StackLayout Margin="0, 50,0,0">
+            <ListView x:Name="reportList">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Label Text="{Binding Id}"></Label>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+        
     </ContentPage.Content>
+    
 </ContentPage>

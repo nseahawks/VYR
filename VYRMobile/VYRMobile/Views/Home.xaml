@@ -6,11 +6,13 @@
              xmlns:viewmodel="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
-             Title="Home"
-             IconImageSource="dashboard2.png">
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    
     <ContentPage.BindingContext>
         <viewmodel:CronoViewModel/>
     </ContentPage.BindingContext>
+    
     <StackLayout>
 
         <Grid>
@@ -19,18 +21,6 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
 
-            <Grid Grid.Row="0">
-                <Frame BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-                <Label Text="Dashboard" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
-            </Grid>
             <!--View del cronometro -->
                 <StackLayout VerticalOptions="Start"
                      HeightRequest="300"
@@ -123,7 +113,7 @@
                     WidthRequest="175"           
                     HorizontalOptions="Center"
                     
-                  />
+                />
                 
             </StackLayout>
             <Button     
