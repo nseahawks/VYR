@@ -10,40 +10,29 @@
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              x:Class="VYRMobile.Views.Mapa2"
-             IconImageSource="mapa2.png"
-             Title="Mapa"
+
              CalculateCommand="{Binding CalculateRouteCommand}"
              UpdateCommand="{Binding UpdatePositionCommand}"
              GetActualLocationCommand="{Binding ActualLocationCommand}"
              OriginLocationlat ="{Binding _originLatitud}"
              OriginLocationlng ="{Binding _originLongitud}">
+    
     <ContentPage.BindingContext>
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
+    
     <Grid>
-        <!--<Frame Grid.Row="0"
-               BackgroundColor="#005EB2" 
-               HeightRequest="25" 
-               HorizontalOptions="FillAndExpand" 
-               VerticalOptions="Start"
-               CornerRadius="0"/>-->
-        <!--<Label Text="VR Maps" 
-                TextColor="White" 
-                FontSize="Large"
-                FontAttributes="Bold"
-                Margin="10, 18, 0, 0"/>-->
-        <!--<Grid Margin="0, 0, 0, 0">-->
 
-            <maps:Map    x:Name="map" 
-                         VerticalOptions="FillAndExpand"
-                         HorizontalOptions="FillAndExpand"
-                         HasScrollEnabled="True"
-                         IsShowingUser="True"
-                         IsTrafficEnabled="False"
-                         IsIndoorEnabled="True"
-                         IsEnabled="True"
-                         MyLocationEnabled="True"
-                         Visual="Material"/>
+        <maps:Map    x:Name="map" 
+                        VerticalOptions="FillAndExpand"
+                        HorizontalOptions="FillAndExpand"
+                        HasScrollEnabled="True"
+                        IsShowingUser="True"
+                        IsTrafficEnabled="False"
+                        IsIndoorEnabled="True"
+                        IsEnabled="True"
+                        MyLocationEnabled="True"
+                        Visual="Material"/>
 
         <Button      x:Name="startRoute"
                         Command="{Binding LoadRouteCommand}"
@@ -72,6 +61,5 @@
                          Margin="0, 0, 0, 10"
                          HorizontalOptions="Center"/>
             
-        <!--</Grid>-->
     </Grid>
 </ContentPage>

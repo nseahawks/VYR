@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Utensilios : ContentPage
     {
         public Utensilios()

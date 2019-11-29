@@ -16,7 +16,6 @@ using ZXing.Net.Mobile.Forms;
 
 namespace VYRMobile
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Historial : ContentPage
     {
         

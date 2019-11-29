@@ -6,88 +6,74 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Usuario"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             Title="Usuario"
-             IconImageSource="usuario2.png">
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
     <ContentPage.Content>
-        <Grid>
-            <Frame BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-            <Label Text="Usuario" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
-            <ScrollView>
-                <!--<Grid Margin="0, 70,0,0">-->
-                <StackLayout HeightRequest="150">
-                    <Frame  HeightRequest="190">
-                        <StackLayout>
-                            <controls:CircleImage 
-                                    Source="usuario.png"
-                                    VerticalOptions="Start"
-                                    HeightRequest="150"
-                                    WidthRequest="150"/>
-                            <Label  Text="Ramon Perez"
-                                    TextColor="Black"
-                                    FontSize="Medium"
-                                    HorizontalOptions="Center"/>
-                            <Label  Text="9852-34644"
-                                    TextColor="Black"
-                                    FontSize="Small"
-                                    HorizontalOptions="Center"/>
-                        </StackLayout>
-                    </Frame>
-                    <Frame HeightRequest="120">
-                        <StackLayout>
-                            <Button x:Name="Config"
-                            BackgroundColor="White"
-                            ImageSource="config.png"
-                            Text="Configuracion"
-                            TextColor="Black"
-                            FontSize="Small"
-                            HeightRequest="40"
-                            HorizontalOptions="Fill"/>
-
-                            <Button x:Name="Equipamiento"
-                            BackgroundColor="White"
-                            ImageSource="equipo.png"
-                            Text="Equipamiento"
-                            TextColor="Black"
-                            FontSize="Small"
-                            HeightRequest="40"
-                            HorizontalOptions="Fill"/>
-
-                            <Button x:Name="Estadisticas"
-                            BackgroundColor="White"
-                            ImageSource="equipo.png"
-                            Text="Estadisticas"
-                            TextColor="Black"
-                            FontSize="Small"
-                            HeightRequest="40"
-                            HorizontalOptions="Fill"/>
-
-                        </StackLayout>
-                    </Frame>
-                    <Frame  HeightRequest="45"
-                            HorizontalOptions="Fill"
-                            BackgroundColor="White"
-                            VerticalOptions="End">
-                            <Button x:Name="Logout"
-                            BackgroundColor="White"
-                            ImageSource="logout.png"
-                            Text="Cerrar Sesion"
+ 
+        <StackLayout HeightRequest="150">
+            <Frame  HeightRequest="190">
+                <StackLayout>
+                    <controls:CircleImage 
+                            Source="usuario.png"
+                            VerticalOptions="Start"
+                            HeightRequest="150"
+                            WidthRequest="150"/>
+                    <Label  Text="Ramon Perez"
                             TextColor="Black"
                             FontSize="Medium"
-                            FontAttributes="Bold"
-                            HeightRequest="40"
-                            HorizontalOptions="Fill"/>
-                    </Frame>
+                            HorizontalOptions="Center"/>
+                    <Label  Text="9852-34644"
+                            TextColor="Black"
+                            FontSize="Small"
+                            HorizontalOptions="Center"/>
                 </StackLayout>
-            <!--</Grid>-->
-            </ScrollView>
-        </Grid>
+            </Frame>
+            <Frame HeightRequest="120">
+                <StackLayout>
+                    <Button x:Name="Config"
+                    BackgroundColor="White"
+                    ImageSource="config.png"
+                    Text="Configuracion"
+                    TextColor="Black"
+                    FontSize="Small"
+                    HeightRequest="40"
+                    HorizontalOptions="Fill"/>
+
+                    <Button x:Name="Equipamiento"
+                    BackgroundColor="White"
+                    ImageSource="equipo.png"
+                    Text="Equipamiento"
+                    TextColor="Black"
+                    FontSize="Small"
+                    HeightRequest="40"
+                    HorizontalOptions="Fill"/>
+
+                    <Button x:Name="Estadisticas"
+                    BackgroundColor="White"
+                    ImageSource="equipo.png"
+                    Text="Estadisticas"
+                    TextColor="Black"
+                    FontSize="Small"
+                    HeightRequest="40"
+                    HorizontalOptions="Fill"/>
+
+                </StackLayout>
+            </Frame>
+            <Frame  HeightRequest="45"
+                    HorizontalOptions="Fill"
+                    BackgroundColor="White"
+                    VerticalOptions="End">
+                    <Button x:Name="Logout"
+                    BackgroundColor="White"
+                    ImageSource="logout.png"
+                    Text="Cerrar Sesion"
+                    TextColor="Black"
+                    FontSize="Medium"
+                    FontAttributes="Bold"
+                    HeightRequest="40"
+                    HorizontalOptions="Fill"/>
+            </Frame>
+        </StackLayout>
+
     </ContentPage.Content>
 </ContentPage>

@@ -9,7 +9,6 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Controls
 {
-    [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CallMenu : ContentView
     {
         public static readonly BindableProperty SelectedCommandProperty =
