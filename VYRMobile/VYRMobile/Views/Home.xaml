@@ -9,8 +9,8 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
-             Title="Home"
-             IconImageSource="dashboard2.png">
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
     </ContentPage.BindingContext>

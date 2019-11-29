@@ -41,7 +41,7 @@ namespace VYRMobile
 
             };*/
         }
-        protected override void OnAppearing()
+        /*protected override void OnAppearing()
         {
             base.OnAppearing();
 
@@ -53,7 +53,7 @@ namespace VYRMobile
             await Task.Delay(5000);
             DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             showMap();
-        }
+        }*/
         private async void alert_clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");

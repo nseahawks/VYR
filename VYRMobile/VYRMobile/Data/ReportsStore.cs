@@ -30,10 +30,10 @@ namespace VYRMobile.Data
             {
                 UserId = "52a29a1b-33cd-4a8d-b305-cd741536e8b3",
                 Title = report.Title,
-                Created = DateTime.UtcNow,
+                //Created = DateTime.UtcNow,
                 Description = report.Description,
                 Address = "",
-                Status = false,
+                //Status = false,
                 ResolveDate = DateTime.UtcNow
             };
 

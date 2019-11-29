@@ -18,6 +18,7 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
             btnReporte.Clicked += btnReporte_Clicked;
+            BindingContext = new ReportViewModel();
         }
 
         protected async override void OnAppearing()
