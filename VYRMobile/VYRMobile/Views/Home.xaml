@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:cardView="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
 xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
 xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
@@ -15,17 +16,7 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
     </ContentPage.BindingContext>
     <StackLayout>
         <Grid>
-            <StackLayout>
-                <combobox:SfComboBox x:Name="comboBox">
-                    <combobox:SfComboBox.ComboBoxSource>
-                        <ListCollection:List x:TypeArguments="x:String">
-                            <x:String>Item 1</x:String>
-                            <x:String>Item 2</x:String>
-                            <x:String>Item 3</x:String>
-                        </ListCollection:List>
-                    </combobox:SfComboBox.ComboBoxSource>
-                </combobox:SfComboBox>
-            </StackLayout>
+
             <Grid Grid.Row="0">
                 <Frame BackgroundColor="#005EB2" 
                            HeightRequest="25" 
@@ -82,6 +73,7 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
                         WidthRequest="100"
                         Command="{Binding StopCommand}"/>
             </Grid>
+            
         </Grid>
         <!--<Grid>
             <Grid.RowDefinitions>
