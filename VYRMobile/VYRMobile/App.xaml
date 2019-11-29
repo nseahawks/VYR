@@ -8,6 +8,8 @@
     <Application.Resources>
         <Style TargetType="NavigationPage">
             <Setter Property="BarBackgroundColor" Value="#005EB2"></Setter>
+            
         </Style>
+       
     </Application.Resources>
 </Application>
