@@ -30,6 +30,14 @@ namespace VYRMobile.Views
         public static readonly BindableProperty OriginLocationlngProperty =
         BindableProperty.Create(nameof(OriginLocationlng), typeof(string),
             typeof(Mapa2), null, BindingMode.TwoWay);
+        
+        public static readonly BindableProperty DestinationLocationlatProperty =
+        BindableProperty.Create(nameof(DestinationLocationlat), typeof(string),
+            typeof(Mapa2), null, BindingMode.TwoWay);
+        
+        public static readonly BindableProperty DestinationLocationlngProperty =
+        BindableProperty.Create(nameof(DestinationLocationlng), typeof(string),
+            typeof(Mapa2), null, BindingMode.TwoWay);
    
         public static readonly BindableProperty UpdateCommandProperty =
           BindableProperty.Create(nameof(UpdateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
@@ -46,27 +54,67 @@ namespace VYRMobile.Views
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
             AddMapStyle();
+            
            
             CalculateCommand = new Command<List<Position>>(Calculate);
+
             UpdateCommand = new Command<Position>(Update);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
 
-            //Pin seahawksPin = null;
-            //seahawksPin = new Pin()
+            Pin seahawksPin = null;
+            seahawksPin = new Pin()
+            {
+                Type = PinType.SavedPin,
+                Label = "Negocios Seahawks",
+                Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
+                Position = new Position(18.461294, -69.948531),
+                Tag = "id_seahawks",
+            };
+            map.Pins.Add(seahawksPin);
+
+            
+
+            map.PinClicked += Map_PinClicked;
+            //map.PinClicked += (object s, SelectedPinChangedEventArgs e) =>
             //{
-            //    Type = PinType.SavedPin,
-            //    Label = "Negocios Seahawks",
-            //    Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
-            //    Position = new Position(18.461294, -69.948531),
-            //    Tag = "id_seahawks",
+            //    string pinName = s.;
+            //    DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
             //};
-            //map.Pins.Add(seahawksPin);
+            //map.PinClicked += async (e, args) =>
+            //{
+            //    string pinName = ((Pin)e).Label;
+            //    await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
+            //};
+         
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(18.461294, -69.948531), Distance.FromMeters(5000)));
+        }
+
+
+        void Map_PinClicked(object sender, PinClickedEventArgs e)
+        {
+            //e.Handled = switchHandlePinClicked.IsToggled;
+            //string pinName = e.Pin.Label;
+            //DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
+            DestinationLocationlat = e.Pin.Position.Latitude.ToString();
+            DestinationLocationlng = e.Pin.Position.Longitude.ToString();
+            //startRoute.IsEnabled = true
+            // If you set e.Handled = true,
+            // then Pin selection doesn't work automatically.
+            // All pin selection operations are delegated to you.
+            // Sample codes are below.
+            //if (switchHandlePinClicked.IsToggled)
+            //{
+            //    map.SelectedPin = e.Pin;
+            //    map.AnimateCamera(CameraUpdateFactory.NewPosition(e.Pin.Position));
+            //}
         }
 
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            map.MyLocationEnabled = true;
+            map.UiSettings.MyLocationButtonEnabled = true;
+            map.UiSettings.TiltGesturesEnabled = true;
             GetActualLocationCommand.Execute(null);
         }
 
@@ -87,6 +135,16 @@ namespace VYRMobile.Views
         {
             get { return (string)GetValue(OriginLocationlngProperty); }
             set { SetValue(OriginLocationlngProperty, value); }
+        }
+        public string DestinationLocationlat
+        {
+            get { return (string)GetValue(DestinationLocationlatProperty); }
+            set { SetValue(DestinationLocationlatProperty, value); }
+        }
+         public string DestinationLocationlng
+        {
+            get { return (string)GetValue(DestinationLocationlngProperty); }
+            set { SetValue(DestinationLocationlngProperty, value); }
         }
 
         public Command GetActualLocationCommand
@@ -109,9 +167,9 @@ namespace VYRMobile.Views
                     //map.MoveToRegion(MapSpan.FromCenterAndRadius(
                     //    position,
                     //    Distance.FromMiles(0.3)));
-                    await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(position.Latitude, position.Longitude)));
+                    await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(location.Latitude, location.Longitude)));
                     OriginLocationlat = position.Latitude.ToString();
-                     OriginLocationlng = position.Longitude.ToString();
+                    OriginLocationlng = position.Longitude.ToString();
                 }
             }
 
@@ -124,7 +182,7 @@ namespace VYRMobile.Views
 
         private async void Update(Position position)
         {
-            if (map.Pins.Count == 0 && map.Polylines != null && map.Polylines?.Count > 1)
+            if (map.Polylines != null && map.Polylines?.Count > 1)
                 return;
 
             var cPin = map.Pins.FirstOrDefault();
@@ -194,6 +252,7 @@ namespace VYRMobile.Views
                 Label = "Last",
                 Address = "Last",
                 Tag = string.Empty,
+                
             };
             map.Pins.Add(pin1);
         }
