@@ -3,30 +3,81 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Utensilios"
-             NavigationPage.HasNavigationBar="False">
+             NavigationPage.HasNavigationBar="False"
+             NavigationPage.HasBackButton="False">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}"/>
+                <Setter Property="FontSize" Value="{StaticResource FontSize20}" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="Text" Value="Confirmar" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BaseColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
+                <Setter Property="FontSize" Value="{StaticResource FontSize14}" />
+                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="WidthRequest" Value="120" />
+                <Setter Property="HorizontalOptions" Value="End" />
+                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="CornerRadius" Value="5" />
+                <Setter Property="Margin" Value="0, 0, 40, 10" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid>
-            <Frame BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-            <Label Text="Mi Usuario" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
-            <StackLayout>
-                <Label Text="Gasolina"
-                       Margin="20, 40, 0, 0"/>
-                <Switch IsToggled="True"
-                    ThumbColor="#005EB2"
-                        Margin="0, 40, 20, 0"/>
-
-            </StackLayout>
+        <Grid
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="100" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid      
+                Grid.Row="0"
+                Grid.RowSpan="3"
+                Grid.ColumnSpan="2"
+                VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="115" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="360" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Label  Grid.Row="0"
+                        Text="Complete su equipo:"
+                        Style="{StaticResource LabelStyle}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Margin="0, 10, 0, 0"/>
+                <ListView Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    ItemsSource="{Binding Equipos}"
+                    SelectionMode="None"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="Default">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <cells:EquipoItemViewCell />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Button
+                    Grid.Row="2"
+                    x:Name="btnConfirmar" 
+                    Style="{StaticResource ButtonStyle}"/>
+            </Grid>
         </Grid>
-        
+
     </ContentPage.Content>
 </ContentPage>

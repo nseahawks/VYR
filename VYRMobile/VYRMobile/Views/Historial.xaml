@@ -9,23 +9,16 @@
              x:Class="VYRMobile.Historial"
              NavigationPage.HasNavigationBar="False" 
              Title="Historial"
-             IconImageSource="historial2.png">
+             >
+    <ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
     </ContentPage.BindingContext>
         <ContentPage.Content>
         <ScrollView>
             <Grid>
-                <Frame BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-                <Label Text="Historial" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
+                
             <!--<StackLayout Padding="0,20,0,0" VerticalOptions="Center" HorizontalOptions="Center">
                 <Label Text="Click Below To Get Location" TextColor="Blue" HorizontalOptions="Center"/>
                 <Button Text="Find Location" Clicked="OnButtonClicked" BackgroundColor="Azure"

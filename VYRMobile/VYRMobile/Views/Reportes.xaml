@@ -20,7 +20,7 @@
             <Style x:Key="LineStyle" TargetType="BoxView">
                 <Setter Property="HorizontalOptions" Value="Center" />
                 <Setter Property="VerticalOptions" Value="Fill" />
-                <Setter Property="WidthRequest" Value="1" />
+                <Setter Property="WidthRequest" Value="3" />
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>

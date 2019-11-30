@@ -11,7 +11,7 @@ namespace VYRMobile.Views
             InitializeComponent();
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
-            NavigationPage signalR = new NavigationPage(new SignalR())
+            NavigationPage historial = new NavigationPage(new Historial())
             {
                 IconImageSource = "historial2.png",
                 Title = "Historial"
@@ -38,7 +38,7 @@ namespace VYRMobile.Views
             };
 
             this.Children.Add(home);
-            this.Children.Add(signalR);
+            this.Children.Add(historial);
             this.Children.Add(map);
             this.Children.Add(report);
             this.Children.Add(user);

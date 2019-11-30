@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Templates.EquipoItemTemplate">
+    <ContentView.Resources>
+        <Style x:Key="TextStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
+            <Setter Property="FontSize" Value="{StaticResource FontSize20}" />
+            <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+        </Style>
+        <Style x:Key="IconStyle" TargetType="Image">
+            <Setter Property="HorizontalOptions" Value="Center" />
+            <Setter Property="HeightRequest" Value="15" />
+            <Setter Property="WidthRequest" Value="15" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+        <Style x:Key="SwitchStyle" TargetType="Switch">
+            <Setter Property="IsToggled" Value="True"/>
+            <Setter Property="ThumbColor" Value="Green"/>
+            <Setter Property="OnColor" Value="Green"/>
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid   ColumnSpacing="0"
+                RowSpacing="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="60" />
+                <ColumnDefinition Width="200" />
+                <ColumnDefinition Width="60" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+            </Grid.RowDefinitions>
+            <Image  Source="label.png"
+                    Grid.Column="0"
+                    Style="{StaticResource IconStyle}"
+                    Margin="5,0,0,0"/>
+            <Label  Grid.Column="1"
+                    TextColor="{StaticResource BlackColor}"
+                    Text="{Binding Name}"
+                    Style="{StaticResource TextStyle}"
+                    Margin="10,5,0,0"/>
+            <Switch Grid.Column="2"
+                    IsToggled="True"
+                    ThumbColor="{StaticResource GreenColor}"
+                    OnColor="{StaticResource GreenColor}"/>
+        </Grid>
+   </ContentView.Content>
+    
+</ContentView>

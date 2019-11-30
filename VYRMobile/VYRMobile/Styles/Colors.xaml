@@ -8,4 +8,6 @@
     <!--COLORS -->
     <Color x:Key="BlackColor">#000000</Color>
     <Color x:Key="WhiteColor">#FFFFFF</Color>
+    <Color x:Key="BaseColor">#005EB2</Color>
+    <Color x:Key="GreenColor">#01BD00</Color>
 </ResourceDictionary>

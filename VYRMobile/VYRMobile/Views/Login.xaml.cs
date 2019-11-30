@@ -16,19 +16,20 @@ namespace VYRMobile
             Loginbtn.Clicked += Loginbtn_clicked;
         }
 
-        private async void Loginbtn_clicked(object sender, EventArgs e)
+        private void Loginbtn_clicked(object sender, EventArgs e)
         {
-            var isValid = true;
+            Application.Current.MainPage = new NavigationPage(new Utensilios());
+            /*var isValid = true;
             if (isValid)
             {
                 App.IsUserLoggedIn = true;
-                Navigation.InsertPageBefore(new MenuPage(), this);
+                Navigation.InsertPageBefore(new Utensilios(), this);
                 await Navigation.PopAsync();
             }
             else
             {
                 //Login Failed
-            }
+            }*/
         }
     }
 }
