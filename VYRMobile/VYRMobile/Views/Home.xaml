@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:cardView="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -8,86 +11,135 @@
              x:Class="VYRMobile.Home"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False">
-
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
     </ContentPage.BindingContext>
-
     <StackLayout>
-        <!--View del cronometro -->
-        <StackLayout VerticalOptions="Start"
-                    HeightRequest="300"
-                        Margin="0,69,0,0">
-            <!--<Frame  x:Name="CronometroView"
-                        BackgroundColor="White"
-                        CornerRadius="0"
-                        WidthRequest="400"
-                        HeightRequest="300"
+        <Grid>
+
+            <Grid Grid.Row="0">
+                <Frame BackgroundColor="#005EB2" 
+                           HeightRequest="25" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="Start"
+                           CornerRadius="0"/>
+                <Label Text="Dashboard" 
+                           TextColor="White" 
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           Margin="10, 16, 0, 0"/>
+                <Label 
+                       FontSize="40" 
+                       TextColor="#005EB2" 
+                       Margin="50,100,0,0"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Start"
+                       WidthRequest="300">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
+                            <Span Text=":"/>
+                            <Span Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
+                            <Span Text=":"/>
+                            <Span Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
+                            <Span Text="."/>
+                            <Span Text="{Binding StopWatchMilliseconds}"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+                <Button x:Name="btnStart"
+                        BackgroundColor="ForestGreen"
+                        Text="START"
+                        TextColor="White"
+                        FontSize="20"
+                        Margin="0, 175, 0, 0"
                         VerticalOptions="Start"
                         HorizontalOptions="Center"
-                        HasShadow="True">
+                        CornerRadius="2"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        Command="{Binding StartCommand}"/>
+                <Button x:Name="btnStop"
+                        IsVisible="False"
+                        BackgroundColor="DarkRed"
+                        Text="STOP"
+                        TextColor="White"
+                        FontSize="20"
+                        Margin="0, 175, 0, 0"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"
+                        CornerRadius="2"
+                        HeightRequest="50"
+                        WidthRequest="100"
+                        Command="{Binding StopCommand}"/>
+            </Grid>
+            
+        </Grid>
+        <!--<Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
-                        <StackLayout>
-                            <Label  Text="Tiempo transcurrido" 
-                                    FontSize="18" 
-                                    TextColor="Black" 
-                                    HorizontalOptions="CenterAndExpand" 
-                                    VerticalOptions="Center"/>
+            <Grid Grid.Row="0">
+                <Frame BackgroundColor="#005EB2" 
+                           HeightRequest="25" 
+                           HorizontalOptions="FillAndExpand" 
+                           VerticalOptions="Start"
+                           CornerRadius="0"/>
+                <Label Text="Dashboard" 
+                           TextColor="White" 
+                           FontSize="Large"
+                           FontAttributes="Bold"
+                           Margin="10, 16, 0, 0"/>
+             
+                    <Label
+                       Margin="50,50,0,0"
+                       FontSize="40" 
+                       TextColor="#005EB2"
+                       HorizontalOptions="Start" 
+                       VerticalOptions="Start"
+                       WidthRequest="300">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
+                                <Span Text=":"/>
+                                <Span Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
+                                <Span Text=":"/>
+                                <Span Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
+                                <Span Text="."/>
+                                <Span Text="{Binding StopWatchMilliseconds}"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>-->
 
-                            <Label  Grid.Column="0" 
-                                    FontSize="40" 
-                                    TextColor="#33B033" 
-                                    Margin="20,0,0,0"
-                                    HorizontalOptions="Start" 
-                                    VerticalOptions="Center"
-                                    WidthRequest="100">
+        <!--<StackLayout   Margin="20, 160, 0, 0">
+                    <Label  Text="ANTENAS:" FontSize="28" FontAttributes="Bold" TextColor="Black"/>
+                    <Label  Text="Seahawks" FontSize="22" FontAttributes="Italic" TextColor="Black"/>
+                    <CheckBox x:Name="seaCheckbox" IsChecked="False" Color="#005EB2"/>
+                </StackLayout>
 
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
-                                        <Span Text=":"/>
-                                        <Span Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
-                                        <Span Text=":"/>
-                                        <Span Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
-                                        <Span Text="."/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                                
-                            </Label>
-                            <Label  Grid.Column="1" 
-                                    FontSize="20" 
-                                    TextColor="#33B033" 
-                                    Margin="0,0,0,0"
-                                    HorizontalOptions="Start" 
-                                    VerticalOptions="Center">
+            </Grid>
+            
 
-                                <Label.FormattedText>
-                                    <FormattedString>
-                                        <Span Text="{Binding StopWatchMilliseconds, StringFormat='{0:D2}'}"/>
-                                    </FormattedString>
-                                </Label.FormattedText>
-                            </Label>-->
-            <!--</StackLayout>
-                    </Frame>-->
-        </StackLayout>
-
-        <StackLayout
+               
+            <StackLayout
                         VerticalOptions="Fill"
                         HeightRequest="500"
                         Grid.Row="2"
                         HorizontalOptions="Center">
 
-            <Frame x:Name="MenuTareas"
+                <Frame x:Name="MenuTareas"
                                BackgroundColor="White"
                                CornerRadius="5"
                                WidthRequest="250"
                                HorizontalOptions="Center"
                                HeightRequest="500">
-                <Label Text="Tareas a solucionar:" />
+                    <Label Text="Tareas a solucionar:" />
 
-            </Frame>
+                </Frame>
 
-        </StackLayout>
+            </StackLayout>-->
         <!--<StackLayout
                         VerticalOptions="End"
                         HeightRequest="50"
@@ -103,7 +155,6 @@
                     HeightRequest="50"
                     WidthRequest="175"           
                     HorizontalOptions="Center"
-                    
                   />
                 
             </StackLayout>

@@ -8,7 +8,7 @@ namespace VYRMobile.ViewModels
 {
     class CreateReportViewModel : BaseViewModel
     {
-        public Report Report { get; set; }
+        public Report CReport { get; set; }
         public Command CreateReportCommand { get; }
         //Need to be implemented
         //public Command AttachCommand { get; }
@@ -17,7 +17,7 @@ namespace VYRMobile.ViewModels
 
         public CreateReportViewModel() 
         {
-            Report =  new Report();
+            CReport =  new Report();
             _store = new ReportsStore();
             CreateReportCommand = new Command(async () => await CreateReport());
             //AttachCommand = new Command(Attach);
@@ -51,7 +51,7 @@ namespace VYRMobile.ViewModels
 
         private async Task CreateReport() 
         {
-            await _store.AddReportAsync(Report);
+            await _store.AddReportAsync(CReport);
         }
 
     }
