@@ -1,16 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:cardView="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
-xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             xmlns:cardView="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
-             NavigationPage.HasNavigationBar="False"
+             Title="Dashboard"
              NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="outer.png"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
     </ContentPage.BindingContext>
@@ -18,16 +21,7 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
         <Grid>
 
             <Grid Grid.Row="0">
-                <Frame BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-                <Label Text="Dashboard" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
+                
                 <Label 
                        FontSize="40" 
                        TextColor="#005EB2" 

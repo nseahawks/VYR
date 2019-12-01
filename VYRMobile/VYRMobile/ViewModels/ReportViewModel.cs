@@ -52,7 +52,7 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
-        public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
+        //public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
         private void LoadData()
         {
@@ -64,13 +64,13 @@ namespace VYRMobile.ViewModels
                 Reports.Add(report);
             }
         }
-        private void ItemSelected(string parameter)
+        /*private void ItemSelected(string parameter)
         {
             var reports = ReportService.Instance.GetReports();
 
             Reports.Clear();
 
 
-        }
+        }*/
     }
 }

@@ -26,11 +26,13 @@ namespace VYRMobile
             BindingContext = new CronoViewModel();
             BindingContext = new QRViewModel();
 
+            BindingContext = new EventViewModel();
+
             /*btnStart.Clicked += BtnStart_Clicked;
             btnStop.Clicked += BtnStop_Clicked;*/
-            QR.Clicked += QR_Clicked;
+            /*QR.Clicked += QR_Clicked;
             CallFrancisco.Clicked += CallFrancisco_clicked;
-            alert.Clicked += alert_clicked;
+            alert.Clicked += alert_clicked;*/
 
             /*Menu.ItemTapped += async (sender, e) =>
             {
@@ -54,7 +56,11 @@ namespace VYRMobile
             DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             showMap();
         }*/
-        private async void alert_clicked(object sender, EventArgs e)
+        /*protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
+            private async void alert_clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             showMap();
@@ -63,7 +69,7 @@ namespace VYRMobile
         private void showMap()
         {
             Navigation.PushModalAsync(new Mapa2());
-        }
+        }*/
         /*private void BtnStop_Clicked(object sender, EventArgs e)
         {
             btnStop.IsVisible = false;
@@ -75,7 +81,7 @@ namespace VYRMobile
             btnStart.IsVisible = false;
             btnStop.IsVisible = true;
         }*/
-        private void QR_Clicked(object sender, EventArgs e)
+        /*private void QR_Clicked(object sender, EventArgs e)
         {
             Escaner();
         }
@@ -109,7 +115,7 @@ namespace VYRMobile
             {
                 phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
             }
-        }
+        }*/
 
         /*async void OnButtonClicked(object sender, EventArgs e)
             {
