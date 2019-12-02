@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -16,22 +18,60 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-            
+
         <StackLayout VerticalOptions="StartAndExpand"
-                        Margin="0, 70, 0, 0">
-            <Entry     x:Name="Title"
+                        Margin="0, 15, 0, 0">
+            <Grid Grid.ColumnSpan="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="65" />
+                    <ColumnDefinition Width="295" />
+                </Grid.ColumnDefinitions>
+                <Label  Grid.Column="0"
+                        Text="Titulo:" 
+                        TextColor="Gray"
+                        FontSize="17"
+                        VerticalOptions="End"
+                        Margin="6,0,0,12"/>
+                <Entry  Grid.Column="1"
+                        x:Name="Title"
                         Text="{Binding Report.Title}"
-                        Placeholder="Asunto"
                         PlaceholderColor="DarkGray"
                         TextColor="Black"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start"
-                        BackgroundColor="White"/>
-                
-            <Picker    Title="--Estatus--"
+                        BackgroundColor="White"
+                        Margin="0,0,8,0"/>
+            </Grid>
+            <StackLayout Grid.Row="3">
+                <combobox:SfComboBox x:Name="estatusComboBox" Watermark="Estatus" Margin="4,0,8,0">
+                    <combobox:SfComboBox.ComboBoxSource>
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>Abierto</x:String>
+                            <x:String>Cerrado</x:String>
+                            <x:String>Por asignar</x:String>
+                        </ListCollection:List>
+                    </combobox:SfComboBox.ComboBoxSource>
+                </combobox:SfComboBox>
+            </StackLayout>
+            <StackLayout Grid.Row="3">
+                <combobox:SfComboBox x:Name="tipoComboBox" Watermark="Tipo" Margin="4,0,8,0">
+                    <combobox:SfComboBox.ComboBoxSource>
+                        <ListCollection:List x:TypeArguments="x:String">
+                            <x:String>Asistencia</x:String>
+                            <x:String>Alarma</x:String>
+                            <x:String>Daño</x:String>
+                            <x:String>Robo</x:String>
+                        </ListCollection:List>
+                    </combobox:SfComboBox.ComboBoxSource>
+                </combobox:SfComboBox>
+            </StackLayout>
+            <!--<Picker    Title="Estatus"
                         ItemsSource="{Binding EstatusList}"
                         ItemDisplayBinding="{Binding Value}"
-                        Grid.Row="3"/>
+                        Grid.Row="3"/>-->
 
             <Editor Placeholder="Descripcion"
                     Text="{Binding Report.Description}"
@@ -48,9 +88,9 @@
                         HorizontalOptions="Start"
                         Margin="10, 0, 0, 0"
                         Grid.Row="4"/>
-                
+
             <ActivityIndicator IsRunning="{Binding IsBusy}"/>
-                
+
         </StackLayout>
 
     </ContentPage.Content>

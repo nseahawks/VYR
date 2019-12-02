@@ -1,3 +1,4 @@
+using Syncfusion.SfPicker.XForms.iOS;
 using Syncfusion.XForms.iOS.Cards;
 using Syncfusion.XForms.iOS.ComboBox;
 using System;
@@ -25,6 +26,7 @@ namespace VYRMobile.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 global::Xamarin.Forms.Forms.Init();
+SfPickerRenderer.Init();
 SfCardViewRenderer.Init();
 SfComboBoxRenderer.Init();
             LoadApplication(new App());
