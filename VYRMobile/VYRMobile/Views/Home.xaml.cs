@@ -14,15 +14,17 @@ namespace VYRMobile
         {
             InitializeComponent();
             BindingContext = new CronoViewModel();
+            BindingContext = new TareaViewModel();
+            BindingContext = new PuntoViewModel();
 
             //btnStart.Clicked += BtnStart_Clicked;
             //btnStop.Clicked += BtnStop_Clicked;
             /*BindingContext = new CallViewModel();
-            BindingContext = new QRViewModel();
+            BindingContext = new QRViewModel();*/
             QR.Clicked += QR_Clicked;
 
             CallFrancisco.Clicked += CallFrancisco_clicked;
-            alert.Clicked += alert_clicked;  */
+            //alert.Clicked += alert_clicked;  
         }
         //private void BtnStop_Clicked(object sender, EventArgs e)
         //{
@@ -58,7 +60,7 @@ namespace VYRMobile
         {
             base.OnDisappearing();
 
-        }
+        }*/
         private void QR_Clicked(object sender, EventArgs e)
         {
             Escaner();
@@ -78,7 +80,7 @@ namespace VYRMobile
                     Navigation.PopModalAsync();
 
                     DisplayAlert("Valor Obtenido", result.Text, "OK");
-                    seaCheckbox.IsChecked = true;
+                    //seaCheckbox.IsChecked = true;
                 });
                 
 
@@ -94,6 +96,6 @@ namespace VYRMobile
                 {
                     phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
                 }
-            }*/
+            }
     }
 }

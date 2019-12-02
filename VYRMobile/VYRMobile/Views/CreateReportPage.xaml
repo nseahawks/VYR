@@ -21,21 +21,26 @@
 
         <StackLayout VerticalOptions="StartAndExpand"
                         Margin="0, 15, 0, 0">
-            <Grid Grid.ColumnSpan="1">
+            <Grid   Grid.RowSpan="2"
+                    Grid.ColumnSpan="1">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="50" />
+                    <RowDefinition Height="50" />
                     <RowDefinition Height="50" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="65" />
-                    <ColumnDefinition Width="295" />
+                    <ColumnDefinition Width="70" />
+                    <ColumnDefinition Width="290" />
                 </Grid.ColumnDefinitions>
                 <Label  Grid.Column="0"
+                        Grid.Row="0"
                         Text="Titulo:" 
                         TextColor="Gray"
                         FontSize="17"
                         VerticalOptions="End"
                         Margin="6,0,0,12"/>
-                <Entry  Grid.Column="1"
+                <Entry  Grid.Row="0"
+                        Grid.Column="1"
                         x:Name="Title"
                         Text="{Binding Report.Title}"
                         PlaceholderColor="DarkGray"
@@ -44,43 +49,63 @@
                         VerticalOptions="Start"
                         BackgroundColor="White"
                         Margin="0,0,8,0"/>
+                <Label  Grid.Column="0"
+                        Grid.Row="1"
+                        Text="Estatus:" 
+                        TextColor="Gray"
+                        FontSize="17"
+                        VerticalOptions="End"
+                        Margin="6,0,0,12"/>
+                <StackLayout Grid.Row="1"
+                             Grid.Column="1">
+                    <combobox:SfComboBox x:Name="estatusComboBox" Margin="4,0,8,0">
+                        <combobox:SfComboBox.ComboBoxSource>
+                            <ListCollection:List x:TypeArguments="x:String">
+                                <x:String>Abierto</x:String>
+                                <x:String>Cerrado</x:String>
+                                <x:String>Por asignar</x:String>
+                            </ListCollection:List>
+                        </combobox:SfComboBox.ComboBoxSource>
+                    </combobox:SfComboBox>
+                </StackLayout>
+                <Label  Grid.Column="0"
+                        Grid.Row="2"
+                        Text="Tipo:" 
+                        TextColor="Gray"
+                        FontSize="17"
+                        VerticalOptions="End"
+                        Margin="6,0,0,12"/>
+                <StackLayout    Grid.Column="1"
+                                Grid.Row="2">
+                    <combobox:SfComboBox x:Name="tipoComboBox" Margin="4,0,8,0">
+                        <combobox:SfComboBox.ComboBoxSource>
+                            <ListCollection:List x:TypeArguments="x:String">
+                                <x:String>Asistencia</x:String>
+                                <x:String>Alarma</x:String>
+                                <x:String>Daño</x:String>
+                                <x:String>Robo</x:String>
+                            </ListCollection:List>
+                                
+                        </combobox:SfComboBox.ComboBoxSource>
+                    </combobox:SfComboBox>
+                </StackLayout>
             </Grid>
-            <StackLayout Grid.Row="3">
-                <combobox:SfComboBox x:Name="estatusComboBox" Watermark="Estatus" Margin="4,0,8,0">
-                    <combobox:SfComboBox.ComboBoxSource>
-                        <ListCollection:List x:TypeArguments="x:String">
-                            <x:String>Abierto</x:String>
-                            <x:String>Cerrado</x:String>
-                            <x:String>Por asignar</x:String>
-                        </ListCollection:List>
-                    </combobox:SfComboBox.ComboBoxSource>
-                </combobox:SfComboBox>
-            </StackLayout>
-            <StackLayout Grid.Row="3">
-                <combobox:SfComboBox x:Name="tipoComboBox" Watermark="Tipo" Margin="4,0,8,0">
-                    <combobox:SfComboBox.ComboBoxSource>
-                        <ListCollection:List x:TypeArguments="x:String">
-                            <x:String>Asistencia</x:String>
-                            <x:String>Alarma</x:String>
-                            <x:String>Daño</x:String>
-                            <x:String>Robo</x:String>
-                        </ListCollection:List>
-                    </combobox:SfComboBox.ComboBoxSource>
-                </combobox:SfComboBox>
-            </StackLayout>
+            
+            
             <!--<Picker    Title="Estatus"
                         ItemsSource="{Binding EstatusList}"
                         ItemDisplayBinding="{Binding Value}"
                         Grid.Row="3"/>-->
 
-            <Editor Placeholder="Descripcion"
-                    Text="{Binding Report.Description}"
+            <Editor     Placeholder="Descripcion"
+                        Text="{Binding Report.Description}"
                         PlaceholderColor="DarkGray"
                         TextColor="Black"
                         HeightRequest="150"
                         BackgroundColor="White"
                         VerticalOptions="Start"
-                        Grid.Row="2"/>
+                        Grid.Row="2"
+                        Margin="6, 0, 8, 0"/>
 
             <Image x:Name="Image1" 
                         HeightRequest="100"
