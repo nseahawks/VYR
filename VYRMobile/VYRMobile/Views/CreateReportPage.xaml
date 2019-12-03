@@ -3,10 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.CreateReportPage"
              Title="Nuevo Reporte">
 
+    <ContentPage.BindingContext>
+        <local:CreateReportViewModel/>
+    </ContentPage.BindingContext>
+        
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="attach2.png" 
                      x:Name="btnAttach"/>
@@ -20,7 +25,7 @@
         <StackLayout VerticalOptions="StartAndExpand"
                         Margin="0, 70, 0, 0">
             <Entry     x:Name="Title"
-                        Text="{Binding Report.Title}"
+                        Text="{Binding Title}"
                         Placeholder="Asunto"
                         PlaceholderColor="DarkGray"
                         TextColor="Black"
@@ -34,7 +39,7 @@
                         Grid.Row="3"/>
 
             <Editor Placeholder="Descripcion"
-                    Text="{Binding Report.Description}"
+                    Text="{Binding Description}"
                         PlaceholderColor="DarkGray"
                         TextColor="Black"
                         HeightRequest="150"

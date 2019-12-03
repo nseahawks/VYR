@@ -11,14 +11,14 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
             btnAttach.Clicked += BtnAttach_clicked;
-            btnEnviar.Clicked += BtnEnviar_Clicked;
-            BindingContext = new ReportViewModel();
+            //btnEnviar.Clicked += BtnEnviar_Clicked;
+            
         }
 
-        private void BtnEnviar_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PopAsync();
-        }
+        //private void BtnEnviar_Clicked(object sender, EventArgs e)
+        //{
+        //    Navigation.PopAsync();
+        //}
 
         private async void BtnAttach_clicked(object sender, EventArgs e)
         {

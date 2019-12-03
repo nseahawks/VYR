@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Threading.Tasks;
+using VYRMobile.ViewModels;
 using VYRMobile.Views;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -9,27 +11,40 @@ namespace VYRMobile
 
     public partial class Login : ContentPage
     {
+        public static readonly BindableProperty TryLoginCommandProperty =
+           BindableProperty.Create(nameof(TryLoginCommand), typeof(Command),
+               typeof(Mapa2), null, BindingMode.TwoWay);
+
         public Login()
         {
             InitializeComponent();
-            
-            Loginbtn.Clicked += Loginbtn_clicked;
+            BindingContext = new IdentityViewModel();
+
+            TryLoginCommand = new Command(async () => await TryLogin());
+            //Loginbtn.Clicked += Loginbtn_clicked;
         }
 
-        private void Loginbtn_clicked(object sender, EventArgs e)
+        public Command TryLoginCommand
         {
-            Application.Current.MainPage = new NavigationPage(new Utensilios());
-            /*var isValid = true;
-            if (isValid)
+            get { return (Command)GetValue(TryLoginCommandProperty); }
+            set { SetValue(TryLoginCommandProperty, value); }
+        }
+
+        async Task TryLogin()
+        {
+            //Application.Current.MainPage = new NavigationPage(new Utensilios());
+
+
+            if (App.IsUserLoggedIn)
             {
-                App.IsUserLoggedIn = true;
                 Navigation.InsertPageBefore(new Utensilios(), this);
                 await Navigation.PopAsync();
             }
             else
             {
                 //Login Failed
-            }*/
+                await DisplayAlert("Login Failed", $"Verifique su usuario y contraseña", "Ok");
+            }
         }
     }
 }

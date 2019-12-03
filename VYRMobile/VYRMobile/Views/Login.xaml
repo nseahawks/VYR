@@ -6,13 +6,17 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.Login"
              NavigationPage.HasNavigationBar="False"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             
+             TryLoginCommand="{Binding TLoginCommand}">
+    
+    
 
-    <!--<ContentPage.Padding>
+    <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
 
         </OnPlatform>
-    </ContentPage.Padding>-->
+    </ContentPage.Padding>
 
 
     <ContentPage.Content>
@@ -20,34 +24,9 @@
         <Grid BackgroundColor="#FFFFFF"
               Padding="2">
             
-            <!--<local:GradientColorStack StartColor="Green" EndColor="Red">
-                <StackLayout VerticalOptions="CenterAndExpand">
-
-                </StackLayout>
-
-            </local:GradientColorStack> 
-
-            <Grid.RowDefinitions>
-                <RowDefinition Height="80" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="50" />
-
-            </Grid.RowDefinitions>
-
-            <Grid Grid.Row="1" Margin="40,0,20,0">
-
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="50"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="40"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>-->
             <StackLayout VerticalOptions="CenterAndExpand"
                          Padding="1">
+                
                 <Image Grid.Row="0"
                        Source="seahawks2.png"
                        HorizontalOptions="Center"
@@ -55,13 +34,16 @@
                        WidthRequest="200"
                        Margin="0,0,0,0"
                        />
+                
                 <Label Grid.Row="1" 
                        Text="Usuario" 
                        TextColor="#005EB2"
                        FontSize="Small"
                        FontAttributes="None"
                        Margin="33,0,0,0"/>
+                
                 <Entry Grid.Row="2" 
+                       Text="{Binding Email}"
                        FontSize="18" 
                        BackgroundColor="White" 
                        TextColor="Black" 
@@ -69,24 +51,29 @@
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
+                
                 <Label Grid.Row="3"
                        Text="Contraseña" 
                        TextColor="#005EB2"
                        FontSize="Small"
                        FontAttributes="None"
                        Margin="33,0,0,0"/>
+                
                 <Entry Grid.Row="4" 
-                       FontSize="18" 
-                       IsPassword="True" 
-                       BackgroundColor="White" 
+                       Text="{Binding Password}"
+                       IsPassword="True"
+                       FontSize="18"
+                       BackgroundColor="White"
                        TextColor="Black"
                        HeightRequest="50" 
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
-                <Button Grid.Row="5" 
+                
+                <Button x:Name="Loginbtn" 
+                       Command="{Binding LoginCommand}"
+                       Grid.Row="5" 
                        BorderRadius="5"  
-                       x:Name="Loginbtn" 
                        Text="Iniciar sesión" 
                        BackgroundColor="#005EB2" 
                        TextColor="White" 

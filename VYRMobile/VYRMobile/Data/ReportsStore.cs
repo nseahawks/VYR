@@ -34,7 +34,7 @@ namespace VYRMobile.Data
                 Description = report.Description,
                 Address = "",
                 Status = false,
-                ResolveDate = DateTime.UtcNow
+                ResolveDate = DateTime.Now
             };
 
             string serializedData = JsonConvert.SerializeObject(responseReport);

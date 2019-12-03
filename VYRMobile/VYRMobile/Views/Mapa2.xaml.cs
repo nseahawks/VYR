@@ -15,6 +15,8 @@ namespace VYRMobile.Views
 {
     public partial class Mapa2 : ContentPage
     {
+        SensorSpeed speed = SensorSpeed.Fastest;
+        private double CData;
 
         public static readonly BindableProperty CalculateCommandProperty =
            BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
@@ -73,7 +75,7 @@ namespace VYRMobile.Views
             map.Pins.Add(seahawksPin);
 
             
-
+            Compass.ReadingChanged += Compass_ReadingChanged;
             map.PinClicked += Map_PinClicked;
             //map.PinClicked += (object s, SelectedPinChangedEventArgs e) =>
             //{
@@ -89,7 +91,32 @@ namespace VYRMobile.Views
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(18.461294, -69.948531), Distance.FromMeters(5000)));
         }
 
+        void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
+        {
+            var data = e.Reading;
+            Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
+            CData = data.HeadingMagneticNorth;
+            // Process Heading Magnetic North
+        }
 
+        public void ToggleCompass()
+        {
+            try
+            {
+                if (Compass.IsMonitoring)
+                    Compass.Stop();
+                else
+                    Compass.Start(speed, applyLowPassFilter: true);
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature not supported on device
+            }
+            catch (Exception ex)
+            {
+                // Some other exception has occurred
+            }
+        }
         void Map_PinClicked(object sender, PinClickedEventArgs e)
         {
             //e.Handled = switchHandlePinClicked.IsToggled;
@@ -97,6 +124,7 @@ namespace VYRMobile.Views
             //DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
             DestinationLocationlat = e.Pin.Position.Latitude.ToString();
             DestinationLocationlng = e.Pin.Position.Longitude.ToString();
+            
             //startRoute.IsEnabled = true
             // If you set e.Handled = true,
             // then Pin selection doesn't work automatically.
@@ -158,16 +186,25 @@ namespace VYRMobile.Views
 
             try
             {
+                ToggleCompass();
                 var request = new GeolocationRequest(GeolocationAccuracy.High);
                 var location = await Geolocation.GetLocationAsync(request);
-                Position position = new Position(location.Latitude, location.Longitude);
+                Position position = new Position(location.Latitude, location.Longitude );
 
                 if (location != null)
                 {
                     //map.MoveToRegion(MapSpan.FromCenterAndRadius(
                     //    position,
                     //    Distance.FromMiles(0.3)));
-                    await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(location.Latitude, location.Longitude)));
+                    //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(location.Latitude, location.Longitude)));
+                    await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+                    new Position(
+                        position.Latitude,
+                        position.Longitude),
+                        19d,
+                        CData,
+                        75d
+                    )));
                     OriginLocationlat = position.Latitude.ToString();
                     OriginLocationlng = position.Longitude.ToString();
                 }

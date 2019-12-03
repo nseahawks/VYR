@@ -22,13 +22,15 @@ namespace VYRMobile.Helper
            BaseAddress = new Uri("https://vyrapi.azurewebsites.net");
            DefaultRequestHeaders.Accept
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            if (string.IsNullOrEmpty(Token))
-            {
-                DefaultRequestHeaders.Authorization =
-                    new AuthenticationHeaderValue("Bearer", /*ApiHelper.Token*/
-                        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkdW1tWUBlbWFpbC5jb20iLCJqdGkiOiI4YmE4YTU4Yi04MDViLTQ1ODktOTQzNi03NWI2Y2Y2ZjdhMmEiLCJlbWFpbCI6ImR1bW1ZQGVtYWlsLmNvbSIsImlkIjoiNTJhMjlhMWItMzNjZC00YThkLWIzMDUtY2Q3NDE1MzZlOGIzIiwicm9sZSI6IlVzZXIiLCJuYmYiOjE1NzQ4NzMzNTIsImV4cCI6MTU3NDk0ODk1MiwiaWF0IjoxNTc0ODczMzUyfQ.PSx6m6vnAr59DlPqzWflxwOYVlWqurdQaxc7Tmzspyw"
+            DefaultRequestHeaders.Authorization =
+                    new AuthenticationHeaderValue("Bearer",
+                    Token
+                    
                     );
-            }
+            //if (string.IsNullOrEmpty(Token))
+            //{
+                
+            //}
         }
     }
 }
