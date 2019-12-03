@@ -1,41 +1,83 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:cardView="clr-namespace:Syncfusion.XForms.Cards;assembly=Syncfusion.Cards.XForms"
-xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             
+             xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False">
+    <!--<ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="outer.png"/>
+    </ContentPage.ToolbarItems>-->
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
     </ContentPage.BindingContext>
-    <StackLayout>
-        <Grid>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CronoStyle" TargetType="Label">
+                <Setter Property="Text" Value="00:00:00.0" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}" />
+                <Setter Property="FontSize" Value="50" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+                <Setter Property="HorizontalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="TitleStyle" TargetType="Label">
+                <Setter Property="Text" Value="Chrono:" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize24}" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="Title2Style" TargetType="Label">
+                <Setter Property="Text" Value="Tareas pendientes:" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="Text" Value="Lista Completa" />
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}" />
+                <Setter Property="FontSize" Value="{StaticResource FontSize14}" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="BackgroundColor" Value="{StaticResource BoneColor}"/>
+                <Setter Property="HeightRequest" Value="28"/>
+                <Setter Property="WidthRequest" Value="150"/>
+                <Setter Property="CornerRadius" Value="4"/>
 
-            <Grid Grid.Row="0">
-                <Frame BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-                <Label Text="Dashboard" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
-                <Label 
-                       FontSize="40" 
-                       TextColor="#005EB2" 
-                       Margin="50,100,0,0"
-                       HorizontalOptions="Start" 
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid Grid.RowSpan="2"
+          RowSpacing="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="120"/>
+                <RowDefinition Height="300"/>
+                <RowDefinition Height="90"/>
+            </Grid.RowDefinitions>
+            <Frame HeightRequest="100"
+               Grid.Row="0">
+                <Grid Grid.RowSpan="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="28"/>
+                        <RowDefinition Height="90"/>
+                    </Grid.RowDefinitions>
+                    <Label  Grid.Row="0"
+                            Grid.Column="0"
+                            VerticalOptions="Start"
+                            HorizontalOptions="Center"
+                            Style="{StaticResource TitleStyle}"/>
+                    <Label  Grid.Row="1"
+                       Grid.Column="0"
                        VerticalOptions="Start"
-                       WidthRequest="300">
-                    <Label.FormattedText>
+                       Style="{StaticResource CronoStyle}">
+                        <!--<Label.FormattedText>
                         <FormattedString>
                             <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
                             <Span Text=":"/>
@@ -45,37 +87,125 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
                             <Span Text="."/>
                             <Span Text="{Binding StopWatchMilliseconds}"/>
                         </FormattedString>
-                    </Label.FormattedText>
-                </Label>
-                <Button x:Name="btnStart"
-                        BackgroundColor="ForestGreen"
-                        Text="START"
-                        TextColor="White"
-                        FontSize="20"
-                        Margin="0, 175, 0, 0"
-                        VerticalOptions="Start"
-                        HorizontalOptions="Center"
-                        CornerRadius="2"
-                        HeightRequest="50"
-                        WidthRequest="100"
-                        Command="{Binding StartCommand}"/>
-                <Button x:Name="btnStop"
-                        IsVisible="False"
-                        BackgroundColor="DarkRed"
-                        Text="STOP"
-                        TextColor="White"
-                        FontSize="20"
-                        Margin="0, 175, 0, 0"
-                        VerticalOptions="Start"
-                        HorizontalOptions="Center"
-                        CornerRadius="2"
-                        HeightRequest="50"
-                        WidthRequest="100"
-                        Command="{Binding StopCommand}"/>
-            </Grid>
-            
+                    </Label.FormattedText>-->
+                    </Label>
+                </Grid>
+            </Frame>
+            <Frame HeightRequest="350"
+               Grid.Row="1">
+                <Grid Grid.RowSpan="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="215"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <StackLayout>
+                        <tabview:SfTabView x:Name="tabView" VerticalOptions="FillAndExpand"
+                          
+                           VisibleHeaderCount="2" Grid.Row="1">
+                        <tabview:SfTabView.Items>
+                                <tabview:SfTabItem Title="Tareas">
+                                    <tabview:SfTabItem.Content>
+                                        <ListView 
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            ItemsSource="{Binding Tareas}"
+                                            SelectionMode="None"
+                                            HasUnevenRows="True"
+                                            SeparatorVisibility="None">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <cells:TareaItemViewCell />
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </tabview:SfTabItem.Content>
+                                </tabview:SfTabItem>
+                                <tabview:SfTabItem Title="Antenas">
+                                    <tabview:SfTabItem.Content>
+                                        <ListView 
+                                            Grid.Row="0"
+                                            Grid.Column="0"
+                                            ItemsSource="{Binding Puntos}"
+                                            SelectionMode="None"
+                                            HasUnevenRows="True"
+                                            SeparatorVisibility="None">
+                                            <ListView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <cells:PuntoItemViewCell />
+                                                </DataTemplate>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
+                                    </tabview:SfTabItem.Content>
+                                </tabview:SfTabItem>
+                            </tabview:SfTabView.Items>
+                    </tabview:SfTabView>
+                    </StackLayout>
+                    
+                    <!--<ListView 
+                            Grid.Row="1"
+                            Grid.Column="0"
+                            ItemsSource="{Binding Tareas}"
+                            SelectionMode="None"
+                            HasUnevenRows="True"
+                            SeparatorVisibility="None">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <cells:TareaItemViewCell />
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>-->
+                    <Button
+                        Grid.Row="1"
+                        Grid.Column="0"
+                        x:Name="tareasButton"
+                        Style="{StaticResource ButtonStyle}"
+                        HorizontalOptions="Start"
+                        Margin="0,0,0,0"
+                        />
+                </Grid>
+            </Frame>
+            <Frame HeightRequest="100"
+               Grid.Row="2">
+                <Grid   Grid.RowSpan="1"
+                        Grid.ColumnSpan="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="50"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="250"/>
+                        <ColumnDefinition Width="80"/>
+                    </Grid.ColumnDefinitions>
+                    <Button 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    x:Name="QR"
+                    Command="{Binding ConnectCommand}"
+                    Text="Scanear QR" 
+                    TextColor="White"
+                    BackgroundColor="#005EB2" 
+                    CornerRadius="5" 
+                    HeightRequest="15"
+                    WidthRequest="175"           
+                    HorizontalOptions="End"
+                    
+                  />
+                    <Button        
+                        Grid.Column="1"
+                        x:Name="CallFrancisco"
+                        ImageSource="call.png" 
+                        BackgroundColor="#005EB2" 
+                        BorderRadius="50"  
+                        HorizontalOptions="End" 
+                        WidthRequest="60" 
+                        HeightRequest="60" 
+                        Margin="0,0,5,0" 
+                        VerticalOptions="End"/>
+                </Grid>
+            </Frame>
         </Grid>
-        <!--<Grid>
+    </ContentPage.Content>
+    <!--<Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"/>
                 <RowDefinition Height="*"/>
@@ -113,7 +243,7 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
                         </Label.FormattedText>
                     </Label>-->
 
-        <!--<StackLayout   Margin="20, 160, 0, 0">
+    <!--<StackLayout   Margin="20, 160, 0, 0">
                     <Label  Text="ANTENAS:" FontSize="28" FontAttributes="Bold" TextColor="Black"/>
                     <Label  Text="Seahawks" FontSize="22" FontAttributes="Italic" TextColor="Black"/>
                     <CheckBox x:Name="seaCheckbox" IsChecked="False" Color="#005EB2"/>
@@ -140,7 +270,7 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
                 </Frame>
 
             </StackLayout>-->
-        <!--<StackLayout
+    <!--<StackLayout
                         VerticalOptions="End"
                         HeightRequest="50"
                         Grid.Row="3"  >
@@ -186,5 +316,4 @@ xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib
             </Grid>
         </Grid>-->
 
-    </StackLayout>
 </ContentPage>

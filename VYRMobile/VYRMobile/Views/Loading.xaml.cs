@@ -15,7 +15,6 @@ namespace VYRMobile.Views
         public Loading()
         {
             InitializeComponent();
-            
         }
         protected override void OnAppearing()
         {

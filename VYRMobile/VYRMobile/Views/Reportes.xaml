@@ -29,37 +29,32 @@
         <Grid
             RowSpacing="0">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="250" />
-                    <RowDefinition Height="100" />
+                    <RowDefinition Height="456" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Grid      
-                Grid.Row="0"
-                Grid.RowSpan="3">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="80" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <BoxView  
+            <Grid      
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="360" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ListView 
                     Grid.Column="0"
-                    BackgroundColor="Black"
-                    Style="{StaticResource LineStyle}" />
-            <ListView 
-                    Grid.Column="0"
-                    Grid.ColumnSpan="2"
                     ItemsSource="{Binding Reports}"
-                    SelectionMode="Single"
+                    SelectionMode="None"
                     HasUnevenRows="True"
-                    SeparatorVisibility="Default">
-               
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <cells:ReportItemViewCell />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <cells:ReportItemViewCell />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+            
         </Grid>
-        </Grid>
+        
     </ContentPage.Content>
     
 </ContentPage>

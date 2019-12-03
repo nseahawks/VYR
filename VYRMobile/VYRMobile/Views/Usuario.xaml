@@ -6,10 +6,12 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Usuario"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
-             NavigationPage.HasNavigationBar="False"
+             Title="Perfil"
              NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="outer.png"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
- 
         <StackLayout HeightRequest="150">
             <Frame  HeightRequest="190">
                 <StackLayout>

@@ -3,23 +3,61 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
              x:Class="VYRMobile.Historial"
-             NavigationPage.HasNavigationBar="False" 
              Title="Historial"
-             >
+             NavigationPage.HasBackButton="False">
     <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="outer.png"/>
     </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LineStyle" TargetType="BoxView">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Fill" />
+                <Setter Property="WidthRequest" Value="3" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
     </ContentPage.BindingContext>
         <ContentPage.Content>
-        <ScrollView>
+        <Grid
+            RowSpacing="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="456" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid      
+                Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="360" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <ListView 
+                    Grid.Column="0"
+                    ItemsSource="{Binding Events}"
+                    SelectionMode="None"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="None">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <cells:EventItemViewCell />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </Grid>
+
+        </Grid>
+        <!--<ScrollView>
             <Grid>
                 
-            <!--<StackLayout Padding="0,20,0,0" VerticalOptions="Center" HorizontalOptions="Center">
+            <StackLayout Padding="0,20,0,0" VerticalOptions="Center" HorizontalOptions="Center">
                 <Label Text="Click Below To Get Location" TextColor="Blue" HorizontalOptions="Center"/>
                 <Button Text="Find Location" Clicked="OnButtonClicked" BackgroundColor="Azure"
 HorizontalOptions="CenterAndExpand"/>
@@ -69,7 +107,7 @@ HorizontalOptions="CenterAndExpand"/>
                         CornerRadius="2"
                         HeightRequest="50"
                         WidthRequest="100"
-                        Command="{Binding StopCommand}"/>-->
+                        Command="{Binding StopCommand}"/>
                 <StackLayout   Margin="20, 175, 0, 0">
                     <Label  Text="ANTENAS:" FontSize="28" FontAttributes="Bold" TextColor="Black"/>
                     <Label  Text="Seahawks" FontSize="22" FontAttributes="Italic" TextColor="Black"/>
@@ -109,7 +147,7 @@ HorizontalOptions="CenterAndExpand"/>
                         x:Name="CallFrancisco"
                         ImageSource="call.png" BackgroundColor="#005EB2" BorderRadius="50"  HorizontalOptions="End" WidthRequest="60" HeightRequest="60" 
                         Margin="0,0,20,22" VerticalOptions="End"/>
-                <!--<Grid 
+                <Grid 
                 HorizontalOptions="End"
                 Margin="0, 0, 0, 0">
                     
@@ -119,9 +157,9 @@ HorizontalOptions="CenterAndExpand"/>
                     VerticalOptions="Center"
                         HeightRequest="60"
                         WidthRequest="60"/>
-                </Grid>-->
+                </Grid>
                 
             </Grid>
-        </ScrollView>
+        </ScrollView> -->
     </ContentPage.Content>
     </ContentPage>

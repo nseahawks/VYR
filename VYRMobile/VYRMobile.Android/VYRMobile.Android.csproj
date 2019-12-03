@@ -89,10 +89,13 @@
     <PackageReference Include="Syncfusion.Licensing">
       <Version>17.3.0.29</Version>
     </PackageReference>
-    <PackageReference Include="Syncfusion.Xamarin.Cards">
+    <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
       <Version>17.3.0.29</Version>
     </PackageReference>
-    <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
+    <PackageReference Include="Syncfusion.Xamarin.SfPicker">
+      <Version>17.3.0.29</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfTabView">
       <Version>17.3.0.29</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.Geolocator">
@@ -301,6 +304,33 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\label2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\alarma.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\base.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\callM.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\endRoute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\startRoute.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tool.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\tool1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\antenna.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\antenna2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
