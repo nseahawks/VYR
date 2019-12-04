@@ -27,7 +27,7 @@ namespace VYRMobile.Views
 
         private void Estadisticas_clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new Estadisticas());
+            Navigation.PushAsync(new StatisticsPage());
         }
 
         private void Logout_clicked(object sender, EventArgs e)

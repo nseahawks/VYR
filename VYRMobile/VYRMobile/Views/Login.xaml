@@ -7,10 +7,8 @@
              x:Class="VYRMobile.Login"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
-             
              TryLoginCommand="{Binding TLoginCommand}">
-    
-    
+
 
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness">
@@ -18,10 +16,9 @@
         </OnPlatform>
     </ContentPage.Padding>
 
-
     <ContentPage.Content>
-
-        <Grid BackgroundColor="#FFFFFF"
+        
+            <Grid BackgroundColor="#FFFFFF"
               Padding="2">
             
             <StackLayout VerticalOptions="CenterAndExpand"

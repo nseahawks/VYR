@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.CreateReportPage"
-             Title="Nuevo Reporte">
+             x:Class="VYRMobile.Views.CreateReportPage">
 
     <ContentPage.BindingContext>
         <local:CreateReportViewModel/>
@@ -22,42 +21,28 @@
                      Command="{Binding CreateReportCommand}"/>
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Content>
-
+    <ContentPage.Content >
         <StackLayout VerticalOptions="StartAndExpand"
                         Margin="0, 70, 0, 0">
-            <Entry     x:Name="Title"
-                        Text="{Binding Title}"
-                        Placeholder="Asunto"
-                        Margin="0, 15, 0, 0">
-            <Grid   Grid.RowSpan="2"
-                    Grid.ColumnSpan="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                    <RowDefinition Height="50" />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="70" />
-                    <ColumnDefinition Width="290" />
-                </Grid.ColumnDefinitions>
-                <Label  Grid.Column="0"
+            <Label  Grid.Column="0"
                         Grid.Row="0"
                         Text="Titulo:" 
                         TextColor="Gray"
                         FontSize="17"
                         VerticalOptions="End"
                         Margin="6,0,0,12"/>
-                <Entry  Grid.Row="0"
+
+            <Entry  Grid.Row="0"
                         Grid.Column="1"
                         x:Name="Title"
-                        Text="{Binding Report.Title}"
+                        Text="{Binding Title}"
                         PlaceholderColor="DarkGray"
                         TextColor="Black"
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start"
                         BackgroundColor="White"
                         Margin="0,0,8,0"/>
+
                 <Label  Grid.Column="0"
                         Grid.Row="1"
                         Text="Estatus:" 
@@ -77,6 +62,7 @@
                         </combobox:SfComboBox.ComboBoxSource>
                     </combobox:SfComboBox>
                 </StackLayout>
+
                 <Label  Grid.Column="0"
                         Grid.Row="2"
                         Text="Tipo:" 
@@ -94,13 +80,13 @@
                                 <x:String>Daño</x:String>
                                 <x:String>Robo</x:String>
                             </ListCollection:List>
-                                
+
                         </combobox:SfComboBox.ComboBoxSource>
                     </combobox:SfComboBox>
                 </StackLayout>
-            </Grid>
             
-            
+
+
             <Editor Placeholder="Descripcion"
                     Text="{Binding Description}"
                         PlaceholderColor="DarkGray"
@@ -117,10 +103,10 @@
                         HorizontalOptions="Start"
                         Margin="10, 0, 0, 0"
                         Grid.Row="4"/>
-                
-            <ActivityIndicator IsRunning="{Binding IsBusy}"/>
-                
-        </StackLayout>
 
+            <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+        </StackLayout>
+         
+      
     </ContentPage.Content>
 </ContentPage>

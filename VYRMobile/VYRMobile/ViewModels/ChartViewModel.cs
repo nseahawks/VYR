@@ -9,6 +9,7 @@ namespace VYRMobile.ViewModels
 
     class ChartViewModel
     {
+
         public Chart BarChartSample => new BarChart()
         {
             Entries = new[]
