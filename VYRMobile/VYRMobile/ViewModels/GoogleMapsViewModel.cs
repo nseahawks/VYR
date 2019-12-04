@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.ObjectModel;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
@@ -42,8 +41,8 @@ namespace VYRMobile.ViewModels
             
         public string _originLatitud { get; set; }
         public string _originLongitud { get; set; }
-        string _destinationLatitud;
-        string _destinationLongitud;
+        public string _destinationLatitud { get; set; }
+        public string _destinationLongitud { get; set; }
 
         GooglePlaceAutoCompletePrediction _placeSelected;
         public GooglePlaceAutoCompletePrediction PlaceSelected
@@ -104,6 +103,7 @@ namespace VYRMobile.ViewModels
                 }
             }
         }
+        
 
         public Command GetLocationNameCommand { get; set; }
         public bool IsRouteNotRunning
@@ -120,7 +120,7 @@ namespace VYRMobile.ViewModels
             LoadRouteCommand = new Command(async () => await LoadRoute());
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
-            GetPlaceDetailCommand = new Command<GooglePlaceAutoCompletePrediction>(async (param) => await GetPlacesDetail(param));
+            //GetPlaceDetailCommand = new Command<GooglePlaceAutoCompletePrediction>(async (param) => await GetPlacesDetail(param));
             GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
         }
 
@@ -133,7 +133,7 @@ namespace VYRMobile.ViewModels
             ActualLocationCommand.Execute(null);
             var googleDirection = await googleMapsApi.GetDirections(
                _originLatitud, _originLongitud,
-                "18.461294", "-69.948531"
+                _destinationLatitud, _destinationLongitud
                 );
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
             {
@@ -153,7 +153,7 @@ namespace VYRMobile.ViewModels
                     }
                     else
                     {
-                            App.Current.MainPage.DisplayAlert(":)", "Has llegado a tu destino.", "Ok");
+                        App.Current.MainPage.DisplayAlert(":)", "Has llegado a tu destino.", "Ok");
                         //if (positions.Count <= positionIndex && !HasRouteRunning)
                         //{
                         //}
@@ -189,40 +189,40 @@ namespace VYRMobile.ViewModels
             ShowRecentPlaces = (placeResult == null || placeResult.Count == 0);
         }
 
-        public async Task GetPlacesDetail(GooglePlaceAutoCompletePrediction placeA)
-        {
-            var place = await googleMapsApi.GetPlaceDetails(placeA.PlaceId);
-            if (place != null)
-            {
-                if (_isPickupFocused)
-                {
-                    PickupText = place.Name;
-                    _originLatitud = $"{place.Latitude}";
-                    _originLongitud = $"{place.Longitude}";
-                    _isPickupFocused = false;
-                    FocusOriginCommand.Execute(null);
-                }
-                else
-                {
-                    _destinationLatitud = $"{place.Latitude}";
-                    _destinationLongitud = $"{place.Longitude}";
+        //public async Task GetPlacesDetail(GooglePlaceAutoCompletePrediction placeA)
+        //{
+        //    var place = await googleMapsApi.GetPlaceDetails(placeA.PlaceId);
+        //    if (place != null)
+        //    {
+        //        if (_isPickupFocused)
+        //        {
+        //            PickupText = place.Name;
+        //            _originLatitud = $"{place.Latitude}";
+        //            _originLongitud = $"{place.Longitude}";
+        //            _isPickupFocused = false;
+        //            FocusOriginCommand.Execute(null);
+        //        }
+        //        else
+        //        {
+        //            _destinationLatitud = $"{place.Latitude}";
+        //            _destinationLongitud = $"{place.Longitude}";
 
-                    RecentPlaces.Add(placeA);
+        //            RecentPlaces.Add(placeA);
 
-                    if (_originLatitud == _destinationLatitud && _originLongitud == _destinationLongitud)
-                    {
-                        await App.Current.MainPage.DisplayAlert("Error", "Origin route should be different than destination route", "Ok");
-                    }
-                    else
-                    {
-                        LoadRouteCommand.Execute(null);
-                        await App.Current.MainPage.Navigation.PopAsync(false);
-                        CleanFields();
-                    }
+        //            if (_originLatitud == _destinationLatitud && _originLongitud == _destinationLongitud)
+        //            {
+        //                await App.Current.MainPage.DisplayAlert("Error", "Origin route should be different than destination route", "Ok");
+        //            }
+        //            else
+        //            {
+        //                LoadRouteCommand.Execute(null);
+        //                await App.Current.MainPage.Navigation.PopAsync(false);
+        //                CleanFields();
+        //            }
 
-                }
-            }
-        }
+        //        }
+        //    }
+        //}
 
         void CleanFields()
         {

@@ -8,13 +8,54 @@ namespace VYRMobile.ViewModels
 {
     class CreateReportViewModel : BaseViewModel
     {
-        public Report CReport { get; set; }
+        Report CReport { get; set; }
         public Command CreateReportCommand { get; }
         //Need to be implemented
         //public Command AttachCommand { get; }
 
         private ReportsStore _store { get; }
 
+        public new string Title
+        {
+            get => CReport.Title;
+            set
+            {
+                if (CReport.Title == value)
+                    return;
+                CReport.Title = value;
+                OnPropertyChanged(nameof(Title));
+            }
+        }
+
+        public string Description
+        {
+            get => CReport.Description; 
+            set
+            {
+                if (CReport.Description == value)
+                    return;
+                CReport.Description = value;
+                //password = value;
+                OnPropertyChanged(nameof(Description));
+            }
+        }
+
+        bool isSuccess;
+        public bool IsSuccess
+        {
+            get
+            {
+                return isSuccess;
+            }
+            set
+            {
+                if (isSuccess != value)
+                {
+                    isSuccess = value;
+                    OnPropertyChanged(nameof(IsSuccess));
+                }
+            }
+        }
         public CreateReportViewModel() 
         {
             CReport =  new Report();
@@ -24,8 +65,7 @@ namespace VYRMobile.ViewModels
 
 
         }
-        public bool isBusy = false;
-
+        
         //IMPLEMENT FROM HERE LATER
         //private async void Attach()
         //{
@@ -51,7 +91,7 @@ namespace VYRMobile.ViewModels
 
         private async Task CreateReport() 
         {
-            await _store.AddReportAsync(CReport);
+            IsSuccess = await _store.AddReportAsync(CReport);
         }
 
     }

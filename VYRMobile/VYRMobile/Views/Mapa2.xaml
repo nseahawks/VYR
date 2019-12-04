@@ -15,7 +15,9 @@
              UpdateCommand="{Binding UpdatePositionCommand}"
              GetActualLocationCommand="{Binding ActualLocationCommand}"
              OriginLocationlat ="{Binding _originLatitud}"
-             OriginLocationlng ="{Binding _originLongitud}">
+             OriginLocationlng ="{Binding _originLongitud}"
+             DestinationLocationlat ="{Binding _destinationLatitud}"
+             DestinationLocationlng ="{Binding _destinationLongitud}">
     
     <ContentPage.BindingContext>
         <vm:GoogleMapsViewModel/>
@@ -31,13 +33,25 @@
                         IsTrafficEnabled="False"
                         IsIndoorEnabled="True"
                         IsEnabled="True"
-                        MyLocationEnabled="True"
                         Visual="Material"/>
+
+        <!--<StackLayout Orientation="Horizontal"
+                                 Grid.Row="4"
+                                 Grid.Column="0"
+                                 Grid.ColumnSpan="2">
+            <Switch x:Name="switchHandlePinClicked"
+                                IsToggled="false"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Start" />
+            <Label Text="Handle Pin Clicked"
+                               VerticalOptions="Center" />
+        </StackLayout>-->
 
         <Button      x:Name="startRoute"
                         Command="{Binding LoadRouteCommand}"
                         Text="START ROUTE"
                         IsVisible="{Binding IsRouteNotRunning}"
+                        IsEnabled="False"
                         BackgroundColor="#005EB2"
                         TextColor="White"
                         HeightRequest="50"
