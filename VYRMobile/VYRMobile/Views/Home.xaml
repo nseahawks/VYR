@@ -4,7 +4,6 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             
              xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
@@ -27,6 +26,12 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                 <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
             </Style>
+            <Style x:Key="TabItemStyle" TargetType="tabview:SfTabItem">
+                <Setter Property="SelectionColor" Value="{StaticResource BaseColor}" />
+                <Setter Property="TitleFontFamily" Value="{StaticResource PoppinsBold}" />
+                <Setter Property="TitleFontColor" Value="{StaticResource BlackColor}" />
+                <Setter Property="TitleFontSize" Value="{StaticResource FontSize16}" />
+            </Style>
             <Style x:Key="TitleStyle" TargetType="Label">
                 <Setter Property="Text" Value="Chrono:" />
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
@@ -39,6 +44,10 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
             </Style>
+            <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="HeightRequest" Value="100" />
+                <Setter Property="BackgroundColor" Value="{StaticResource WhiteColor}" />
+            </Style>
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="Text" Value="Lista Completa" />
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}" />
@@ -48,21 +57,21 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                 <Setter Property="HeightRequest" Value="28"/>
                 <Setter Property="WidthRequest" Value="150"/>
                 <Setter Property="CornerRadius" Value="4"/>
-
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <Grid Grid.RowSpan="2"
-          RowSpacing="2">
+        <Grid   Grid.RowSpan="2"
+                RowSpacing="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="120"/>
                 <RowDefinition Height="300"/>
                 <RowDefinition Height="90"/>
             </Grid.RowDefinitions>
-            <Frame HeightRequest="100"
-               Grid.Row="0">
+            
+            <Frame  Style="{StaticResource FrameStyle}"
+                    Grid.Row="0">
                 <Grid Grid.RowSpan="1">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="28"/>
@@ -74,9 +83,9 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                             HorizontalOptions="Center"
                             Style="{StaticResource TitleStyle}"/>
                     <Label  Grid.Row="1"
-                       Grid.Column="0"
-                       VerticalOptions="Start"
-                       Style="{StaticResource CronoStyle}">
+                            Grid.Column="0"
+                            VerticalOptions="Start"
+                            Style="{StaticResource CronoStyle}">
                         <!--<Label.FormattedText>
                         <FormattedString>
                             <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
@@ -91,6 +100,7 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                     </Label>
                 </Grid>
             </Frame>
+            
             <Frame HeightRequest="350"
                Grid.Row="1">
                 <Grid Grid.RowSpan="2">
@@ -98,16 +108,22 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                         <RowDefinition Height="215"/>
                         <RowDefinition Height="40"/>
                     </Grid.RowDefinitions>
+
                     <StackLayout>
-                        <tabview:SfTabView x:Name="tabView" VerticalOptions="FillAndExpand"
-                          
-                           VisibleHeaderCount="2" Grid.Row="1">
-                        <tabview:SfTabView.Items>
-                                <tabview:SfTabItem Title="Tareas">
+                        <tabview:SfTabView x:Name="tabView" 
+                                           VerticalOptions="FillAndExpand"
+                                           VisibleHeaderCount="2" 
+                                           Grid.Row="0" >
+
+                            <tabview:SfTabView.Items>
+
+
+                                <tabview:SfTabItem Title="Tareas" 
+                                                   TitleFontFamily="{StaticResource PoppinsBold}"
+                                                   SelectionColor="{StaticResource BaseColor}"
+                                                   TitleFontSize="{StaticResource FontSize16}">
                                     <tabview:SfTabItem.Content>
                                         <ListView 
-                                            Grid.Row="0"
-                                            Grid.Column="0"
                                             ItemsSource="{Binding Tareas}"
                                             SelectionMode="None"
                                             HasUnevenRows="True"
@@ -120,11 +136,13 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                                         </ListView>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
-                                <tabview:SfTabItem Title="Antenas">
+
+                                <tabview:SfTabItem Title="Antenas"
+                                                   TitleFontFamily="{StaticResource PoppinsBold}"
+                                                   SelectionColor="{StaticResource BaseColor}"
+                                                   TitleFontSize="{StaticResource FontSize16}">
                                     <tabview:SfTabItem.Content>
                                         <ListView 
-                                            Grid.Row="0"
-                                            Grid.Column="0"
                                             ItemsSource="{Binding Puntos}"
                                             SelectionMode="None"
                                             HasUnevenRows="True"
@@ -137,33 +155,20 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                                         </ListView>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
+
                             </tabview:SfTabView.Items>
-                    </tabview:SfTabView>
+                        </tabview:SfTabView>
                     </StackLayout>
-                    
-                    <!--<ListView 
-                            Grid.Row="1"
-                            Grid.Column="0"
-                            ItemsSource="{Binding Tareas}"
-                            SelectionMode="None"
-                            HasUnevenRows="True"
-                            SeparatorVisibility="None">
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <cells:TareaItemViewCell />
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-                    </ListView>-->
                     <Button
                         Grid.Row="1"
                         Grid.Column="0"
                         x:Name="tareasButton"
                         Style="{StaticResource ButtonStyle}"
                         HorizontalOptions="Start"
-                        Margin="0,0,0,0"
-                        />
+                        Margin="0,0,0,0"/>
                 </Grid>
             </Frame>
+            
             <Frame HeightRequest="100"
                Grid.Row="2">
                 <Grid   Grid.RowSpan="1"
@@ -176,33 +181,34 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                         <ColumnDefinition Width="250"/>
                         <ColumnDefinition Width="80"/>
                     </Grid.ColumnDefinitions>
-                    <Button 
-                    Grid.Row="0"
-                    Grid.Column="0"
-                    x:Name="QR"
-                    Command="{Binding ConnectCommand}"
-                    Text="Scanear QR" 
-                    TextColor="White"
-                    BackgroundColor="#005EB2" 
-                    CornerRadius="5" 
-                    HeightRequest="15"
-                    WidthRequest="175"           
-                    HorizontalOptions="End"
+                        <Button 
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            x:Name="QR"
+                            Command="{Binding ConnectCommand}"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            Text="Escanear QR" 
+                            TextColor="White"
+                            BackgroundColor="#005EB2" 
+                            CornerRadius="5" 
+                            HeightRequest="15"
+                            WidthRequest="175"           
+                            HorizontalOptions="End"/>
                     
-                  />
-                    <Button        
-                        Grid.Column="1"
-                        x:Name="CallFrancisco"
-                        ImageSource="call.png" 
-                        BackgroundColor="#005EB2" 
-                        BorderRadius="50"  
-                        HorizontalOptions="End" 
-                        WidthRequest="60" 
-                        HeightRequest="60" 
-                        Margin="0,0,5,0" 
-                        VerticalOptions="End"/>
+                        <Button        
+                            Grid.Column="1"
+                            x:Name="CallFrancisco"
+                            ImageSource="call.png" 
+                            BackgroundColor="#005EB2" 
+                            BorderRadius="50"  
+                            HorizontalOptions="End" 
+                            WidthRequest="60" 
+                            HeightRequest="60" 
+                            Margin="0,0,5,0" 
+                            VerticalOptions="End"/>
                 </Grid>
             </Frame>
+            
         </Grid>
     </ContentPage.Content>
     <!--<Grid>

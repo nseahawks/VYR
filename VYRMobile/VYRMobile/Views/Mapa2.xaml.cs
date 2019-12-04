@@ -213,10 +213,7 @@ namespace VYRMobile.Views
 
         List<Place> placesList = new List<Place>();
 
-        public async void OnEnterAddressTapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new SearchPlacePage() { BindingContext = this.BindingContext }, false);
-        }
+        
 
     }
 }
