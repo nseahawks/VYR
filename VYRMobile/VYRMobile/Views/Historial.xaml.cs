@@ -24,9 +24,9 @@ namespace VYRMobile
         public Historial()
         {
             InitializeComponent();
-            BindingContext = new CallViewModel();
+            /*BindingContext = new CallViewModel();
             BindingContext = new CronoViewModel();
-            BindingContext = new QRViewModel();
+            BindingContext = new QRViewModel();*/
 
             BindingContext = new EventViewModel();
 
@@ -46,19 +46,8 @@ namespace VYRMobile
 
             };*/
         }
-        /*private ReportViewModel rep { get; }
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            AlertMain();
-        }
-
-        private async void AlertMain()
-        {
-            await Task.Delay(5000);
-            DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
-        }*/
+        
+        
         /*protected async override void OnAppearing()
         {
             base.OnAppearing();

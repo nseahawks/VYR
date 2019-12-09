@@ -11,7 +11,8 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              NavigationPage.HasNavigationBar="False"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             ShowMapCommand ="{Binding MapCommand}">
     <!--<ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="outer.png"/>
     </ContentPage.ToolbarItems>
@@ -243,7 +244,7 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                             Margin="-25, 10, 0,0"
                             HorizontalOptions="Center"/>-->
 
-                <Grid HorizontalOptions="End"
+                <!--<Grid HorizontalOptions="End"
                         Margin="0, 0, 0, 0">
                     <controls:CallMenu 
                         SelectedCommand="{Binding ItemSelectedCommand}"
@@ -252,16 +253,17 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                         HeightRequest="60"
                         WidthRequest="60"
                         Margin="0,0,5,10"/>
-                </Grid>
-                <!--<Button     x:Name="CallFrancisco"
+                </Grid>-->
+                <Button     x:Name="CallFrancisco"
                             ImageSource="call.png" 
+                            Command="{Binding StartCommand}"
                             BackgroundColor="#005EB2" 
                             BorderRadius="50"  
                             VerticalOptions="End"
                             HorizontalOptions="End" 
                             WidthRequest="60" 
                             HeightRequest="60" 
-                            Margin="0,0,10,6" />-->
+                            Margin="0,0,10,6" />
             </Grid>
         </Grid>
         

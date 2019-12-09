@@ -11,6 +11,8 @@ using VYRMobile.Services;
 using Xamarin.Forms;
 using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
+using System.Threading.Tasks;
+using VYRMobile.Views;
 
 namespace VYRMobile.ViewModels
 {
@@ -75,6 +77,8 @@ namespace VYRMobile.ViewModels
             }
         }
 
+        public Command MapCommand { get; set; }
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)
         {
@@ -107,11 +111,22 @@ namespace VYRMobile.ViewModels
 
                 return true;
             });
+
             StopCommand = new Command(StopStopwatch);
-            StartCommand = new Command(StartStopwatch);
+            StartCommand = new Command(Alert);
 
         }
 
+        private async void Alert() 
+        {
+            await App.Current.MainPage.DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
+            StartStopwatch();
+            MapCommand.Execute(null);
+        }
+        /*private void showMap()
+        {
+            App.INavigation.PushAsync(new Mapa2());
+        }*/
         public ObservableCollection<Models.Punto> Puntos
         {
             get { return _puntos; }

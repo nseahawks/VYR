@@ -1,5 +1,6 @@
 ﻿using Plugin.Messaging;
 using System;
+using System.Threading.Tasks;
 using VYRMobile.ViewModels;
 using VYRMobile.Views;
 using Xamarin.Forms;
@@ -9,6 +10,9 @@ namespace VYRMobile
 {
     public partial class Home : ContentPage
     {
+        public static readonly BindableProperty ShowMapCommandProperty =
+           BindableProperty.Create(nameof(ShowMapCommand), typeof(Command), typeof(Home), null, BindingMode.TwoWay);
+
 
         public Home()
         {
@@ -17,13 +21,13 @@ namespace VYRMobile
             //BindingContext = new TareaViewModel();
             BindingContext = new PuntoViewModel();
 
-
+            //AlertMain();
             //btnStart.Clicked += BtnStart_Clicked;
             //btnStop.Clicked += BtnStop_Clicked;
             /*BindingContext = new CallViewModel();
             BindingContext = new QRViewModel();*/
             QR.Clicked += QR_Clicked;
-
+            ShowMapCommand = new Command(ShowMap);
             //CallFrancisco.Clicked += CallFrancisco_clicked;
             //alert.Clicked += alert_clicked;  
         }
@@ -62,6 +66,30 @@ namespace VYRMobile
             base.OnDisappearing();
 
         }*/
+        /*protected override void OnAppearing()
+        {
+            base.OnAppearing();
+
+            AlertMain();
+        }
+
+        private async void AlertMain()
+        {
+            await Task.Delay(5000);
+            DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
+            
+        }*/
+        public Command ShowMapCommand
+        {
+            get { return (Command)GetValue(ShowMapCommandProperty); }
+            set { SetValue(ShowMapCommandProperty, value); }
+        }
+
+        private void ShowMap()
+        {
+            Navigation.PushModalAsync(new Mapa2());
+        }
+
         private void QR_Clicked(object sender, EventArgs e)
         {
             Escaner();
