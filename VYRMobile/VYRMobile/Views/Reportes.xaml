@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -11,10 +12,10 @@
              x:Class="VYRMobile.Views.Reportes"
              Title="Reportes"
              NavigationPage.HasBackButton="False">
-    
-    <ContentPage.ToolbarItems>
+
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="more3.png" x:Name="btnReporte"></ToolbarItem>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="LineStyle" TargetType="BoxView">
@@ -26,35 +27,31 @@
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <Grid
-            RowSpacing="0">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="456" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                </Grid.RowDefinitions>
-            <Grid      
-                Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="360" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
-                <ListView 
-                    Grid.Column="0"
+        <Grid>
+        <ListView 
+                    Grid.Row="0"
                     ItemsSource="{Binding Reports}"
                     SelectionMode="None"
                     HasUnevenRows="True"
-                    SeparatorVisibility="None">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <cells:ReportItemViewCell />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
-            </Grid>
-            
+                    SeparatorVisibility="None"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <cells:ReportItemViewCell />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <button:SfButton Grid.Row="0"
+                             x:Name="btnReporte"
+                             BackgroundImage="plus.png"
+                             HasShadow="True"
+                             HeightRequest="60"
+                             WidthRequest="60"
+                             CornerRadius="60"
+                             VerticalOptions="End"
+                             HorizontalOptions="End"
+                             Margin="0,0,8,8"/>
         </Grid>
-        
     </ContentPage.Content>
-    
 </ContentPage>

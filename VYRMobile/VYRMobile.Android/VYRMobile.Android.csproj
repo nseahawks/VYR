@@ -89,6 +89,9 @@
     <PackageReference Include="Syncfusion.Licensing">
       <Version>17.3.0.29</Version>
     </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.Buttons">
+      <Version>17.3.0.29</Version>
+    </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart">
       <Version>17.3.0.29</Version>
     </PackageReference>
@@ -96,6 +99,9 @@
       <Version>17.3.0.29</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
+      <Version>17.3.0.29</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
       <Version>17.3.0.29</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfTabView">
@@ -348,6 +354,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\formacion.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\plus.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

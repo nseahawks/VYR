@@ -1,3 +1,5 @@
+using Syncfusion.XForms.iOS.Buttons;
+using Syncfusion.XForms.iOS.PopupLayout;
 using Syncfusion.XForms.iOS.TabView;
 using Syncfusion.SfPicker.XForms.iOS;
 using Syncfusion.XForms.iOS.Cards;
@@ -27,6 +29,8 @@ namespace VYRMobile.iOS
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
 global::Xamarin.Forms.Forms.Init();
+SfButtonRenderer.Init();
+SfPopupLayoutRenderer.Init();
 SfTabViewRenderer.Init();
 SfPickerRenderer.Init();
 SfCardViewRenderer.Init();

@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusion.SfPopupLayout.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -10,9 +11,9 @@
              x:Class="VYRMobile.Historial"
              Title="Historial"
              NavigationPage.HasBackButton="False">
-    <ContentPage.ToolbarItems>
+    <!--<ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="outer.png"/>
-    </ContentPage.ToolbarItems>
+    </ContentPage.ToolbarItems>-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="LineStyle" TargetType="BoxView">
@@ -22,25 +23,13 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    <ContentPage.BindingContext>
-        <local:CronoViewModel/>
-    </ContentPage.BindingContext>
-        <ContentPage.Content>
-        <Grid
-            RowSpacing="0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="456" />
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <Grid      
-                Grid.Row="0">
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="360" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+    
+    <ContentPage.Content>
+        
+            <Grid   Grid.Row="0">
                 <ListView 
-                    Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
                     ItemsSource="{Binding Events}"
                     SelectionMode="None"
                     HasUnevenRows="True"
@@ -51,9 +40,15 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <!--<popuplayout:SfPopupLayout x:Name="popup" IsOpen="{Binding CanShowPopup}">
+                    <popuplayout:SfPopupLayout.Content>
+                        <StackLayout>
+                            <Button Text="Click to open popup" VerticalOptions="Center" HorizontalOptions="Center" />
+                        </StackLayout>
+                    </popuplayout:SfPopupLayout.Content>
+                </popuplayout:SfPopupLayout>-->
             </Grid>
 
-        </Grid>
         <!--<ScrollView>
             <Grid>
                 
@@ -162,4 +157,4 @@ HorizontalOptions="CenterAndExpand"/>
             </Grid>
         </ScrollView> -->
     </ContentPage.Content>
-    </ContentPage>
+</ContentPage>
