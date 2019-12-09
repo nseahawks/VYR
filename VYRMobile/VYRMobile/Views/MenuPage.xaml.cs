@@ -18,7 +18,7 @@ namespace VYRMobile.Views
             };
             NavigationPage home = new NavigationPage(new Home())
             {
-                IconImageSource = "home3.png",
+                IconImageSource = "home2.png",
                 Title = "Home"
             }; 
             NavigationPage map = new NavigationPage(new Mapa2())

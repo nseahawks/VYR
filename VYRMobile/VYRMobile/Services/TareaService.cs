@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace VYRMobile.Services
 {
@@ -19,7 +20,7 @@ namespace VYRMobile.Services
             }
         }
 
-        public List<Models.Tarea> GetTareas()
+        public async Task<List<Models.Tarea>> GetTareas()
         {
             // NOTE: In this sample the focus is on the UI. This is a Fake service.
             return new List<Models.Tarea>

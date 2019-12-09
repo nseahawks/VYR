@@ -26,9 +26,9 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
-        private void LoadData()
+        private async void LoadData()
         {
-            var tareas = TareaService.Instance.GetTareas();
+            var tareas = await TareaService.Instance.GetTareas();
             Tareas.Clear();
             foreach (var tarea in tareas)
             {

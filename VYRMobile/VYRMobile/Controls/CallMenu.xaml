@@ -36,10 +36,9 @@
                 x:Name="Seahawks" 
                 Opacity="0"
                 Margin="0,-60,0,60"
-                Source="antena.png" 
+                Source="callM.png" 
                 Aspect="AspectFit"
-                BackgroundColor="#005EB2"
-                WidthRequest="40" 
+                WidthRequest="40"
                 HeightRequest="40" 
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>

@@ -14,6 +14,8 @@ using Xamarin.Forms.Maps;
 using Xamarin.Forms.Xaml;
 using ZXing.Net.Mobile.Forms;
 
+using System.Windows.Input;
+
 namespace VYRMobile
 {
     public partial class Historial : ContentPage
@@ -28,6 +30,7 @@ namespace VYRMobile
 
             BindingContext = new EventViewModel();
 
+            //AlertMain();
             /*btnStart.Clicked += BtnStart_Clicked;
             btnStop.Clicked += BtnStop_Clicked;*/
             /*QR.Clicked += QR_Clicked;
@@ -43,7 +46,8 @@ namespace VYRMobile
 
             };*/
         }
-        /*protected override void OnAppearing()
+        /*private ReportViewModel rep { get; }
+        protected override void OnAppearing()
         {
             base.OnAppearing();
 
@@ -54,13 +58,12 @@ namespace VYRMobile
         {
             await Task.Delay(5000);
             DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
-            showMap();
         }*/
         /*protected async override void OnAppearing()
         {
             base.OnAppearing();
         }
-            private async void alert_clicked(object sender, EventArgs e)
+        private async void alert_clicked(object sender, EventArgs e)
         {
             await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             showMap();

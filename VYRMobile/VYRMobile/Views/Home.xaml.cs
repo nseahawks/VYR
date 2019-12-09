@@ -13,9 +13,10 @@ namespace VYRMobile
         public Home()
         {
             InitializeComponent();
-            BindingContext = new CronoViewModel();
-            BindingContext = new TareaViewModel();
+            //BindingContext = new CronoViewModel();
+            //BindingContext = new TareaViewModel();
             BindingContext = new PuntoViewModel();
+
 
             //btnStart.Clicked += BtnStart_Clicked;
             //btnStop.Clicked += BtnStop_Clicked;
@@ -23,7 +24,7 @@ namespace VYRMobile
             BindingContext = new QRViewModel();*/
             QR.Clicked += QR_Clicked;
 
-            CallFrancisco.Clicked += CallFrancisco_clicked;
+            //CallFrancisco.Clicked += CallFrancisco_clicked;
             //alert.Clicked += alert_clicked;  
         }
         //private void BtnStop_Clicked(object sender, EventArgs e)

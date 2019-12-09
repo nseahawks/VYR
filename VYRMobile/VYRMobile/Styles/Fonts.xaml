@@ -18,6 +18,11 @@
     <x:Double x:Key="FontSize28">28</x:Double>
     <x:Double x:Key="FontSize36">36</x:Double>
 
+    <OnPlatform x:Key="Digital7"
+                x:TypeArguments="x:String"
+                iOS="digital-7"
+                Android="digital-7.ttf#digital"/>
+    
     <OnPlatform x:Key="PoppinsBold"
                 x:TypeArguments="x:String"
                 iOS="Poppins-Bold"

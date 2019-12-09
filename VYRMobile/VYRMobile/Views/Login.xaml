@@ -17,13 +17,10 @@
     </ContentPage.Padding>
 
     <ContentPage.Content>
-        
-            <Grid BackgroundColor="#FFFFFF"
+        <Grid BackgroundColor="#FFFFFF"
               Padding="2">
-            
             <StackLayout VerticalOptions="CenterAndExpand"
                          Padding="1">
-                
                 <Image Grid.Row="0"
                        Source="seahawks2.png"
                        HorizontalOptions="Center"
@@ -31,14 +28,12 @@
                        WidthRequest="200"
                        Margin="0,0,0,0"
                        />
-                
                 <Label Grid.Row="1" 
                        Text="Usuario" 
                        TextColor="#005EB2"
                        FontSize="Small"
-                       FontAttributes="None"
+                       FontFamily="{StaticResource PoppinsMedium}"
                        Margin="33,0,0,0"/>
-                
                 <Entry Grid.Row="2" 
                        Text="{Binding Email}"
                        FontSize="18" 
@@ -48,14 +43,13 @@
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
-                
                 <Label Grid.Row="3"
                        Text="Contraseña" 
                        TextColor="#005EB2"
                        FontSize="Small"
                        FontAttributes="None"
+                       FontFamily="{StaticResource PoppinsMedium}"
                        Margin="33,0,0,0"/>
-                
                 <Entry Grid.Row="4" 
                        Text="{Binding Password}"
                        IsPassword="True"
@@ -66,7 +60,6 @@
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
-                
                 <Button x:Name="Loginbtn" 
                        Command="{Binding LoginCommand}"
                        Grid.Row="5" 
@@ -74,12 +67,13 @@
                        Text="Iniciar sesión" 
                        BackgroundColor="#005EB2" 
                        TextColor="White" 
+                       FontSize="14"
+                       FontFamily="{StaticResource PoppinsMedium}"
                        HeightRequest="40"
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
             </StackLayout>
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>

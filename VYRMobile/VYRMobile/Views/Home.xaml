@@ -7,24 +7,25 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
              xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False">
     <!--<ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="outer.png"/>
-    </ContentPage.ToolbarItems>-->
+    </ContentPage.ToolbarItems>
     <ContentPage.BindingContext>
         <local:CronoViewModel/>
-    </ContentPage.BindingContext>
+    </ContentPage.BindingContext>-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="CronoStyle" TargetType="Label">
-                <Setter Property="Text" Value="00:00:00.0" />
-                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}" />
+                <Setter Property="FontFamily" Value="{StaticResource Digital7}" />
                 <Setter Property="FontSize" Value="50" />
                 <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
                 <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Start" />
             </Style>
             <Style x:Key="TabItemStyle" TargetType="tabview:SfTabItem">
                 <Setter Property="SelectionColor" Value="{StaticResource BaseColor}" />
@@ -60,55 +61,102 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-
     <ContentPage.Content>
+        
         <Grid   Grid.RowSpan="2"
                 RowSpacing="2">
             <Grid.RowDefinitions>
                 <RowDefinition Height="120"/>
                 <RowDefinition Height="300"/>
-                <RowDefinition Height="90"/>
+                <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            
-            <Frame  Style="{StaticResource FrameStyle}"
-                    Grid.Row="0">
+            <Frame Style="{StaticResource FrameStyle}"
+                   Grid.Row="0">
                 <Grid Grid.RowSpan="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="310"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="28"/>
-                        <RowDefinition Height="90"/>
+                        <RowDefinition Height="55"/>
                     </Grid.RowDefinitions>
                     <Label  Grid.Row="0"
                             Grid.Column="0"
                             VerticalOptions="Start"
                             HorizontalOptions="Center"
+                            Margin="00,0,0,0"
                             Style="{StaticResource TitleStyle}"/>
-                    <Label  Grid.Row="1"
-                            Grid.Column="0"
-                            VerticalOptions="Start"
-                            Style="{StaticResource CronoStyle}">
-                        <!--<Label.FormattedText>
-                        <FormattedString>
-                            <Span Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
-                            <Span Text=":"/>
-                            <Span Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
-                            <Span Text=":"/>
-                            <Span Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
-                            <Span Text="."/>
-                            <Span Text="{Binding StopWatchMilliseconds}"/>
-                        </FormattedString>
-                    </Label.FormattedText>-->
-                    </Label>
+                    <Grid Grid.ColumnSpan="3"
+                          Grid.Row="1"
+                          HorizontalOptions="Center">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="61"/>
+                            <ColumnDefinition Width="7"/>
+                            <ColumnDefinition Width="61"/>
+                            <ColumnDefinition Width="7"/>
+                            <ColumnDefinition Width="61"/>
+                            <ColumnDefinition Width="7"/>
+                            <ColumnDefinition Width="58"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <Label  FontSize="65"
+                                Grid.Column="0"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="End"
+                                Style="{StaticResource CronoStyle}"
+                                Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
+                        <Label  FontSize="65"
+                                Grid.Column="1"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="Center"
+                                Style="{StaticResource CronoStyle}"
+                                Text=":"/>
+                        <Label  FontSize="65"
+                                Grid.Column="2"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="End"
+                                Style="{StaticResource CronoStyle}"
+                                Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
+                        <Label  FontSize="65"
+                                Grid.Column="3"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="Center"
+                                Style="{StaticResource CronoStyle}"
+                                Text=":"/>
+                        <Label  FontSize="65"
+                                Grid.Column="4"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="End"
+                                Style="{StaticResource CronoStyle}"
+                                Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
+                        <Label  FontSize="65"
+                                Grid.Column="5"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="Center"
+                                Style="{StaticResource CronoStyle}"
+                                Text="."/>
+                        <Label  FontSize="40"
+                                Grid.Column="6"
+                                VerticalOptions="End"
+                                HorizontalOptions="Start"
+                                Style="{StaticResource CronoStyle}"
+                                Text="{Binding StopWatchMilliseconds}"/>
+
+                    </Grid>
                 </Grid>
             </Frame>
-            
             <Frame HeightRequest="350"
                Grid.Row="1">
                 <Grid Grid.RowSpan="2">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="215"/>
-                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="255"/>
                     </Grid.RowDefinitions>
-
                     <StackLayout>
                         <tabview:SfTabView x:Name="tabView" 
                                            VerticalOptions="FillAndExpand"
@@ -121,7 +169,8 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                                 <tabview:SfTabItem Title="Tareas" 
                                                    TitleFontFamily="{StaticResource PoppinsBold}"
                                                    SelectionColor="{StaticResource BaseColor}"
-                                                   TitleFontSize="{StaticResource FontSize16}">
+                                                   TitleFontSize="{StaticResource FontSize16}"
+                                                   >
                                     <tabview:SfTabItem.Content>
                                         <ListView 
                                             ItemsSource="{Binding Tareas}"
@@ -159,57 +208,63 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                             </tabview:SfTabView.Items>
                         </tabview:SfTabView>
                     </StackLayout>
-                    <Button
-                        Grid.Row="1"
-                        Grid.Column="0"
-                        x:Name="tareasButton"
-                        Style="{StaticResource ButtonStyle}"
-                        HorizontalOptions="Start"
-                        Margin="0,0,0,0"/>
                 </Grid>
             </Frame>
-            
-            <Frame HeightRequest="100"
-               Grid.Row="2">
-                <Grid   Grid.RowSpan="1"
-                        Grid.ColumnSpan="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="60"/>
-                        <RowDefinition Height="50"/>
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="250"/>
-                        <ColumnDefinition Width="80"/>
-                    </Grid.ColumnDefinitions>
-                        <Button 
-                            Grid.Row="0"
-                            Grid.Column="0"
-                            x:Name="QR"
+
+            <Grid   
+                Grid.Row="2"
+                Grid.RowSpan="1"
+                Grid.ColumnSpan="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="330"/>
+                </Grid.ColumnDefinitions>
+                <Button     
+                    x:Name="QR"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    Text="Escanear qr"
+                    TextColor="{StaticResource WhiteColor}"
+                    CornerRadius="3"
+                    BackgroundColor="{StaticResource BaseColor}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    WidthRequest="150"
+                    HeightRequest="60"/>
+                
+                <!--<Button     x:Name="QR"
                             Command="{Binding ConnectCommand}"
                             FontFamily="{StaticResource PoppinsMedium}"
                             Text="Escanear QR" 
                             TextColor="White"
                             BackgroundColor="#005EB2" 
-                            CornerRadius="5" 
-                            HeightRequest="15"
-                            WidthRequest="175"           
-                            HorizontalOptions="End"/>
-                    
-                        <Button        
-                            Grid.Column="1"
-                            x:Name="CallFrancisco"
+                            CornerRadius="5"      
+                            Margin="-25, 10, 0,0"
+                            HorizontalOptions="Center"/>-->
+
+                <Grid HorizontalOptions="End"
+                        Margin="0, 0, 0, 0">
+                    <controls:CallMenu 
+                        SelectedCommand="{Binding ItemSelectedCommand}"
+                        HorizontalOptions="End" 
+                        VerticalOptions="End"
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        Margin="0,0,5,10"/>
+                </Grid>
+                <!--<Button     x:Name="CallFrancisco"
                             ImageSource="call.png" 
                             BackgroundColor="#005EB2" 
                             BorderRadius="50"  
+                            VerticalOptions="End"
                             HorizontalOptions="End" 
                             WidthRequest="60" 
                             HeightRequest="60" 
-                            Margin="0,0,5,0" 
-                            VerticalOptions="End"/>
-                </Grid>
-            </Frame>
-            
+                            Margin="0,0,10,6" />-->
+            </Grid>
         </Grid>
+        
     </ContentPage.Content>
     <!--<Grid>
             <Grid.RowDefinitions>

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Test">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="CronoStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+            </Style>
+            <Style x:Key="Crono2Style" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource Digital7}" />
+                <Setter Property="TextColor" Value="{StaticResource GrayColor}" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <Grid Grid.ColumnSpan="3"
+              HorizontalOptions="Center"
+              VerticalOptions="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="61"/>
+                <ColumnDefinition Width="7"/>
+                <ColumnDefinition Width="61"/>
+                <ColumnDefinition Width="7"/>
+                <ColumnDefinition Width="61"/>
+                <ColumnDefinition Width="7"/>
+                <ColumnDefinition Width="60"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60"/>
+            </Grid.RowDefinitions>
+            <Label  FontSize="65"
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Style="{StaticResource Crono2Style}"
+                    Text="{Binding StopWatchHours, StringFormat='{0:D2}'}"/>
+            <Label  FontSize="65"
+                    Grid.Column="1"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource Crono2Style}"
+                    Text=":"/>
+            <Label  FontSize="65"
+                    Grid.Column="2"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Style="{StaticResource Crono2Style}"
+                    Text="{Binding StopWatchMinutes, StringFormat='{0:D2}'}"/>
+            <Label  FontSize="65"
+                    Grid.Column="3"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource Crono2Style}"
+                    Text=":"/>
+            <Label  FontSize="65"
+                    Grid.Column="4"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
+                    Style="{StaticResource Crono2Style}"
+                    Text="{Binding StopWatchSeconds, StringFormat='{0:D2}'}"/>
+            <Label  FontSize="65"
+                    Grid.Column="5"
+                    Grid.Row="0"
+                    FontAttributes="Bold"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Style="{StaticResource Crono2Style}"
+                    Text="."/>
+            <Label  FontSize="40"
+                    Grid.Column="6"
+                    Grid.Row="0"
+                    VerticalOptions="End"
+                    HorizontalOptions="Start"
+                    Style="{StaticResource Crono2Style}"
+                    Text="{Binding StopWatchMilliseconds}"/>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

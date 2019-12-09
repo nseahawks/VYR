@@ -28,5 +28,6 @@ namespace VYRMobile.Models
             get => taskDate;
             set => SetProperty(ref taskDate, value);
         }
+
     }
 }

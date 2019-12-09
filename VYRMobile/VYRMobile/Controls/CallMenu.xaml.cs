@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Plugin.Messaging;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -32,9 +33,10 @@ namespace VYRMobile.Controls
 
             HandleMenuCenterClicked();
             HandleCloseClicked();
-            HandleOptionsClicked();
+            //HandleOptionsClicked();
+            HandleSeahawksClicked();
         }
-        private void HandleOptionsClicked()
+        /*private void HandleOptionsClicked()
         {
             HandleOptionClicked(Seahawks, "Seahawks");
             HandleOptionClicked(Claro, "Claro");
@@ -57,7 +59,19 @@ namespace VYRMobile.Controls
                 }),
                 NumberOfTapsRequired = 1
             });
+        }*/
+        private void HandleSeahawksClicked()
+        {
+            Seahawks.GestureRecognizers.Add(new TapGestureRecognizer
+            {
+                Command = new Command(async () =>
+                {
+                    await TapSeahawks();
+                }),
+                NumberOfTapsRequired = 1
+            });
         }
+
 
         private void HandleCloseClicked()
         {
@@ -70,6 +84,37 @@ namespace VYRMobile.Controls
                 NumberOfTapsRequired = 1
             });
 
+        }
+
+        private async Task TapSeahawks()
+        {
+            if (!_isAnimating)
+            {
+
+                _isAnimating = true;
+
+                Call.IsVisible = true;
+                Close.IsVisible = true;
+                await HideButtons();
+
+                await Close.RotateTo(0, _animationDelay);
+                await Close.FadeTo(0, _animationDelay);
+                await Call.RotateTo(0, _animationDelay);
+                await Call.FadeTo(1, _animationDelay);
+                await Outer.ScaleTo(1, 150, Easing.CubicInOut);
+
+                Close.IsVisible = false;
+
+                _isAnimating = false;
+            }
+        }
+        private void SeahawksTapped()
+        {
+            var phoneCallTask = CrossMessaging.Current.PhoneDialer;
+            if (phoneCallTask.CanMakePhoneCall)
+            {
+                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
+            }
         }
 
         private async Task CloseMenu()

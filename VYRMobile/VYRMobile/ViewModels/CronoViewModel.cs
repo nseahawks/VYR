@@ -14,7 +14,7 @@ namespace VYRMobile.ViewModels
 {
     public class CronoViewModel : INotifyPropertyChanged
     {
-
+        
         public Stopwatch stopWatch = new Stopwatch();
         private Timer time = new Timer();
 
@@ -28,6 +28,8 @@ namespace VYRMobile.ViewModels
         {
             stopWatch.Stop();
         }
+
+        
 
         private string _stopWatchHours;
         public string StopWatchHours
@@ -80,20 +82,25 @@ namespace VYRMobile.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
+        
         public CronoViewModel()
         {
-            //stopWatch.Start();
-            StopWatchHours = stopWatch.Elapsed.Hours.ToString();
+            
+
+            
+            stopWatch.Start();
+            /*StopWatchHours = stopWatch.Elapsed.Hours.ToString();
             StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString();
             StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString();
-            StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString();
+            StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString();*/
 
             Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
             {
-                StopWatchHours = stopWatch.Elapsed.Hours.ToString();
-                StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString();
-                StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString();
-                StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString();
+                StopWatchHours = stopWatch.Elapsed.Hours.ToString("00");
+                StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString("00");
+                StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString("00");
+                StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString("000");
+
                 return true;
             });
             //StopStopwatch();

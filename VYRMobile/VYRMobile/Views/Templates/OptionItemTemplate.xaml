@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Templates.OptionItemTemplate">
+    <ContentView.Resources>
+        <Style x:Key="NameTextStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+        <Style x:Key="PhotoStyle" TargetType="Image">
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="HeightRequest" Value="15" />
+            <Setter Property="WidthRequest" Value="15" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="16, 0, 0, 0" />
+        </Style>
+    </ContentView.Resources>
+    <ContentView.Content>
+        <Grid   ColumnSpacing="0"
+                RowSpacing="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="50" />
+                <ColumnDefinition Width="270" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="45" />
+            </Grid.RowDefinitions>
+            <Image  Source="{Binding OptionIcon}"
+                    Grid.Column="0"
+                    Style="{StaticResource PhotoStyle}"
+                    Margin="5,0,0,0"/>
+            <Label  Grid.Column="1"
+                    TextColor="{StaticResource BlackColor}"
+                    Text="{Binding OptionName}"
+                    Style="{StaticResource NameTextStyle}"
+                    Margin="0,0,0,0"/>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

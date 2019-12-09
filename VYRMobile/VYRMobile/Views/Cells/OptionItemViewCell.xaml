@@ -3,11 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
              xmlns:templates="clr-namespace:VYRMobile.Views.Templates"
-             x:Class="VYRMobile.Views.Cells.TareaItemViewCell">
-    
-    <templates:TareaItemTemplate
-        x:Name="TareaItemTemplate"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Cells.OptionItemViewCell">
+    <templates:OptionItemTemplate
+        x:Name="OptionItemTemplate"
         Opacity="0"/>
 </ViewCell>

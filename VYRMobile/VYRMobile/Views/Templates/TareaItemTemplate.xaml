@@ -30,8 +30,8 @@
 
         <Style x:Key="PhotoStyle" TargetType="Image">
             <Setter Property="HorizontalOptions" Value="Start" />
-            <Setter Property="HeightRequest" Value="30" />
-            <Setter Property="WidthRequest" Value="30" />
+            <Setter Property="HeightRequest" Value="20" />
+            <Setter Property="WidthRequest" Value="20" />
             <Setter Property="VerticalOptions" Value="Center" />
             <Setter Property="Margin" Value="16, 0, 0, 0" />
         </Style>
@@ -40,8 +40,8 @@
         <Grid   ColumnSpacing="0"
             RowSpacing="1">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="60" />
-            <ColumnDefinition Width="150" />
+            <ColumnDefinition Width="35" />
+            <ColumnDefinition Width="175" />
             <ColumnDefinition Width="110" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>

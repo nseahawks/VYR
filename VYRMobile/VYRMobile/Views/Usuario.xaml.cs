@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -15,9 +15,11 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
 
-            Logout.Clicked += Logout_clicked;
+            /*Logout.Clicked += Logout_clicked;
             Estadisticas.Clicked += Estadisticas_clicked;
-            Equipamiento.Clicked += Equipamiento_clicked;
+            Equipamiento.Clicked += Equipamiento_clicked;*/
+
+            BindingContext = new OptionViewModel();
         }
 
         private void Equipamiento_clicked(object sender, EventArgs e)
