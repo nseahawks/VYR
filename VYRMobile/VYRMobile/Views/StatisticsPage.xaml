@@ -8,9 +8,15 @@
              x:Class="VYRMobile.Views.StatisticsPage">
     <ContentPage.Content>
         <StackLayout>
+            <Label Text="ANDAMO RULETA EN UNA CAMIONETA"/>
             <chart:SfChart>
-                <chart:RadarSeries ItemsSource="{Binding RadarData}" 
+                <chart:RadarSeries x:Name="RadarChart"
+                                   SelectedDataPointColor="Purple"
+                                   ColorModel="{StaticResource BaseColor}"
+                                   StrokeColor="Green"
+                                   ItemsSource="{Binding Radar}" 
                                    DrawType="Line"
+                                   Color="Purple"
                                    XBindingPath="Name" 
                                    YBindingPath="Value">
     
@@ -19,5 +25,6 @@
             </chart:SfChart>
 
         </StackLayout>
+        
     </ContentPage.Content>
 </ContentPage>

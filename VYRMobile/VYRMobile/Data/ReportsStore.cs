@@ -20,6 +20,19 @@ namespace VYRMobile.Data
             
         }
 
+        private static ReportsStore _instance;
+
+        public static ReportsStore Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ReportsStore();
+
+                return _instance;
+            }
+        }
+
         bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         public async Task<bool> AddReportAsync(Report report)
         {
@@ -54,9 +67,19 @@ namespace VYRMobile.Data
             throw new System.NotImplementedException();
         }
 
-        public Task<IEnumerable<Report>> GetReportsAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Report>> GetReportsAsync(bool forceRefresh = false)
         {
-            throw new System.NotImplementedException();
+            App.IsUserLoggedIn = true;
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                
+                var response = await _client.GetAsync("/api/v1/reports");
+                var jsonReports = response.Content.ReadAsStringAsync().Result;
+                List<Report> reports = JsonConvert.DeserializeObject<List<Report>>(jsonReports);
+                return reports;
+            }
+
+            return null;
         }
 
         public Task<bool> UpdateReportAsync(Report report)

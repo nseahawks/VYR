@@ -34,6 +34,7 @@ namespace VYRMobile.Models
             get => address;
             set => SetProperty(ref address, value); 
         }
+
         string reportType;
         public string ReportType
         {
@@ -41,7 +42,6 @@ namespace VYRMobile.Models
             set => SetProperty(ref reportType, value);
         }
 
-        
         public Color Color { get; set; }
 
         public enum ReportTypes
