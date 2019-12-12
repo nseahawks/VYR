@@ -5,6 +5,7 @@ using Android.Runtime;
 using Android.OS;
 using Xamarin;
 using Xamarin.Forms.GoogleMaps.Android;
+using Android.Content;
 
 namespace VYRMobile.Droid
 {
@@ -15,7 +16,6 @@ namespace VYRMobile.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
             base.OnCreate(savedInstanceState);
             //Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -26,7 +26,8 @@ namespace VYRMobile.Droid
             };
 
             FormsMaps.Init(this, savedInstanceState);
-            
+            Intent intent = new Intent(this, typeof(TrackerService));
+            StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);

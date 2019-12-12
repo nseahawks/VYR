@@ -54,9 +54,9 @@ namespace VYRMobile.ViewModels
         }
         //public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
-        private void LoadData()
+        private async void LoadData()
         {
-            var reports = ReportService.Instance.GetReports();
+            var reports = await ReportsStore.Instance.GetReportsAsync();
 
             Reports.Clear();
             foreach (var report in reports)

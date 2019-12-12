@@ -143,10 +143,11 @@ namespace VYRMobile.ViewModels
                 HasRouteRunning = true;
 
                 //Location tracking simulation
-                Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+                Device.StartTimer(TimeSpan.FromSeconds(5), () =>
                 {
-                    if (positions.Count > positionIndex && HasRouteRunning)
+                    if (positions.Count >= positionIndex && HasRouteRunning)
                     {
+                        
                         UpdatePositionCommand.Execute(positions[positionIndex]);
                         //positionIndex++;
                         return true;

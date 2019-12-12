@@ -15,9 +15,9 @@ namespace VYRMobile.Views
 {
     public partial class Mapa2 : ContentPage
     {
-        SensorSpeed speed = SensorSpeed.Fastest;
+        SensorSpeed speed = SensorSpeed.Default;
         private double CData;
-
+        private double TData;
         public static readonly BindableProperty CalculateCommandProperty =
            BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
 
@@ -76,7 +76,9 @@ namespace VYRMobile.Views
 
             
             Compass.ReadingChanged += Compass_ReadingChanged;
+            OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
             map.PinClicked += Map_PinClicked;
+            
             //map.PinClicked += (object s, SelectedPinChangedEventArgs e) =>
             //{
             //    string pinName = s.;
@@ -91,10 +93,30 @@ namespace VYRMobile.Views
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(18.461294, -69.948531), Distance.FromMeters(5000)));
         }
 
+        private void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
+        {
+            var data = e.Reading;
+            //Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
+            var angle = (2 * Math.Acos(data.Orientation.W))* 60;
+            if(angle >= 90.0)
+            {
+                TData = 90.0;
+            } else if (angle <= 0)
+            {
+                TData = 0;
+            }
+            else
+            {
+                TData = angle;
+            }
+          
+        }
+
+
         void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
         {
             var data = e.Reading;
-            Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
+            //Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
             CData = data.HeadingMagneticNorth;
             // Process Heading Magnetic North
         }
@@ -107,6 +129,25 @@ namespace VYRMobile.Views
                     Compass.Stop();
                 else
                     Compass.Start(speed, applyLowPassFilter: true);
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature not supported on device
+            }
+            catch (Exception ex)
+            {
+                // Some other exception has occurred
+            }
+        }
+
+        public void ToggleOrientation()
+        {
+            try
+            {
+                if (OrientationSensor.IsMonitoring)
+                    OrientationSensor.Stop();
+                else
+                    OrientationSensor.Start(speed);
             }
             catch (FeatureNotSupportedException fnsEx)
             {
@@ -143,6 +184,8 @@ namespace VYRMobile.Views
             map.MyLocationEnabled = true;
             map.UiSettings.MyLocationButtonEnabled = true;
             map.UiSettings.TiltGesturesEnabled = true;
+            ToggleCompass();
+            ToggleOrientation();
             GetActualLocationCommand.Execute(null);
         }
 
@@ -186,7 +229,6 @@ namespace VYRMobile.Views
 
             try
             {
-                ToggleCompass();
                 var request = new GeolocationRequest(GeolocationAccuracy.High);
                 var location = await Geolocation.GetLocationAsync(request);
                 Position position = new Position(location.Latitude, location.Longitude );
@@ -197,14 +239,14 @@ namespace VYRMobile.Views
                     //    position,
                     //    Distance.FromMiles(0.3)));
                     //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(location.Latitude, location.Longitude)));
-                    await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
-                    new Position(
-                        position.Latitude,
-                        position.Longitude),
-                        19d,
-                        CData,
-                        75d
-                    )));
+                    //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+                    //new Position(
+                    //    position.Latitude,
+                    //    position.Longitude),
+                    //    19d,
+                    //    CData,
+                    //    65d
+                    //)));
                     OriginLocationlat = position.Latitude.ToString();
                     OriginLocationlng = position.Longitude.ToString();
                 }
@@ -212,7 +254,7 @@ namespace VYRMobile.Views
 
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"Unable to get location {ex}", "Ok");
+                await DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
             }
           
         }
@@ -229,6 +271,13 @@ namespace VYRMobile.Views
                 GetActualLocationCommand.Execute(null);
                 //cPin.Position = new Position(position.Latitude, position.Longitude);
                 //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(position.Latitude, position.Longitude)));
+                await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+                    new Position(/*position.Latitude, position.Longitude*/
+                        double.Parse(OriginLocationlat),
+                      double.Parse(OriginLocationlng)
+                ),18d,CData,TData
+
+                    ))) ;
                 //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
                 //new Position(
                 //    position.Latitude,
@@ -238,6 +287,11 @@ namespace VYRMobile.Views
                 //    75d
                 //)));
                 //var previousPosition = map?.Polylines?.FirstOrDefault()?.Positions?.FirstOrDefault();
+                //map?.Polylines?.FirstOrDefault()?.Positions?.Insert(1,
+                //    new Position(
+                //       double.Parse(OriginLocationlat),
+                //       double.Parse(OriginLocationlng)
+                //       ));
                 //map.Polylines?.FirstOrDefault()?.Positions?.Remove(previousPosition.Value);
             }
             else
@@ -263,14 +317,15 @@ namespace VYRMobile.Views
             }
             map.Polylines.Add(polyline);
             //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Distance.FromMiles(0.50f)));
-            await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+            await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
                 new Position(
                     polyline.Positions[0].Latitude,
                     polyline.Positions[0].Longitude),
                     18d,
-                    0d,
-                    60d
+                    CData,
+                    TData
                 )));
+            
 
             //var pin = new Pin
             //{

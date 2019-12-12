@@ -24,7 +24,7 @@ namespace VYRMobile.Views
         private async void charge()
         {
             await Task.Delay(500);
-            Application.Current.MainPage = new NavigationPage(new MenuPage());
+            Application.Current.MainPage = new NavigationPage(new Login());
         }
     }
 }

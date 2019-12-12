@@ -56,7 +56,7 @@ namespace VYRMobile.ViewModels
 
             _hub = new HubConnectionBuilder()
                 //.WithUrl($"http://{url}:5000/hubs/trackHub")
-                .WithUrl("https://vyrapi.azurewebsites.net/hubs/trackHub")
+                .WithUrl("https://vyr-x.azurewebsites.net/hubs/central")
                 .Build();
 
             _hub.Closed += async (error) =>

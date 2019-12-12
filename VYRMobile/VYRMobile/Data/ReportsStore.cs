@@ -41,12 +41,12 @@ namespace VYRMobile.Data
 
             var responseReport = new Report()
             {
-                UserId = "52a29a1b-33cd-4a8d-b305-cd741536e8b3",
+                UserId = "34f767eb-c1a0-472d-84b5-8d166df6089",
                 Title = report.Title,
                 Created = DateTime.UtcNow,
                 Description = report.Description,
                 Address = "",
-                Status = false,
+                Status = report.Status,
                 ResolveDate = DateTime.Now
             };
 
@@ -69,7 +69,6 @@ namespace VYRMobile.Data
 
         public async Task<IEnumerable<Report>> GetReportsAsync(bool forceRefresh = false)
         {
-            App.IsUserLoggedIn = true;
             if (App.IsUserLoggedIn && IsConnected)
             {
                 

@@ -37,7 +37,7 @@ namespace VYRMobile
 
             if (App.IsUserLoggedIn)
             {
-                Navigation.InsertPageBefore(new Utensilios(), this);
+                Navigation.InsertPageBefore(new MenuPage(), this);
                 await Navigation.PopAsync();
             }
             else
