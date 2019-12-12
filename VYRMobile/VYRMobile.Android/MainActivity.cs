@@ -1,10 +1,14 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
+using Android.Widget;
+using Android.Gms.Common;
+
 using Xamarin;
 using Xamarin.Forms.GoogleMaps.Android;
+using Plugin.LocalNotifications;
+using Plugin.Messaging;
 
 namespace VYRMobile.Droid
 {
@@ -26,12 +30,34 @@ namespace VYRMobile.Droid
             };
 
             FormsMaps.Init(this, savedInstanceState);
+
+            CheckForGoogleServices();
             
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             LoadApplication(new App());
+
+            LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.seahawks;
+            CrossMessaging.Current.Settings().Phone.AutoDial = true;
+        }
+        public bool CheckForGoogleServices()
+        {
+            int resultCode = GoogleApiAvailability.Instance.IsGooglePlayServicesAvailable(this);
+            if (resultCode != ConnectionResult.Success)
+            {
+                if (GoogleApiAvailability.Instance.IsUserResolvableError(resultCode))
+                {
+                    Toast.MakeText(this, GoogleApiAvailability.Instance.GetErrorString(resultCode), ToastLength.Long);
+                }
+                else
+                {
+                    Toast.MakeText(this, "This device does not support Google Play Services", ToastLength.Long);
+                }
+                return false;
+            }
+            return true;
         }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {

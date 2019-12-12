@@ -41,13 +41,13 @@ namespace VYRMobile.Data
 
             var responseReport = new Report()
             {
-                UserId = "52a29a1b-33cd-4a8d-b305-cd741536e8b3",
                 Title = report.Title,
-                Created = DateTime.UtcNow,
-                Description = report.Description,
                 Address = "",
-                Status = false,
-                ResolveDate = DateTime.Now
+                Description = report.Description,
+                Created = DateTimeOffset.Now,
+                ReportStatus = report.ReportStatus,
+                ReportType = report.ReportType,
+                ResolveDate = DateTimeOffset.Now
             };
 
             string serializedData = JsonConvert.SerializeObject(responseReport);
@@ -69,10 +69,8 @@ namespace VYRMobile.Data
 
         public async Task<IEnumerable<Report>> GetReportsAsync(bool forceRefresh = false)
         {
-            App.IsUserLoggedIn = true;
             if (App.IsUserLoggedIn && IsConnected)
             {
-                
                 var response = await _client.GetAsync("/api/v1/reports");
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
                 List<Report> reports = JsonConvert.DeserializeObject<List<Report>>(jsonReports);
@@ -82,6 +80,7 @@ namespace VYRMobile.Data
             return null;
         }
 
+       
         public Task<bool> UpdateReportAsync(Report report)
         {
             throw new System.NotImplementedException();
