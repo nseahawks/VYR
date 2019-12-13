@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Microsoft.AspNetCore.SignalR.Client;
+using VYRMobile.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -22,25 +23,28 @@ namespace VYRMobile.Droid
         CancellationTokenSource _cts;
         HubConnection _hub;
         string device;
+        bool isConnected { get; set; }
+      
         public async override void OnCreate()
         {
             device = DeviceInfo.Model + ", "+ DeviceInfo.Name;
 
             _hub = new HubConnectionBuilder().WithUrl("https://vyr-x.azurewebsites.net/hubs/central").Build();
 
+         
             _hub.Closed += async (error) =>
             {
-                //notification = n
-                //_NM.Notify("Connection Closed...");
-                //IsConnected = false;
-                //await Task.Delay(random.Next(0, 5) * 1000);
-                //await Connect();
+                isConnected = false;
+                await Task.Delay(5000);
+                await  _hub.StartAsync();
             };
 
-            _hub.On<double, double, string>("DevicePosition", (lat, lng, device) => { 
-                
+            _hub.On<double,double, string>("DevicePosition", (Latitude, Longitude, Device) => {
+                var finalMessage = $"{Device} says {Latitude}, {Longitude}";
+                DependencyService.Get<IToast>().LongToast(finalMessage);
             });
-            
+
+
             await _hub.StartAsync();
             base.OnCreate();
         }

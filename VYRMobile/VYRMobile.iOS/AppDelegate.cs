@@ -2,7 +2,6 @@ using Syncfusion.XForms.iOS.Buttons;
 using Syncfusion.XForms.iOS.PopupLayout;
 using Syncfusion.XForms.iOS.TabView;
 using Syncfusion.SfPicker.XForms.iOS;
-using Syncfusion.XForms.iOS.Cards;
 using Syncfusion.XForms.iOS.ComboBox;
 using System;
 using System.Collections.Generic;
@@ -33,7 +32,6 @@ SfButtonRenderer.Init();
 SfPopupLayoutRenderer.Init();
 SfTabViewRenderer.Init();
 SfPickerRenderer.Init();
-SfCardViewRenderer.Init();
 SfComboBoxRenderer.Init();
             LoadApplication(new App());
 

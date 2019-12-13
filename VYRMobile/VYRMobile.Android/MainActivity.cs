@@ -1,5 +1,4 @@
-﻿
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
 using Android.Runtime;
 using Android.OS;
@@ -26,6 +25,7 @@ namespace VYRMobile.Droid
             };
 
             FormsMaps.Init(this, savedInstanceState);
+
             Intent intent = new Intent(this, typeof(TrackerService));
             StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
