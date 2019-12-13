@@ -8,18 +8,6 @@ namespace VYRMobile.Models
 {
     public class Report : ObservableObject
     {
-        private static Report _instance;
-
-        public static Report Instance
-        {
-            get
-            {
-                if (_instance == null)
-                    _instance = new Report();
-
-                return _instance;
-            }
-        }
         string userId;
         public string UserId
         {
@@ -47,8 +35,8 @@ namespace VYRMobile.Models
             set => SetProperty(ref address, value); 
         }
 
-        ReportTypes reportType;
-        public ReportTypes ReportType
+        string reportType;
+        public string ReportType
         {
             get => reportType;
             set => SetProperty(ref reportType, value);
@@ -65,34 +53,6 @@ namespace VYRMobile.Models
             Daño = 4
         }
 
-        ReportStatuses reportStatus;
-        public ReportStatuses ReportStatus
-        {
-            get => reportStatus;
-            set => SetProperty(ref reportStatus, value);
-        }
-
-        public enum ReportStatuses
-        {
-            Default = 0,
-            Completo = 1,
-            Incompleto = 2,
-            PorAsignar = 3
-        }
-        public List<ReportStatuses> GetStatuses()
-        {
-            var statuses = new List<ReportStatuses>()
-            {
-                
-            };
-
-            /*foreach (var status in statuses)
-            {
-                statuses.Add(status);
-            }*/
-
-            return statuses;
-        }
         string description;
         public string Description { 
             get => description; 
@@ -103,14 +63,18 @@ namespace VYRMobile.Models
             get => img;
             set => SetProperty(ref img, value); 
         }
-        
-        DateTimeOffset created;
-        public DateTimeOffset Created { 
+        bool status;
+        public bool Status { 
+            get => status; 
+            set => SetProperty(ref status, value); 
+        }
+       DateTime created;
+        public DateTime Created { 
             get => created; 
             set => SetProperty(ref created, value); 
         }
-        DateTimeOffset resolveDate;
-        public DateTimeOffset ResolveDate { 
+        DateTime resolveDate;
+        public DateTime ResolveDate { 
             get => resolveDate; 
             set => SetProperty(ref resolveDate, value); 
         }

@@ -190,7 +190,6 @@ namespace VYRMobile.Droid
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem;
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_color = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_offset = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
-			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::VYRMobile.Droid.Resource.Drawable.plugin_lc_smallicon;
 			global::Refractored.Fab.Resource.Attribute.fab_colorDisabled = global::VYRMobile.Droid.Resource.Attribute.fab_colorDisabled;
 			global::Refractored.Fab.Resource.Attribute.fab_colorNormal = global::VYRMobile.Droid.Resource.Attribute.fab_colorNormal;
 			global::Refractored.Fab.Resource.Attribute.fab_colorPressed = global::VYRMobile.Droid.Resource.Attribute.fab_colorPressed;
@@ -10101,73 +10100,70 @@ namespace VYRMobile.Droid
 			public const int pause = 2131165605;
 			
 			// aapt resource value: 0x7F0701A6
-			public const int plugin_lc_smallicon = 2131165606;
+			public const int plus = 2131165606;
 			
 			// aapt resource value: 0x7F0701A7
-			public const int plus = 2131165607;
+			public const int popup_forms_android_close_icon = 2131165607;
 			
 			// aapt resource value: 0x7F0701A8
-			public const int popup_forms_android_close_icon = 2131165608;
+			public const int popup_forms_android_shadow = 2131165608;
 			
 			// aapt resource value: 0x7F0701A9
-			public const int popup_forms_android_shadow = 2131165609;
+			public const int popup_forms_dark_theme_close_icon = 2131165609;
 			
 			// aapt resource value: 0x7F0701AA
-			public const int popup_forms_dark_theme_close_icon = 2131165610;
+			public const int popup_forms_light_theme_close_icon = 2131165610;
 			
 			// aapt resource value: 0x7F0701AB
-			public const int popup_forms_light_theme_close_icon = 2131165611;
+			public const int quit = 2131165611;
 			
 			// aapt resource value: 0x7F0701AC
-			public const int quit = 2131165612;
+			public const int reportes2 = 2131165612;
 			
 			// aapt resource value: 0x7F0701AD
-			public const int reportes2 = 2131165613;
+			public const int robo = 2131165613;
 			
 			// aapt resource value: 0x7F0701AE
-			public const int robo = 2131165614;
+			public const int seahawks = 2131165614;
 			
 			// aapt resource value: 0x7F0701AF
-			public const int seahawks = 2131165615;
+			public const int seahawks2 = 2131165615;
 			
 			// aapt resource value: 0x7F0701B0
-			public const int seahawks2 = 2131165616;
+			public const int seahawks3 = 2131165616;
 			
 			// aapt resource value: 0x7F0701B1
-			public const int seahawks3 = 2131165617;
+			public const int send = 2131165617;
 			
 			// aapt resource value: 0x7F0701B2
-			public const int send = 2131165618;
+			public const int send2 = 2131165618;
 			
 			// aapt resource value: 0x7F0701B3
-			public const int send2 = 2131165619;
+			public const int solido = 2131165619;
 			
 			// aapt resource value: 0x7F0701B4
-			public const int solido = 2131165620;
+			public const int solidosh = 2131165620;
 			
 			// aapt resource value: 0x7F0701B5
-			public const int solidosh = 2131165621;
+			public const int startRoute = 2131165621;
 			
 			// aapt resource value: 0x7F0701B6
-			public const int startRoute = 2131165622;
+			public const int tool = 2131165622;
 			
 			// aapt resource value: 0x7F0701B7
-			public const int tool = 2131165623;
+			public const int tool1 = 2131165623;
 			
 			// aapt resource value: 0x7F0701B8
-			public const int tool1 = 2131165624;
+			public const int tooltip_frame_dark = 2131165624;
 			
 			// aapt resource value: 0x7F0701B9
-			public const int tooltip_frame_dark = 2131165625;
+			public const int tooltip_frame_light = 2131165625;
 			
 			// aapt resource value: 0x7F0701BA
-			public const int tooltip_frame_light = 2131165626;
+			public const int usuario = 2131165626;
 			
 			// aapt resource value: 0x7F0701BB
-			public const int usuario = 2131165627;
-			
-			// aapt resource value: 0x7F0701BC
-			public const int usuario2 = 2131165628;
+			public const int usuario2 = 2131165627;
 			
 			static Drawable()
 			{

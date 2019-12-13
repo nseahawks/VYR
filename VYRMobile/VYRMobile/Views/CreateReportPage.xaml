@@ -73,18 +73,14 @@
                              VerticalOptions="Start">
                     <combobox:SfComboBox x:Name="estatusComboBox" 
                                          Margin="4,0,8,0"
-                                         HeightRequest="45"
-                                         Text="{Binding ReportStatus}"
-                                         DataSource="{Binding Statuses}"
-                                         ItemsSource="{Binding ReportStatuses}"
-                                         DisplayMemberPath="Status">
-                        <combobox:SfComboBox.ItemTemplate>
-                            <DataTemplate>
-                                <StackLayout>
-                                    <Label Text="{Binding ReportStatus}"/>
-                                </StackLayout>
-                            </DataTemplate>
-                        </combobox:SfComboBox.ItemTemplate>
+                                         HeightRequest="45">
+                        <combobox:SfComboBox.ComboBoxSource>
+                            <ListCollection:List x:TypeArguments="x:String">
+                                <x:String>Abierto</x:String>
+                                <x:String>Cerrado</x:String>
+                                <x:String>Por asignar</x:String>
+                            </ListCollection:List>
+                        </combobox:SfComboBox.ComboBoxSource>
                     </combobox:SfComboBox>
                 </StackLayout>
                 <Label  Grid.Column="0"
@@ -99,9 +95,7 @@
                                 VerticalOptions="Start">
                     <combobox:SfComboBox x:Name="tipoComboBox" 
                                          Margin="4,0,8,0"
-                                         HeightRequest="45"
-                                         Text="{Binding ReportType}"
-                                         ItemsSource="{Binding ReportTypes}">
+                                         HeightRequest="45">
                         <combobox:SfComboBox.ComboBoxSource>
                             <ListCollection:List x:TypeArguments="x:String">
                                 <x:String>Asistencia</x:String>
