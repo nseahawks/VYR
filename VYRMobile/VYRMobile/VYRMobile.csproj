@@ -4,7 +4,7 @@
     <TargetFramework>netstandard2.1</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
     <ApplicationIcon />
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <StartupObject />
     <Win32Resource />
   </PropertyGroup>
