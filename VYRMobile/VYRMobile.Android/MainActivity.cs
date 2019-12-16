@@ -5,6 +5,7 @@ using Android.OS;
 using Xamarin;
 using Xamarin.Forms.GoogleMaps.Android;
 using Android.Content;
+using Plugin.LocalNotifications;
 
 namespace VYRMobile.Droid
 {
@@ -18,6 +19,8 @@ namespace VYRMobile.Droid
             base.OnCreate(savedInstanceState);
             //Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+
+            LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.seahawks;
 
             var platformConfig = new PlatformConfig
             {
@@ -42,6 +45,5 @@ namespace VYRMobile.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
         }
-        
     }
 }

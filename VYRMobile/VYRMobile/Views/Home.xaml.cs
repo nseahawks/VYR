@@ -1,4 +1,5 @@
-﻿using Plugin.Messaging;
+﻿using Plugin.LocalNotifications;
+using Plugin.Messaging;
 using System;
 using System.Threading.Tasks;
 using VYRMobile.ViewModels;
@@ -28,7 +29,7 @@ namespace VYRMobile
             BindingContext = new QRViewModel();*/
             QR.Clicked += QR_Clicked;
             ShowMapCommand = new Command(ShowMap);
-            //CallFrancisco.Clicked += CallFrancisco_clicked;
+            CallFrancisco.Clicked += CallFrancisco_clicked;
             //alert.Clicked += alert_clicked;  
         }
         //private void BtnStop_Clicked(object sender, EventArgs e)
@@ -111,20 +112,19 @@ namespace VYRMobile
                     DisplayAlert("Valor Obtenido", result.Text, "OK");
                     //seaCheckbox.IsChecked = true;
                 });
-                
-
             };
             
             await Navigation.PushModalAsync(scannerPage);
         }
 
         private void CallFrancisco_clicked(object sender, EventArgs e)
+        {
+            CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
+            /*var phoneCallTask = CrossMessaging.Current.PhoneDialer;
+            if (phoneCallTask.CanMakePhoneCall)
             {
-                var phoneCallTask = CrossMessaging.Current.PhoneDialer;
-                if (phoneCallTask.CanMakePhoneCall)
-                {
-                    phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
-                }
-            }
+                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
+            }*/
+        }
     }
 }

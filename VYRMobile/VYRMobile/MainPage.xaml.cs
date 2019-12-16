@@ -44,7 +44,7 @@ namespace VYRMobile
             //await splashImage.ScaleTo(1, 10);
             //await splashImage.ScaleTo(0.9, 50, Easing.Linear);
             await splashImage.ScaleTo(3.6, 2000, Easing.BounceOut);
-            Application.Current.MainPage = new NavigationPage(new Utensilios());
+            Application.Current.MainPage = new NavigationPage(new Login());
         }
        
         

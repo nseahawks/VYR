@@ -28,7 +28,7 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
 
     <ContentPage.Content>
         <Grid>
-        <ListView 
+        <ListView   IsPullToRefreshEnabled="True"
                     Grid.Row="0"
                     ItemsSource="{Binding Reports}"
                     SelectionMode="None"
