@@ -10,7 +10,7 @@
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              x:Class="VYRMobile.Views.Mapa2"
-
+             IsRouteRunning="{Binding HasRouteRunning}"
              CalculateCommand="{Binding CalculateRouteCommand}"
              UpdateCommand="{Binding UpdatePositionCommand}"
              GetActualLocationCommand="{Binding ActualLocationCommand}"
@@ -18,6 +18,7 @@
              OriginLocationlng ="{Binding _originLongitud}"
              DestinationLocationlat ="{Binding _destinationLatitud}"
              DestinationLocationlng ="{Binding _destinationLongitud}">
+
     
     <ContentPage.BindingContext>
         <vm:GoogleMapsViewModel/>
@@ -35,6 +36,15 @@
                         IsEnabled="True"
                         Visual="Material"/>
 
+        <Label VerticalOptions="Start"
+               HorizontalOptions="Center"
+               HeightRequest="40"
+               WidthRequest="150"
+               Text="{Binding AccelerometerData}"
+               FontSize="30"
+               TextColor="White"
+               IsVisible="True"></Label>
+        
         <!--<StackLayout Orientation="Horizontal"
                                  Grid.Row="4"
                                  Grid.Column="0"

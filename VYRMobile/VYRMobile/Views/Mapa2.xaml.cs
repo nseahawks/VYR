@@ -10,6 +10,7 @@ using Position = Xamarin.Forms.GoogleMaps.Position;
 using Xamarin.Essentials;
 using VYRMobile.ViewModels;
 using VYRMobile.Helper;
+using Location = Xamarin.Essentials.Location;
 
 namespace VYRMobile.Views
 {
@@ -18,8 +19,13 @@ namespace VYRMobile.Views
         SensorSpeed speed = SensorSpeed.Default;
         private double CData;
         private double TData;
+        private double RouteDistance;
+        LineHelper liner = new LineHelper();
         public static readonly BindableProperty CalculateCommandProperty =
            BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
+        
+        public static readonly BindableProperty IsRouteRunningProperty =
+           BindableProperty.Create(nameof(IsRouteRunning), typeof(bool), typeof(Mapa2), null, BindingMode.TwoWay);
 
         public static readonly BindableProperty GetActualLocationCommandProperty =
             BindableProperty.Create(nameof(GetActualLocationCommand), typeof(Command),
@@ -56,13 +62,13 @@ namespace VYRMobile.Views
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
             AddMapStyle();
-            
+
            
             CalculateCommand = new Command<List<Position>>(Calculate);
 
-            UpdateCommand = new Command<Position>(Update);
+            UpdateCommand = new Command<List<Position>>(Update);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
-
+            startRoute.IsEnabled = false;
             Pin seahawksPin = null;
             seahawksPin = new Pin()
             {
@@ -130,11 +136,11 @@ namespace VYRMobile.Views
                 else
                     Compass.Start(speed, applyLowPassFilter: true);
             }
-            catch (FeatureNotSupportedException fnsEx)
+            catch (FeatureNotSupportedException )
             {
                 // Feature not supported on device
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 // Some other exception has occurred
             }
@@ -149,11 +155,11 @@ namespace VYRMobile.Views
                 else
                     OrientationSensor.Start(speed);
             }
-            catch (FeatureNotSupportedException fnsEx)
+            catch (FeatureNotSupportedException )
             {
                 // Feature not supported on device
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 // Some other exception has occurred
             }
@@ -165,7 +171,12 @@ namespace VYRMobile.Views
             //DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
             DestinationLocationlat = e.Pin.Position.Latitude.ToString();
             DestinationLocationlng = e.Pin.Position.Longitude.ToString();
-            
+
+            if(DestinationLocationlat != null && DestinationLocationlng != null)
+            {
+                startRoute.IsEnabled = true;
+            }
+           
             //startRoute.IsEnabled = true
             // If you set e.Handled = true,
             // then Pin selection doesn't work automatically.
@@ -199,6 +210,12 @@ namespace VYRMobile.Views
         {
             get { return (string)GetValue(OriginLocationlatProperty); }
             set { SetValue(OriginLocationlatProperty, value); }
+        }
+        
+        public bool IsRouteRunning
+        {
+            get { return (bool)GetValue(IsRouteRunningProperty); }
+            set { SetValue(IsRouteRunningProperty, value); }
         }
 
       
@@ -259,18 +276,113 @@ namespace VYRMobile.Views
           
         }
 
-        private async void Update(Position position)
+        private async void Update(List<Position> list)
         {
-            if (map.Polylines != null && map.Polylines?.Count > 1)
+            //var k = 0;
+            if (map.Polylines == null && map.Polylines?.Count == 0)
                 return;
-
-            var cPin = map.Pins.FirstOrDefault();
-
-            if (cPin != null)
+              
+            //var cPin = map.Pins.FirstOrDefault();
+         
+            if (map.Polylines.Count >= 1 || list.Count == 0)
             {
                 GetActualLocationCommand.Execute(null);
+                //k = 0;
+                //while (list[k] != null && OriginLocationlat == list[k].Latitude.ToString() && OriginLocationlng == list[k].Longitude.ToString())
+                //{
+
+                //    k++;
+
+                //    if (k >= list.Count)
+                //    {
+                //        map.Polylines.Clear();
+                //        map.Polylines?.FirstOrDefault()?.Positions?.Clear();
+                //        IsRouteRunning = false;
+                //        return;
+                //    }
+                //}
+                //OriginLocationlat = list[k].Latitude.ToString();
+                //OriginLocationlng = list[k].Longitude.ToString();
+
+
+                var pin = new Pin()
+                {
+                    Type = PinType.Place,
+                    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
+                    Label = "First",
+                    Address = "First",
+                    Tag = string.Empty
+
+                };
+                map.Pins.Add(pin);
+                RouteDistance = 99999999999999999;
+                var RouteIndex = -1;
+                var minIntersection = new Location(0,0); 
+                for(var i = 0; i < list.Count - 1; i++)
+                {
+                   var intersection = liner.Intersection(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng),
+                   list[i].Latitude, list[i].Longitude,
+                   list[i+1].Latitude, list[i+1].Longitude);
+                   if (liner.OutOfBound(intersection, list[i].Latitude, list[i].Longitude,
+                   list[i + 1].Latitude, list[i + 1].Longitude))
+                   {
+                        if(
+                        liner.Distance(new Location(
+                            double.Parse(OriginLocationlat), 
+                            double.Parse(OriginLocationlng)),
+                            new Location(list[i].Latitude, 
+                            list[i].Longitude)) <
+                        liner.Distance(new Location(
+                            double.Parse(OriginLocationlat), 
+                            double.Parse(OriginLocationlng)),
+                            new Location(list[i+1].Latitude,
+                            list[i+1].Longitude))){
+                            intersection = new Location(list[i].Latitude, list[i].Longitude);
+                        }
+                        else
+                        {
+                            intersection = new Location(list[i + 1].Latitude, list[i + 1].Longitude);
+                        }
+                   }
+                    var distance = liner.Distance(new Location(
+                              double.Parse(OriginLocationlat),
+                              double.Parse(OriginLocationlng)),
+                              intersection);
+                   if ( distance <= 100 && distance <= RouteDistance)
+                   {
+                        RouteDistance = distance;
+                        RouteIndex = i;
+                        minIntersection = intersection;
+                   }
+
+                }
+                if(RouteIndex == -1)
+                {
+                    //recalcular
+                    map.Polylines.Clear();
+                    map.Polylines?.FirstOrDefault()?.Positions?.Clear();
+                    IsRouteRunning = false;
+                    return;
+                    DisplayAlert(":(", "Tu ruta se ha cancelado, presion 'Start Route' para inicar una nueva ruta.", "Ok");
+                }
+                else
+                {
+                    for(var i=0; i <= RouteIndex; i++)
+                    {
+                        var previousPosition = map?.Polylines?.FirstOrDefault()?.Positions?.FirstOrDefault();
+                        map?.Polylines?.FirstOrDefault()?.Positions?.Remove(previousPosition.Value);
+                        list.RemoveAt(0);
+                    }
+                    map?.Polylines?.FirstOrDefault()?.Positions?.Insert(0,
+                            new Position(
+                               double.Parse(minIntersection.Latitude.ToString()),
+                               double.Parse(minIntersection.Longitude.ToString())
+                               ));
+                    list.Insert(0,new Position( minIntersection.Latitude, minIntersection.Longitude));
+                }
                 //cPin.Position = new Position(position.Latitude, position.Longitude);
                 //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(position.Latitude, position.Longitude)));
+
                 await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
                     new Position(/*position.Latitude, position.Longitude*/
                         double.Parse(OriginLocationlat),
@@ -299,6 +411,8 @@ namespace VYRMobile.Views
                 //END TRIP
                 map.Polylines.Clear();
                 map.Polylines?.FirstOrDefault()?.Positions?.Clear();
+                IsRouteRunning = false;
+                return;
             }
         }
 
@@ -355,7 +469,7 @@ namespace VYRMobile.Views
             var stream = assembly.GetManifestResourceStream($"VYRMobile.MapStyle.json");
             string styleFile;
             using (var reader = new System.IO.StreamReader(stream))
-            {
+            {   
                 styleFile = reader.ReadToEnd();
             }
 

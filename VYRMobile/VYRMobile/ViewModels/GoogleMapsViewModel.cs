@@ -21,6 +21,8 @@ namespace VYRMobile.ViewModels
         public Command StopRouteCommand { get; set; }
         public Command ActualLocationCommand { get; set; }
 
+        public AccelerometerData AccelerometerData {get;}
+
         IGoogleMapsApiService googleMapsApi = new GoogleMapsApiService();
         private bool hasRouteRunning;
         public bool HasRouteRunning
@@ -145,11 +147,10 @@ namespace VYRMobile.ViewModels
                 //Location tracking simulation
                 Device.StartTimer(TimeSpan.FromSeconds(5), () =>
                 {
-                    if (positions.Count >= positionIndex && HasRouteRunning)
+                    if (HasRouteRunning)
                     {
                         
-                        UpdatePositionCommand.Execute(positions[positionIndex]);
-                        //positionIndex++;
+                        UpdatePositionCommand.Execute(positions);
                         return true;
                     }
                     else
