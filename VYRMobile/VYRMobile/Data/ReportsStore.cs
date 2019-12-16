@@ -8,6 +8,8 @@ using Microsoft.AspNetCore.Http;
 using VYRMobile.Helper;
 using VYRMobile.Models;
 using Xamarin.Essentials;
+using Xamarin.Forms;
+using VYRMobile.Services;
 
 namespace VYRMobile.Data
 {
@@ -53,7 +55,7 @@ namespace VYRMobile.Data
             string serializedData = JsonConvert.SerializeObject(responseReport);
             var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
             var response = await _client.PostAsync("/api/v1/reports", contentData);
-
+            DependencyService.Get<IToast>().LongToast(response.StatusCode.ToString());
             return response.IsSuccessStatusCode;
         }
 

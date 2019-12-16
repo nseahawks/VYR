@@ -20,32 +20,42 @@ namespace VYRMobile.Droid
     [Service]
     class TrackerService : Service
     {
+        SensorSpeed speed = SensorSpeed.Default;
         CancellationTokenSource _cts;
         HubConnection _hub;
+        private AccelerometerData data;
         string device;
-        bool isConnected { get; set; }
+        private bool isConnected;
+        public bool IsConnected 
+        {
+            get => isConnected; 
+            set => isConnected = value; 
+        }
       
         public async override void OnCreate()
         {
-            device = DeviceInfo.Model + ", "+ DeviceInfo.Name;
-
+            device = DeviceInfo.Name;
+            ToggleAccelerometer();
+            Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             _hub = new HubConnectionBuilder().WithUrl("https://vyr-x.azurewebsites.net/hubs/central").Build();
 
          
             _hub.Closed += async (error) =>
             {
-                isConnected = false;
+                IsConnected = false;
                 await Task.Delay(5000);
                 await  _hub.StartAsync();
             };
 
-            _hub.On<double,double, string>("DevicePosition", (Latitude, Longitude, Device) => {
-                var finalMessage = $"{Device} says {Latitude}, {Longitude}";
-                DependencyService.Get<IToast>().LongToast(finalMessage);
+            _hub.On<double, double, string>("DevicePosition", (Latitude, Longitude, Device) =>
+            {
+                var finalMessage = $"{Device} Location: {Latitude}, {Longitude}, Speed: {data}";
+                DependencyService.Get<IToast>().ShortToast(finalMessage);
             });
 
 
             await _hub.StartAsync();
+            IsConnected =  _hub.StartAsync().IsCompleted;
             base.OnCreate();
         }
         public override IBinder OnBind(Intent intent)
@@ -57,12 +67,13 @@ namespace VYRMobile.Droid
         {
             _cts = new CancellationTokenSource();
             PollLocation(_cts);
+
             //Task.Run(async () =>
             //{
             //    try
             //    {
             //        var location = await Geolocation.GetLastKnownLocationAsync();
-            //        if(location == null)
+            //        if (location == null)
             //        {
             //            var request = new GeolocationRequest(GeolocationAccuracy.Best);
             //            location = await Geolocation.GetLocationAsync(request);
@@ -75,10 +86,10 @@ namespace VYRMobile.Droid
             //    {
 
             //    }
-            
+
             //}, _cts.Token);
 
-       
+
 
 
             return StartCommandResult.Sticky;
@@ -101,8 +112,34 @@ namespace VYRMobile.Droid
                 }
                 catch (System.OperationCanceledException)
                 {
-
+                    return;
                 }
+            }
+        }
+
+        void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
+        {
+            data = e.Reading;
+            
+            // Process Acceleration X, Y, and Z
+        }
+
+        public void ToggleAccelerometer()
+        {
+            try
+            {
+                if (Accelerometer.IsMonitoring)
+                    Accelerometer.Stop();
+                else
+                    Accelerometer.Start(speed);
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature not supported on device
+            }
+            catch (Exception ex)
+            {
+                // Other error has occurred.
             }
         }
     }
