@@ -1,0 +1,112 @@
+[
+ {
+    "id": "4024b565-2b8d-42d3-bf1e-6cef0d8aaa29",
+    "locationName": "Los Tanquecitos- Boca Chica",
+    "cellId": "E6238",
+    "address": null,
+    "latitude": 18.462778,
+    "longitude": -69.625469,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "594b2462-1aa7-468b-a45d-6dd43d71e06f",
+    "locationName": "Mata San Juan Sto. Dgo.",
+    "cellId": "M1373",
+    "address": null,
+    "latitude": 18.5904,
+    "longitude": -69.9315,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "40a3a92a-b1e7-45d9-bf17-6e207b2d5617",
+    "locationName": "Plaza Lama (Isabel Aguiar)",
+    "cellId": "M1205",
+    "address": null,
+    "latitude": 18.47719,
+    "longitude": -69.97116,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "eb2635e0-fd37-43c3-8aac-6ea3bf1d6920",
+    "locationName": "Simon Bolivar",
+    "cellId": "M1074",
+    "address": null,
+    "latitude": 18.50746,
+    "longitude": -69.88736,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "a92cb170-32e6-4174-9806-6ec448728c30",
+    "locationName": "Puente Juan Carlos",
+    "cellId": "M1407",
+    "address": null,
+    "latitude": 18.47057,
+    "longitude": -69.8324,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "e8abe3e9-e119-4e61-8af4-714707239c5c",
+    "locationName": "CAC San Pedro de Macoris",
+    "cellId": "E6140",
+    "address": null,
+    "latitude": 18.453317,
+    "longitude": -69.310276,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "256448f9-ba14-4b48-8ac0-753d4e859e21",
+    "locationName": "Altos del KM 9",
+    "cellId": "M1138",
+    "address": null,
+    "latitude": 18.48248,
+    "longitude": -69.96715,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "5b2da0e2-302c-43ca-9296-75587924d6bc",
+    "locationName": "Marañon",
+    "cellId": "M1055",
+    "address": null,
+    "latitude": 18.54727,
+    "longitude": -69.88006,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "55d8ad5e-8cfc-41e0-ab67-76361202e738",
+    "locationName": "Semana Santa-San Cristobal",
+    "cellId": "S5115",
+    "address": null,
+    "latitude": 18.340878,
+    "longitude": -70.23446,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "af591fa2-f914-44c7-82b9-7738911b80c0",
+    "locationName": "Hainamosa",
+    "cellId": "M1028",
+    "address": null,
+    "latitude": 18.52607,
+    "longitude": -69.82321,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  }
+  ]

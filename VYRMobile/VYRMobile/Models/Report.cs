@@ -14,6 +14,7 @@ namespace VYRMobile.Models
             get => userId;
             set => SetProperty(ref userId, value);
         }
+
         string title;
         public string Title
         {
@@ -35,8 +36,8 @@ namespace VYRMobile.Models
             set => SetProperty(ref address, value); 
         }
 
-        string reportType;
-        public string ReportType
+        ReportTypes reportType;
+        public ReportTypes ReportType
         {
             get => reportType;
             set => SetProperty(ref reportType, value);
@@ -53,6 +54,20 @@ namespace VYRMobile.Models
             Daño = 4
         }
 
+        ReportStatuses status;
+        public ReportStatuses Status
+        {
+            get => status;
+            set => SetProperty(ref status, value);
+        }
+        public enum ReportStatuses
+        {
+            Default = 0,
+            Abierto = 1,
+            Cerrado = 2,
+            PorAsignar = 3
+        }
+
         string description;
         public string Description { 
             get => description; 
@@ -62,11 +77,6 @@ namespace VYRMobile.Models
         public Uri Img { 
             get => img;
             set => SetProperty(ref img, value); 
-        }
-        bool status;
-        public bool Status { 
-            get => status; 
-            set => SetProperty(ref status, value); 
         }
        DateTime created;
         public DateTime Created { 

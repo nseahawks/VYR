@@ -21,6 +21,7 @@ namespace VYRMobile.Views
         private double TData;
         private double RouteDistance;
         LineHelper liner = new LineHelper();
+
         public static readonly BindableProperty CalculateCommandProperty =
            BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
         
@@ -55,7 +56,6 @@ namespace VYRMobile.Views
             get { return (Command)GetValue(UpdateCommandProperty); }
             set { SetValue(UpdateCommandProperty, value); }
         }
-
 
         public Mapa2()
         {

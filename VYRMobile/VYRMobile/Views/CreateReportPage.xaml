@@ -73,14 +73,9 @@
                              VerticalOptions="Start">
                     <combobox:SfComboBox x:Name="estatusComboBox" 
                                          Margin="4,0,8,0"
-                                         HeightRequest="45">
-                        <combobox:SfComboBox.ComboBoxSource>
-                            <ListCollection:List x:TypeArguments="x:String">
-                                <x:String>Abierto</x:String>
-                                <x:String>Cerrado</x:String>
-                                <x:String>Por asignar</x:String>
-                            </ListCollection:List>
-                        </combobox:SfComboBox.ComboBoxSource>
+                                         HeightRequest="45"
+                                         DataSource="{Binding StatusCollection}"
+                                         SelectedValue="{Binding Status}">
                     </combobox:SfComboBox>
                 </StackLayout>
                 <Label  Grid.Column="0"
@@ -95,15 +90,9 @@
                                 VerticalOptions="Start">
                     <combobox:SfComboBox x:Name="tipoComboBox" 
                                          Margin="4,0,8,0"
-                                         HeightRequest="45">
-                        <combobox:SfComboBox.ComboBoxSource>
-                            <ListCollection:List x:TypeArguments="x:String">
-                                <x:String>Asistencia</x:String>
-                                <x:String>Alarma</x:String>
-                                <x:String>Daño</x:String>
-                                <x:String>Robo</x:String>
-                            </ListCollection:List>
-                        </combobox:SfComboBox.ComboBoxSource>
+                                         HeightRequest="45"
+                                         DataSource="{Binding TypeCollection}"
+                                         SelectedValue="{Binding ReportType}">
                     </combobox:SfComboBox>
                 </StackLayout>
             </Grid>

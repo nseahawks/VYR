@@ -18,14 +18,10 @@
              OriginLocationlng ="{Binding _originLongitud}"
              DestinationLocationlat ="{Binding _destinationLatitud}"
              DestinationLocationlng ="{Binding _destinationLongitud}">
-
-    
     <ContentPage.BindingContext>
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
-    
     <Grid>
-
         <maps:Map    x:Name="map" 
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
@@ -35,7 +31,6 @@
                         IsIndoorEnabled="True"
                         IsEnabled="True"
                         Visual="Material"/>
-
         <Label VerticalOptions="Start"
                HorizontalOptions="Center"
                HeightRequest="40"
@@ -44,7 +39,6 @@
                FontSize="30"
                TextColor="White"
                IsVisible="True"></Label>
-        
         <!--<StackLayout Orientation="Horizontal"
                                  Grid.Row="4"
                                  Grid.Column="0"
@@ -56,7 +50,6 @@
             <Label Text="Handle Pin Clicked"
                                VerticalOptions="Center" />
         </StackLayout>-->
-
         <Button      x:Name="startRoute"
                         Command="{Binding LoadRouteCommand}"
                         Text="START ROUTE"
@@ -69,9 +62,7 @@
                         VerticalOptions="End"
                         CornerRadius="2"
                         Margin="0, 0, 0, 10"
-                        HorizontalOptions="Center"
-                        />
-
+                        HorizontalOptions="Center"/>
         <Button      x:Name="stopRoute"
                          Command="{Binding StopRouteCommand}"
                          Text="STOP ROUTE"
@@ -84,6 +75,5 @@
                          CornerRadius="2"
                          Margin="0, 0, 0, 10"
                          HorizontalOptions="Center"/>
-            
     </Grid>
 </ContentPage>
