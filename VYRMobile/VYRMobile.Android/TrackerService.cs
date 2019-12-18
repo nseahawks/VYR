@@ -26,12 +26,12 @@ namespace VYRMobile.Droid
         private AccelerometerData data;
         string device;
         private bool isConnected;
-        public bool IsConnected 
+        public bool IsConnected
         {
-            get => isConnected; 
-            set => isConnected = value; 
+            get => isConnected;
+            set => isConnected = value;
         }
-      
+
         public async override void OnCreate()
         {
             device = DeviceInfo.Name;
@@ -39,12 +39,12 @@ namespace VYRMobile.Droid
             Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             _hub = new HubConnectionBuilder().WithUrl("https://vyr-x.azurewebsites.net/hubs/central").Build();
 
-         
+
             _hub.Closed += async (error) =>
             {
                 IsConnected = false;
                 await Task.Delay(5000);
-                await  _hub.StartAsync();
+                await _hub.StartAsync();
             };
 
             _hub.On<double, double, string>("DevicePosition", (Latitude, Longitude, Device) =>
@@ -55,7 +55,7 @@ namespace VYRMobile.Droid
 
 
             await _hub.StartAsync();
-            IsConnected =  _hub.StartAsync().IsCompleted;
+            IsConnected = _hub.StartAsync().IsCompleted;
             base.OnCreate();
         }
         public override IBinder OnBind(Intent intent)
@@ -63,7 +63,7 @@ namespace VYRMobile.Droid
             return null;
         }
 
-        public override StartCommandResult OnStartCommand (Intent intent, StartCommandFlags flags, int starId)
+        public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int starId)
         {
             _cts = new CancellationTokenSource();
             PollLocation(_cts);
@@ -120,7 +120,7 @@ namespace VYRMobile.Droid
         void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
         {
             data = e.Reading;
-            
+
             // Process Acceleration X, Y, and Z
         }
 

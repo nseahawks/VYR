@@ -20,8 +20,27 @@ namespace VYRMobile.ViewModels
         public Command LoadRouteCommand { get; set; }
         public Command StopRouteCommand { get; set; }
         public Command ActualLocationCommand { get; set; }
-
-        public AccelerometerData AccelerometerData {get;}
+        SensorSpeed speed = SensorSpeed.Default;
+        private string accelerometerData;
+        public string AccelerometerData
+        {
+            get
+            {
+                return accelerometerData;
+            }
+            set
+            {
+                if (Accelerometer.IsMonitoring)
+                {
+                    if (value != null)
+                    {
+                        accelerometerData = value;
+                        OnPropertyChanged("AccelerometerData");
+                    }
+                }
+                
+            }
+        }
 
         IGoogleMapsApiService googleMapsApi = new GoogleMapsApiService();
         private bool hasRouteRunning;
@@ -119,6 +138,8 @@ namespace VYRMobile.ViewModels
         public GoogleMapsViewModel()
         {
             //CalculateRouteCommand = new Command(async () => await Calculate());
+            ToggleAccelerometer();
+            Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             LoadRouteCommand = new Command(async () => await LoadRoute());
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
@@ -253,6 +274,36 @@ namespace VYRMobile.ViewModels
             catch (Exception ex)
             {
                 Debug.WriteLine(ex.ToString());
+            }
+        }
+
+        void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
+        {
+            var dataX = e.Reading.Acceleration.X.ToString();
+            var dataY = e.Reading.Acceleration.Y.ToString();
+            var dataZ = e.Reading.Acceleration.Z.ToString();
+
+            AccelerometerData = $"{dataX}, {dataY}, {dataZ}";
+
+            // Process Acceleration X, Y, and Z
+        }
+
+        public void ToggleAccelerometer()
+        {
+            try
+            {
+                if (Accelerometer.IsMonitoring)
+                    Accelerometer.Stop();
+                else
+                    Accelerometer.Start(speed);
+            }
+            catch (FeatureNotSupportedException fnsEx)
+            {
+                // Feature not supported on device
+            }
+            catch (Exception ex)
+            {
+                // Other error has occurred.
             }
         }
 

@@ -37,11 +37,10 @@
                         Visual="Material"/>
 
         <Label VerticalOptions="Start"
-               HorizontalOptions="Center"
+               HorizontalOptions="FillAndExpand"
                HeightRequest="40"
-               WidthRequest="150"
                Text="{Binding AccelerometerData}"
-               FontSize="30"
+               FontSize="12"
                TextColor="White"
                IsVisible="True"></Label>
         
