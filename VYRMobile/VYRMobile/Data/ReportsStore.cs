@@ -43,8 +43,8 @@ namespace VYRMobile.Data
 
             var responseReport = new Report()
             {
-                UserId = "34f767eb-c1a0-472d-84b5-8d166df6089",
                 Title = report.Title,
+                ReportType = report.ReportType,
                 Created = DateTime.UtcNow,
                 Description = report.Description,
                 Address = "",
@@ -82,6 +82,8 @@ namespace VYRMobile.Data
 
             return null;
         }
+
+        public async Task
 
         public Task<bool> UpdateReportAsync(Report report)
         {

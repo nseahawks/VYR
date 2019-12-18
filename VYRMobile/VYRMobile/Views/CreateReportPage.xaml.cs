@@ -1,5 +1,7 @@
 ﻿using Plugin.Media;
 using System;
+using System.Collections.ObjectModel;
+using VYRMobile.Models;
 using VYRMobile.ViewModels;
 using Xamarin.Forms;
 
@@ -11,6 +13,7 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
             btnAttach.Clicked += BtnAttach_clicked;
+            BindingContext = new ReportViewModel();
             //btnEnviar.Clicked += BtnEnviar_Clicked;
             
         }
@@ -19,7 +22,7 @@ namespace VYRMobile.Views
         //{
         //    Navigation.PopAsync();
         //}
-
+       
         private async void BtnAttach_clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();

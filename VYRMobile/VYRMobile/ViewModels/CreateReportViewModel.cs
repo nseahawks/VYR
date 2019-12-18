@@ -60,7 +60,7 @@ namespace VYRMobile.ViewModels
         {
             CReport =  new Report();
             _store = new ReportsStore();
-            CreateReportCommand = new Command(async () => await CreateReport());
+            //CreateReportCommand = new Command(async () => await CreateReport());
             //AttachCommand = new Command(Attach);
 
 

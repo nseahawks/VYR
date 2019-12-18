@@ -60,7 +60,7 @@ namespace VYRMobile
             base.OnAppearing();
 
         }
-        ..............
+        
 
         protected override void OnDisappearing()
         {
