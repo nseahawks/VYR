@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Microsoft.AspNetCore.SignalR.Client;
+using Plugin.CloudFirestore;
+using Plugin.CloudFirestore.Extensions;
 using VYRMobile.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -22,7 +18,6 @@ namespace VYRMobile.Droid
     {
         SensorSpeed speed = SensorSpeed.Default;
         CancellationTokenSource _cts;
-        HubConnection _hub;
         private AccelerometerData data;
         string device;
         private bool isConnected;
@@ -37,25 +32,33 @@ namespace VYRMobile.Droid
             device = DeviceInfo.Name;
             ToggleAccelerometer();
             Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
-            _hub = new HubConnectionBuilder().WithUrl("https://vyr-x.azurewebsites.net/hubs/central").Build();
 
+            var document = CrossCloudFirestore.Current.Instance
+                 .GetCollection("devices");
+                 //.GetDocument("myDevice");
+                 //.AsObservable().Subscribe(document =>
+                 //{
 
-            _hub.Closed += async (error) =>
-            {
-                IsConnected = false;
-                await Task.Delay(5000);
-                await _hub.StartAsync();
-            };
+                 //});
 
-            _hub.On<double, double, string>("DevicePosition", (Latitude, Longitude, Device) =>
-            {
-                var finalMessage = $"{Device} Location: {Latitude}, {Longitude}, Speed: {data}";
-                DependencyService.Get<IToast>().ShortToast(finalMessage);
-            });
+            //CrossCloudFirestore.Current.Instance
+            //    .GetCollection("devices")
+                document.ObserveModified()
+                .Subscribe(documentChange =>
+                {
+                    var document = documentChange.Document;
+                    var message = $"{document.Data["Latitude"].ToString()}, {document.Data["Longitude"].ToString()}";
+                    //DependencyService.Get<IToast>().ShortToast(message);
+                });
+            
+            document.ObserveAdded()
+                .Subscribe(documentChange =>
+                {
+                    var document = documentChange.Document;
+                    var message = $"{document.Data.ToString()}";
+                    //DependencyService.Get<IToast>().ShortToast(message);
+                });
 
-
-            await _hub.StartAsync();
-            IsConnected = _hub.StartAsync().IsCompleted;
             base.OnCreate();
         }
         public override IBinder OnBind(Intent intent)
@@ -101,14 +104,29 @@ namespace VYRMobile.Droid
             {
                 try
                 {
-                    var location = await Geolocation.GetLastKnownLocationAsync();
+
+                    var request = new GeolocationRequest(GeolocationAccuracy.High, TimeSpan.FromMilliseconds(1000));
+                    var location = await Geolocation.GetLocationAsync(request);
+
                     if (location == null)
                     {
-                        var request = new GeolocationRequest(GeolocationAccuracy.Best);
-                        location = await Geolocation.GetLocationAsync(request);
+                        location = await Geolocation.GetLastKnownLocationAsync();
                     }
-                    await _hub.InvokeAsync("SendLocationAsync", location.Latitude, location.Longitude, device);
-                    await Task.Delay(TimeSpan.FromSeconds(5));
+
+                    var reference = CrossCloudFirestore.Current
+                        .Instance
+                        .GetCollection("devices")
+                        .GetDocument("myDevice");
+
+                    await CrossCloudFirestore.Current
+                        .Instance.RunTransactionAsync((transaction) =>
+                        {
+                            var document = transaction.GetDocument(reference);
+
+                            transaction.UpdateData(reference, location);
+                        });
+                        
+                    await Task.Delay(TimeSpan.FromSeconds(15));
                 }
                 catch (System.OperationCanceledException)
                 {

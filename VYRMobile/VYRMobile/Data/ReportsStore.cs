@@ -83,9 +83,9 @@ namespace VYRMobile.Data
             return null;
         }
 
-        public async Task
+        
 
-        public Task<bool> UpdateReportAsync(Report report)
+        public async Task<bool> UpdateReportAsync(Report report)
         {
             throw new System.NotImplementedException();
         }

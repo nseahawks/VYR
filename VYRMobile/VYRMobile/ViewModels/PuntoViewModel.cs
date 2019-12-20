@@ -121,7 +121,7 @@ namespace VYRMobile.ViewModels
         {
             await App.Current.MainPage.DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             StartStopwatch();
-            MapCommand.Execute(null);
+            //MapCommand.Execute(null);
         }
         /*private void showMap()
         {

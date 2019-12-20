@@ -56,13 +56,12 @@ namespace VYRMobile.Views
             get { return (Command)GetValue(UpdateCommandProperty); }
             set { SetValue(UpdateCommandProperty, value); }
         }
-
+        
         public Mapa2()
         {
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
             AddMapStyle();
-
            
             CalculateCommand = new Command<List<Position>>(Calculate);
 
@@ -79,6 +78,15 @@ namespace VYRMobile.Views
                 Tag = "id_seahawks",
             };
             map.Pins.Add(seahawksPin);
+             Pin seahasPin = new Pin()
+            {
+                Type = PinType.SavedPin,
+                Label = "Negocios Seahawks",
+                Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
+                Position = new Position(18.486711, -69.882563),
+                Tag = "id_seahawks",
+            };
+            map.Pins.Add(seahasPin);
 
             
             Compass.ReadingChanged += Compass_ReadingChanged;
@@ -281,9 +289,8 @@ namespace VYRMobile.Views
             //var k = 0;
             if (map.Polylines == null && map.Polylines?.Count == 0)
                 return;
-              
+
             //var cPin = map.Pins.FirstOrDefault();
-         
             if (map.Polylines.Count >= 1 || list.Count == 0)
             {
                 GetActualLocationCommand.Execute(null);
@@ -305,16 +312,16 @@ namespace VYRMobile.Views
                 //OriginLocationlng = list[k].Longitude.ToString();
 
 
-                var pin = new Pin()
-                {
-                    Type = PinType.Place,
-                    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
-                    Label = "First",
-                    Address = "First",
-                    Tag = string.Empty
+                //var pin = new Pin()
+                //{
+                //    Type = PinType.Place,
+                //    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
+                //    Label = "First",
+                //    Address = "First",
+                //    Tag = string.Empty
 
-                };
-                map.Pins.Add(pin);
+                //};
+                //map.Pins.Add(pin);
                 RouteDistance = 99999999999999999;
                 var RouteIndex = -1;
                 var minIntersection = new Location(0,0); 
@@ -362,8 +369,11 @@ namespace VYRMobile.Views
                     map.Polylines.Clear();
                     map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                     IsRouteRunning = false;
+                    
+                    //await DisplayAlert("...", "Recalculando ruta, por favor espere","");
+                    startRoute.Command.Execute(null);
+
                     return;
-                    DisplayAlert(":(", "Tu ruta se ha cancelado, presion 'Start Route' para inicar una nueva ruta.", "Ok");
                 }
                 else
                 {
@@ -387,7 +397,7 @@ namespace VYRMobile.Views
                     new Position(/*position.Latitude, position.Longitude*/
                         double.Parse(OriginLocationlat),
                       double.Parse(OriginLocationlng)
-                ),18d,CData,TData
+                ),18d, CData, TData
 
                     ))) ;
                 //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
@@ -409,6 +419,7 @@ namespace VYRMobile.Views
             else
             {
                 //END TRIP
+                
                 map.Polylines.Clear();
                 map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                 IsRouteRunning = false;
@@ -419,7 +430,6 @@ namespace VYRMobile.Views
         async void Calculate(List<Position> list)
         {
             //searchLayout.IsVisible = false;
-            
             map.Polylines.Clear();
             var polyline = new Polyline() {
                 StrokeWidth = 12,

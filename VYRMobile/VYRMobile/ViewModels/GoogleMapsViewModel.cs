@@ -166,7 +166,7 @@ namespace VYRMobile.ViewModels
                 HasRouteRunning = true;
 
                 //Location tracking simulation
-                Device.StartTimer(TimeSpan.FromSeconds(5), () =>
+                Device.StartTimer(TimeSpan.FromSeconds(15), () =>
                 {
                     if (HasRouteRunning)
                     {
@@ -176,14 +176,14 @@ namespace VYRMobile.ViewModels
                     }
                     else
                     {
-                        App.Current.MainPage.DisplayAlert(":)", "Has llegado a tu destino.", "Ok");
-                        //if (positions.Count <= positionIndex && !HasRouteRunning)
-                        //{
-                        //}
-                        //else
-                        //{
-                        //    App.Current.MainPage.DisplayAlert(":(", "Tu ruta se ha cancelado, presion 'Start Route' para inicar una nueva ruta.", "Ok");
-                        //}
+                        //App.Current.MainPage.DisplayAlert(":)", "Has llegado a tu destino.", "Ok");
+                        ////if (positions.Count <= positionIndex && !HasRouteRunning)
+                        ////{
+                        ////}
+                        ////else
+                        ////{
+                        ////    App.Current.MainPage.DisplayAlert(":(", "Tu ruta se ha cancelado, presion 'Start Route' para inicar una nueva ruta.", "Ok");
+                        ////}
                            
                         return false;
                     }
