@@ -446,6 +446,8 @@ namespace VYRMobile.Views
                 map.Polylines.Clear();
                 map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                 IsRouteRunning = false;
+
+                startRoute.Command.Execute(null);
                 return;
             }
         }
