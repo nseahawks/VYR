@@ -5,6 +5,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Push;
+using Plugin.CloudFirestore;
+using Plugin.LocalNotifications;
 
 namespace VYRMobile
 {
@@ -24,6 +26,17 @@ namespace VYRMobile
         protected override void OnStart()
         {
             AppCenter.Start("bff38954-6dd9-4a23-a41a-13430c73bfd8", typeof(Push));
+            CrossCloudFirestore.Current.Instance.GetCollection("alarms")
+                          .GetDocument("myDevice")
+                          .AddSnapshotListener((snapshot, error) =>
+                          {
+                              if (IsUserLoggedIn)
+                              {
+                                  CrossLocalNotifications.Current.Show("ALERTA", "NSEAHAWKS");
+                                  Application.Current.MainPage.DisplayAlert("ALERTA", "NSEAHAWKS", "ACEPTAR");
+                              }
+                              
+                           });
         }
 
         protected override void OnSleep()

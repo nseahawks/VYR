@@ -1,7 +1,10 @@
-﻿using Plugin.LocalNotifications;
+﻿using Plugin.CloudFirestore;
+using Plugin.CloudFirestore.Extensions;
+using Plugin.LocalNotifications;
 using Plugin.Messaging;
 using System;
 using System.Threading.Tasks;
+using VYRMobile.Services;
 using VYRMobile.ViewModels;
 using VYRMobile.Views;
 using Xamarin.Forms;
@@ -32,6 +35,8 @@ namespace VYRMobile
             CallFrancisco.Clicked += CallFrancisco_clicked;
             //alert.Clicked += alert_clicked;  
         }
+
+
         //private void BtnStop_Clicked(object sender, EventArgs e)
         //{
         //    btnStop.IsVisible = false;
@@ -44,29 +49,68 @@ namespace VYRMobile
         //    btnStop.IsVisible = true;
         //}
 
-        /*private async void alert_clicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
-            showMap();
-        }
+        //private async void alert_clicked(object sender, EventArgs e)
+        //{
+        //    await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
+        //    showMap();
+        //}
 
-        private void showMap()
-        {
-            Navigation.PushModalAsync(new Mapa2());
-        }
+        //private void showMap()
+        //{
+        //    Navigation.PushModalAsync(new Mapa2());
+        //}
 
         protected override void OnAppearing()
         {
+
+            //var document = CrossCloudFirestore.Current.Instance
+            //   .GetCollection("alarms");
+
+
+            //CrossCloudFirestore.Current.Instance.GetCollection("alarms")
+            //               .GetDocument("myDevice")
+            //               .AddSnapshotListener((snapshot, error) =>
+            //               {
+            //                   var document = snapshot.Data.Keys;
+            //                   CallFrancisco.Command.Execute(null);
+            //                   //DisplayAlert("Alerta", $"{document}", "ACEPTAR");
+            //               });
+            //document.ObserveModified()
+            //.Subscribe(documentChange =>
+            //{
+            //    CallFrancisco.Command.Execute(null);
+            //    //CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
+            //});
+            //var i = 0;
+            //document.ObserveAdded()
+            //    .Subscribe(documentChange =>
+            //    {
+            //        if(i != 0)
+            //        {
+            //            //CallFrancisco.Command.Execute(null);
+            //            //var documentX = documentChange;
+            //            //CallFrancisco.Command.Execute(null);
+            //            DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
+            //            //DependencyService.Get<IToast>().ShortToast("Observed");
+            //        }
+            //        else
+            //        {
+            //            i++;
+            //        }
+
+
+            //    });
+
             base.OnAppearing();
 
         }
-        
+
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
 
-        }*/
+        }
         /*protected override void OnAppearing()
         {
             base.OnAppearing();
