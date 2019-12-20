@@ -7,13 +7,23 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile
 {
-
-
     public partial class Login : ContentPage
     {
         public static readonly BindableProperty TryLoginCommandProperty =
            BindableProperty.Create(nameof(TryLoginCommand), typeof(Command),
                typeof(Mapa2), null, BindingMode.TwoWay);
+
+        private bool rememberMe = false;
+        public bool RememberMe
+        {
+            get => rememberMe;
+
+            set
+            {
+                rememberMe = value;
+                OnPropertyChanged(nameof(RememberMe));
+            }
+        }
 
         public Login()
         {

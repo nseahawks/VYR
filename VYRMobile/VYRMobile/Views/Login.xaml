@@ -73,6 +73,27 @@
                        WidthRequest="300"
                        VerticalOptions="Start" 
                        HorizontalOptions="Center"/>
+                <Grid Grid.Row="6"
+                      HorizontalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="25"/>
+                        <ColumnDefinition Width="75"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Grid.Column="1"
+                           WidthRequest="75"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Start"
+                           Text="Recordarme"
+                           FontSize="12"
+                           FontFamily="{StaticResource PoppinsMedium}"
+                           TextColor="{StaticResource BaseColor}"/>
+                    <CheckBox Grid.Column="0"
+                              HorizontalOptions="End"
+                              VerticalOptions="Center"
+                              Color="{StaticResource BaseColor}" 
+                              IsChecked="{Binding RememberMe}"
+                              WidthRequest="25"/>
+                </Grid>
             </StackLayout>
         </Grid>
     </ContentPage.Content>
