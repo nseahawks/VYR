@@ -72,6 +72,12 @@
                              Grid.Column="1"
                              VerticalOptions="Start">
                     <combobox:SfComboBox x:Name="estatusComboBox" 
+                                         IsEditableMode="true"
+                                         AllowFiltering="true"
+                                         TextHighlightMode="MultipleOccurrence"
+                                         SelectedItem="AntennaSelected"
+                                         SuggestionMode="Contains"
+                                         HighlightedTextColor="{StaticResource BaseColor}"
                                          Margin="4,0,8,0"
                                          HeightRequest="45"
                                          DataSource="{Binding StatusCollection}"

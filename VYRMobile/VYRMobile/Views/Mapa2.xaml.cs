@@ -11,6 +11,8 @@ using Xamarin.Essentials;
 using VYRMobile.ViewModels;
 using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
+using VYRMobile.Data;
+using VYRMobile.Models;
 
 namespace VYRMobile.Views
 {
@@ -62,6 +64,8 @@ namespace VYRMobile.Views
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
             AddMapStyle();
+            AddLocations();
+            comboBox.SelectionChanged += AntennaSelected;
 
            
             CalculateCommand = new Command<List<Position>>(Calculate);
@@ -99,6 +103,38 @@ namespace VYRMobile.Views
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(18.461294, -69.948531), Distance.FromMeters(5000)));
         }
 
+        private async void AddLocations()
+        {
+            var antennas = await ReportsStore.Instance.GetAntenasAsync();
+
+            foreach (var antenna in antennas)
+            {
+                Pin antennaPin = new Pin
+                {
+                    Type = PinType.SavedPin,
+                    Label = antenna.LocationName,
+                    Address = antenna.Address,
+                    Position = new Position(antenna.Latitude, antenna.Longitude),
+                    Tag = antenna.Id
+                };
+
+                map.Pins.Add(antennaPin);
+            }
+        }
+
+        private void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
+        {
+            var ind = comboBox.SelectedIndex;
+            var pin = map.Pins.ElementAt<Pin>(ind);
+
+            DestinationLocationlat = pin.Position.Latitude.ToString();
+            DestinationLocationlng = pin.Position.Longitude.ToString();
+
+            map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition
+                (new Position(pin.Position.Latitude, pin.Position.Longitude),12d,0,0)));
+            startRoute.IsEnabled = true;
+
+        }
         private void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
         {
             var data = e.Reading;
@@ -115,9 +151,7 @@ namespace VYRMobile.Views
             {
                 TData = angle;
             }
-          
         }
-
 
         void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
         {
@@ -421,7 +455,7 @@ namespace VYRMobile.Views
             //searchLayout.IsVisible = false;
             
             map.Polylines.Clear();
-            var polyline = new Polyline() {
+            var polyline = new Xamarin.Forms.GoogleMaps.Polyline() {
                 StrokeWidth = 12,
                 StrokeColor = Color.Orange
             };

@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:vm="clr-namespace:VYRMobile.ViewModels"
@@ -22,7 +24,7 @@
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
     <Grid>
-        <maps:Map    x:Name="map" 
+        <maps:Map       x:Name="map" 
                         VerticalOptions="FillAndExpand"
                         HorizontalOptions="FillAndExpand"
                         HasScrollEnabled="True"
@@ -31,7 +33,20 @@
                         IsIndoorEnabled="True"
                         IsEnabled="True"
                         Visual="Material"/>
-        <Label VerticalOptions="Start"
+        <combobox:SfComboBox     x:Name="comboBox"
+                                 Margin="0, 15,0,0"
+                                 BackgroundColor="White"
+                                 DataSource="{Binding Antennas}"
+                                 HeightRequest="50"
+                                 WidthRequest="200"
+                                 DisplayMemberPath="LocationName"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Center"
+                                 Text="Antenas"
+                                 SelectionChanged="AntennaSelected"
+                                 MaximumDropDownHeight="200">
+        </combobox:SfComboBox>
+        <!--<Label VerticalOptions="Start"
                HorizontalOptions="Center"
                HeightRequest="40"
                WidthRequest="150"
@@ -39,7 +54,7 @@
                FontSize="30"
                TextColor="White"
                IsVisible="True"></Label>
-        <!--<StackLayout Orientation="Horizontal"
+        <StackLayout Orientation="Horizontal"
                                  Grid.Row="4"
                                  Grid.Column="0"
                                  Grid.ColumnSpan="2">
@@ -50,7 +65,7 @@
             <Label Text="Handle Pin Clicked"
                                VerticalOptions="Center" />
         </StackLayout>-->
-        <Button      x:Name="startRoute"
+        <Button         x:Name="startRoute"
                         Command="{Binding LoadRouteCommand}"
                         Text="START ROUTE"
                         IsVisible="{Binding IsRouteNotRunning}"
@@ -63,7 +78,7 @@
                         CornerRadius="2"
                         Margin="0, 0, 0, 10"
                         HorizontalOptions="Center"/>
-        <Button      x:Name="stopRoute"
+        <Button         x:Name="stopRoute"
                          Command="{Binding StopRouteCommand}"
                          Text="STOP ROUTE"
                          IsVisible="{Binding HasRouteRunning}"

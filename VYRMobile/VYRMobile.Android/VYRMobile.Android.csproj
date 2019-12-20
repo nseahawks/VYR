@@ -38,6 +38,8 @@
     <BundleAssemblies>false</BundleAssemblies>
     <MandroidI18n />
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <AndroidLinkSkip>
+    </AndroidLinkSkip>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>

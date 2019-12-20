@@ -10,6 +10,8 @@ using VYRMobile.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using VYRMobile.Services;
+using System.Reflection;
+using System.IO;
 
 namespace VYRMobile.Data
 {
@@ -83,7 +85,26 @@ namespace VYRMobile.Data
             return null;
         }
 
-        public async Task
+        public async Task<IEnumerable<Antena>> GetAntenasAsync(bool forceRefresh = false)
+        {
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                List<Antena> antennas = new List<Antena>();
+                var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+                Stream stream = assembly.GetManifestResourceStream($"VYRMobile.antenas.json");
+                
+                using (var reader = new StreamReader(stream))
+                {
+                    var json = reader.ReadToEnd();
+                    antennas =JsonConvert.DeserializeObject<List<Antena>>(json);
+                }
+                
+                /*var resource = ("VYRMobile.Antena.antena.json");
+                antennas = JsonConvert.DeserializeObject<List<Antena>>(resource);*/
+                return antennas;
+            }
+            return null;
+        }
 
         public Task<bool> UpdateReportAsync(Report report)
         {

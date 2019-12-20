@@ -29,8 +29,8 @@ namespace VYRMobile.Droid
 
             FormsMaps.Init(this, savedInstanceState);
 
-            Intent intent = new Intent(this, typeof(TrackerService));
-            StartService(intent);
+            //Intent intent = new Intent(this, typeof(TrackerService));
+            //StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
