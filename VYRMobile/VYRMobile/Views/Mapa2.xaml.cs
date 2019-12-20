@@ -11,6 +11,8 @@ using Xamarin.Essentials;
 using VYRMobile.ViewModels;
 using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
+using VYRMobile.Data;
+using VYRMobile.Models;
 
 namespace VYRMobile.Views
 {
@@ -56,12 +58,15 @@ namespace VYRMobile.Views
             get { return (Command)GetValue(UpdateCommandProperty); }
             set { SetValue(UpdateCommandProperty, value); }
         }
-        
+
         public Mapa2()
         {
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
             AddMapStyle();
+            AddLocations();
+            comboBox.SelectionChanged += AntennaSelected;
+
            
             CalculateCommand = new Command<List<Position>>(Calculate);
 
@@ -78,15 +83,6 @@ namespace VYRMobile.Views
                 Tag = "id_seahawks",
             };
             map.Pins.Add(seahawksPin);
-             Pin seahasPin = new Pin()
-            {
-                Type = PinType.SavedPin,
-                Label = "Negocios Seahawks",
-                Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
-                Position = new Position(18.486711, -69.882563),
-                Tag = "id_seahawks",
-            };
-            map.Pins.Add(seahasPin);
 
             
             Compass.ReadingChanged += Compass_ReadingChanged;
@@ -107,6 +103,38 @@ namespace VYRMobile.Views
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(18.461294, -69.948531), Distance.FromMeters(5000)));
         }
 
+        private async void AddLocations()
+        {
+            var antennas = await ReportsStore.Instance.GetAntenasAsync();
+
+            foreach (var antenna in antennas)
+            {
+                Pin antennaPin = new Pin
+                {
+                    Type = PinType.SavedPin,
+                    Label = antenna.LocationName,
+                    Address = antenna.Address,
+                    Position = new Position(antenna.Latitude, antenna.Longitude),
+                    Tag = antenna.Id
+                };
+
+                map.Pins.Add(antennaPin);
+            }
+        }
+
+        private void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
+        {
+            var ind = comboBox.SelectedIndex;
+            var pin = map.Pins.ElementAt<Pin>(ind);
+
+            DestinationLocationlat = pin.Position.Latitude.ToString();
+            DestinationLocationlng = pin.Position.Longitude.ToString();
+
+            map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition
+                (new Position(pin.Position.Latitude, pin.Position.Longitude),12d,0,0)));
+            startRoute.IsEnabled = true;
+
+        }
         private void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
         {
             var data = e.Reading;
@@ -123,9 +151,7 @@ namespace VYRMobile.Views
             {
                 TData = angle;
             }
-          
         }
-
 
         void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
         {
@@ -289,8 +315,9 @@ namespace VYRMobile.Views
             //var k = 0;
             if (map.Polylines == null && map.Polylines?.Count == 0)
                 return;
-
+              
             //var cPin = map.Pins.FirstOrDefault();
+         
             if (map.Polylines.Count >= 1 || list.Count == 0)
             {
                 GetActualLocationCommand.Execute(null);
@@ -312,16 +339,16 @@ namespace VYRMobile.Views
                 //OriginLocationlng = list[k].Longitude.ToString();
 
 
-                //var pin = new Pin()
-                //{
-                //    Type = PinType.Place,
-                //    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
-                //    Label = "First",
-                //    Address = "First",
-                //    Tag = string.Empty
+                var pin = new Pin()
+                {
+                    Type = PinType.Place,
+                    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
+                    Label = "First",
+                    Address = "First",
+                    Tag = string.Empty
 
-                //};
-                //map.Pins.Add(pin);
+                };
+                map.Pins.Add(pin);
                 RouteDistance = 99999999999999999;
                 var RouteIndex = -1;
                 var minIntersection = new Location(0,0); 
@@ -369,11 +396,8 @@ namespace VYRMobile.Views
                     map.Polylines.Clear();
                     map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                     IsRouteRunning = false;
-                    
-                    //await DisplayAlert("...", "Recalculando ruta, por favor espere","");
-                    startRoute.Command.Execute(null);
-
                     return;
+                    DisplayAlert(":(", "Tu ruta se ha cancelado, presion 'Start Route' para inicar una nueva ruta.", "Ok");
                 }
                 else
                 {
@@ -397,7 +421,7 @@ namespace VYRMobile.Views
                     new Position(/*position.Latitude, position.Longitude*/
                         double.Parse(OriginLocationlat),
                       double.Parse(OriginLocationlng)
-                ),18d, CData, TData
+                ),18d,CData,TData
 
                     ))) ;
                 //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
@@ -419,7 +443,6 @@ namespace VYRMobile.Views
             else
             {
                 //END TRIP
-                
                 map.Polylines.Clear();
                 map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                 IsRouteRunning = false;
@@ -430,8 +453,9 @@ namespace VYRMobile.Views
         async void Calculate(List<Position> list)
         {
             //searchLayout.IsVisible = false;
+            
             map.Polylines.Clear();
-            var polyline = new Polyline() {
+            var polyline = new Xamarin.Forms.GoogleMaps.Polyline() {
                 StrokeWidth = 12,
                 StrokeColor = Color.Orange
             };

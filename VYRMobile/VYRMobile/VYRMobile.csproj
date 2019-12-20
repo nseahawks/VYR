@@ -9,11 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="antenas.json" />
     <None Remove="MapStyle.json" />
     <None Remove="Places.json" />
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Include="antenas.json" />
     <EmbeddedResource Include="Controllers\Places.json" />
     <EmbeddedResource Include="MapStyle.json" />
   </ItemGroup>

@@ -1,5 +1,5 @@
 [
- {
+  {
     "id": "4024b565-2b8d-42d3-bf1e-6cef0d8aaa29",
     "locationName": "Los Tanquecitos- Boca Chica",
     "cellId": "E6238",
@@ -109,4 +109,4 @@
     "getRoutes": [],
     "getAlarm": null
   }
-  ]
+]

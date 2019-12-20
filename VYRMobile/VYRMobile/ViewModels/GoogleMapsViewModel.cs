@@ -10,6 +10,7 @@ using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
 using MvvmHelpers;
+using VYRMobile.Data;
 
 namespace VYRMobile.ViewModels
 {
@@ -135,8 +136,19 @@ namespace VYRMobile.ViewModels
             }
         }
 
+        private ObservableCollection<Models.Antena> _antennas;
+        public ObservableCollection<Models.Antena> Antennas
+        {
+            get { return _antennas; }
+            set
+            {
+                _antennas = value;
+                OnPropertyChanged();
+            }
+        }
         public GoogleMapsViewModel()
         {
+            Antennas = new ObservableCollection<Models.Antena>();
             //CalculateRouteCommand = new Command(async () => await Calculate());
             ToggleAccelerometer();
             Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
@@ -145,10 +157,21 @@ namespace VYRMobile.ViewModels
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
             //GetPlaceDetailCommand = new Command<GooglePlaceAutoCompletePrediction>(async (param) => await GetPlacesDetail(param));
             GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
+
+            LoadAntennas();
         }
 
 
+        private async void LoadAntennas()
+        {
+            var antennas = await ReportsStore.Instance.GetAntenasAsync();
 
+            Antennas.Clear();
+            foreach (var antenna in antennas)
+            {
+                Antennas.Add(antenna);
+            }
+        }
 
         public async Task LoadRoute()
         {

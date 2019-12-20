@@ -1,59 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
-using MvvmHelpers;
-
+using System.Globalization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+    
 namespace VYRMobile.Models
-{
-    public class Antena : ObservableObject
     {
-        string antenaId;
-        public string AntenaId
-        {
-            get => antenaId;
-            set => SetProperty(ref antenaId, value);
-        }
+    public partial class Antena
+    {
+        [JsonProperty("id")]
+        public Guid Id { get; set; }
 
-        string antenaName;
-        public string AntenaName
-        {
-            get => antenaName;
-            set => SetProperty(ref antenaName, value);
-        }
+        [JsonProperty("locationName")]
+        public string LocationName { get; set; }
 
-        string cellId;
-        public string CellId
-        {
-            get => cellId;
-            set => SetProperty(ref cellId, value);
-        }
+        [JsonProperty("cellId")]
+        public string CellId { get; set; }
 
-        string antenaAddress;
-        public string AntenaAddress
-        {
-            get => antenaAddress;
-            set => SetProperty(ref antenaAddress, value);
-        }
+        [JsonProperty("address")]
+        public string Address { get; set; }
 
-        double antenaLatitude;
-        public double AntenaLatitude
-        {
-            get => antenaLatitude;
-            set => SetProperty(ref antenaLatitude, value);
-        }
+        [JsonProperty("latitude")]
+        public double Latitude { get; set; }
 
-        double antenaLongitude;
-        public double AntenaLongitude
-        {
-            get => antenaLongitude;
-            set => SetProperty(ref antenaLongitude, value);
-        }
+        [JsonProperty("longitude")]
+        public double Longitude { get; set; }
 
-        string userId;
-        public string UserId
-        {
-            get => userId;
-            set => SetProperty(ref userId, value);
-        }
+        [JsonProperty("userId")]
+        public object UserId { get; set; }
+
+        [JsonProperty("getRoutes")]
+        public object[] GetRoutes { get; set; }
+
+        [JsonProperty("getAlarm")]
+        public object GetAlarm { get; set; }
     }
 }
