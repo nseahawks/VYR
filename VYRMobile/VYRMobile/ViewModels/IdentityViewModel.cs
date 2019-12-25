@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VYRMobile.Models;
 using VYRMobile.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VYRMobile.ViewModels
@@ -15,6 +16,33 @@ namespace VYRMobile.ViewModels
         public Command LoginCommand { get; }
         public Command TLoginCommand { get; set; }
         private IdentityService _identity { get; }
+
+        const string IsChecked = "is_checked_key";
+        public bool Checked
+        {
+            get => Preferences.Get(IsChecked, false);
+
+            set
+            {
+                if (Checked == value)
+                    return;
+                Preferences.Set(IsChecked, value);
+                OnPropertyChanged(nameof(Checked));
+            }
+        }
+
+        string username = Preferences.Get(nameof(Username), string.Empty);
+        public string Username
+        {
+            get => username;
+            set
+            {
+                username = value;
+                if (Checked)
+                    Preferences.Set(nameof(Username), value);
+                OnPropertyChanged(nameof(Checked));
+            }
+        }
 
         //#region fields
         //string email;

@@ -55,7 +55,7 @@ namespace VYRMobile.Models
         }
 
         ReportStatuses status;
-        public ReportStatuses Status
+        public ReportStatuses ReportStatus
         {
             get => status;
             set => SetProperty(ref status, value);
@@ -69,7 +69,8 @@ namespace VYRMobile.Models
         }
 
         string description;
-        public string Description { 
+        public string Description 
+        { 
             get => description; 
             set => SetProperty(ref description, value); 
         }

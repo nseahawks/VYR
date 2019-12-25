@@ -27,12 +27,12 @@ namespace VYRMobile.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-global::Xamarin.Forms.Forms.Init();
-SfButtonRenderer.Init();
-SfPopupLayoutRenderer.Init();
-SfTabViewRenderer.Init();
-SfPickerRenderer.Init();
-SfComboBoxRenderer.Init();
+            global::Xamarin.Forms.Forms.Init();
+            SfButtonRenderer.Init();
+            SfPopupLayoutRenderer.Init();
+            SfTabViewRenderer.Init();
+            SfPickerRenderer.Init();
+            SfComboBoxRenderer.Init();
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

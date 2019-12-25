@@ -18,6 +18,7 @@ namespace VYRMobile.ViewModels
         public Command CreateReportCommand { get; }
         //Need to be implemented
         //public Command AttachCommand { get; }
+        public Command LoadCommand { get; set; }
 
         public string Title
         {
@@ -57,12 +58,12 @@ namespace VYRMobile.ViewModels
 
         public Report.ReportStatuses Status
         {
-            get => CReport.Status;
+            get => CReport.ReportStatus;
             set
             {
-                if (CReport.Status == value)
+                if (CReport.ReportStatus == value)
                     return;
-                CReport.Status = value;
+                CReport.ReportStatus = value;
                 OnPropertyChanged(nameof(Status));
             }
         }
@@ -81,6 +82,17 @@ namespace VYRMobile.ViewModels
                     isSuccess = value;
                     OnPropertyChanged(nameof(IsSuccess));
                 }
+            }
+        }
+
+        private bool _isBusy;
+        public bool IsBusy
+        {
+            get { return _isBusy; }
+            set
+            {
+                _isBusy = value;
+                OnPropertyChanged(nameof(IsBusy));
             }
         }
         private ReportsStore _store { get; }
@@ -116,6 +128,7 @@ namespace VYRMobile.ViewModels
         private async Task CreateReport()
         {
             IsSuccess = await _store.AddReportAsync(CReport);
+            await LoadData2();
         }
 
         //Lista de Reportes
@@ -130,6 +143,7 @@ namespace VYRMobile.ViewModels
             CReport = new Report();
             _store = new ReportsStore();
             CreateReportCommand = new Command(async () => await CreateReport());
+            LoadCommand = new Command(async () => await LoadData2());
             //AttachCommand = new Command(Attach);
             _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
             _statusCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportStatuses)));
@@ -153,10 +167,65 @@ namespace VYRMobile.ViewModels
             Reports.Clear();
             foreach (var report in reports)
             {
+                int type = report.ReportType.GetHashCode();
+                switch (type)
+                {
+                    default:
+                        report.TypeIcon = "base.png";
+                        break;
+                    case 1:
+                        report.TypeIcon = "alarma.png";
+                        break;
+                    case 2:
+                        report.TypeIcon = "robo.png";
+                        break;
+                    case 3:
+                        report.TypeIcon = "asistencia.png";
+                        break;
+                    case 4:
+                        report.TypeIcon = "dano.png";
+                        break;
+                }
                 Reports.Add(report);
             }
         }
 
+        private async Task LoadData2()
+        {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
+            var reports = await ReportsStore.Instance.GetReportsAsync();
+
+            Reports.Clear();
+            foreach (var report in reports)
+            {
+                int type = report.ReportType.GetHashCode();
+                switch (type)
+                {
+                    default:
+                        report.TypeIcon = "base.png";
+                        break;
+                    case 1:
+                        report.TypeIcon = "alarma.png";
+                        break;
+                    case 2:
+                        report.TypeIcon = "robo.png";
+                        break;
+                    case 3:
+                        report.TypeIcon = "asistencia.png";
+                        break;
+                    case 4:
+                        report.TypeIcon = "dano.png";
+                        break;
+                }
+                Reports.Add(report);
+            }
+
+            IsBusy = false;
+        }
         /*private void Types()
         {
             foreach (string reportType in Enum.GetNames(typeof(Report.ReportTypes)))
@@ -165,7 +234,7 @@ namespace VYRMobile.ViewModels
             }
         }*/
 
-        
+
         /*private void ItemSelected(string parameter)
         {
             var reports = ReportService.Instance.GetReports();

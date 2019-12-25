@@ -50,8 +50,7 @@ namespace VYRMobile.Data
                 Created = DateTime.UtcNow,
                 Description = report.Description,
                 Address = "",
-                Status = report.Status,
-                ResolveDate = DateTime.Now
+                ReportStatus = report.ReportStatus
             };
 
             string serializedData = JsonConvert.SerializeObject(responseReport);

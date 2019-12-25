@@ -6,6 +6,7 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
+             xmlns:templates="clr-namespace:VYRMobile.Views.Templates"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              xmlns:controls="clr-namespace:VYRMobile.Controls"
              mc:Ignorable="d"
@@ -192,17 +193,16 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                                                    SelectionColor="{StaticResource BaseColor}"
                                                    TitleFontSize="{StaticResource FontSize16}">
                                     <tabview:SfTabItem.Content>
-                                        <ListView 
+                                        <CollectionView 
+                                            x:Name="antenasView"
                                             ItemsSource="{Binding Puntos}"
-                                            SelectionMode="None"
-                                            HasUnevenRows="True"
-                                            SeparatorVisibility="None">
-                                            <ListView.ItemTemplate>
+                                            SelectionMode="None">
+                                            <CollectionView.ItemTemplate>
                                                 <DataTemplate>
-                                                    <cells:PuntoItemViewCell />
+                                                    <templates:PuntoItemTemplate/>
                                                 </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
 

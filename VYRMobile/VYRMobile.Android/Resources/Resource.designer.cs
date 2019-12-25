@@ -26,6 +26,2616 @@ namespace VYRMobile.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Lottie.Forms.Resource.Animation.abc_fade_in = global::VYRMobile.Droid.Resource.Animation.abc_fade_in;
+			global::Lottie.Forms.Resource.Animation.abc_fade_out = global::VYRMobile.Droid.Resource.Animation.abc_fade_out;
+			global::Lottie.Forms.Resource.Animation.abc_grow_fade_in_from_bottom = global::VYRMobile.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
+			global::Lottie.Forms.Resource.Animation.abc_popup_enter = global::VYRMobile.Droid.Resource.Animation.abc_popup_enter;
+			global::Lottie.Forms.Resource.Animation.abc_popup_exit = global::VYRMobile.Droid.Resource.Animation.abc_popup_exit;
+			global::Lottie.Forms.Resource.Animation.abc_shrink_fade_out_from_bottom = global::VYRMobile.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
+			global::Lottie.Forms.Resource.Animation.abc_slide_in_bottom = global::VYRMobile.Droid.Resource.Animation.abc_slide_in_bottom;
+			global::Lottie.Forms.Resource.Animation.abc_slide_in_top = global::VYRMobile.Droid.Resource.Animation.abc_slide_in_top;
+			global::Lottie.Forms.Resource.Animation.abc_slide_out_bottom = global::VYRMobile.Droid.Resource.Animation.abc_slide_out_bottom;
+			global::Lottie.Forms.Resource.Animation.abc_slide_out_top = global::VYRMobile.Droid.Resource.Animation.abc_slide_out_top;
+			global::Lottie.Forms.Resource.Animation.abc_tooltip_enter = global::VYRMobile.Droid.Resource.Animation.abc_tooltip_enter;
+			global::Lottie.Forms.Resource.Animation.abc_tooltip_exit = global::VYRMobile.Droid.Resource.Animation.abc_tooltip_exit;
+			global::Lottie.Forms.Resource.Animation.design_bottom_sheet_slide_in = global::VYRMobile.Droid.Resource.Animation.design_bottom_sheet_slide_in;
+			global::Lottie.Forms.Resource.Animation.design_bottom_sheet_slide_out = global::VYRMobile.Droid.Resource.Animation.design_bottom_sheet_slide_out;
+			global::Lottie.Forms.Resource.Animation.design_snackbar_in = global::VYRMobile.Droid.Resource.Animation.design_snackbar_in;
+			global::Lottie.Forms.Resource.Animation.design_snackbar_out = global::VYRMobile.Droid.Resource.Animation.design_snackbar_out;
+			global::Lottie.Forms.Resource.Animation.EnterFromLeft = global::VYRMobile.Droid.Resource.Animation.EnterFromLeft;
+			global::Lottie.Forms.Resource.Animation.EnterFromRight = global::VYRMobile.Droid.Resource.Animation.EnterFromRight;
+			global::Lottie.Forms.Resource.Animation.ExitToLeft = global::VYRMobile.Droid.Resource.Animation.ExitToLeft;
+			global::Lottie.Forms.Resource.Animation.ExitToRight = global::VYRMobile.Droid.Resource.Animation.ExitToRight;
+			global::Lottie.Forms.Resource.Animator.design_appbar_state_list_animator = global::VYRMobile.Droid.Resource.Animator.design_appbar_state_list_animator;
+			global::Lottie.Forms.Resource.Animator.design_fab_hide_motion_spec = global::VYRMobile.Droid.Resource.Animator.design_fab_hide_motion_spec;
+			global::Lottie.Forms.Resource.Animator.design_fab_show_motion_spec = global::VYRMobile.Droid.Resource.Animator.design_fab_show_motion_spec;
+			global::Lottie.Forms.Resource.Animator.mtrl_btn_state_list_anim = global::VYRMobile.Droid.Resource.Animator.mtrl_btn_state_list_anim;
+			global::Lottie.Forms.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::VYRMobile.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
+			global::Lottie.Forms.Resource.Animator.mtrl_chip_state_list_anim = global::VYRMobile.Droid.Resource.Animator.mtrl_chip_state_list_anim;
+			global::Lottie.Forms.Resource.Animator.mtrl_fab_hide_motion_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
+			global::Lottie.Forms.Resource.Animator.mtrl_fab_show_motion_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
+			global::Lottie.Forms.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
+			global::Lottie.Forms.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
+			global::Lottie.Forms.Resource.Attribute.actionBarDivider = global::VYRMobile.Droid.Resource.Attribute.actionBarDivider;
+			global::Lottie.Forms.Resource.Attribute.actionBarItemBackground = global::VYRMobile.Droid.Resource.Attribute.actionBarItemBackground;
+			global::Lottie.Forms.Resource.Attribute.actionBarPopupTheme = global::VYRMobile.Droid.Resource.Attribute.actionBarPopupTheme;
+			global::Lottie.Forms.Resource.Attribute.actionBarSize = global::VYRMobile.Droid.Resource.Attribute.actionBarSize;
+			global::Lottie.Forms.Resource.Attribute.actionBarSplitStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarSplitStyle;
+			global::Lottie.Forms.Resource.Attribute.actionBarStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarStyle;
+			global::Lottie.Forms.Resource.Attribute.actionBarTabBarStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarTabBarStyle;
+			global::Lottie.Forms.Resource.Attribute.actionBarTabStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarTabStyle;
+			global::Lottie.Forms.Resource.Attribute.actionBarTabTextStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarTabTextStyle;
+			global::Lottie.Forms.Resource.Attribute.actionBarTheme = global::VYRMobile.Droid.Resource.Attribute.actionBarTheme;
+			global::Lottie.Forms.Resource.Attribute.actionBarWidgetTheme = global::VYRMobile.Droid.Resource.Attribute.actionBarWidgetTheme;
+			global::Lottie.Forms.Resource.Attribute.actionButtonStyle = global::VYRMobile.Droid.Resource.Attribute.actionButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.actionDropDownStyle = global::VYRMobile.Droid.Resource.Attribute.actionDropDownStyle;
+			global::Lottie.Forms.Resource.Attribute.actionLayout = global::VYRMobile.Droid.Resource.Attribute.actionLayout;
+			global::Lottie.Forms.Resource.Attribute.actionMenuTextAppearance = global::VYRMobile.Droid.Resource.Attribute.actionMenuTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.actionMenuTextColor = global::VYRMobile.Droid.Resource.Attribute.actionMenuTextColor;
+			global::Lottie.Forms.Resource.Attribute.actionModeBackground = global::VYRMobile.Droid.Resource.Attribute.actionModeBackground;
+			global::Lottie.Forms.Resource.Attribute.actionModeCloseButtonStyle = global::VYRMobile.Droid.Resource.Attribute.actionModeCloseButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.actionModeCloseDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeCloseDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionModeCopyDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeCopyDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionModeCutDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeCutDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionModeFindDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeFindDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionModePasteDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModePasteDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionModePopupWindowStyle = global::VYRMobile.Droid.Resource.Attribute.actionModePopupWindowStyle;
+			global::Lottie.Forms.Resource.Attribute.actionModeSelectAllDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeSelectAllDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionModeShareDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeShareDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionModeSplitBackground = global::VYRMobile.Droid.Resource.Attribute.actionModeSplitBackground;
+			global::Lottie.Forms.Resource.Attribute.actionModeStyle = global::VYRMobile.Droid.Resource.Attribute.actionModeStyle;
+			global::Lottie.Forms.Resource.Attribute.actionModeWebSearchDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeWebSearchDrawable;
+			global::Lottie.Forms.Resource.Attribute.actionOverflowButtonStyle = global::VYRMobile.Droid.Resource.Attribute.actionOverflowButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.actionOverflowMenuStyle = global::VYRMobile.Droid.Resource.Attribute.actionOverflowMenuStyle;
+			global::Lottie.Forms.Resource.Attribute.actionProviderClass = global::VYRMobile.Droid.Resource.Attribute.actionProviderClass;
+			global::Lottie.Forms.Resource.Attribute.actionViewClass = global::VYRMobile.Droid.Resource.Attribute.actionViewClass;
+			global::Lottie.Forms.Resource.Attribute.activityChooserViewStyle = global::VYRMobile.Droid.Resource.Attribute.activityChooserViewStyle;
+			global::Lottie.Forms.Resource.Attribute.alertDialogButtonGroupStyle = global::VYRMobile.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
+			global::Lottie.Forms.Resource.Attribute.alertDialogCenterButtons = global::VYRMobile.Droid.Resource.Attribute.alertDialogCenterButtons;
+			global::Lottie.Forms.Resource.Attribute.alertDialogStyle = global::VYRMobile.Droid.Resource.Attribute.alertDialogStyle;
+			global::Lottie.Forms.Resource.Attribute.alertDialogTheme = global::VYRMobile.Droid.Resource.Attribute.alertDialogTheme;
+			global::Lottie.Forms.Resource.Attribute.allowStacking = global::VYRMobile.Droid.Resource.Attribute.allowStacking;
+			global::Lottie.Forms.Resource.Attribute.alpha = global::VYRMobile.Droid.Resource.Attribute.alpha;
+			global::Lottie.Forms.Resource.Attribute.alphabeticModifiers = global::VYRMobile.Droid.Resource.Attribute.alphabeticModifiers;
+			global::Lottie.Forms.Resource.Attribute.arrowHeadLength = global::VYRMobile.Droid.Resource.Attribute.arrowHeadLength;
+			global::Lottie.Forms.Resource.Attribute.arrowShaftLength = global::VYRMobile.Droid.Resource.Attribute.arrowShaftLength;
+			global::Lottie.Forms.Resource.Attribute.autoCompleteTextViewStyle = global::VYRMobile.Droid.Resource.Attribute.autoCompleteTextViewStyle;
+			global::Lottie.Forms.Resource.Attribute.autoSizeMaxTextSize = global::VYRMobile.Droid.Resource.Attribute.autoSizeMaxTextSize;
+			global::Lottie.Forms.Resource.Attribute.autoSizeMinTextSize = global::VYRMobile.Droid.Resource.Attribute.autoSizeMinTextSize;
+			global::Lottie.Forms.Resource.Attribute.autoSizePresetSizes = global::VYRMobile.Droid.Resource.Attribute.autoSizePresetSizes;
+			global::Lottie.Forms.Resource.Attribute.autoSizeStepGranularity = global::VYRMobile.Droid.Resource.Attribute.autoSizeStepGranularity;
+			global::Lottie.Forms.Resource.Attribute.autoSizeTextType = global::VYRMobile.Droid.Resource.Attribute.autoSizeTextType;
+			global::Lottie.Forms.Resource.Attribute.background = global::VYRMobile.Droid.Resource.Attribute.background;
+			global::Lottie.Forms.Resource.Attribute.backgroundSplit = global::VYRMobile.Droid.Resource.Attribute.backgroundSplit;
+			global::Lottie.Forms.Resource.Attribute.backgroundStacked = global::VYRMobile.Droid.Resource.Attribute.backgroundStacked;
+			global::Lottie.Forms.Resource.Attribute.backgroundTint = global::VYRMobile.Droid.Resource.Attribute.backgroundTint;
+			global::Lottie.Forms.Resource.Attribute.backgroundTintMode = global::VYRMobile.Droid.Resource.Attribute.backgroundTintMode;
+			global::Lottie.Forms.Resource.Attribute.barLength = global::VYRMobile.Droid.Resource.Attribute.barLength;
+			global::Lottie.Forms.Resource.Attribute.behavior_autoHide = global::VYRMobile.Droid.Resource.Attribute.behavior_autoHide;
+			global::Lottie.Forms.Resource.Attribute.behavior_fitToContents = global::VYRMobile.Droid.Resource.Attribute.behavior_fitToContents;
+			global::Lottie.Forms.Resource.Attribute.behavior_hideable = global::VYRMobile.Droid.Resource.Attribute.behavior_hideable;
+			global::Lottie.Forms.Resource.Attribute.behavior_overlapTop = global::VYRMobile.Droid.Resource.Attribute.behavior_overlapTop;
+			global::Lottie.Forms.Resource.Attribute.behavior_peekHeight = global::VYRMobile.Droid.Resource.Attribute.behavior_peekHeight;
+			global::Lottie.Forms.Resource.Attribute.behavior_skipCollapsed = global::VYRMobile.Droid.Resource.Attribute.behavior_skipCollapsed;
+			global::Lottie.Forms.Resource.Attribute.borderlessButtonStyle = global::VYRMobile.Droid.Resource.Attribute.borderlessButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.borderWidth = global::VYRMobile.Droid.Resource.Attribute.borderWidth;
+			global::Lottie.Forms.Resource.Attribute.bottomAppBarStyle = global::VYRMobile.Droid.Resource.Attribute.bottomAppBarStyle;
+			global::Lottie.Forms.Resource.Attribute.bottomNavigationStyle = global::VYRMobile.Droid.Resource.Attribute.bottomNavigationStyle;
+			global::Lottie.Forms.Resource.Attribute.bottomSheetDialogTheme = global::VYRMobile.Droid.Resource.Attribute.bottomSheetDialogTheme;
+			global::Lottie.Forms.Resource.Attribute.bottomSheetStyle = global::VYRMobile.Droid.Resource.Attribute.bottomSheetStyle;
+			global::Lottie.Forms.Resource.Attribute.boxBackgroundColor = global::VYRMobile.Droid.Resource.Attribute.boxBackgroundColor;
+			global::Lottie.Forms.Resource.Attribute.boxBackgroundMode = global::VYRMobile.Droid.Resource.Attribute.boxBackgroundMode;
+			global::Lottie.Forms.Resource.Attribute.boxCollapsedPaddingTop = global::VYRMobile.Droid.Resource.Attribute.boxCollapsedPaddingTop;
+			global::Lottie.Forms.Resource.Attribute.boxCornerRadiusBottomEnd = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
+			global::Lottie.Forms.Resource.Attribute.boxCornerRadiusBottomStart = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
+			global::Lottie.Forms.Resource.Attribute.boxCornerRadiusTopEnd = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
+			global::Lottie.Forms.Resource.Attribute.boxCornerRadiusTopStart = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusTopStart;
+			global::Lottie.Forms.Resource.Attribute.boxStrokeColor = global::VYRMobile.Droid.Resource.Attribute.boxStrokeColor;
+			global::Lottie.Forms.Resource.Attribute.boxStrokeWidth = global::VYRMobile.Droid.Resource.Attribute.boxStrokeWidth;
+			global::Lottie.Forms.Resource.Attribute.buttonBarButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.buttonBarNegativeButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.buttonBarNeutralButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.buttonBarPositiveButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.buttonBarStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarStyle;
+			global::Lottie.Forms.Resource.Attribute.buttonGravity = global::VYRMobile.Droid.Resource.Attribute.buttonGravity;
+			global::Lottie.Forms.Resource.Attribute.buttonIconDimen = global::VYRMobile.Droid.Resource.Attribute.buttonIconDimen;
+			global::Lottie.Forms.Resource.Attribute.buttonPanelSideLayout = global::VYRMobile.Droid.Resource.Attribute.buttonPanelSideLayout;
+			global::Lottie.Forms.Resource.Attribute.buttonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonStyle;
+			global::Lottie.Forms.Resource.Attribute.buttonStyleSmall = global::VYRMobile.Droid.Resource.Attribute.buttonStyleSmall;
+			global::Lottie.Forms.Resource.Attribute.buttonTint = global::VYRMobile.Droid.Resource.Attribute.buttonTint;
+			global::Lottie.Forms.Resource.Attribute.buttonTintMode = global::VYRMobile.Droid.Resource.Attribute.buttonTintMode;
+			global::Lottie.Forms.Resource.Attribute.cardBackgroundColor = global::VYRMobile.Droid.Resource.Attribute.cardBackgroundColor;
+			global::Lottie.Forms.Resource.Attribute.cardCornerRadius = global::VYRMobile.Droid.Resource.Attribute.cardCornerRadius;
+			global::Lottie.Forms.Resource.Attribute.cardElevation = global::VYRMobile.Droid.Resource.Attribute.cardElevation;
+			global::Lottie.Forms.Resource.Attribute.cardMaxElevation = global::VYRMobile.Droid.Resource.Attribute.cardMaxElevation;
+			global::Lottie.Forms.Resource.Attribute.cardPreventCornerOverlap = global::VYRMobile.Droid.Resource.Attribute.cardPreventCornerOverlap;
+			global::Lottie.Forms.Resource.Attribute.cardUseCompatPadding = global::VYRMobile.Droid.Resource.Attribute.cardUseCompatPadding;
+			global::Lottie.Forms.Resource.Attribute.cardViewStyle = global::VYRMobile.Droid.Resource.Attribute.cardViewStyle;
+			global::Lottie.Forms.Resource.Attribute.checkboxStyle = global::VYRMobile.Droid.Resource.Attribute.checkboxStyle;
+			global::Lottie.Forms.Resource.Attribute.checkedChip = global::VYRMobile.Droid.Resource.Attribute.checkedChip;
+			global::Lottie.Forms.Resource.Attribute.checkedIcon = global::VYRMobile.Droid.Resource.Attribute.checkedIcon;
+			global::Lottie.Forms.Resource.Attribute.checkedIconEnabled = global::VYRMobile.Droid.Resource.Attribute.checkedIconEnabled;
+			global::Lottie.Forms.Resource.Attribute.checkedIconVisible = global::VYRMobile.Droid.Resource.Attribute.checkedIconVisible;
+			global::Lottie.Forms.Resource.Attribute.checkedTextViewStyle = global::VYRMobile.Droid.Resource.Attribute.checkedTextViewStyle;
+			global::Lottie.Forms.Resource.Attribute.chipBackgroundColor = global::VYRMobile.Droid.Resource.Attribute.chipBackgroundColor;
+			global::Lottie.Forms.Resource.Attribute.chipCornerRadius = global::VYRMobile.Droid.Resource.Attribute.chipCornerRadius;
+			global::Lottie.Forms.Resource.Attribute.chipEndPadding = global::VYRMobile.Droid.Resource.Attribute.chipEndPadding;
+			global::Lottie.Forms.Resource.Attribute.chipGroupStyle = global::VYRMobile.Droid.Resource.Attribute.chipGroupStyle;
+			global::Lottie.Forms.Resource.Attribute.chipIcon = global::VYRMobile.Droid.Resource.Attribute.chipIcon;
+			global::Lottie.Forms.Resource.Attribute.chipIconEnabled = global::VYRMobile.Droid.Resource.Attribute.chipIconEnabled;
+			global::Lottie.Forms.Resource.Attribute.chipIconSize = global::VYRMobile.Droid.Resource.Attribute.chipIconSize;
+			global::Lottie.Forms.Resource.Attribute.chipIconTint = global::VYRMobile.Droid.Resource.Attribute.chipIconTint;
+			global::Lottie.Forms.Resource.Attribute.chipIconVisible = global::VYRMobile.Droid.Resource.Attribute.chipIconVisible;
+			global::Lottie.Forms.Resource.Attribute.chipMinHeight = global::VYRMobile.Droid.Resource.Attribute.chipMinHeight;
+			global::Lottie.Forms.Resource.Attribute.chipSpacing = global::VYRMobile.Droid.Resource.Attribute.chipSpacing;
+			global::Lottie.Forms.Resource.Attribute.chipSpacingHorizontal = global::VYRMobile.Droid.Resource.Attribute.chipSpacingHorizontal;
+			global::Lottie.Forms.Resource.Attribute.chipSpacingVertical = global::VYRMobile.Droid.Resource.Attribute.chipSpacingVertical;
+			global::Lottie.Forms.Resource.Attribute.chipStandaloneStyle = global::VYRMobile.Droid.Resource.Attribute.chipStandaloneStyle;
+			global::Lottie.Forms.Resource.Attribute.chipStartPadding = global::VYRMobile.Droid.Resource.Attribute.chipStartPadding;
+			global::Lottie.Forms.Resource.Attribute.chipStrokeColor = global::VYRMobile.Droid.Resource.Attribute.chipStrokeColor;
+			global::Lottie.Forms.Resource.Attribute.chipStrokeWidth = global::VYRMobile.Droid.Resource.Attribute.chipStrokeWidth;
+			global::Lottie.Forms.Resource.Attribute.chipStyle = global::VYRMobile.Droid.Resource.Attribute.chipStyle;
+			global::Lottie.Forms.Resource.Attribute.closeIcon = global::VYRMobile.Droid.Resource.Attribute.closeIcon;
+			global::Lottie.Forms.Resource.Attribute.closeIconEnabled = global::VYRMobile.Droid.Resource.Attribute.closeIconEnabled;
+			global::Lottie.Forms.Resource.Attribute.closeIconEndPadding = global::VYRMobile.Droid.Resource.Attribute.closeIconEndPadding;
+			global::Lottie.Forms.Resource.Attribute.closeIconSize = global::VYRMobile.Droid.Resource.Attribute.closeIconSize;
+			global::Lottie.Forms.Resource.Attribute.closeIconStartPadding = global::VYRMobile.Droid.Resource.Attribute.closeIconStartPadding;
+			global::Lottie.Forms.Resource.Attribute.closeIconTint = global::VYRMobile.Droid.Resource.Attribute.closeIconTint;
+			global::Lottie.Forms.Resource.Attribute.closeIconVisible = global::VYRMobile.Droid.Resource.Attribute.closeIconVisible;
+			global::Lottie.Forms.Resource.Attribute.closeItemLayout = global::VYRMobile.Droid.Resource.Attribute.closeItemLayout;
+			global::Lottie.Forms.Resource.Attribute.collapseContentDescription = global::VYRMobile.Droid.Resource.Attribute.collapseContentDescription;
+			global::Lottie.Forms.Resource.Attribute.collapsedTitleGravity = global::VYRMobile.Droid.Resource.Attribute.collapsedTitleGravity;
+			global::Lottie.Forms.Resource.Attribute.collapsedTitleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.collapsedTitleTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.collapseIcon = global::VYRMobile.Droid.Resource.Attribute.collapseIcon;
+			global::Lottie.Forms.Resource.Attribute.color = global::VYRMobile.Droid.Resource.Attribute.color;
+			global::Lottie.Forms.Resource.Attribute.colorAccent = global::VYRMobile.Droid.Resource.Attribute.colorAccent;
+			global::Lottie.Forms.Resource.Attribute.colorBackgroundFloating = global::VYRMobile.Droid.Resource.Attribute.colorBackgroundFloating;
+			global::Lottie.Forms.Resource.Attribute.colorButtonNormal = global::VYRMobile.Droid.Resource.Attribute.colorButtonNormal;
+			global::Lottie.Forms.Resource.Attribute.colorControlActivated = global::VYRMobile.Droid.Resource.Attribute.colorControlActivated;
+			global::Lottie.Forms.Resource.Attribute.colorControlHighlight = global::VYRMobile.Droid.Resource.Attribute.colorControlHighlight;
+			global::Lottie.Forms.Resource.Attribute.colorControlNormal = global::VYRMobile.Droid.Resource.Attribute.colorControlNormal;
+			global::Lottie.Forms.Resource.Attribute.colorError = global::VYRMobile.Droid.Resource.Attribute.colorError;
+			global::Lottie.Forms.Resource.Attribute.colorPrimary = global::VYRMobile.Droid.Resource.Attribute.colorPrimary;
+			global::Lottie.Forms.Resource.Attribute.colorPrimaryDark = global::VYRMobile.Droid.Resource.Attribute.colorPrimaryDark;
+			global::Lottie.Forms.Resource.Attribute.colorSecondary = global::VYRMobile.Droid.Resource.Attribute.colorSecondary;
+			global::Lottie.Forms.Resource.Attribute.colorSwitchThumbNormal = global::VYRMobile.Droid.Resource.Attribute.colorSwitchThumbNormal;
+			global::Lottie.Forms.Resource.Attribute.commitIcon = global::VYRMobile.Droid.Resource.Attribute.commitIcon;
+			global::Lottie.Forms.Resource.Attribute.contentDescription = global::VYRMobile.Droid.Resource.Attribute.contentDescription;
+			global::Lottie.Forms.Resource.Attribute.contentInsetEnd = global::VYRMobile.Droid.Resource.Attribute.contentInsetEnd;
+			global::Lottie.Forms.Resource.Attribute.contentInsetEndWithActions = global::VYRMobile.Droid.Resource.Attribute.contentInsetEndWithActions;
+			global::Lottie.Forms.Resource.Attribute.contentInsetLeft = global::VYRMobile.Droid.Resource.Attribute.contentInsetLeft;
+			global::Lottie.Forms.Resource.Attribute.contentInsetRight = global::VYRMobile.Droid.Resource.Attribute.contentInsetRight;
+			global::Lottie.Forms.Resource.Attribute.contentInsetStart = global::VYRMobile.Droid.Resource.Attribute.contentInsetStart;
+			global::Lottie.Forms.Resource.Attribute.contentInsetStartWithNavigation = global::VYRMobile.Droid.Resource.Attribute.contentInsetStartWithNavigation;
+			global::Lottie.Forms.Resource.Attribute.contentPadding = global::VYRMobile.Droid.Resource.Attribute.contentPadding;
+			global::Lottie.Forms.Resource.Attribute.contentPaddingBottom = global::VYRMobile.Droid.Resource.Attribute.contentPaddingBottom;
+			global::Lottie.Forms.Resource.Attribute.contentPaddingLeft = global::VYRMobile.Droid.Resource.Attribute.contentPaddingLeft;
+			global::Lottie.Forms.Resource.Attribute.contentPaddingRight = global::VYRMobile.Droid.Resource.Attribute.contentPaddingRight;
+			global::Lottie.Forms.Resource.Attribute.contentPaddingTop = global::VYRMobile.Droid.Resource.Attribute.contentPaddingTop;
+			global::Lottie.Forms.Resource.Attribute.contentScrim = global::VYRMobile.Droid.Resource.Attribute.contentScrim;
+			global::Lottie.Forms.Resource.Attribute.controlBackground = global::VYRMobile.Droid.Resource.Attribute.controlBackground;
+			global::Lottie.Forms.Resource.Attribute.coordinatorLayoutStyle = global::VYRMobile.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Lottie.Forms.Resource.Attribute.cornerRadius = global::VYRMobile.Droid.Resource.Attribute.cornerRadius;
+			global::Lottie.Forms.Resource.Attribute.counterEnabled = global::VYRMobile.Droid.Resource.Attribute.counterEnabled;
+			global::Lottie.Forms.Resource.Attribute.counterMaxLength = global::VYRMobile.Droid.Resource.Attribute.counterMaxLength;
+			global::Lottie.Forms.Resource.Attribute.counterOverflowTextAppearance = global::VYRMobile.Droid.Resource.Attribute.counterOverflowTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.counterTextAppearance = global::VYRMobile.Droid.Resource.Attribute.counterTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.customNavigationLayout = global::VYRMobile.Droid.Resource.Attribute.customNavigationLayout;
+			global::Lottie.Forms.Resource.Attribute.defaultQueryHint = global::VYRMobile.Droid.Resource.Attribute.defaultQueryHint;
+			global::Lottie.Forms.Resource.Attribute.dialogCornerRadius = global::VYRMobile.Droid.Resource.Attribute.dialogCornerRadius;
+			global::Lottie.Forms.Resource.Attribute.dialogPreferredPadding = global::VYRMobile.Droid.Resource.Attribute.dialogPreferredPadding;
+			global::Lottie.Forms.Resource.Attribute.dialogTheme = global::VYRMobile.Droid.Resource.Attribute.dialogTheme;
+			global::Lottie.Forms.Resource.Attribute.displayOptions = global::VYRMobile.Droid.Resource.Attribute.displayOptions;
+			global::Lottie.Forms.Resource.Attribute.divider = global::VYRMobile.Droid.Resource.Attribute.divider;
+			global::Lottie.Forms.Resource.Attribute.dividerHorizontal = global::VYRMobile.Droid.Resource.Attribute.dividerHorizontal;
+			global::Lottie.Forms.Resource.Attribute.dividerPadding = global::VYRMobile.Droid.Resource.Attribute.dividerPadding;
+			global::Lottie.Forms.Resource.Attribute.dividerVertical = global::VYRMobile.Droid.Resource.Attribute.dividerVertical;
+			global::Lottie.Forms.Resource.Attribute.drawableSize = global::VYRMobile.Droid.Resource.Attribute.drawableSize;
+			global::Lottie.Forms.Resource.Attribute.drawerArrowStyle = global::VYRMobile.Droid.Resource.Attribute.drawerArrowStyle;
+			global::Lottie.Forms.Resource.Attribute.dropdownListPreferredItemHeight = global::VYRMobile.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
+			global::Lottie.Forms.Resource.Attribute.dropDownListViewStyle = global::VYRMobile.Droid.Resource.Attribute.dropDownListViewStyle;
+			global::Lottie.Forms.Resource.Attribute.editTextBackground = global::VYRMobile.Droid.Resource.Attribute.editTextBackground;
+			global::Lottie.Forms.Resource.Attribute.editTextColor = global::VYRMobile.Droid.Resource.Attribute.editTextColor;
+			global::Lottie.Forms.Resource.Attribute.editTextStyle = global::VYRMobile.Droid.Resource.Attribute.editTextStyle;
+			global::Lottie.Forms.Resource.Attribute.elevation = global::VYRMobile.Droid.Resource.Attribute.elevation;
+			global::Lottie.Forms.Resource.Attribute.enforceMaterialTheme = global::VYRMobile.Droid.Resource.Attribute.enforceMaterialTheme;
+			global::Lottie.Forms.Resource.Attribute.enforceTextAppearance = global::VYRMobile.Droid.Resource.Attribute.enforceTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.errorEnabled = global::VYRMobile.Droid.Resource.Attribute.errorEnabled;
+			global::Lottie.Forms.Resource.Attribute.errorTextAppearance = global::VYRMobile.Droid.Resource.Attribute.errorTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.expandActivityOverflowButtonDrawable = global::VYRMobile.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
+			global::Lottie.Forms.Resource.Attribute.expanded = global::VYRMobile.Droid.Resource.Attribute.expanded;
+			global::Lottie.Forms.Resource.Attribute.expandedTitleGravity = global::VYRMobile.Droid.Resource.Attribute.expandedTitleGravity;
+			global::Lottie.Forms.Resource.Attribute.expandedTitleMargin = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMargin;
+			global::Lottie.Forms.Resource.Attribute.expandedTitleMarginBottom = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginBottom;
+			global::Lottie.Forms.Resource.Attribute.expandedTitleMarginEnd = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginEnd;
+			global::Lottie.Forms.Resource.Attribute.expandedTitleMarginStart = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginStart;
+			global::Lottie.Forms.Resource.Attribute.expandedTitleMarginTop = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginTop;
+			global::Lottie.Forms.Resource.Attribute.expandedTitleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.expandedTitleTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.fabAlignmentMode = global::VYRMobile.Droid.Resource.Attribute.fabAlignmentMode;
+			global::Lottie.Forms.Resource.Attribute.fabCradleMargin = global::VYRMobile.Droid.Resource.Attribute.fabCradleMargin;
+			global::Lottie.Forms.Resource.Attribute.fabCradleRoundedCornerRadius = global::VYRMobile.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
+			global::Lottie.Forms.Resource.Attribute.fabCradleVerticalOffset = global::VYRMobile.Droid.Resource.Attribute.fabCradleVerticalOffset;
+			global::Lottie.Forms.Resource.Attribute.fabCustomSize = global::VYRMobile.Droid.Resource.Attribute.fabCustomSize;
+			global::Lottie.Forms.Resource.Attribute.fabSize = global::VYRMobile.Droid.Resource.Attribute.fabSize;
+			global::Lottie.Forms.Resource.Attribute.fastScrollEnabled = global::VYRMobile.Droid.Resource.Attribute.fastScrollEnabled;
+			global::Lottie.Forms.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
+			global::Lottie.Forms.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
+			global::Lottie.Forms.Resource.Attribute.fastScrollVerticalThumbDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
+			global::Lottie.Forms.Resource.Attribute.fastScrollVerticalTrackDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
+			global::Lottie.Forms.Resource.Attribute.firstBaselineToTopHeight = global::VYRMobile.Droid.Resource.Attribute.firstBaselineToTopHeight;
+			global::Lottie.Forms.Resource.Attribute.floatingActionButtonStyle = global::VYRMobile.Droid.Resource.Attribute.floatingActionButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.font = global::VYRMobile.Droid.Resource.Attribute.font;
+			global::Lottie.Forms.Resource.Attribute.fontFamily = global::VYRMobile.Droid.Resource.Attribute.fontFamily;
+			global::Lottie.Forms.Resource.Attribute.fontProviderAuthority = global::VYRMobile.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Lottie.Forms.Resource.Attribute.fontProviderCerts = global::VYRMobile.Droid.Resource.Attribute.fontProviderCerts;
+			global::Lottie.Forms.Resource.Attribute.fontProviderFetchStrategy = global::VYRMobile.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Lottie.Forms.Resource.Attribute.fontProviderFetchTimeout = global::VYRMobile.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Lottie.Forms.Resource.Attribute.fontProviderPackage = global::VYRMobile.Droid.Resource.Attribute.fontProviderPackage;
+			global::Lottie.Forms.Resource.Attribute.fontProviderQuery = global::VYRMobile.Droid.Resource.Attribute.fontProviderQuery;
+			global::Lottie.Forms.Resource.Attribute.fontStyle = global::VYRMobile.Droid.Resource.Attribute.fontStyle;
+			global::Lottie.Forms.Resource.Attribute.fontVariationSettings = global::VYRMobile.Droid.Resource.Attribute.fontVariationSettings;
+			global::Lottie.Forms.Resource.Attribute.fontWeight = global::VYRMobile.Droid.Resource.Attribute.fontWeight;
+			global::Lottie.Forms.Resource.Attribute.foregroundInsidePadding = global::VYRMobile.Droid.Resource.Attribute.foregroundInsidePadding;
+			global::Lottie.Forms.Resource.Attribute.gapBetweenBars = global::VYRMobile.Droid.Resource.Attribute.gapBetweenBars;
+			global::Lottie.Forms.Resource.Attribute.goIcon = global::VYRMobile.Droid.Resource.Attribute.goIcon;
+			global::Lottie.Forms.Resource.Attribute.headerLayout = global::VYRMobile.Droid.Resource.Attribute.headerLayout;
+			global::Lottie.Forms.Resource.Attribute.height = global::VYRMobile.Droid.Resource.Attribute.height;
+			global::Lottie.Forms.Resource.Attribute.helperText = global::VYRMobile.Droid.Resource.Attribute.helperText;
+			global::Lottie.Forms.Resource.Attribute.helperTextEnabled = global::VYRMobile.Droid.Resource.Attribute.helperTextEnabled;
+			global::Lottie.Forms.Resource.Attribute.helperTextTextAppearance = global::VYRMobile.Droid.Resource.Attribute.helperTextTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.hideMotionSpec = global::VYRMobile.Droid.Resource.Attribute.hideMotionSpec;
+			global::Lottie.Forms.Resource.Attribute.hideOnContentScroll = global::VYRMobile.Droid.Resource.Attribute.hideOnContentScroll;
+			global::Lottie.Forms.Resource.Attribute.hideOnScroll = global::VYRMobile.Droid.Resource.Attribute.hideOnScroll;
+			global::Lottie.Forms.Resource.Attribute.hintAnimationEnabled = global::VYRMobile.Droid.Resource.Attribute.hintAnimationEnabled;
+			global::Lottie.Forms.Resource.Attribute.hintEnabled = global::VYRMobile.Droid.Resource.Attribute.hintEnabled;
+			global::Lottie.Forms.Resource.Attribute.hintTextAppearance = global::VYRMobile.Droid.Resource.Attribute.hintTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.homeAsUpIndicator = global::VYRMobile.Droid.Resource.Attribute.homeAsUpIndicator;
+			global::Lottie.Forms.Resource.Attribute.homeLayout = global::VYRMobile.Droid.Resource.Attribute.homeLayout;
+			global::Lottie.Forms.Resource.Attribute.hoveredFocusedTranslationZ = global::VYRMobile.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
+			global::Lottie.Forms.Resource.Attribute.icon = global::VYRMobile.Droid.Resource.Attribute.icon;
+			global::Lottie.Forms.Resource.Attribute.iconEndPadding = global::VYRMobile.Droid.Resource.Attribute.iconEndPadding;
+			global::Lottie.Forms.Resource.Attribute.iconGravity = global::VYRMobile.Droid.Resource.Attribute.iconGravity;
+			global::Lottie.Forms.Resource.Attribute.iconifiedByDefault = global::VYRMobile.Droid.Resource.Attribute.iconifiedByDefault;
+			global::Lottie.Forms.Resource.Attribute.iconPadding = global::VYRMobile.Droid.Resource.Attribute.iconPadding;
+			global::Lottie.Forms.Resource.Attribute.iconSize = global::VYRMobile.Droid.Resource.Attribute.iconSize;
+			global::Lottie.Forms.Resource.Attribute.iconStartPadding = global::VYRMobile.Droid.Resource.Attribute.iconStartPadding;
+			global::Lottie.Forms.Resource.Attribute.iconTint = global::VYRMobile.Droid.Resource.Attribute.iconTint;
+			global::Lottie.Forms.Resource.Attribute.iconTintMode = global::VYRMobile.Droid.Resource.Attribute.iconTintMode;
+			global::Lottie.Forms.Resource.Attribute.imageButtonStyle = global::VYRMobile.Droid.Resource.Attribute.imageButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.indeterminateProgressStyle = global::VYRMobile.Droid.Resource.Attribute.indeterminateProgressStyle;
+			global::Lottie.Forms.Resource.Attribute.initialActivityCount = global::VYRMobile.Droid.Resource.Attribute.initialActivityCount;
+			global::Lottie.Forms.Resource.Attribute.insetForeground = global::VYRMobile.Droid.Resource.Attribute.insetForeground;
+			global::Lottie.Forms.Resource.Attribute.isLightTheme = global::VYRMobile.Droid.Resource.Attribute.isLightTheme;
+			global::Lottie.Forms.Resource.Attribute.itemBackground = global::VYRMobile.Droid.Resource.Attribute.itemBackground;
+			global::Lottie.Forms.Resource.Attribute.itemHorizontalPadding = global::VYRMobile.Droid.Resource.Attribute.itemHorizontalPadding;
+			global::Lottie.Forms.Resource.Attribute.itemHorizontalTranslationEnabled = global::VYRMobile.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
+			global::Lottie.Forms.Resource.Attribute.itemIconPadding = global::VYRMobile.Droid.Resource.Attribute.itemIconPadding;
+			global::Lottie.Forms.Resource.Attribute.itemIconSize = global::VYRMobile.Droid.Resource.Attribute.itemIconSize;
+			global::Lottie.Forms.Resource.Attribute.itemIconTint = global::VYRMobile.Droid.Resource.Attribute.itemIconTint;
+			global::Lottie.Forms.Resource.Attribute.itemPadding = global::VYRMobile.Droid.Resource.Attribute.itemPadding;
+			global::Lottie.Forms.Resource.Attribute.itemSpacing = global::VYRMobile.Droid.Resource.Attribute.itemSpacing;
+			global::Lottie.Forms.Resource.Attribute.itemTextAppearance = global::VYRMobile.Droid.Resource.Attribute.itemTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.itemTextAppearanceActive = global::VYRMobile.Droid.Resource.Attribute.itemTextAppearanceActive;
+			global::Lottie.Forms.Resource.Attribute.itemTextAppearanceInactive = global::VYRMobile.Droid.Resource.Attribute.itemTextAppearanceInactive;
+			global::Lottie.Forms.Resource.Attribute.itemTextColor = global::VYRMobile.Droid.Resource.Attribute.itemTextColor;
+			global::Lottie.Forms.Resource.Attribute.keylines = global::VYRMobile.Droid.Resource.Attribute.keylines;
+			global::Lottie.Forms.Resource.Attribute.labelVisibilityMode = global::VYRMobile.Droid.Resource.Attribute.labelVisibilityMode;
+			global::Lottie.Forms.Resource.Attribute.lastBaselineToBottomHeight = global::VYRMobile.Droid.Resource.Attribute.lastBaselineToBottomHeight;
+			global::Lottie.Forms.Resource.Attribute.layout = global::VYRMobile.Droid.Resource.Attribute.layout;
+			global::Lottie.Forms.Resource.Attribute.layoutManager = global::VYRMobile.Droid.Resource.Attribute.layoutManager;
+			global::Lottie.Forms.Resource.Attribute.layout_anchor = global::VYRMobile.Droid.Resource.Attribute.layout_anchor;
+			global::Lottie.Forms.Resource.Attribute.layout_anchorGravity = global::VYRMobile.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Lottie.Forms.Resource.Attribute.layout_behavior = global::VYRMobile.Droid.Resource.Attribute.layout_behavior;
+			global::Lottie.Forms.Resource.Attribute.layout_collapseMode = global::VYRMobile.Droid.Resource.Attribute.layout_collapseMode;
+			global::Lottie.Forms.Resource.Attribute.layout_collapseParallaxMultiplier = global::VYRMobile.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
+			global::Lottie.Forms.Resource.Attribute.layout_dodgeInsetEdges = global::VYRMobile.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Lottie.Forms.Resource.Attribute.layout_insetEdge = global::VYRMobile.Droid.Resource.Attribute.layout_insetEdge;
+			global::Lottie.Forms.Resource.Attribute.layout_keyline = global::VYRMobile.Droid.Resource.Attribute.layout_keyline;
+			global::Lottie.Forms.Resource.Attribute.layout_scrollFlags = global::VYRMobile.Droid.Resource.Attribute.layout_scrollFlags;
+			global::Lottie.Forms.Resource.Attribute.layout_scrollInterpolator = global::VYRMobile.Droid.Resource.Attribute.layout_scrollInterpolator;
+			global::Lottie.Forms.Resource.Attribute.liftOnScroll = global::VYRMobile.Droid.Resource.Attribute.liftOnScroll;
+			global::Lottie.Forms.Resource.Attribute.lineHeight = global::VYRMobile.Droid.Resource.Attribute.lineHeight;
+			global::Lottie.Forms.Resource.Attribute.lineSpacing = global::VYRMobile.Droid.Resource.Attribute.lineSpacing;
+			global::Lottie.Forms.Resource.Attribute.listChoiceBackgroundIndicator = global::VYRMobile.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
+			global::Lottie.Forms.Resource.Attribute.listDividerAlertDialog = global::VYRMobile.Droid.Resource.Attribute.listDividerAlertDialog;
+			global::Lottie.Forms.Resource.Attribute.listItemLayout = global::VYRMobile.Droid.Resource.Attribute.listItemLayout;
+			global::Lottie.Forms.Resource.Attribute.listLayout = global::VYRMobile.Droid.Resource.Attribute.listLayout;
+			global::Lottie.Forms.Resource.Attribute.listMenuViewStyle = global::VYRMobile.Droid.Resource.Attribute.listMenuViewStyle;
+			global::Lottie.Forms.Resource.Attribute.listPopupWindowStyle = global::VYRMobile.Droid.Resource.Attribute.listPopupWindowStyle;
+			global::Lottie.Forms.Resource.Attribute.listPreferredItemHeight = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemHeight;
+			global::Lottie.Forms.Resource.Attribute.listPreferredItemHeightLarge = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemHeightLarge;
+			global::Lottie.Forms.Resource.Attribute.listPreferredItemHeightSmall = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemHeightSmall;
+			global::Lottie.Forms.Resource.Attribute.listPreferredItemPaddingLeft = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
+			global::Lottie.Forms.Resource.Attribute.listPreferredItemPaddingRight = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemPaddingRight;
+			global::Lottie.Forms.Resource.Attribute.logo = global::VYRMobile.Droid.Resource.Attribute.logo;
+			global::Lottie.Forms.Resource.Attribute.logoDescription = global::VYRMobile.Droid.Resource.Attribute.logoDescription;
+			global::Lottie.Forms.Resource.Attribute.lottie_autoPlay = global::VYRMobile.Droid.Resource.Attribute.lottie_autoPlay;
+			global::Lottie.Forms.Resource.Attribute.lottie_colorFilter = global::VYRMobile.Droid.Resource.Attribute.lottie_colorFilter;
+			global::Lottie.Forms.Resource.Attribute.lottie_enableMergePathsForKitKatAndAbove = global::VYRMobile.Droid.Resource.Attribute.lottie_enableMergePathsForKitKatAndAbove;
+			global::Lottie.Forms.Resource.Attribute.lottie_fileName = global::VYRMobile.Droid.Resource.Attribute.lottie_fileName;
+			global::Lottie.Forms.Resource.Attribute.lottie_imageAssetsFolder = global::VYRMobile.Droid.Resource.Attribute.lottie_imageAssetsFolder;
+			global::Lottie.Forms.Resource.Attribute.lottie_loop = global::VYRMobile.Droid.Resource.Attribute.lottie_loop;
+			global::Lottie.Forms.Resource.Attribute.lottie_progress = global::VYRMobile.Droid.Resource.Attribute.lottie_progress;
+			global::Lottie.Forms.Resource.Attribute.lottie_rawRes = global::VYRMobile.Droid.Resource.Attribute.lottie_rawRes;
+			global::Lottie.Forms.Resource.Attribute.lottie_renderMode = global::VYRMobile.Droid.Resource.Attribute.lottie_renderMode;
+			global::Lottie.Forms.Resource.Attribute.lottie_repeatCount = global::VYRMobile.Droid.Resource.Attribute.lottie_repeatCount;
+			global::Lottie.Forms.Resource.Attribute.lottie_repeatMode = global::VYRMobile.Droid.Resource.Attribute.lottie_repeatMode;
+			global::Lottie.Forms.Resource.Attribute.lottie_scale = global::VYRMobile.Droid.Resource.Attribute.lottie_scale;
+			global::Lottie.Forms.Resource.Attribute.lottie_speed = global::VYRMobile.Droid.Resource.Attribute.lottie_speed;
+			global::Lottie.Forms.Resource.Attribute.lottie_url = global::VYRMobile.Droid.Resource.Attribute.lottie_url;
+			global::Lottie.Forms.Resource.Attribute.materialButtonStyle = global::VYRMobile.Droid.Resource.Attribute.materialButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.materialCardViewStyle = global::VYRMobile.Droid.Resource.Attribute.materialCardViewStyle;
+			global::Lottie.Forms.Resource.Attribute.maxActionInlineWidth = global::VYRMobile.Droid.Resource.Attribute.maxActionInlineWidth;
+			global::Lottie.Forms.Resource.Attribute.maxButtonHeight = global::VYRMobile.Droid.Resource.Attribute.maxButtonHeight;
+			global::Lottie.Forms.Resource.Attribute.maxImageSize = global::VYRMobile.Droid.Resource.Attribute.maxImageSize;
+			global::Lottie.Forms.Resource.Attribute.measureWithLargestChild = global::VYRMobile.Droid.Resource.Attribute.measureWithLargestChild;
+			global::Lottie.Forms.Resource.Attribute.menu = global::VYRMobile.Droid.Resource.Attribute.menu;
+			global::Lottie.Forms.Resource.Attribute.multiChoiceItemLayout = global::VYRMobile.Droid.Resource.Attribute.multiChoiceItemLayout;
+			global::Lottie.Forms.Resource.Attribute.navigationContentDescription = global::VYRMobile.Droid.Resource.Attribute.navigationContentDescription;
+			global::Lottie.Forms.Resource.Attribute.navigationIcon = global::VYRMobile.Droid.Resource.Attribute.navigationIcon;
+			global::Lottie.Forms.Resource.Attribute.navigationMode = global::VYRMobile.Droid.Resource.Attribute.navigationMode;
+			global::Lottie.Forms.Resource.Attribute.navigationViewStyle = global::VYRMobile.Droid.Resource.Attribute.navigationViewStyle;
+			global::Lottie.Forms.Resource.Attribute.numericModifiers = global::VYRMobile.Droid.Resource.Attribute.numericModifiers;
+			global::Lottie.Forms.Resource.Attribute.overlapAnchor = global::VYRMobile.Droid.Resource.Attribute.overlapAnchor;
+			global::Lottie.Forms.Resource.Attribute.paddingBottomNoButtons = global::VYRMobile.Droid.Resource.Attribute.paddingBottomNoButtons;
+			global::Lottie.Forms.Resource.Attribute.paddingEnd = global::VYRMobile.Droid.Resource.Attribute.paddingEnd;
+			global::Lottie.Forms.Resource.Attribute.paddingStart = global::VYRMobile.Droid.Resource.Attribute.paddingStart;
+			global::Lottie.Forms.Resource.Attribute.paddingTopNoTitle = global::VYRMobile.Droid.Resource.Attribute.paddingTopNoTitle;
+			global::Lottie.Forms.Resource.Attribute.panelBackground = global::VYRMobile.Droid.Resource.Attribute.panelBackground;
+			global::Lottie.Forms.Resource.Attribute.panelMenuListTheme = global::VYRMobile.Droid.Resource.Attribute.panelMenuListTheme;
+			global::Lottie.Forms.Resource.Attribute.panelMenuListWidth = global::VYRMobile.Droid.Resource.Attribute.panelMenuListWidth;
+			global::Lottie.Forms.Resource.Attribute.passwordToggleContentDescription = global::VYRMobile.Droid.Resource.Attribute.passwordToggleContentDescription;
+			global::Lottie.Forms.Resource.Attribute.passwordToggleDrawable = global::VYRMobile.Droid.Resource.Attribute.passwordToggleDrawable;
+			global::Lottie.Forms.Resource.Attribute.passwordToggleEnabled = global::VYRMobile.Droid.Resource.Attribute.passwordToggleEnabled;
+			global::Lottie.Forms.Resource.Attribute.passwordToggleTint = global::VYRMobile.Droid.Resource.Attribute.passwordToggleTint;
+			global::Lottie.Forms.Resource.Attribute.passwordToggleTintMode = global::VYRMobile.Droid.Resource.Attribute.passwordToggleTintMode;
+			global::Lottie.Forms.Resource.Attribute.popupMenuStyle = global::VYRMobile.Droid.Resource.Attribute.popupMenuStyle;
+			global::Lottie.Forms.Resource.Attribute.popupTheme = global::VYRMobile.Droid.Resource.Attribute.popupTheme;
+			global::Lottie.Forms.Resource.Attribute.popupWindowStyle = global::VYRMobile.Droid.Resource.Attribute.popupWindowStyle;
+			global::Lottie.Forms.Resource.Attribute.preserveIconSpacing = global::VYRMobile.Droid.Resource.Attribute.preserveIconSpacing;
+			global::Lottie.Forms.Resource.Attribute.pressedTranslationZ = global::VYRMobile.Droid.Resource.Attribute.pressedTranslationZ;
+			global::Lottie.Forms.Resource.Attribute.progressBarPadding = global::VYRMobile.Droid.Resource.Attribute.progressBarPadding;
+			global::Lottie.Forms.Resource.Attribute.progressBarStyle = global::VYRMobile.Droid.Resource.Attribute.progressBarStyle;
+			global::Lottie.Forms.Resource.Attribute.queryBackground = global::VYRMobile.Droid.Resource.Attribute.queryBackground;
+			global::Lottie.Forms.Resource.Attribute.queryHint = global::VYRMobile.Droid.Resource.Attribute.queryHint;
+			global::Lottie.Forms.Resource.Attribute.radioButtonStyle = global::VYRMobile.Droid.Resource.Attribute.radioButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.ratingBarStyle = global::VYRMobile.Droid.Resource.Attribute.ratingBarStyle;
+			global::Lottie.Forms.Resource.Attribute.ratingBarStyleIndicator = global::VYRMobile.Droid.Resource.Attribute.ratingBarStyleIndicator;
+			global::Lottie.Forms.Resource.Attribute.ratingBarStyleSmall = global::VYRMobile.Droid.Resource.Attribute.ratingBarStyleSmall;
+			global::Lottie.Forms.Resource.Attribute.reverseLayout = global::VYRMobile.Droid.Resource.Attribute.reverseLayout;
+			global::Lottie.Forms.Resource.Attribute.rippleColor = global::VYRMobile.Droid.Resource.Attribute.rippleColor;
+			global::Lottie.Forms.Resource.Attribute.scrimAnimationDuration = global::VYRMobile.Droid.Resource.Attribute.scrimAnimationDuration;
+			global::Lottie.Forms.Resource.Attribute.scrimBackground = global::VYRMobile.Droid.Resource.Attribute.scrimBackground;
+			global::Lottie.Forms.Resource.Attribute.scrimVisibleHeightTrigger = global::VYRMobile.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
+			global::Lottie.Forms.Resource.Attribute.searchHintIcon = global::VYRMobile.Droid.Resource.Attribute.searchHintIcon;
+			global::Lottie.Forms.Resource.Attribute.searchIcon = global::VYRMobile.Droid.Resource.Attribute.searchIcon;
+			global::Lottie.Forms.Resource.Attribute.searchViewStyle = global::VYRMobile.Droid.Resource.Attribute.searchViewStyle;
+			global::Lottie.Forms.Resource.Attribute.seekBarStyle = global::VYRMobile.Droid.Resource.Attribute.seekBarStyle;
+			global::Lottie.Forms.Resource.Attribute.selectableItemBackground = global::VYRMobile.Droid.Resource.Attribute.selectableItemBackground;
+			global::Lottie.Forms.Resource.Attribute.selectableItemBackgroundBorderless = global::VYRMobile.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
+			global::Lottie.Forms.Resource.Attribute.showAsAction = global::VYRMobile.Droid.Resource.Attribute.showAsAction;
+			global::Lottie.Forms.Resource.Attribute.showDividers = global::VYRMobile.Droid.Resource.Attribute.showDividers;
+			global::Lottie.Forms.Resource.Attribute.showMotionSpec = global::VYRMobile.Droid.Resource.Attribute.showMotionSpec;
+			global::Lottie.Forms.Resource.Attribute.showText = global::VYRMobile.Droid.Resource.Attribute.showText;
+			global::Lottie.Forms.Resource.Attribute.showTitle = global::VYRMobile.Droid.Resource.Attribute.showTitle;
+			global::Lottie.Forms.Resource.Attribute.singleChoiceItemLayout = global::VYRMobile.Droid.Resource.Attribute.singleChoiceItemLayout;
+			global::Lottie.Forms.Resource.Attribute.singleLine = global::VYRMobile.Droid.Resource.Attribute.singleLine;
+			global::Lottie.Forms.Resource.Attribute.singleSelection = global::VYRMobile.Droid.Resource.Attribute.singleSelection;
+			global::Lottie.Forms.Resource.Attribute.snackbarButtonStyle = global::VYRMobile.Droid.Resource.Attribute.snackbarButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.snackbarStyle = global::VYRMobile.Droid.Resource.Attribute.snackbarStyle;
+			global::Lottie.Forms.Resource.Attribute.spanCount = global::VYRMobile.Droid.Resource.Attribute.spanCount;
+			global::Lottie.Forms.Resource.Attribute.spinBars = global::VYRMobile.Droid.Resource.Attribute.spinBars;
+			global::Lottie.Forms.Resource.Attribute.spinnerDropDownItemStyle = global::VYRMobile.Droid.Resource.Attribute.spinnerDropDownItemStyle;
+			global::Lottie.Forms.Resource.Attribute.spinnerStyle = global::VYRMobile.Droid.Resource.Attribute.spinnerStyle;
+			global::Lottie.Forms.Resource.Attribute.splitTrack = global::VYRMobile.Droid.Resource.Attribute.splitTrack;
+			global::Lottie.Forms.Resource.Attribute.srcCompat = global::VYRMobile.Droid.Resource.Attribute.srcCompat;
+			global::Lottie.Forms.Resource.Attribute.stackFromEnd = global::VYRMobile.Droid.Resource.Attribute.stackFromEnd;
+			global::Lottie.Forms.Resource.Attribute.state_above_anchor = global::VYRMobile.Droid.Resource.Attribute.state_above_anchor;
+			global::Lottie.Forms.Resource.Attribute.state_collapsed = global::VYRMobile.Droid.Resource.Attribute.state_collapsed;
+			global::Lottie.Forms.Resource.Attribute.state_collapsible = global::VYRMobile.Droid.Resource.Attribute.state_collapsible;
+			global::Lottie.Forms.Resource.Attribute.state_liftable = global::VYRMobile.Droid.Resource.Attribute.state_liftable;
+			global::Lottie.Forms.Resource.Attribute.state_lifted = global::VYRMobile.Droid.Resource.Attribute.state_lifted;
+			global::Lottie.Forms.Resource.Attribute.statusBarBackground = global::VYRMobile.Droid.Resource.Attribute.statusBarBackground;
+			global::Lottie.Forms.Resource.Attribute.statusBarScrim = global::VYRMobile.Droid.Resource.Attribute.statusBarScrim;
+			global::Lottie.Forms.Resource.Attribute.strokeColor = global::VYRMobile.Droid.Resource.Attribute.strokeColor;
+			global::Lottie.Forms.Resource.Attribute.strokeWidth = global::VYRMobile.Droid.Resource.Attribute.strokeWidth;
+			global::Lottie.Forms.Resource.Attribute.subMenuArrow = global::VYRMobile.Droid.Resource.Attribute.subMenuArrow;
+			global::Lottie.Forms.Resource.Attribute.submitBackground = global::VYRMobile.Droid.Resource.Attribute.submitBackground;
+			global::Lottie.Forms.Resource.Attribute.subtitle = global::VYRMobile.Droid.Resource.Attribute.subtitle;
+			global::Lottie.Forms.Resource.Attribute.subtitleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.subtitleTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.subtitleTextColor = global::VYRMobile.Droid.Resource.Attribute.subtitleTextColor;
+			global::Lottie.Forms.Resource.Attribute.subtitleTextStyle = global::VYRMobile.Droid.Resource.Attribute.subtitleTextStyle;
+			global::Lottie.Forms.Resource.Attribute.suggestionRowLayout = global::VYRMobile.Droid.Resource.Attribute.suggestionRowLayout;
+			global::Lottie.Forms.Resource.Attribute.switchMinWidth = global::VYRMobile.Droid.Resource.Attribute.switchMinWidth;
+			global::Lottie.Forms.Resource.Attribute.switchPadding = global::VYRMobile.Droid.Resource.Attribute.switchPadding;
+			global::Lottie.Forms.Resource.Attribute.switchStyle = global::VYRMobile.Droid.Resource.Attribute.switchStyle;
+			global::Lottie.Forms.Resource.Attribute.switchTextAppearance = global::VYRMobile.Droid.Resource.Attribute.switchTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.tabBackground = global::VYRMobile.Droid.Resource.Attribute.tabBackground;
+			global::Lottie.Forms.Resource.Attribute.tabContentStart = global::VYRMobile.Droid.Resource.Attribute.tabContentStart;
+			global::Lottie.Forms.Resource.Attribute.tabGravity = global::VYRMobile.Droid.Resource.Attribute.tabGravity;
+			global::Lottie.Forms.Resource.Attribute.tabIconTint = global::VYRMobile.Droid.Resource.Attribute.tabIconTint;
+			global::Lottie.Forms.Resource.Attribute.tabIconTintMode = global::VYRMobile.Droid.Resource.Attribute.tabIconTintMode;
+			global::Lottie.Forms.Resource.Attribute.tabIndicator = global::VYRMobile.Droid.Resource.Attribute.tabIndicator;
+			global::Lottie.Forms.Resource.Attribute.tabIndicatorAnimationDuration = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
+			global::Lottie.Forms.Resource.Attribute.tabIndicatorColor = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorColor;
+			global::Lottie.Forms.Resource.Attribute.tabIndicatorFullWidth = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorFullWidth;
+			global::Lottie.Forms.Resource.Attribute.tabIndicatorGravity = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorGravity;
+			global::Lottie.Forms.Resource.Attribute.tabIndicatorHeight = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorHeight;
+			global::Lottie.Forms.Resource.Attribute.tabInlineLabel = global::VYRMobile.Droid.Resource.Attribute.tabInlineLabel;
+			global::Lottie.Forms.Resource.Attribute.tabMaxWidth = global::VYRMobile.Droid.Resource.Attribute.tabMaxWidth;
+			global::Lottie.Forms.Resource.Attribute.tabMinWidth = global::VYRMobile.Droid.Resource.Attribute.tabMinWidth;
+			global::Lottie.Forms.Resource.Attribute.tabMode = global::VYRMobile.Droid.Resource.Attribute.tabMode;
+			global::Lottie.Forms.Resource.Attribute.tabPadding = global::VYRMobile.Droid.Resource.Attribute.tabPadding;
+			global::Lottie.Forms.Resource.Attribute.tabPaddingBottom = global::VYRMobile.Droid.Resource.Attribute.tabPaddingBottom;
+			global::Lottie.Forms.Resource.Attribute.tabPaddingEnd = global::VYRMobile.Droid.Resource.Attribute.tabPaddingEnd;
+			global::Lottie.Forms.Resource.Attribute.tabPaddingStart = global::VYRMobile.Droid.Resource.Attribute.tabPaddingStart;
+			global::Lottie.Forms.Resource.Attribute.tabPaddingTop = global::VYRMobile.Droid.Resource.Attribute.tabPaddingTop;
+			global::Lottie.Forms.Resource.Attribute.tabRippleColor = global::VYRMobile.Droid.Resource.Attribute.tabRippleColor;
+			global::Lottie.Forms.Resource.Attribute.tabSelectedTextColor = global::VYRMobile.Droid.Resource.Attribute.tabSelectedTextColor;
+			global::Lottie.Forms.Resource.Attribute.tabStyle = global::VYRMobile.Droid.Resource.Attribute.tabStyle;
+			global::Lottie.Forms.Resource.Attribute.tabTextAppearance = global::VYRMobile.Droid.Resource.Attribute.tabTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.tabTextColor = global::VYRMobile.Droid.Resource.Attribute.tabTextColor;
+			global::Lottie.Forms.Resource.Attribute.tabUnboundedRipple = global::VYRMobile.Droid.Resource.Attribute.tabUnboundedRipple;
+			global::Lottie.Forms.Resource.Attribute.textAllCaps = global::VYRMobile.Droid.Resource.Attribute.textAllCaps;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceBody1 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceBody1;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceBody2 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceBody2;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceButton = global::VYRMobile.Droid.Resource.Attribute.textAppearanceButton;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceCaption = global::VYRMobile.Droid.Resource.Attribute.textAppearanceCaption;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceHeadline1 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline1;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceHeadline2 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline2;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceHeadline3 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline3;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceHeadline4 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline4;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceHeadline5 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline5;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceHeadline6 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline6;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceLargePopupMenu = global::VYRMobile.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceListItem = global::VYRMobile.Droid.Resource.Attribute.textAppearanceListItem;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceListItemSecondary = global::VYRMobile.Droid.Resource.Attribute.textAppearanceListItemSecondary;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceListItemSmall = global::VYRMobile.Droid.Resource.Attribute.textAppearanceListItemSmall;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceOverline = global::VYRMobile.Droid.Resource.Attribute.textAppearanceOverline;
+			global::Lottie.Forms.Resource.Attribute.textAppearancePopupMenuHeader = global::VYRMobile.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceSearchResultSubtitle = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceSearchResultTitle = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceSmallPopupMenu = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceSubtitle1 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSubtitle1;
+			global::Lottie.Forms.Resource.Attribute.textAppearanceSubtitle2 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSubtitle2;
+			global::Lottie.Forms.Resource.Attribute.textColorAlertDialogListItem = global::VYRMobile.Droid.Resource.Attribute.textColorAlertDialogListItem;
+			global::Lottie.Forms.Resource.Attribute.textColorSearchUrl = global::VYRMobile.Droid.Resource.Attribute.textColorSearchUrl;
+			global::Lottie.Forms.Resource.Attribute.textEndPadding = global::VYRMobile.Droid.Resource.Attribute.textEndPadding;
+			global::Lottie.Forms.Resource.Attribute.textInputStyle = global::VYRMobile.Droid.Resource.Attribute.textInputStyle;
+			global::Lottie.Forms.Resource.Attribute.textStartPadding = global::VYRMobile.Droid.Resource.Attribute.textStartPadding;
+			global::Lottie.Forms.Resource.Attribute.theme = global::VYRMobile.Droid.Resource.Attribute.theme;
+			global::Lottie.Forms.Resource.Attribute.thickness = global::VYRMobile.Droid.Resource.Attribute.thickness;
+			global::Lottie.Forms.Resource.Attribute.thumbTextPadding = global::VYRMobile.Droid.Resource.Attribute.thumbTextPadding;
+			global::Lottie.Forms.Resource.Attribute.thumbTint = global::VYRMobile.Droid.Resource.Attribute.thumbTint;
+			global::Lottie.Forms.Resource.Attribute.thumbTintMode = global::VYRMobile.Droid.Resource.Attribute.thumbTintMode;
+			global::Lottie.Forms.Resource.Attribute.tickMark = global::VYRMobile.Droid.Resource.Attribute.tickMark;
+			global::Lottie.Forms.Resource.Attribute.tickMarkTint = global::VYRMobile.Droid.Resource.Attribute.tickMarkTint;
+			global::Lottie.Forms.Resource.Attribute.tickMarkTintMode = global::VYRMobile.Droid.Resource.Attribute.tickMarkTintMode;
+			global::Lottie.Forms.Resource.Attribute.tint = global::VYRMobile.Droid.Resource.Attribute.tint;
+			global::Lottie.Forms.Resource.Attribute.tintMode = global::VYRMobile.Droid.Resource.Attribute.tintMode;
+			global::Lottie.Forms.Resource.Attribute.title = global::VYRMobile.Droid.Resource.Attribute.title;
+			global::Lottie.Forms.Resource.Attribute.titleEnabled = global::VYRMobile.Droid.Resource.Attribute.titleEnabled;
+			global::Lottie.Forms.Resource.Attribute.titleMargin = global::VYRMobile.Droid.Resource.Attribute.titleMargin;
+			global::Lottie.Forms.Resource.Attribute.titleMarginBottom = global::VYRMobile.Droid.Resource.Attribute.titleMarginBottom;
+			global::Lottie.Forms.Resource.Attribute.titleMarginEnd = global::VYRMobile.Droid.Resource.Attribute.titleMarginEnd;
+			global::Lottie.Forms.Resource.Attribute.titleMargins = global::VYRMobile.Droid.Resource.Attribute.titleMargins;
+			global::Lottie.Forms.Resource.Attribute.titleMarginStart = global::VYRMobile.Droid.Resource.Attribute.titleMarginStart;
+			global::Lottie.Forms.Resource.Attribute.titleMarginTop = global::VYRMobile.Droid.Resource.Attribute.titleMarginTop;
+			global::Lottie.Forms.Resource.Attribute.titleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.titleTextAppearance;
+			global::Lottie.Forms.Resource.Attribute.titleTextColor = global::VYRMobile.Droid.Resource.Attribute.titleTextColor;
+			global::Lottie.Forms.Resource.Attribute.titleTextStyle = global::VYRMobile.Droid.Resource.Attribute.titleTextStyle;
+			global::Lottie.Forms.Resource.Attribute.toolbarId = global::VYRMobile.Droid.Resource.Attribute.toolbarId;
+			global::Lottie.Forms.Resource.Attribute.toolbarNavigationButtonStyle = global::VYRMobile.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
+			global::Lottie.Forms.Resource.Attribute.toolbarStyle = global::VYRMobile.Droid.Resource.Attribute.toolbarStyle;
+			global::Lottie.Forms.Resource.Attribute.tooltipForegroundColor = global::VYRMobile.Droid.Resource.Attribute.tooltipForegroundColor;
+			global::Lottie.Forms.Resource.Attribute.tooltipFrameBackground = global::VYRMobile.Droid.Resource.Attribute.tooltipFrameBackground;
+			global::Lottie.Forms.Resource.Attribute.tooltipText = global::VYRMobile.Droid.Resource.Attribute.tooltipText;
+			global::Lottie.Forms.Resource.Attribute.track = global::VYRMobile.Droid.Resource.Attribute.track;
+			global::Lottie.Forms.Resource.Attribute.trackTint = global::VYRMobile.Droid.Resource.Attribute.trackTint;
+			global::Lottie.Forms.Resource.Attribute.trackTintMode = global::VYRMobile.Droid.Resource.Attribute.trackTintMode;
+			global::Lottie.Forms.Resource.Attribute.ttcIndex = global::VYRMobile.Droid.Resource.Attribute.ttcIndex;
+			global::Lottie.Forms.Resource.Attribute.useCompatPadding = global::VYRMobile.Droid.Resource.Attribute.useCompatPadding;
+			global::Lottie.Forms.Resource.Attribute.viewInflaterClass = global::VYRMobile.Droid.Resource.Attribute.viewInflaterClass;
+			global::Lottie.Forms.Resource.Attribute.voiceIcon = global::VYRMobile.Droid.Resource.Attribute.voiceIcon;
+			global::Lottie.Forms.Resource.Attribute.windowActionBar = global::VYRMobile.Droid.Resource.Attribute.windowActionBar;
+			global::Lottie.Forms.Resource.Attribute.windowActionBarOverlay = global::VYRMobile.Droid.Resource.Attribute.windowActionBarOverlay;
+			global::Lottie.Forms.Resource.Attribute.windowActionModeOverlay = global::VYRMobile.Droid.Resource.Attribute.windowActionModeOverlay;
+			global::Lottie.Forms.Resource.Attribute.windowFixedHeightMajor = global::VYRMobile.Droid.Resource.Attribute.windowFixedHeightMajor;
+			global::Lottie.Forms.Resource.Attribute.windowFixedHeightMinor = global::VYRMobile.Droid.Resource.Attribute.windowFixedHeightMinor;
+			global::Lottie.Forms.Resource.Attribute.windowFixedWidthMajor = global::VYRMobile.Droid.Resource.Attribute.windowFixedWidthMajor;
+			global::Lottie.Forms.Resource.Attribute.windowFixedWidthMinor = global::VYRMobile.Droid.Resource.Attribute.windowFixedWidthMinor;
+			global::Lottie.Forms.Resource.Attribute.windowMinWidthMajor = global::VYRMobile.Droid.Resource.Attribute.windowMinWidthMajor;
+			global::Lottie.Forms.Resource.Attribute.windowMinWidthMinor = global::VYRMobile.Droid.Resource.Attribute.windowMinWidthMinor;
+			global::Lottie.Forms.Resource.Attribute.windowNoTitle = global::VYRMobile.Droid.Resource.Attribute.windowNoTitle;
+			global::Lottie.Forms.Resource.Boolean.abc_action_bar_embed_tabs = global::VYRMobile.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Lottie.Forms.Resource.Boolean.abc_allow_stacked_button_bar = global::VYRMobile.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
+			global::Lottie.Forms.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::VYRMobile.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
+			global::Lottie.Forms.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::VYRMobile.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
+			global::Lottie.Forms.Resource.Color.abc_background_cache_hint_selector_material_dark = global::VYRMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
+			global::Lottie.Forms.Resource.Color.abc_background_cache_hint_selector_material_light = global::VYRMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
+			global::Lottie.Forms.Resource.Color.abc_btn_colored_borderless_text_material = global::VYRMobile.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
+			global::Lottie.Forms.Resource.Color.abc_btn_colored_text_material = global::VYRMobile.Droid.Resource.Color.abc_btn_colored_text_material;
+			global::Lottie.Forms.Resource.Color.abc_color_highlight_material = global::VYRMobile.Droid.Resource.Color.abc_color_highlight_material;
+			global::Lottie.Forms.Resource.Color.abc_hint_foreground_material_dark = global::VYRMobile.Droid.Resource.Color.abc_hint_foreground_material_dark;
+			global::Lottie.Forms.Resource.Color.abc_hint_foreground_material_light = global::VYRMobile.Droid.Resource.Color.abc_hint_foreground_material_light;
+			global::Lottie.Forms.Resource.Color.abc_input_method_navigation_guard = global::VYRMobile.Droid.Resource.Color.abc_input_method_navigation_guard;
+			global::Lottie.Forms.Resource.Color.abc_primary_text_disable_only_material_dark = global::VYRMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
+			global::Lottie.Forms.Resource.Color.abc_primary_text_disable_only_material_light = global::VYRMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
+			global::Lottie.Forms.Resource.Color.abc_primary_text_material_dark = global::VYRMobile.Droid.Resource.Color.abc_primary_text_material_dark;
+			global::Lottie.Forms.Resource.Color.abc_primary_text_material_light = global::VYRMobile.Droid.Resource.Color.abc_primary_text_material_light;
+			global::Lottie.Forms.Resource.Color.abc_search_url_text = global::VYRMobile.Droid.Resource.Color.abc_search_url_text;
+			global::Lottie.Forms.Resource.Color.abc_search_url_text_normal = global::VYRMobile.Droid.Resource.Color.abc_search_url_text_normal;
+			global::Lottie.Forms.Resource.Color.abc_search_url_text_pressed = global::VYRMobile.Droid.Resource.Color.abc_search_url_text_pressed;
+			global::Lottie.Forms.Resource.Color.abc_search_url_text_selected = global::VYRMobile.Droid.Resource.Color.abc_search_url_text_selected;
+			global::Lottie.Forms.Resource.Color.abc_secondary_text_material_dark = global::VYRMobile.Droid.Resource.Color.abc_secondary_text_material_dark;
+			global::Lottie.Forms.Resource.Color.abc_secondary_text_material_light = global::VYRMobile.Droid.Resource.Color.abc_secondary_text_material_light;
+			global::Lottie.Forms.Resource.Color.abc_tint_btn_checkable = global::VYRMobile.Droid.Resource.Color.abc_tint_btn_checkable;
+			global::Lottie.Forms.Resource.Color.abc_tint_default = global::VYRMobile.Droid.Resource.Color.abc_tint_default;
+			global::Lottie.Forms.Resource.Color.abc_tint_edittext = global::VYRMobile.Droid.Resource.Color.abc_tint_edittext;
+			global::Lottie.Forms.Resource.Color.abc_tint_seek_thumb = global::VYRMobile.Droid.Resource.Color.abc_tint_seek_thumb;
+			global::Lottie.Forms.Resource.Color.abc_tint_spinner = global::VYRMobile.Droid.Resource.Color.abc_tint_spinner;
+			global::Lottie.Forms.Resource.Color.abc_tint_switch_track = global::VYRMobile.Droid.Resource.Color.abc_tint_switch_track;
+			global::Lottie.Forms.Resource.Color.accent_material_dark = global::VYRMobile.Droid.Resource.Color.accent_material_dark;
+			global::Lottie.Forms.Resource.Color.accent_material_light = global::VYRMobile.Droid.Resource.Color.accent_material_light;
+			global::Lottie.Forms.Resource.Color.background_floating_material_dark = global::VYRMobile.Droid.Resource.Color.background_floating_material_dark;
+			global::Lottie.Forms.Resource.Color.background_floating_material_light = global::VYRMobile.Droid.Resource.Color.background_floating_material_light;
+			global::Lottie.Forms.Resource.Color.background_material_dark = global::VYRMobile.Droid.Resource.Color.background_material_dark;
+			global::Lottie.Forms.Resource.Color.background_material_light = global::VYRMobile.Droid.Resource.Color.background_material_light;
+			global::Lottie.Forms.Resource.Color.bright_foreground_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.bright_foreground_disabled_material_dark;
+			global::Lottie.Forms.Resource.Color.bright_foreground_disabled_material_light = global::VYRMobile.Droid.Resource.Color.bright_foreground_disabled_material_light;
+			global::Lottie.Forms.Resource.Color.bright_foreground_inverse_material_dark = global::VYRMobile.Droid.Resource.Color.bright_foreground_inverse_material_dark;
+			global::Lottie.Forms.Resource.Color.bright_foreground_inverse_material_light = global::VYRMobile.Droid.Resource.Color.bright_foreground_inverse_material_light;
+			global::Lottie.Forms.Resource.Color.bright_foreground_material_dark = global::VYRMobile.Droid.Resource.Color.bright_foreground_material_dark;
+			global::Lottie.Forms.Resource.Color.bright_foreground_material_light = global::VYRMobile.Droid.Resource.Color.bright_foreground_material_light;
+			global::Lottie.Forms.Resource.Color.browser_actions_bg_grey = global::VYRMobile.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Lottie.Forms.Resource.Color.browser_actions_divider_color = global::VYRMobile.Droid.Resource.Color.browser_actions_divider_color;
+			global::Lottie.Forms.Resource.Color.browser_actions_text_color = global::VYRMobile.Droid.Resource.Color.browser_actions_text_color;
+			global::Lottie.Forms.Resource.Color.browser_actions_title_color = global::VYRMobile.Droid.Resource.Color.browser_actions_title_color;
+			global::Lottie.Forms.Resource.Color.button_material_dark = global::VYRMobile.Droid.Resource.Color.button_material_dark;
+			global::Lottie.Forms.Resource.Color.button_material_light = global::VYRMobile.Droid.Resource.Color.button_material_light;
+			global::Lottie.Forms.Resource.Color.cardview_dark_background = global::VYRMobile.Droid.Resource.Color.cardview_dark_background;
+			global::Lottie.Forms.Resource.Color.cardview_light_background = global::VYRMobile.Droid.Resource.Color.cardview_light_background;
+			global::Lottie.Forms.Resource.Color.cardview_shadow_end_color = global::VYRMobile.Droid.Resource.Color.cardview_shadow_end_color;
+			global::Lottie.Forms.Resource.Color.cardview_shadow_start_color = global::VYRMobile.Droid.Resource.Color.cardview_shadow_start_color;
+			global::Lottie.Forms.Resource.Color.design_bottom_navigation_shadow_color = global::VYRMobile.Droid.Resource.Color.design_bottom_navigation_shadow_color;
+			global::Lottie.Forms.Resource.Color.design_default_color_primary = global::VYRMobile.Droid.Resource.Color.design_default_color_primary;
+			global::Lottie.Forms.Resource.Color.design_default_color_primary_dark = global::VYRMobile.Droid.Resource.Color.design_default_color_primary_dark;
+			global::Lottie.Forms.Resource.Color.design_error = global::VYRMobile.Droid.Resource.Color.design_error;
+			global::Lottie.Forms.Resource.Color.design_fab_shadow_end_color = global::VYRMobile.Droid.Resource.Color.design_fab_shadow_end_color;
+			global::Lottie.Forms.Resource.Color.design_fab_shadow_mid_color = global::VYRMobile.Droid.Resource.Color.design_fab_shadow_mid_color;
+			global::Lottie.Forms.Resource.Color.design_fab_shadow_start_color = global::VYRMobile.Droid.Resource.Color.design_fab_shadow_start_color;
+			global::Lottie.Forms.Resource.Color.design_fab_stroke_end_inner_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_end_inner_color;
+			global::Lottie.Forms.Resource.Color.design_fab_stroke_end_outer_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_end_outer_color;
+			global::Lottie.Forms.Resource.Color.design_fab_stroke_top_inner_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_top_inner_color;
+			global::Lottie.Forms.Resource.Color.design_fab_stroke_top_outer_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_top_outer_color;
+			global::Lottie.Forms.Resource.Color.design_snackbar_background_color = global::VYRMobile.Droid.Resource.Color.design_snackbar_background_color;
+			global::Lottie.Forms.Resource.Color.design_tint_password_toggle = global::VYRMobile.Droid.Resource.Color.design_tint_password_toggle;
+			global::Lottie.Forms.Resource.Color.dim_foreground_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.dim_foreground_disabled_material_dark;
+			global::Lottie.Forms.Resource.Color.dim_foreground_disabled_material_light = global::VYRMobile.Droid.Resource.Color.dim_foreground_disabled_material_light;
+			global::Lottie.Forms.Resource.Color.dim_foreground_material_dark = global::VYRMobile.Droid.Resource.Color.dim_foreground_material_dark;
+			global::Lottie.Forms.Resource.Color.dim_foreground_material_light = global::VYRMobile.Droid.Resource.Color.dim_foreground_material_light;
+			global::Lottie.Forms.Resource.Color.error_color_material_dark = global::VYRMobile.Droid.Resource.Color.error_color_material_dark;
+			global::Lottie.Forms.Resource.Color.error_color_material_light = global::VYRMobile.Droid.Resource.Color.error_color_material_light;
+			global::Lottie.Forms.Resource.Color.foreground_material_dark = global::VYRMobile.Droid.Resource.Color.foreground_material_dark;
+			global::Lottie.Forms.Resource.Color.foreground_material_light = global::VYRMobile.Droid.Resource.Color.foreground_material_light;
+			global::Lottie.Forms.Resource.Color.highlighted_text_material_dark = global::VYRMobile.Droid.Resource.Color.highlighted_text_material_dark;
+			global::Lottie.Forms.Resource.Color.highlighted_text_material_light = global::VYRMobile.Droid.Resource.Color.highlighted_text_material_light;
+			global::Lottie.Forms.Resource.Color.material_blue_grey_800 = global::VYRMobile.Droid.Resource.Color.material_blue_grey_800;
+			global::Lottie.Forms.Resource.Color.material_blue_grey_900 = global::VYRMobile.Droid.Resource.Color.material_blue_grey_900;
+			global::Lottie.Forms.Resource.Color.material_blue_grey_950 = global::VYRMobile.Droid.Resource.Color.material_blue_grey_950;
+			global::Lottie.Forms.Resource.Color.material_deep_teal_200 = global::VYRMobile.Droid.Resource.Color.material_deep_teal_200;
+			global::Lottie.Forms.Resource.Color.material_deep_teal_500 = global::VYRMobile.Droid.Resource.Color.material_deep_teal_500;
+			global::Lottie.Forms.Resource.Color.material_grey_100 = global::VYRMobile.Droid.Resource.Color.material_grey_100;
+			global::Lottie.Forms.Resource.Color.material_grey_300 = global::VYRMobile.Droid.Resource.Color.material_grey_300;
+			global::Lottie.Forms.Resource.Color.material_grey_50 = global::VYRMobile.Droid.Resource.Color.material_grey_50;
+			global::Lottie.Forms.Resource.Color.material_grey_600 = global::VYRMobile.Droid.Resource.Color.material_grey_600;
+			global::Lottie.Forms.Resource.Color.material_grey_800 = global::VYRMobile.Droid.Resource.Color.material_grey_800;
+			global::Lottie.Forms.Resource.Color.material_grey_850 = global::VYRMobile.Droid.Resource.Color.material_grey_850;
+			global::Lottie.Forms.Resource.Color.material_grey_900 = global::VYRMobile.Droid.Resource.Color.material_grey_900;
+			global::Lottie.Forms.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::VYRMobile.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
+			global::Lottie.Forms.Resource.Color.mtrl_bottom_nav_item_tint = global::VYRMobile.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_bg_color_disabled = global::VYRMobile.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_bg_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_btn_bg_color_selector;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_btn_ripple_color;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_stroke_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_text_btn_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_text_color_disabled = global::VYRMobile.Droid.Resource.Color.mtrl_btn_text_color_disabled;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_text_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_btn_text_color_selector;
+			global::Lottie.Forms.Resource.Color.mtrl_btn_transparent_bg_color = global::VYRMobile.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
+			global::Lottie.Forms.Resource.Color.mtrl_chip_background_color = global::VYRMobile.Droid.Resource.Color.mtrl_chip_background_color;
+			global::Lottie.Forms.Resource.Color.mtrl_chip_close_icon_tint = global::VYRMobile.Droid.Resource.Color.mtrl_chip_close_icon_tint;
+			global::Lottie.Forms.Resource.Color.mtrl_chip_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_chip_ripple_color;
+			global::Lottie.Forms.Resource.Color.mtrl_chip_text_color = global::VYRMobile.Droid.Resource.Color.mtrl_chip_text_color;
+			global::Lottie.Forms.Resource.Color.mtrl_fab_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_fab_ripple_color;
+			global::Lottie.Forms.Resource.Color.mtrl_scrim_color = global::VYRMobile.Droid.Resource.Color.mtrl_scrim_color;
+			global::Lottie.Forms.Resource.Color.mtrl_tabs_colored_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
+			global::Lottie.Forms.Resource.Color.mtrl_tabs_icon_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
+			global::Lottie.Forms.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
+			global::Lottie.Forms.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
+			global::Lottie.Forms.Resource.Color.mtrl_tabs_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_ripple_color;
+			global::Lottie.Forms.Resource.Color.mtrl_textinput_default_box_stroke_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
+			global::Lottie.Forms.Resource.Color.mtrl_textinput_disabled_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_disabled_color;
+			global::Lottie.Forms.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
+			global::Lottie.Forms.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
+			global::Lottie.Forms.Resource.Color.mtrl_text_btn_text_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
+			global::Lottie.Forms.Resource.Color.notification_action_color_filter = global::VYRMobile.Droid.Resource.Color.notification_action_color_filter;
+			global::Lottie.Forms.Resource.Color.notification_icon_bg_color = global::VYRMobile.Droid.Resource.Color.notification_icon_bg_color;
+			global::Lottie.Forms.Resource.Color.notification_material_background_media_default_color = global::VYRMobile.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Lottie.Forms.Resource.Color.primary_dark_material_dark = global::VYRMobile.Droid.Resource.Color.primary_dark_material_dark;
+			global::Lottie.Forms.Resource.Color.primary_dark_material_light = global::VYRMobile.Droid.Resource.Color.primary_dark_material_light;
+			global::Lottie.Forms.Resource.Color.primary_material_dark = global::VYRMobile.Droid.Resource.Color.primary_material_dark;
+			global::Lottie.Forms.Resource.Color.primary_material_light = global::VYRMobile.Droid.Resource.Color.primary_material_light;
+			global::Lottie.Forms.Resource.Color.primary_text_default_material_dark = global::VYRMobile.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Lottie.Forms.Resource.Color.primary_text_default_material_light = global::VYRMobile.Droid.Resource.Color.primary_text_default_material_light;
+			global::Lottie.Forms.Resource.Color.primary_text_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.primary_text_disabled_material_dark;
+			global::Lottie.Forms.Resource.Color.primary_text_disabled_material_light = global::VYRMobile.Droid.Resource.Color.primary_text_disabled_material_light;
+			global::Lottie.Forms.Resource.Color.ripple_material_dark = global::VYRMobile.Droid.Resource.Color.ripple_material_dark;
+			global::Lottie.Forms.Resource.Color.ripple_material_light = global::VYRMobile.Droid.Resource.Color.ripple_material_light;
+			global::Lottie.Forms.Resource.Color.secondary_text_default_material_dark = global::VYRMobile.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Lottie.Forms.Resource.Color.secondary_text_default_material_light = global::VYRMobile.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Lottie.Forms.Resource.Color.secondary_text_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.secondary_text_disabled_material_dark;
+			global::Lottie.Forms.Resource.Color.secondary_text_disabled_material_light = global::VYRMobile.Droid.Resource.Color.secondary_text_disabled_material_light;
+			global::Lottie.Forms.Resource.Color.switch_thumb_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.switch_thumb_disabled_material_dark;
+			global::Lottie.Forms.Resource.Color.switch_thumb_disabled_material_light = global::VYRMobile.Droid.Resource.Color.switch_thumb_disabled_material_light;
+			global::Lottie.Forms.Resource.Color.switch_thumb_material_dark = global::VYRMobile.Droid.Resource.Color.switch_thumb_material_dark;
+			global::Lottie.Forms.Resource.Color.switch_thumb_material_light = global::VYRMobile.Droid.Resource.Color.switch_thumb_material_light;
+			global::Lottie.Forms.Resource.Color.switch_thumb_normal_material_dark = global::VYRMobile.Droid.Resource.Color.switch_thumb_normal_material_dark;
+			global::Lottie.Forms.Resource.Color.switch_thumb_normal_material_light = global::VYRMobile.Droid.Resource.Color.switch_thumb_normal_material_light;
+			global::Lottie.Forms.Resource.Color.tooltip_background_dark = global::VYRMobile.Droid.Resource.Color.tooltip_background_dark;
+			global::Lottie.Forms.Resource.Color.tooltip_background_light = global::VYRMobile.Droid.Resource.Color.tooltip_background_light;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_content_inset_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_default_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_default_height_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_default_padding_end_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_default_padding_start_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_elevation_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_elevation_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_stacked_max_height = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_button_min_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_button_min_height_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_button_min_width_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_button_min_width_material;
+			global::Lottie.Forms.Resource.Dimension.abc_action_button_min_width_overflow_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
+			global::Lottie.Forms.Resource.Dimension.abc_alert_dialog_button_bar_height = global::VYRMobile.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
+			global::Lottie.Forms.Resource.Dimension.abc_alert_dialog_button_dimen = global::VYRMobile.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
+			global::Lottie.Forms.Resource.Dimension.abc_button_inset_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
+			global::Lottie.Forms.Resource.Dimension.abc_button_inset_vertical_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_inset_vertical_material;
+			global::Lottie.Forms.Resource.Dimension.abc_button_padding_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
+			global::Lottie.Forms.Resource.Dimension.abc_button_padding_vertical_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_padding_vertical_material;
+			global::Lottie.Forms.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::VYRMobile.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
+			global::Lottie.Forms.Resource.Dimension.abc_config_prefDialogWidth = global::VYRMobile.Droid.Resource.Dimension.abc_config_prefDialogWidth;
+			global::Lottie.Forms.Resource.Dimension.abc_control_corner_material = global::VYRMobile.Droid.Resource.Dimension.abc_control_corner_material;
+			global::Lottie.Forms.Resource.Dimension.abc_control_inset_material = global::VYRMobile.Droid.Resource.Dimension.abc_control_inset_material;
+			global::Lottie.Forms.Resource.Dimension.abc_control_padding_material = global::VYRMobile.Droid.Resource.Dimension.abc_control_padding_material;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_corner_radius_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_fixed_height_major = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_fixed_height_minor = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_fixed_width_major = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_fixed_width_minor = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_min_width_major = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_min_width_major;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_min_width_minor = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_min_width_minor;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_padding_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_padding_material;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_padding_top_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_padding_top_material;
+			global::Lottie.Forms.Resource.Dimension.abc_dialog_title_divider_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_title_divider_material;
+			global::Lottie.Forms.Resource.Dimension.abc_disabled_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
+			global::Lottie.Forms.Resource.Dimension.abc_disabled_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
+			global::Lottie.Forms.Resource.Dimension.abc_dropdownitem_icon_width = global::VYRMobile.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
+			global::Lottie.Forms.Resource.Dimension.abc_dropdownitem_text_padding_left = global::VYRMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
+			global::Lottie.Forms.Resource.Dimension.abc_dropdownitem_text_padding_right = global::VYRMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
+			global::Lottie.Forms.Resource.Dimension.abc_edit_text_inset_bottom_material = global::VYRMobile.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
+			global::Lottie.Forms.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
+			global::Lottie.Forms.Resource.Dimension.abc_edit_text_inset_top_material = global::VYRMobile.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
+			global::Lottie.Forms.Resource.Dimension.abc_floating_window_z = global::VYRMobile.Droid.Resource.Dimension.abc_floating_window_z;
+			global::Lottie.Forms.Resource.Dimension.abc_list_item_padding_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
+			global::Lottie.Forms.Resource.Dimension.abc_panel_menu_list_width = global::VYRMobile.Droid.Resource.Dimension.abc_panel_menu_list_width;
+			global::Lottie.Forms.Resource.Dimension.abc_progress_bar_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_progress_bar_height_material;
+			global::Lottie.Forms.Resource.Dimension.abc_search_view_preferred_height = global::VYRMobile.Droid.Resource.Dimension.abc_search_view_preferred_height;
+			global::Lottie.Forms.Resource.Dimension.abc_search_view_preferred_width = global::VYRMobile.Droid.Resource.Dimension.abc_search_view_preferred_width;
+			global::Lottie.Forms.Resource.Dimension.abc_seekbar_track_background_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
+			global::Lottie.Forms.Resource.Dimension.abc_seekbar_track_progress_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
+			global::Lottie.Forms.Resource.Dimension.abc_select_dialog_padding_start_material = global::VYRMobile.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
+			global::Lottie.Forms.Resource.Dimension.abc_switch_padding = global::VYRMobile.Droid.Resource.Dimension.abc_switch_padding;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_body_1_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_body_1_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_body_2_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_body_2_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_button_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_button_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_caption_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_caption_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_display_1_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_1_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_display_2_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_2_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_display_3_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_3_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_display_4_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_4_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_headline_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_headline_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_large_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_large_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_medium_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_medium_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_menu_header_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_menu_header_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_menu_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_menu_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_small_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_small_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_subhead_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_subhead_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_title_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_title_material;
+			global::Lottie.Forms.Resource.Dimension.abc_text_size_title_material_toolbar = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
+			global::Lottie.Forms.Resource.Dimension.browser_actions_context_menu_max_width = global::VYRMobile.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Lottie.Forms.Resource.Dimension.browser_actions_context_menu_min_padding = global::VYRMobile.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Lottie.Forms.Resource.Dimension.cardview_compat_inset_shadow = global::VYRMobile.Droid.Resource.Dimension.cardview_compat_inset_shadow;
+			global::Lottie.Forms.Resource.Dimension.cardview_default_elevation = global::VYRMobile.Droid.Resource.Dimension.cardview_default_elevation;
+			global::Lottie.Forms.Resource.Dimension.cardview_default_radius = global::VYRMobile.Droid.Resource.Dimension.cardview_default_radius;
+			global::Lottie.Forms.Resource.Dimension.compat_button_inset_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Lottie.Forms.Resource.Dimension.compat_button_inset_vertical_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Lottie.Forms.Resource.Dimension.compat_button_padding_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Lottie.Forms.Resource.Dimension.compat_button_padding_vertical_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Lottie.Forms.Resource.Dimension.compat_control_corner_material = global::VYRMobile.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Lottie.Forms.Resource.Dimension.compat_notification_large_icon_max_height = global::VYRMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Lottie.Forms.Resource.Dimension.compat_notification_large_icon_max_width = global::VYRMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Lottie.Forms.Resource.Dimension.design_appbar_elevation = global::VYRMobile.Droid.Resource.Dimension.design_appbar_elevation;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_active_text_size = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_elevation = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_elevation;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_height = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_height;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_icon_size = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_item_max_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_item_min_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_margin = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_margin;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_shadow_height = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_navigation_text_size = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_text_size;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_sheet_modal_elevation = global::VYRMobile.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
+			global::Lottie.Forms.Resource.Dimension.design_bottom_sheet_peek_height_min = global::VYRMobile.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
+			global::Lottie.Forms.Resource.Dimension.design_fab_border_width = global::VYRMobile.Droid.Resource.Dimension.design_fab_border_width;
+			global::Lottie.Forms.Resource.Dimension.design_fab_elevation = global::VYRMobile.Droid.Resource.Dimension.design_fab_elevation;
+			global::Lottie.Forms.Resource.Dimension.design_fab_image_size = global::VYRMobile.Droid.Resource.Dimension.design_fab_image_size;
+			global::Lottie.Forms.Resource.Dimension.design_fab_size_mini = global::VYRMobile.Droid.Resource.Dimension.design_fab_size_mini;
+			global::Lottie.Forms.Resource.Dimension.design_fab_size_normal = global::VYRMobile.Droid.Resource.Dimension.design_fab_size_normal;
+			global::Lottie.Forms.Resource.Dimension.design_fab_translation_z_hovered_focused = global::VYRMobile.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
+			global::Lottie.Forms.Resource.Dimension.design_fab_translation_z_pressed = global::VYRMobile.Droid.Resource.Dimension.design_fab_translation_z_pressed;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_elevation = global::VYRMobile.Droid.Resource.Dimension.design_navigation_elevation;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_icon_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_icon_padding;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_icon_size = global::VYRMobile.Droid.Resource.Dimension.design_navigation_icon_size;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_item_horizontal_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_item_icon_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_item_icon_padding;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_max_width = global::VYRMobile.Droid.Resource.Dimension.design_navigation_max_width;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_padding_bottom = global::VYRMobile.Droid.Resource.Dimension.design_navigation_padding_bottom;
+			global::Lottie.Forms.Resource.Dimension.design_navigation_separator_vertical_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_action_inline_max_width = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_background_corner_radius = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_elevation = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_elevation;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_max_width = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_max_width;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_min_width = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_min_width;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_padding_horizontal = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_padding_vertical = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_padding_vertical;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
+			global::Lottie.Forms.Resource.Dimension.design_snackbar_text_size = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_text_size;
+			global::Lottie.Forms.Resource.Dimension.design_tab_max_width = global::VYRMobile.Droid.Resource.Dimension.design_tab_max_width;
+			global::Lottie.Forms.Resource.Dimension.design_tab_scrollable_min_width = global::VYRMobile.Droid.Resource.Dimension.design_tab_scrollable_min_width;
+			global::Lottie.Forms.Resource.Dimension.design_tab_text_size = global::VYRMobile.Droid.Resource.Dimension.design_tab_text_size;
+			global::Lottie.Forms.Resource.Dimension.design_tab_text_size_2line = global::VYRMobile.Droid.Resource.Dimension.design_tab_text_size_2line;
+			global::Lottie.Forms.Resource.Dimension.design_textinput_caption_translate_y = global::VYRMobile.Droid.Resource.Dimension.design_textinput_caption_translate_y;
+			global::Lottie.Forms.Resource.Dimension.disabled_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.disabled_alpha_material_dark;
+			global::Lottie.Forms.Resource.Dimension.disabled_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.disabled_alpha_material_light;
+			global::Lottie.Forms.Resource.Dimension.fastscroll_default_thickness = global::VYRMobile.Droid.Resource.Dimension.fastscroll_default_thickness;
+			global::Lottie.Forms.Resource.Dimension.fastscroll_margin = global::VYRMobile.Droid.Resource.Dimension.fastscroll_margin;
+			global::Lottie.Forms.Resource.Dimension.fastscroll_minimum_range = global::VYRMobile.Droid.Resource.Dimension.fastscroll_minimum_range;
+			global::Lottie.Forms.Resource.Dimension.highlight_alpha_material_colored = global::VYRMobile.Droid.Resource.Dimension.highlight_alpha_material_colored;
+			global::Lottie.Forms.Resource.Dimension.highlight_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.highlight_alpha_material_dark;
+			global::Lottie.Forms.Resource.Dimension.highlight_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.highlight_alpha_material_light;
+			global::Lottie.Forms.Resource.Dimension.hint_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.hint_alpha_material_dark;
+			global::Lottie.Forms.Resource.Dimension.hint_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.hint_alpha_material_light;
+			global::Lottie.Forms.Resource.Dimension.hint_pressed_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
+			global::Lottie.Forms.Resource.Dimension.hint_pressed_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
+			global::Lottie.Forms.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::VYRMobile.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
+			global::Lottie.Forms.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::VYRMobile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
+			global::Lottie.Forms.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::VYRMobile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
+			global::Lottie.Forms.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
+			global::Lottie.Forms.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
+			global::Lottie.Forms.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
+			global::Lottie.Forms.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
+			global::Lottie.Forms.Resource.Dimension.mtrl_bottomappbar_height = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_height;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_corner_radius = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_corner_radius;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_disabled_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_disabled_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_disabled_z;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_elevation;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_focused_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_focused_z;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_hovered_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_hovered_z;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_icon_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_icon_padding;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_inset = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_inset;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_letter_spacing = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_padding_bottom = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_padding_left = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_left;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_padding_right = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_right;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_padding_top = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_top;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_pressed_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_pressed_z;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_stroke_size = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_stroke_size;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_text_size = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_size;
+			global::Lottie.Forms.Resource.Dimension.mtrl_btn_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_z;
+			global::Lottie.Forms.Resource.Dimension.mtrl_card_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_card_elevation;
+			global::Lottie.Forms.Resource.Dimension.mtrl_card_spacing = global::VYRMobile.Droid.Resource.Dimension.mtrl_card_spacing;
+			global::Lottie.Forms.Resource.Dimension.mtrl_chip_pressed_translation_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
+			global::Lottie.Forms.Resource.Dimension.mtrl_chip_text_size = global::VYRMobile.Droid.Resource.Dimension.mtrl_chip_text_size;
+			global::Lottie.Forms.Resource.Dimension.mtrl_fab_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_fab_elevation;
+			global::Lottie.Forms.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::VYRMobile.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
+			global::Lottie.Forms.Resource.Dimension.mtrl_fab_translation_z_pressed = global::VYRMobile.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
+			global::Lottie.Forms.Resource.Dimension.mtrl_navigation_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_navigation_elevation;
+			global::Lottie.Forms.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
+			global::Lottie.Forms.Resource.Dimension.mtrl_navigation_item_icon_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
+			global::Lottie.Forms.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::VYRMobile.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
+			global::Lottie.Forms.Resource.Dimension.mtrl_snackbar_margin = global::VYRMobile.Droid.Resource.Dimension.mtrl_snackbar_margin;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_box_padding_end = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
+			global::Lottie.Forms.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
+			global::Lottie.Forms.Resource.Dimension.mtrl_toolbar_default_height = global::VYRMobile.Droid.Resource.Dimension.mtrl_toolbar_default_height;
+			global::Lottie.Forms.Resource.Dimension.notification_action_icon_size = global::VYRMobile.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Lottie.Forms.Resource.Dimension.notification_action_text_size = global::VYRMobile.Droid.Resource.Dimension.notification_action_text_size;
+			global::Lottie.Forms.Resource.Dimension.notification_big_circle_margin = global::VYRMobile.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Lottie.Forms.Resource.Dimension.notification_content_margin_start = global::VYRMobile.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Lottie.Forms.Resource.Dimension.notification_large_icon_height = global::VYRMobile.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Lottie.Forms.Resource.Dimension.notification_large_icon_width = global::VYRMobile.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Lottie.Forms.Resource.Dimension.notification_main_column_padding_top = global::VYRMobile.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Lottie.Forms.Resource.Dimension.notification_media_narrow_margin = global::VYRMobile.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Lottie.Forms.Resource.Dimension.notification_right_icon_size = global::VYRMobile.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Lottie.Forms.Resource.Dimension.notification_right_side_padding_top = global::VYRMobile.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Lottie.Forms.Resource.Dimension.notification_small_icon_background_padding = global::VYRMobile.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Lottie.Forms.Resource.Dimension.notification_small_icon_size_as_large = global::VYRMobile.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Lottie.Forms.Resource.Dimension.notification_subtext_size = global::VYRMobile.Droid.Resource.Dimension.notification_subtext_size;
+			global::Lottie.Forms.Resource.Dimension.notification_top_pad = global::VYRMobile.Droid.Resource.Dimension.notification_top_pad;
+			global::Lottie.Forms.Resource.Dimension.notification_top_pad_large_text = global::VYRMobile.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Lottie.Forms.Resource.Dimension.subtitle_corner_radius = global::VYRMobile.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::Lottie.Forms.Resource.Dimension.subtitle_outline_width = global::VYRMobile.Droid.Resource.Dimension.subtitle_outline_width;
+			global::Lottie.Forms.Resource.Dimension.subtitle_shadow_offset = global::VYRMobile.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::Lottie.Forms.Resource.Dimension.subtitle_shadow_radius = global::VYRMobile.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::Lottie.Forms.Resource.Dimension.tooltip_corner_radius = global::VYRMobile.Droid.Resource.Dimension.tooltip_corner_radius;
+			global::Lottie.Forms.Resource.Dimension.tooltip_horizontal_padding = global::VYRMobile.Droid.Resource.Dimension.tooltip_horizontal_padding;
+			global::Lottie.Forms.Resource.Dimension.tooltip_margin = global::VYRMobile.Droid.Resource.Dimension.tooltip_margin;
+			global::Lottie.Forms.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::VYRMobile.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
+			global::Lottie.Forms.Resource.Dimension.tooltip_precise_anchor_threshold = global::VYRMobile.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
+			global::Lottie.Forms.Resource.Dimension.tooltip_vertical_padding = global::VYRMobile.Droid.Resource.Dimension.tooltip_vertical_padding;
+			global::Lottie.Forms.Resource.Dimension.tooltip_y_offset_non_touch = global::VYRMobile.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
+			global::Lottie.Forms.Resource.Dimension.tooltip_y_offset_touch = global::VYRMobile.Droid.Resource.Dimension.tooltip_y_offset_touch;
+			global::Lottie.Forms.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_action_bar_item_background_material = global::VYRMobile.Droid.Resource.Drawable.abc_action_bar_item_background_material;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_borderless_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_borderless_material;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_check_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_check_material;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_colored_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_colored_material;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_default_mtrl_shape = global::VYRMobile.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_radio_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_radio_material;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
+			global::Lottie.Forms.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
+			global::Lottie.Forms.Resource.Drawable.abc_cab_background_internal_bg = global::VYRMobile.Droid.Resource.Drawable.abc_cab_background_internal_bg;
+			global::Lottie.Forms.Resource.Drawable.abc_cab_background_top_material = global::VYRMobile.Droid.Resource.Drawable.abc_cab_background_top_material;
+			global::Lottie.Forms.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_control_background_material = global::VYRMobile.Droid.Resource.Drawable.abc_control_background_material;
+			global::Lottie.Forms.Resource.Drawable.abc_dialog_material_background = global::VYRMobile.Droid.Resource.Drawable.abc_dialog_material_background;
+			global::Lottie.Forms.Resource.Drawable.abc_edit_text_material = global::VYRMobile.Droid.Resource.Drawable.abc_edit_text_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_ab_back_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_ab_back_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_clear_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_clear_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_go_search_api_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_go_search_api_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_menu_overflow_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_search_api_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_search_api_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_star_black_16dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_black_16dp;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_star_black_36dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_black_36dp;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_star_black_48dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_black_48dp;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_star_half_black_16dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_star_half_black_36dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_star_half_black_48dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
+			global::Lottie.Forms.Resource.Drawable.abc_ic_voice_search_api_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
+			global::Lottie.Forms.Resource.Drawable.abc_item_background_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_item_background_holo_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_item_background_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_item_background_holo_light;
+			global::Lottie.Forms.Resource.Drawable.abc_list_divider_material = global::VYRMobile.Droid.Resource.Drawable.abc_list_divider_material;
+			global::Lottie.Forms.Resource.Drawable.abc_list_divider_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_list_focused_holo = global::VYRMobile.Droid.Resource.Drawable.abc_list_focused_holo;
+			global::Lottie.Forms.Resource.Drawable.abc_list_longpressed_holo = global::VYRMobile.Droid.Resource.Drawable.abc_list_longpressed_holo;
+			global::Lottie.Forms.Resource.Drawable.abc_list_pressed_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_list_pressed_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_pressed_holo_light;
+			global::Lottie.Forms.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
+			global::Lottie.Forms.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_list_selector_disabled_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
+			global::Lottie.Forms.Resource.Drawable.abc_list_selector_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_holo_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_list_selector_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_holo_light;
+			global::Lottie.Forms.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::VYRMobile.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
+			global::Lottie.Forms.Resource.Drawable.abc_popup_background_mtrl_mult = global::VYRMobile.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
+			global::Lottie.Forms.Resource.Drawable.abc_ratingbar_indicator_material = global::VYRMobile.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ratingbar_material = global::VYRMobile.Droid.Resource.Drawable.abc_ratingbar_material;
+			global::Lottie.Forms.Resource.Drawable.abc_ratingbar_small_material = global::VYRMobile.Droid.Resource.Drawable.abc_ratingbar_small_material;
+			global::Lottie.Forms.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
+			global::Lottie.Forms.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
+			global::Lottie.Forms.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_seekbar_thumb_material = global::VYRMobile.Droid.Resource.Drawable.abc_seekbar_thumb_material;
+			global::Lottie.Forms.Resource.Drawable.abc_seekbar_tick_mark_material = global::VYRMobile.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
+			global::Lottie.Forms.Resource.Drawable.abc_seekbar_track_material = global::VYRMobile.Droid.Resource.Drawable.abc_seekbar_track_material;
+			global::Lottie.Forms.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_spinner_textfield_background_material = global::VYRMobile.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
+			global::Lottie.Forms.Resource.Drawable.abc_switch_thumb_material = global::VYRMobile.Droid.Resource.Drawable.abc_switch_thumb_material;
+			global::Lottie.Forms.Resource.Drawable.abc_switch_track_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_tab_indicator_material = global::VYRMobile.Droid.Resource.Drawable.abc_tab_indicator_material;
+			global::Lottie.Forms.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
+			global::Lottie.Forms.Resource.Drawable.abc_textfield_search_material = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_search_material;
+			global::Lottie.Forms.Resource.Drawable.abc_text_cursor_material = global::VYRMobile.Droid.Resource.Drawable.abc_text_cursor_material;
+			global::Lottie.Forms.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
+			global::Lottie.Forms.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
+			global::Lottie.Forms.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
+			global::Lottie.Forms.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
+			global::Lottie.Forms.Resource.Drawable.abc_vector_test = global::VYRMobile.Droid.Resource.Drawable.abc_vector_test;
+			global::Lottie.Forms.Resource.Drawable.avd_hide_password = global::VYRMobile.Droid.Resource.Drawable.avd_hide_password;
+			global::Lottie.Forms.Resource.Drawable.avd_show_password = global::VYRMobile.Droid.Resource.Drawable.avd_show_password;
+			global::Lottie.Forms.Resource.Drawable.design_bottom_navigation_item_background = global::VYRMobile.Droid.Resource.Drawable.design_bottom_navigation_item_background;
+			global::Lottie.Forms.Resource.Drawable.design_fab_background = global::VYRMobile.Droid.Resource.Drawable.design_fab_background;
+			global::Lottie.Forms.Resource.Drawable.design_ic_visibility = global::VYRMobile.Droid.Resource.Drawable.design_ic_visibility;
+			global::Lottie.Forms.Resource.Drawable.design_ic_visibility_off = global::VYRMobile.Droid.Resource.Drawable.design_ic_visibility_off;
+			global::Lottie.Forms.Resource.Drawable.design_password_eye = global::VYRMobile.Droid.Resource.Drawable.design_password_eye;
+			global::Lottie.Forms.Resource.Drawable.design_snackbar_background = global::VYRMobile.Droid.Resource.Drawable.design_snackbar_background;
+			global::Lottie.Forms.Resource.Drawable.ic_mtrl_chip_checked_black = global::VYRMobile.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
+			global::Lottie.Forms.Resource.Drawable.ic_mtrl_chip_checked_circle = global::VYRMobile.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
+			global::Lottie.Forms.Resource.Drawable.ic_mtrl_chip_close_circle = global::VYRMobile.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
+			global::Lottie.Forms.Resource.Drawable.mtrl_snackbar_background = global::VYRMobile.Droid.Resource.Drawable.mtrl_snackbar_background;
+			global::Lottie.Forms.Resource.Drawable.mtrl_tabs_default_indicator = global::VYRMobile.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
+			global::Lottie.Forms.Resource.Drawable.navigation_empty_icon = global::VYRMobile.Droid.Resource.Drawable.navigation_empty_icon;
+			global::Lottie.Forms.Resource.Drawable.notification_action_background = global::VYRMobile.Droid.Resource.Drawable.notification_action_background;
+			global::Lottie.Forms.Resource.Drawable.notification_bg = global::VYRMobile.Droid.Resource.Drawable.notification_bg;
+			global::Lottie.Forms.Resource.Drawable.notification_bg_low = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low;
+			global::Lottie.Forms.Resource.Drawable.notification_bg_low_normal = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Lottie.Forms.Resource.Drawable.notification_bg_low_pressed = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Lottie.Forms.Resource.Drawable.notification_bg_normal = global::VYRMobile.Droid.Resource.Drawable.notification_bg_normal;
+			global::Lottie.Forms.Resource.Drawable.notification_bg_normal_pressed = global::VYRMobile.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Lottie.Forms.Resource.Drawable.notification_icon_background = global::VYRMobile.Droid.Resource.Drawable.notification_icon_background;
+			global::Lottie.Forms.Resource.Drawable.notification_template_icon_bg = global::VYRMobile.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Lottie.Forms.Resource.Drawable.notification_template_icon_low_bg = global::VYRMobile.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Lottie.Forms.Resource.Drawable.notification_tile_bg = global::VYRMobile.Droid.Resource.Drawable.notification_tile_bg;
+			global::Lottie.Forms.Resource.Drawable.notify_panel_notification_icon_bg = global::VYRMobile.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Lottie.Forms.Resource.Drawable.tooltip_frame_dark = global::VYRMobile.Droid.Resource.Drawable.tooltip_frame_dark;
+			global::Lottie.Forms.Resource.Drawable.tooltip_frame_light = global::VYRMobile.Droid.Resource.Drawable.tooltip_frame_light;
+			global::Lottie.Forms.Resource.Id.action0 = global::VYRMobile.Droid.Resource.Id.action0;
+			global::Lottie.Forms.Resource.Id.actions = global::VYRMobile.Droid.Resource.Id.actions;
+			global::Lottie.Forms.Resource.Id.action_bar = global::VYRMobile.Droid.Resource.Id.action_bar;
+			global::Lottie.Forms.Resource.Id.action_bar_activity_content = global::VYRMobile.Droid.Resource.Id.action_bar_activity_content;
+			global::Lottie.Forms.Resource.Id.action_bar_container = global::VYRMobile.Droid.Resource.Id.action_bar_container;
+			global::Lottie.Forms.Resource.Id.action_bar_root = global::VYRMobile.Droid.Resource.Id.action_bar_root;
+			global::Lottie.Forms.Resource.Id.action_bar_spinner = global::VYRMobile.Droid.Resource.Id.action_bar_spinner;
+			global::Lottie.Forms.Resource.Id.action_bar_subtitle = global::VYRMobile.Droid.Resource.Id.action_bar_subtitle;
+			global::Lottie.Forms.Resource.Id.action_bar_title = global::VYRMobile.Droid.Resource.Id.action_bar_title;
+			global::Lottie.Forms.Resource.Id.action_container = global::VYRMobile.Droid.Resource.Id.action_container;
+			global::Lottie.Forms.Resource.Id.action_context_bar = global::VYRMobile.Droid.Resource.Id.action_context_bar;
+			global::Lottie.Forms.Resource.Id.action_divider = global::VYRMobile.Droid.Resource.Id.action_divider;
+			global::Lottie.Forms.Resource.Id.action_image = global::VYRMobile.Droid.Resource.Id.action_image;
+			global::Lottie.Forms.Resource.Id.action_menu_divider = global::VYRMobile.Droid.Resource.Id.action_menu_divider;
+			global::Lottie.Forms.Resource.Id.action_menu_presenter = global::VYRMobile.Droid.Resource.Id.action_menu_presenter;
+			global::Lottie.Forms.Resource.Id.action_mode_bar = global::VYRMobile.Droid.Resource.Id.action_mode_bar;
+			global::Lottie.Forms.Resource.Id.action_mode_bar_stub = global::VYRMobile.Droid.Resource.Id.action_mode_bar_stub;
+			global::Lottie.Forms.Resource.Id.action_mode_close_button = global::VYRMobile.Droid.Resource.Id.action_mode_close_button;
+			global::Lottie.Forms.Resource.Id.action_text = global::VYRMobile.Droid.Resource.Id.action_text;
+			global::Lottie.Forms.Resource.Id.activity_chooser_view_content = global::VYRMobile.Droid.Resource.Id.activity_chooser_view_content;
+			global::Lottie.Forms.Resource.Id.add = global::VYRMobile.Droid.Resource.Id.add;
+			global::Lottie.Forms.Resource.Id.alertTitle = global::VYRMobile.Droid.Resource.Id.alertTitle;
+			global::Lottie.Forms.Resource.Id.all = global::VYRMobile.Droid.Resource.Id.all;
+			global::Lottie.Forms.Resource.Id.ALT = global::VYRMobile.Droid.Resource.Id.ALT;
+			global::Lottie.Forms.Resource.Id.always = global::VYRMobile.Droid.Resource.Id.always;
+			global::Lottie.Forms.Resource.Id.async = global::VYRMobile.Droid.Resource.Id.async;
+			global::Lottie.Forms.Resource.Id.auto = global::VYRMobile.Droid.Resource.Id.auto;
+			global::Lottie.Forms.Resource.Id.automatic = global::VYRMobile.Droid.Resource.Id.automatic;
+			global::Lottie.Forms.Resource.Id.beginning = global::VYRMobile.Droid.Resource.Id.beginning;
+			global::Lottie.Forms.Resource.Id.blocking = global::VYRMobile.Droid.Resource.Id.blocking;
+			global::Lottie.Forms.Resource.Id.bottom = global::VYRMobile.Droid.Resource.Id.bottom;
+			global::Lottie.Forms.Resource.Id.bottomtab_navarea = global::VYRMobile.Droid.Resource.Id.bottomtab_navarea;
+			global::Lottie.Forms.Resource.Id.bottomtab_tabbar = global::VYRMobile.Droid.Resource.Id.bottomtab_tabbar;
+			global::Lottie.Forms.Resource.Id.browser_actions_header_text = global::VYRMobile.Droid.Resource.Id.browser_actions_header_text;
+			global::Lottie.Forms.Resource.Id.browser_actions_menu_items = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_items;
+			global::Lottie.Forms.Resource.Id.browser_actions_menu_item_icon = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Lottie.Forms.Resource.Id.browser_actions_menu_item_text = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Lottie.Forms.Resource.Id.browser_actions_menu_view = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_view;
+			global::Lottie.Forms.Resource.Id.buttonPanel = global::VYRMobile.Droid.Resource.Id.buttonPanel;
+			global::Lottie.Forms.Resource.Id.cancel_action = global::VYRMobile.Droid.Resource.Id.cancel_action;
+			global::Lottie.Forms.Resource.Id.center = global::VYRMobile.Droid.Resource.Id.center;
+			global::Lottie.Forms.Resource.Id.center_horizontal = global::VYRMobile.Droid.Resource.Id.center_horizontal;
+			global::Lottie.Forms.Resource.Id.center_vertical = global::VYRMobile.Droid.Resource.Id.center_vertical;
+			global::Lottie.Forms.Resource.Id.checkbox = global::VYRMobile.Droid.Resource.Id.checkbox;
+			global::Lottie.Forms.Resource.Id.chronometer = global::VYRMobile.Droid.Resource.Id.chronometer;
+			global::Lottie.Forms.Resource.Id.clip_horizontal = global::VYRMobile.Droid.Resource.Id.clip_horizontal;
+			global::Lottie.Forms.Resource.Id.clip_vertical = global::VYRMobile.Droid.Resource.Id.clip_vertical;
+			global::Lottie.Forms.Resource.Id.collapseActionView = global::VYRMobile.Droid.Resource.Id.collapseActionView;
+			global::Lottie.Forms.Resource.Id.container = global::VYRMobile.Droid.Resource.Id.container;
+			global::Lottie.Forms.Resource.Id.content = global::VYRMobile.Droid.Resource.Id.content;
+			global::Lottie.Forms.Resource.Id.contentPanel = global::VYRMobile.Droid.Resource.Id.contentPanel;
+			global::Lottie.Forms.Resource.Id.coordinator = global::VYRMobile.Droid.Resource.Id.coordinator;
+			global::Lottie.Forms.Resource.Id.CTRL = global::VYRMobile.Droid.Resource.Id.CTRL;
+			global::Lottie.Forms.Resource.Id.custom = global::VYRMobile.Droid.Resource.Id.custom;
+			global::Lottie.Forms.Resource.Id.customPanel = global::VYRMobile.Droid.Resource.Id.customPanel;
+			global::Lottie.Forms.Resource.Id.decor_content_parent = global::VYRMobile.Droid.Resource.Id.decor_content_parent;
+			global::Lottie.Forms.Resource.Id.default_activity_button = global::VYRMobile.Droid.Resource.Id.default_activity_button;
+			global::Lottie.Forms.Resource.Id.design_bottom_sheet = global::VYRMobile.Droid.Resource.Id.design_bottom_sheet;
+			global::Lottie.Forms.Resource.Id.design_menu_item_action_area = global::VYRMobile.Droid.Resource.Id.design_menu_item_action_area;
+			global::Lottie.Forms.Resource.Id.design_menu_item_action_area_stub = global::VYRMobile.Droid.Resource.Id.design_menu_item_action_area_stub;
+			global::Lottie.Forms.Resource.Id.design_menu_item_text = global::VYRMobile.Droid.Resource.Id.design_menu_item_text;
+			global::Lottie.Forms.Resource.Id.design_navigation_view = global::VYRMobile.Droid.Resource.Id.design_navigation_view;
+			global::Lottie.Forms.Resource.Id.disableHome = global::VYRMobile.Droid.Resource.Id.disableHome;
+			global::Lottie.Forms.Resource.Id.edit_query = global::VYRMobile.Droid.Resource.Id.edit_query;
+			global::Lottie.Forms.Resource.Id.end = global::VYRMobile.Droid.Resource.Id.end;
+			global::Lottie.Forms.Resource.Id.end_padder = global::VYRMobile.Droid.Resource.Id.end_padder;
+			global::Lottie.Forms.Resource.Id.enterAlways = global::VYRMobile.Droid.Resource.Id.enterAlways;
+			global::Lottie.Forms.Resource.Id.enterAlwaysCollapsed = global::VYRMobile.Droid.Resource.Id.enterAlwaysCollapsed;
+			global::Lottie.Forms.Resource.Id.exitUntilCollapsed = global::VYRMobile.Droid.Resource.Id.exitUntilCollapsed;
+			global::Lottie.Forms.Resource.Id.expanded_menu = global::VYRMobile.Droid.Resource.Id.expanded_menu;
+			global::Lottie.Forms.Resource.Id.expand_activities_button = global::VYRMobile.Droid.Resource.Id.expand_activities_button;
+			global::Lottie.Forms.Resource.Id.fill = global::VYRMobile.Droid.Resource.Id.fill;
+			global::Lottie.Forms.Resource.Id.filled = global::VYRMobile.Droid.Resource.Id.filled;
+			global::Lottie.Forms.Resource.Id.fill_horizontal = global::VYRMobile.Droid.Resource.Id.fill_horizontal;
+			global::Lottie.Forms.Resource.Id.fill_vertical = global::VYRMobile.Droid.Resource.Id.fill_vertical;
+			global::Lottie.Forms.Resource.Id.@fixed = global::VYRMobile.Droid.Resource.Id.@fixed;
+			global::Lottie.Forms.Resource.Id.flyoutcontent_appbar = global::VYRMobile.Droid.Resource.Id.flyoutcontent_appbar;
+			global::Lottie.Forms.Resource.Id.flyoutcontent_recycler = global::VYRMobile.Droid.Resource.Id.flyoutcontent_recycler;
+			global::Lottie.Forms.Resource.Id.forever = global::VYRMobile.Droid.Resource.Id.forever;
+			global::Lottie.Forms.Resource.Id.FUNCTION = global::VYRMobile.Droid.Resource.Id.FUNCTION;
+			global::Lottie.Forms.Resource.Id.ghost_view = global::VYRMobile.Droid.Resource.Id.ghost_view;
+			global::Lottie.Forms.Resource.Id.group_divider = global::VYRMobile.Droid.Resource.Id.group_divider;
+			global::Lottie.Forms.Resource.Id.hardware = global::VYRMobile.Droid.Resource.Id.hardware;
+			global::Lottie.Forms.Resource.Id.home = global::VYRMobile.Droid.Resource.Id.home;
+			global::Lottie.Forms.Resource.Id.homeAsUp = global::VYRMobile.Droid.Resource.Id.homeAsUp;
+			global::Lottie.Forms.Resource.Id.icon = global::VYRMobile.Droid.Resource.Id.icon;
+			global::Lottie.Forms.Resource.Id.icon_group = global::VYRMobile.Droid.Resource.Id.icon_group;
+			global::Lottie.Forms.Resource.Id.ifRoom = global::VYRMobile.Droid.Resource.Id.ifRoom;
+			global::Lottie.Forms.Resource.Id.image = global::VYRMobile.Droid.Resource.Id.image;
+			global::Lottie.Forms.Resource.Id.info = global::VYRMobile.Droid.Resource.Id.info;
+			global::Lottie.Forms.Resource.Id.italic = global::VYRMobile.Droid.Resource.Id.italic;
+			global::Lottie.Forms.Resource.Id.item_touch_helper_previous_elevation = global::VYRMobile.Droid.Resource.Id.item_touch_helper_previous_elevation;
+			global::Lottie.Forms.Resource.Id.labeled = global::VYRMobile.Droid.Resource.Id.labeled;
+			global::Lottie.Forms.Resource.Id.largeLabel = global::VYRMobile.Droid.Resource.Id.largeLabel;
+			global::Lottie.Forms.Resource.Id.left = global::VYRMobile.Droid.Resource.Id.left;
+			global::Lottie.Forms.Resource.Id.line1 = global::VYRMobile.Droid.Resource.Id.line1;
+			global::Lottie.Forms.Resource.Id.line3 = global::VYRMobile.Droid.Resource.Id.line3;
+			global::Lottie.Forms.Resource.Id.listMode = global::VYRMobile.Droid.Resource.Id.listMode;
+			global::Lottie.Forms.Resource.Id.list_item = global::VYRMobile.Droid.Resource.Id.list_item;
+			global::Lottie.Forms.Resource.Id.lottie_layer_name = global::VYRMobile.Droid.Resource.Id.lottie_layer_name;
+			global::Lottie.Forms.Resource.Id.main_appbar = global::VYRMobile.Droid.Resource.Id.main_appbar;
+			global::Lottie.Forms.Resource.Id.main_tablayout = global::VYRMobile.Droid.Resource.Id.main_tablayout;
+			global::Lottie.Forms.Resource.Id.main_toolbar = global::VYRMobile.Droid.Resource.Id.main_toolbar;
+			global::Lottie.Forms.Resource.Id.main_viewpager = global::VYRMobile.Droid.Resource.Id.main_viewpager;
+			global::Lottie.Forms.Resource.Id.masked = global::VYRMobile.Droid.Resource.Id.masked;
+			global::Lottie.Forms.Resource.Id.media_actions = global::VYRMobile.Droid.Resource.Id.media_actions;
+			global::Lottie.Forms.Resource.Id.message = global::VYRMobile.Droid.Resource.Id.message;
+			global::Lottie.Forms.Resource.Id.META = global::VYRMobile.Droid.Resource.Id.META;
+			global::Lottie.Forms.Resource.Id.middle = global::VYRMobile.Droid.Resource.Id.middle;
+			global::Lottie.Forms.Resource.Id.mini = global::VYRMobile.Droid.Resource.Id.mini;
+			global::Lottie.Forms.Resource.Id.mtrl_child_content_container = global::VYRMobile.Droid.Resource.Id.mtrl_child_content_container;
+			global::Lottie.Forms.Resource.Id.mtrl_internal_children_alpha_tag = global::VYRMobile.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
+			global::Lottie.Forms.Resource.Id.multiply = global::VYRMobile.Droid.Resource.Id.multiply;
+			global::Lottie.Forms.Resource.Id.navigation_header_container = global::VYRMobile.Droid.Resource.Id.navigation_header_container;
+			global::Lottie.Forms.Resource.Id.never = global::VYRMobile.Droid.Resource.Id.never;
+			global::Lottie.Forms.Resource.Id.none = global::VYRMobile.Droid.Resource.Id.none;
+			global::Lottie.Forms.Resource.Id.normal = global::VYRMobile.Droid.Resource.Id.normal;
+			global::Lottie.Forms.Resource.Id.notification_background = global::VYRMobile.Droid.Resource.Id.notification_background;
+			global::Lottie.Forms.Resource.Id.notification_main_column = global::VYRMobile.Droid.Resource.Id.notification_main_column;
+			global::Lottie.Forms.Resource.Id.notification_main_column_container = global::VYRMobile.Droid.Resource.Id.notification_main_column_container;
+			global::Lottie.Forms.Resource.Id.outline = global::VYRMobile.Droid.Resource.Id.outline;
+			global::Lottie.Forms.Resource.Id.parallax = global::VYRMobile.Droid.Resource.Id.parallax;
+			global::Lottie.Forms.Resource.Id.parentPanel = global::VYRMobile.Droid.Resource.Id.parentPanel;
+			global::Lottie.Forms.Resource.Id.parent_matrix = global::VYRMobile.Droid.Resource.Id.parent_matrix;
+			global::Lottie.Forms.Resource.Id.pin = global::VYRMobile.Droid.Resource.Id.pin;
+			global::Lottie.Forms.Resource.Id.progress_circular = global::VYRMobile.Droid.Resource.Id.progress_circular;
+			global::Lottie.Forms.Resource.Id.progress_horizontal = global::VYRMobile.Droid.Resource.Id.progress_horizontal;
+			global::Lottie.Forms.Resource.Id.radio = global::VYRMobile.Droid.Resource.Id.radio;
+			global::Lottie.Forms.Resource.Id.restart = global::VYRMobile.Droid.Resource.Id.restart;
+			global::Lottie.Forms.Resource.Id.reverse = global::VYRMobile.Droid.Resource.Id.reverse;
+			global::Lottie.Forms.Resource.Id.right = global::VYRMobile.Droid.Resource.Id.right;
+			global::Lottie.Forms.Resource.Id.right_icon = global::VYRMobile.Droid.Resource.Id.right_icon;
+			global::Lottie.Forms.Resource.Id.right_side = global::VYRMobile.Droid.Resource.Id.right_side;
+			global::Lottie.Forms.Resource.Id.save_image_matrix = global::VYRMobile.Droid.Resource.Id.save_image_matrix;
+			global::Lottie.Forms.Resource.Id.save_non_transition_alpha = global::VYRMobile.Droid.Resource.Id.save_non_transition_alpha;
+			global::Lottie.Forms.Resource.Id.save_scale_type = global::VYRMobile.Droid.Resource.Id.save_scale_type;
+			global::Lottie.Forms.Resource.Id.screen = global::VYRMobile.Droid.Resource.Id.screen;
+			global::Lottie.Forms.Resource.Id.scroll = global::VYRMobile.Droid.Resource.Id.scroll;
+			global::Lottie.Forms.Resource.Id.scrollable = global::VYRMobile.Droid.Resource.Id.scrollable;
+			global::Lottie.Forms.Resource.Id.scrollIndicatorDown = global::VYRMobile.Droid.Resource.Id.scrollIndicatorDown;
+			global::Lottie.Forms.Resource.Id.scrollIndicatorUp = global::VYRMobile.Droid.Resource.Id.scrollIndicatorUp;
+			global::Lottie.Forms.Resource.Id.scrollView = global::VYRMobile.Droid.Resource.Id.scrollView;
+			global::Lottie.Forms.Resource.Id.search_badge = global::VYRMobile.Droid.Resource.Id.search_badge;
+			global::Lottie.Forms.Resource.Id.search_bar = global::VYRMobile.Droid.Resource.Id.search_bar;
+			global::Lottie.Forms.Resource.Id.search_button = global::VYRMobile.Droid.Resource.Id.search_button;
+			global::Lottie.Forms.Resource.Id.search_close_btn = global::VYRMobile.Droid.Resource.Id.search_close_btn;
+			global::Lottie.Forms.Resource.Id.search_edit_frame = global::VYRMobile.Droid.Resource.Id.search_edit_frame;
+			global::Lottie.Forms.Resource.Id.search_go_btn = global::VYRMobile.Droid.Resource.Id.search_go_btn;
+			global::Lottie.Forms.Resource.Id.search_mag_icon = global::VYRMobile.Droid.Resource.Id.search_mag_icon;
+			global::Lottie.Forms.Resource.Id.search_plate = global::VYRMobile.Droid.Resource.Id.search_plate;
+			global::Lottie.Forms.Resource.Id.search_src_text = global::VYRMobile.Droid.Resource.Id.search_src_text;
+			global::Lottie.Forms.Resource.Id.search_voice_btn = global::VYRMobile.Droid.Resource.Id.search_voice_btn;
+			global::Lottie.Forms.Resource.Id.selected = global::VYRMobile.Droid.Resource.Id.selected;
+			global::Lottie.Forms.Resource.Id.select_dialog_listview = global::VYRMobile.Droid.Resource.Id.select_dialog_listview;
+			global::Lottie.Forms.Resource.Id.shellcontent_appbar = global::VYRMobile.Droid.Resource.Id.shellcontent_appbar;
+			global::Lottie.Forms.Resource.Id.shellcontent_toolbar = global::VYRMobile.Droid.Resource.Id.shellcontent_toolbar;
+			global::Lottie.Forms.Resource.Id.SHIFT = global::VYRMobile.Droid.Resource.Id.SHIFT;
+			global::Lottie.Forms.Resource.Id.shortcut = global::VYRMobile.Droid.Resource.Id.shortcut;
+			global::Lottie.Forms.Resource.Id.showCustom = global::VYRMobile.Droid.Resource.Id.showCustom;
+			global::Lottie.Forms.Resource.Id.showHome = global::VYRMobile.Droid.Resource.Id.showHome;
+			global::Lottie.Forms.Resource.Id.showTitle = global::VYRMobile.Droid.Resource.Id.showTitle;
+			global::Lottie.Forms.Resource.Id.smallLabel = global::VYRMobile.Droid.Resource.Id.smallLabel;
+			global::Lottie.Forms.Resource.Id.snackbar_action = global::VYRMobile.Droid.Resource.Id.snackbar_action;
+			global::Lottie.Forms.Resource.Id.snackbar_text = global::VYRMobile.Droid.Resource.Id.snackbar_text;
+			global::Lottie.Forms.Resource.Id.snap = global::VYRMobile.Droid.Resource.Id.snap;
+			global::Lottie.Forms.Resource.Id.snapMargins = global::VYRMobile.Droid.Resource.Id.snapMargins;
+			global::Lottie.Forms.Resource.Id.software = global::VYRMobile.Droid.Resource.Id.software;
+			global::Lottie.Forms.Resource.Id.spacer = global::VYRMobile.Droid.Resource.Id.spacer;
+			global::Lottie.Forms.Resource.Id.split_action_bar = global::VYRMobile.Droid.Resource.Id.split_action_bar;
+			global::Lottie.Forms.Resource.Id.src_atop = global::VYRMobile.Droid.Resource.Id.src_atop;
+			global::Lottie.Forms.Resource.Id.src_in = global::VYRMobile.Droid.Resource.Id.src_in;
+			global::Lottie.Forms.Resource.Id.src_over = global::VYRMobile.Droid.Resource.Id.src_over;
+			global::Lottie.Forms.Resource.Id.start = global::VYRMobile.Droid.Resource.Id.start;
+			global::Lottie.Forms.Resource.Id.status_bar_latest_event_content = global::VYRMobile.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Lottie.Forms.Resource.Id.stretch = global::VYRMobile.Droid.Resource.Id.stretch;
+			global::Lottie.Forms.Resource.Id.submenuarrow = global::VYRMobile.Droid.Resource.Id.submenuarrow;
+			global::Lottie.Forms.Resource.Id.submit_area = global::VYRMobile.Droid.Resource.Id.submit_area;
+			global::Lottie.Forms.Resource.Id.SYM = global::VYRMobile.Droid.Resource.Id.SYM;
+			global::Lottie.Forms.Resource.Id.tabMode = global::VYRMobile.Droid.Resource.Id.tabMode;
+			global::Lottie.Forms.Resource.Id.tag_transition_group = global::VYRMobile.Droid.Resource.Id.tag_transition_group;
+			global::Lottie.Forms.Resource.Id.tag_unhandled_key_event_manager = global::VYRMobile.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Lottie.Forms.Resource.Id.tag_unhandled_key_listeners = global::VYRMobile.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Lottie.Forms.Resource.Id.text = global::VYRMobile.Droid.Resource.Id.text;
+			global::Lottie.Forms.Resource.Id.text2 = global::VYRMobile.Droid.Resource.Id.text2;
+			global::Lottie.Forms.Resource.Id.textinput_counter = global::VYRMobile.Droid.Resource.Id.textinput_counter;
+			global::Lottie.Forms.Resource.Id.textinput_error = global::VYRMobile.Droid.Resource.Id.textinput_error;
+			global::Lottie.Forms.Resource.Id.textinput_helper_text = global::VYRMobile.Droid.Resource.Id.textinput_helper_text;
+			global::Lottie.Forms.Resource.Id.textSpacerNoButtons = global::VYRMobile.Droid.Resource.Id.textSpacerNoButtons;
+			global::Lottie.Forms.Resource.Id.textSpacerNoTitle = global::VYRMobile.Droid.Resource.Id.textSpacerNoTitle;
+			global::Lottie.Forms.Resource.Id.textStart = global::VYRMobile.Droid.Resource.Id.textStart;
+			global::Lottie.Forms.Resource.Id.text_input_password_toggle = global::VYRMobile.Droid.Resource.Id.text_input_password_toggle;
+			global::Lottie.Forms.Resource.Id.time = global::VYRMobile.Droid.Resource.Id.time;
+			global::Lottie.Forms.Resource.Id.title = global::VYRMobile.Droid.Resource.Id.title;
+			global::Lottie.Forms.Resource.Id.titleDividerNoCustom = global::VYRMobile.Droid.Resource.Id.titleDividerNoCustom;
+			global::Lottie.Forms.Resource.Id.title_template = global::VYRMobile.Droid.Resource.Id.title_template;
+			global::Lottie.Forms.Resource.Id.top = global::VYRMobile.Droid.Resource.Id.top;
+			global::Lottie.Forms.Resource.Id.topPanel = global::VYRMobile.Droid.Resource.Id.topPanel;
+			global::Lottie.Forms.Resource.Id.touch_outside = global::VYRMobile.Droid.Resource.Id.touch_outside;
+			global::Lottie.Forms.Resource.Id.transition_current_scene = global::VYRMobile.Droid.Resource.Id.transition_current_scene;
+			global::Lottie.Forms.Resource.Id.transition_layout_save = global::VYRMobile.Droid.Resource.Id.transition_layout_save;
+			global::Lottie.Forms.Resource.Id.transition_position = global::VYRMobile.Droid.Resource.Id.transition_position;
+			global::Lottie.Forms.Resource.Id.transition_scene_layoutid_cache = global::VYRMobile.Droid.Resource.Id.transition_scene_layoutid_cache;
+			global::Lottie.Forms.Resource.Id.transition_transform = global::VYRMobile.Droid.Resource.Id.transition_transform;
+			global::Lottie.Forms.Resource.Id.uniform = global::VYRMobile.Droid.Resource.Id.uniform;
+			global::Lottie.Forms.Resource.Id.unlabeled = global::VYRMobile.Droid.Resource.Id.unlabeled;
+			global::Lottie.Forms.Resource.Id.up = global::VYRMobile.Droid.Resource.Id.up;
+			global::Lottie.Forms.Resource.Id.useLogo = global::VYRMobile.Droid.Resource.Id.useLogo;
+			global::Lottie.Forms.Resource.Id.view_offset_helper = global::VYRMobile.Droid.Resource.Id.view_offset_helper;
+			global::Lottie.Forms.Resource.Id.visible = global::VYRMobile.Droid.Resource.Id.visible;
+			global::Lottie.Forms.Resource.Id.withText = global::VYRMobile.Droid.Resource.Id.withText;
+			global::Lottie.Forms.Resource.Id.wrap_content = global::VYRMobile.Droid.Resource.Id.wrap_content;
+			global::Lottie.Forms.Resource.Integer.abc_config_activityDefaultDur = global::VYRMobile.Droid.Resource.Integer.abc_config_activityDefaultDur;
+			global::Lottie.Forms.Resource.Integer.abc_config_activityShortDur = global::VYRMobile.Droid.Resource.Integer.abc_config_activityShortDur;
+			global::Lottie.Forms.Resource.Integer.app_bar_elevation_anim_duration = global::VYRMobile.Droid.Resource.Integer.app_bar_elevation_anim_duration;
+			global::Lottie.Forms.Resource.Integer.bottom_sheet_slide_duration = global::VYRMobile.Droid.Resource.Integer.bottom_sheet_slide_duration;
+			global::Lottie.Forms.Resource.Integer.cancel_button_image_alpha = global::VYRMobile.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Lottie.Forms.Resource.Integer.config_tooltipAnimTime = global::VYRMobile.Droid.Resource.Integer.config_tooltipAnimTime;
+			global::Lottie.Forms.Resource.Integer.design_snackbar_text_max_lines = global::VYRMobile.Droid.Resource.Integer.design_snackbar_text_max_lines;
+			global::Lottie.Forms.Resource.Integer.design_tab_indicator_anim_duration_ms = global::VYRMobile.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
+			global::Lottie.Forms.Resource.Integer.hide_password_duration = global::VYRMobile.Droid.Resource.Integer.hide_password_duration;
+			global::Lottie.Forms.Resource.Integer.mtrl_btn_anim_delay_ms = global::VYRMobile.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
+			global::Lottie.Forms.Resource.Integer.mtrl_btn_anim_duration_ms = global::VYRMobile.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
+			global::Lottie.Forms.Resource.Integer.mtrl_chip_anim_duration = global::VYRMobile.Droid.Resource.Integer.mtrl_chip_anim_duration;
+			global::Lottie.Forms.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::VYRMobile.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
+			global::Lottie.Forms.Resource.Integer.show_password_duration = global::VYRMobile.Droid.Resource.Integer.show_password_duration;
+			global::Lottie.Forms.Resource.Integer.status_bar_notification_info_maxnum = global::VYRMobile.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Lottie.Forms.Resource.Interpolator.mtrl_fast_out_linear_in = global::VYRMobile.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
+			global::Lottie.Forms.Resource.Interpolator.mtrl_fast_out_slow_in = global::VYRMobile.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
+			global::Lottie.Forms.Resource.Interpolator.mtrl_linear = global::VYRMobile.Droid.Resource.Interpolator.mtrl_linear;
+			global::Lottie.Forms.Resource.Interpolator.mtrl_linear_out_slow_in = global::VYRMobile.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
+			global::Lottie.Forms.Resource.Layout.abc_action_bar_title_item = global::VYRMobile.Droid.Resource.Layout.abc_action_bar_title_item;
+			global::Lottie.Forms.Resource.Layout.abc_action_bar_up_container = global::VYRMobile.Droid.Resource.Layout.abc_action_bar_up_container;
+			global::Lottie.Forms.Resource.Layout.abc_action_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_action_menu_item_layout;
+			global::Lottie.Forms.Resource.Layout.abc_action_menu_layout = global::VYRMobile.Droid.Resource.Layout.abc_action_menu_layout;
+			global::Lottie.Forms.Resource.Layout.abc_action_mode_bar = global::VYRMobile.Droid.Resource.Layout.abc_action_mode_bar;
+			global::Lottie.Forms.Resource.Layout.abc_action_mode_close_item_material = global::VYRMobile.Droid.Resource.Layout.abc_action_mode_close_item_material;
+			global::Lottie.Forms.Resource.Layout.abc_activity_chooser_view = global::VYRMobile.Droid.Resource.Layout.abc_activity_chooser_view;
+			global::Lottie.Forms.Resource.Layout.abc_activity_chooser_view_list_item = global::VYRMobile.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
+			global::Lottie.Forms.Resource.Layout.abc_alert_dialog_button_bar_material = global::VYRMobile.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
+			global::Lottie.Forms.Resource.Layout.abc_alert_dialog_material = global::VYRMobile.Droid.Resource.Layout.abc_alert_dialog_material;
+			global::Lottie.Forms.Resource.Layout.abc_alert_dialog_title_material = global::VYRMobile.Droid.Resource.Layout.abc_alert_dialog_title_material;
+			global::Lottie.Forms.Resource.Layout.abc_cascading_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_cascading_menu_item_layout;
+			global::Lottie.Forms.Resource.Layout.abc_dialog_title_material = global::VYRMobile.Droid.Resource.Layout.abc_dialog_title_material;
+			global::Lottie.Forms.Resource.Layout.abc_expanded_menu_layout = global::VYRMobile.Droid.Resource.Layout.abc_expanded_menu_layout;
+			global::Lottie.Forms.Resource.Layout.abc_list_menu_item_checkbox = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_checkbox;
+			global::Lottie.Forms.Resource.Layout.abc_list_menu_item_icon = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_icon;
+			global::Lottie.Forms.Resource.Layout.abc_list_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_layout;
+			global::Lottie.Forms.Resource.Layout.abc_list_menu_item_radio = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_radio;
+			global::Lottie.Forms.Resource.Layout.abc_popup_menu_header_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
+			global::Lottie.Forms.Resource.Layout.abc_popup_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_popup_menu_item_layout;
+			global::Lottie.Forms.Resource.Layout.abc_screen_content_include = global::VYRMobile.Droid.Resource.Layout.abc_screen_content_include;
+			global::Lottie.Forms.Resource.Layout.abc_screen_simple = global::VYRMobile.Droid.Resource.Layout.abc_screen_simple;
+			global::Lottie.Forms.Resource.Layout.abc_screen_simple_overlay_action_mode = global::VYRMobile.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
+			global::Lottie.Forms.Resource.Layout.abc_screen_toolbar = global::VYRMobile.Droid.Resource.Layout.abc_screen_toolbar;
+			global::Lottie.Forms.Resource.Layout.abc_search_dropdown_item_icons_2line = global::VYRMobile.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
+			global::Lottie.Forms.Resource.Layout.abc_search_view = global::VYRMobile.Droid.Resource.Layout.abc_search_view;
+			global::Lottie.Forms.Resource.Layout.abc_select_dialog_material = global::VYRMobile.Droid.Resource.Layout.abc_select_dialog_material;
+			global::Lottie.Forms.Resource.Layout.abc_tooltip = global::VYRMobile.Droid.Resource.Layout.abc_tooltip;
+			global::Lottie.Forms.Resource.Layout.BottomTabLayout = global::VYRMobile.Droid.Resource.Layout.BottomTabLayout;
+			global::Lottie.Forms.Resource.Layout.browser_actions_context_menu_page = global::VYRMobile.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Lottie.Forms.Resource.Layout.browser_actions_context_menu_row = global::VYRMobile.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Lottie.Forms.Resource.Layout.design_bottom_navigation_item = global::VYRMobile.Droid.Resource.Layout.design_bottom_navigation_item;
+			global::Lottie.Forms.Resource.Layout.design_bottom_sheet_dialog = global::VYRMobile.Droid.Resource.Layout.design_bottom_sheet_dialog;
+			global::Lottie.Forms.Resource.Layout.design_layout_snackbar = global::VYRMobile.Droid.Resource.Layout.design_layout_snackbar;
+			global::Lottie.Forms.Resource.Layout.design_layout_snackbar_include = global::VYRMobile.Droid.Resource.Layout.design_layout_snackbar_include;
+			global::Lottie.Forms.Resource.Layout.design_layout_tab_icon = global::VYRMobile.Droid.Resource.Layout.design_layout_tab_icon;
+			global::Lottie.Forms.Resource.Layout.design_layout_tab_text = global::VYRMobile.Droid.Resource.Layout.design_layout_tab_text;
+			global::Lottie.Forms.Resource.Layout.design_menu_item_action_area = global::VYRMobile.Droid.Resource.Layout.design_menu_item_action_area;
+			global::Lottie.Forms.Resource.Layout.design_navigation_item = global::VYRMobile.Droid.Resource.Layout.design_navigation_item;
+			global::Lottie.Forms.Resource.Layout.design_navigation_item_header = global::VYRMobile.Droid.Resource.Layout.design_navigation_item_header;
+			global::Lottie.Forms.Resource.Layout.design_navigation_item_separator = global::VYRMobile.Droid.Resource.Layout.design_navigation_item_separator;
+			global::Lottie.Forms.Resource.Layout.design_navigation_item_subheader = global::VYRMobile.Droid.Resource.Layout.design_navigation_item_subheader;
+			global::Lottie.Forms.Resource.Layout.design_navigation_menu = global::VYRMobile.Droid.Resource.Layout.design_navigation_menu;
+			global::Lottie.Forms.Resource.Layout.design_navigation_menu_item = global::VYRMobile.Droid.Resource.Layout.design_navigation_menu_item;
+			global::Lottie.Forms.Resource.Layout.design_text_input_password_icon = global::VYRMobile.Droid.Resource.Layout.design_text_input_password_icon;
+			global::Lottie.Forms.Resource.Layout.FlyoutContent = global::VYRMobile.Droid.Resource.Layout.FlyoutContent;
+			global::Lottie.Forms.Resource.Layout.mtrl_layout_snackbar = global::VYRMobile.Droid.Resource.Layout.mtrl_layout_snackbar;
+			global::Lottie.Forms.Resource.Layout.mtrl_layout_snackbar_include = global::VYRMobile.Droid.Resource.Layout.mtrl_layout_snackbar_include;
+			global::Lottie.Forms.Resource.Layout.notification_action = global::VYRMobile.Droid.Resource.Layout.notification_action;
+			global::Lottie.Forms.Resource.Layout.notification_action_tombstone = global::VYRMobile.Droid.Resource.Layout.notification_action_tombstone;
+			global::Lottie.Forms.Resource.Layout.notification_media_action = global::VYRMobile.Droid.Resource.Layout.notification_media_action;
+			global::Lottie.Forms.Resource.Layout.notification_media_cancel_action = global::VYRMobile.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Lottie.Forms.Resource.Layout.notification_template_big_media = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media;
+			global::Lottie.Forms.Resource.Layout.notification_template_big_media_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Lottie.Forms.Resource.Layout.notification_template_big_media_narrow = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Lottie.Forms.Resource.Layout.notification_template_big_media_narrow_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Lottie.Forms.Resource.Layout.notification_template_custom_big = global::VYRMobile.Droid.Resource.Layout.notification_template_custom_big;
+			global::Lottie.Forms.Resource.Layout.notification_template_icon_group = global::VYRMobile.Droid.Resource.Layout.notification_template_icon_group;
+			global::Lottie.Forms.Resource.Layout.notification_template_lines_media = global::VYRMobile.Droid.Resource.Layout.notification_template_lines_media;
+			global::Lottie.Forms.Resource.Layout.notification_template_media = global::VYRMobile.Droid.Resource.Layout.notification_template_media;
+			global::Lottie.Forms.Resource.Layout.notification_template_media_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_media_custom;
+			global::Lottie.Forms.Resource.Layout.notification_template_part_chronometer = global::VYRMobile.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Lottie.Forms.Resource.Layout.notification_template_part_time = global::VYRMobile.Droid.Resource.Layout.notification_template_part_time;
+			global::Lottie.Forms.Resource.Layout.RootLayout = global::VYRMobile.Droid.Resource.Layout.RootLayout;
+			global::Lottie.Forms.Resource.Layout.select_dialog_item_material = global::VYRMobile.Droid.Resource.Layout.select_dialog_item_material;
+			global::Lottie.Forms.Resource.Layout.select_dialog_multichoice_material = global::VYRMobile.Droid.Resource.Layout.select_dialog_multichoice_material;
+			global::Lottie.Forms.Resource.Layout.select_dialog_singlechoice_material = global::VYRMobile.Droid.Resource.Layout.select_dialog_singlechoice_material;
+			global::Lottie.Forms.Resource.Layout.ShellContent = global::VYRMobile.Droid.Resource.Layout.ShellContent;
+			global::Lottie.Forms.Resource.Layout.support_simple_spinner_dropdown_item = global::VYRMobile.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
+			global::Lottie.Forms.Resource.String.abc_action_bar_home_description = global::VYRMobile.Droid.Resource.String.abc_action_bar_home_description;
+			global::Lottie.Forms.Resource.String.abc_action_bar_up_description = global::VYRMobile.Droid.Resource.String.abc_action_bar_up_description;
+			global::Lottie.Forms.Resource.String.abc_action_menu_overflow_description = global::VYRMobile.Droid.Resource.String.abc_action_menu_overflow_description;
+			global::Lottie.Forms.Resource.String.abc_action_mode_done = global::VYRMobile.Droid.Resource.String.abc_action_mode_done;
+			global::Lottie.Forms.Resource.String.abc_activitychooserview_choose_application = global::VYRMobile.Droid.Resource.String.abc_activitychooserview_choose_application;
+			global::Lottie.Forms.Resource.String.abc_activity_chooser_view_see_all = global::VYRMobile.Droid.Resource.String.abc_activity_chooser_view_see_all;
+			global::Lottie.Forms.Resource.String.abc_capital_off = global::VYRMobile.Droid.Resource.String.abc_capital_off;
+			global::Lottie.Forms.Resource.String.abc_capital_on = global::VYRMobile.Droid.Resource.String.abc_capital_on;
+			global::Lottie.Forms.Resource.String.abc_font_family_body_1_material = global::VYRMobile.Droid.Resource.String.abc_font_family_body_1_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_body_2_material = global::VYRMobile.Droid.Resource.String.abc_font_family_body_2_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_button_material = global::VYRMobile.Droid.Resource.String.abc_font_family_button_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_caption_material = global::VYRMobile.Droid.Resource.String.abc_font_family_caption_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_display_1_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_1_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_display_2_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_2_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_display_3_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_3_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_display_4_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_4_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_headline_material = global::VYRMobile.Droid.Resource.String.abc_font_family_headline_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_menu_material = global::VYRMobile.Droid.Resource.String.abc_font_family_menu_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_subhead_material = global::VYRMobile.Droid.Resource.String.abc_font_family_subhead_material;
+			global::Lottie.Forms.Resource.String.abc_font_family_title_material = global::VYRMobile.Droid.Resource.String.abc_font_family_title_material;
+			global::Lottie.Forms.Resource.String.abc_menu_alt_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_alt_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_ctrl_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_delete_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_delete_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_enter_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_enter_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_function_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_function_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_meta_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_meta_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_shift_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_shift_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_space_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_space_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_menu_sym_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_sym_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_prepend_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_prepend_shortcut_label;
+			global::Lottie.Forms.Resource.String.abc_searchview_description_clear = global::VYRMobile.Droid.Resource.String.abc_searchview_description_clear;
+			global::Lottie.Forms.Resource.String.abc_searchview_description_query = global::VYRMobile.Droid.Resource.String.abc_searchview_description_query;
+			global::Lottie.Forms.Resource.String.abc_searchview_description_search = global::VYRMobile.Droid.Resource.String.abc_searchview_description_search;
+			global::Lottie.Forms.Resource.String.abc_searchview_description_submit = global::VYRMobile.Droid.Resource.String.abc_searchview_description_submit;
+			global::Lottie.Forms.Resource.String.abc_searchview_description_voice = global::VYRMobile.Droid.Resource.String.abc_searchview_description_voice;
+			global::Lottie.Forms.Resource.String.abc_search_hint = global::VYRMobile.Droid.Resource.String.abc_search_hint;
+			global::Lottie.Forms.Resource.String.abc_shareactionprovider_share_with = global::VYRMobile.Droid.Resource.String.abc_shareactionprovider_share_with;
+			global::Lottie.Forms.Resource.String.abc_shareactionprovider_share_with_application = global::VYRMobile.Droid.Resource.String.abc_shareactionprovider_share_with_application;
+			global::Lottie.Forms.Resource.String.abc_toolbar_collapse_description = global::VYRMobile.Droid.Resource.String.abc_toolbar_collapse_description;
+			global::Lottie.Forms.Resource.String.appbar_scrolling_view_behavior = global::VYRMobile.Droid.Resource.String.appbar_scrolling_view_behavior;
+			global::Lottie.Forms.Resource.String.bottom_sheet_behavior = global::VYRMobile.Droid.Resource.String.bottom_sheet_behavior;
+			global::Lottie.Forms.Resource.String.character_counter_content_description = global::VYRMobile.Droid.Resource.String.character_counter_content_description;
+			global::Lottie.Forms.Resource.String.character_counter_pattern = global::VYRMobile.Droid.Resource.String.character_counter_pattern;
+			global::Lottie.Forms.Resource.String.fab_transformation_scrim_behavior = global::VYRMobile.Droid.Resource.String.fab_transformation_scrim_behavior;
+			global::Lottie.Forms.Resource.String.fab_transformation_sheet_behavior = global::VYRMobile.Droid.Resource.String.fab_transformation_sheet_behavior;
+			global::Lottie.Forms.Resource.String.hide_bottom_view_on_scroll_behavior = global::VYRMobile.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
+			global::Lottie.Forms.Resource.String.mtrl_chip_close_icon_content_description = global::VYRMobile.Droid.Resource.String.mtrl_chip_close_icon_content_description;
+			global::Lottie.Forms.Resource.String.password_toggle_content_description = global::VYRMobile.Droid.Resource.String.password_toggle_content_description;
+			global::Lottie.Forms.Resource.String.path_password_eye = global::VYRMobile.Droid.Resource.String.path_password_eye;
+			global::Lottie.Forms.Resource.String.path_password_eye_mask_strike_through = global::VYRMobile.Droid.Resource.String.path_password_eye_mask_strike_through;
+			global::Lottie.Forms.Resource.String.path_password_eye_mask_visible = global::VYRMobile.Droid.Resource.String.path_password_eye_mask_visible;
+			global::Lottie.Forms.Resource.String.path_password_strike_through = global::VYRMobile.Droid.Resource.String.path_password_strike_through;
+			global::Lottie.Forms.Resource.String.search_menu_title = global::VYRMobile.Droid.Resource.String.search_menu_title;
+			global::Lottie.Forms.Resource.String.status_bar_notification_info_overflow = global::VYRMobile.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Lottie.Forms.Resource.Style.AlertDialog_AppCompat = global::VYRMobile.Droid.Resource.Style.AlertDialog_AppCompat;
+			global::Lottie.Forms.Resource.Style.AlertDialog_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.AlertDialog_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Animation_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Animation_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Animation_AppCompat_DropDownUp = global::VYRMobile.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
+			global::Lottie.Forms.Resource.Style.Animation_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.Animation_AppCompat_Tooltip;
+			global::Lottie.Forms.Resource.Style.Animation_Design_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
+			global::Lottie.Forms.Resource.Style.Base_AlertDialog_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_AlertDialog_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_Animation_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::VYRMobile.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
+			global::Lottie.Forms.Resource.Style.Base_Animation_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
+			global::Lottie.Forms.Resource.Style.Base_CardView = global::VYRMobile.Droid.Resource.Style.Base_CardView;
+			global::Lottie.Forms.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_DialogWindowTitle_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Large = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Small = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Lottie.Forms.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
+			global::Lottie.Forms.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
+			global::Lottie.Forms.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Base_V14_Theme_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
+			global::Lottie.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
+			global::Lottie.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
+			global::Lottie.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
+			global::Lottie.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Lottie.Forms.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V21_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V22_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_V22_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_V23_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_V23_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_V26_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V26_Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_V26_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
+			global::Lottie.Forms.Resource.Style.Base_V28_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V28_Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_V28_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V7_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V7_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
+			global::Lottie.Forms.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::VYRMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
+			global::Lottie.Forms.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActionMode = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Button_Small = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_EditText = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ImageButton = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ListView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_RatingBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_SearchView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_SeekBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Spinner = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
+			global::Lottie.Forms.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Lottie.Forms.Resource.Style.Base_Widget_Design_TabLayout = global::VYRMobile.Droid.Resource.Style.Base_Widget_Design_TabLayout;
+			global::Lottie.Forms.Resource.Style.Base_Widget_MaterialComponents_Chip = global::VYRMobile.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
+			global::Lottie.Forms.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::VYRMobile.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
+			global::Lottie.Forms.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::VYRMobile.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
+			global::Lottie.Forms.Resource.Style.CardView = global::VYRMobile.Droid.Resource.Style.CardView;
+			global::Lottie.Forms.Resource.Style.CardView_Dark = global::VYRMobile.Droid.Resource.Style.CardView_Dark;
+			global::Lottie.Forms.Resource.Style.CardView_Light = global::VYRMobile.Droid.Resource.Style.CardView_Light;
+			global::Lottie.Forms.Resource.Style.collectionViewStyle = global::VYRMobile.Droid.Resource.Style.collectionViewStyle;
+			global::Lottie.Forms.Resource.Style.Platform_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_AppCompat;
+			global::Lottie.Forms.Resource.Style.Platform_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Platform_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents;
+			global::Lottie.Forms.Resource.Style.Platform_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
+			global::Lottie.Forms.Resource.Style.Platform_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents_Light;
+			global::Lottie.Forms.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
+			global::Lottie.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::VYRMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
+			global::Lottie.Forms.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Platform_V21_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_V21_AppCompat;
+			global::Lottie.Forms.Resource.Style.Platform_V21_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_V21_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Platform_V25_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_V25_AppCompat;
+			global::Lottie.Forms.Resource.Style.Platform_V25_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_V25_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Platform_Widget_AppCompat_Spinner = global::VYRMobile.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::VYRMobile.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
+			global::Lottie.Forms.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
+			global::Lottie.Forms.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::VYRMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
+			global::Lottie.Forms.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Body1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Body2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Button;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Caption = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Display1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Display2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Display3 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Display4 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Headline = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Large = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Medium = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Menu = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Small = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Subhead = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
+			global::Lottie.Forms.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Info = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Time = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_Counter = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Counter;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_Counter_Overflow = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_Error = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Error;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_HelperText = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_HelperText;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_Hint = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Hint;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_Snackbar_Message = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Design_Tab = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Tab;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Button = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Caption = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Chip = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Overline = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
+			global::Lottie.Forms.Resource.Style.TextAppearance_MaterialComponents_Tab = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VYRMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
+			global::Lottie.Forms.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_AppCompat = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_AppCompat_Dark = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Lottie.Forms.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_CompactMenu = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DayNight = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Dialog;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_AppCompat_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_Design = global::VYRMobile.Droid.Resource.Style.Theme_Design;
+			global::Lottie.Forms.Resource.Style.Theme_Design_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
+			global::Lottie.Forms.Resource.Style.Theme_Design_Light = global::VYRMobile.Droid.Resource.Style.Theme_Design_Light;
+			global::Lottie.Forms.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
+			global::Lottie.Forms.Resource.Style.Theme_Design_Light_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_Design_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_Design_NoActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_CompactMenu = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
+			global::Lottie.Forms.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActionMode = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionMode;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ActivityChooserView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ButtonBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Button_Borderless = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Button_Colored = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Button_Small = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Small;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_EditText = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_EditText;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ImageButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ImageButton;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_SearchView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ListMenuView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ListPopupWindow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ListView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ListView_DropDown = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ListView_Menu = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_PopupMenu = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_PopupWindow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ProgressBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_RatingBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_RatingBar_Small = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_SearchView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SearchView;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_SeekBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SeekBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Spinner = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar;
+			global::Lottie.Forms.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
+			global::Lottie.Forms.Resource.Style.Widget_Compat_NotificationActionContainer = global::VYRMobile.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Lottie.Forms.Resource.Style.Widget_Compat_NotificationActionText = global::VYRMobile.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Lottie.Forms.Resource.Style.Widget_Design_AppBarLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_AppBarLayout;
+			global::Lottie.Forms.Resource.Style.Widget_Design_BottomNavigationView = global::VYRMobile.Droid.Resource.Style.Widget_Design_BottomNavigationView;
+			global::Lottie.Forms.Resource.Style.Widget_Design_BottomSheet_Modal = global::VYRMobile.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
+			global::Lottie.Forms.Resource.Style.Widget_Design_CollapsingToolbar = global::VYRMobile.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
+			global::Lottie.Forms.Resource.Style.Widget_Design_FloatingActionButton = global::VYRMobile.Droid.Resource.Style.Widget_Design_FloatingActionButton;
+			global::Lottie.Forms.Resource.Style.Widget_Design_NavigationView = global::VYRMobile.Droid.Resource.Style.Widget_Design_NavigationView;
+			global::Lottie.Forms.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
+			global::Lottie.Forms.Resource.Style.Widget_Design_Snackbar = global::VYRMobile.Droid.Resource.Style.Widget_Design_Snackbar;
+			global::Lottie.Forms.Resource.Style.Widget_Design_TabLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_TabLayout;
+			global::Lottie.Forms.Resource.Style.Widget_Design_TextInputLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_TextInputLayout;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_CardView = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_CardView;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_ChipGroup = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Chip_Action = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_NavigationView = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Snackbar = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TabLayout = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
+			global::Lottie.Forms.Resource.Style.Widget_MaterialComponents_Toolbar = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
+			global::Lottie.Forms.Resource.Style.Widget_Support_CoordinatorLayout = global::VYRMobile.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Lottie.Forms.Resource.Styleable.ActionBar = global::VYRMobile.Droid.Resource.Styleable.ActionBar;
+			global::Lottie.Forms.Resource.Styleable.ActionBarLayout = global::VYRMobile.Droid.Resource.Styleable.ActionBarLayout;
+			global::Lottie.Forms.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::VYRMobile.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_background = global::VYRMobile.Droid.Resource.Styleable.ActionBar_background;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_backgroundSplit = global::VYRMobile.Droid.Resource.Styleable.ActionBar_backgroundSplit;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_backgroundStacked = global::VYRMobile.Droid.Resource.Styleable.ActionBar_backgroundStacked;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_contentInsetEnd = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_contentInsetLeft = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_contentInsetRight = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetRight;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_contentInsetStart = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetStart;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_customNavigationLayout = global::VYRMobile.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_displayOptions = global::VYRMobile.Droid.Resource.Styleable.ActionBar_displayOptions;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_divider = global::VYRMobile.Droid.Resource.Styleable.ActionBar_divider;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_elevation = global::VYRMobile.Droid.Resource.Styleable.ActionBar_elevation;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_height = global::VYRMobile.Droid.Resource.Styleable.ActionBar_height;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_hideOnContentScroll = global::VYRMobile.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_homeAsUpIndicator = global::VYRMobile.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_homeLayout = global::VYRMobile.Droid.Resource.Styleable.ActionBar_homeLayout;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_icon = global::VYRMobile.Droid.Resource.Styleable.ActionBar_icon;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_itemPadding = global::VYRMobile.Droid.Resource.Styleable.ActionBar_itemPadding;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_logo = global::VYRMobile.Droid.Resource.Styleable.ActionBar_logo;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_navigationMode = global::VYRMobile.Droid.Resource.Styleable.ActionBar_navigationMode;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_popupTheme = global::VYRMobile.Droid.Resource.Styleable.ActionBar_popupTheme;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_progressBarPadding = global::VYRMobile.Droid.Resource.Styleable.ActionBar_progressBarPadding;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_progressBarStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_progressBarStyle;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_subtitle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_subtitle;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_subtitleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_title = global::VYRMobile.Droid.Resource.Styleable.ActionBar_title;
+			global::Lottie.Forms.Resource.Styleable.ActionBar_titleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_titleTextStyle;
+			global::Lottie.Forms.Resource.Styleable.ActionMenuItemView = global::VYRMobile.Droid.Resource.Styleable.ActionMenuItemView;
+			global::Lottie.Forms.Resource.Styleable.ActionMenuItemView_android_minWidth = global::VYRMobile.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
+			global::Lottie.Forms.Resource.Styleable.ActionMenuView = global::VYRMobile.Droid.Resource.Styleable.ActionMenuView;
+			global::Lottie.Forms.Resource.Styleable.ActionMode = global::VYRMobile.Droid.Resource.Styleable.ActionMode;
+			global::Lottie.Forms.Resource.Styleable.ActionMode_background = global::VYRMobile.Droid.Resource.Styleable.ActionMode_background;
+			global::Lottie.Forms.Resource.Styleable.ActionMode_backgroundSplit = global::VYRMobile.Droid.Resource.Styleable.ActionMode_backgroundSplit;
+			global::Lottie.Forms.Resource.Styleable.ActionMode_closeItemLayout = global::VYRMobile.Droid.Resource.Styleable.ActionMode_closeItemLayout;
+			global::Lottie.Forms.Resource.Styleable.ActionMode_height = global::VYRMobile.Droid.Resource.Styleable.ActionMode_height;
+			global::Lottie.Forms.Resource.Styleable.ActionMode_subtitleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
+			global::Lottie.Forms.Resource.Styleable.ActionMode_titleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionMode_titleTextStyle;
+			global::Lottie.Forms.Resource.Styleable.ActivityChooserView = global::VYRMobile.Droid.Resource.Styleable.ActivityChooserView;
+			global::Lottie.Forms.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::VYRMobile.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
+			global::Lottie.Forms.Resource.Styleable.ActivityChooserView_initialActivityCount = global::VYRMobile.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog = global::VYRMobile.Droid.Resource.Styleable.AlertDialog;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_android_layout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_android_layout;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_buttonIconDimen = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_listItemLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_listItemLayout;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_listLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_listLayout;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_showTitle = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_showTitle;
+			global::Lottie.Forms.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableCompat = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableItem = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableTransition = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
+			global::Lottie.Forms.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayoutStates = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayoutStates_state_liftable = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayoutStates_state_lifted = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_android_background = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_android_background;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_elevation = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_elevation;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_expanded = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_expanded;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_Layout = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_Layout;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
+			global::Lottie.Forms.Resource.Styleable.AppBarLayout_liftOnScroll = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
+			global::Lottie.Forms.Resource.Styleable.AppCompatImageView = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView;
+			global::Lottie.Forms.Resource.Styleable.AppCompatImageView_android_src = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_android_src;
+			global::Lottie.Forms.Resource.Styleable.AppCompatImageView_srcCompat = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
+			global::Lottie.Forms.Resource.Styleable.AppCompatImageView_tint = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_tint;
+			global::Lottie.Forms.Resource.Styleable.AppCompatImageView_tintMode = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_tintMode;
+			global::Lottie.Forms.Resource.Styleable.AppCompatSeekBar = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar;
+			global::Lottie.Forms.Resource.Styleable.AppCompatSeekBar_android_thumb = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
+			global::Lottie.Forms.Resource.Styleable.AppCompatSeekBar_tickMark = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
+			global::Lottie.Forms.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
+			global::Lottie.Forms.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_fontFamily = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_lineHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTextView_textAllCaps = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarDivider = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarSize = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_buttonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_checkboxStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorAccent = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorControlActivated = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorControlNormal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorError = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorError;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorPrimary = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_controlBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_dialogTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_dividerVertical = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_editTextBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_editTextColor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_editTextStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_panelBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_searchViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_seekBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_spinnerStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_switchStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_toolbarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowActionBar = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
+			global::Lottie.Forms.Resource.Styleable.AppCompatTheme_windowNoTitle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
+			global::Lottie.Forms.Resource.Styleable.BottomAppBar = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar;
+			global::Lottie.Forms.Resource.Styleable.BottomAppBar_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
+			global::Lottie.Forms.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
+			global::Lottie.Forms.Resource.Styleable.BottomAppBar_fabCradleMargin = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
+			global::Lottie.Forms.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
+			global::Lottie.Forms.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
+			global::Lottie.Forms.Resource.Styleable.BottomAppBar_hideOnScroll = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_elevation = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_elevation;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_itemBackground = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_itemIconSize = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_itemIconTint = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_itemTextColor = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
+			global::Lottie.Forms.Resource.Styleable.BottomNavigationView_menu = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_menu;
+			global::Lottie.Forms.Resource.Styleable.BottomSheetBehavior_Layout = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
+			global::Lottie.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
+			global::Lottie.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
+			global::Lottie.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
+			global::Lottie.Forms.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
+			global::Lottie.Forms.Resource.Styleable.ButtonBarLayout = global::VYRMobile.Droid.Resource.Styleable.ButtonBarLayout;
+			global::Lottie.Forms.Resource.Styleable.ButtonBarLayout_allowStacking = global::VYRMobile.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
+			global::Lottie.Forms.Resource.Styleable.CardView = global::VYRMobile.Droid.Resource.Styleable.CardView;
+			global::Lottie.Forms.Resource.Styleable.CardView_android_minHeight = global::VYRMobile.Droid.Resource.Styleable.CardView_android_minHeight;
+			global::Lottie.Forms.Resource.Styleable.CardView_android_minWidth = global::VYRMobile.Droid.Resource.Styleable.CardView_android_minWidth;
+			global::Lottie.Forms.Resource.Styleable.CardView_cardBackgroundColor = global::VYRMobile.Droid.Resource.Styleable.CardView_cardBackgroundColor;
+			global::Lottie.Forms.Resource.Styleable.CardView_cardCornerRadius = global::VYRMobile.Droid.Resource.Styleable.CardView_cardCornerRadius;
+			global::Lottie.Forms.Resource.Styleable.CardView_cardElevation = global::VYRMobile.Droid.Resource.Styleable.CardView_cardElevation;
+			global::Lottie.Forms.Resource.Styleable.CardView_cardMaxElevation = global::VYRMobile.Droid.Resource.Styleable.CardView_cardMaxElevation;
+			global::Lottie.Forms.Resource.Styleable.CardView_cardPreventCornerOverlap = global::VYRMobile.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
+			global::Lottie.Forms.Resource.Styleable.CardView_cardUseCompatPadding = global::VYRMobile.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
+			global::Lottie.Forms.Resource.Styleable.CardView_contentPadding = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPadding;
+			global::Lottie.Forms.Resource.Styleable.CardView_contentPaddingBottom = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingBottom;
+			global::Lottie.Forms.Resource.Styleable.CardView_contentPaddingLeft = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingLeft;
+			global::Lottie.Forms.Resource.Styleable.CardView_contentPaddingRight = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingRight;
+			global::Lottie.Forms.Resource.Styleable.CardView_contentPaddingTop = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingTop;
+			global::Lottie.Forms.Resource.Styleable.Chip = global::VYRMobile.Droid.Resource.Styleable.Chip;
+			global::Lottie.Forms.Resource.Styleable.ChipGroup = global::VYRMobile.Droid.Resource.Styleable.ChipGroup;
+			global::Lottie.Forms.Resource.Styleable.ChipGroup_checkedChip = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_checkedChip;
+			global::Lottie.Forms.Resource.Styleable.ChipGroup_chipSpacing = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_chipSpacing;
+			global::Lottie.Forms.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
+			global::Lottie.Forms.Resource.Styleable.ChipGroup_chipSpacingVertical = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
+			global::Lottie.Forms.Resource.Styleable.ChipGroup_singleLine = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_singleLine;
+			global::Lottie.Forms.Resource.Styleable.ChipGroup_singleSelection = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_singleSelection;
+			global::Lottie.Forms.Resource.Styleable.Chip_android_checkable = global::VYRMobile.Droid.Resource.Styleable.Chip_android_checkable;
+			global::Lottie.Forms.Resource.Styleable.Chip_android_ellipsize = global::VYRMobile.Droid.Resource.Styleable.Chip_android_ellipsize;
+			global::Lottie.Forms.Resource.Styleable.Chip_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.Chip_android_maxWidth;
+			global::Lottie.Forms.Resource.Styleable.Chip_android_text = global::VYRMobile.Droid.Resource.Styleable.Chip_android_text;
+			global::Lottie.Forms.Resource.Styleable.Chip_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.Chip_android_textAppearance;
+			global::Lottie.Forms.Resource.Styleable.Chip_checkedIcon = global::VYRMobile.Droid.Resource.Styleable.Chip_checkedIcon;
+			global::Lottie.Forms.Resource.Styleable.Chip_checkedIconEnabled = global::VYRMobile.Droid.Resource.Styleable.Chip_checkedIconEnabled;
+			global::Lottie.Forms.Resource.Styleable.Chip_checkedIconVisible = global::VYRMobile.Droid.Resource.Styleable.Chip_checkedIconVisible;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipBackgroundColor = global::VYRMobile.Droid.Resource.Styleable.Chip_chipBackgroundColor;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipCornerRadius = global::VYRMobile.Droid.Resource.Styleable.Chip_chipCornerRadius;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_chipEndPadding;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipIcon = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIcon;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipIconEnabled = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconEnabled;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipIconSize = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconSize;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipIconTint = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconTint;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipIconVisible = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconVisible;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipMinHeight = global::VYRMobile.Droid.Resource.Styleable.Chip_chipMinHeight;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_chipStartPadding;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipStrokeColor = global::VYRMobile.Droid.Resource.Styleable.Chip_chipStrokeColor;
+			global::Lottie.Forms.Resource.Styleable.Chip_chipStrokeWidth = global::VYRMobile.Droid.Resource.Styleable.Chip_chipStrokeWidth;
+			global::Lottie.Forms.Resource.Styleable.Chip_closeIcon = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIcon;
+			global::Lottie.Forms.Resource.Styleable.Chip_closeIconEnabled = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconEnabled;
+			global::Lottie.Forms.Resource.Styleable.Chip_closeIconEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconEndPadding;
+			global::Lottie.Forms.Resource.Styleable.Chip_closeIconSize = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconSize;
+			global::Lottie.Forms.Resource.Styleable.Chip_closeIconStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconStartPadding;
+			global::Lottie.Forms.Resource.Styleable.Chip_closeIconTint = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconTint;
+			global::Lottie.Forms.Resource.Styleable.Chip_closeIconVisible = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconVisible;
+			global::Lottie.Forms.Resource.Styleable.Chip_hideMotionSpec = global::VYRMobile.Droid.Resource.Styleable.Chip_hideMotionSpec;
+			global::Lottie.Forms.Resource.Styleable.Chip_iconEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_iconEndPadding;
+			global::Lottie.Forms.Resource.Styleable.Chip_iconStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_iconStartPadding;
+			global::Lottie.Forms.Resource.Styleable.Chip_rippleColor = global::VYRMobile.Droid.Resource.Styleable.Chip_rippleColor;
+			global::Lottie.Forms.Resource.Styleable.Chip_showMotionSpec = global::VYRMobile.Droid.Resource.Styleable.Chip_showMotionSpec;
+			global::Lottie.Forms.Resource.Styleable.Chip_textEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_textEndPadding;
+			global::Lottie.Forms.Resource.Styleable.Chip_textStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_textStartPadding;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_Layout = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_title = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
+			global::Lottie.Forms.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
+			global::Lottie.Forms.Resource.Styleable.ColorStateListItem = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem;
+			global::Lottie.Forms.Resource.Styleable.ColorStateListItem_alpha = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Lottie.Forms.Resource.Styleable.ColorStateListItem_android_alpha = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Lottie.Forms.Resource.Styleable.ColorStateListItem_android_color = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Lottie.Forms.Resource.Styleable.CompoundButton = global::VYRMobile.Droid.Resource.Styleable.CompoundButton;
+			global::Lottie.Forms.Resource.Styleable.CompoundButton_android_button = global::VYRMobile.Droid.Resource.Styleable.CompoundButton_android_button;
+			global::Lottie.Forms.Resource.Styleable.CompoundButton_buttonTint = global::VYRMobile.Droid.Resource.Styleable.CompoundButton_buttonTint;
+			global::Lottie.Forms.Resource.Styleable.CompoundButton_buttonTintMode = global::VYRMobile.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_keylines = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Lottie.Forms.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Lottie.Forms.Resource.Styleable.DesignTheme = global::VYRMobile.Droid.Resource.Styleable.DesignTheme;
+			global::Lottie.Forms.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::VYRMobile.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
+			global::Lottie.Forms.Resource.Styleable.DesignTheme_bottomSheetStyle = global::VYRMobile.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_barLength = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_color = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_color;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_drawableSize = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_spinBars = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
+			global::Lottie.Forms.Resource.Styleable.DrawerArrowToggle_thickness = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_borderWidth = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_elevation = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_elevation;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_fabCustomSize = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_fabSize = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_fabSize;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_maxImageSize = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_rippleColor = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_showMotionSpec = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
+			global::Lottie.Forms.Resource.Styleable.FloatingActionButton_useCompatPadding = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
+			global::Lottie.Forms.Resource.Styleable.FlowLayout = global::VYRMobile.Droid.Resource.Styleable.FlowLayout;
+			global::Lottie.Forms.Resource.Styleable.FlowLayout_itemSpacing = global::VYRMobile.Droid.Resource.Styleable.FlowLayout_itemSpacing;
+			global::Lottie.Forms.Resource.Styleable.FlowLayout_lineSpacing = global::VYRMobile.Droid.Resource.Styleable.FlowLayout_lineSpacing;
+			global::Lottie.Forms.Resource.Styleable.FontFamily = global::VYRMobile.Droid.Resource.Styleable.FontFamily;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_android_font = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_android_fontStyle = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_android_fontWeight = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_font = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_fontStyle = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_fontWeight = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Lottie.Forms.Resource.Styleable.FontFamilyFont_ttcIndex = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Lottie.Forms.Resource.Styleable.FontFamily_fontProviderAuthority = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Lottie.Forms.Resource.Styleable.FontFamily_fontProviderCerts = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Lottie.Forms.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Lottie.Forms.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Lottie.Forms.Resource.Styleable.FontFamily_fontProviderPackage = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Lottie.Forms.Resource.Styleable.FontFamily_fontProviderQuery = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Lottie.Forms.Resource.Styleable.ForegroundLinearLayout = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout;
+			global::Lottie.Forms.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
+			global::Lottie.Forms.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
+			global::Lottie.Forms.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
+			global::Lottie.Forms.Resource.Styleable.GradientColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor;
+			global::Lottie.Forms.Resource.Styleable.GradientColorItem = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem;
+			global::Lottie.Forms.Resource.Styleable.GradientColorItem_android_color = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Lottie.Forms.Resource.Styleable.GradientColorItem_android_offset = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_centerColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_centerX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_centerY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_endColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_endX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_endY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_gradientRadius = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_startColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_startX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_startY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_tileMode = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Lottie.Forms.Resource.Styleable.GradientColor_android_type = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_android_gravity = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_android_orientation = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_divider = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_divider;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_Layout = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
+			global::Lottie.Forms.Resource.Styleable.LinearLayoutCompat_showDividers = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
+			global::Lottie.Forms.Resource.Styleable.ListPopupWindow = global::VYRMobile.Droid.Resource.Styleable.ListPopupWindow;
+			global::Lottie.Forms.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::VYRMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
+			global::Lottie.Forms.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::VYRMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_autoPlay = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_autoPlay;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_colorFilter = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_colorFilter;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_fileName = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_fileName;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_imageAssetsFolder = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_imageAssetsFolder;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_loop = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_loop;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_progress = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_progress;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_rawRes = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_rawRes;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_renderMode = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_renderMode;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_repeatCount = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_repeatCount;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_repeatMode = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_repeatMode;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_scale = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_scale;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_speed = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_speed;
+			global::Lottie.Forms.Resource.Styleable.LottieAnimationView_lottie_url = global::VYRMobile.Droid.Resource.Styleable.LottieAnimationView_lottie_url;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton = global::VYRMobile.Droid.Resource.Styleable.MaterialButton;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_android_insetBottom = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_android_insetLeft = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_android_insetRight = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetRight;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_android_insetTop = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetTop;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_backgroundTint;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_backgroundTintMode = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_cornerRadius = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_cornerRadius;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_icon = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_icon;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_iconGravity = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconGravity;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_iconPadding = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconPadding;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_iconSize = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconSize;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_iconTint = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconTint;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_iconTintMode = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconTintMode;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_rippleColor = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_rippleColor;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_strokeColor = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_strokeColor;
+			global::Lottie.Forms.Resource.Styleable.MaterialButton_strokeWidth = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_strokeWidth;
+			global::Lottie.Forms.Resource.Styleable.MaterialCardView = global::VYRMobile.Droid.Resource.Styleable.MaterialCardView;
+			global::Lottie.Forms.Resource.Styleable.MaterialCardView_strokeColor = global::VYRMobile.Droid.Resource.Styleable.MaterialCardView_strokeColor;
+			global::Lottie.Forms.Resource.Styleable.MaterialCardView_strokeWidth = global::VYRMobile.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
+			global::Lottie.Forms.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
+			global::Lottie.Forms.Resource.Styleable.MenuGroup = global::VYRMobile.Droid.Resource.Styleable.MenuGroup;
+			global::Lottie.Forms.Resource.Styleable.MenuGroup_android_checkableBehavior = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
+			global::Lottie.Forms.Resource.Styleable.MenuGroup_android_enabled = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_enabled;
+			global::Lottie.Forms.Resource.Styleable.MenuGroup_android_id = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_id;
+			global::Lottie.Forms.Resource.Styleable.MenuGroup_android_menuCategory = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
+			global::Lottie.Forms.Resource.Styleable.MenuGroup_android_orderInCategory = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
+			global::Lottie.Forms.Resource.Styleable.MenuGroup_android_visible = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_visible;
+			global::Lottie.Forms.Resource.Styleable.MenuItem = global::VYRMobile.Droid.Resource.Styleable.MenuItem;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_actionLayout = global::VYRMobile.Droid.Resource.Styleable.MenuItem_actionLayout;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_actionProviderClass = global::VYRMobile.Droid.Resource.Styleable.MenuItem_actionProviderClass;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_actionViewClass = global::VYRMobile.Droid.Resource.Styleable.MenuItem_actionViewClass;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_alphabeticModifiers = global::VYRMobile.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_checkable = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_checkable;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_checked = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_checked;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_enabled = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_enabled;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_icon = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_icon;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_id = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_id;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_menuCategory = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_menuCategory;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_numericShortcut = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_onClick = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_onClick;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_orderInCategory = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_title = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_title;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_titleCondensed = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_android_visible = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_visible;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_contentDescription = global::VYRMobile.Droid.Resource.Styleable.MenuItem_contentDescription;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_iconTint = global::VYRMobile.Droid.Resource.Styleable.MenuItem_iconTint;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_iconTintMode = global::VYRMobile.Droid.Resource.Styleable.MenuItem_iconTintMode;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_numericModifiers = global::VYRMobile.Droid.Resource.Styleable.MenuItem_numericModifiers;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_showAsAction = global::VYRMobile.Droid.Resource.Styleable.MenuItem_showAsAction;
+			global::Lottie.Forms.Resource.Styleable.MenuItem_tooltipText = global::VYRMobile.Droid.Resource.Styleable.MenuItem_tooltipText;
+			global::Lottie.Forms.Resource.Styleable.MenuView = global::VYRMobile.Droid.Resource.Styleable.MenuView;
+			global::Lottie.Forms.Resource.Styleable.MenuView_android_headerBackground = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_headerBackground;
+			global::Lottie.Forms.Resource.Styleable.MenuView_android_horizontalDivider = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
+			global::Lottie.Forms.Resource.Styleable.MenuView_android_itemBackground = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_itemBackground;
+			global::Lottie.Forms.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
+			global::Lottie.Forms.Resource.Styleable.MenuView_android_itemTextAppearance = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.MenuView_android_verticalDivider = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_verticalDivider;
+			global::Lottie.Forms.Resource.Styleable.MenuView_android_windowAnimationStyle = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
+			global::Lottie.Forms.Resource.Styleable.MenuView_preserveIconSpacing = global::VYRMobile.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
+			global::Lottie.Forms.Resource.Styleable.MenuView_subMenuArrow = global::VYRMobile.Droid.Resource.Styleable.MenuView_subMenuArrow;
+			global::Lottie.Forms.Resource.Styleable.NavigationView = global::VYRMobile.Droid.Resource.Styleable.NavigationView;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_android_background = global::VYRMobile.Droid.Resource.Styleable.NavigationView_android_background;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::VYRMobile.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.NavigationView_android_maxWidth;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_elevation = global::VYRMobile.Droid.Resource.Styleable.NavigationView_elevation;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_headerLayout = global::VYRMobile.Droid.Resource.Styleable.NavigationView_headerLayout;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_itemBackground = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemBackground;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_itemHorizontalPadding = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_itemIconPadding = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemIconPadding;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_itemIconTint = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemIconTint;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_itemTextAppearance = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_itemTextColor = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemTextColor;
+			global::Lottie.Forms.Resource.Styleable.NavigationView_menu = global::VYRMobile.Droid.Resource.Styleable.NavigationView_menu;
+			global::Lottie.Forms.Resource.Styleable.PopupWindow = global::VYRMobile.Droid.Resource.Styleable.PopupWindow;
+			global::Lottie.Forms.Resource.Styleable.PopupWindowBackgroundState = global::VYRMobile.Droid.Resource.Styleable.PopupWindowBackgroundState;
+			global::Lottie.Forms.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::VYRMobile.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
+			global::Lottie.Forms.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::VYRMobile.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
+			global::Lottie.Forms.Resource.Styleable.PopupWindow_android_popupBackground = global::VYRMobile.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
+			global::Lottie.Forms.Resource.Styleable.PopupWindow_overlapAnchor = global::VYRMobile.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
+			global::Lottie.Forms.Resource.Styleable.RecycleListView = global::VYRMobile.Droid.Resource.Styleable.RecycleListView;
+			global::Lottie.Forms.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::VYRMobile.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
+			global::Lottie.Forms.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::VYRMobile.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView = global::VYRMobile.Droid.Resource.Styleable.RecyclerView;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_android_descendantFocusability = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_android_orientation = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_android_orientation;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_fastScrollEnabled = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_layoutManager = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_layoutManager;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_reverseLayout = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_reverseLayout;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_spanCount = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_spanCount;
+			global::Lottie.Forms.Resource.Styleable.RecyclerView_stackFromEnd = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
+			global::Lottie.Forms.Resource.Styleable.ScrimInsetsFrameLayout = global::VYRMobile.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
+			global::Lottie.Forms.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::VYRMobile.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
+			global::Lottie.Forms.Resource.Styleable.ScrollingViewBehavior_Layout = global::VYRMobile.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
+			global::Lottie.Forms.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::VYRMobile.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
+			global::Lottie.Forms.Resource.Styleable.SearchView = global::VYRMobile.Droid.Resource.Styleable.SearchView;
+			global::Lottie.Forms.Resource.Styleable.SearchView_android_focusable = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_focusable;
+			global::Lottie.Forms.Resource.Styleable.SearchView_android_imeOptions = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_imeOptions;
+			global::Lottie.Forms.Resource.Styleable.SearchView_android_inputType = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_inputType;
+			global::Lottie.Forms.Resource.Styleable.SearchView_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_maxWidth;
+			global::Lottie.Forms.Resource.Styleable.SearchView_closeIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_closeIcon;
+			global::Lottie.Forms.Resource.Styleable.SearchView_commitIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_commitIcon;
+			global::Lottie.Forms.Resource.Styleable.SearchView_defaultQueryHint = global::VYRMobile.Droid.Resource.Styleable.SearchView_defaultQueryHint;
+			global::Lottie.Forms.Resource.Styleable.SearchView_goIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_goIcon;
+			global::Lottie.Forms.Resource.Styleable.SearchView_iconifiedByDefault = global::VYRMobile.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
+			global::Lottie.Forms.Resource.Styleable.SearchView_layout = global::VYRMobile.Droid.Resource.Styleable.SearchView_layout;
+			global::Lottie.Forms.Resource.Styleable.SearchView_queryBackground = global::VYRMobile.Droid.Resource.Styleable.SearchView_queryBackground;
+			global::Lottie.Forms.Resource.Styleable.SearchView_queryHint = global::VYRMobile.Droid.Resource.Styleable.SearchView_queryHint;
+			global::Lottie.Forms.Resource.Styleable.SearchView_searchHintIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_searchHintIcon;
+			global::Lottie.Forms.Resource.Styleable.SearchView_searchIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_searchIcon;
+			global::Lottie.Forms.Resource.Styleable.SearchView_submitBackground = global::VYRMobile.Droid.Resource.Styleable.SearchView_submitBackground;
+			global::Lottie.Forms.Resource.Styleable.SearchView_suggestionRowLayout = global::VYRMobile.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
+			global::Lottie.Forms.Resource.Styleable.SearchView_voiceIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_voiceIcon;
+			global::Lottie.Forms.Resource.Styleable.Snackbar = global::VYRMobile.Droid.Resource.Styleable.Snackbar;
+			global::Lottie.Forms.Resource.Styleable.SnackbarLayout = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout;
+			global::Lottie.Forms.Resource.Styleable.SnackbarLayout_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
+			global::Lottie.Forms.Resource.Styleable.SnackbarLayout_elevation = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout_elevation;
+			global::Lottie.Forms.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
+			global::Lottie.Forms.Resource.Styleable.Snackbar_snackbarButtonStyle = global::VYRMobile.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
+			global::Lottie.Forms.Resource.Styleable.Snackbar_snackbarStyle = global::VYRMobile.Droid.Resource.Styleable.Snackbar_snackbarStyle;
+			global::Lottie.Forms.Resource.Styleable.Spinner = global::VYRMobile.Droid.Resource.Styleable.Spinner;
+			global::Lottie.Forms.Resource.Styleable.Spinner_android_dropDownWidth = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
+			global::Lottie.Forms.Resource.Styleable.Spinner_android_entries = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_entries;
+			global::Lottie.Forms.Resource.Styleable.Spinner_android_popupBackground = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_popupBackground;
+			global::Lottie.Forms.Resource.Styleable.Spinner_android_prompt = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_prompt;
+			global::Lottie.Forms.Resource.Styleable.Spinner_popupTheme = global::VYRMobile.Droid.Resource.Styleable.Spinner_popupTheme;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawable = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawableItem = global::VYRMobile.Droid.Resource.Styleable.StateListDrawableItem;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawableItem_android_drawable = global::VYRMobile.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawable_android_constantSize = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawable_android_dither = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_dither;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawable_android_variablePadding = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
+			global::Lottie.Forms.Resource.Styleable.StateListDrawable_android_visible = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_visible;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_android_textOff = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_android_textOff;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_android_textOn = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_android_textOn;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_android_thumb = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_android_thumb;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_showText = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_showText;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_splitTrack = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_splitTrack;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_switchMinWidth = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_switchPadding = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_switchPadding;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_switchTextAppearance = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_thumbTextPadding = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_thumbTint = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_thumbTint;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_thumbTintMode = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_track = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_track;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_trackTint = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_trackTint;
+			global::Lottie.Forms.Resource.Styleable.SwitchCompat_trackTintMode = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
+			global::Lottie.Forms.Resource.Styleable.TabItem = global::VYRMobile.Droid.Resource.Styleable.TabItem;
+			global::Lottie.Forms.Resource.Styleable.TabItem_android_icon = global::VYRMobile.Droid.Resource.Styleable.TabItem_android_icon;
+			global::Lottie.Forms.Resource.Styleable.TabItem_android_layout = global::VYRMobile.Droid.Resource.Styleable.TabItem_android_layout;
+			global::Lottie.Forms.Resource.Styleable.TabItem_android_text = global::VYRMobile.Droid.Resource.Styleable.TabItem_android_text;
+			global::Lottie.Forms.Resource.Styleable.TabLayout = global::VYRMobile.Droid.Resource.Styleable.TabLayout;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabBackground = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabBackground;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabContentStart = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabContentStart;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabGravity = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabGravity;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIconTint = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIconTint;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIconTintMode = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIndicator = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicator;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIndicatorColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIndicatorGravity = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabIndicatorHeight = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabInlineLabel = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabMaxWidth = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabMinWidth = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabMinWidth;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabMode = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabMode;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabPadding = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPadding;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabPaddingBottom = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabPaddingEnd = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabPaddingStart = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabPaddingTop = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabRippleColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabRippleColor;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabSelectedTextColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabTextColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabTextColor;
+			global::Lottie.Forms.Resource.Styleable.TabLayout_tabUnboundedRipple = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextAppearance;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_fontFamily = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_shadowColor = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_shadowDx = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_shadowDy = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_shadowRadius = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_textColor = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textColor;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_textColorHint = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_textColorLink = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_textSize = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textSize;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_textStyle = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textStyle;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_android_typeface = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_typeface;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_fontFamily = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_fontFamily;
+			global::Lottie.Forms.Resource.Styleable.TextAppearance_textAllCaps = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_textAllCaps;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_android_hint = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_android_hint;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_android_textColorHint = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxStrokeColor = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_counterEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_counterMaxLength = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_counterTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_errorEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_errorTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_helperText = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_helperText;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_helperTextEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_hintEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_hintTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_passwordToggleTint = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
+			global::Lottie.Forms.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
+			global::Lottie.Forms.Resource.Styleable.ThemeEnforcement = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement;
+			global::Lottie.Forms.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
+			global::Lottie.Forms.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
+			global::Lottie.Forms.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.Toolbar = global::VYRMobile.Droid.Resource.Styleable.Toolbar;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_android_gravity = global::VYRMobile.Droid.Resource.Styleable.Toolbar_android_gravity;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_android_minHeight = global::VYRMobile.Droid.Resource.Styleable.Toolbar_android_minHeight;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_buttonGravity = global::VYRMobile.Droid.Resource.Styleable.Toolbar_buttonGravity;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_collapseContentDescription = global::VYRMobile.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_collapseIcon = global::VYRMobile.Droid.Resource.Styleable.Toolbar_collapseIcon;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_contentInsetEnd = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_contentInsetLeft = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_contentInsetRight = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetRight;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_contentInsetStart = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetStart;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_logo = global::VYRMobile.Droid.Resource.Styleable.Toolbar_logo;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_logoDescription = global::VYRMobile.Droid.Resource.Styleable.Toolbar_logoDescription;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_maxButtonHeight = global::VYRMobile.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_navigationContentDescription = global::VYRMobile.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_navigationIcon = global::VYRMobile.Droid.Resource.Styleable.Toolbar_navigationIcon;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_popupTheme = global::VYRMobile.Droid.Resource.Styleable.Toolbar_popupTheme;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_subtitle = global::VYRMobile.Droid.Resource.Styleable.Toolbar_subtitle;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_subtitleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_subtitleTextColor = global::VYRMobile.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_title = global::VYRMobile.Droid.Resource.Styleable.Toolbar_title;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleMargin = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMargin;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleMarginBottom = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleMarginEnd = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleMargins = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMargins;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleMarginStart = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginStart;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleMarginTop = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginTop;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
+			global::Lottie.Forms.Resource.Styleable.Toolbar_titleTextColor = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleTextColor;
+			global::Lottie.Forms.Resource.Styleable.View = global::VYRMobile.Droid.Resource.Styleable.View;
+			global::Lottie.Forms.Resource.Styleable.ViewBackgroundHelper = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper;
+			global::Lottie.Forms.Resource.Styleable.ViewBackgroundHelper_android_background = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
+			global::Lottie.Forms.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
+			global::Lottie.Forms.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
+			global::Lottie.Forms.Resource.Styleable.ViewStubCompat = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat;
+			global::Lottie.Forms.Resource.Styleable.ViewStubCompat_android_id = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat_android_id;
+			global::Lottie.Forms.Resource.Styleable.ViewStubCompat_android_inflatedId = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
+			global::Lottie.Forms.Resource.Styleable.ViewStubCompat_android_layout = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat_android_layout;
+			global::Lottie.Forms.Resource.Styleable.View_android_focusable = global::VYRMobile.Droid.Resource.Styleable.View_android_focusable;
+			global::Lottie.Forms.Resource.Styleable.View_android_theme = global::VYRMobile.Droid.Resource.Styleable.View_android_theme;
+			global::Lottie.Forms.Resource.Styleable.View_paddingEnd = global::VYRMobile.Droid.Resource.Styleable.View_paddingEnd;
+			global::Lottie.Forms.Resource.Styleable.View_paddingStart = global::VYRMobile.Droid.Resource.Styleable.View_paddingStart;
+			global::Lottie.Forms.Resource.Styleable.View_theme = global::VYRMobile.Droid.Resource.Styleable.View_theme;
 			global::Microcharts.Droid.Resource.String.library_name = global::VYRMobile.Droid.Resource.String.library_name;
 			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.alpha = global::VYRMobile.Droid.Resource.Attribute.alpha;
 			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.font = global::VYRMobile.Droid.Resource.Attribute.font;
@@ -6448,11 +9058,11 @@ namespace VYRMobile.Droid
 			// aapt resource value: 0x7F0300AA
 			public const int coordinatorLayoutStyle = 2130903210;
 			
-			// aapt resource value: 0x7F0300AB
-			public const int cornerRadius = 2130903211;
-			
 			// aapt resource value: 0x7F0300AC
 			public const int cornerradius = 2130903212;
+			
+			// aapt resource value: 0x7F0300AB
+			public const int cornerRadius = 2130903211;
 			
 			// aapt resource value: 0x7F0300AD
 			public const int counterEnabled = 2130903213;
@@ -6899,748 +9509,790 @@ namespace VYRMobile.Droid
 			public const int logoDescription = 2130903360;
 			
 			// aapt resource value: 0x7F030141
-			public const int mapType = 2130903361;
+			public const int lottie_autoPlay = 2130903361;
 			
 			// aapt resource value: 0x7F030142
-			public const int materialButtonStyle = 2130903362;
+			public const int lottie_colorFilter = 2130903362;
 			
 			// aapt resource value: 0x7F030143
-			public const int materialCardViewStyle = 2130903363;
+			public const int lottie_enableMergePathsForKitKatAndAbove = 2130903363;
 			
 			// aapt resource value: 0x7F030144
-			public const int maxActionInlineWidth = 2130903364;
+			public const int lottie_fileName = 2130903364;
 			
 			// aapt resource value: 0x7F030145
-			public const int maxButtonHeight = 2130903365;
+			public const int lottie_imageAssetsFolder = 2130903365;
 			
 			// aapt resource value: 0x7F030146
-			public const int maxImageSize = 2130903366;
+			public const int lottie_loop = 2130903366;
 			
 			// aapt resource value: 0x7F030147
-			public const int measureWithLargestChild = 2130903367;
+			public const int lottie_progress = 2130903367;
 			
 			// aapt resource value: 0x7F030148
-			public const int mediaRouteAudioTrackDrawable = 2130903368;
+			public const int lottie_rawRes = 2130903368;
 			
 			// aapt resource value: 0x7F030149
-			public const int mediaRouteButtonStyle = 2130903369;
+			public const int lottie_renderMode = 2130903369;
 			
 			// aapt resource value: 0x7F03014A
-			public const int mediaRouteButtonTint = 2130903370;
+			public const int lottie_repeatCount = 2130903370;
 			
 			// aapt resource value: 0x7F03014B
-			public const int mediaRouteCloseDrawable = 2130903371;
+			public const int lottie_repeatMode = 2130903371;
 			
 			// aapt resource value: 0x7F03014C
-			public const int mediaRouteControlPanelThemeOverlay = 2130903372;
+			public const int lottie_scale = 2130903372;
 			
 			// aapt resource value: 0x7F03014D
-			public const int mediaRouteDefaultIconDrawable = 2130903373;
+			public const int lottie_speed = 2130903373;
 			
 			// aapt resource value: 0x7F03014E
-			public const int mediaRoutePauseDrawable = 2130903374;
+			public const int lottie_url = 2130903374;
 			
 			// aapt resource value: 0x7F03014F
-			public const int mediaRoutePlayDrawable = 2130903375;
+			public const int mapType = 2130903375;
 			
 			// aapt resource value: 0x7F030150
-			public const int mediaRouteSpeakerGroupIconDrawable = 2130903376;
+			public const int materialButtonStyle = 2130903376;
 			
 			// aapt resource value: 0x7F030151
-			public const int mediaRouteSpeakerIconDrawable = 2130903377;
+			public const int materialCardViewStyle = 2130903377;
 			
 			// aapt resource value: 0x7F030152
-			public const int mediaRouteStopDrawable = 2130903378;
+			public const int maxActionInlineWidth = 2130903378;
 			
 			// aapt resource value: 0x7F030153
-			public const int mediaRouteTheme = 2130903379;
+			public const int maxButtonHeight = 2130903379;
 			
 			// aapt resource value: 0x7F030154
-			public const int mediaRouteTvIconDrawable = 2130903380;
+			public const int maxImageSize = 2130903380;
 			
 			// aapt resource value: 0x7F030155
-			public const int menu = 2130903381;
+			public const int measureWithLargestChild = 2130903381;
 			
 			// aapt resource value: 0x7F030156
-			public const int multiChoiceItemLayout = 2130903382;
+			public const int mediaRouteAudioTrackDrawable = 2130903382;
 			
 			// aapt resource value: 0x7F030157
-			public const int navigationContentDescription = 2130903383;
+			public const int mediaRouteButtonStyle = 2130903383;
 			
 			// aapt resource value: 0x7F030158
-			public const int navigationIcon = 2130903384;
+			public const int mediaRouteButtonTint = 2130903384;
 			
 			// aapt resource value: 0x7F030159
-			public const int navigationMode = 2130903385;
+			public const int mediaRouteCloseDrawable = 2130903385;
 			
 			// aapt resource value: 0x7F03015A
-			public const int navigationViewStyle = 2130903386;
+			public const int mediaRouteControlPanelThemeOverlay = 2130903386;
 			
 			// aapt resource value: 0x7F03015B
-			public const int numericModifiers = 2130903387;
+			public const int mediaRouteDefaultIconDrawable = 2130903387;
 			
 			// aapt resource value: 0x7F03015C
-			public const int overlapAnchor = 2130903388;
+			public const int mediaRoutePauseDrawable = 2130903388;
 			
 			// aapt resource value: 0x7F03015D
-			public const int paddingBottomNoButtons = 2130903389;
+			public const int mediaRoutePlayDrawable = 2130903389;
 			
 			// aapt resource value: 0x7F03015E
-			public const int paddingEnd = 2130903390;
+			public const int mediaRouteSpeakerGroupIconDrawable = 2130903390;
 			
 			// aapt resource value: 0x7F03015F
-			public const int paddingStart = 2130903391;
+			public const int mediaRouteSpeakerIconDrawable = 2130903391;
 			
 			// aapt resource value: 0x7F030160
-			public const int paddingTopNoTitle = 2130903392;
+			public const int mediaRouteStopDrawable = 2130903392;
 			
 			// aapt resource value: 0x7F030161
-			public const int panelBackground = 2130903393;
+			public const int mediaRouteTheme = 2130903393;
 			
 			// aapt resource value: 0x7F030162
-			public const int panelMenuListTheme = 2130903394;
+			public const int mediaRouteTvIconDrawable = 2130903394;
 			
 			// aapt resource value: 0x7F030163
-			public const int panelMenuListWidth = 2130903395;
+			public const int menu = 2130903395;
 			
 			// aapt resource value: 0x7F030164
-			public const int passwordToggleContentDescription = 2130903396;
+			public const int multiChoiceItemLayout = 2130903396;
 			
 			// aapt resource value: 0x7F030165
-			public const int passwordToggleDrawable = 2130903397;
+			public const int navigationContentDescription = 2130903397;
 			
 			// aapt resource value: 0x7F030166
-			public const int passwordToggleEnabled = 2130903398;
+			public const int navigationIcon = 2130903398;
 			
 			// aapt resource value: 0x7F030167
-			public const int passwordToggleTint = 2130903399;
+			public const int navigationMode = 2130903399;
 			
 			// aapt resource value: 0x7F030168
-			public const int passwordToggleTintMode = 2130903400;
+			public const int navigationViewStyle = 2130903400;
 			
 			// aapt resource value: 0x7F030169
-			public const int pickerBackgroundColor = 2130903401;
+			public const int numericModifiers = 2130903401;
 			
 			// aapt resource value: 0x7F03016A
-			public const int pickerBorderColor = 2130903402;
+			public const int overlapAnchor = 2130903402;
 			
 			// aapt resource value: 0x7F03016B
-			public const int pickerColumnHeaderBackgroundColor = 2130903403;
+			public const int paddingBottomNoButtons = 2130903403;
 			
 			// aapt resource value: 0x7F03016C
-			public const int pickerColumnHeaderHeight = 2130903404;
+			public const int paddingEnd = 2130903404;
 			
 			// aapt resource value: 0x7F03016D
-			public const int pickerColumnHeaderTextColor = 2130903405;
+			public const int paddingStart = 2130903405;
 			
 			// aapt resource value: 0x7F03016E
-			public const int pickerColumnHeaderTextSize = 2130903406;
+			public const int paddingTopNoTitle = 2130903406;
 			
 			// aapt resource value: 0x7F03016F
-			public const int pickerEnableLooping = 2130903407;
+			public const int panelBackground = 2130903407;
 			
 			// aapt resource value: 0x7F030170
-			public const int pickerFooterHeight = 2130903408;
+			public const int panelMenuListTheme = 2130903408;
 			
 			// aapt resource value: 0x7F030171
-			public const int pickerHeaderBackgroundColor = 2130903409;
+			public const int panelMenuListWidth = 2130903409;
 			
 			// aapt resource value: 0x7F030172
-			public const int pickerHeaderHeight = 2130903410;
+			public const int passwordToggleContentDescription = 2130903410;
 			
 			// aapt resource value: 0x7F030173
-			public const int pickerHeaderText = 2130903411;
+			public const int passwordToggleDrawable = 2130903411;
 			
 			// aapt resource value: 0x7F030174
-			public const int pickerHeaderTextColor = 2130903412;
+			public const int passwordToggleEnabled = 2130903412;
 			
 			// aapt resource value: 0x7F030175
-			public const int pickerHeaderTextSize = 2130903413;
+			public const int passwordToggleTint = 2130903413;
 			
 			// aapt resource value: 0x7F030176
-			public const int pickerHeight = 2130903414;
+			public const int passwordToggleTintMode = 2130903414;
 			
 			// aapt resource value: 0x7F030177
-			public const int pickerIsOpen = 2130903415;
+			public const int pickerBackgroundColor = 2130903415;
 			
 			// aapt resource value: 0x7F030178
-			public const int pickerItemHeight = 2130903416;
+			public const int pickerBorderColor = 2130903416;
 			
 			// aapt resource value: 0x7F030179
-			public const int pickerMode = 2130903417;
-			
-			// aapt resource value: 0x7F03017B
-			public const int pickerSelectedItemTextcolor = 2130903419;
+			public const int pickerColumnHeaderBackgroundColor = 2130903417;
 			
 			// aapt resource value: 0x7F03017A
-			public const int pickerSelectedItemTextSize = 2130903418;
+			public const int pickerColumnHeaderHeight = 2130903418;
+			
+			// aapt resource value: 0x7F03017B
+			public const int pickerColumnHeaderTextColor = 2130903419;
 			
 			// aapt resource value: 0x7F03017C
-			public const int pickerSelectionBorderColor = 2130903420;
+			public const int pickerColumnHeaderTextSize = 2130903420;
 			
 			// aapt resource value: 0x7F03017D
-			public const int pickerShowColumnHeader = 2130903421;
+			public const int pickerEnableLooping = 2130903421;
 			
 			// aapt resource value: 0x7F03017E
-			public const int pickerShowFooter = 2130903422;
+			public const int pickerFooterHeight = 2130903422;
 			
 			// aapt resource value: 0x7F03017F
-			public const int pickerShowHeader = 2130903423;
+			public const int pickerHeaderBackgroundColor = 2130903423;
 			
 			// aapt resource value: 0x7F030180
-			public const int pickerUnselectedItemTextColor = 2130903424;
+			public const int pickerHeaderHeight = 2130903424;
 			
 			// aapt resource value: 0x7F030181
-			public const int pickerUnselectedItemTextSize = 2130903425;
+			public const int pickerHeaderText = 2130903425;
 			
 			// aapt resource value: 0x7F030182
-			public const int pickerWidth = 2130903426;
+			public const int pickerHeaderTextColor = 2130903426;
 			
 			// aapt resource value: 0x7F030183
-			public const int popupMenuStyle = 2130903427;
+			public const int pickerHeaderTextSize = 2130903427;
 			
 			// aapt resource value: 0x7F030184
-			public const int popupTheme = 2130903428;
+			public const int pickerHeight = 2130903428;
 			
 			// aapt resource value: 0x7F030185
-			public const int popupWindowStyle = 2130903429;
+			public const int pickerIsOpen = 2130903429;
 			
 			// aapt resource value: 0x7F030186
-			public const int preserveIconSpacing = 2130903430;
+			public const int pickerItemHeight = 2130903430;
 			
 			// aapt resource value: 0x7F030187
-			public const int pressedTranslationZ = 2130903431;
-			
-			// aapt resource value: 0x7F030188
-			public const int progressBarPadding = 2130903432;
+			public const int pickerMode = 2130903431;
 			
 			// aapt resource value: 0x7F030189
-			public const int progressBarStyle = 2130903433;
+			public const int pickerSelectedItemTextcolor = 2130903433;
+			
+			// aapt resource value: 0x7F030188
+			public const int pickerSelectedItemTextSize = 2130903432;
 			
 			// aapt resource value: 0x7F03018A
-			public const int queryBackground = 2130903434;
+			public const int pickerSelectionBorderColor = 2130903434;
 			
 			// aapt resource value: 0x7F03018B
-			public const int queryHint = 2130903435;
+			public const int pickerShowColumnHeader = 2130903435;
 			
 			// aapt resource value: 0x7F03018C
-			public const int radioButtonStyle = 2130903436;
+			public const int pickerShowFooter = 2130903436;
 			
 			// aapt resource value: 0x7F03018D
-			public const int ratingBarStyle = 2130903437;
+			public const int pickerShowHeader = 2130903437;
 			
 			// aapt resource value: 0x7F03018E
-			public const int ratingBarStyleIndicator = 2130903438;
+			public const int pickerUnselectedItemTextColor = 2130903438;
 			
 			// aapt resource value: 0x7F03018F
-			public const int ratingBarStyleSmall = 2130903439;
+			public const int pickerUnselectedItemTextSize = 2130903439;
 			
 			// aapt resource value: 0x7F030190
-			public const int reverseLayout = 2130903440;
+			public const int pickerWidth = 2130903440;
 			
 			// aapt resource value: 0x7F030191
-			public const int rippleColor = 2130903441;
+			public const int popupMenuStyle = 2130903441;
 			
 			// aapt resource value: 0x7F030192
-			public const int scopeUris = 2130903442;
+			public const int popupTheme = 2130903442;
 			
 			// aapt resource value: 0x7F030193
-			public const int scrimAnimationDuration = 2130903443;
+			public const int popupWindowStyle = 2130903443;
 			
 			// aapt resource value: 0x7F030194
-			public const int scrimBackground = 2130903444;
+			public const int preserveIconSpacing = 2130903444;
 			
 			// aapt resource value: 0x7F030195
-			public const int scrimVisibleHeightTrigger = 2130903445;
+			public const int pressedTranslationZ = 2130903445;
 			
 			// aapt resource value: 0x7F030196
-			public const int searchHintIcon = 2130903446;
+			public const int progressBarPadding = 2130903446;
 			
 			// aapt resource value: 0x7F030197
-			public const int searchIcon = 2130903447;
+			public const int progressBarStyle = 2130903447;
 			
 			// aapt resource value: 0x7F030198
-			public const int searchViewStyle = 2130903448;
+			public const int queryBackground = 2130903448;
 			
 			// aapt resource value: 0x7F030199
-			public const int seekBarStyle = 2130903449;
+			public const int queryHint = 2130903449;
 			
 			// aapt resource value: 0x7F03019A
-			public const int segmentBackColor = 2130903450;
+			public const int radioButtonStyle = 2130903450;
 			
 			// aapt resource value: 0x7F03019B
-			public const int segmentBorderColor = 2130903451;
+			public const int ratingBarStyle = 2130903451;
 			
 			// aapt resource value: 0x7F03019C
-			public const int segmentBorderThickness = 2130903452;
+			public const int ratingBarStyleIndicator = 2130903452;
 			
 			// aapt resource value: 0x7F03019D
-			public const int segmentColor = 2130903453;
+			public const int ratingBarStyleSmall = 2130903453;
 			
 			// aapt resource value: 0x7F03019E
-			public const int segmentCornerRadius = 2130903454;
+			public const int reverseLayout = 2130903454;
 			
 			// aapt resource value: 0x7F03019F
-			public const int segmentDisplayMode = 2130903455;
-			
-			// aapt resource value: 0x7F0301A3
-			public const int segmentedHeight = 2130903459;
-			
-			// aapt resource value: 0x7F0301A4
-			public const int segmentedPadding = 2130903460;
-			
-			// aapt resource value: 0x7F0301A5
-			public const int segmentedWidth = 2130903461;
+			public const int rippleColor = 2130903455;
 			
 			// aapt resource value: 0x7F0301A0
-			public const int segmentPosition = 2130903456;
+			public const int scopeUris = 2130903456;
 			
 			// aapt resource value: 0x7F0301A1
-			public const int segmentSelectedIndex = 2130903457;
+			public const int scrimAnimationDuration = 2130903457;
 			
 			// aapt resource value: 0x7F0301A2
-			public const int segmentStrokeThickness = 2130903458;
+			public const int scrimBackground = 2130903458;
+			
+			// aapt resource value: 0x7F0301A3
+			public const int scrimVisibleHeightTrigger = 2130903459;
+			
+			// aapt resource value: 0x7F0301A4
+			public const int searchHintIcon = 2130903460;
+			
+			// aapt resource value: 0x7F0301A5
+			public const int searchIcon = 2130903461;
 			
 			// aapt resource value: 0x7F0301A6
-			public const int selectableItemBackground = 2130903462;
+			public const int searchViewStyle = 2130903462;
 			
 			// aapt resource value: 0x7F0301A7
-			public const int selectableItemBackgroundBorderless = 2130903463;
+			public const int seekBarStyle = 2130903463;
 			
 			// aapt resource value: 0x7F0301A8
-			public const int showAsAction = 2130903464;
+			public const int segmentBackColor = 2130903464;
 			
 			// aapt resource value: 0x7F0301A9
-			public const int showDividers = 2130903465;
+			public const int segmentBorderColor = 2130903465;
 			
 			// aapt resource value: 0x7F0301AA
-			public const int showMotionSpec = 2130903466;
+			public const int segmentBorderThickness = 2130903466;
 			
 			// aapt resource value: 0x7F0301AB
-			public const int showText = 2130903467;
+			public const int segmentColor = 2130903467;
 			
 			// aapt resource value: 0x7F0301AC
-			public const int showTitle = 2130903468;
+			public const int segmentCornerRadius = 2130903468;
 			
 			// aapt resource value: 0x7F0301AD
-			public const int singleChoiceItemLayout = 2130903469;
-			
-			// aapt resource value: 0x7F0301AE
-			public const int singleLine = 2130903470;
-			
-			// aapt resource value: 0x7F0301AF
-			public const int singleSelection = 2130903471;
-			
-			// aapt resource value: 0x7F0301B0
-			public const int snackbarButtonStyle = 2130903472;
+			public const int segmentDisplayMode = 2130903469;
 			
 			// aapt resource value: 0x7F0301B1
-			public const int snackbarStyle = 2130903473;
+			public const int segmentedHeight = 2130903473;
 			
 			// aapt resource value: 0x7F0301B2
-			public const int spanCount = 2130903474;
+			public const int segmentedPadding = 2130903474;
 			
 			// aapt resource value: 0x7F0301B3
-			public const int spinBars = 2130903475;
+			public const int segmentedWidth = 2130903475;
+			
+			// aapt resource value: 0x7F0301AE
+			public const int segmentPosition = 2130903470;
+			
+			// aapt resource value: 0x7F0301AF
+			public const int segmentSelectedIndex = 2130903471;
+			
+			// aapt resource value: 0x7F0301B0
+			public const int segmentStrokeThickness = 2130903472;
 			
 			// aapt resource value: 0x7F0301B4
-			public const int spinnerDropDownItemStyle = 2130903476;
+			public const int selectableItemBackground = 2130903476;
 			
 			// aapt resource value: 0x7F0301B5
-			public const int spinnerStyle = 2130903477;
+			public const int selectableItemBackgroundBorderless = 2130903477;
 			
 			// aapt resource value: 0x7F0301B6
-			public const int splitTrack = 2130903478;
+			public const int showAsAction = 2130903478;
 			
 			// aapt resource value: 0x7F0301B7
-			public const int srcCompat = 2130903479;
+			public const int showDividers = 2130903479;
 			
 			// aapt resource value: 0x7F0301B8
-			public const int stackFromEnd = 2130903480;
+			public const int showMotionSpec = 2130903480;
 			
 			// aapt resource value: 0x7F0301B9
-			public const int state_above_anchor = 2130903481;
+			public const int showText = 2130903481;
 			
 			// aapt resource value: 0x7F0301BA
-			public const int state_collapsed = 2130903482;
+			public const int showTitle = 2130903482;
 			
 			// aapt resource value: 0x7F0301BB
-			public const int state_collapsible = 2130903483;
+			public const int singleChoiceItemLayout = 2130903483;
 			
 			// aapt resource value: 0x7F0301BC
-			public const int state_indeterminate = 2130903484;
+			public const int singleLine = 2130903484;
 			
 			// aapt resource value: 0x7F0301BD
-			public const int state_liftable = 2130903485;
+			public const int singleSelection = 2130903485;
 			
 			// aapt resource value: 0x7F0301BE
-			public const int state_lifted = 2130903486;
+			public const int snackbarButtonStyle = 2130903486;
 			
 			// aapt resource value: 0x7F0301BF
-			public const int statusBarBackground = 2130903487;
+			public const int snackbarStyle = 2130903487;
 			
 			// aapt resource value: 0x7F0301C0
-			public const int statusBarScrim = 2130903488;
+			public const int spanCount = 2130903488;
 			
 			// aapt resource value: 0x7F0301C1
-			public const int strokeColor = 2130903489;
+			public const int spinBars = 2130903489;
 			
 			// aapt resource value: 0x7F0301C2
-			public const int strokeWidth = 2130903490;
+			public const int spinnerDropDownItemStyle = 2130903490;
 			
 			// aapt resource value: 0x7F0301C3
-			public const int subMenuArrow = 2130903491;
+			public const int spinnerStyle = 2130903491;
 			
 			// aapt resource value: 0x7F0301C4
-			public const int submitBackground = 2130903492;
+			public const int splitTrack = 2130903492;
 			
 			// aapt resource value: 0x7F0301C5
-			public const int subtitle = 2130903493;
+			public const int srcCompat = 2130903493;
 			
 			// aapt resource value: 0x7F0301C6
-			public const int subtitleTextAppearance = 2130903494;
+			public const int stackFromEnd = 2130903494;
 			
 			// aapt resource value: 0x7F0301C7
-			public const int subtitleTextColor = 2130903495;
+			public const int state_above_anchor = 2130903495;
 			
 			// aapt resource value: 0x7F0301C8
-			public const int subtitleTextStyle = 2130903496;
+			public const int state_collapsed = 2130903496;
 			
 			// aapt resource value: 0x7F0301C9
-			public const int suggestionRowLayout = 2130903497;
+			public const int state_collapsible = 2130903497;
 			
 			// aapt resource value: 0x7F0301CA
-			public const int switchMinWidth = 2130903498;
+			public const int state_indeterminate = 2130903498;
 			
 			// aapt resource value: 0x7F0301CB
-			public const int switchPadding = 2130903499;
+			public const int state_liftable = 2130903499;
 			
 			// aapt resource value: 0x7F0301CC
-			public const int switchStyle = 2130903500;
+			public const int state_lifted = 2130903500;
 			
 			// aapt resource value: 0x7F0301CD
-			public const int switchTextAppearance = 2130903501;
+			public const int statusBarBackground = 2130903501;
 			
 			// aapt resource value: 0x7F0301CE
-			public const int tabBackground = 2130903502;
+			public const int statusBarScrim = 2130903502;
 			
 			// aapt resource value: 0x7F0301CF
-			public const int tabContentStart = 2130903503;
+			public const int strokeColor = 2130903503;
 			
 			// aapt resource value: 0x7F0301D0
-			public const int tabGravity = 2130903504;
+			public const int strokeWidth = 2130903504;
 			
 			// aapt resource value: 0x7F0301D1
-			public const int tabIconTint = 2130903505;
+			public const int subMenuArrow = 2130903505;
 			
 			// aapt resource value: 0x7F0301D2
-			public const int tabIconTintMode = 2130903506;
+			public const int submitBackground = 2130903506;
 			
 			// aapt resource value: 0x7F0301D3
-			public const int tabIndicator = 2130903507;
+			public const int subtitle = 2130903507;
 			
 			// aapt resource value: 0x7F0301D4
-			public const int tabIndicatorAnimationDuration = 2130903508;
+			public const int subtitleTextAppearance = 2130903508;
 			
 			// aapt resource value: 0x7F0301D5
-			public const int tabIndicatorColor = 2130903509;
+			public const int subtitleTextColor = 2130903509;
 			
 			// aapt resource value: 0x7F0301D6
-			public const int tabIndicatorFullWidth = 2130903510;
+			public const int subtitleTextStyle = 2130903510;
 			
 			// aapt resource value: 0x7F0301D7
-			public const int tabIndicatorGravity = 2130903511;
+			public const int suggestionRowLayout = 2130903511;
 			
 			// aapt resource value: 0x7F0301D8
-			public const int tabIndicatorHeight = 2130903512;
+			public const int switchMinWidth = 2130903512;
 			
 			// aapt resource value: 0x7F0301D9
-			public const int tabInlineLabel = 2130903513;
+			public const int switchPadding = 2130903513;
 			
 			// aapt resource value: 0x7F0301DA
-			public const int tabMaxWidth = 2130903514;
+			public const int switchStyle = 2130903514;
 			
 			// aapt resource value: 0x7F0301DB
-			public const int tabMinWidth = 2130903515;
+			public const int switchTextAppearance = 2130903515;
 			
 			// aapt resource value: 0x7F0301DC
-			public const int tabMode = 2130903516;
+			public const int tabBackground = 2130903516;
 			
 			// aapt resource value: 0x7F0301DD
-			public const int tabPadding = 2130903517;
+			public const int tabContentStart = 2130903517;
 			
 			// aapt resource value: 0x7F0301DE
-			public const int tabPaddingBottom = 2130903518;
+			public const int tabGravity = 2130903518;
 			
 			// aapt resource value: 0x7F0301DF
-			public const int tabPaddingEnd = 2130903519;
+			public const int tabIconTint = 2130903519;
 			
 			// aapt resource value: 0x7F0301E0
-			public const int tabPaddingStart = 2130903520;
+			public const int tabIconTintMode = 2130903520;
 			
 			// aapt resource value: 0x7F0301E1
-			public const int tabPaddingTop = 2130903521;
+			public const int tabIndicator = 2130903521;
 			
 			// aapt resource value: 0x7F0301E2
-			public const int tabRippleColor = 2130903522;
+			public const int tabIndicatorAnimationDuration = 2130903522;
 			
 			// aapt resource value: 0x7F0301E3
-			public const int tabSelectedTextColor = 2130903523;
+			public const int tabIndicatorColor = 2130903523;
 			
 			// aapt resource value: 0x7F0301E4
-			public const int tabStyle = 2130903524;
+			public const int tabIndicatorFullWidth = 2130903524;
 			
 			// aapt resource value: 0x7F0301E5
-			public const int tabTextAppearance = 2130903525;
+			public const int tabIndicatorGravity = 2130903525;
 			
 			// aapt resource value: 0x7F0301E6
-			public const int tabTextColor = 2130903526;
+			public const int tabIndicatorHeight = 2130903526;
 			
 			// aapt resource value: 0x7F0301E7
-			public const int tabUnboundedRipple = 2130903527;
+			public const int tabInlineLabel = 2130903527;
 			
 			// aapt resource value: 0x7F0301E8
-			public const int textAllCaps = 2130903528;
+			public const int tabMaxWidth = 2130903528;
 			
 			// aapt resource value: 0x7F0301E9
-			public const int textAppearanceBody1 = 2130903529;
+			public const int tabMinWidth = 2130903529;
 			
 			// aapt resource value: 0x7F0301EA
-			public const int textAppearanceBody2 = 2130903530;
+			public const int tabMode = 2130903530;
 			
 			// aapt resource value: 0x7F0301EB
-			public const int textAppearanceButton = 2130903531;
+			public const int tabPadding = 2130903531;
 			
 			// aapt resource value: 0x7F0301EC
-			public const int textAppearanceCaption = 2130903532;
+			public const int tabPaddingBottom = 2130903532;
 			
 			// aapt resource value: 0x7F0301ED
-			public const int textAppearanceHeadline1 = 2130903533;
+			public const int tabPaddingEnd = 2130903533;
 			
 			// aapt resource value: 0x7F0301EE
-			public const int textAppearanceHeadline2 = 2130903534;
+			public const int tabPaddingStart = 2130903534;
 			
 			// aapt resource value: 0x7F0301EF
-			public const int textAppearanceHeadline3 = 2130903535;
+			public const int tabPaddingTop = 2130903535;
 			
 			// aapt resource value: 0x7F0301F0
-			public const int textAppearanceHeadline4 = 2130903536;
+			public const int tabRippleColor = 2130903536;
 			
 			// aapt resource value: 0x7F0301F1
-			public const int textAppearanceHeadline5 = 2130903537;
+			public const int tabSelectedTextColor = 2130903537;
 			
 			// aapt resource value: 0x7F0301F2
-			public const int textAppearanceHeadline6 = 2130903538;
+			public const int tabStyle = 2130903538;
 			
 			// aapt resource value: 0x7F0301F3
-			public const int textAppearanceLargePopupMenu = 2130903539;
+			public const int tabTextAppearance = 2130903539;
 			
 			// aapt resource value: 0x7F0301F4
-			public const int textAppearanceListItem = 2130903540;
+			public const int tabTextColor = 2130903540;
 			
 			// aapt resource value: 0x7F0301F5
-			public const int textAppearanceListItemSecondary = 2130903541;
+			public const int tabUnboundedRipple = 2130903541;
 			
 			// aapt resource value: 0x7F0301F6
-			public const int textAppearanceListItemSmall = 2130903542;
+			public const int textAllCaps = 2130903542;
 			
 			// aapt resource value: 0x7F0301F7
-			public const int textAppearanceOverline = 2130903543;
+			public const int textAppearanceBody1 = 2130903543;
 			
 			// aapt resource value: 0x7F0301F8
-			public const int textAppearancePopupMenuHeader = 2130903544;
+			public const int textAppearanceBody2 = 2130903544;
 			
 			// aapt resource value: 0x7F0301F9
-			public const int textAppearanceSearchResultSubtitle = 2130903545;
+			public const int textAppearanceButton = 2130903545;
 			
 			// aapt resource value: 0x7F0301FA
-			public const int textAppearanceSearchResultTitle = 2130903546;
+			public const int textAppearanceCaption = 2130903546;
 			
 			// aapt resource value: 0x7F0301FB
-			public const int textAppearanceSmallPopupMenu = 2130903547;
+			public const int textAppearanceHeadline1 = 2130903547;
 			
 			// aapt resource value: 0x7F0301FC
-			public const int textAppearanceSubtitle1 = 2130903548;
+			public const int textAppearanceHeadline2 = 2130903548;
 			
 			// aapt resource value: 0x7F0301FD
-			public const int textAppearanceSubtitle2 = 2130903549;
+			public const int textAppearanceHeadline3 = 2130903549;
 			
 			// aapt resource value: 0x7F0301FE
-			public const int textColorAlertDialogListItem = 2130903550;
+			public const int textAppearanceHeadline4 = 2130903550;
 			
 			// aapt resource value: 0x7F0301FF
-			public const int textColorSearchUrl = 2130903551;
+			public const int textAppearanceHeadline5 = 2130903551;
 			
 			// aapt resource value: 0x7F030200
-			public const int textEndPadding = 2130903552;
+			public const int textAppearanceHeadline6 = 2130903552;
 			
 			// aapt resource value: 0x7F030201
-			public const int textInputStyle = 2130903553;
+			public const int textAppearanceLargePopupMenu = 2130903553;
 			
 			// aapt resource value: 0x7F030202
-			public const int textStartPadding = 2130903554;
+			public const int textAppearanceListItem = 2130903554;
 			
 			// aapt resource value: 0x7F030203
-			public const int theme = 2130903555;
+			public const int textAppearanceListItemSecondary = 2130903555;
 			
 			// aapt resource value: 0x7F030204
-			public const int thickness = 2130903556;
+			public const int textAppearanceListItemSmall = 2130903556;
 			
 			// aapt resource value: 0x7F030205
-			public const int thumbTextPadding = 2130903557;
+			public const int textAppearanceOverline = 2130903557;
 			
 			// aapt resource value: 0x7F030206
-			public const int thumbTint = 2130903558;
+			public const int textAppearancePopupMenuHeader = 2130903558;
 			
 			// aapt resource value: 0x7F030207
-			public const int thumbTintMode = 2130903559;
+			public const int textAppearanceSearchResultSubtitle = 2130903559;
 			
 			// aapt resource value: 0x7F030208
-			public const int tickMark = 2130903560;
+			public const int textAppearanceSearchResultTitle = 2130903560;
 			
 			// aapt resource value: 0x7F030209
-			public const int tickMarkTint = 2130903561;
+			public const int textAppearanceSmallPopupMenu = 2130903561;
 			
 			// aapt resource value: 0x7F03020A
-			public const int tickMarkTintMode = 2130903562;
+			public const int textAppearanceSubtitle1 = 2130903562;
 			
 			// aapt resource value: 0x7F03020B
-			public const int tint = 2130903563;
+			public const int textAppearanceSubtitle2 = 2130903563;
 			
 			// aapt resource value: 0x7F03020C
-			public const int tintMode = 2130903564;
+			public const int textColorAlertDialogListItem = 2130903564;
 			
 			// aapt resource value: 0x7F03020D
-			public const int title = 2130903565;
+			public const int textColorSearchUrl = 2130903565;
 			
 			// aapt resource value: 0x7F03020E
-			public const int titleEnabled = 2130903566;
+			public const int textEndPadding = 2130903566;
 			
 			// aapt resource value: 0x7F03020F
-			public const int titleMargin = 2130903567;
+			public const int textInputStyle = 2130903567;
 			
 			// aapt resource value: 0x7F030210
-			public const int titleMarginBottom = 2130903568;
+			public const int textStartPadding = 2130903568;
 			
 			// aapt resource value: 0x7F030211
-			public const int titleMarginEnd = 2130903569;
-			
-			// aapt resource value: 0x7F030214
-			public const int titleMargins = 2130903572;
+			public const int theme = 2130903569;
 			
 			// aapt resource value: 0x7F030212
-			public const int titleMarginStart = 2130903570;
+			public const int thickness = 2130903570;
 			
 			// aapt resource value: 0x7F030213
-			public const int titleMarginTop = 2130903571;
+			public const int thumbTextPadding = 2130903571;
+			
+			// aapt resource value: 0x7F030214
+			public const int thumbTint = 2130903572;
 			
 			// aapt resource value: 0x7F030215
-			public const int titleTextAppearance = 2130903573;
+			public const int thumbTintMode = 2130903573;
 			
 			// aapt resource value: 0x7F030216
-			public const int titleTextColor = 2130903574;
+			public const int tickMark = 2130903574;
 			
 			// aapt resource value: 0x7F030217
-			public const int titleTextStyle = 2130903575;
+			public const int tickMarkTint = 2130903575;
 			
 			// aapt resource value: 0x7F030218
-			public const int toolbarId = 2130903576;
+			public const int tickMarkTintMode = 2130903576;
 			
 			// aapt resource value: 0x7F030219
-			public const int toolbarNavigationButtonStyle = 2130903577;
+			public const int tint = 2130903577;
 			
 			// aapt resource value: 0x7F03021A
-			public const int toolbarStyle = 2130903578;
+			public const int tintMode = 2130903578;
 			
 			// aapt resource value: 0x7F03021B
-			public const int tooltipForegroundColor = 2130903579;
+			public const int title = 2130903579;
 			
 			// aapt resource value: 0x7F03021C
-			public const int tooltipFrameBackground = 2130903580;
+			public const int titleEnabled = 2130903580;
 			
 			// aapt resource value: 0x7F03021D
-			public const int tooltipText = 2130903581;
+			public const int titleMargin = 2130903581;
 			
 			// aapt resource value: 0x7F03021E
-			public const int track = 2130903582;
+			public const int titleMarginBottom = 2130903582;
 			
 			// aapt resource value: 0x7F03021F
-			public const int trackTint = 2130903583;
-			
-			// aapt resource value: 0x7F030220
-			public const int trackTintMode = 2130903584;
-			
-			// aapt resource value: 0x7F030221
-			public const int ttcIndex = 2130903585;
+			public const int titleMarginEnd = 2130903583;
 			
 			// aapt resource value: 0x7F030222
-			public const int uiCompass = 2130903586;
+			public const int titleMargins = 2130903586;
+			
+			// aapt resource value: 0x7F030220
+			public const int titleMarginStart = 2130903584;
+			
+			// aapt resource value: 0x7F030221
+			public const int titleMarginTop = 2130903585;
 			
 			// aapt resource value: 0x7F030223
-			public const int uiMapToolbar = 2130903587;
+			public const int titleTextAppearance = 2130903587;
 			
 			// aapt resource value: 0x7F030224
-			public const int uiRotateGestures = 2130903588;
+			public const int titleTextColor = 2130903588;
 			
 			// aapt resource value: 0x7F030225
-			public const int uiScrollGestures = 2130903589;
+			public const int titleTextStyle = 2130903589;
 			
 			// aapt resource value: 0x7F030226
-			public const int uiScrollGesturesDuringRotateOrZoom = 2130903590;
+			public const int toolbarId = 2130903590;
 			
 			// aapt resource value: 0x7F030227
-			public const int uiTiltGestures = 2130903591;
+			public const int toolbarNavigationButtonStyle = 2130903591;
 			
 			// aapt resource value: 0x7F030228
-			public const int uiZoomControls = 2130903592;
+			public const int toolbarStyle = 2130903592;
 			
 			// aapt resource value: 0x7F030229
-			public const int uiZoomGestures = 2130903593;
+			public const int tooltipForegroundColor = 2130903593;
 			
 			// aapt resource value: 0x7F03022A
-			public const int useCompatPadding = 2130903594;
+			public const int tooltipFrameBackground = 2130903594;
 			
 			// aapt resource value: 0x7F03022B
-			public const int useViewLifecycle = 2130903595;
+			public const int tooltipText = 2130903595;
 			
 			// aapt resource value: 0x7F03022C
-			public const int viewInflaterClass = 2130903596;
+			public const int track = 2130903596;
 			
 			// aapt resource value: 0x7F03022D
-			public const int voiceIcon = 2130903597;
+			public const int trackTint = 2130903597;
 			
 			// aapt resource value: 0x7F03022E
-			public const int windowActionBar = 2130903598;
+			public const int trackTintMode = 2130903598;
 			
 			// aapt resource value: 0x7F03022F
-			public const int windowActionBarOverlay = 2130903599;
+			public const int ttcIndex = 2130903599;
 			
 			// aapt resource value: 0x7F030230
-			public const int windowActionModeOverlay = 2130903600;
+			public const int uiCompass = 2130903600;
 			
 			// aapt resource value: 0x7F030231
-			public const int windowFixedHeightMajor = 2130903601;
+			public const int uiMapToolbar = 2130903601;
 			
 			// aapt resource value: 0x7F030232
-			public const int windowFixedHeightMinor = 2130903602;
+			public const int uiRotateGestures = 2130903602;
 			
 			// aapt resource value: 0x7F030233
-			public const int windowFixedWidthMajor = 2130903603;
+			public const int uiScrollGestures = 2130903603;
 			
 			// aapt resource value: 0x7F030234
-			public const int windowFixedWidthMinor = 2130903604;
+			public const int uiScrollGesturesDuringRotateOrZoom = 2130903604;
 			
 			// aapt resource value: 0x7F030235
-			public const int windowMinWidthMajor = 2130903605;
+			public const int uiTiltGestures = 2130903605;
 			
 			// aapt resource value: 0x7F030236
-			public const int windowMinWidthMinor = 2130903606;
+			public const int uiZoomControls = 2130903606;
 			
 			// aapt resource value: 0x7F030237
-			public const int windowNoTitle = 2130903607;
+			public const int uiZoomGestures = 2130903607;
 			
 			// aapt resource value: 0x7F030238
-			public const int zOrderOnTop = 2130903608;
+			public const int useCompatPadding = 2130903608;
+			
+			// aapt resource value: 0x7F030239
+			public const int useViewLifecycle = 2130903609;
+			
+			// aapt resource value: 0x7F03023A
+			public const int viewInflaterClass = 2130903610;
+			
+			// aapt resource value: 0x7F03023B
+			public const int voiceIcon = 2130903611;
+			
+			// aapt resource value: 0x7F03023C
+			public const int windowActionBar = 2130903612;
+			
+			// aapt resource value: 0x7F03023D
+			public const int windowActionBarOverlay = 2130903613;
+			
+			// aapt resource value: 0x7F03023E
+			public const int windowActionModeOverlay = 2130903614;
+			
+			// aapt resource value: 0x7F03023F
+			public const int windowFixedHeightMajor = 2130903615;
+			
+			// aapt resource value: 0x7F030240
+			public const int windowFixedHeightMinor = 2130903616;
+			
+			// aapt resource value: 0x7F030241
+			public const int windowFixedWidthMajor = 2130903617;
+			
+			// aapt resource value: 0x7F030242
+			public const int windowFixedWidthMinor = 2130903618;
+			
+			// aapt resource value: 0x7F030243
+			public const int windowMinWidthMajor = 2130903619;
+			
+			// aapt resource value: 0x7F030244
+			public const int windowMinWidthMinor = 2130903620;
+			
+			// aapt resource value: 0x7F030245
+			public const int windowNoTitle = 2130903621;
+			
+			// aapt resource value: 0x7F030246
+			public const int zOrderOnTop = 2130903622;
 			
 			static Attribute()
 			{
@@ -9963,211 +12615,223 @@ namespace VYRMobile.Droid
 			public const int input_layout_drop_down_icon = 2131165557;
 			
 			// aapt resource value: 0x7F070178
-			public const int label = 2131165560;
+			public const int key = 2131165560;
 			
 			// aapt resource value: 0x7F070179
-			public const int label2 = 2131165561;
+			public const int key2 = 2131165561;
 			
 			// aapt resource value: 0x7F07017A
-			public const int load = 2131165562;
+			public const int label = 2131165562;
 			
 			// aapt resource value: 0x7F07017B
-			public const int logout = 2131165563;
+			public const int label2 = 2131165563;
 			
 			// aapt resource value: 0x7F07017C
-			public const int map = 2131165564;
+			public const int load = 2131165564;
 			
 			// aapt resource value: 0x7F07017D
-			public const int mapa2 = 2131165565;
+			public const int logout = 2131165565;
 			
 			// aapt resource value: 0x7F07017E
-			public const int more = 2131165566;
+			public const int map = 2131165566;
 			
 			// aapt resource value: 0x7F07017F
-			public const int more2 = 2131165567;
+			public const int mapa2 = 2131165567;
 			
 			// aapt resource value: 0x7F070180
-			public const int more3 = 2131165568;
+			public const int more = 2131165568;
 			
 			// aapt resource value: 0x7F070181
-			public const int mr_button_connected_dark = 2131165569;
+			public const int more2 = 2131165569;
 			
 			// aapt resource value: 0x7F070182
-			public const int mr_button_connected_light = 2131165570;
+			public const int more3 = 2131165570;
 			
 			// aapt resource value: 0x7F070183
-			public const int mr_button_connecting_dark = 2131165571;
+			public const int mr_button_connected_dark = 2131165571;
 			
 			// aapt resource value: 0x7F070184
-			public const int mr_button_connecting_light = 2131165572;
+			public const int mr_button_connected_light = 2131165572;
 			
 			// aapt resource value: 0x7F070185
-			public const int mr_button_dark = 2131165573;
+			public const int mr_button_connecting_dark = 2131165573;
 			
 			// aapt resource value: 0x7F070186
-			public const int mr_button_light = 2131165574;
+			public const int mr_button_connecting_light = 2131165574;
 			
 			// aapt resource value: 0x7F070187
-			public const int mr_dialog_close_dark = 2131165575;
+			public const int mr_button_dark = 2131165575;
 			
 			// aapt resource value: 0x7F070188
-			public const int mr_dialog_close_light = 2131165576;
+			public const int mr_button_light = 2131165576;
 			
 			// aapt resource value: 0x7F070189
-			public const int mr_dialog_material_background_dark = 2131165577;
+			public const int mr_dialog_close_dark = 2131165577;
 			
 			// aapt resource value: 0x7F07018A
-			public const int mr_dialog_material_background_light = 2131165578;
+			public const int mr_dialog_close_light = 2131165578;
 			
 			// aapt resource value: 0x7F07018B
-			public const int mr_group_collapse = 2131165579;
+			public const int mr_dialog_material_background_dark = 2131165579;
 			
 			// aapt resource value: 0x7F07018C
-			public const int mr_group_expand = 2131165580;
+			public const int mr_dialog_material_background_light = 2131165580;
 			
 			// aapt resource value: 0x7F07018D
-			public const int mr_media_pause_dark = 2131165581;
+			public const int mr_group_collapse = 2131165581;
 			
 			// aapt resource value: 0x7F07018E
-			public const int mr_media_pause_light = 2131165582;
+			public const int mr_group_expand = 2131165582;
 			
 			// aapt resource value: 0x7F07018F
-			public const int mr_media_play_dark = 2131165583;
+			public const int mr_media_pause_dark = 2131165583;
 			
 			// aapt resource value: 0x7F070190
-			public const int mr_media_play_light = 2131165584;
+			public const int mr_media_pause_light = 2131165584;
 			
 			// aapt resource value: 0x7F070191
-			public const int mr_media_stop_dark = 2131165585;
+			public const int mr_media_play_dark = 2131165585;
 			
 			// aapt resource value: 0x7F070192
-			public const int mr_media_stop_light = 2131165586;
+			public const int mr_media_play_light = 2131165586;
 			
 			// aapt resource value: 0x7F070193
-			public const int mr_vol_type_audiotrack_dark = 2131165587;
+			public const int mr_media_stop_dark = 2131165587;
 			
 			// aapt resource value: 0x7F070194
-			public const int mr_vol_type_audiotrack_light = 2131165588;
+			public const int mr_media_stop_light = 2131165588;
 			
 			// aapt resource value: 0x7F070195
-			public const int mtrl_snackbar_background = 2131165589;
+			public const int mr_vol_type_audiotrack_dark = 2131165589;
 			
 			// aapt resource value: 0x7F070196
-			public const int mtrl_tabs_default_indicator = 2131165590;
+			public const int mr_vol_type_audiotrack_light = 2131165590;
 			
 			// aapt resource value: 0x7F070197
-			public const int navigation_empty_icon = 2131165591;
+			public const int mtrl_snackbar_background = 2131165591;
 			
 			// aapt resource value: 0x7F070198
-			public const int notification_action_background = 2131165592;
+			public const int mtrl_tabs_default_indicator = 2131165592;
 			
 			// aapt resource value: 0x7F070199
-			public const int notification_bg = 2131165593;
+			public const int navigation_empty_icon = 2131165593;
 			
 			// aapt resource value: 0x7F07019A
-			public const int notification_bg_low = 2131165594;
+			public const int notification_action_background = 2131165594;
 			
 			// aapt resource value: 0x7F07019B
-			public const int notification_bg_low_normal = 2131165595;
+			public const int notification_bg = 2131165595;
 			
 			// aapt resource value: 0x7F07019C
-			public const int notification_bg_low_pressed = 2131165596;
+			public const int notification_bg_low = 2131165596;
 			
 			// aapt resource value: 0x7F07019D
-			public const int notification_bg_normal = 2131165597;
+			public const int notification_bg_low_normal = 2131165597;
 			
 			// aapt resource value: 0x7F07019E
-			public const int notification_bg_normal_pressed = 2131165598;
+			public const int notification_bg_low_pressed = 2131165598;
 			
 			// aapt resource value: 0x7F07019F
-			public const int notification_icon_background = 2131165599;
+			public const int notification_bg_normal = 2131165599;
 			
 			// aapt resource value: 0x7F0701A0
-			public const int notification_template_icon_bg = 2131165600;
+			public const int notification_bg_normal_pressed = 2131165600;
 			
 			// aapt resource value: 0x7F0701A1
-			public const int notification_template_icon_low_bg = 2131165601;
+			public const int notification_icon_background = 2131165601;
 			
 			// aapt resource value: 0x7F0701A2
-			public const int notification_tile_bg = 2131165602;
+			public const int notification_template_icon_bg = 2131165602;
 			
 			// aapt resource value: 0x7F0701A3
-			public const int notify_panel_notification_icon_bg = 2131165603;
+			public const int notification_template_icon_low_bg = 2131165603;
 			
 			// aapt resource value: 0x7F0701A4
-			public const int outer = 2131165604;
+			public const int notification_tile_bg = 2131165604;
 			
 			// aapt resource value: 0x7F0701A5
-			public const int pause = 2131165605;
+			public const int notify_panel_notification_icon_bg = 2131165605;
 			
 			// aapt resource value: 0x7F0701A6
-			public const int plugin_lc_smallicon = 2131165606;
+			public const int outer = 2131165606;
 			
 			// aapt resource value: 0x7F0701A7
-			public const int plus = 2131165607;
+			public const int pause = 2131165607;
 			
 			// aapt resource value: 0x7F0701A8
-			public const int popup_forms_android_close_icon = 2131165608;
+			public const int plugin_lc_smallicon = 2131165608;
 			
 			// aapt resource value: 0x7F0701A9
-			public const int popup_forms_android_shadow = 2131165609;
+			public const int plus = 2131165609;
 			
 			// aapt resource value: 0x7F0701AA
-			public const int popup_forms_dark_theme_close_icon = 2131165610;
+			public const int popup_forms_android_close_icon = 2131165610;
 			
 			// aapt resource value: 0x7F0701AB
-			public const int popup_forms_light_theme_close_icon = 2131165611;
+			public const int popup_forms_android_shadow = 2131165611;
 			
 			// aapt resource value: 0x7F0701AC
-			public const int quit = 2131165612;
+			public const int popup_forms_dark_theme_close_icon = 2131165612;
 			
 			// aapt resource value: 0x7F0701AD
-			public const int reportes2 = 2131165613;
+			public const int popup_forms_light_theme_close_icon = 2131165613;
 			
 			// aapt resource value: 0x7F0701AE
-			public const int robo = 2131165614;
+			public const int quit = 2131165614;
 			
 			// aapt resource value: 0x7F0701AF
-			public const int seahawks = 2131165615;
+			public const int reportes2 = 2131165615;
 			
 			// aapt resource value: 0x7F0701B0
-			public const int seahawks2 = 2131165616;
+			public const int robo = 2131165616;
 			
 			// aapt resource value: 0x7F0701B1
-			public const int seahawks3 = 2131165617;
+			public const int seahawks = 2131165617;
 			
 			// aapt resource value: 0x7F0701B2
-			public const int send = 2131165618;
+			public const int seahawks2 = 2131165618;
 			
 			// aapt resource value: 0x7F0701B3
-			public const int send2 = 2131165619;
+			public const int seahawks3 = 2131165619;
 			
 			// aapt resource value: 0x7F0701B4
-			public const int solido = 2131165620;
+			public const int send = 2131165620;
 			
 			// aapt resource value: 0x7F0701B5
-			public const int solidosh = 2131165621;
+			public const int send2 = 2131165621;
 			
 			// aapt resource value: 0x7F0701B6
-			public const int startRoute = 2131165622;
+			public const int solido = 2131165622;
 			
 			// aapt resource value: 0x7F0701B7
-			public const int tool = 2131165623;
+			public const int solidosh = 2131165623;
 			
 			// aapt resource value: 0x7F0701B8
-			public const int tool1 = 2131165624;
+			public const int startRoute = 2131165624;
 			
 			// aapt resource value: 0x7F0701B9
-			public const int tooltip_frame_dark = 2131165625;
+			public const int tool = 2131165625;
 			
 			// aapt resource value: 0x7F0701BA
-			public const int tooltip_frame_light = 2131165626;
+			public const int tool1 = 2131165626;
 			
 			// aapt resource value: 0x7F0701BB
-			public const int usuario = 2131165627;
+			public const int tooltip_frame_dark = 2131165627;
 			
 			// aapt resource value: 0x7F0701BC
-			public const int usuario2 = 2131165628;
+			public const int tooltip_frame_light = 2131165628;
+			
+			// aapt resource value: 0x7F0701BD
+			public const int user = 2131165629;
+			
+			// aapt resource value: 0x7F0701BE
+			public const int user2 = 2131165630;
+			
+			// aapt resource value: 0x7F0701BF
+			public const int usuario = 2131165631;
+			
+			// aapt resource value: 0x7F0701C0
+			public const int usuario2 = 2131165632;
 			
 			static Drawable()
 			{
@@ -10273,802 +12937,820 @@ namespace VYRMobile.Droid
 			public const int auto = 2131230758;
 			
 			// aapt resource value: 0x7F080027
-			public const int axisLayout = 2131230759;
+			public const int automatic = 2131230759;
 			
 			// aapt resource value: 0x7F080028
-			public const int beginning = 2131230760;
+			public const int axisLayout = 2131230760;
 			
 			// aapt resource value: 0x7F080029
-			public const int blocking = 2131230761;
+			public const int beginning = 2131230761;
 			
 			// aapt resource value: 0x7F08002A
-			public const int border = 2131230762;
+			public const int blocking = 2131230762;
+			
+			// aapt resource value: 0x7F08002B
+			public const int border = 2131230763;
 			
 			// aapt resource value: 0x7F080001
 			public const int BorderView = 2131230721;
 			
-			// aapt resource value: 0x7F08002B
-			public const int bottom = 2131230763;
-			
-			// aapt resource value: 0x7F08002D
-			public const int bottomtab_navarea = 2131230765;
+			// aapt resource value: 0x7F08002C
+			public const int bottom = 2131230764;
 			
 			// aapt resource value: 0x7F08002E
-			public const int bottomtab_tabbar = 2131230766;
-			
-			// aapt resource value: 0x7F08002C
-			public const int bottom_labels = 2131230764;
+			public const int bottomtab_navarea = 2131230766;
 			
 			// aapt resource value: 0x7F08002F
-			public const int browser_actions_header_text = 2131230767;
+			public const int bottomtab_tabbar = 2131230767;
 			
-			// aapt resource value: 0x7F080032
-			public const int browser_actions_menu_items = 2131230770;
+			// aapt resource value: 0x7F08002D
+			public const int bottom_labels = 2131230765;
 			
 			// aapt resource value: 0x7F080030
-			public const int browser_actions_menu_item_icon = 2131230768;
-			
-			// aapt resource value: 0x7F080031
-			public const int browser_actions_menu_item_text = 2131230769;
+			public const int browser_actions_header_text = 2131230768;
 			
 			// aapt resource value: 0x7F080033
-			public const int browser_actions_menu_view = 2131230771;
+			public const int browser_actions_menu_items = 2131230771;
+			
+			// aapt resource value: 0x7F080031
+			public const int browser_actions_menu_item_icon = 2131230769;
+			
+			// aapt resource value: 0x7F080032
+			public const int browser_actions_menu_item_text = 2131230770;
 			
 			// aapt resource value: 0x7F080034
-			public const int buttonPanel = 2131230772;
+			public const int browser_actions_menu_view = 2131230772;
 			
 			// aapt resource value: 0x7F080035
-			public const int cancel_action = 2131230773;
+			public const int buttonPanel = 2131230773;
 			
 			// aapt resource value: 0x7F080036
-			public const int center = 2131230774;
+			public const int cancel_action = 2131230774;
 			
 			// aapt resource value: 0x7F080037
-			public const int center_horizontal = 2131230775;
+			public const int center = 2131230775;
 			
 			// aapt resource value: 0x7F080038
-			public const int center_vertical = 2131230776;
+			public const int center_horizontal = 2131230776;
 			
 			// aapt resource value: 0x7F080039
-			public const int chartBehaviorLayout = 2131230777;
+			public const int center_vertical = 2131230777;
 			
 			// aapt resource value: 0x7F08003A
-			public const int chartLegendScrollView = 2131230778;
+			public const int chartBehaviorLayout = 2131230778;
 			
 			// aapt resource value: 0x7F08003B
-			public const int checkbox = 2131230779;
+			public const int chartLegendScrollView = 2131230779;
 			
 			// aapt resource value: 0x7F08003C
-			public const int @checked = 2131230780;
+			public const int checkbox = 2131230780;
 			
 			// aapt resource value: 0x7F08003D
-			public const int chronometer = 2131230781;
+			public const int @checked = 2131230781;
 			
 			// aapt resource value: 0x7F08003E
-			public const int clip_horizontal = 2131230782;
+			public const int chronometer = 2131230782;
 			
 			// aapt resource value: 0x7F08003F
-			public const int clip_vertical = 2131230783;
+			public const int clip_horizontal = 2131230783;
 			
 			// aapt resource value: 0x7F080040
-			public const int collapseActionView = 2131230784;
+			public const int clip_vertical = 2131230784;
 			
 			// aapt resource value: 0x7F080041
-			public const int container = 2131230785;
+			public const int collapseActionView = 2131230785;
 			
 			// aapt resource value: 0x7F080042
-			public const int content = 2131230786;
+			public const int container = 2131230786;
 			
 			// aapt resource value: 0x7F080043
-			public const int contentFrame = 2131230787;
+			public const int content = 2131230787;
 			
 			// aapt resource value: 0x7F080044
-			public const int contentPanel = 2131230788;
+			public const int contentFrame = 2131230788;
 			
 			// aapt resource value: 0x7F080045
-			public const int coordinator = 2131230789;
+			public const int contentPanel = 2131230789;
+			
+			// aapt resource value: 0x7F080046
+			public const int coordinator = 2131230790;
 			
 			// aapt resource value: 0x7F080002
 			public const int CTRL = 2131230722;
 			
-			// aapt resource value: 0x7F080046
-			public const int custom = 2131230790;
-			
 			// aapt resource value: 0x7F080047
-			public const int customPanel = 2131230791;
+			public const int custom = 2131230791;
 			
 			// aapt resource value: 0x7F080048
-			public const int dark = 2131230792;
+			public const int customPanel = 2131230792;
 			
 			// aapt resource value: 0x7F080049
-			public const int dataMarkerLayout = 2131230793;
+			public const int dark = 2131230793;
 			
 			// aapt resource value: 0x7F08004A
-			public const int decor_content_parent = 2131230794;
+			public const int dataMarkerLayout = 2131230794;
+			
+			// aapt resource value: 0x7F08004B
+			public const int decor_content_parent = 2131230795;
 			
 			// aapt resource value: 0x7F080003
 			public const int Default = 2131230723;
 			
-			// aapt resource value: 0x7F08004B
-			public const int default_activity_button = 2131230795;
-			
 			// aapt resource value: 0x7F08004C
-			public const int design_bottom_sheet = 2131230796;
+			public const int default_activity_button = 2131230796;
 			
 			// aapt resource value: 0x7F08004D
-			public const int design_menu_item_action_area = 2131230797;
+			public const int design_bottom_sheet = 2131230797;
 			
 			// aapt resource value: 0x7F08004E
-			public const int design_menu_item_action_area_stub = 2131230798;
+			public const int design_menu_item_action_area = 2131230798;
 			
 			// aapt resource value: 0x7F08004F
-			public const int design_menu_item_text = 2131230799;
+			public const int design_menu_item_action_area_stub = 2131230799;
 			
 			// aapt resource value: 0x7F080050
-			public const int design_navigation_view = 2131230800;
+			public const int design_menu_item_text = 2131230800;
+			
+			// aapt resource value: 0x7F080051
+			public const int design_navigation_view = 2131230801;
 			
 			// aapt resource value: 0x7F080004
 			public const int Dialog = 2131230724;
 			
-			// aapt resource value: 0x7F080051
-			public const int disableHome = 2131230801;
-			
 			// aapt resource value: 0x7F080052
-			public const int edit_query = 2131230802;
+			public const int disableHome = 2131230802;
 			
 			// aapt resource value: 0x7F080053
-			public const int end = 2131230803;
+			public const int edit_query = 2131230803;
 			
 			// aapt resource value: 0x7F080054
-			public const int end_padder = 2131230804;
+			public const int end = 2131230804;
 			
 			// aapt resource value: 0x7F080055
-			public const int enterAlways = 2131230805;
+			public const int end_padder = 2131230805;
 			
 			// aapt resource value: 0x7F080056
-			public const int enterAlwaysCollapsed = 2131230806;
+			public const int enterAlways = 2131230806;
 			
 			// aapt resource value: 0x7F080057
-			public const int exitUntilCollapsed = 2131230807;
-			
-			// aapt resource value: 0x7F080059
-			public const int expanded_menu = 2131230809;
+			public const int enterAlwaysCollapsed = 2131230807;
 			
 			// aapt resource value: 0x7F080058
-			public const int expand_activities_button = 2131230808;
+			public const int exitUntilCollapsed = 2131230808;
 			
 			// aapt resource value: 0x7F08005A
-			public const int fill = 2131230810;
+			public const int expanded_menu = 2131230810;
 			
-			// aapt resource value: 0x7F08005D
-			public const int filled = 2131230813;
+			// aapt resource value: 0x7F080059
+			public const int expand_activities_button = 2131230809;
 			
 			// aapt resource value: 0x7F08005B
-			public const int fill_horizontal = 2131230811;
-			
-			// aapt resource value: 0x7F08005C
-			public const int fill_vertical = 2131230812;
+			public const int fill = 2131230811;
 			
 			// aapt resource value: 0x7F08005E
-			public const int @fixed = 2131230814;
+			public const int filled = 2131230814;
+			
+			// aapt resource value: 0x7F08005C
+			public const int fill_horizontal = 2131230812;
+			
+			// aapt resource value: 0x7F08005D
+			public const int fill_vertical = 2131230813;
 			
 			// aapt resource value: 0x7F08005F
-			public const int flyoutcontent_appbar = 2131230815;
+			public const int @fixed = 2131230815;
 			
 			// aapt resource value: 0x7F080060
-			public const int flyoutcontent_recycler = 2131230816;
+			public const int flyoutcontent_appbar = 2131230816;
 			
 			// aapt resource value: 0x7F080061
-			public const int forever = 2131230817;
+			public const int flyoutcontent_recycler = 2131230817;
+			
+			// aapt resource value: 0x7F080062
+			public const int forever = 2131230818;
 			
 			// aapt resource value: 0x7F080005
 			public const int FUNCTION = 2131230725;
 			
-			// aapt resource value: 0x7F080062
-			public const int ghost_view = 2131230818;
-			
 			// aapt resource value: 0x7F080063
-			public const int gridLineLayout = 2131230819;
+			public const int ghost_view = 2131230819;
 			
 			// aapt resource value: 0x7F080064
-			public const int gridLinesLayout = 2131230820;
+			public const int gridLineLayout = 2131230820;
 			
 			// aapt resource value: 0x7F080065
-			public const int group_divider = 2131230821;
+			public const int gridLinesLayout = 2131230821;
 			
 			// aapt resource value: 0x7F080066
-			public const int home = 2131230822;
+			public const int group_divider = 2131230822;
 			
 			// aapt resource value: 0x7F080067
-			public const int homeAsUp = 2131230823;
+			public const int hardware = 2131230823;
 			
 			// aapt resource value: 0x7F080068
-			public const int hybrid = 2131230824;
+			public const int home = 2131230824;
 			
 			// aapt resource value: 0x7F080069
-			public const int icon = 2131230825;
+			public const int homeAsUp = 2131230825;
 			
 			// aapt resource value: 0x7F08006A
-			public const int iconView = 2131230826;
+			public const int hybrid = 2131230826;
 			
 			// aapt resource value: 0x7F08006B
-			public const int icon_group = 2131230827;
+			public const int icon = 2131230827;
 			
 			// aapt resource value: 0x7F08006C
-			public const int icon_only = 2131230828;
+			public const int iconView = 2131230828;
 			
 			// aapt resource value: 0x7F08006D
-			public const int ifRoom = 2131230829;
+			public const int icon_group = 2131230829;
 			
 			// aapt resource value: 0x7F08006E
-			public const int image = 2131230830;
+			public const int icon_only = 2131230830;
 			
 			// aapt resource value: 0x7F08006F
-			public const int imagewithtext = 2131230831;
+			public const int ifRoom = 2131230831;
 			
 			// aapt resource value: 0x7F080070
-			public const int indeterminate = 2131230832;
+			public const int image = 2131230832;
 			
 			// aapt resource value: 0x7F080071
-			public const int info = 2131230833;
+			public const int imagewithtext = 2131230833;
 			
 			// aapt resource value: 0x7F080072
-			public const int italic = 2131230834;
+			public const int indeterminate = 2131230834;
+			
+			// aapt resource value: 0x7F080073
+			public const int info = 2131230835;
+			
+			// aapt resource value: 0x7F080074
+			public const int italic = 2131230836;
 			
 			// aapt resource value: 0x7F080006
 			public const int Itemname = 2131230726;
 			
-			// aapt resource value: 0x7F080073
-			public const int item_touch_helper_previous_elevation = 2131230835;
-			
-			// aapt resource value: 0x7F080074
-			public const int label = 2131230836;
-			
 			// aapt resource value: 0x7F080075
-			public const int labeled = 2131230837;
+			public const int item_touch_helper_previous_elevation = 2131230837;
 			
 			// aapt resource value: 0x7F080076
-			public const int largeLabel = 2131230838;
+			public const int label = 2131230838;
 			
 			// aapt resource value: 0x7F080077
-			public const int left = 2131230839;
+			public const int labeled = 2131230839;
 			
 			// aapt resource value: 0x7F080078
-			public const int legendHeader = 2131230840;
+			public const int largeLabel = 2131230840;
 			
 			// aapt resource value: 0x7F080079
-			public const int legendItemsLayout = 2131230841;
+			public const int left = 2131230841;
 			
 			// aapt resource value: 0x7F08007A
-			public const int legendLayout = 2131230842;
+			public const int legendHeader = 2131230842;
 			
 			// aapt resource value: 0x7F08007B
-			public const int legendScrollView = 2131230843;
+			public const int legendItemsLayout = 2131230843;
 			
 			// aapt resource value: 0x7F08007C
-			public const int legendViewGroup = 2131230844;
+			public const int legendLayout = 2131230844;
 			
 			// aapt resource value: 0x7F08007D
-			public const int light = 2131230845;
+			public const int legendScrollView = 2131230845;
 			
 			// aapt resource value: 0x7F08007E
-			public const int line1 = 2131230846;
+			public const int legendViewGroup = 2131230846;
 			
 			// aapt resource value: 0x7F08007F
-			public const int line3 = 2131230847;
+			public const int light = 2131230847;
 			
 			// aapt resource value: 0x7F080080
-			public const int listMode = 2131230848;
+			public const int line1 = 2131230848;
 			
 			// aapt resource value: 0x7F080081
-			public const int list_item = 2131230849;
+			public const int line3 = 2131230849;
 			
 			// aapt resource value: 0x7F080082
-			public const int main_appbar = 2131230850;
+			public const int listMode = 2131230850;
 			
 			// aapt resource value: 0x7F080083
-			public const int main_tablayout = 2131230851;
+			public const int list_item = 2131230851;
 			
 			// aapt resource value: 0x7F080084
-			public const int main_toolbar = 2131230852;
+			public const int lottie_layer_name = 2131230852;
 			
 			// aapt resource value: 0x7F080085
-			public const int main_viewpager = 2131230853;
+			public const int main_appbar = 2131230853;
 			
 			// aapt resource value: 0x7F080086
-			public const int masked = 2131230854;
+			public const int main_tablayout = 2131230854;
 			
 			// aapt resource value: 0x7F080087
-			public const int media_actions = 2131230855;
+			public const int main_toolbar = 2131230855;
 			
 			// aapt resource value: 0x7F080088
-			public const int message = 2131230856;
+			public const int main_viewpager = 2131230856;
+			
+			// aapt resource value: 0x7F080089
+			public const int masked = 2131230857;
+			
+			// aapt resource value: 0x7F08008A
+			public const int media_actions = 2131230858;
+			
+			// aapt resource value: 0x7F08008B
+			public const int message = 2131230859;
 			
 			// aapt resource value: 0x7F080007
 			public const int META = 2131230727;
 			
-			// aapt resource value: 0x7F080089
-			public const int middle = 2131230857;
-			
-			// aapt resource value: 0x7F08008A
-			public const int mini = 2131230858;
-			
-			// aapt resource value: 0x7F08008B
-			public const int mr_art = 2131230859;
-			
 			// aapt resource value: 0x7F08008C
-			public const int mr_cast_checkbox = 2131230860;
+			public const int middle = 2131230860;
 			
 			// aapt resource value: 0x7F08008D
-			public const int mr_cast_close_button = 2131230861;
+			public const int mini = 2131230861;
 			
 			// aapt resource value: 0x7F08008E
-			public const int mr_cast_group_icon = 2131230862;
+			public const int mr_art = 2131230862;
 			
 			// aapt resource value: 0x7F08008F
-			public const int mr_cast_group_name = 2131230863;
+			public const int mr_cast_checkbox = 2131230863;
 			
 			// aapt resource value: 0x7F080090
-			public const int mr_cast_list = 2131230864;
+			public const int mr_cast_close_button = 2131230864;
 			
 			// aapt resource value: 0x7F080091
-			public const int mr_cast_meta = 2131230865;
+			public const int mr_cast_group_icon = 2131230865;
 			
 			// aapt resource value: 0x7F080092
-			public const int mr_cast_meta_art = 2131230866;
+			public const int mr_cast_group_name = 2131230866;
 			
 			// aapt resource value: 0x7F080093
-			public const int mr_cast_meta_subtitle = 2131230867;
+			public const int mr_cast_list = 2131230867;
 			
 			// aapt resource value: 0x7F080094
-			public const int mr_cast_meta_title = 2131230868;
+			public const int mr_cast_meta = 2131230868;
 			
 			// aapt resource value: 0x7F080095
-			public const int mr_cast_route_icon = 2131230869;
+			public const int mr_cast_meta_art = 2131230869;
 			
 			// aapt resource value: 0x7F080096
-			public const int mr_cast_route_name = 2131230870;
+			public const int mr_cast_meta_subtitle = 2131230870;
 			
 			// aapt resource value: 0x7F080097
-			public const int mr_cast_stop_button = 2131230871;
+			public const int mr_cast_meta_title = 2131230871;
 			
 			// aapt resource value: 0x7F080098
-			public const int mr_cast_volume_layout = 2131230872;
+			public const int mr_cast_route_icon = 2131230872;
 			
 			// aapt resource value: 0x7F080099
-			public const int mr_cast_volume_slider = 2131230873;
+			public const int mr_cast_route_name = 2131230873;
 			
 			// aapt resource value: 0x7F08009A
-			public const int mr_chooser_list = 2131230874;
+			public const int mr_cast_stop_button = 2131230874;
 			
 			// aapt resource value: 0x7F08009B
-			public const int mr_chooser_route_desc = 2131230875;
+			public const int mr_cast_volume_layout = 2131230875;
 			
 			// aapt resource value: 0x7F08009C
-			public const int mr_chooser_route_icon = 2131230876;
+			public const int mr_cast_volume_slider = 2131230876;
 			
 			// aapt resource value: 0x7F08009D
-			public const int mr_chooser_route_name = 2131230877;
+			public const int mr_chooser_list = 2131230877;
 			
 			// aapt resource value: 0x7F08009E
-			public const int mr_chooser_title = 2131230878;
+			public const int mr_chooser_route_desc = 2131230878;
 			
 			// aapt resource value: 0x7F08009F
-			public const int mr_close = 2131230879;
+			public const int mr_chooser_route_icon = 2131230879;
 			
 			// aapt resource value: 0x7F0800A0
-			public const int mr_control_divider = 2131230880;
+			public const int mr_chooser_route_name = 2131230880;
 			
 			// aapt resource value: 0x7F0800A1
-			public const int mr_control_playback_ctrl = 2131230881;
+			public const int mr_chooser_title = 2131230881;
 			
 			// aapt resource value: 0x7F0800A2
-			public const int mr_control_subtitle = 2131230882;
+			public const int mr_close = 2131230882;
 			
 			// aapt resource value: 0x7F0800A3
-			public const int mr_control_title = 2131230883;
+			public const int mr_control_divider = 2131230883;
 			
 			// aapt resource value: 0x7F0800A4
-			public const int mr_control_title_container = 2131230884;
+			public const int mr_control_playback_ctrl = 2131230884;
 			
 			// aapt resource value: 0x7F0800A5
-			public const int mr_custom_control = 2131230885;
+			public const int mr_control_subtitle = 2131230885;
 			
 			// aapt resource value: 0x7F0800A6
-			public const int mr_default_control = 2131230886;
+			public const int mr_control_title = 2131230886;
 			
 			// aapt resource value: 0x7F0800A7
-			public const int mr_dialog_area = 2131230887;
+			public const int mr_control_title_container = 2131230887;
 			
 			// aapt resource value: 0x7F0800A8
-			public const int mr_dialog_header_name = 2131230888;
+			public const int mr_custom_control = 2131230888;
 			
 			// aapt resource value: 0x7F0800A9
-			public const int mr_expandable_area = 2131230889;
+			public const int mr_default_control = 2131230889;
 			
 			// aapt resource value: 0x7F0800AA
-			public const int mr_group_expand_collapse = 2131230890;
+			public const int mr_dialog_area = 2131230890;
 			
 			// aapt resource value: 0x7F0800AB
-			public const int mr_group_volume_route_name = 2131230891;
+			public const int mr_dialog_header_name = 2131230891;
 			
 			// aapt resource value: 0x7F0800AC
-			public const int mr_group_volume_slider = 2131230892;
+			public const int mr_expandable_area = 2131230892;
 			
 			// aapt resource value: 0x7F0800AD
-			public const int mr_media_main_control = 2131230893;
+			public const int mr_group_expand_collapse = 2131230893;
 			
 			// aapt resource value: 0x7F0800AE
-			public const int mr_name = 2131230894;
+			public const int mr_group_volume_route_name = 2131230894;
 			
 			// aapt resource value: 0x7F0800AF
-			public const int mr_picker_close_button = 2131230895;
+			public const int mr_group_volume_slider = 2131230895;
 			
 			// aapt resource value: 0x7F0800B0
-			public const int mr_picker_list = 2131230896;
+			public const int mr_media_main_control = 2131230896;
 			
 			// aapt resource value: 0x7F0800B1
-			public const int mr_picker_route_icon = 2131230897;
+			public const int mr_name = 2131230897;
 			
 			// aapt resource value: 0x7F0800B2
-			public const int mr_picker_route_name = 2131230898;
+			public const int mr_picker_close_button = 2131230898;
 			
 			// aapt resource value: 0x7F0800B3
-			public const int mr_playback_control = 2131230899;
+			public const int mr_picker_list = 2131230899;
 			
 			// aapt resource value: 0x7F0800B4
-			public const int mr_title_bar = 2131230900;
+			public const int mr_picker_route_icon = 2131230900;
 			
 			// aapt resource value: 0x7F0800B5
-			public const int mr_volume_control = 2131230901;
+			public const int mr_picker_route_name = 2131230901;
 			
 			// aapt resource value: 0x7F0800B6
-			public const int mr_volume_group_list = 2131230902;
+			public const int mr_playback_control = 2131230902;
 			
 			// aapt resource value: 0x7F0800B7
-			public const int mr_volume_item_icon = 2131230903;
+			public const int mr_title_bar = 2131230903;
 			
 			// aapt resource value: 0x7F0800B8
-			public const int mr_volume_slider = 2131230904;
+			public const int mr_volume_control = 2131230904;
 			
 			// aapt resource value: 0x7F0800B9
-			public const int mtrl_child_content_container = 2131230905;
+			public const int mr_volume_group_list = 2131230905;
 			
 			// aapt resource value: 0x7F0800BA
-			public const int mtrl_internal_children_alpha_tag = 2131230906;
+			public const int mr_volume_item_icon = 2131230906;
 			
 			// aapt resource value: 0x7F0800BB
-			public const int multiply = 2131230907;
+			public const int mr_volume_slider = 2131230907;
 			
 			// aapt resource value: 0x7F0800BC
-			public const int navigation_header_container = 2131230908;
+			public const int mtrl_child_content_container = 2131230908;
 			
 			// aapt resource value: 0x7F0800BD
-			public const int never = 2131230909;
+			public const int mtrl_internal_children_alpha_tag = 2131230909;
 			
 			// aapt resource value: 0x7F0800BE
-			public const int none = 2131230910;
+			public const int multiply = 2131230910;
 			
 			// aapt resource value: 0x7F0800BF
-			public const int normal = 2131230911;
+			public const int navigation_header_container = 2131230911;
 			
 			// aapt resource value: 0x7F0800C0
-			public const int notification_background = 2131230912;
+			public const int never = 2131230912;
 			
 			// aapt resource value: 0x7F0800C1
-			public const int notification_main_column = 2131230913;
+			public const int none = 2131230913;
 			
 			// aapt resource value: 0x7F0800C2
-			public const int notification_main_column_container = 2131230914;
+			public const int normal = 2131230914;
 			
 			// aapt resource value: 0x7F0800C3
-			public const int outline = 2131230915;
+			public const int notification_background = 2131230915;
 			
 			// aapt resource value: 0x7F0800C4
-			public const int parallax = 2131230916;
+			public const int notification_main_column = 2131230916;
 			
 			// aapt resource value: 0x7F0800C5
-			public const int parentPanel = 2131230917;
+			public const int notification_main_column_container = 2131230917;
 			
 			// aapt resource value: 0x7F0800C6
-			public const int parent_matrix = 2131230918;
+			public const int outline = 2131230918;
 			
 			// aapt resource value: 0x7F0800C7
-			public const int pin = 2131230919;
+			public const int parallax = 2131230919;
 			
 			// aapt resource value: 0x7F0800C8
-			public const int progress_circular = 2131230920;
+			public const int parentPanel = 2131230920;
 			
 			// aapt resource value: 0x7F0800C9
-			public const int progress_horizontal = 2131230921;
+			public const int parent_matrix = 2131230921;
 			
 			// aapt resource value: 0x7F0800CA
-			public const int radio = 2131230922;
+			public const int pin = 2131230922;
 			
 			// aapt resource value: 0x7F0800CB
-			public const int right = 2131230923;
+			public const int progress_circular = 2131230923;
 			
 			// aapt resource value: 0x7F0800CC
-			public const int right_icon = 2131230924;
+			public const int progress_horizontal = 2131230924;
 			
 			// aapt resource value: 0x7F0800CD
-			public const int right_side = 2131230925;
+			public const int radio = 2131230925;
 			
 			// aapt resource value: 0x7F0800CE
-			public const int rootLayout = 2131230926;
+			public const int restart = 2131230926;
 			
 			// aapt resource value: 0x7F0800CF
-			public const int satellite = 2131230927;
+			public const int reverse = 2131230927;
 			
 			// aapt resource value: 0x7F0800D0
-			public const int save_image_matrix = 2131230928;
+			public const int right = 2131230928;
 			
 			// aapt resource value: 0x7F0800D1
-			public const int save_non_transition_alpha = 2131230929;
+			public const int right_icon = 2131230929;
 			
 			// aapt resource value: 0x7F0800D2
-			public const int save_scale_type = 2131230930;
+			public const int right_side = 2131230930;
 			
 			// aapt resource value: 0x7F0800D3
-			public const int screen = 2131230931;
+			public const int rootLayout = 2131230931;
 			
 			// aapt resource value: 0x7F0800D4
-			public const int scroll = 2131230932;
-			
-			// aapt resource value: 0x7F0800D8
-			public const int scrollable = 2131230936;
+			public const int satellite = 2131230932;
 			
 			// aapt resource value: 0x7F0800D5
-			public const int scrollIndicatorDown = 2131230933;
+			public const int save_image_matrix = 2131230933;
 			
 			// aapt resource value: 0x7F0800D6
-			public const int scrollIndicatorUp = 2131230934;
+			public const int save_non_transition_alpha = 2131230934;
 			
 			// aapt resource value: 0x7F0800D7
-			public const int scrollView = 2131230935;
+			public const int save_scale_type = 2131230935;
+			
+			// aapt resource value: 0x7F0800D8
+			public const int screen = 2131230936;
 			
 			// aapt resource value: 0x7F0800D9
-			public const int search_badge = 2131230937;
-			
-			// aapt resource value: 0x7F0800DA
-			public const int search_bar = 2131230938;
-			
-			// aapt resource value: 0x7F0800DB
-			public const int search_button = 2131230939;
-			
-			// aapt resource value: 0x7F0800DC
-			public const int search_close_btn = 2131230940;
+			public const int scroll = 2131230937;
 			
 			// aapt resource value: 0x7F0800DD
-			public const int search_edit_frame = 2131230941;
+			public const int scrollable = 2131230941;
+			
+			// aapt resource value: 0x7F0800DA
+			public const int scrollIndicatorDown = 2131230938;
+			
+			// aapt resource value: 0x7F0800DB
+			public const int scrollIndicatorUp = 2131230939;
+			
+			// aapt resource value: 0x7F0800DC
+			public const int scrollView = 2131230940;
 			
 			// aapt resource value: 0x7F0800DE
-			public const int search_go_btn = 2131230942;
+			public const int search_badge = 2131230942;
 			
 			// aapt resource value: 0x7F0800DF
-			public const int search_mag_icon = 2131230943;
+			public const int search_bar = 2131230943;
 			
 			// aapt resource value: 0x7F0800E0
-			public const int search_plate = 2131230944;
+			public const int search_button = 2131230944;
 			
 			// aapt resource value: 0x7F0800E1
-			public const int search_src_text = 2131230945;
+			public const int search_close_btn = 2131230945;
 			
 			// aapt resource value: 0x7F0800E2
-			public const int search_voice_btn = 2131230946;
-			
-			// aapt resource value: 0x7F0800E4
-			public const int selected = 2131230948;
+			public const int search_edit_frame = 2131230946;
 			
 			// aapt resource value: 0x7F0800E3
-			public const int select_dialog_listview = 2131230947;
+			public const int search_go_btn = 2131230947;
+			
+			// aapt resource value: 0x7F0800E4
+			public const int search_mag_icon = 2131230948;
 			
 			// aapt resource value: 0x7F0800E5
-			public const int seriesLayout = 2131230949;
+			public const int search_plate = 2131230949;
 			
 			// aapt resource value: 0x7F0800E6
-			public const int shellcontent_appbar = 2131230950;
+			public const int search_src_text = 2131230950;
 			
 			// aapt resource value: 0x7F0800E7
-			public const int shellcontent_toolbar = 2131230951;
+			public const int search_voice_btn = 2131230951;
+			
+			// aapt resource value: 0x7F0800E9
+			public const int selected = 2131230953;
+			
+			// aapt resource value: 0x7F0800E8
+			public const int select_dialog_listview = 2131230952;
+			
+			// aapt resource value: 0x7F0800EA
+			public const int seriesLayout = 2131230954;
+			
+			// aapt resource value: 0x7F0800EB
+			public const int shellcontent_appbar = 2131230955;
+			
+			// aapt resource value: 0x7F0800EC
+			public const int shellcontent_toolbar = 2131230956;
 			
 			// aapt resource value: 0x7F080008
 			public const int SHIFT = 2131230728;
 			
-			// aapt resource value: 0x7F0800E8
-			public const int shortcut = 2131230952;
-			
-			// aapt resource value: 0x7F0800E9
-			public const int showCustom = 2131230953;
-			
-			// aapt resource value: 0x7F0800EA
-			public const int showHome = 2131230954;
-			
-			// aapt resource value: 0x7F0800EB
-			public const int showTitle = 2131230955;
-			
-			// aapt resource value: 0x7F0800EC
-			public const int sliding_tabs = 2131230956;
-			
 			// aapt resource value: 0x7F0800ED
-			public const int smallLabel = 2131230957;
+			public const int shortcut = 2131230957;
 			
 			// aapt resource value: 0x7F0800EE
-			public const int snackbar_action = 2131230958;
+			public const int showCustom = 2131230958;
 			
 			// aapt resource value: 0x7F0800EF
-			public const int snackbar_text = 2131230959;
+			public const int showHome = 2131230959;
 			
 			// aapt resource value: 0x7F0800F0
-			public const int snap = 2131230960;
+			public const int showTitle = 2131230960;
 			
 			// aapt resource value: 0x7F0800F1
-			public const int snapMargins = 2131230961;
+			public const int sliding_tabs = 2131230961;
 			
 			// aapt resource value: 0x7F0800F2
-			public const int spacer = 2131230962;
+			public const int smallLabel = 2131230962;
 			
 			// aapt resource value: 0x7F0800F3
-			public const int split_action_bar = 2131230963;
+			public const int snackbar_action = 2131230963;
 			
 			// aapt resource value: 0x7F0800F4
-			public const int src_atop = 2131230964;
+			public const int snackbar_text = 2131230964;
 			
 			// aapt resource value: 0x7F0800F5
-			public const int src_in = 2131230965;
+			public const int snap = 2131230965;
 			
 			// aapt resource value: 0x7F0800F6
-			public const int src_over = 2131230966;
+			public const int snapMargins = 2131230966;
 			
 			// aapt resource value: 0x7F0800F7
-			public const int standard = 2131230967;
+			public const int software = 2131230967;
 			
 			// aapt resource value: 0x7F0800F8
-			public const int start = 2131230968;
+			public const int spacer = 2131230968;
 			
 			// aapt resource value: 0x7F0800F9
-			public const int status_bar_latest_event_content = 2131230969;
+			public const int split_action_bar = 2131230969;
 			
 			// aapt resource value: 0x7F0800FA
-			public const int stretch = 2131230970;
+			public const int src_atop = 2131230970;
 			
 			// aapt resource value: 0x7F0800FB
-			public const int stripLinesLayout = 2131230971;
+			public const int src_in = 2131230971;
 			
 			// aapt resource value: 0x7F0800FC
-			public const int submenuarrow = 2131230972;
+			public const int src_over = 2131230972;
 			
 			// aapt resource value: 0x7F0800FD
-			public const int submit_area = 2131230973;
+			public const int standard = 2131230973;
+			
+			// aapt resource value: 0x7F0800FE
+			public const int start = 2131230974;
+			
+			// aapt resource value: 0x7F0800FF
+			public const int status_bar_latest_event_content = 2131230975;
+			
+			// aapt resource value: 0x7F080100
+			public const int stretch = 2131230976;
+			
+			// aapt resource value: 0x7F080101
+			public const int stripLinesLayout = 2131230977;
+			
+			// aapt resource value: 0x7F080102
+			public const int submenuarrow = 2131230978;
+			
+			// aapt resource value: 0x7F080103
+			public const int submit_area = 2131230979;
 			
 			// aapt resource value: 0x7F080009
 			public const int SYM = 2131230729;
 			
-			// aapt resource value: 0x7F0800FE
-			public const int tabMode = 2131230974;
-			
-			// aapt resource value: 0x7F0800FF
-			public const int tag_transition_group = 2131230975;
-			
-			// aapt resource value: 0x7F080100
-			public const int tag_unhandled_key_event_manager = 2131230976;
-			
-			// aapt resource value: 0x7F080101
-			public const int tag_unhandled_key_listeners = 2131230977;
-			
-			// aapt resource value: 0x7F080102
-			public const int technicalIndicatorLayout = 2131230978;
-			
-			// aapt resource value: 0x7F080103
-			public const int terrain = 2131230979;
-			
 			// aapt resource value: 0x7F080104
-			public const int text = 2131230980;
+			public const int tabMode = 2131230980;
 			
 			// aapt resource value: 0x7F080105
-			public const int text2 = 2131230981;
-			
-			// aapt resource value: 0x7F08010A
-			public const int textinput_counter = 2131230986;
-			
-			// aapt resource value: 0x7F08010B
-			public const int textinput_error = 2131230987;
-			
-			// aapt resource value: 0x7F08010C
-			public const int textinput_helper_text = 2131230988;
+			public const int tag_transition_group = 2131230981;
 			
 			// aapt resource value: 0x7F080106
-			public const int textSpacerNoButtons = 2131230982;
+			public const int tag_unhandled_key_event_manager = 2131230982;
 			
 			// aapt resource value: 0x7F080107
-			public const int textSpacerNoTitle = 2131230983;
+			public const int tag_unhandled_key_listeners = 2131230983;
 			
 			// aapt resource value: 0x7F080108
-			public const int textStart = 2131230984;
+			public const int technicalIndicatorLayout = 2131230984;
 			
 			// aapt resource value: 0x7F080109
-			public const int text_input_password_toggle = 2131230985;
+			public const int terrain = 2131230985;
 			
-			// aapt resource value: 0x7F08010D
-			public const int thumbLayout = 2131230989;
+			// aapt resource value: 0x7F08010A
+			public const int text = 2131230986;
 			
-			// aapt resource value: 0x7F08010E
-			public const int time = 2131230990;
-			
-			// aapt resource value: 0x7F08010F
-			public const int title = 2131230991;
+			// aapt resource value: 0x7F08010B
+			public const int text2 = 2131230987;
 			
 			// aapt resource value: 0x7F080110
-			public const int titleDividerNoCustom = 2131230992;
+			public const int textinput_counter = 2131230992;
 			
 			// aapt resource value: 0x7F080111
-			public const int titleLayout = 2131230993;
+			public const int textinput_error = 2131230993;
 			
 			// aapt resource value: 0x7F080112
-			public const int title_template = 2131230994;
+			public const int textinput_helper_text = 2131230994;
+			
+			// aapt resource value: 0x7F08010C
+			public const int textSpacerNoButtons = 2131230988;
+			
+			// aapt resource value: 0x7F08010D
+			public const int textSpacerNoTitle = 2131230989;
+			
+			// aapt resource value: 0x7F08010E
+			public const int textStart = 2131230990;
+			
+			// aapt resource value: 0x7F08010F
+			public const int text_input_password_toggle = 2131230991;
 			
 			// aapt resource value: 0x7F080113
-			public const int toolbar = 2131230995;
+			public const int thumbLayout = 2131230995;
 			
 			// aapt resource value: 0x7F080114
-			public const int top = 2131230996;
+			public const int time = 2131230996;
 			
 			// aapt resource value: 0x7F080115
-			public const int topPanel = 2131230997;
+			public const int title = 2131230997;
 			
 			// aapt resource value: 0x7F080116
-			public const int top_labels = 2131230998;
+			public const int titleDividerNoCustom = 2131230998;
 			
 			// aapt resource value: 0x7F080117
-			public const int touch_outside = 2131230999;
+			public const int titleLayout = 2131230999;
 			
 			// aapt resource value: 0x7F080118
-			public const int transition_current_scene = 2131231000;
+			public const int title_template = 2131231000;
 			
 			// aapt resource value: 0x7F080119
-			public const int transition_layout_save = 2131231001;
+			public const int toolbar = 2131231001;
 			
 			// aapt resource value: 0x7F08011A
-			public const int transition_position = 2131231002;
+			public const int top = 2131231002;
 			
 			// aapt resource value: 0x7F08011B
-			public const int transition_scene_layoutid_cache = 2131231003;
+			public const int topPanel = 2131231003;
 			
 			// aapt resource value: 0x7F08011C
-			public const int transition_transform = 2131231004;
+			public const int top_labels = 2131231004;
 			
 			// aapt resource value: 0x7F08011D
-			public const int @unchecked = 2131231005;
+			public const int touch_outside = 2131231005;
 			
 			// aapt resource value: 0x7F08011E
-			public const int uniform = 2131231006;
+			public const int transition_current_scene = 2131231006;
 			
 			// aapt resource value: 0x7F08011F
-			public const int unlabeled = 2131231007;
+			public const int transition_layout_save = 2131231007;
 			
 			// aapt resource value: 0x7F080120
-			public const int up = 2131231008;
+			public const int transition_position = 2131231008;
 			
 			// aapt resource value: 0x7F080121
-			public const int useLogo = 2131231009;
+			public const int transition_scene_layoutid_cache = 2131231009;
 			
 			// aapt resource value: 0x7F080122
-			public const int view_offset_helper = 2131231010;
+			public const int transition_transform = 2131231010;
 			
 			// aapt resource value: 0x7F080123
-			public const int visible = 2131231011;
+			public const int @unchecked = 2131231011;
 			
 			// aapt resource value: 0x7F080124
-			public const int volume_item_container = 2131231012;
+			public const int uniform = 2131231012;
 			
 			// aapt resource value: 0x7F080125
-			public const int wide = 2131231013;
+			public const int unlabeled = 2131231013;
 			
 			// aapt resource value: 0x7F080126
-			public const int withText = 2131231014;
+			public const int up = 2131231014;
 			
 			// aapt resource value: 0x7F080127
-			public const int wrap_content = 2131231015;
+			public const int useLogo = 2131231015;
+			
+			// aapt resource value: 0x7F080128
+			public const int view_offset_helper = 2131231016;
+			
+			// aapt resource value: 0x7F080129
+			public const int visible = 2131231017;
+			
+			// aapt resource value: 0x7F08012A
+			public const int volume_item_container = 2131231018;
+			
+			// aapt resource value: 0x7F08012B
+			public const int wide = 2131231019;
+			
+			// aapt resource value: 0x7F08012C
+			public const int withText = 2131231020;
+			
+			// aapt resource value: 0x7F08012D
+			public const int wrap_content = 2131231021;
 			
 			static Id()
 			{
@@ -13456,7 +16138,7 @@ namespace VYRMobile.Droid
 		public partial class Styleable
 		{
 			
-			// aapt resource value: { 0x7F030032,0x7F030033,0x7F030034,0x7F03009D,0x7F03009E,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F0300A2,0x7F0300B1,0x7F0300B6,0x7F0300B7,0x7F0300C2,0x7F0300F3,0x7F0300F8,0x7F0300FD,0x7F0300FE,0x7F030100,0x7F03010C,0x7F030117,0x7F03013F,0x7F030159,0x7F030184,0x7F030188,0x7F030189,0x7F0301C5,0x7F0301C8,0x7F03020D,0x7F030217 }
+			// aapt resource value: { 0x7F030032,0x7F030033,0x7F030034,0x7F03009D,0x7F03009E,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F0300A2,0x7F0300B1,0x7F0300B6,0x7F0300B7,0x7F0300C2,0x7F0300F3,0x7F0300F8,0x7F0300FD,0x7F0300FE,0x7F030100,0x7F03010C,0x7F030117,0x7F03013F,0x7F030167,0x7F030192,0x7F030196,0x7F030197,0x7F0301D3,0x7F0301D6,0x7F03021B,0x7F030225 }
 			public static int[] ActionBar = new int[] {
 					2130903090,
 					2130903091,
@@ -13479,14 +16161,14 @@ namespace VYRMobile.Droid
 					2130903308,
 					2130903319,
 					2130903359,
-					2130903385,
-					2130903428,
-					2130903432,
-					2130903433,
-					2130903493,
-					2130903496,
-					2130903565,
-					2130903575};
+					2130903399,
+					2130903442,
+					2130903446,
+					2130903447,
+					2130903507,
+					2130903510,
+					2130903579,
+					2130903589};
 			
 			// aapt resource value: { 0x10100B3 }
 			public static int[] ActionBarLayout = new int[] {
@@ -13593,14 +16275,14 @@ namespace VYRMobile.Droid
 			public static int[] ActionMenuView = new int[] {
 					-1};
 			
-			// aapt resource value: { 0x7F030032,0x7F030033,0x7F030089,0x7F0300F3,0x7F0301C8,0x7F030217 }
+			// aapt resource value: { 0x7F030032,0x7F030033,0x7F030089,0x7F0300F3,0x7F0301D6,0x7F030225 }
 			public static int[] ActionMode = new int[] {
 					2130903090,
 					2130903091,
 					2130903177,
 					2130903283,
-					2130903496,
-					2130903575};
+					2130903510,
+					2130903589};
 			
 			// aapt resource value: 0
 			public const int ActionMode_background = 0;
@@ -13631,16 +16313,16 @@ namespace VYRMobile.Droid
 			// aapt resource value: 1
 			public const int ActivityChooserView_initialActivityCount = 1;
 			
-			// aapt resource value: { 0x10100F2,0x7F030053,0x7F030054,0x7F030135,0x7F030136,0x7F030156,0x7F0301AC,0x7F0301AD }
+			// aapt resource value: { 0x10100F2,0x7F030053,0x7F030054,0x7F030135,0x7F030136,0x7F030164,0x7F0301BA,0x7F0301BB }
 			public static int[] AlertDialog = new int[] {
 					16842994,
 					2130903123,
 					2130903124,
 					2130903349,
 					2130903350,
-					2130903382,
-					2130903468,
-					2130903469};
+					2130903396,
+					2130903482,
+					2130903483};
 			
 			// aapt resource value: 0
 			public const int AlertDialog_android_layout = 0;
@@ -13732,12 +16414,12 @@ namespace VYRMobile.Droid
 					2130903240,
 					2130903344};
 			
-			// aapt resource value: { 0x7F0301BA,0x7F0301BB,0x7F0301BD,0x7F0301BE }
+			// aapt resource value: { 0x7F0301C8,0x7F0301C9,0x7F0301CB,0x7F0301CC }
 			public static int[] AppBarLayoutStates = new int[] {
-					2130903482,
-					2130903483,
-					2130903485,
-					2130903486};
+					2130903496,
+					2130903497,
+					2130903499,
+					2130903500};
 			
 			// aapt resource value: 0
 			public const int AppBarLayoutStates_state_collapsed = 0;
@@ -13780,12 +16462,12 @@ namespace VYRMobile.Droid
 			// aapt resource value: 5
 			public const int AppBarLayout_liftOnScroll = 5;
 			
-			// aapt resource value: { 0x1010119,0x7F0301B7,0x7F03020B,0x7F03020C }
+			// aapt resource value: { 0x1010119,0x7F0301C5,0x7F030219,0x7F03021A }
 			public static int[] AppCompatImageView = new int[] {
 					16843033,
-					2130903479,
-					2130903563,
-					2130903564};
+					2130903493,
+					2130903577,
+					2130903578};
 			
 			// aapt resource value: 0
 			public const int AppCompatImageView_android_src = 0;
@@ -13799,12 +16481,12 @@ namespace VYRMobile.Droid
 			// aapt resource value: 3
 			public const int AppCompatImageView_tintMode = 3;
 			
-			// aapt resource value: { 0x1010142,0x7F030208,0x7F030209,0x7F03020A }
+			// aapt resource value: { 0x1010142,0x7F030216,0x7F030217,0x7F030218 }
 			public static int[] AppCompatSeekBar = new int[] {
 					16843074,
-					2130903560,
-					2130903561,
-					2130903562};
+					2130903574,
+					2130903575,
+					2130903576};
 			
 			// aapt resource value: 0
 			public const int AppCompatSeekBar_android_thumb = 0;
@@ -13849,7 +16531,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 0
 			public const int AppCompatTextHelper_android_textAppearance = 0;
 			
-			// aapt resource value: { 0x1010034,0x7F03002D,0x7F03002E,0x7F03002F,0x7F030030,0x7F030031,0x7F0300E2,0x7F0300E5,0x7F03011F,0x7F030131,0x7F0301E8 }
+			// aapt resource value: { 0x1010034,0x7F03002D,0x7F03002E,0x7F03002F,0x7F030030,0x7F030031,0x7F0300E2,0x7F0300E5,0x7F03011F,0x7F030131,0x7F0301F6 }
 			public static int[] AppCompatTextView = new int[] {
 					16842804,
 					2130903085,
@@ -13861,7 +16543,7 @@ namespace VYRMobile.Droid
 					2130903269,
 					2130903327,
 					2130903345,
-					2130903528};
+					2130903542};
 			
 			// aapt resource value: 0
 			public const int AppCompatTextView_android_textAppearance = 0;
@@ -13896,7 +16578,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 10
 			public const int AppCompatTextView_textAllCaps = 10;
 			
-			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F03002C,0x7F03003F,0x7F03004D,0x7F03004E,0x7F03004F,0x7F030050,0x7F030051,0x7F030056,0x7F030057,0x7F030068,0x7F03006E,0x7F03008F,0x7F030090,0x7F030091,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F030097,0x7F03009A,0x7F0300A9,0x7F0300B3,0x7F0300B4,0x7F0300B5,0x7F0300B8,0x7F0300BA,0x7F0300BD,0x7F0300BE,0x7F0300BF,0x7F0300C0,0x7F0300C1,0x7F0300FD,0x7F03010B,0x7F030133,0x7F030134,0x7F030137,0x7F030138,0x7F030139,0x7F03013A,0x7F03013B,0x7F03013C,0x7F03013D,0x7F030161,0x7F030162,0x7F030163,0x7F030183,0x7F030185,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030198,0x7F030199,0x7F0301A6,0x7F0301A7,0x7F0301B4,0x7F0301B5,0x7F0301CC,0x7F0301F3,0x7F0301F4,0x7F0301F5,0x7F0301F6,0x7F0301F8,0x7F0301F9,0x7F0301FA,0x7F0301FB,0x7F0301FE,0x7F0301FF,0x7F030219,0x7F03021A,0x7F03021B,0x7F03021C,0x7F03022C,0x7F03022E,0x7F03022F,0x7F030230,0x7F030231,0x7F030232,0x7F030233,0x7F030234,0x7F030235,0x7F030236,0x7F030237 }
+			// aapt resource value: { 0x1010057,0x10100AE,0x7F030000,0x7F030001,0x7F030002,0x7F030003,0x7F030004,0x7F030005,0x7F030006,0x7F030007,0x7F030008,0x7F030009,0x7F03000A,0x7F03000B,0x7F03000C,0x7F03000E,0x7F03000F,0x7F030010,0x7F030011,0x7F030012,0x7F030013,0x7F030014,0x7F030015,0x7F030016,0x7F030017,0x7F030018,0x7F030019,0x7F03001A,0x7F03001B,0x7F03001C,0x7F03001D,0x7F03001E,0x7F030021,0x7F030022,0x7F030023,0x7F030024,0x7F030025,0x7F03002C,0x7F03003F,0x7F03004D,0x7F03004E,0x7F03004F,0x7F030050,0x7F030051,0x7F030056,0x7F030057,0x7F030068,0x7F03006E,0x7F03008F,0x7F030090,0x7F030091,0x7F030092,0x7F030093,0x7F030094,0x7F030095,0x7F030096,0x7F030097,0x7F03009A,0x7F0300A9,0x7F0300B3,0x7F0300B4,0x7F0300B5,0x7F0300B8,0x7F0300BA,0x7F0300BD,0x7F0300BE,0x7F0300BF,0x7F0300C0,0x7F0300C1,0x7F0300FD,0x7F03010B,0x7F030133,0x7F030134,0x7F030137,0x7F030138,0x7F030139,0x7F03013A,0x7F03013B,0x7F03013C,0x7F03013D,0x7F03016F,0x7F030170,0x7F030171,0x7F030191,0x7F030193,0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F0301A6,0x7F0301A7,0x7F0301B4,0x7F0301B5,0x7F0301C2,0x7F0301C3,0x7F0301DA,0x7F030201,0x7F030202,0x7F030203,0x7F030204,0x7F030206,0x7F030207,0x7F030208,0x7F030209,0x7F03020C,0x7F03020D,0x7F030227,0x7F030228,0x7F030229,0x7F03022A,0x7F03023A,0x7F03023C,0x7F03023D,0x7F03023E,0x7F03023F,0x7F030240,0x7F030241,0x7F030242,0x7F030243,0x7F030244,0x7F030245 }
 			public static int[] AppCompatTheme = new int[] {
 					16842839,
 					16842926,
@@ -13978,47 +16660,47 @@ namespace VYRMobile.Droid
 					2130903355,
 					2130903356,
 					2130903357,
-					2130903393,
-					2130903394,
-					2130903395,
-					2130903427,
-					2130903429,
-					2130903436,
-					2130903437,
-					2130903438,
-					2130903439,
-					2130903448,
-					2130903449,
+					2130903407,
+					2130903408,
+					2130903409,
+					2130903441,
+					2130903443,
+					2130903450,
+					2130903451,
+					2130903452,
+					2130903453,
 					2130903462,
 					2130903463,
 					2130903476,
 					2130903477,
-					2130903500,
-					2130903539,
-					2130903540,
-					2130903541,
-					2130903542,
-					2130903544,
-					2130903545,
-					2130903546,
-					2130903547,
-					2130903550,
-					2130903551,
-					2130903577,
-					2130903578,
-					2130903579,
-					2130903580,
-					2130903596,
-					2130903598,
-					2130903599,
-					2130903600,
-					2130903601,
-					2130903602,
-					2130903603,
-					2130903604,
-					2130903605,
-					2130903606,
-					2130903607};
+					2130903490,
+					2130903491,
+					2130903514,
+					2130903553,
+					2130903554,
+					2130903555,
+					2130903556,
+					2130903558,
+					2130903559,
+					2130903560,
+					2130903561,
+					2130903564,
+					2130903565,
+					2130903591,
+					2130903592,
+					2130903593,
+					2130903594,
+					2130903610,
+					2130903612,
+					2130903613,
+					2130903614,
+					2130903615,
+					2130903616,
+					2130903617,
+					2130903618,
+					2130903619,
+					2130903620,
+					2130903621};
 			
 			// aapt resource value: 2
 			public const int AppCompatTheme_actionBarDivider = 2;
@@ -14410,7 +17092,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 5
 			public const int BottomAppBar_hideOnScroll = 5;
 			
-			// aapt resource value: { 0x7F0300C2,0x7F030111,0x7F030113,0x7F030115,0x7F030116,0x7F03011A,0x7F03011B,0x7F03011C,0x7F03011E,0x7F030155 }
+			// aapt resource value: { 0x7F0300C2,0x7F030111,0x7F030113,0x7F030115,0x7F030116,0x7F03011A,0x7F03011B,0x7F03011C,0x7F03011E,0x7F030163 }
 			public static int[] BottomNavigationView = new int[] {
 					2130903234,
 					2130903313,
@@ -14421,7 +17103,7 @@ namespace VYRMobile.Droid
 					2130903323,
 					2130903324,
 					2130903326,
-					2130903381};
+					2130903395};
 			
 			// aapt resource value: 0
 			public const int BottomNavigationView_elevation = 0;
@@ -14534,7 +17216,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 12
 			public const int CardView_contentPaddingTop = 12;
 			
-			// aapt resource value: { 0x1010034,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F03006B,0x7F03006C,0x7F03006D,0x7F03006F,0x7F030070,0x7F030071,0x7F030073,0x7F030074,0x7F030075,0x7F030076,0x7F030077,0x7F030078,0x7F03007D,0x7F03007E,0x7F03007F,0x7F030082,0x7F030083,0x7F030084,0x7F030085,0x7F030086,0x7F030087,0x7F030088,0x7F0300F7,0x7F030101,0x7F030105,0x7F030191,0x7F0301AA,0x7F030200,0x7F030202 }
+			// aapt resource value: { 0x1010034,0x10100AB,0x101011F,0x101014F,0x10101E5,0x7F03006B,0x7F03006C,0x7F03006D,0x7F03006F,0x7F030070,0x7F030071,0x7F030073,0x7F030074,0x7F030075,0x7F030076,0x7F030077,0x7F030078,0x7F03007D,0x7F03007E,0x7F03007F,0x7F030082,0x7F030083,0x7F030084,0x7F030085,0x7F030086,0x7F030087,0x7F030088,0x7F0300F7,0x7F030101,0x7F030105,0x7F03019F,0x7F0301B8,0x7F03020E,0x7F030210 }
 			public static int[] Chip = new int[] {
 					16842804,
 					16842923,
@@ -14566,19 +17248,19 @@ namespace VYRMobile.Droid
 					2130903287,
 					2130903297,
 					2130903301,
-					2130903441,
-					2130903466,
-					2130903552,
-					2130903554};
+					2130903455,
+					2130903480,
+					2130903566,
+					2130903568};
 			
-			// aapt resource value: { 0x7F03006A,0x7F030079,0x7F03007A,0x7F03007B,0x7F0301AE,0x7F0301AF }
+			// aapt resource value: { 0x7F03006A,0x7F030079,0x7F03007A,0x7F03007B,0x7F0301BC,0x7F0301BD }
 			public static int[] ChipGroup = new int[] {
 					2130903146,
 					2130903161,
 					2130903162,
 					2130903163,
-					2130903470,
-					2130903471};
+					2130903484,
+					2130903485};
 			
 			// aapt resource value: 0
 			public const int ChipGroup_checkedChip = 0;
@@ -14700,7 +17382,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 33
 			public const int Chip_textStartPadding = 33;
 			
-			// aapt resource value: { 0x7F03008C,0x7F03008D,0x7F0300A8,0x7F0300C9,0x7F0300CA,0x7F0300CB,0x7F0300CC,0x7F0300CD,0x7F0300CE,0x7F0300CF,0x7F030193,0x7F030195,0x7F0301C0,0x7F03020D,0x7F03020E,0x7F030218 }
+			// aapt resource value: { 0x7F03008C,0x7F03008D,0x7F0300A8,0x7F0300C9,0x7F0300CA,0x7F0300CB,0x7F0300CC,0x7F0300CD,0x7F0300CE,0x7F0300CF,0x7F0301A1,0x7F0301A3,0x7F0301CE,0x7F03021B,0x7F03021C,0x7F030226 }
 			public static int[] CollapsingToolbarLayout = new int[] {
 					2130903180,
 					2130903181,
@@ -14712,12 +17394,12 @@ namespace VYRMobile.Droid
 					2130903245,
 					2130903246,
 					2130903247,
-					2130903443,
-					2130903445,
-					2130903488,
-					2130903565,
-					2130903566,
-					2130903576};
+					2130903457,
+					2130903459,
+					2130903502,
+					2130903579,
+					2130903580,
+					2130903590};
 			
 			// aapt resource value: 0
 			public const int CollapsingToolbarLayout_collapsedTitleGravity = 0;
@@ -14808,10 +17490,10 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int CompoundButton_buttonTintMode = 2;
 			
-			// aapt resource value: { 0x7F03011D,0x7F0301BF }
+			// aapt resource value: { 0x7F03011D,0x7F0301CD }
 			public static int[] CoordinatorLayout = new int[] {
 					2130903325,
-					2130903487};
+					2130903501};
 			
 			// aapt resource value: 0
 			public const int CoordinatorLayout_keylines = 0;
@@ -14861,14 +17543,14 @@ namespace VYRMobile.Droid
 			// aapt resource value: 1
 			public const int DesignTheme_bottomSheetStyle = 1;
 			
-			// aapt resource value: { 0x7F0301BC }
+			// aapt resource value: { 0x7F0301CA }
 			public static int[] DrawableStates = new int[] {
-					2130903484};
+					2130903498};
 			
 			// aapt resource value: 0
 			public const int DrawableStates_state_indeterminate = 0;
 			
-			// aapt resource value: { 0x7F03002A,0x7F03002B,0x7F030037,0x7F03008E,0x7F0300BB,0x7F0300F0,0x7F0301B3,0x7F030204 }
+			// aapt resource value: { 0x7F03002A,0x7F03002B,0x7F030037,0x7F03008E,0x7F0300BB,0x7F0300F0,0x7F0301C1,0x7F030212 }
 			public static int[] DrawerArrowToggle = new int[] {
 					2130903082,
 					2130903083,
@@ -14876,8 +17558,8 @@ namespace VYRMobile.Droid
 					2130903182,
 					2130903227,
 					2130903280,
-					2130903475,
-					2130903556};
+					2130903489,
+					2130903570};
 			
 			// aapt resource value: 0
 			public const int DrawerArrowToggle_arrowHeadLength = 0;
@@ -14903,7 +17585,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 7
 			public const int DrawerArrowToggle_thickness = 7;
 			
-			// aapt resource value: { 0x7F030035,0x7F030036,0x7F03003E,0x7F0300C2,0x7F0300D5,0x7F0300D6,0x7F0300D7,0x7F0300D8,0x7F0300D9,0x7F0300DA,0x7F0300DB,0x7F0300DC,0x7F0300F7,0x7F0300FF,0x7F030146,0x7F030187,0x7F030191,0x7F0301AA,0x7F03022A }
+			// aapt resource value: { 0x7F030035,0x7F030036,0x7F03003E,0x7F0300C2,0x7F0300D5,0x7F0300D6,0x7F0300D7,0x7F0300D8,0x7F0300D9,0x7F0300DA,0x7F0300DB,0x7F0300DC,0x7F0300F7,0x7F0300FF,0x7F030154,0x7F030195,0x7F03019F,0x7F0301B8,0x7F030238 }
 			public static int[] FloatingActionButton = new int[] {
 					2130903093,
 					2130903094,
@@ -14919,11 +17601,11 @@ namespace VYRMobile.Droid
 					2130903260,
 					2130903287,
 					2130903295,
-					2130903366,
-					2130903431,
-					2130903441,
-					2130903466,
-					2130903594};
+					2130903380,
+					2130903445,
+					2130903455,
+					2130903480,
+					2130903608};
 			
 			// aapt resource value: 0
 			public const int FloatingActionButton_backgroundTint = 0;
@@ -15009,7 +17691,7 @@ namespace VYRMobile.Droid
 					2130903274,
 					2130903275};
 			
-			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F0300E4,0x7F0300EC,0x7F0300ED,0x7F0300EE,0x7F030221 }
+			// aapt resource value: { 0x1010532,0x1010533,0x101053F,0x101056F,0x1010570,0x7F0300E4,0x7F0300EC,0x7F0300ED,0x7F0300EE,0x7F03022F }
 			public static int[] FontFamilyFont = new int[] {
 					16844082,
 					16844083,
@@ -15020,7 +17702,7 @@ namespace VYRMobile.Droid
 					2130903276,
 					2130903277,
 					2130903278,
-					2130903585};
+					2130903599};
 			
 			// aapt resource value: 0
 			public const int FontFamilyFont_android_font = 0;
@@ -15147,7 +17829,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int GradientColor_android_type = 2;
 			
-			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300B7,0x7F0300B9,0x7F030147,0x7F0301A9 }
+			// aapt resource value: { 0x10100AF,0x10100C4,0x1010126,0x1010127,0x1010128,0x7F0300B7,0x7F0300B9,0x7F030155,0x7F0301B7 }
 			public static int[] LinearLayoutCompat = new int[] {
 					16842927,
 					16842948,
@@ -15156,8 +17838,8 @@ namespace VYRMobile.Droid
 					16843048,
 					2130903223,
 					2130903225,
-					2130903367,
-					2130903465};
+					2130903381,
+					2130903479};
 			
 			// aapt resource value: 2
 			public const int LinearLayoutCompat_android_baselineAligned = 2;
@@ -15231,7 +17913,66 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int LoadingImageView_imageAspectRatioAdjust = 2;
 			
-			// aapt resource value: { 0x7F030029,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F03005E,0x7F03005F,0x7F030060,0x7F030120,0x7F030121,0x7F030122,0x7F030123,0x7F03013E,0x7F030141,0x7F030222,0x7F030223,0x7F030224,0x7F030225,0x7F030226,0x7F030227,0x7F030228,0x7F030229,0x7F03022B,0x7F030238 }
+			// aapt resource value: { 0x7F030141,0x7F030142,0x7F030143,0x7F030144,0x7F030145,0x7F030146,0x7F030147,0x7F030148,0x7F030149,0x7F03014A,0x7F03014B,0x7F03014C,0x7F03014D,0x7F03014E }
+			public static int[] LottieAnimationView = new int[] {
+					2130903361,
+					2130903362,
+					2130903363,
+					2130903364,
+					2130903365,
+					2130903366,
+					2130903367,
+					2130903368,
+					2130903369,
+					2130903370,
+					2130903371,
+					2130903372,
+					2130903373,
+					2130903374};
+			
+			// aapt resource value: 0
+			public const int LottieAnimationView_lottie_autoPlay = 0;
+			
+			// aapt resource value: 1
+			public const int LottieAnimationView_lottie_colorFilter = 1;
+			
+			// aapt resource value: 2
+			public const int LottieAnimationView_lottie_enableMergePathsForKitKatAndAbove = 2;
+			
+			// aapt resource value: 3
+			public const int LottieAnimationView_lottie_fileName = 3;
+			
+			// aapt resource value: 4
+			public const int LottieAnimationView_lottie_imageAssetsFolder = 4;
+			
+			// aapt resource value: 5
+			public const int LottieAnimationView_lottie_loop = 5;
+			
+			// aapt resource value: 6
+			public const int LottieAnimationView_lottie_progress = 6;
+			
+			// aapt resource value: 7
+			public const int LottieAnimationView_lottie_rawRes = 7;
+			
+			// aapt resource value: 8
+			public const int LottieAnimationView_lottie_renderMode = 8;
+			
+			// aapt resource value: 9
+			public const int LottieAnimationView_lottie_repeatCount = 9;
+			
+			// aapt resource value: 10
+			public const int LottieAnimationView_lottie_repeatMode = 10;
+			
+			// aapt resource value: 11
+			public const int LottieAnimationView_lottie_scale = 11;
+			
+			// aapt resource value: 12
+			public const int LottieAnimationView_lottie_speed = 12;
+			
+			// aapt resource value: 13
+			public const int LottieAnimationView_lottie_url = 13;
+			
+			// aapt resource value: { 0x7F030029,0x7F03005A,0x7F03005B,0x7F03005C,0x7F03005D,0x7F03005E,0x7F03005F,0x7F030060,0x7F030120,0x7F030121,0x7F030122,0x7F030123,0x7F03013E,0x7F03014F,0x7F030230,0x7F030231,0x7F030232,0x7F030233,0x7F030234,0x7F030235,0x7F030236,0x7F030237,0x7F030239,0x7F030246 }
 			public static int[] MapAttrs = new int[] {
 					2130903081,
 					2130903130,
@@ -15246,17 +17987,17 @@ namespace VYRMobile.Droid
 					2130903330,
 					2130903331,
 					2130903358,
-					2130903361,
-					2130903586,
-					2130903587,
-					2130903588,
-					2130903589,
-					2130903590,
-					2130903591,
-					2130903592,
-					2130903593,
-					2130903595,
-					2130903608};
+					2130903375,
+					2130903600,
+					2130903601,
+					2130903602,
+					2130903603,
+					2130903604,
+					2130903605,
+					2130903606,
+					2130903607,
+					2130903609,
+					2130903622};
 			
 			// aapt resource value: 0
 			public const int MapAttrs_ambientEnabled = 0;
@@ -15330,7 +18071,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 23
 			public const int MapAttrs_zOrderOnTop = 23;
 			
-			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F030035,0x7F030036,0x7F0300AB,0x7F030100,0x7F030102,0x7F030103,0x7F030104,0x7F030106,0x7F030107,0x7F030191,0x7F0301C1,0x7F0301C2 }
+			// aapt resource value: { 0x10101B7,0x10101B8,0x10101B9,0x10101BA,0x7F030035,0x7F030036,0x7F0300AB,0x7F030100,0x7F030102,0x7F030103,0x7F030104,0x7F030106,0x7F030107,0x7F03019F,0x7F0301CF,0x7F0301D0 }
 			public static int[] MaterialButton = new int[] {
 					16843191,
 					16843192,
@@ -15345,9 +18086,9 @@ namespace VYRMobile.Droid
 					2130903300,
 					2130903302,
 					2130903303,
-					2130903441,
-					2130903489,
-					2130903490};
+					2130903455,
+					2130903503,
+					2130903504};
 			
 			// aapt resource value: 3
 			public const int MaterialButton_android_insetBottom = 3;
@@ -15397,10 +18138,10 @@ namespace VYRMobile.Droid
 			// aapt resource value: 15
 			public const int MaterialButton_strokeWidth = 15;
 			
-			// aapt resource value: { 0x7F0301C1,0x7F0301C2 }
+			// aapt resource value: { 0x7F0301CF,0x7F0301D0 }
 			public static int[] MaterialCardView = new int[] {
-					2130903489,
-					2130903490};
+					2130903503,
+					2130903504};
 			
 			// aapt resource value: 0
 			public const int MaterialCardView_strokeColor = 0;
@@ -15408,7 +18149,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 1
 			public const int MaterialCardView_strokeWidth = 1;
 			
-			// aapt resource value: { 0x7F030042,0x7F030043,0x7F030072,0x7F03007C,0x7F030080,0x7F03008F,0x7F030090,0x7F030096,0x7F030097,0x7F030099,0x7F0300C1,0x7F0300E3,0x7F030142,0x7F030143,0x7F03015A,0x7F030194,0x7F0301B0,0x7F0301E4,0x7F0301E9,0x7F0301EA,0x7F0301EB,0x7F0301EC,0x7F0301ED,0x7F0301EE,0x7F0301EF,0x7F0301F0,0x7F0301F1,0x7F0301F2,0x7F0301F7,0x7F0301FC,0x7F0301FD,0x7F030201 }
+			// aapt resource value: { 0x7F030042,0x7F030043,0x7F030072,0x7F03007C,0x7F030080,0x7F03008F,0x7F030090,0x7F030096,0x7F030097,0x7F030099,0x7F0300C1,0x7F0300E3,0x7F030150,0x7F030151,0x7F030168,0x7F0301A2,0x7F0301BE,0x7F0301F2,0x7F0301F7,0x7F0301F8,0x7F0301F9,0x7F0301FA,0x7F0301FB,0x7F0301FC,0x7F0301FD,0x7F0301FE,0x7F0301FF,0x7F030200,0x7F030205,0x7F03020A,0x7F03020B,0x7F03020F }
 			public static int[] MaterialComponentsTheme = new int[] {
 					2130903106,
 					2130903107,
@@ -15422,26 +18163,26 @@ namespace VYRMobile.Droid
 					2130903193,
 					2130903233,
 					2130903267,
-					2130903362,
-					2130903363,
-					2130903386,
-					2130903444,
-					2130903472,
-					2130903524,
-					2130903529,
-					2130903530,
-					2130903531,
-					2130903532,
-					2130903533,
-					2130903534,
-					2130903535,
-					2130903536,
-					2130903537,
+					2130903376,
+					2130903377,
+					2130903400,
+					2130903458,
+					2130903486,
 					2130903538,
 					2130903543,
+					2130903544,
+					2130903545,
+					2130903546,
+					2130903547,
 					2130903548,
 					2130903549,
-					2130903553};
+					2130903550,
+					2130903551,
+					2130903552,
+					2130903557,
+					2130903562,
+					2130903563,
+					2130903567};
 			
 			// aapt resource value: 0
 			public const int MaterialComponentsTheme_bottomSheetDialogTheme = 0;
@@ -15539,12 +18280,12 @@ namespace VYRMobile.Droid
 			// aapt resource value: 31
 			public const int MaterialComponentsTheme_textInputStyle = 31;
 			
-			// aapt resource value: { 0x101013F,0x1010140,0x7F0300D0,0x7F03014A }
+			// aapt resource value: { 0x101013F,0x1010140,0x7F0300D0,0x7F030158 }
 			public static int[] MediaRouteButton = new int[] {
 					16843071,
 					16843072,
 					2130903248,
-					2130903370};
+					2130903384};
 			
 			// aapt resource value: 1
 			public const int MediaRouteButton_android_minHeight = 1;
@@ -15585,7 +18326,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int MenuGroup_android_visible = 2;
 			
-			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030020,0x7F030028,0x7F03009C,0x7F030106,0x7F030107,0x7F03015B,0x7F0301A8,0x7F03021D }
+			// aapt resource value: { 0x1010002,0x101000E,0x10100D0,0x1010106,0x1010194,0x10101DE,0x10101DF,0x10101E1,0x10101E2,0x10101E3,0x10101E4,0x10101E5,0x101026F,0x7F03000D,0x7F03001F,0x7F030020,0x7F030028,0x7F03009C,0x7F030106,0x7F030107,0x7F030169,0x7F0301B6,0x7F03022B }
 			public static int[] MenuItem = new int[] {
 					16842754,
 					16842766,
@@ -15607,9 +18348,9 @@ namespace VYRMobile.Droid
 					2130903196,
 					2130903302,
 					2130903303,
-					2130903387,
-					2130903464,
-					2130903581};
+					2130903401,
+					2130903478,
+					2130903595};
 			
 			// aapt resource value: 13
 			public const int MenuItem_actionLayout = 13;
@@ -15680,7 +18421,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 22
 			public const int MenuItem_tooltipText = 22;
 			
-			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030186,0x7F0301C3 }
+			// aapt resource value: { 0x10100AE,0x101012C,0x101012D,0x101012E,0x101012F,0x1010130,0x1010131,0x7F030194,0x7F0301D1 }
 			public static int[] MenuView = new int[] {
 					16842926,
 					16843052,
@@ -15689,8 +18430,8 @@ namespace VYRMobile.Droid
 					16843055,
 					16843056,
 					16843057,
-					2130903430,
-					2130903491};
+					2130903444,
+					2130903505};
 			
 			// aapt resource value: 4
 			public const int MenuView_android_headerBackground = 4;
@@ -15719,7 +18460,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 8
 			public const int MenuView_subMenuArrow = 8;
 			
-			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F0300C2,0x7F0300F2,0x7F030111,0x7F030112,0x7F030114,0x7F030116,0x7F030119,0x7F03011C,0x7F030155 }
+			// aapt resource value: { 0x10100D4,0x10100DD,0x101011F,0x7F0300C2,0x7F0300F2,0x7F030111,0x7F030112,0x7F030114,0x7F030116,0x7F030119,0x7F03011C,0x7F030163 }
 			public static int[] NavigationView = new int[] {
 					16842964,
 					16842973,
@@ -15732,7 +18473,7 @@ namespace VYRMobile.Droid
 					2130903318,
 					2130903321,
 					2130903324,
-					2130903381};
+					2130903395};
 			
 			// aapt resource value: 0
 			public const int NavigationView_android_background = 0;
@@ -15770,15 +18511,15 @@ namespace VYRMobile.Droid
 			// aapt resource value: 11
 			public const int NavigationView_menu = 11;
 			
-			// aapt resource value: { 0x1010176,0x10102C9,0x7F03015C }
+			// aapt resource value: { 0x1010176,0x10102C9,0x7F03016A }
 			public static int[] PopupWindow = new int[] {
 					16843126,
 					16843465,
-					2130903388};
+					2130903402};
 			
-			// aapt resource value: { 0x7F0301B9 }
+			// aapt resource value: { 0x7F0301C7 }
 			public static int[] PopupWindowBackgroundState = new int[] {
-					2130903481};
+					2130903495};
 			
 			// aapt resource value: 0
 			public const int PopupWindowBackgroundState_state_above_anchor = 0;
@@ -15792,10 +18533,10 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int PopupWindow_overlapAnchor = 2;
 			
-			// aapt resource value: { 0x7F03015D,0x7F030160 }
+			// aapt resource value: { 0x7F03016B,0x7F03016E }
 			public static int[] RecycleListView = new int[] {
-					2130903389,
-					2130903392};
+					2130903403,
+					2130903406};
 			
 			// aapt resource value: 0
 			public const int RecycleListView_paddingBottomNoButtons = 0;
@@ -15803,7 +18544,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 1
 			public const int RecycleListView_paddingTopNoTitle = 1;
 			
-			// aapt resource value: { 0x10100C4,0x10100F1,0x7F0300DD,0x7F0300DE,0x7F0300DF,0x7F0300E0,0x7F0300E1,0x7F030125,0x7F030190,0x7F0301B2,0x7F0301B8 }
+			// aapt resource value: { 0x10100C4,0x10100F1,0x7F0300DD,0x7F0300DE,0x7F0300DF,0x7F0300E0,0x7F0300E1,0x7F030125,0x7F03019E,0x7F0301C0,0x7F0301C6 }
 			public static int[] RecyclerView = new int[] {
 					16842948,
 					16842993,
@@ -15813,9 +18554,9 @@ namespace VYRMobile.Droid
 					2130903264,
 					2130903265,
 					2130903333,
-					2130903440,
-					2130903474,
-					2130903480};
+					2130903454,
+					2130903488,
+					2130903494};
 			
 			// aapt resource value: 1
 			public const int RecyclerView_android_descendantFocusability = 1;
@@ -15864,7 +18605,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 0
 			public const int ScrollingViewBehavior_Layout_behavior_overlapTop = 0;
 			
-			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F030082,0x7F03009B,0x7F0300B2,0x7F0300F1,0x7F030108,0x7F030124,0x7F03018A,0x7F03018B,0x7F030196,0x7F030197,0x7F0301C4,0x7F0301C9,0x7F03022D }
+			// aapt resource value: { 0x10100DA,0x101011F,0x1010220,0x1010264,0x7F030082,0x7F03009B,0x7F0300B2,0x7F0300F1,0x7F030108,0x7F030124,0x7F030198,0x7F030199,0x7F0301A4,0x7F0301A5,0x7F0301D2,0x7F0301D7,0x7F03023B }
 			public static int[] SearchView = new int[] {
 					16842970,
 					16843039,
@@ -15876,13 +18617,13 @@ namespace VYRMobile.Droid
 					2130903281,
 					2130903304,
 					2130903332,
-					2130903434,
-					2130903435,
-					2130903446,
-					2130903447,
-					2130903492,
-					2130903497,
-					2130903597};
+					2130903448,
+					2130903449,
+					2130903460,
+					2130903461,
+					2130903506,
+					2130903511,
+					2130903611};
 			
 			// aapt resource value: 0
 			public const int SearchView_android_focusable = 0;
@@ -15950,22 +18691,8 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int SfCheckBox_isthreestate = 2;
 			
-			// aapt resource value: { 0x7F030169,0x7F03016A,0x7F03016B,0x7F03016C,0x7F03016D,0x7F03016E,0x7F03016F,0x7F030170,0x7F030171,0x7F030172,0x7F030173,0x7F030174,0x7F030175,0x7F030176,0x7F030177,0x7F030178,0x7F030179,0x7F03017A,0x7F03017B,0x7F03017C,0x7F03017D,0x7F03017E,0x7F03017F,0x7F030180,0x7F030181,0x7F030182 }
+			// aapt resource value: { 0x7F030177,0x7F030178,0x7F030179,0x7F03017A,0x7F03017B,0x7F03017C,0x7F03017D,0x7F03017E,0x7F03017F,0x7F030180,0x7F030181,0x7F030182,0x7F030183,0x7F030184,0x7F030185,0x7F030186,0x7F030187,0x7F030188,0x7F030189,0x7F03018A,0x7F03018B,0x7F03018C,0x7F03018D,0x7F03018E,0x7F03018F,0x7F030190 }
 			public static int[] SfPicker = new int[] {
-					2130903401,
-					2130903402,
-					2130903403,
-					2130903404,
-					2130903405,
-					2130903406,
-					2130903407,
-					2130903408,
-					2130903409,
-					2130903410,
-					2130903411,
-					2130903412,
-					2130903413,
-					2130903414,
 					2130903415,
 					2130903416,
 					2130903417,
@@ -15977,7 +18704,21 @@ namespace VYRMobile.Droid
 					2130903423,
 					2130903424,
 					2130903425,
-					2130903426};
+					2130903426,
+					2130903427,
+					2130903428,
+					2130903429,
+					2130903430,
+					2130903431,
+					2130903432,
+					2130903433,
+					2130903434,
+					2130903435,
+					2130903436,
+					2130903437,
+					2130903438,
+					2130903439,
+					2130903440};
 			
 			// aapt resource value: 0
 			public const int SfPicker_pickerBackgroundColor = 0;
@@ -16057,20 +18798,20 @@ namespace VYRMobile.Droid
 			// aapt resource value: 25
 			public const int SfPicker_pickerWidth = 25;
 			
-			// aapt resource value: { 0x7F03019A,0x7F03019B,0x7F03019C,0x7F03019D,0x7F03019E,0x7F03019F,0x7F0301A0,0x7F0301A1,0x7F0301A2,0x7F0301A3,0x7F0301A4,0x7F0301A5 }
+			// aapt resource value: { 0x7F0301A8,0x7F0301A9,0x7F0301AA,0x7F0301AB,0x7F0301AC,0x7F0301AD,0x7F0301AE,0x7F0301AF,0x7F0301B0,0x7F0301B1,0x7F0301B2,0x7F0301B3 }
 			public static int[] SfSegmentedControl = new int[] {
-					2130903450,
-					2130903451,
-					2130903452,
-					2130903453,
-					2130903454,
-					2130903455,
-					2130903456,
-					2130903457,
-					2130903458,
-					2130903459,
-					2130903460,
-					2130903461};
+					2130903464,
+					2130903465,
+					2130903466,
+					2130903467,
+					2130903468,
+					2130903469,
+					2130903470,
+					2130903471,
+					2130903472,
+					2130903473,
+					2130903474,
+					2130903475};
 			
 			// aapt resource value: 0
 			public const int SfSegmentedControl_segmentBackColor = 0;
@@ -16108,11 +18849,11 @@ namespace VYRMobile.Droid
 			// aapt resource value: 8
 			public const int SfSegmentedControl_segmentStrokeThickness = 8;
 			
-			// aapt resource value: { 0x7F030055,0x7F030098,0x7F030192 }
+			// aapt resource value: { 0x7F030055,0x7F030098,0x7F0301A0 }
 			public static int[] SignInButton = new int[] {
 					2130903125,
 					2130903192,
-					2130903442};
+					2130903456};
 			
 			// aapt resource value: 0
 			public const int SignInButton_buttonSize = 0;
@@ -16123,16 +18864,16 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int SignInButton_scopeUris = 2;
 			
-			// aapt resource value: { 0x7F0301B0,0x7F0301B1 }
+			// aapt resource value: { 0x7F0301BE,0x7F0301BF }
 			public static int[] Snackbar = new int[] {
-					2130903472,
-					2130903473};
+					2130903486,
+					2130903487};
 			
-			// aapt resource value: { 0x101011F,0x7F0300C2,0x7F030144 }
+			// aapt resource value: { 0x101011F,0x7F0300C2,0x7F030152 }
 			public static int[] SnackbarLayout = new int[] {
 					16843039,
 					2130903234,
-					2130903364};
+					2130903378};
 			
 			// aapt resource value: 0
 			public const int SnackbarLayout_android_maxWidth = 0;
@@ -16149,13 +18890,13 @@ namespace VYRMobile.Droid
 			// aapt resource value: 1
 			public const int Snackbar_snackbarStyle = 1;
 			
-			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F030184 }
+			// aapt resource value: { 0x10100B2,0x1010176,0x101017B,0x1010262,0x7F030192 }
 			public static int[] Spinner = new int[] {
 					16842930,
 					16843126,
 					16843131,
 					16843362,
-					2130903428};
+					2130903442};
 			
 			// aapt resource value: 3
 			public const int Spinner_android_dropDownWidth = 3;
@@ -16206,22 +18947,22 @@ namespace VYRMobile.Droid
 			// aapt resource value: 1
 			public const int StateListDrawable_android_visible = 1;
 			
-			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F0301AB,0x7F0301B6,0x7F0301CA,0x7F0301CB,0x7F0301CD,0x7F030205,0x7F030206,0x7F030207,0x7F03021E,0x7F03021F,0x7F030220 }
+			// aapt resource value: { 0x1010124,0x1010125,0x1010142,0x7F0301B9,0x7F0301C4,0x7F0301D8,0x7F0301D9,0x7F0301DB,0x7F030213,0x7F030214,0x7F030215,0x7F03022C,0x7F03022D,0x7F03022E }
 			public static int[] SwitchCompat = new int[] {
 					16843044,
 					16843045,
 					16843074,
-					2130903467,
-					2130903478,
-					2130903498,
-					2130903499,
-					2130903501,
-					2130903557,
-					2130903558,
-					2130903559,
-					2130903582,
-					2130903583,
-					2130903584};
+					2130903481,
+					2130903492,
+					2130903512,
+					2130903513,
+					2130903515,
+					2130903571,
+					2130903572,
+					2130903573,
+					2130903596,
+					2130903597,
+					2130903598};
 			
 			// aapt resource value: 1
 			public const int SwitchCompat_android_textOff = 1;
@@ -16280,22 +19021,8 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int TabItem_android_text = 2;
 			
-			// aapt resource value: { 0x7F0301CE,0x7F0301CF,0x7F0301D0,0x7F0301D1,0x7F0301D2,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F0301D6,0x7F0301D7,0x7F0301D8,0x7F0301D9,0x7F0301DA,0x7F0301DB,0x7F0301DC,0x7F0301DD,0x7F0301DE,0x7F0301DF,0x7F0301E0,0x7F0301E1,0x7F0301E2,0x7F0301E3,0x7F0301E5,0x7F0301E6,0x7F0301E7 }
+			// aapt resource value: { 0x7F0301DC,0x7F0301DD,0x7F0301DE,0x7F0301DF,0x7F0301E0,0x7F0301E1,0x7F0301E2,0x7F0301E3,0x7F0301E4,0x7F0301E5,0x7F0301E6,0x7F0301E7,0x7F0301E8,0x7F0301E9,0x7F0301EA,0x7F0301EB,0x7F0301EC,0x7F0301ED,0x7F0301EE,0x7F0301EF,0x7F0301F0,0x7F0301F1,0x7F0301F3,0x7F0301F4,0x7F0301F5 }
 			public static int[] TabLayout = new int[] {
-					2130903502,
-					2130903503,
-					2130903504,
-					2130903505,
-					2130903506,
-					2130903507,
-					2130903508,
-					2130903509,
-					2130903510,
-					2130903511,
-					2130903512,
-					2130903513,
-					2130903514,
-					2130903515,
 					2130903516,
 					2130903517,
 					2130903518,
@@ -16304,9 +19031,23 @@ namespace VYRMobile.Droid
 					2130903521,
 					2130903522,
 					2130903523,
+					2130903524,
 					2130903525,
 					2130903526,
-					2130903527};
+					2130903527,
+					2130903528,
+					2130903529,
+					2130903530,
+					2130903531,
+					2130903532,
+					2130903533,
+					2130903534,
+					2130903535,
+					2130903536,
+					2130903537,
+					2130903539,
+					2130903540,
+					2130903541};
 			
 			// aapt resource value: 0
 			public const int TabLayout_tabBackground = 0;
@@ -16383,7 +19124,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 24
 			public const int TabLayout_tabUnboundedRipple = 24;
 			
-			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F0300E5,0x7F0301E8 }
+			// aapt resource value: { 0x1010095,0x1010096,0x1010097,0x1010098,0x101009A,0x101009B,0x1010161,0x1010162,0x1010163,0x1010164,0x10103AC,0x7F0300E5,0x7F0301F6 }
 			public static int[] TextAppearance = new int[] {
 					16842901,
 					16842902,
@@ -16397,7 +19138,7 @@ namespace VYRMobile.Droid
 					16843108,
 					16843692,
 					2130903269,
-					2130903528};
+					2130903542};
 			
 			// aapt resource value: 10
 			public const int TextAppearance_android_fontFamily = 10;
@@ -16438,7 +19179,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 12
 			public const int TextAppearance_textAllCaps = 12;
 			
-			// aapt resource value: { 0x101009A,0x1010150,0x7F030044,0x7F030045,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004B,0x7F03004C,0x7F0300AD,0x7F0300AE,0x7F0300AF,0x7F0300B0,0x7F0300C5,0x7F0300C6,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300FA,0x7F0300FB,0x7F0300FC,0x7F030164,0x7F030165,0x7F030166,0x7F030167,0x7F030168 }
+			// aapt resource value: { 0x101009A,0x1010150,0x7F030044,0x7F030045,0x7F030046,0x7F030047,0x7F030048,0x7F030049,0x7F03004A,0x7F03004B,0x7F03004C,0x7F0300AD,0x7F0300AE,0x7F0300AF,0x7F0300B0,0x7F0300C5,0x7F0300C6,0x7F0300F4,0x7F0300F5,0x7F0300F6,0x7F0300FA,0x7F0300FB,0x7F0300FC,0x7F030172,0x7F030173,0x7F030174,0x7F030175,0x7F030176 }
 			public static int[] TextInputLayout = new int[] {
 					16842906,
 					16843088,
@@ -16463,11 +19204,11 @@ namespace VYRMobile.Droid
 					2130903290,
 					2130903291,
 					2130903292,
-					2130903396,
-					2130903397,
-					2130903398,
-					2130903399,
-					2130903400};
+					2130903410,
+					2130903411,
+					2130903412,
+					2130903413,
+					2130903414};
 			
 			// aapt resource value: 1
 			public const int TextInputLayout_android_hint = 1;
@@ -16568,7 +19309,7 @@ namespace VYRMobile.Droid
 			// aapt resource value: 2
 			public const int ThemeEnforcement_enforceTextAppearance = 2;
 			
-			// aapt resource value: { 0x10100AF,0x1010140,0x7F030052,0x7F03008A,0x7F03008B,0x7F03009D,0x7F03009E,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F0300A2,0x7F03013F,0x7F030140,0x7F030145,0x7F030157,0x7F030158,0x7F030184,0x7F0301C5,0x7F0301C6,0x7F0301C7,0x7F03020D,0x7F03020F,0x7F030210,0x7F030211,0x7F030212,0x7F030213,0x7F030214,0x7F030215,0x7F030216 }
+			// aapt resource value: { 0x10100AF,0x1010140,0x7F030052,0x7F03008A,0x7F03008B,0x7F03009D,0x7F03009E,0x7F03009F,0x7F0300A0,0x7F0300A1,0x7F0300A2,0x7F03013F,0x7F030140,0x7F030153,0x7F030165,0x7F030166,0x7F030192,0x7F0301D3,0x7F0301D4,0x7F0301D5,0x7F03021B,0x7F03021D,0x7F03021E,0x7F03021F,0x7F030220,0x7F030221,0x7F030222,0x7F030223,0x7F030224 }
 			public static int[] Toolbar = new int[] {
 					16842927,
 					16843072,
@@ -16583,22 +19324,22 @@ namespace VYRMobile.Droid
 					2130903202,
 					2130903359,
 					2130903360,
-					2130903365,
-					2130903383,
-					2130903384,
-					2130903428,
-					2130903493,
-					2130903494,
-					2130903495,
-					2130903565,
-					2130903567,
-					2130903568,
-					2130903569,
-					2130903570,
-					2130903571,
-					2130903572,
-					2130903573,
-					2130903574};
+					2130903379,
+					2130903397,
+					2130903398,
+					2130903442,
+					2130903507,
+					2130903508,
+					2130903509,
+					2130903579,
+					2130903581,
+					2130903582,
+					2130903583,
+					2130903584,
+					2130903585,
+					2130903586,
+					2130903587,
+					2130903588};
 			
 			// aapt resource value: 0
 			public const int Toolbar_android_gravity = 0;
@@ -16687,13 +19428,13 @@ namespace VYRMobile.Droid
 			// aapt resource value: 28
 			public const int Toolbar_titleTextColor = 28;
 			
-			// aapt resource value: { 0x1010000,0x10100DA,0x7F03015E,0x7F03015F,0x7F030203 }
+			// aapt resource value: { 0x1010000,0x10100DA,0x7F03016C,0x7F03016D,0x7F030211 }
 			public static int[] View = new int[] {
 					16842752,
 					16842970,
-					2130903390,
-					2130903391,
-					2130903555};
+					2130903404,
+					2130903405,
+					2130903569};
 			
 			// aapt resource value: { 0x10100D4,0x7F030035,0x7F030036 }
 			public static int[] ViewBackgroundHelper = new int[] {

@@ -28,8 +28,11 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
 
     <ContentPage.Content>
         <Grid>
-        <ListView   IsPullToRefreshEnabled="True"
+            <ListView x:Name="reportsView"
                     Grid.Row="0"
+                    IsPullToRefreshEnabled="True"
+                    RefreshCommand="{Binding LoadCommand}"
+                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     ItemsSource="{Binding Reports}"
                     SelectionMode="None"
                     HasUnevenRows="True"
