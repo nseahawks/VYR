@@ -25,7 +25,6 @@ namespace VYRMobile
             MainPage = new Login();
             BindingContext = new PuntoViewModel();
         }
-
         protected override void OnStart()
         {
             AppCenter.Start("bff38954-6dd9-4a23-a41a-13430c73bfd8", typeof(Push));
@@ -42,12 +41,10 @@ namespace VYRMobile
                               
                            });*/
         }
-
         protected override void OnSleep()
         {
             // Handle when your app sleeps
         }
-
         protected override void OnResume()
         {
             // Handle when your app resumes

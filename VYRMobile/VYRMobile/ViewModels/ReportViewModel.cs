@@ -8,6 +8,7 @@ using VYRMobile.Models;
 using VYRMobile.Data;
 using System.Threading.Tasks;
 using VYRMobile.Views;
+using static Android.Content.ClipData;
 
 namespace VYRMobile.ViewModels
 {
@@ -19,7 +20,27 @@ namespace VYRMobile.ViewModels
         //Need to be implemented
         //public Command AttachCommand { get; }
         public Command LoadCommand { get; set; }
+        public Command ReportDetailsCommand { get; set; }
 
+        /*private Item _selectedItem;
+        public Item SelectedItem
+        {
+            get
+            {
+                return _selectedItem;
+            }
+            set
+            {
+                _selectedItem = value;
+
+                if (_selectedItem == null)
+                    return;
+
+                SomeCommand.Execute(_selectedItem);
+
+                SelectedItem = null;
+            }
+        }*/
         public string Title
         {
             get => CReport.Title;
@@ -133,21 +154,6 @@ namespace VYRMobile.ViewModels
 
         //Lista de Reportes
         private ObservableCollection<Models.Report> _reports;
-
-
-        public ReportViewModel()
-        {
-            Reports = new ObservableCollection<Models.Report>();
-
-            LoadData();
-            CReport = new Report();
-            _store = new ReportsStore();
-            CreateReportCommand = new Command(async () => await CreateReport());
-            LoadCommand = new Command(async () => await LoadData2());
-            //AttachCommand = new Command(Attach);
-            _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
-            _statusCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportStatuses)));
-        }
         public ObservableCollection<Models.Report> Reports
         {
             get { return _reports; }
@@ -158,6 +164,20 @@ namespace VYRMobile.ViewModels
             }
         }
 
+        public ReportViewModel()
+        {
+            Reports = new ObservableCollection<Models.Report>();
+
+            LoadData();
+            CReport = new Report();
+            _store = new ReportsStore();
+            CreateReportCommand = new Command(async () => await CreateReport());
+            LoadCommand = new Command(async () => await LoadData2());
+            ReportDetailsCommand = new Command(async () => await LoadData2());
+            //AttachCommand = new Command(Attach);
+            _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
+            _statusCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportStatuses)));
+        }
         
        
         private async void LoadData()

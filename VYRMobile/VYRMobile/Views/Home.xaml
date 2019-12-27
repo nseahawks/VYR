@@ -193,16 +193,18 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                                                    SelectionColor="{StaticResource BaseColor}"
                                                    TitleFontSize="{StaticResource FontSize16}">
                                     <tabview:SfTabItem.Content>
-                                        <CollectionView 
+                                        <ListView 
                                             x:Name="antenasView"
                                             ItemsSource="{Binding Puntos}"
-                                            SelectionMode="None">
-                                            <CollectionView.ItemTemplate>
+                                            SelectionMode="None"
+                                            HasUnevenRows="True"
+                                            SeparatorVisibility="None">
+                                            <ListView.ItemTemplate>
                                                 <DataTemplate>
-                                                    <templates:PuntoItemTemplate/>
+                                                    <cells:PuntoItemViewCell/>
                                                 </DataTemplate>
-                                            </CollectionView.ItemTemplate>
-                                        </CollectionView>
+                                            </ListView.ItemTemplate>
+                                        </ListView>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
 

@@ -19,7 +19,8 @@ namespace VYRMobile
             InitializeComponent();
 
             var sub = new AbsoluteLayout();
-            splashImage = new Image {
+            splashImage = new Image 
+            {
             Source="solidosh.png",
             WidthRequest = 100,
             HeightRequest = 100
