@@ -20,7 +20,7 @@ namespace VYRMobile.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             base.OnCreate(savedInstanceState);
-            Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
+            //Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
 
             LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.seahawks;

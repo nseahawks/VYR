@@ -396,8 +396,8 @@ namespace VYRMobile.Views
                     map.Polylines.Clear();
                     map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                     IsRouteRunning = false;
+                    startRoute.Command.Execute(null);
                     return;
-                    DisplayAlert(":(", "Tu ruta se ha cancelado, presion 'Start Route' para inicar una nueva ruta.", "Ok");
                 }
                 else
                 {

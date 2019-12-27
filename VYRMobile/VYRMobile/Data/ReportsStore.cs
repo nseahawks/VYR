@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using VYRMobile.Helper;
 using VYRMobile.Models;
 using Xamarin.Essentials;
