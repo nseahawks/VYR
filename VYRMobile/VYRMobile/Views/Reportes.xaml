@@ -27,22 +27,28 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
     </ContentPage.Resources>
 
     <ContentPage.Content>
-        <Grid>
-        <ListView   IsPullToRefreshEnabled="True"
+        <AbsoluteLayout Padding="0" 
+                        VerticalOptions="FillAndExpand" 
+                        HorizontalOptions="FillAndExpand">
+            <Grid>
+                <ListView x:Name="reportsView"
                     Grid.Row="0"
+                    IsPullToRefreshEnabled="True"
+                    RefreshCommand="{Binding LoadCommand}"
+                    IsRefreshing="{Binding IsBusy, Mode=OneWay}"
                     ItemsSource="{Binding Reports}"
-                    SelectionMode="None"
+                    SelectionMode="Single"
                     HasUnevenRows="True"
                     SeparatorVisibility="None"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <cells:ReportItemViewCell />
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <button:SfButton Grid.Row="0"
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <cells:ReportItemViewCell />
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <button:SfButton Grid.Row="0"
                              x:Name="btnReporte"
                              BackgroundImage="plus.png"
                              HasShadow="True"
@@ -52,6 +58,104 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                              VerticalOptions="End"
                              HorizontalOptions="End"
                              Margin="0,0,8,8"/>
-        </Grid>
+            </Grid>
+            <ContentView x:Name="reportDetails"
+                         BackgroundColor="White"
+                         IsVisible="False"
+                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                         AbsoluteLayout.LayoutFlags="All"
+                         HorizontalOptions="FillAndExpand"
+                         VerticalOptions="FillAndExpand">
+                <Grid Grid.RowSpan="3">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="60"/>
+                        <RowDefinition Height="30"/>
+                        <RowDefinition Height="150"/>
+                        <RowDefinition Height="50"/>
+                        <RowDefinition Height="30"/>
+                    </Grid.RowDefinitions>
+                    <Button x:Name="closeReport"
+                            Grid.Row="0"
+                            BackgroundColor="OrangeRed"
+                            ImageSource="quit.png"
+                            HeightRequest="20"
+                            WidthRequest="20"
+                            HorizontalOptions="End"
+                            VerticalOptions="Center"
+                            Margin="0, 0, 15, 0"/>
+                    <Image  Grid.Row="1"
+                            Source="dano.png"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"
+                            HeightRequest="40"
+                            WidthRequest="40"
+                            Margin="10, 0, 0, 0"/>
+                    <Label  Grid.Row="1"
+                            Text="Central Villa Mella M1014"
+                            TextColor="{StaticResource BlackColor}"
+                            FontFamily="{StaticResource PoppinsRegular}"
+                            FontSize="18"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"
+                            Margin="65, 0, 0, 0"/>
+                    <StackLayout Orientation="Horizontal"
+                                 Grid.Row="2"
+                                 VerticalOptions="Start"
+                                 HorizontalOptions="Center">
+                        <Label Text="Tipo: "
+                               TextColor="DarkGray"
+                               FontFamily="{StaticResource PoppinsRegular}"
+                               FontSize="16"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Daño"
+                               TextColor="{StaticResource BlackColor}"
+                               FontFamily="{StaticResource PoppinsRegular}"
+                               FontSize="16"
+                               VerticalOptions="Start"
+                               HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <Label Grid.Row="3"
+                           LineBreakMode="WordWrap"
+                           LineHeight="1.2"
+                           Text="Seguidamente procedimos a comunicamos con la Patrulla de Reacción Rápida Z2 Cel.: 829-292-7221 compuesta por los Sres. Pio Arias De Jesús y Tenido Casanova para informarle de la novedad y esto nos indican que no pueden brindar la asistencia por motivo que está lloviendo."
+                           FontFamily="{StaticResource PoppinsLight}"
+                           TextColor="{StaticResource BlackColor}"
+                           FontSize="18"
+                           Margin="10, 0, 10, 0"
+                           HorizontalOptions="StartAndExpand"/>
+                    <StackLayout Grid.Row="4"
+                                 Orientation="Horizontal"
+                                 HorizontalOptions="Center">
+                        <Label Text="Estatus: "
+                               TextColor="DarkGray"
+                               FontFamily="{StaticResource PoppinsRegular}"
+                               FontSize="16"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+                        <Label Text="Activo"
+                               TextColor="{StaticResource BlackColor}"
+                               FontFamily="{StaticResource PoppinsRegular}"
+                               FontSize="16"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"/>
+                        <BoxView BackgroundColor="{StaticResource LightGreenColor2}"
+                             HeightRequest="20"
+                             WidthRequest="20"
+                             CornerRadius="10"
+                             VerticalOptions="Center"
+                             HorizontalOptions="Center"/>
+                    </StackLayout>
+                    <Label Grid.Row="5"
+                           Text="12/27/2019 09:31:58AM"
+                           TextColor="Gray"
+                           FontFamily="{StaticResource PoppinsLight}"
+                           FontAttributes="Italic"
+                           FontSize="16"
+                           VerticalOptions="Start"
+                           HorizontalOptions="End"/>
+            </ContentView>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>

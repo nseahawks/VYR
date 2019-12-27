@@ -22,8 +22,6 @@ namespace VYRMobile.Views.Cells
 
             uint duration = 750;
 
-            // We are going to create a simple but nice animation. 
-            // We will fade in at the same time we translade the cell view from the bottom to the top.
             var animation = new Animation();
 
             animation.WithConcurrent((f) => ReportItemTemplate.Opacity = f, 0, 1, Easing.CubicOut);

@@ -5,6 +5,7 @@ using System.Linq;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using VYRMobile.Models;
 using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -17,10 +18,41 @@ namespace VYRMobile.Views
         public Reportes()
         {
             InitializeComponent();
+
             btnReporte.Clicked += btnReporte_Clicked;
+            reportsView.ItemTapped += ReportsView_ItemTapped;
+            closeReport.Clicked += CloseReport_Clicked;
+
             BindingContext = new ReportViewModel();
         }
+        private void CloseReport_Clicked(object sender, EventArgs e)
+        {
+            reportDetails.IsVisible = false;
+        }
+        private async void ReportsView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var sel = (Report)reportsView.SelectedItem;
+            uint duration = 300;
 
+            reportDetails.IsVisible = true;
+
+            await reportDetails.FadeTo(0, 0);
+
+            var animation = new Animation();
+
+            animation.WithConcurrent((f) => reportDetails.Opacity = f, 0, 1, Easing.CubicIn);
+
+            animation.WithConcurrent(
+              (f) => reportDetails.TranslationY = f,
+              reportDetails.TranslationY + 100, 0,
+              Easing.CubicIn, 0, 1);
+
+            reportDetails.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
+
+            
+            //await reportDetails.FadeTo(100, 100, Easing.Linear);
+
+        }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
@@ -56,7 +88,6 @@ namespace VYRMobile.Views
         private void btnReporte_Clicked(object sender, EventArgs e)
         {
             Navigation.PushAsync(new CreateReportPage());
-
         }
     }
 }

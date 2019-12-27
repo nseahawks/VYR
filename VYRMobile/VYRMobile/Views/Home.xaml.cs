@@ -25,6 +25,7 @@ namespace VYRMobile
             //BindingContext = new TareaViewModel();
             BindingContext = new PuntoViewModel();
 
+            var ants = antenasView.ItemTemplate.Values.Count;
             //AlertMain();
             //btnStart.Clicked += BtnStart_Clicked;
             //btnStop.Clicked += BtnStop_Clicked;
@@ -35,7 +36,6 @@ namespace VYRMobile
             CallFrancisco.Clicked += CallFrancisco_clicked;
             //alert.Clicked += alert_clicked;  
         }
-
 
         //private void BtnStop_Clicked(object sender, EventArgs e)
         //{
@@ -62,6 +62,8 @@ namespace VYRMobile
 
         protected override void OnAppearing()
         {
+
+            
 
             //var document = CrossCloudFirestore.Current.Instance
             //   .GetCollection("alarms");
@@ -149,6 +151,8 @@ namespace VYRMobile
             scannerPage.OnScanResult += (result) =>
             {
                 scannerPage.IsScanning = false;
+
+
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     Navigation.PopModalAsync();

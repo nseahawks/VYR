@@ -25,8 +25,8 @@ namespace VYRMobile.Droid
             
 
 
-            var document = CrossCloudFirestore.Current.Instance
-                 .GetCollection("devices");
+            //var document = CrossCloudFirestore.Current.Instance
+            //     .GetCollection("devices");
                  //.GetDocument("myDevice");
                  //.AsObservable().Subscribe(document =>
                  //{
@@ -35,21 +35,21 @@ namespace VYRMobile.Droid
 
             //CrossCloudFirestore.Current.Instance
             //    .GetCollection("devices")
-                document.ObserveModified()
-                .Subscribe(documentChange =>
-                {
-                    var document = documentChange.Document;
-                    var message = $"{document.Data["Latitude"].ToString()}, {document.Data["Longitude"].ToString()}";
-                    //DependencyService.Get<IToast>().ShortToast(message);
-                });
+            //    document.ObserveModified()
+            //    .Subscribe(documentChange =>
+            //    {
+            //        var documents = documentChange.Document;
+            //        var message = $"{documents.Data["Latitude"].ToString()}, {documents.Data["Longitude"].ToString()}";
+            //        //DependencyService.Get<IToast>().ShortToast(message);
+            //    });
             
-            document.ObserveAdded()
-                .Subscribe(documentChange =>
-                {
-                    var document = documentChange.Document;
-                    var message = $"{document.Data.ToString()}";
-                    //DependencyService.Get<IToast>().ShortToast(message);
-                });
+            //document.ObserveAdded()
+            //    .Subscribe(documentChange =>
+            //    {
+            //        var documents = documentChange.Document;
+            //        var message = $"{document.Data.ToString()}";
+            //        //DependencyService.Get<IToast>().ShortToast(message);
+            //    });
 
             base.OnCreate();
         }
@@ -146,7 +146,7 @@ namespace VYRMobile.Droid
                             transaction.UpdateData(reference, location);
                         });
                         
-                    await Task.Delay(TimeSpan.FromSeconds(15));
+                    await Task.Delay(TimeSpan.FromSeconds(5));
                 }
                 catch (System.OperationCanceledException)
                 {

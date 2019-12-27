@@ -3,76 +3,128 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Login"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              TryLoginCommand="{Binding TLoginCommand}">
 
-
     <ContentPage.Padding>
-        <OnPlatform x:TypeArguments="Thickness">
-
-        </OnPlatform>
+        <OnPlatform x:TypeArguments="Thickness"/>
     </ContentPage.Padding>
 
     <ContentPage.Content>
         <Grid BackgroundColor="#FFFFFF"
-              Padding="2">
-            <StackLayout VerticalOptions="CenterAndExpand"
-                         Padding="1">
+              Padding="1">
+            <StackLayout VerticalOptions="CenterAndExpand">
                 <Image Grid.Row="0"
                        Source="seahawks2.png"
                        HorizontalOptions="Center"
                        HeightRequest="200"
                        WidthRequest="200"
-                       Margin="0,0,0,0"
-                       />
+                       Margin="0,0,0,0"/>
                 <Label Grid.Row="1" 
                        Text="Usuario" 
                        TextColor="#005EB2"
                        FontSize="Small"
                        FontFamily="{StaticResource PoppinsMedium}"
-                       Margin="33,0,0,0"/>
-                <Entry Grid.Row="2" 
-                       Text="{Binding Email}"
-                       FontSize="18" 
-                       BackgroundColor="White" 
-                       TextColor="Black" 
-                       HeightRequest="50" 
-                       WidthRequest="300"
-                       VerticalOptions="Start" 
-                       HorizontalOptions="Center"/>
+                       Margin="28,0,0,0"/>
+                <StackLayout Grid.Row="2" 
+                             Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <controls:ImageEntry 
+                           x:Name="email"
+                           Image="user2"
+                           Text="{Binding Email}"
+                           ClearButtonVisibility="WhileEditing"
+                           FontSize="18" 
+                           BackgroundColor="White" 
+                           TextColor="Black" 
+                           HeightRequest="50" 
+                           WidthRequest="308"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Center"/>
+                </StackLayout>
                 <Label Grid.Row="3"
                        Text="Contraseña" 
                        TextColor="#005EB2"
                        FontSize="Small"
                        FontAttributes="None"
                        FontFamily="{StaticResource PoppinsMedium}"
-                       Margin="33,0,0,0"/>
-                <Entry Grid.Row="4" 
-                       Text="{Binding Password}"
-                       IsPassword="True"
-                       FontSize="18"
-                       BackgroundColor="White"
-                       TextColor="Black"
-                       HeightRequest="50" 
-                       WidthRequest="300"
-                       VerticalOptions="Start" 
-                       HorizontalOptions="Center"/>
+                       Margin="28,0,0,0"/>
+                <StackLayout Grid.Row="4" 
+                             Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <controls:ImageEntry 
+                           x:Name="password"
+                           Text="{Binding Password}"
+                           Image="key2"
+                           IsPassword="True"
+                           ClearButtonVisibility="WhileEditing"
+                           FontSize="18"
+                           BackgroundColor="White"
+                           TextColor="Black"
+                           HeightRequest="50" 
+                           WidthRequest="308"
+                           VerticalOptions="Start" 
+                           HorizontalOptions="Center"
+                           Visual="Material"/>
+                </StackLayout>
                 <Button x:Name="Loginbtn" 
-                       Command="{Binding LoginCommand}"
-                       Grid.Row="5" 
-                       BorderRadius="5"  
-                       Text="Iniciar sesión" 
-                       BackgroundColor="#005EB2" 
-                       TextColor="White" 
-                       FontSize="14"
-                       FontFamily="{StaticResource PoppinsMedium}"
-                       HeightRequest="40"
-                       WidthRequest="300"
-                       VerticalOptions="Start" 
-                       HorizontalOptions="Center"/>
+                        Grid.Row="5" 
+                        Command="{Binding LoginCommand}"
+                        BorderRadius="5"  
+                        Text="Iniciar sesión" 
+                        BackgroundColor="#005EB2" 
+                        TextColor="White" 
+                        FontSize="14"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        HeightRequest="40"
+                        WidthRequest="300"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Center"/>
+                <forms:AnimationView 
+	                    Grid.Row="6"
+                        x:Name="animation"
+                        IsVisible="False"
+	                    Animation="loading.json" 
+                        IsEnabled="False"
+	                    Loop="True" 
+	                    AutoPlay="false"
+                        WidthRequest="85"
+                        HeightRequest="40"
+	                    VerticalOptions="Center"
+	                    HorizontalOptions="Center" />
+                <forms:AnimationView 
+	                    Grid.Row="6"
+                        x:Name="animationCheck"
+                        IsVisible="False"
+	                    Animation="check.json" 
+                        IsEnabled="False"
+	                    Loop="True" 
+	                    AutoPlay="false"
+                        WidthRequest="85"
+                        HeightRequest="40"
+	                    VerticalOptions="Center"
+	                    HorizontalOptions="Center" />
+                <StackLayout Grid.Row="7"
+                             Orientation="Horizontal"
+                             HorizontalOptions="Center">
+                    <CheckBox HorizontalOptions="Center"
+                              VerticalOptions="Center"
+                              IsChecked="{Binding Checked}"
+                              Color="{StaticResource BaseColor}"
+                              WidthRequest="25"/>
+                    <Label WidthRequest="75"
+                           VerticalOptions="Center"
+                           HorizontalOptions="Center"
+                           Text="Recordarme"
+                           FontSize="12"
+                           FontFamily="{StaticResource PoppinsMedium}"
+                           TextColor="{StaticResource BaseColor}"/>
+                </StackLayout>
             </StackLayout>
         </Grid>
     </ContentPage.Content>

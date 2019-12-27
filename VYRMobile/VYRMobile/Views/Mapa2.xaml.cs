@@ -66,7 +66,6 @@ namespace VYRMobile.Views
             AddMapStyle();
             AddLocations();
             comboBox.SelectionChanged += AntennaSelected;
-
            
             CalculateCommand = new Command<List<Position>>(Calculate);
 
@@ -83,12 +82,11 @@ namespace VYRMobile.Views
                 Tag = "id_seahawks",
             };
             map.Pins.Add(seahawksPin);
-
             
             Compass.ReadingChanged += Compass_ReadingChanged;
             OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
             map.PinClicked += Map_PinClicked;
-            
+
             //map.PinClicked += (object s, SelectedPinChangedEventArgs e) =>
             //{
             //    string pinName = s.;
@@ -99,10 +97,10 @@ namespace VYRMobile.Views
             //    string pinName = ((Pin)e).Label;
             //    await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
             //};
-         
+
             map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(18.461294, -69.948531), Distance.FromMeters(5000)));
         }
-
+        
         private async void AddLocations()
         {
             var antennas = await ReportsStore.Instance.GetAntenasAsync();
@@ -382,7 +380,7 @@ namespace VYRMobile.Views
                               double.Parse(OriginLocationlat),
                               double.Parse(OriginLocationlng)),
                               intersection);
-                   if ( distance <= 100 && distance <= RouteDistance)
+                   if ( distance <= 250 && distance <= RouteDistance)
                    {
                         RouteDistance = distance;
                         RouteIndex = i;
