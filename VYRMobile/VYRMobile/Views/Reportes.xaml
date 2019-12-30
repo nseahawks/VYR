@@ -85,14 +85,14 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                             VerticalOptions="Center"
                             Margin="0, 0, 15, 0"/>
                     <Image  Grid.Row="1"
-                            Source="dano.png"
+                            x:Name="iconImage"
                             VerticalOptions="Center"
                             HorizontalOptions="Start"
                             HeightRequest="40"
                             WidthRequest="40"
                             Margin="10, 0, 0, 0"/>
                     <Label  Grid.Row="1"
-                            Text="Central Villa Mella M1014"
+                            x:Name="titleLabel"
                             TextColor="{StaticResource BlackColor}"
                             FontFamily="{StaticResource PoppinsRegular}"
                             FontSize="18"
@@ -109,7 +109,7 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                                FontSize="16"
                                VerticalOptions="Start"
                                HorizontalOptions="Center"/>
-                        <Label Text="Daño"
+                        <Label x:Name="typeLabel"
                                TextColor="{StaticResource BlackColor}"
                                FontFamily="{StaticResource PoppinsRegular}"
                                FontSize="16"
@@ -117,9 +117,9 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                                HorizontalOptions="Center"/>
                     </StackLayout>
                     <Label Grid.Row="3"
+                           x:Name="descriptionLabel"
                            LineBreakMode="WordWrap"
                            LineHeight="1.2"
-                           Text="Seguidamente procedimos a comunicamos con la Patrulla de Reacción Rápida Z2 Cel.: 829-292-7221 compuesta por los Sres. Pio Arias De Jesús y Tenido Casanova para informarle de la novedad y esto nos indican que no pueden brindar la asistencia por motivo que está lloviendo."
                            FontFamily="{StaticResource PoppinsLight}"
                            TextColor="{StaticResource BlackColor}"
                            FontSize="18"
@@ -134,13 +134,13 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                                FontSize="16"
                                VerticalOptions="Center"
                                HorizontalOptions="Center"/>
-                        <Label Text="Activo"
+                        <Label x:Name="statusLabel"
                                TextColor="{StaticResource BlackColor}"
                                FontFamily="{StaticResource PoppinsRegular}"
                                FontSize="16"
                                VerticalOptions="Center"
                                HorizontalOptions="Center"/>
-                        <BoxView BackgroundColor="{StaticResource LightGreenColor2}"
+                        <BoxView x:Name="colorBoxView"
                              HeightRequest="20"
                              WidthRequest="20"
                              CornerRadius="10"
@@ -148,13 +148,14 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                              HorizontalOptions="Center"/>
                     </StackLayout>
                     <Label Grid.Row="5"
-                           Text="12/27/2019 09:31:58AM"
+                           x:Name="dateLabel"
                            TextColor="Gray"
                            FontFamily="{StaticResource PoppinsLight}"
                            FontAttributes="Italic"
                            FontSize="16"
                            VerticalOptions="Start"
                            HorizontalOptions="End"/>
+                </Grid>
             </ContentView>
         </AbsoluteLayout>
     </ContentPage.Content>

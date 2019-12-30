@@ -31,7 +31,19 @@ namespace VYRMobile.Views
         }
         private async void ReportsView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            var sel = (Report)reportsView.SelectedItem;
+            var sel = e.Item as Report;
+
+            /*iconImage.Source = sel.TypeIcon;
+            titleLabel.Text = sel.Title;
+            typeLabel.Text = sel.ReportType.ToString();
+            descriptionLabel.Text = sel.Description;
+            statusLabel.Text = sel.ReportStatus.ToString();
+            colorBoxView.BackgroundColor = sel.StatusColor;
+            dateLabel.Text = sel.Created.ToString();*/
+
+            await Navigation.PushModalAsync(new NavigationPage (new ReportDetailsPage(sel.Title, sel.Description, sel.TypeIcon, sel.ReportType, sel.ReportStatus, sel.Created, sel.StatusColor)));
+            /*ReportViewModel rvm = new ReportViewModel(sel.Title, sel.Description, sel.TypeIcon, sel.ReportType, sel.ReportStatus, sel.Created, sel.StatusColor);
+
             uint duration = 300;
 
             reportDetails.IsVisible = true;
@@ -47,7 +59,7 @@ namespace VYRMobile.Views
               reportDetails.TranslationY + 100, 0,
               Easing.CubicIn, 0, 1);
 
-            reportDetails.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
+            reportDetails.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));*/
 
             
             //await reportDetails.FadeTo(100, 100, Easing.Linear);
@@ -87,7 +99,7 @@ namespace VYRMobile.Views
         }
         private void btnReporte_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new CreateReportPage());
+            Navigation.PushModalAsync(new NavigationPage(new CreateReportPage()));
         }
     }
 }
