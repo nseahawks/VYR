@@ -43,7 +43,12 @@ namespace VYRMobile.Models
             set => SetProperty(ref reportType, value);
         }
 
-        public Color Color { get; set; }
+        private Color statusColor;
+        public Color StatusColor 
+        {
+            get => statusColor;
+            set => SetProperty(ref statusColor, value);
+        } 
 
         public enum ReportTypes
         {
@@ -54,11 +59,11 @@ namespace VYRMobile.Models
             Daño = 4
         }
 
-        ReportStatuses status;
+        ReportStatuses reportStatus;
         public ReportStatuses ReportStatus
         {
-            get => status;
-            set => SetProperty(ref status, value);
+            get => reportStatus;
+            set => SetProperty(ref reportStatus, value);
         }
         public enum ReportStatuses
         {

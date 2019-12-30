@@ -15,12 +15,12 @@ namespace VYRMobile.Views
         public Test()
         {
             InitializeComponent();
-            BindingContext = new CronoViewModel();
+            BindingContext = new PuntoViewModel();
 
-            btn.Clicked += Btn_Clicked;
+            //btn.Clicked += Btn_Clicked;
         }
 
-        private async void Btn_Clicked(object sender, EventArgs e)
+        /*private async void Btn_Clicked(object sender, EventArgs e)
         {
             await btn.FadeTo(0.5, 1000, Easing.SinIn);
             btn.IsEnabled = false;
@@ -35,6 +35,6 @@ namespace VYRMobile.Views
             btn.IsEnabled = true;
             await btn.FadeTo(1, 1000, Easing.SinOut);
 
-        }
+        }*/
     }
 }

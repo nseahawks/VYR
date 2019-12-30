@@ -33,7 +33,16 @@ namespace VYRMobile.ViewModels
             stopWatch.Stop();
         }
 
-
+        private string _stopWatchFinal;
+        public string StopWatchFinal
+        {
+            get { return _stopWatchFinal; }
+            set
+            {
+                _stopWatchFinal = value;
+                OnPropertyChanged("StopWatchFinal");
+            }
+        }
 
         private string _stopWatchHours;
         public string StopWatchHours
@@ -108,6 +117,11 @@ namespace VYRMobile.ViewModels
                 StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString("00");
                 StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString("00");
                 StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString("000");
+
+                /*StopWatchFinal = (StopWatchHours + 
+                                    ":" + StopWatchMinutes + 
+                                    ":" + StopWatchSeconds + 
+                                    "." + StopWatchMilliseconds);*/
 
                 return true;
             });

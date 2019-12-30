@@ -4,6 +4,7 @@ using Plugin.LocalNotifications;
 using Plugin.Messaging;
 using System;
 using System.Threading.Tasks;
+using VYRMobile.Models;
 using VYRMobile.Services;
 using VYRMobile.ViewModels;
 using VYRMobile.Views;
@@ -141,7 +142,6 @@ namespace VYRMobile
         {
             Escaner();
         }
-
         private async void Escaner()
         {
             var scannerPage = new ZXingScannerPage();
@@ -153,10 +153,13 @@ namespace VYRMobile
                 scannerPage.IsScanning = false;
 
 
+                //var ant = antenasView.FindByName<Punto>(result.ToString());
+
                 Device.BeginInvokeOnMainThread(() =>
                 {
                     Navigation.PopModalAsync();
 
+                    //ant.PointChecked = true;
                     DisplayAlert("Valor Obtenido", result.Text, "OK");
                     //seaCheckbox.IsChecked = true;
                 });

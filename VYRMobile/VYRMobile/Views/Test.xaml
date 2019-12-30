@@ -11,30 +11,11 @@
         <Grid Grid.RowSpan="3"
               HorizontalOptions="Center"
               VerticalOptions="Center">
-            <Button     x:Name="btn" 
-                        Grid.Row="0" 
-                        BorderRadius="5"  
-                        Text="Iniciar sesión" 
-                        BackgroundColor="#005EB2" 
-                        TextColor="White" 
-                        FontSize="14"
-                        FontFamily="{StaticResource PoppinsMedium}"
-                        HeightRequest="40"
-                        WidthRequest="300"
-                        VerticalOptions="Start" 
-                        HorizontalOptions="Center"/>
-            <forms:AnimationView 
-	                    Grid.Row="1"
-                        x:Name="animation"
-                        IsVisible="False"
-	                    Animation="loading.json" 
-                        IsEnabled="False"
-	                    Loop="True" 
-	                    AutoPlay="false"
-                        WidthRequest="85"
-                        HeightRequest="40"
-	                    VerticalOptions="Center"
-	                    HorizontalOptions="Center" />
+            <Label Text="{Binding StopWatchFinal}"
+                   FontAttributes="Bold"
+                   FontSize="30"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"/>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

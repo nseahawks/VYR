@@ -12833,6 +12833,12 @@ namespace VYRMobile.Droid
 			// aapt resource value: 0x7F0701C0
 			public const int usuario2 = 2131165632;
 			
+			// aapt resource value: 0x7F0701C1
+			public const int vyrx = 2131165633;
+			
+			// aapt resource value: 0x7F0701C2
+			public const int vyrxall = 2131165634;
+			
 			static Drawable()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();

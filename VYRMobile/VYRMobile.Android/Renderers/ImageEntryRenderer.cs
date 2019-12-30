@@ -30,7 +30,6 @@ namespace VYRMobile.Droid.Renderers
 
             element = (ImageEntry)this.Element;
 
-
             var editText = this.Control;
             if (!string.IsNullOrEmpty(element.Image))
             {
