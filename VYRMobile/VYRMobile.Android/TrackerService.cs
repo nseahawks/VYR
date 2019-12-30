@@ -97,7 +97,6 @@ namespace VYRMobile.Droid
                 try
                 {
                     IDocumentReference reference;
-                    SecureStorage.Remove("device_id");
                     var deviceId = await SecureStorage.GetAsync("device_id");
                     
 
@@ -134,9 +133,6 @@ namespace VYRMobile.Droid
                     reference = CrossCloudFirestore.Current
                     .Instance
                     .GetCollection("devices").GetDocument(await SecureStorage.GetAsync("device_id"));
-
-
-                  
 
                     await CrossCloudFirestore.Current
                         .Instance.RunTransactionAsync((transaction) =>

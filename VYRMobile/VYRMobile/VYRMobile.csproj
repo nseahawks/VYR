@@ -29,7 +29,6 @@
     <PackageReference Include="MvvmLight" Version="5.4.1.1" />
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
-    <PackageReference Include="Plugin.BackgroundService" Version="2.0.41" />
     <PackageReference Include="Plugin.CloudFirestore" Version="2.0.0" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
     <PackageReference Include="SkiaSharp" Version="1.68.0" />
