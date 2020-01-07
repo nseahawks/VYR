@@ -25,7 +25,6 @@ namespace VYRMobile.Data
         }
 
         private static ReportsStore _instance;
-
         public static ReportsStore Instance
         {
             get

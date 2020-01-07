@@ -23,7 +23,6 @@ namespace VYRMobile
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
 
             MainPage = new Login();
-            BindingContext = new PuntoViewModel();
         }
         protected override void OnStart()
         {

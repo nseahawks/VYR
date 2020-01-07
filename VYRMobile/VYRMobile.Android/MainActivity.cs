@@ -9,6 +9,9 @@ using Plugin.LocalNotifications;
 using Firebase.Firestore;
 using Firebase;
 using Java.Util;
+using FFImageLoading.Forms.Platform;
+using Xamarin.Forms;
+using CarouselView.FormsPlugin.Android;
 
 namespace VYRMobile.Droid
 {
@@ -17,12 +20,15 @@ namespace VYRMobile.Droid
     {
         protected override void OnCreate(Bundle savedInstanceState)
         {
+            InitControls();
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             base.OnCreate(savedInstanceState);
-            Xamarin.Forms.Forms.SetFlags("FastRenderers_Experimental");
+            //Forms.SetFlags("FastRenderers_Experimental");
+            Forms.SetFlags("CarouselView_Experimental");
+            Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-
+            
             LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.seahawks;
 
             var platformConfig = new PlatformConfig
@@ -31,6 +37,7 @@ namespace VYRMobile.Droid
             };
 
             FormsMaps.Init(this, savedInstanceState);
+            CachedImageRenderer.Init(true);
 
             Intent intent = new Intent(this, typeof(TrackerService));
             StartService(intent);
@@ -48,6 +55,10 @@ namespace VYRMobile.Droid
             LoadApplication(new App());
         }
 
+        private void InitControls()
+        {
+            CarouselViewRenderer.Init();
+        }
         //public FirebaseFirestore GetFirestore()
         //{
         //    FirebaseFirestore firestore;

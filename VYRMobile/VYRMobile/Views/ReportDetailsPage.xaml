@@ -3,98 +3,158 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.ReportDetailsPage">
+             x:Class="VYRMobile.Views.ReportDetailsPage"
+             Title="Detalles de reporte"
+             NavigationPage.HasBackButton="True"
+             BackgroundColor="White">
     <ContentPage.Content>
-        <Grid Grid.RowSpan="3">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="40"/>
-                <RowDefinition Height="60"/>
-                <RowDefinition Height="30"/>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="50"/>
-                <RowDefinition Height="30"/>
-            </Grid.RowDefinitions>
-            <Button x:Name="closeReport"
+        <Grid>
+            <Grid 
+                Grid.RowSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition 
+                        Height="*"/>
+                </Grid.RowDefinitions>
+                <ScrollView 
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalScrollBarVisibility="Default">
+                    <StackLayout>
+                        <StackLayout 
                             Grid.Row="0"
-                            BackgroundColor="OrangeRed"
-                            ImageSource="quit.png"
-                            HeightRequest="20"
-                            WidthRequest="20"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"
-                            Margin="0, 0, 15, 0"/>
-            <Image  Grid.Row="1"
-                            x:Name="iconImage"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start"
-                            HeightRequest="40"
-                            WidthRequest="40"
-                            Margin="10, 0, 0, 0"/>
-            <Label  Grid.Row="1"
-                            x:Name="titleLabel"
-                            TextColor="{StaticResource BlackColor}"
-                            FontFamily="{StaticResource PoppinsRegular}"
-                            FontSize="18"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start"
-                            Margin="65, 0, 0, 0"/>
-            <StackLayout Orientation="Horizontal"
-                                 Grid.Row="2"
-                                 VerticalOptions="Start"
-                                 HorizontalOptions="Center">
-                <Label Text="Tipo: "
-                               TextColor="DarkGray"
-                               FontFamily="{StaticResource PoppinsRegular}"
-                               FontSize="16"
-                               VerticalOptions="Start"
-                               HorizontalOptions="Center"/>
-                <Label x:Name="typeLabel"
-                               TextColor="{StaticResource BlackColor}"
-                               FontFamily="{StaticResource PoppinsRegular}"
-                               FontSize="16"
-                               VerticalOptions="Start"
-                               HorizontalOptions="Center"/>
-            </StackLayout>
-            <Label Grid.Row="3"
-                           x:Name="descriptionLabel"
-                           LineBreakMode="WordWrap"
-                           LineHeight="1.2"
-                           FontFamily="{StaticResource PoppinsLight}"
-                           TextColor="{StaticResource BlackColor}"
-                           FontSize="18"
-                           Margin="10, 0, 10, 0"
-                           HorizontalOptions="StartAndExpand"/>
-            <StackLayout Grid.Row="4"
-                                 Orientation="Horizontal"
-                                 HorizontalOptions="Center">
-                <Label Text="Estatus: "
-                               TextColor="DarkGray"
-                               FontFamily="{StaticResource PoppinsRegular}"
-                               FontSize="16"
-                               VerticalOptions="Center"
-                               HorizontalOptions="Center"/>
-                <Label x:Name="statusLabel"
-                               TextColor="{StaticResource BlackColor}"
-                               FontFamily="{StaticResource PoppinsRegular}"
-                               FontSize="16"
-                               VerticalOptions="Center"
-                               HorizontalOptions="Center"/>
-                <BoxView x:Name="colorBoxView"
-                             HeightRequest="20"
-                             WidthRequest="20"
-                             CornerRadius="10"
-                             VerticalOptions="Center"
-                             HorizontalOptions="Center"/>
-            </StackLayout>
-            <Label Grid.Row="5"
-                           x:Name="dateLabel"
-                           TextColor="Gray"
-                           FontFamily="{StaticResource PoppinsLight}"
-                           FontAttributes="Italic"
-                           FontSize="16"
-                           VerticalOptions="Start"
-                           HorizontalOptions="End"/>
+                            Margin="20, 20, 20, 0">
+                            <Label 
+                                Text="Antena:"
+                                HeightRequest="20"
+                                FontFamily="{StaticResource PoppinsRegular}"
+                                HorizontalOptions="Start"
+                                FontSize="18"/>
+                            <Label  
+                                x:Name="titleLabel"
+                                HeightRequest="20"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsRegular}"
+                                FontSize="18"
+                                HorizontalOptions="Start"/>
+                            <Label 
+                                Text="Tipo:"
+                                HeightRequest="20"
+                                FontFamily="{StaticResource PoppinsRegular}"
+                                HorizontalOptions="Start"
+                                FontSize="18"/>
+                            <Label 
+                                x:Name="typeLabel"
+                                HeightRequest="20"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsRegular}"
+                                FontSize="18"
+                                HorizontalOptions="Start"/>
+                            <Label 
+                                Text="Fecha:"
+                                HeightRequest="20"
+                                FontFamily="{StaticResource PoppinsRegular}"
+                                HorizontalOptions="Start"
+                                FontSize="18"/>
+                            <Label 
+                                x:Name="dateLabel"
+                                HeightRequest="20"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsRegular}"
+                                FontSize="18"
+                                HorizontalOptions="Start"/>
+                        </StackLayout>
+                        <StackLayout 
+                            Grid.Row="1"
+                            Margin="15, 20, 15, 0"
+                            HeightRequest="200">
+                            <Label
+                                Text="Descripción:"
+                                TextColor="Black"
+                                FontFamily="{StaticResource PoppinsRegular}"
+                                FontSize="18"
+                                HeightRequest="22"/>
+                            <CheckBox
+                                BackgroundColor="Black"
+                                HeightRequest="2"/>
+                            <ScrollView 
+                                Padding="5"
+                                VerticalScrollBarVisibility="Default"
+                                VerticalOptions="FillAndExpand"
+                                HorizontalOptions="FillAndExpand">
+                                <Label 
+                                    x:Name="descriptionLabel"
+                                    LineBreakMode="WordWrap"
+                                    LineHeight="1.2"
+                                    FontFamily="{StaticResource PoppinsLight}"
+                                    TextColor="{StaticResource BlackColor}"
+                                    FontSize="18"
+                                    HorizontalOptions="StartAndExpand"/>
+                            </ScrollView>
+                        </StackLayout>
+                        <StackLayout
+                                Grid.Row="2">
+                            <StackLayout Orientation="Horizontal"
+                                    VerticalOptions="End"
+                                    Margin="20, 30, 0, 0">
+                                <Label Text="Estatus: "
+                                        TextColor="DarkGray"
+                                        FontFamily="{StaticResource PoppinsRegular}"
+                                        FontSize="16"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                                <Label x:Name="statusLabel"
+                                        TextColor="{StaticResource BlackColor}"
+                                        FontFamily="{StaticResource PoppinsRegular}"
+                                        FontSize="16"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                                <BoxView x:Name="colorBoxView"
+                                        HeightRequest="20"
+                                        WidthRequest="20"
+                                        CornerRadius="10"
+                                        VerticalOptions="Center"
+                                        HorizontalOptions="Center"/>
+                            </StackLayout>
+                            <controls:CarouselViewControl 
+                                    ShowArrows="True"
+                                    ShowIndicators="True"
+                                    IndicatorsShape="Circle"
+                                    IndicatorsTintColor="Gray"
+                                    CurrentPageIndicatorTintColor="{StaticResource BaseColor}"
+                                    AnimateTransition="True"
+                                    Position="{Binding CurrentPost, Mode=TwoWay}"
+                                    ItemsSource="{Binding Posts}"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    HeightRequest="200"
+                                    WidthRequest="200"
+                                    BackgroundColor="White">
+                                <controls:CarouselViewControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center">
+                                            <Frame 
+                                                HasShadow="False"
+                                                WidthRequest="150"
+                                                HeightRequest="150"
+                                                IsClippedToBounds="False"
+                                                BackgroundColor="White">
+                                                <Image
+                                                Source="{Binding Source}"/>
+                                            </Frame>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </controls:CarouselViewControl.ItemTemplate>
+                            </controls:CarouselViewControl>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
         </Grid>
     </ContentPage.Content>
 </ContentPage>

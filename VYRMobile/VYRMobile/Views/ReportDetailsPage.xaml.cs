@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using VYRMobile.Models;
+using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -16,7 +17,8 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
 
-            iconImage.Source = TypeIcon;
+            BindingContext = new ReportViewModel();
+
             titleLabel.Text = Title;
             typeLabel.Text = ReportType.ToString();
             descriptionLabel.Text = Description;

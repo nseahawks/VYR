@@ -14,12 +14,10 @@ namespace VYRMobile.Views
         Report report = new Report();
         public CreateReportPage()
         {
-
             InitializeComponent();
             btnAttach.Clicked += BtnAttach_clicked;
             BindingContext = new ReportViewModel();
             //btnEnviar.Clicked += BtnEnviar_Clicked;
-            
         }
 
         private async void BtnAttach_clicked(object sender, EventArgs e)

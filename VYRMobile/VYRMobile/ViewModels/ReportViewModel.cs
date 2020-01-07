@@ -10,69 +10,43 @@ using System.Threading.Tasks;
 using VYRMobile.Views;
 using static Android.Content.ClipData;
 using System.Collections;
+using System.Reflection;
+using System.IO;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace VYRMobile.ViewModels
 {
-    class ReportViewModel : BindableObject
+    public class ReportViewModel : BindableObject
     {
         //Crear Reporte
         public Report CReport { get; set; }
         public Command CreateReportCommand { get; }
-        //Need to be implemented
-        //public Command AttachCommand { get; }
         public Command LoadCommand { get; set; }
         public Command ReportDetailsCommand { get; set; }
 
-        /*private string dTitle;
-        public string DTitle
+
+        private ObservableCollection<Models.Image> _posts;
+        public ObservableCollection<Models.Image> Posts
         {
-            get { return dTitle; }
+            get { return _posts; }
             set
             {
-                dTitle = value;
-                OnPropertyChanged(nameof(DTitle));
+                _posts = value;
+                OnPropertyChanged();
             }
         }
-        private string dDescription;
-        public string DDescription
+
+        private Models.Image _currentPost;
+        public Models.Image CurrentPost
         {
-            get { return dDescription; }
+            get { return _currentPost; }
             set
             {
-                dDescription = value;
-                OnPropertyChanged(nameof(DDescription));
+                _currentPost = value;
+                OnPropertyChanged();
             }
         }
-        private string dTypeIcon;
-        public string DTypeIcon
-        {
-            get { return dTypeIcon; }
-            set
-            {
-                dTypeIcon = value;
-                OnPropertyChanged(nameof(DTypeIcon));
-            }
-        }
-        private Report.ReportTypes dReportType;
-        public Report.ReportTypes DReportType
-        {
-            get { return dReportType; }
-            set
-            {
-                dReportType = value;
-                OnPropertyChanged(nameof(DReportType));
-            }
-        }
-        private Report.ReportStatuses dReportStatus;
-        public Report.ReportStatuses DReportStatus
-        {
-            get { return dReportStatus; }
-            set
-            {
-                dReportStatus = value;
-                OnPropertyChanged(nameof(DReportStatus));
-            }
-        }*/
         public string Title
         {
             get => CReport.Title;
@@ -93,10 +67,10 @@ namespace VYRMobile.ViewModels
                 if (CReport.Description == value)
                     return;
                 CReport.Description = value;
-                //password = value;
                 OnPropertyChanged(nameof(Description));
             }
         }
+
         public Report.ReportTypes ReportType
         {
             get => CReport.ReportType;
@@ -120,28 +94,6 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(Status));
             }
         }
-
-        /*private DateTime dCreated;
-        public DateTime DCreated
-        {
-            get { return dCreated; }
-            set
-            {
-                dCreated = value;
-                OnPropertyChanged(nameof(DCreated));
-            }
-        }
-
-        private Color dStatusColor;
-        public Color DStatusColor
-        {
-            get { return dStatusColor; }
-            set
-            {
-                dStatusColor = value;
-                OnPropertyChanged(nameof(DStatusColor));
-            }
-        }*/
 
         bool isSuccess;
         public bool IsSuccess
@@ -175,8 +127,8 @@ namespace VYRMobile.ViewModels
      
         public bool isBusy = false;
 
-       private ObservableCollection<string> _typeCollection;
-       public ObservableCollection<string> TypeCollection
+        private ObservableCollection<string> _typeCollection;
+        public ObservableCollection<string> TypeCollection
         {
             get 
             { 
@@ -200,11 +152,6 @@ namespace VYRMobile.ViewModels
                 _statusCollection = value;
             }
         }
-        private async Task CreateReport()
-        {
-            IsSuccess = await _store.AddReportAsync(CReport);
-            await LoadData2();
-        }
 
         //Lista de Reportes
         private ObservableCollection<Models.Report> _reports;
@@ -218,32 +165,19 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        /*private ObservableCollection<Models.Report> _reportsList;
-        public ObservableCollection<Models.Report> ReportsList
+        private ObservableCollection<Models.Image> imageInfo;
+        public ObservableCollection<Models.Image> ImageInfo
         {
-            get { return _reportsList; }
-            set
-            {
-                _reportsList = value;
-                OnPropertyChanged();
-            }
-        }*/
-
-        /*public ReportViewModel(string Title, string Description, string TypeIcon, Report.ReportTypes ReportType, Report.ReportStatuses ReportStatus, DateTime Created, Color StatusColor)
-        {
-            dTitle = Title;
-            dDescription = Description;
-            dTypeIcon = TypeIcon;
-            dReportType = ReportType;
-            dReportStatus = ReportStatus;
-            dCreated = Created;
-            dStatusColor = StatusColor;
-        }*/
+            get { return imageInfo; }
+            set { imageInfo = value; }
+        }
 
         public ReportViewModel()
         {
+            ImageInfo = new ObservableCollection<Models.Image>();
             Reports = new ObservableCollection<Models.Report>();
 
+            LoadPosts();
             LoadData();
 
             CReport = new Report();
@@ -251,11 +185,16 @@ namespace VYRMobile.ViewModels
             CreateReportCommand = new Command(async () => await CreateReport());
             LoadCommand = new Command(async () => await LoadData2());
             ReportDetailsCommand = new Command(async () => await LoadData2());
-            //AttachCommand = new Command(Attach);
             _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
             _statusCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportStatuses)));
         }
 
+        private async Task CreateReport()
+        {
+            IsSuccess = await _store.AddReportAsync(CReport);
+            await LoadData2();
+            await App.Current.MainPage.Navigation.PopAsync();
+        }
         private async void LoadData()
         {
             var reports = await ReportsStore.Instance.GetReportsAsync();
@@ -304,7 +243,6 @@ namespace VYRMobile.ViewModels
             }
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
         }
-
         private async Task LoadData2()
         {
             if (IsBusy)
@@ -341,22 +279,12 @@ namespace VYRMobile.ViewModels
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
         }
-        /*private void Types()
+
+        private void LoadPosts()
         {
-            foreach (string reportType in Enum.GetNames(typeof(Report.ReportTypes)))
-            {
-                ReportTypes.Add(reportType);
-            }
-        }*/
-
-
-        /*private void ItemSelected(string parameter)
-        {
-            var reports = ReportService.Instance.GetReports();
-
-            Reports.Clear();
-
-
-        }*/
+            var posts = MockImageService.Instance.GetCommunityPosts();
+            Posts = new ObservableCollection<Models.Image>(posts);
+            CurrentPost = Posts[0];
+        }
     }
 }

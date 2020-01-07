@@ -4,18 +4,54 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
-             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
+             xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.Test">
+             x:Class="VYRMobile.Views.Test"
+             BackgroundColor="White">
+    <!--<ContentPage.Resources>
+        <ResourceDictionary>
+            <DataTemplate x:Key="PostItemTemplate">
+                <Image      Source="seahawks.jpg"
+                            Aspect="AspectFill"/>
+                </DataTemplate>
+        </ResourceDictionary>
+    </ContentPage.Resources>-->
+    
     <ContentPage.Content>
-        <Grid Grid.RowSpan="3"
-              HorizontalOptions="Center"
-              VerticalOptions="Center">
-            <Label Text="{Binding StopWatchFinal}"
-                   FontAttributes="Bold"
-                   FontSize="30"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"/>
-        </Grid>
+        <StackLayout>
+            <controls:CarouselViewControl 
+                ShowArrows="True"
+                ShowIndicators="True"
+                IndicatorsShape="Circle"
+                IndicatorsTintColor="Gray"
+                CurrentPageIndicatorTintColor="{StaticResource BaseColor}"
+                AnimateTransition="True"
+                Position="{Binding CurrentPost, Mode=TwoWay}"
+                ItemsSource="{Binding Posts}"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                HeightRequest="200"
+                WidthRequest="200"
+                BackgroundColor="White">
+                <controls:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout
+                            VerticalOptions="Center"
+                            HorizontalOptions="Center">
+                            <Frame 
+                                WidthRequest="150"
+                                HeightRequest="150"
+                                IsClippedToBounds="False"
+                                BackgroundColor="White">
+                                <Image
+                                    Source="{Binding Source}"/>
+                            </Frame>
+                        </StackLayout>
+                    </DataTemplate>
+                </controls:CarouselViewControl.ItemTemplate>
+            </controls:CarouselViewControl>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>
