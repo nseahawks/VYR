@@ -36,7 +36,6 @@ namespace VYRMobile
             this.BackgroundColor = Color.FromHex("#FFFFFF");
             this.Content = sub;
            
-           
         }
         protected override async void OnAppearing() 
         {

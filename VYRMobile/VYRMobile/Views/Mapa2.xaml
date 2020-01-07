@@ -85,16 +85,16 @@
                         Margin="0, 0, 0, 10"
                         HorizontalOptions="Center"/>
         <Button         x:Name="stopRoute"
-                         Command="{Binding StopRouteCommand}"
-                         Text="STOP ROUTE"
-                         IsVisible="{Binding HasRouteRunning}"
-                         BackgroundColor="#AE220E"
-                         TextColor="White"
-                         HeightRequest="50"
-                         WidthRequest="200"
-                         VerticalOptions="End"
-                         CornerRadius="2"
-                         Margin="0, 0, 0, 10"
-                         HorizontalOptions="Center"/>
+                        Command="{Binding StopRouteCommand}"
+                        Text="STOP ROUTE"
+                        IsVisible="{Binding HasRouteRunning}"
+                        BackgroundColor="#AE220E"
+                        TextColor="White"
+                        HeightRequest="50"
+                        WidthRequest="200"
+                        VerticalOptions="End"
+                        CornerRadius="2"
+                        Margin="0, 0, 0, 10"
+                        HorizontalOptions="Center"/>
     </Grid>
 </ContentPage>

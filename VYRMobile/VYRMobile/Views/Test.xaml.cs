@@ -15,7 +15,7 @@ namespace VYRMobile.Views
         public Test()
         {
             InitializeComponent();
-            BindingContext = new PuntoViewModel();
+            BindingContext = new TestViewModel();
 
             //btn.Clicked += Btn_Clicked;
         }

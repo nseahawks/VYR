@@ -120,7 +120,7 @@ namespace VYRMobile.Views
             }
         }
 
-        private void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
+        private async void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
             var ind = comboBox.SelectedIndex;
             var pin = map.Pins.ElementAt<Pin>(ind);
@@ -128,10 +128,13 @@ namespace VYRMobile.Views
             DestinationLocationlat = pin.Position.Latitude.ToString();
             DestinationLocationlng = pin.Position.Longitude.ToString();
 
-            map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition
+            await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition
                 (new Position(pin.Position.Latitude, pin.Position.Longitude),12d,0,0)));
             startRoute.IsEnabled = true;
 
+            Location prueba = new Location();
+            prueba = await Geolocation.GetLocationAsync();
+            var velocidad = prueba.Speed;
         }
         private void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
         {
