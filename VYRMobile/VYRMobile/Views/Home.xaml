@@ -36,7 +36,7 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                 <Setter Property="TitleFontSize" Value="{StaticResource FontSize16}" />
             </Style>
             <Style x:Key="TitleStyle" TargetType="Label">
-                <Setter Property="Text" Value="Chrono:" />
+                <Setter Property="Text" Value="Chrono" />
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
                 <Setter Property="FontSize" Value="{StaticResource FontSize24}" />
                 <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
@@ -45,6 +45,10 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                 <Setter Property="Text" Value="Tareas pendientes:" />
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsBold}" />
                 <Setter Property="FontSize" Value="18" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="MonoStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource MonoDroid}" />
                 <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
             </Style>
             <Style x:Key="FrameStyle" TargetType="Frame">
@@ -74,31 +78,26 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
             <Frame Style="{StaticResource FrameStyle}"
                    Grid.Row="0">
                 <Grid Grid.RowSpan="1">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="310"/>
-                    </Grid.ColumnDefinitions>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="28"/>
                         <RowDefinition Height="55"/>
                     </Grid.RowDefinitions>
                     <Label  Grid.Row="0"
-                            Grid.Column="0"
                             VerticalOptions="Start"
-                            HorizontalOptions="Center"
+                            HorizontalOptions="CenterAndExpand"
                             Style="{StaticResource TitleStyle}"/>
                     <Grid Grid.ColumnSpan="3"
                           Grid.Row="1"
                           HorizontalOptions="Center">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="61"/>
-                            <ColumnDefinition Width="7"/>
-                            <ColumnDefinition Width="61"/>
-                            <ColumnDefinition Width="7"/>
-                            <ColumnDefinition Width="61"/>
-                            <ColumnDefinition Width="7"/>
-                            <ColumnDefinition Width="58"/>
-                        </Grid.ColumnDefinitions>
-                        <Label  FontSize="65"
+                        <Label  FontSize="40"
+                                Grid.Column="0"
+                                FontAttributes="Bold"
+                                VerticalOptions="End"
+                                HorizontalOptions="StartAndExpand"
+                                Style="{StaticResource MonoStyle}"
+                                Text="{Binding StopWatchFinal}"/>
+
+                        <!--<Label  FontSize="65"
                                 Grid.Column="0"
                                 FontAttributes="Bold"
                                 VerticalOptions="End"
@@ -145,7 +144,7 @@ xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPic
                                 VerticalOptions="End"
                                 HorizontalOptions="Start"
                                 Style="{StaticResource CronoStyle}"
-                                Text="{Binding StopWatchMilliseconds}"/>
+                                Text="{Binding StopWatchMilliseconds}"/>-->
                     </Grid>
                 </Grid>
             </Frame>

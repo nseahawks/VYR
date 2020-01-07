@@ -85,14 +85,7 @@ namespace VYRMobile.ViewModels
         
         public CronoViewModel()
         {
-            
-
-            
             stopWatch.Start();
-            /*StopWatchHours = stopWatch.Elapsed.Hours.ToString();
-            StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString();
-            StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString();
-            StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString();*/
 
             Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
             {
@@ -100,7 +93,7 @@ namespace VYRMobile.ViewModels
                 StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString("00");
                 StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString("00");
                 StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString("000");
-
+                
                 return true;
             });
             //StopStopwatch();

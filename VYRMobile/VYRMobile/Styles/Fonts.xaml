@@ -28,6 +28,10 @@
                 iOS="Poppins-Bold"
                 Android="Poppins-Bold.ttf#Poppins"/>
 
+    <OnPlatform x:Key="MonoDroid"
+                x:TypeArguments="x:String"
+                Android="DroidSansMono.ttf#DroidSansMono"/>
+
     <OnPlatform x:Key="PoppinsLight"
                 x:TypeArguments="x:String"
                 iOS="Poppins-Light"

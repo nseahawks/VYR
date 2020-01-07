@@ -278,8 +278,8 @@ namespace VYRMobile.Views
 
             try
             {
-                var request = new GeolocationRequest(GeolocationAccuracy.High);
-                var location = await Geolocation.GetLocationAsync(request);
+                //var request = new GeolocationRequest(GeolocationAccuracy.Best);
+                var location = await Geolocation.GetLocationAsync();
                 Position position = new Position(location.Latitude, location.Longitude );
 
                 if (location != null)
@@ -337,16 +337,16 @@ namespace VYRMobile.Views
                 //OriginLocationlng = list[k].Longitude.ToString();
 
 
-                var pin = new Pin()
-                {
-                    Type = PinType.Place,
-                    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
-                    Label = "First",
-                    Address = "First",
-                    Tag = string.Empty
+                //var pin = new Pin()
+                //{
+                //    Type = PinType.Place,
+                //    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
+                //    Label = "First",
+                //    Address = "First",
+                //    Tag = string.Empty
 
-                };
-                map.Pins.Add(pin);
+                //};
+                //map.Pins.Add(pin);
                 RouteDistance = 99999999999999999;
                 var RouteIndex = -1;
                 var minIntersection = new Location(0,0); 
@@ -485,16 +485,16 @@ namespace VYRMobile.Views
 
             //};
             //map.Pins.Add(pin);
-            var pin1 = new Pin
-            {
-                Type = PinType.Place,
-                Position = new Position(polyline.Positions.Last().Latitude, polyline.Positions.Last().Longitude),
-                Label = "Last",
-                Address = "Last",
-                Tag = string.Empty,
+            //var pin1 = new Pin
+            //{
+            //    Type = PinType.Place,
+            //    Position = new Position(polyline.Positions.Last().Latitude, polyline.Positions.Last().Longitude),
+            //    Label = "Last",
+            //    Address = "Last",
+            //    Tag = string.Empty,
                 
-            };
-            map.Pins.Add(pin1);
+            //};
+            //map.Pins.Add(pin1);
         }
 
         void AddMapStyle()

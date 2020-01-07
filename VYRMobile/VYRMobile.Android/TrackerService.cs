@@ -19,7 +19,7 @@ namespace VYRMobile.Droid
 
         public bool IsConnected { get; set; }
 
-        public async override void OnCreate()
+        public override void OnCreate()
         {
             device = DeviceInfo.Name;
             
@@ -113,7 +113,7 @@ namespace VYRMobile.Droid
                     {
                         //var id = new Guid().ToString();
                         //await CrossCloudFirestore.Current.Instance.GetCollection("devices")
-                        //                                            .AddDocumentAsync(location);
+                        //                                        .AddDocumentAsync(location);
                         //.CreateDocument().SetDataAsync(location);
 
                         var id = CrossCloudFirestore.Current.Instance

@@ -175,7 +175,6 @@ namespace VYRMobile.ViewModels
 
         public async Task LoadRoute()
         {
-            var positionIndex = 1;
             ActualLocationCommand.Execute(null);
             var googleDirection = await googleMapsApi.GetDirections(
                _originLatitud, _originLongitud,
@@ -320,11 +319,11 @@ namespace VYRMobile.ViewModels
                 else
                     Accelerometer.Start(speed);
             }
-            catch (FeatureNotSupportedException fnsEx)
+            catch (FeatureNotSupportedException )
             {
                 // Feature not supported on device
             }
-            catch (Exception ex)
+            catch (Exception )
             {
                 // Other error has occurred.
             }

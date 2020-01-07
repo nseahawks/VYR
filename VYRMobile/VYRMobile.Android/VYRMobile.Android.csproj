@@ -187,6 +187,7 @@
     <AndroidAsset Include="Assets\loading.json" />
     <AndroidAsset Include="Assets\loading2.json" />
     <AndroidAsset Include="Assets\check.json" />
+    <AndroidAsset Include="Assets\DroidSansMono.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
