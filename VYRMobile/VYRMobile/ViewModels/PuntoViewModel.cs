@@ -13,17 +13,19 @@ using GalaSoft.MvvmLight;
 using GalaSoft.MvvmLight.Command;
 using System.Threading.Tasks;
 using VYRMobile.Views;
+using VYRMobile.Models;
 
 namespace VYRMobile.ViewModels
 {
     public class PuntoViewModel : INotifyPropertyChanged
     {
-
+        Punto p = new Punto();
         public Stopwatch stopWatch = new Stopwatch();
         private Timer time = new Timer();
 
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; }
+        public ICommand CheckAntenna { get; }
         public void StartStopwatch()
         {
             stopWatch.Restart();
@@ -31,6 +33,17 @@ namespace VYRMobile.ViewModels
         public void StopStopwatch()
         {
             stopWatch.Stop();
+        }
+
+        private string antenna;
+        public string Antenna
+        {
+            get { return antenna; }
+            set
+            {
+                antenna = value;
+                OnPropertyChanged("Antenna");
+            }
         }
 
         private string _stopWatchFinal;
@@ -128,7 +141,7 @@ namespace VYRMobile.ViewModels
 
             StopCommand = new Command(StopStopwatch);
             StartCommand = new Command(Alert);
-
+            CheckAntenna = new Command(CheckingAntenna);
         }
 
         private async void Alert() 
@@ -147,7 +160,7 @@ namespace VYRMobile.ViewModels
             set
             {
                 _puntos = value;
-                //OnPropertyChanged();
+                OnPropertyChanged("Puntos");
             }
         }
         public ObservableCollection<Models.Tarea> Tareas
@@ -157,6 +170,23 @@ namespace VYRMobile.ViewModels
             {
                 _tareas = value;
                 //OnPropertyChanged();
+            }
+        }
+        private async void CheckingAntenna()
+        {
+            var puntos = await PuntoService.Instance.GetPuntos();
+
+            foreach (var punto in puntos)
+            {
+                string pointId = punto.PointId.ToString();
+                Puntos.Clear();
+
+                if (pointId == Antenna)
+                {
+                    punto.PointChecked = true;
+                }
+
+                Puntos.Add(punto);
             }
         }
         private async void LoadData()
@@ -177,6 +207,5 @@ namespace VYRMobile.ViewModels
                 Tareas.Add(tarea);
             }
         }
-        
     }
 }

@@ -71,8 +71,6 @@ namespace VYRMobile.Controls
                 NumberOfTapsRequired = 1
             });
         }
-
-
         private void HandleCloseClicked()
         {
             Close.GestureRecognizers.Add(new TapGestureRecognizer
@@ -90,6 +88,7 @@ namespace VYRMobile.Controls
         {
             if (!_isAnimating)
             {
+
 
                 _isAnimating = true;
 

@@ -7,7 +7,6 @@
              x:Class="VYRMobile.Controls.CallMenu">
   <ContentView.Content>
         <Grid>
-            
             <Image
                 x:Name="Outer" 
                 WidthRequest="60"
@@ -15,7 +14,6 @@
                 VerticalOptions="Center"
                 HorizontalOptions="Center"
                 Source="outer"/>
-            
             <Image       
                 x:Name="Call"
                 Source="closeplano.png" 
@@ -23,7 +21,6 @@
                 HorizontalOptions="Center" 
                 WidthRequest="60" 
                 HeightRequest="60"/>
-            
             <Image     
                 x:Name="Close"
                 Source="close_circle.png"  
@@ -31,7 +28,6 @@
                 HorizontalOptions="Center" 
                 WidthRequest="60" 
                 HeightRequest="60"/>
-            
             <Image
                 x:Name="Seahawks" 
                 Opacity="0"
@@ -42,7 +38,6 @@
                 HeightRequest="40" 
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
-           
             <Image
                 x:Name="Claro"
                 Opacity="0" 
@@ -53,7 +48,6 @@
                 HeightRequest="40"
                 VerticalOptions="Fill"
                 HorizontalOptions="Fill" />
-            
             <Image
                 x:Name="Emergencias" 
                 Opacity="0"
@@ -64,7 +58,6 @@
                 HeightRequest="40" 
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
-            
         </Grid>
     </ContentView.Content>
 </ContentView>
