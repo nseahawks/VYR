@@ -5,8 +5,8 @@ using Android.App;
 using Android.Content;
 using Android.OS;
 using Plugin.CloudFirestore;
-using Plugin.CloudFirestore.Extensions;
 using Xamarin.Essentials;
+using Plugin.DeviceInfo;
 
 namespace VYRMobile.Droid
 {
@@ -15,15 +15,10 @@ namespace VYRMobile.Droid
     {
         CancellationTokenSource _cts;
 
-        string device;
-
         public bool IsConnected { get; set; }
 
         public override void OnCreate()
         {
-            device = DeviceInfo.Name;
-            
-
 
             //var document = CrossCloudFirestore.Current.Instance
             //     .GetCollection("devices");
@@ -98,7 +93,7 @@ namespace VYRMobile.Droid
                 {
                     IDocumentReference reference;
                     var deviceId = await SecureStorage.GetAsync("device_id");
-                    
+                    string appId;
 
                     var request = new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMilliseconds(1000));
                     var location = await Geolocation.GetLocationAsync(request);
@@ -108,6 +103,7 @@ namespace VYRMobile.Droid
                         location = await Geolocation.GetLastKnownLocationAsync();
                     }
 
+                    string test = CrossDeviceInfo.Current.Id;
 
                     if (deviceId == null)
                     {
@@ -115,16 +111,24 @@ namespace VYRMobile.Droid
                         //await CrossCloudFirestore.Current.Instance.GetCollection("devices")
                         //                                        .AddDocumentAsync(location);
                         //.CreateDocument().SetDataAsync(location);
-
+                        if (CrossDeviceInfo.IsSupported)
+                        {
+                            appId = CrossDeviceInfo.Current.GenerateAppId(true, "VYR","X");
+                        }
+                        else
+                        {
+                            appId = "";
+                        }
+                       
                         var id = CrossCloudFirestore.Current.Instance
                                           .GetCollection("devices")
-                                          .CreateDocument().Id;
+                                          .GetDocument(appId).Id;
                                         //.SetDataAsync(location);
                         
                         await CrossCloudFirestore.Current.Instance
                                           .GetCollection("devices")
-                                          .GetDocument(id)
-                                        .SetDataAsync(location);
+                                          .GetDocument(appId)
+                                          .SetDataAsync(location);
 
                         await SecureStorage.SetAsync("device_id", id);
 

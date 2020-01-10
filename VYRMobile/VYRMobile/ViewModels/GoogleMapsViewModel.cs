@@ -88,43 +88,43 @@ namespace VYRMobile.ViewModels
         public ObservableCollection<GooglePlaceAutoCompletePrediction> RecentPlaces { get; set; } = new ObservableCollection<GooglePlaceAutoCompletePrediction>();
 
         public bool ShowRecentPlaces { get; set; }
-        bool _isPickupFocused = true;
+        //bool _isPickupFocused = true;
 
-        string _pickupText;
-        public string PickupText
-        {
-            get
-            {
-                return _pickupText;
-            }
-            set
-            {
-                _pickupText = value;
-                if (!string.IsNullOrEmpty(_pickupText))
-                {
-                    _isPickupFocused = true;
-                    GetPlacesCommand.Execute(_pickupText);
-                }
-            }
-        }
+        //string _pickupText;
+        //public string PickupText
+        //{
+        //    get
+        //    {
+        //        return _pickupText;
+        //    }
+        //    set
+        //    {
+        //        _pickupText = value;
+        //        if (!string.IsNullOrEmpty(_pickupText))
+        //        {
+        //            _isPickupFocused = true;
+        //            GetPlacesCommand.Execute(_pickupText);
+        //        }
+        //    }
+        //}
 
-        string _originText;
-        public string OriginText
-        {
-            get
-            {
-                return _originText;
-            }
-            set
-            {
-                _originText = value;
-                if (!string.IsNullOrEmpty(_originText))
-                {
-                    _isPickupFocused = true;
-                    GetPlacesCommand.Execute(_originText);
-                }
-            }
-        }
+        //string _originText;
+        //public string OriginText
+        //{
+        //    get
+        //    {
+        //        return _originText;
+        //    }
+        //    set
+        //    {
+        //        _originText = value;
+        //        if (!string.IsNullOrEmpty(_originText))
+        //        {
+        //            _isPickupFocused = true;
+        //            GetPlacesCommand.Execute(_originText);
+        //        }
+        //    }
+        //}
         
 
         public Command GetLocationNameCommand { get; set; }
@@ -156,7 +156,7 @@ namespace VYRMobile.ViewModels
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
             //GetPlaceDetailCommand = new Command<GooglePlaceAutoCompletePrediction>(async (param) => await GetPlacesDetail(param));
-            GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
+            //GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
 
             LoadAntennas();
         }
@@ -269,35 +269,35 @@ namespace VYRMobile.ViewModels
         //    }
         //}
 
-        void CleanFields()
-        {
-            PickupText = OriginText = string.Empty;
-            ShowRecentPlaces = true;
-            PlaceSelected = null;
-        }
+        //void CleanFields()
+        //{
+        //    PickupText = OriginText = string.Empty;
+        //    ShowRecentPlaces = true;
+        //    PlaceSelected = null;
+        //}
 
 
         //Get place 
-        public async Task GetLocationName(Position position)
-        {
-            try
-            {
-                var placemarks = await Geocoding.GetPlacemarksAsync(position.Latitude, position.Longitude);
-                var placemark = placemarks?.FirstOrDefault();
-                if (placemark != null)
-                {
-                    PickupText = placemark.FeatureName;
-                }
-                else
-                {
-                    PickupText = string.Empty;
-                }
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.ToString());
-            }
-        }
+        //public async Task GetLocationName(Position position)
+        //{
+        //    try
+        //    {
+        //        var placemarks = await Geocoding.GetPlacemarksAsync(position.Latitude, position.Longitude);
+        //        var placemark = placemarks?.FirstOrDefault();
+        //        if (placemark != null)
+        //        {
+        //            PickupText = placemark.FeatureName;
+        //        }
+        //        else
+        //        {
+        //            PickupText = string.Empty;
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        Debug.WriteLine(ex.ToString());
+        //    }
+        //}
 
         void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
         {
