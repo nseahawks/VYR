@@ -8,9 +8,7 @@
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              x:Class="VYRMobile.Views.SignalR">
-    <ContentPage.BindingContext>
-        <viewmodel:TrackViewModel/>
-    </ContentPage.BindingContext>
+    
     <StackLayout Padding="10">
         <Entry Text="{Binding TrackMessage.User}"/>
         <Entry Text="{Binding TrackMessage.Message}"/>

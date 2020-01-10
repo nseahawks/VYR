@@ -131,10 +131,27 @@ namespace VYRMobile.ViewModels
                 StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString("00");
                 StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString("000");
 
-                /*StopWatchFinal = (StopWatchHours + 
-                                    ":" + StopWatchMinutes + 
-                                    ":" + StopWatchSeconds + 
-                                    "." + StopWatchMilliseconds);*/
+                if(StopWatchHours == "00" && StopWatchMinutes == "00")
+                {
+                    StopWatchFinal = (StopWatchSeconds +
+                                   "." + StopWatchMilliseconds);
+                }else if (StopWatchHours == "00")
+                {
+                    StopWatchFinal = (StopWatchMinutes +
+                                  ":" + StopWatchSeconds +
+                                  "." + StopWatchMilliseconds);
+                }
+                else
+                {
+                    StopWatchFinal = (StopWatchHours +
+                                   ":" + StopWatchMinutes +
+                                   ":" + StopWatchSeconds +
+                                   "." + StopWatchMilliseconds);
+                }
+
+               
+
+
 
                 return true;
             });

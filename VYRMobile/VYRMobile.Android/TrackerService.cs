@@ -4,41 +4,28 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Microsoft.AspNetCore.SignalR.Client;
 using Plugin.CloudFirestore;
-using Plugin.CloudFirestore.Extensions;
-using VYRMobile.Services;
 using Xamarin.Essentials;
-using Xamarin.Forms;
+using Plugin.DeviceInfo;
 
 namespace VYRMobile.Droid
 {
     [Service]
     class TrackerService : Service
     {
-        SensorSpeed speed = SensorSpeed.Default;
         CancellationTokenSource _cts;
-        private AccelerometerData data;
-        string device;
-        private bool isConnected;
-        public bool IsConnected
-        {
-            get => isConnected;
-            set => isConnected = value;
-        }
 
-        public async override void OnCreate()
+        public bool IsConnected { get; set; }
+
+        public override void OnCreate()
         {
-            device = DeviceInfo.Name;
-            ToggleAccelerometer();
-            Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
 
             //var document = CrossCloudFirestore.Current.Instance
             //     .GetCollection("devices");
                  //.GetDocument("myDevice");
                  //.AsObservable().Subscribe(document =>
                  //{
-
+                 
                  //});
 
             //CrossCloudFirestore.Current.Instance
@@ -104,8 +91,11 @@ namespace VYRMobile.Droid
             {
                 try
                 {
+                    IDocumentReference reference;
+                    var deviceId = await SecureStorage.GetAsync("device_id");
+                    string appId;
 
-                    var request = new GeolocationRequest(GeolocationAccuracy.High, TimeSpan.FromMilliseconds(1000));
+                    var request = new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMilliseconds(1000));
                     var location = await Geolocation.GetLocationAsync(request);
 
                     if (location == null)
@@ -113,10 +103,40 @@ namespace VYRMobile.Droid
                         location = await Geolocation.GetLastKnownLocationAsync();
                     }
 
-                    var reference = CrossCloudFirestore.Current
-                        .Instance
-                        .GetCollection("devices")
-                        .GetDocument("myDevice");
+                    string test = CrossDeviceInfo.Current.Id;
+
+                    if (deviceId == null)
+                    {
+                        //var id = new Guid().ToString();
+                        //await CrossCloudFirestore.Current.Instance.GetCollection("devices")
+                        //                                        .AddDocumentAsync(location);
+                        //.CreateDocument().SetDataAsync(location);
+                        if (CrossDeviceInfo.IsSupported)
+                        {
+                            appId = CrossDeviceInfo.Current.GenerateAppId(true, "VYR","X");
+                        }
+                        else
+                        {
+                            appId = "";
+                        }
+                       
+                        var id = CrossCloudFirestore.Current.Instance
+                                          .GetCollection("devices")
+                                          .GetDocument(appId).Id;
+                                        //.SetDataAsync(location);
+                        
+                        await CrossCloudFirestore.Current.Instance
+                                          .GetCollection("devices")
+                                          .GetDocument(appId)
+                                          .SetDataAsync(location);
+
+                        await SecureStorage.SetAsync("device_id", id);
+
+                    }
+               
+                    reference = CrossCloudFirestore.Current
+                    .Instance
+                    .GetCollection("devices").GetDocument(await SecureStorage.GetAsync("device_id"));
 
                     await CrossCloudFirestore.Current
                         .Instance.RunTransactionAsync((transaction) =>
@@ -135,30 +155,6 @@ namespace VYRMobile.Droid
             }
         }
 
-        void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
-        {
-            data = e.Reading;
-
-            // Process Acceleration X, Y, and Z
-        }
-
-        public void ToggleAccelerometer()
-        {
-            try
-            {
-                if (Accelerometer.IsMonitoring)
-                    Accelerometer.Stop();
-                else
-                    Accelerometer.Start(speed);
-            }
-            catch (FeatureNotSupportedException fnsEx)
-            {
-                // Feature not supported on device
-            }
-            catch (Exception ex)
-            {
-                // Other error has occurred.
-            }
-        }
+   
     }
 }

@@ -6,9 +6,6 @@ using Xamarin;
 using Xamarin.Forms.GoogleMaps.Android;
 using Android.Content;
 using Plugin.LocalNotifications;
-using Firebase.Firestore;
-using Firebase;
-using Java.Util;
 using FFImageLoading.Forms.Platform;
 using Xamarin.Forms;
 using CarouselView.FormsPlugin.Android;
@@ -46,11 +43,6 @@ namespace VYRMobile.Droid
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
-            //firestore = GetFirestore();
-            //HashMap map = new HashMap();
-            //map.Put("ALert", "Test");
-            //DocumentReference documentReference = firestore.Collection("Alerts").Document();
-            //documentReference.Set(map);
 
             LoadApplication(new App());
         }
@@ -59,23 +51,7 @@ namespace VYRMobile.Droid
         {
             CarouselViewRenderer.Init();
         }
-        //public FirebaseFirestore GetFirestore()
-        //{
-        //    FirebaseFirestore firestore;
 
-        //    var opts = new FirebaseOptions.Builder()
-        //        .SetProjectId("vyrproyect-1571249849268")
-        //        .SetApplicationId("vyrproyect-1571249849268")
-        //        .SetApiKey("AIzaSyBwmHFGKgLdbe07Th0KGLYAOuOQcHVdNf0")
-        //        .SetDatabaseUrl("https://vyrproyect-1571249849268.firebaseio.com")
-        //        .SetStorageBucket("vyrproyect-1571249849268.appspot.com")
-        //        .Build();
-
-        //    var app = FirebaseApp.InitializeApp(this, opts);
-        //    firestore = FirebaseFirestore.GetInstance(app);
-
-        //    return firestore;
-        //}
 
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
