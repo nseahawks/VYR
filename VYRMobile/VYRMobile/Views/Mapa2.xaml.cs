@@ -82,11 +82,13 @@ namespace VYRMobile.Views
                 Tag = "id_seahawks",
             };
             map.Pins.Add(seahawksPin);
+
+            
             
             Compass.ReadingChanged += Compass_ReadingChanged;
             OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
             map.PinClicked += Map_PinClicked;
-
+            
             //map.PinClicked += (object s, SelectedPinChangedEventArgs e) =>
             //{
             //    string pinName = s.;

@@ -186,9 +186,9 @@ namespace VYRMobile.ViewModels
                 CalculateRouteCommand.Execute(positions);
 
                 HasRouteRunning = true;
-
+                           
                 //Location tracking simulation
-                Device.StartTimer(TimeSpan.FromSeconds(15), () =>
+                Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                 {
                     if (HasRouteRunning)
                     {
