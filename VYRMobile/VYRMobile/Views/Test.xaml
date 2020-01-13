@@ -10,24 +10,15 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Test"
              BackgroundColor="White">
-    <!--<ContentPage.Resources>
-        <ResourceDictionary>
-            <DataTemplate x:Key="PostItemTemplate">
-                <Image      Source="seahawks.jpg"
-                            Aspect="AspectFill"/>
-                </DataTemplate>
-        </ResourceDictionary>
-    </ContentPage.Resources>-->
     
     <ContentPage.Content>
         <StackLayout>
-            <controls:CallMenu 
-                        SelectedCommand="{Binding ItemSelectedCommand}"
-                        HorizontalOptions="Center" 
-                        VerticalOptions="Center"
-                        HeightRequest="60"
-                        WidthRequest="60"
-                        Margin="0,0,8,8"/>
+            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                <Image x:Name="imgBanner"/>
+                <Image x:Name="imgChoosed" HeightRequest="200"/>
+                <Button x:Name="btnPick" Text="Pick" Clicked="btnPick_Clicked"/>
+                <Button x:Name="btnStore" Text="Store" Clicked="btnStore_Clicked"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

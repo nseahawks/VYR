@@ -8,16 +8,6 @@ namespace VYRMobile.Models
 {
     public class Punto : ObservableObject
     {
-        /*public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
-        {
-            var changed = PropertyChanged;
-            if (changed != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
-        }*/
-
         string pointId;
         public string PointId
         {
@@ -25,7 +15,6 @@ namespace VYRMobile.Models
             set 
             {
                 SetProperty(ref pointId, value);
-                //PropertyChanged(this, new PropertyChangedEventArgs("PointId"));
             }
         }
 
@@ -44,8 +33,6 @@ namespace VYRMobile.Models
             {
                 pointChecked = value;
                 OnPropertyChanged("PointChecked");
-                /*PropertyChanged(this, new PropertyChangedEventArgs("PointChecked"));
-                OnPropertyChanged("PointChecked");*/
             }
         }
     }

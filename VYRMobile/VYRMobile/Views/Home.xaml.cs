@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 using System.Threading.Tasks;
+using System.Windows.Input;
 using VYRMobile.Models;
 using VYRMobile.Services;
 using VYRMobile.ViewModels;
@@ -22,13 +23,16 @@ namespace VYRMobile
            BindableProperty.Create(nameof(ShowMapCommand), typeof(Command), typeof(Home), null, BindingMode.TwoWay);
 
         PuntoViewModel pvm = new PuntoViewModel();
-        
+        public ICommand LoadCommand { get; }
+
         public Home()
         {
             InitializeComponent();
             //BindingContext = new CronoViewModel();
             //BindingContext = new TareaViewModel();
             BindingContext = new PuntoViewModel();
+            LoadCommand = new Command(LoadView);
+            //antenasView.RefreshCommand = LoadCommand;
 
             //AlertMain();
             //btnStart.Clicked += BtnStart_Clicked;
@@ -125,10 +129,7 @@ namespace VYRMobile
                 string antenna = result.ToString();
                 pvm.Antenna = antenna;
                 pvm.CheckAntenna.Execute(null);
-                antenasView.RefreshCommand = new Command(() =>
-                {
-                    LoadView();
-                });
+                //LoadCommand.Execute(null);
 
                 Device.BeginInvokeOnMainThread(async() =>
                 {

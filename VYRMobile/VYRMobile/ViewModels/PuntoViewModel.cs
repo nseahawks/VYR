@@ -149,10 +149,6 @@ namespace VYRMobile.ViewModels
                                    "." + StopWatchMilliseconds);
                 }
 
-               
-
-
-
                 return true;
             });
 
@@ -191,19 +187,16 @@ namespace VYRMobile.ViewModels
         }
         private async void CheckingAntenna()
         {
-            var puntos = await PuntoService.Instance.GetPuntos();
+            var puntos = Puntos;
 
             foreach (var punto in puntos)
             {
                 string pointId = punto.PointId.ToString();
-                Puntos.Clear();
 
                 if (pointId == Antenna)
                 {
                     punto.PointChecked = true;
                 }
-
-                Puntos.Add(punto);
             }
         }
         private async void LoadData()
