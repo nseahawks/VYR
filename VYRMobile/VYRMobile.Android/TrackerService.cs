@@ -19,14 +19,13 @@ namespace VYRMobile.Droid
 
         public override void OnCreate()
         {
-
             //var document = CrossCloudFirestore.Current.Instance
             //     .GetCollection("devices");
-                 //.GetDocument("myDevice");
-                 //.AsObservable().Subscribe(document =>
-                 //{
-                 
-                 //});
+            //.GetDocument("myDevice");
+            //.AsObservable().Subscribe(document =>
+            //{
+
+            //});
 
             //CrossCloudFirestore.Current.Instance
             //    .GetCollection("devices")
@@ -37,7 +36,7 @@ namespace VYRMobile.Droid
             //        var message = $"{documents.Data["Latitude"].ToString()}, {documents.Data["Longitude"].ToString()}";
             //        //DependencyService.Get<IToast>().ShortToast(message);
             //    });
-            
+
             //document.ObserveAdded()
             //    .Subscribe(documentChange =>
             //    {
@@ -87,13 +86,14 @@ namespace VYRMobile.Droid
 
         private async void PollLocation(CancellationTokenSource cts)
         {
+           
+
             while (!cts.IsCancellationRequested)
             {
                 try
                 {
                     IDocumentReference reference;
                     var deviceId = await SecureStorage.GetAsync("device_id");
-                    string appId;
 
                     var request = new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMilliseconds(1000));
                     var location = await Geolocation.GetLocationAsync(request);
@@ -103,36 +103,53 @@ namespace VYRMobile.Droid
                         location = await Geolocation.GetLastKnownLocationAsync();
                     }
 
-                    string test = CrossDeviceInfo.Current.Id;
-
-                    if (deviceId == null)
+                    if (CrossDeviceInfo.IsSupported)
                     {
-                        //var id = new Guid().ToString();
-                        //await CrossCloudFirestore.Current.Instance.GetCollection("devices")
-                        //                                        .AddDocumentAsync(location);
-                        //.CreateDocument().SetDataAsync(location);
-                        if (CrossDeviceInfo.IsSupported)
-                        {
-                            appId = CrossDeviceInfo.Current.GenerateAppId(true, "VYR","X");
-                        }
-                        else
-                        {
-                            appId = "";
-                        }
-                       
+                        string _appId = CrossDeviceInfo.Current.Id;
                         var id = CrossCloudFirestore.Current.Instance
-                                          .GetCollection("devices")
-                                          .GetDocument(appId).Id;
-                                        //.SetDataAsync(location);
-                        
+                                         .GetCollection("devices")
+                                         .GetDocument(_appId).Id;
+                                         
+                        //.SetDataAsync(location);
+
                         await CrossCloudFirestore.Current.Instance
                                           .GetCollection("devices")
-                                          .GetDocument(appId)
+                                          .GetDocument(_appId).GetCollection("test").GetDocument("tesssst")
                                           .SetDataAsync(location);
 
-                        await SecureStorage.SetAsync("device_id", id);
-
+                        await SecureStorage.SetAsync("device_id", _appId);
                     }
+                    else
+                    {
+                        string _appId = new Guid().ToString();
+                        var id = CrossCloudFirestore.Current.Instance
+                                         .GetCollection("devices")
+                                         .GetDocument(_appId).Id;
+                        //.SetDataAsync(location);
+
+                        await CrossCloudFirestore.Current.Instance
+                                          .GetCollection("devices")
+                                          .GetDocument(_appId)
+                                          .SetDataAsync(location);
+
+                        await SecureStorage.SetAsync("device_id", _appId);
+                    }
+
+                    //if (deviceId == null)
+                    //{
+                    //    //var id = new Guid().ToString();
+                    //    //await CrossCloudFirestore.Current.Instance.GetCollection("devices")
+                    //    //                                        .AddDocumentAsync(location);
+                    //    //.CreateDocument().SetDataAsync(location);
+                    //    if (CrossDeviceInfo.IsSupported)
+                    //    {
+                    //        appId = CrossDeviceInfo.Current.GenerateAppId(true, "VYR","X");
+                    //    }
+                    //    else
+                    //    {
+                    //        appId = "";
+                    //    }
+                    //}
                
                     reference = CrossCloudFirestore.Current
                     .Instance
