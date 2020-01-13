@@ -3,6 +3,9 @@ using Plugin.CloudFirestore.Extensions;
 using Plugin.LocalNotifications;
 using Plugin.Messaging;
 using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using VYRMobile.Models;
 using VYRMobile.Services;
@@ -18,7 +21,8 @@ namespace VYRMobile
         public static readonly BindableProperty ShowMapCommandProperty =
            BindableProperty.Create(nameof(ShowMapCommand), typeof(Command), typeof(Home), null, BindingMode.TwoWay);
 
-
+        PuntoViewModel pvm = new PuntoViewModel();
+        
         public Home()
         {
             InitializeComponent();
@@ -26,16 +30,17 @@ namespace VYRMobile
             //BindingContext = new TareaViewModel();
             BindingContext = new PuntoViewModel();
 
-            var ants = antenasView.ItemTemplate.Values.Count;
             //AlertMain();
             //btnStart.Clicked += BtnStart_Clicked;
             //btnStop.Clicked += BtnStop_Clicked;
             /*BindingContext = new CallViewModel();
             BindingContext = new QRViewModel();*/
+
             QR.Clicked += QR_Clicked;
             ShowMapCommand = new Command(ShowMap);
-            CallFrancisco.Clicked += CallFrancisco_clicked;
+            //CallFrancisco.Clicked += CallFrancisco_clicked;
             //alert.Clicked += alert_clicked;  
+
         }
 
         //private void BtnStop_Clicked(object sender, EventArgs e)
@@ -63,57 +68,22 @@ namespace VYRMobile
 
         protected override void OnAppearing()
         {
-
-            
-
-            //var document = CrossCloudFirestore.Current.Instance
-            //   .GetCollection("alarms");
-
-
-            //CrossCloudFirestore.Current.Instance.GetCollection("alarms")
-            //               .GetDocument("myDevice")
-            //               .AddSnapshotListener((snapshot, error) =>
-            //               {
-            //                   var document = snapshot.Data.Keys;
-            //                   CallFrancisco.Command.Execute(null);
-            //                   //DisplayAlert("Alerta", $"{document}", "ACEPTAR");
-            //               });
-            //document.ObserveModified()
-            //.Subscribe(documentChange =>
-            //{
-            //    CallFrancisco.Command.Execute(null);
-            //    //CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
-            //});
-            //var i = 0;
-            //document.ObserveAdded()
-            //    .Subscribe(documentChange =>
-            //    {
-            //        if(i != 0)
-            //        {
-            //            //CallFrancisco.Command.Execute(null);
-            //            //var documentX = documentChange;
-            //            //CallFrancisco.Command.Execute(null);
-            //            DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
-            //            //DependencyService.Get<IToast>().ShortToast("Observed");
-            //        }
-            //        else
-            //        {
-            //            i++;
-            //        }
-
-
-            //    });
-
             base.OnAppearing();
-
+            antenasView.ItemsSource = null;
+            antenasView.ItemsSource = pvm.Puntos;
         }
 
+        public void LoadView()
+        {
+            antenasView.ItemsSource = null;
+            antenasView.ItemsSource = pvm.Puntos;
+        }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-
         }
+
         /*protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -152,30 +122,33 @@ namespace VYRMobile
             {
                 scannerPage.IsScanning = false;
 
-
-                //var ant = antenasView.FindByName<Punto>(result.ToString());
-
-                Device.BeginInvokeOnMainThread(() =>
+                string antenna = result.ToString();
+                pvm.Antenna = antenna;
+                pvm.CheckAntenna.Execute(null);
+                antenasView.RefreshCommand = new Command(() =>
                 {
-                    Navigation.PopModalAsync();
+                    LoadView();
+                });
 
-                    //ant.PointChecked = true;
-                    DisplayAlert("Valor Obtenido", result.Text, "OK");
-                    //seaCheckbox.IsChecked = true;
+                Device.BeginInvokeOnMainThread(async() =>
+                {
+                    await Navigation.PopModalAsync();
+
+                    await DisplayAlert("Valor Obtenido", result.Text, "OK");
                 });
             };
             
             await Navigation.PushModalAsync(scannerPage);
         }
 
-        private void CallFrancisco_clicked(object sender, EventArgs e)
+        /*private void CallFrancisco_clicked(object sender, EventArgs e)
         {
             CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
             /*var phoneCallTask = CrossMessaging.Current.PhoneDialer;
             if (phoneCallTask.CanMakePhoneCall)
             {
                 phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
-            }*/
-        }
+            }
+        }*/
     }
 }

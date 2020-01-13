@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
-             xmlns:controls="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
              xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              mc:Ignorable="d"
@@ -21,37 +21,13 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <controls:CarouselViewControl 
-                ShowArrows="True"
-                ShowIndicators="True"
-                IndicatorsShape="Circle"
-                IndicatorsTintColor="Gray"
-                CurrentPageIndicatorTintColor="{StaticResource BaseColor}"
-                AnimateTransition="True"
-                Position="{Binding CurrentPost, Mode=TwoWay}"
-                ItemsSource="{Binding Posts}"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                HeightRequest="200"
-                WidthRequest="200"
-                BackgroundColor="White">
-                <controls:CarouselViewControl.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout
-                            VerticalOptions="Center"
-                            HorizontalOptions="Center">
-                            <Frame 
-                                WidthRequest="150"
-                                HeightRequest="150"
-                                IsClippedToBounds="False"
-                                BackgroundColor="White">
-                                <Image
-                                    Source="{Binding Source}"/>
-                            </Frame>
-                        </StackLayout>
-                    </DataTemplate>
-                </controls:CarouselViewControl.ItemTemplate>
-            </controls:CarouselViewControl>
+            <controls:CallMenu 
+                        SelectedCommand="{Binding ItemSelectedCommand}"
+                        HorizontalOptions="Center" 
+                        VerticalOptions="Center"
+                        HeightRequest="60"
+                        WidthRequest="60"
+                        Margin="0,0,8,8"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

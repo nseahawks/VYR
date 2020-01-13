@@ -56,7 +56,7 @@
                     Style="{StaticResource NameTextStyle}"
                     Margin="0,0,0,0"/>
             <CheckBox  Grid.Column="2"
-                       IsChecked="{Binding PointChecked}"
+                       IsChecked="{Binding PointChecked, Mode=TwoWay}"
                        Style="{StaticResource CheckBoxStyle}"/>
         </Grid>
     </ContentView.Content>

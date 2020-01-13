@@ -31,8 +31,12 @@
                             HorizontalOptions="Center"/>
                 </StackLayout>
             </Frame>
-            <Frame HeightRequest="165">
-                <ListView 
+            <Frame HeightRequest="165"
+                   IsClippedToBounds="True">
+                <StackLayout>
+                    
+                </StackLayout>
+                <!--<ListView 
                     ItemsSource="{Binding Options}"
                     SelectionMode="None"
                     HasUnevenRows="True"
@@ -43,7 +47,7 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <!--<StackLayout>
+                <StackLayout>
                     <Button x:Name="Config"
                     BackgroundColor="White"
                     ImageSource="config.png"
