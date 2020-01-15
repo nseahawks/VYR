@@ -1,12 +1,24 @@
-﻿using System;
+﻿using MvvmHelpers;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
 
 namespace VYRMobile.Models
 {
-    public class Image
+    public class Image : ObservableObject
     {
-        public int Ind { get; set; }
-        public string Source { get; set; }
+        private int ind;
+        public int Ind 
+        {
+            get => ind;
+            set => SetProperty(ref ind, value);
+        }
+        private string source;
+        public string Source 
+        { 
+            get => source;
+            set => SetProperty(ref source, value);
+        }
     }
 }

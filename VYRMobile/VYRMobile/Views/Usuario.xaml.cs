@@ -11,30 +11,35 @@ namespace VYRMobile.Views
 {
     public partial class Usuario : ContentPage
     {
+        public Command ConfigCommand { get; set; }
+        public Command EquipoCommand { get; set; }
+        public Command ObjetivosCommand { get; set; }
+        public Command FormacionCommand { get; set; }
         public Usuario()
         {
             InitializeComponent();
 
-            /*Logout.Clicked += Logout_clicked;
-            Estadisticas.Clicked += Estadisticas_clicked;
-            Equipamiento.Clicked += Equipamiento_clicked;*/
-
-            BindingContext = new OptionViewModel();
+            ConfigCommand = new Command(async () => await PushConfiguracion());
+            EquipoCommand = new Command(async () => await PushEquipamiento());
+            ObjetivosCommand = new Command(async () => await PushEstadisticas());
+            FormacionCommand = new Command(async () => await PushFormacion());
         }
 
-        private void Equipamiento_clicked(object sender, EventArgs e)
+        private async Task PushConfiguracion()
         {
-            Navigation.PushAsync(new Utensilios());
+            await Navigation.PushAsync(new ConfiguracionPage());
         }
-
-        private void Estadisticas_clicked(object sender, EventArgs e)
+        private async Task PushEquipamiento()
         {
-            Navigation.PushAsync(new StatisticsPage());
+            await Navigation.PushAsync(new Utensilios());
         }
-
-        private void Logout_clicked(object sender, EventArgs e)
+        private async Task PushEstadisticas()
         {
-            Navigation.PushAsync(new Login());
+            await Navigation.PushAsync(new Estadisticas());
+        }
+        private async Task PushFormacion()
+        {
+            await Navigation.PushAsync(new Elearning());
         }
     }
 }

@@ -120,6 +120,7 @@
                                         HorizontalOptions="Center"/>
                             </StackLayout>
                             <controls:CarouselViewControl 
+                                    x:Name="carousel"
                                     ShowArrows="True"
                                     ShowIndicators="True"
                                     IndicatorsShape="Circle"
@@ -127,14 +128,13 @@
                                     CurrentPageIndicatorTintColor="{StaticResource BaseColor}"
                                     AnimateTransition="True"
                                     Position="{Binding CurrentPost, Mode=TwoWay}"
-                                    ItemsSource="{Binding Posts}"
                                     HorizontalOptions="Center"
                                     VerticalOptions="Center"
                                     HeightRequest="200"
                                     WidthRequest="200"
                                     BackgroundColor="White">
                                 <controls:CarouselViewControl.ItemTemplate>
-                                    <DataTemplate>
+                                    <DataTemplate x:Name="Data">
                                         <StackLayout
                                             VerticalOptions="Center"
                                             HorizontalOptions="Center">
@@ -144,8 +144,8 @@
                                                 HeightRequest="150"
                                                 IsClippedToBounds="False"
                                                 BackgroundColor="White">
-                                                <Image
-                                                Source="{Binding Source}"/>
+                                                <Image x:Name="reportImage"
+                                                       Source="{Binding Source}"/>
                                             </Frame>
                                         </StackLayout>
                                     </DataTemplate>

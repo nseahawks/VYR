@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Elearning"
+             Title="Formacion"
+             NavigationPage.HasBackButton="False">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="outer.png"/>
+        <ToolbarItem IconImageSource="close.png"
+                     x:Name="btnEnviar"
+                     Command="{Binding CreateReportCommand}"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <StackLayout>
+            <ProgressBar
+                x:Name="progress"
+                Progress="0.2"
+                HorizontalOptions="FillAndExpand"
+                IsVisible="False"/>
+            <WebView
+                x:Name="webView"
+                Source="https://platzi.com/"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Navigated="OnNavigated"
+                Navigating="OnNavigating"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

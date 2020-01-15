@@ -9,18 +9,22 @@ using VYRMobile.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using VYRMobile.Services;
+using VYRMobile.Views;
 using System.Reflection;
 using System.IO;
+using VYRMobile.ViewModels;
 
 namespace VYRMobile.Data
 {
-    class ReportsStore : IReportsStore<Report>
+    public class ReportsStore : IReportsStore<Report>
     {
         private HttpClient _client;
+        FirebaseHelper _firebase = new FirebaseHelper();
+        public string ImageName;
+        public Stream ImageStream;
         public ReportsStore()
         {
             _client = new ApiHelper();
-            
         }
 
         private static ReportsStore _instance;
@@ -34,12 +38,20 @@ namespace VYRMobile.Data
                 return _instance;
             }
         }
-
         bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         public async Task<bool> AddReportAsync(Report report)
         {
             if (report == null || !IsConnected)
                 return false;
+
+            ImageStream = App.ImageStream;
+            ImageName = App.ImageName;
+
+            if (ImageStream != null & ImageName != null)
+            {
+                await _firebase.Upload(ImageStream, ImageName);
+                report.Img = await _firebase.GetFile(ImageName);
+            }
 
             var responseReport = new Report()
             {
@@ -48,7 +60,8 @@ namespace VYRMobile.Data
                 Created = DateTime.UtcNow,
                 Description = report.Description,
                 Address = "",
-                ReportStatus = report.ReportStatus
+                ReportStatus = report.ReportStatus,
+                Img = report.Img
             };
 
             string serializedData = JsonConvert.SerializeObject(responseReport);
@@ -72,7 +85,6 @@ namespace VYRMobile.Data
         {
             if (App.IsUserLoggedIn && IsConnected)
             {
-                
                 var response = await _client.GetAsync("/api/v1/reports");
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
                 List<Report> reports = JsonConvert.DeserializeObject<List<Report>>(jsonReports);

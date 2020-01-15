@@ -125,7 +125,7 @@
                         VerticalOptions="Start"
                         Grid.Row="0"
                         Margin="6, 0, 8, 0"/>
-                <Image x:Name="Image1"
+                <Image  x:Name="Image1"
                         HeightRequest="100"
                         WidthRequest="60"
                         HorizontalOptions="Start"

@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
+using VYRMobile.Helper;
 
 namespace VYRMobile.Views
 {
@@ -16,7 +17,7 @@ namespace VYRMobile.Views
     public partial class Test : ContentPage
     {
         MediaFile file;
-        FirebaseStorage firebaseStorage = new FirebaseStorage("gs://vyr-x-aec24.appspot.com");
+        FirebaseHelper _firebase = new FirebaseHelper();
         public Test()
         {
             InitializeComponent();
@@ -41,7 +42,6 @@ namespace VYRMobile.Views
                     var imageStram = file.GetStream();
                     return imageStram;
                 });
-                await StoreImages(file.GetStream());
             }
             catch (Exception ex)
             {
@@ -51,17 +51,27 @@ namespace VYRMobile.Views
 
         private async void btnStore_Clicked(object sender, EventArgs e)
         {
-            await StoreImages(file.GetStream());
+            await _firebase.Upload(file.GetStream(), Path.GetFileName(file.Path));
         }
 
-        public async Task<string> StoreImages(Stream imageStream)
+        /*private async void btnDownload_Clicked(object sender, EventArgs e)
         {
-            var storageImage = await firebaseStorage
+            string path = await _firebase.GetFile();
+            if (path != null)
+            {
+                lblPath.Text = path;
+                await DisplayAlert("Success", path, "OK");
+                imgChoosed.Source = path;
+            }
+
+        }*/
+        /*public async Task<string> StoreImages(Stream imageStream, string imageName)
+        {
+            var imageUrl = await firebaseStorage
                 .Child("ReportImages")
-                .Child("image.jpg")
+                .Child(imageName)
                 .PutAsync(imageStream);
-            string imgurl = storageImage;
-            return imgurl;
-        }
+            return imageUrl;
+        }*/
     }
 }

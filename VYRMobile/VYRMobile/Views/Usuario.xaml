@@ -8,10 +8,29 @@
              x:Class="VYRMobile.Views.Usuario"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              Title="Perfil"
-             NavigationPage.HasBackButton="False">
+             NavigationPage.HasBackButton="False"
+             x:Name="Perfil">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="outer.png"/>
     </ContentPage.ToolbarItems>
+    <ContentPage.BindingContext>
+        <x:Reference Name="Perfil"/>
+    </ContentPage.BindingContext>
+    <ContentPage.Resources>
+        <Style x:Key="NameTextStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            <Setter Property="VerticalOptions" Value="Center" />
+        </Style>
+        <Style x:Key="PhotoStyle" TargetType="Image">
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="HeightRequest" Value="15" />
+            <Setter Property="WidthRequest" Value="15" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="Margin" Value="16, 0, 0, 0" />
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout HeightRequest="150">
             <Frame  HeightRequest="190">
@@ -33,10 +52,130 @@
             </Frame>
             <Frame HeightRequest="165"
                    IsClippedToBounds="True">
-                <StackLayout>
-                    
-                </StackLayout>
-                <!--<ListView 
+            <Grid
+                ColumnSpacing="0"
+                RowSpacing="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5.5*" />
+                    <RowDefinition Height="4.5*" />
+                </Grid.RowDefinitions>
+                    <Grid   
+                    ColumnSpacing="0"
+                    RowSpacing="1"
+                    Grid.Row="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="270" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Image  
+                        Source="configuracion.png"
+                        Grid.Column="0"
+                        Style="{StaticResource PhotoStyle}"
+                        Margin="5,0,0,0"/>
+                    <Label  
+                        Grid.Column="1"
+                        TextColor="{StaticResource BlackColor}"
+                        Text="CONFIGURACION"
+                        Style="{StaticResource NameTextStyle}"
+                        Margin="0,0,0,0"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding ConfigCommand}"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <Grid   
+                    ColumnSpacing="0"
+                    RowSpacing="1"
+                    Grid.Row="1">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="270" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Image  
+                        Source="equipo.png"
+                        Grid.Column="0"
+                        Style="{StaticResource PhotoStyle}"
+                        Margin="5,0,0,0"/>
+                    <Label  
+                        Grid.Column="1"
+                        TextColor="{StaticResource BlackColor}"
+                        Text="EQUIPAMIENTO"
+                        Style="{StaticResource NameTextStyle}"
+                        Margin="0,0,0,0"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding EquipoCommand}"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <Grid   
+                    ColumnSpacing="0"
+                    RowSpacing="1"
+                    Grid.Row="2">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="270" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Image  
+                        Source="estadisticas.png"
+                        Grid.Column="0"
+                        Style="{StaticResource PhotoStyle}"
+                        Margin="5,0,0,0"/>
+                    <Label  
+                        Grid.Column="1"
+                        TextColor="{StaticResource BlackColor}"
+                        Text="OBJETIVOS"
+                        Style="{StaticResource NameTextStyle}"
+                        Margin="0,0,0,0"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding ObjetivosCommand}"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+                <Grid   
+                    ColumnSpacing="0"
+                    RowSpacing="1"
+                    Grid.Row="3">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="50" />
+                        <ColumnDefinition Width="270" />
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="45" />
+                    </Grid.RowDefinitions>
+                    <Image  
+                        Source="formacion.png"
+                        Grid.Column="0"
+                        Style="{StaticResource PhotoStyle}"
+                        Margin="5,0,0,0"/>
+                    <Label  
+                        Grid.Column="1"
+                        TextColor="{StaticResource BlackColor}"
+                        Text="FORMACION"
+                        Style="{StaticResource NameTextStyle}"
+                        Margin="0,0,0,0"/>
+                    <Grid.GestureRecognizers>
+                        <TapGestureRecognizer
+                            Command="{Binding FormacionCommand}"/>
+                    </Grid.GestureRecognizers>
+                </Grid>
+            </Grid>
+            </Frame>
+            <!--
+                ListView 
+                    x:Name="optionsList"
                     ItemsSource="{Binding Options}"
                     SelectionMode="None"
                     HasUnevenRows="True"
@@ -84,8 +223,8 @@
                     FontSize="Medium"
                     FontAttributes="Bold"
                     HeightRequest="40"
-                    HorizontalOptions="Fill"/>-->
-            </Frame>
+                    HorizontalOptions="Fill"/>
+            </Frame>-->
         </StackLayout>
 
     </ContentPage.Content>

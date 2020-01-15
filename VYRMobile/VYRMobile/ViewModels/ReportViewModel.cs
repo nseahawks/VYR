@@ -20,10 +20,13 @@ namespace VYRMobile.ViewModels
     public class ReportViewModel : BindableObject
     {
         //Crear Reporte
+        public bool isBusy = false;
+        private ReportsStore _store { get; set; }
         public Report CReport { get; set; }
         public Command CreateReportCommand { get; }
         public Command LoadCommand { get; set; }
         public Command ReportDetailsCommand { get; set; }
+        public Command ImageCommand { get; set; }
 
 
         private ObservableCollection<Models.Image> _posts;
@@ -58,7 +61,6 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(Title));
             }
         }
-
         public string Description
         {
             get => CReport.Description;
@@ -83,7 +85,7 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        public Report.ReportStatuses Status
+        public Report.ReportStatuses ReportStatus
         {
             get => CReport.ReportStatus;
             set
@@ -91,7 +93,7 @@ namespace VYRMobile.ViewModels
                 if (CReport.ReportStatus == value)
                     return;
                 CReport.ReportStatus = value;
-                OnPropertyChanged(nameof(Status));
+                OnPropertyChanged(nameof(ReportStatus));
             }
         }
 
@@ -122,10 +124,26 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(IsBusy));
             }
         }
-        private ReportsStore _store { get; }
-
-     
-        public bool isBusy = false;
+        private string name;
+        public string ImageName
+        {
+            get { return name; }
+            set
+            {
+                name = value;
+                OnPropertyChanged(nameof(ImageName));
+            }
+        }
+        private Stream stream;
+        public Stream ImageStream
+        {
+            get { return stream; }
+            set
+            {
+                stream = value;
+                OnPropertyChanged(nameof(ImageStream));
+            }
+        }
 
         private ObservableCollection<string> _typeCollection;
         public ObservableCollection<string> TypeCollection
@@ -177,7 +195,7 @@ namespace VYRMobile.ViewModels
             ImageInfo = new ObservableCollection<Models.Image>();
             Reports = new ObservableCollection<Models.Report>();
 
-            LoadPosts();
+            //LoadPosts();
             LoadData();
 
             CReport = new Report();
@@ -185,6 +203,7 @@ namespace VYRMobile.ViewModels
             CreateReportCommand = new Command(async () => await CreateReport());
             LoadCommand = new Command(async () => await LoadData2());
             ReportDetailsCommand = new Command(async () => await LoadData2());
+            ImageCommand = new Command(async () => await SetImage());
             _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
             _statusCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportStatuses)));
         }
@@ -279,12 +298,17 @@ namespace VYRMobile.ViewModels
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
         }
-
-        private void LoadPosts()
+        private async Task SetImage()
+        {
+            await Task.Delay(0);
+            _store.ImageName = ImageName;
+            _store.ImageStream = ImageStream;
+        }
+        /*private void LoadPosts()
         {
             var posts = MockImageService.Instance.GetCommunityPosts();
             Posts = new ObservableCollection<Models.Image>(posts);
             CurrentPost = Posts[0];
-        }
+        }*/
     }
 }

@@ -9,7 +9,7 @@ namespace VYRMobile.ViewModels
     class CreateReportViewModel : BaseViewModel
     {
         Report CReport { get; set; }
-        public Command CreateReportCommand { get; }
+        //public Command CreateReportCommand { get; }
         //Need to be implemented
         //public Command AttachCommand { get; }
 

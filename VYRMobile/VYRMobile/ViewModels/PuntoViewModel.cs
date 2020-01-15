@@ -19,21 +19,12 @@ namespace VYRMobile.ViewModels
 {
     public class PuntoViewModel : INotifyPropertyChanged
     {
-        Punto p = new Punto();
         public Stopwatch stopWatch = new Stopwatch();
-        private Timer time = new Timer();
 
+        public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; }
         public ICommand CheckAntenna { get; }
-        public void StartStopwatch()
-        {
-            stopWatch.Restart();
-        }
-        public void StopStopwatch()
-        {
-            stopWatch.Stop();
-        }
 
         private string antenna;
         public string Antenna
@@ -77,6 +68,7 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged("StopWatchMinutes");
             }
         }
+
         private string _stopWatchSeconds;
         public string StopWatchSeconds
         {
@@ -99,20 +91,28 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        public Command MapCommand { get; set; }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
+        private ObservableCollection<Models.Punto> _puntos;
+        public ObservableCollection<Models.Punto> Puntos
         {
-            var changed = PropertyChanged;
-            if (changed != null)
+            get { return _puntos; }
+            set
             {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+                _puntos = value;
+                OnPropertyChanged("Puntos");
             }
         }
-        private ObservableCollection<Models.Punto> _puntos;
 
         private ObservableCollection<Models.Tarea> _tareas;
+        public ObservableCollection<Models.Tarea> Tareas
+        {
+            get { return _tareas; }
+            set
+            {
+                _tareas = value;
+                OnPropertyChanged("Tareas");
+            }
+        }
 
         public PuntoViewModel()
         {
@@ -157,34 +157,31 @@ namespace VYRMobile.ViewModels
             CheckAntenna = new Command(CheckingAntenna);
         }
 
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            var changed = PropertyChanged;
+            if (changed != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
         private async void Alert() 
         {
             await App.Current.MainPage.DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             StartStopwatch();
             //MapCommand.Execute(null);
         }
-        /*private void showMap()
+        public void StartStopwatch()
         {
-            App.INavigation.PushAsync(new Mapa2());
-        }*/
-        public ObservableCollection<Models.Punto> Puntos
-        {
-            get { return _puntos; }
-            set
-            {
-                _puntos = value;
-                OnPropertyChanged("Puntos");
-            }
+            stopWatch.Restart();
         }
-        public ObservableCollection<Models.Tarea> Tareas
+        public void StopStopwatch()
         {
-            get { return _tareas; }
-            set
-            {
-                _tareas = value;
-                //OnPropertyChanged();
-            }
+            stopWatch.Stop();
         }
+
         private async void CheckingAntenna()
         {
             var puntos = Puntos;

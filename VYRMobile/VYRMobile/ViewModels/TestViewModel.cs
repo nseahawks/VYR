@@ -16,7 +16,7 @@ namespace VYRMobile.ViewModels
         
         public TestViewModel()
         {
-            LoadPosts();
+            //LoadPosts();
         }
         public ObservableCollection<Models.Image> Posts
         {
@@ -48,12 +48,12 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        private void LoadPosts()
+        /*private void LoadPosts()
         {
             var posts = MockImageService.Instance.GetCommunityPosts();
             Posts = new ObservableCollection<Models.Image>(posts);
             CurrentPost = Posts[0];
             ImgTotal = posts.Count.ToString();
-        }
+        }*/
     }
 }

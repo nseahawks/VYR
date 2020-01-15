@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "564525356483",
+    "firebase_url": "https://vyr-xfirebase.firebaseio.com",
+    "project_id": "vyr-xfirebase",
+    "storage_bucket": "vyr-xfirebase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:564525356483:android:78e5da7a81ab129ca99976",
+        "android_client_info": {
+          "package_name": "com.labs369.vyrx"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "564525356483-if5dt597bq4kch5dalejpc8otnsjvn5c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBt0glYCVxbzn6qmvj4dQNC0dXcwB2Qy7w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "564525356483-if5dt597bq4kch5dalejpc8otnsjvn5c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

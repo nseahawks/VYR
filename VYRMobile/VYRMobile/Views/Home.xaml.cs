@@ -129,7 +129,6 @@ namespace VYRMobile
                 string antenna = result.ToString();
                 pvm.Antenna = antenna;
                 pvm.CheckAntenna.Execute(null);
-                //LoadCommand.Execute(null);
 
                 Device.BeginInvokeOnMainThread(async() =>
                 {

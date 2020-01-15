@@ -9,20 +9,22 @@ using Plugin.CloudFirestore;
 using Plugin.LocalNotifications;
 using Xamarin.Essentials;
 using VYRMobile.ViewModels;
+using System.IO;
 
 namespace VYRMobile
 {
     public partial class App : Application
     {
         internal static bool IsUserLoggedIn;
-
+        internal static string ImageName;
+        internal static Stream ImageStream;
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTc2MjEzQDMxMzcyZTMzMmUzMFJEalRFSVZKM0g4OC9KWisvYjQxL0FMdmV3RUdzUWZlSEFwSUdCdVMwTVk9");
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
 
-            MainPage = new Test();
+            MainPage = new Login();
         }
         protected override void OnStart()
         {
