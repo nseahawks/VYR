@@ -5,26 +5,65 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.StatisticsPage">
+             x:Class="VYRMobile.Views.StatisticsPage"
+             BackgroundColor="White"
+             Title="Estadisticas">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="ANDAMO RULETA EN UNA CAMIONETA"/>
+            <Label 
+                Text="Mediciones:"
+                FontFamily="{StaticResource PoppinsBold}"
+                TextColor="{StaticResource BlackColor}"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Margin="0, 15, 0, 0"/>
             <chart:SfChart>
+
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis/>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis/>
+                </chart:SfChart.SecondaryAxis>
+
+                <chart:BarSeries 
+                    Color="{StaticResource BaseColor}"
+                    CornerRadius="6"
+                    DataMarkerPosition="Top"
+                    Width="0.5"
+                    ItemsSource="{Binding Data}" 
+                    XBindingPath="Month" 
+                    YBindingPath="Target"/>
+
+            </chart:SfChart>
+            <Label 
+                Text="Gráfica:"
+                FontFamily="{StaticResource PoppinsBold}"
+                TextColor="{StaticResource BlackColor}"
+                FontSize="18"
+                HorizontalOptions="Center"
+                Margin="0, 15, 0, 0"/>
+            <chart:SfChart>
+                <chart:SfChart.PrimaryAxis>
+                    <chart:CategoryAxis/>
+                </chart:SfChart.PrimaryAxis>
+
+                <chart:SfChart.SecondaryAxis>
+                    <chart:NumericalAxis/>
+                </chart:SfChart.SecondaryAxis>
                 <chart:RadarSeries x:Name="RadarChart"
                                    SelectedDataPointColor="Purple"
                                    ColorModel="{StaticResource BaseColor}"
                                    StrokeColor="Green"
-                                   ItemsSource="{Binding Radar}" 
+                                   ItemsSource="{Binding Data}" 
                                    DrawType="Line"
-                                   Color="Purple"
-                                   XBindingPath="Name" 
-                                   YBindingPath="Value">
-    
+                                   Color="{StaticResource BaseColor}"
+                                   XBindingPath="Month" 
+                                   YBindingPath="Target">
                 </chart:RadarSeries>
 
             </chart:SfChart>
-
         </StackLayout>
-        
     </ContentPage.Content>
 </ContentPage>

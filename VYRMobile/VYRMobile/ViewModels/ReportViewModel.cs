@@ -210,9 +210,16 @@ namespace VYRMobile.ViewModels
 
         private async Task CreateReport()
         {
+            if (IsBusy)
+                return;
+
+            IsBusy = true;
+
             IsSuccess = await _store.AddReportAsync(CReport);
             await LoadData2();
             await App.Current.MainPage.Navigation.PopAsync();
+
+            IsBusy = false;
         }
         private async void LoadData()
         {

@@ -8,14 +8,10 @@
              x:Class="VYRMobile.Views.Usuario"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              Title="Perfil"
-             NavigationPage.HasBackButton="False"
-             x:Name="Perfil">
+             NavigationPage.HasBackButton="False">
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="outer.png"/>
     </ContentPage.ToolbarItems>
-    <ContentPage.BindingContext>
-        <x:Reference Name="Perfil"/>
-    </ContentPage.BindingContext>
     <ContentPage.Resources>
         <Style x:Key="NameTextStyle" TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
@@ -50,8 +46,9 @@
                             HorizontalOptions="Center"/>
                 </StackLayout>
             </Frame>
-            <Frame HeightRequest="165"
-                   IsClippedToBounds="True">
+            <Frame 
+                HeightRequest="165"
+                IsClippedToBounds="True">
             <Grid
                 ColumnSpacing="0"
                 RowSpacing="0">
@@ -60,13 +57,13 @@
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="5.5*" />
-                    <RowDefinition Height="4.5*" />
+                    <RowDefinition Height="1*" />
+                    <RowDefinition Height="1*" />
                 </Grid.RowDefinitions>
                     <Grid   
-                    ColumnSpacing="0"
-                    RowSpacing="1"
-                    Grid.Row="0">
+                        ColumnSpacing="0"
+                        RowSpacing="1"
+                        Grid.Row="0">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="50" />
                         <ColumnDefinition Width="270" />
