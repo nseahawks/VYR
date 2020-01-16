@@ -213,11 +213,23 @@ namespace VYRMobile.ViewModels
             if (IsBusy)
                 return;
 
+            CreateReportPage crp = new CreateReportPage();
+
             IsBusy = true;
 
+            crp.DisableCommand.Execute(null);
+
             IsSuccess = await _store.AddReportAsync(CReport);
-            await LoadData2();
-            await App.Current.MainPage.Navigation.PopAsync();
+
+            if (IsSuccess == false)
+            {
+                crp.EnableCommand.Execute(null);
+            }
+            else
+            {
+                await LoadData2();
+                await App.Current.MainPage.Navigation.PopModalAsync();
+            }
 
             IsBusy = false;
         }

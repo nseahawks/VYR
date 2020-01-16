@@ -41,7 +41,7 @@ namespace VYRMobile.Views
             colorBoxView.BackgroundColor = sel.StatusColor;
             dateLabel.Text = sel.Created.ToString();*/
 
-            await Navigation.PushModalAsync(new NavigationPage (new ReportDetailsPage(sel.Title, sel.Description, sel.TypeIcon, sel.ReportType, sel.ReportStatus, sel.Created, sel.StatusColor, sel.Img)));
+            await Navigation.PushModalAsync(new NavigationPage (new ReportDetailsPage(sel.Title, sel.Description, sel.TypeIcon, sel.ReportType, sel.ReportStatus, sel.Created, sel.StatusColor)));
             /*ReportViewModel rvm = new ReportViewModel(sel.Title, sel.Description, sel.TypeIcon, sel.ReportType, sel.ReportStatus, sel.Created, sel.StatusColor);
 
             uint duration = 300;

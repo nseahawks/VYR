@@ -14,6 +14,7 @@ using GalaSoft.MvvmLight.Command;
 using System.Threading.Tasks;
 using VYRMobile.Views;
 using VYRMobile.Models;
+using Plugin.Messaging;
 
 namespace VYRMobile.ViewModels
 {
@@ -25,6 +26,7 @@ namespace VYRMobile.ViewModels
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; }
         public ICommand CheckAntenna { get; }
+        public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
         private string antenna;
         public string Antenna
@@ -212,6 +214,14 @@ namespace VYRMobile.ViewModels
             foreach (var tarea in tareas)
             {
                 Tareas.Add(tarea);
+            }
+        }
+        private void ItemSelected(string parameter)
+        {
+            var phoneCallTask = CrossMessaging.Current.PhoneDialer;
+            if (phoneCallTask.CanMakePhoneCall)
+            {
+                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
             }
         }
     }

@@ -37,7 +37,6 @@ namespace VYRMobile.ViewModels
             get => username;
             set
             {
-                username = value;
                 if (Checked)
                     Preferences.Set(nameof(Username), value);
                 OnPropertyChanged(nameof(Checked));
