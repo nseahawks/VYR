@@ -73,7 +73,7 @@ namespace VYRMobile
                     Preferences.Set(usuario.Email, user);
                 }
 
-                Application.Current.MainPage = new NavigationPage(new Loading());
+                Application.Current.MainPage = new NavigationPage(new Utensilios());
                 //await Navigation.PopAsync();
             }
             else

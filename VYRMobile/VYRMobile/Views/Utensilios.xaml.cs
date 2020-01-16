@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Plugin.CloudFirestore;
+using Plugin.DeviceInfo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,6 +13,7 @@ namespace VYRMobile.Views
 {
     public partial class Utensilios : ContentPage
     {
+        bool isAccepted;
         public Utensilios()
         {
             InitializeComponent();
@@ -20,8 +23,21 @@ namespace VYRMobile.Views
 
         private async void BtnConfirmar_Clicked(object sender, EventArgs e)
         {
-            await DisplayAlert("Confirmacion", "¿Acepta los términos y condiciones de uso?", "ACEPTAR", "CANCELAR");
-            Application.Current.MainPage = new NavigationPage(new Loading());
+            isAccepted = await DisplayAlert("Confirmacion", "¿Acepta los términos y condiciones de uso?", "ACEPTAR", "CANCELAR");
+            if (isAccepted)
+            {
+                string _appId = CrossDeviceInfo.Current.Id;
+                var id = CrossCloudFirestore.Current.Instance
+                                 .GetCollection("usersApp")
+                                 .GetDocument(_appId).Id;
+
+                await CrossCloudFirestore.Current.Instance
+                                          .GetCollection("usersApp")
+                                          .GetDocument(_appId).SetDataAsync(new { Status = "WAITING"});
+               
+                Application.Current.MainPage = new NavigationPage(new Loading());
+
+            }
         }
     }
 }
