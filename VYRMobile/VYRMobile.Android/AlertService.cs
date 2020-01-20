@@ -1,4 +1,4 @@
-﻿/*using System;
+﻿using System;
 
 using Android.App;
 using Android.Content;
@@ -26,7 +26,7 @@ namespace VYRMobile.Droid
 
             var document = CrossCloudFirestore.Current.Instance
                 .GetCollection("alerts");
-     
+            
             document.ObserveModified()
             .Subscribe(documentChange =>
             {
@@ -58,4 +58,4 @@ namespace VYRMobile.Droid
         }
 
     }
-}*/
+}
