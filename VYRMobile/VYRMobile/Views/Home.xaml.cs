@@ -2,16 +2,22 @@
 using Plugin.CloudFirestore.Extensions;
 using Plugin.LocalNotifications;
 using Plugin.Messaging;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Net.Http;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using VYRMobile.Helper;
 using VYRMobile.Models;
 using VYRMobile.Services;
 using VYRMobile.ViewModels;
 using VYRMobile.Views;
+using VYRMobile.Views.Popups;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using ZXing.Net.Mobile.Forms;
 
@@ -19,6 +25,7 @@ namespace VYRMobile
 {
     public partial class Home : ContentPage
     {
+        private HttpClient _client;
         public static readonly BindableProperty ShowMapCommandProperty =
            BindableProperty.Create(nameof(ShowMapCommand), typeof(Command), typeof(Home), null, BindingMode.TwoWay);
 
@@ -28,47 +35,15 @@ namespace VYRMobile
         public Home()
         {
             InitializeComponent();
-            //BindingContext = new CronoViewModel();
-            //BindingContext = new TareaViewModel();
             BindingContext = new PuntoViewModel();
             LoadCommand = new Command(LoadView);
-            //antenasView.RefreshCommand = LoadCommand;
-
-            //AlertMain();
-            //btnStart.Clicked += BtnStart_Clicked;
-            //btnStop.Clicked += BtnStop_Clicked;
-            /*BindingContext = new CallViewModel();
-            BindingContext = new QRViewModel();*/
+            _client = new ApiHelper();
 
             QR.Clicked += QR_Clicked;
+            btnCall.Clicked += btnCall_Clicked;
             ShowMapCommand = new Command(ShowMap);
-            //CallFrancisco.Clicked += CallFrancisco_clicked;
-            //alert.Clicked += alert_clicked;  
 
         }
-
-        //private void BtnStop_Clicked(object sender, EventArgs e)
-        //{
-        //    btnStop.IsVisible = false;
-        //    btnStart.IsVisible = true;
-        //}
-
-        //private void BtnStart_Clicked(object sender, EventArgs e)
-        //{
-        //    btnStart.IsVisible = false;
-        //    btnStop.IsVisible = true;
-        //}
-
-        //private async void alert_clicked(object sender, EventArgs e)
-        //{
-        //    await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
-        //    showMap();
-        //}
-
-        //private void showMap()
-        //{
-        //    Navigation.PushModalAsync(new Mapa2());
-        //}
 
         protected override void OnAppearing()
         {
@@ -87,20 +62,6 @@ namespace VYRMobile
         {
             base.OnDisappearing();
         }
-
-        /*protected override void OnAppearing()
-        {
-            base.OnAppearing();
-
-            AlertMain();
-        }
-
-        private async void AlertMain()
-        {
-            await Task.Delay(5000);
-            DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
-            
-        }*/
         public Command ShowMapCommand
         {
             get { return (Command)GetValue(ShowMapCommandProperty); }
@@ -141,14 +102,9 @@ namespace VYRMobile
             await Navigation.PushModalAsync(scannerPage);
         }
 
-        /*private void CallFrancisco_clicked(object sender, EventArgs e)
+        private async void btnCall_Clicked(object sender, EventArgs e)
         {
-            CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
-            /*var phoneCallTask = CrossMessaging.Current.PhoneDialer;
-            if (phoneCallTask.CanMakePhoneCall)
-            {
-                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
-            }
-        }*/
+            await Navigation.PushPopupAsync(new CallPopup());
+        }
     }
 }

@@ -12,10 +12,6 @@
              x:Class="VYRMobile.Views.CreateReportPage"
              BackgroundColor="{StaticResource WhiteColor}">
 
-    <ContentPage.BindingContext>
-        <local:CreateReportViewModel/>
-    </ContentPage.BindingContext>
-
     <ContentPage.Resources>
         <ResourceDictionary>
             <converter:IntEnumConverter x:Key="IntEnum"/>
@@ -23,7 +19,7 @@
     </ContentPage.Resources>
         
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="attach2.png" 
+        <ToolbarItem IconImageSource="camera.png" 
                      x:Name="btnAttach"/>
         <ToolbarItem IconImageSource="send2.png"
                      x:Name="btnEnviar"
@@ -125,13 +121,50 @@
                         VerticalOptions="Start"
                         Grid.Row="0"
                         Margin="6, 0, 8, 0"/>
-                <Image  x:Name="Image1"
-                        HeightRequest="100"
-                        WidthRequest="60"
-                        HorizontalOptions="Start"
-                        Margin="10, 0, 0, 0"
-                        Grid.Row="1"/>
-                <ActivityIndicator IsRunning="{Binding IsBusy}"/>
+                <StackLayout
+                    Grid.Row="1">
+                    <Label
+                        Text="Imágenes adjuntas"
+                        TextColor="Gray"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="17"
+                        HorizontalOptions="Center"/>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Spacing="10"
+                        HorizontalOptions="CenterAndExpand">
+                        <Label
+                            x:Name="missingLabel"
+                            Text="No hay imágenes..."
+                            TextColor="#cecece"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="12"
+                            HorizontalOptions="Center"
+                            VerticalOptions="Center"
+                            Margin="0,15,0,0"/>
+                        <Image  
+                            x:Name="Image1"
+                            HeightRequest="100"
+                            WidthRequest="60"
+                            HorizontalOptions="Center"
+                            IsVisible="False"/>
+                        <Image  
+                            x:Name="Image2"
+                            HeightRequest="100"
+                            WidthRequest="60"
+                            HorizontalOptions="Center"
+                            IsVisible="False"/>
+                        <Image  
+                            x:Name="Image3"
+                            HeightRequest="100"
+                            WidthRequest="60"
+                            HorizontalOptions="Center"
+                            IsVisible="False"/>
+                    </StackLayout>
+                </StackLayout>
+                <ActivityIndicator 
+                    IsRunning="{Binding IsBusy}"
+                    Color="{StaticResource BaseColor}"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

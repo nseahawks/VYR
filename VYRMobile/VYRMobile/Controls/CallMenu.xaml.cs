@@ -23,7 +23,7 @@ namespace VYRMobile.Controls
 
         //public event EventHandler ItemTapped;
         private bool _isAnimating = false;
-        private uint _animationDelay = 50;
+        private uint _animationDelay = 150;
 
         public CallMenu()
         {
@@ -39,8 +39,6 @@ namespace VYRMobile.Controls
         private void HandleOptionsClicked()
         {
             HandleOptionClicked(Seahawks, "+18097966316");
-            HandleOptionClicked(Claro, "");
-            HandleOptionClicked(Emergencias, "911");
         }
 
         private void HandleOptionClicked(Image image, string value)
@@ -55,7 +53,6 @@ namespace VYRMobile.Controls
                     {
                         SelectedCommand?.Execute(value);
                     }
-
                 }),
                 NumberOfTapsRequired = 1
             });
@@ -77,7 +74,6 @@ namespace VYRMobile.Controls
         {
             if (!_isAnimating)
             {
-
                 _isAnimating = true;
 
                 Call.IsVisible = true;
@@ -118,7 +114,6 @@ namespace VYRMobile.Controls
                         Call.IsVisible = false;
 
                         _isAnimating = false;
-
                     }
                 }),
                 NumberOfTapsRequired = 1
@@ -129,16 +124,12 @@ namespace VYRMobile.Controls
         {
             var speed = 25U;
             await Seahawks.FadeTo(0, speed);
-            await Claro.FadeTo(0, speed);
-            await Emergencias.FadeTo(0, speed);
         }
 
         private async Task ShowButtons()
         {
             var speed = 25U;
             await Seahawks.FadeTo(1, speed);
-            await Claro.FadeTo(1, speed);
-            await Emergencias.FadeTo(1, speed);
         }
        
     }

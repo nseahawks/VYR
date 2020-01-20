@@ -50,10 +50,10 @@ namespace VYRMobile.Views
             }
         }*/
 
-        private async void btnStore_Clicked(object sender, EventArgs e)
+        /*private async void btnStore_Clicked(object sender, EventArgs e)
         {
             await _firebase.Upload(file.GetStream(), Path.GetFileName(file.Path));
-        }
+        }*/
 
         /*private async void btnDownload_Clicked(object sender, EventArgs e)
         {

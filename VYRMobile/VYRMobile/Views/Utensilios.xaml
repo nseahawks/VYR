@@ -31,6 +31,7 @@
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
+    
     <ContentPage.Content>
         <Grid RowSpacing="0">
             <Grid.RowDefinitions>
@@ -52,14 +53,15 @@
                     <ColumnDefinition Width="360" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Label  IsVisible="False"
-                        Grid.Row="0"
-                        Text="Complete su equipo:"
-                        Style="{StaticResource LabelStyle}"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
-                        Margin="0, 10, 0, 0"/>
-                <ListView x:Name="itemsList"
+                <Label  
+                    Grid.Row="0"
+                    Text="Complete su equipo:"
+                    Style="{StaticResource LabelStyle}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Margin="0, 10, 0, 0"/>
+                <ListView 
+                    x:Name="itemsList"
                     Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
@@ -79,6 +81,5 @@
                     Style="{StaticResource ButtonStyle}"/>
             </Grid>
         </Grid>
-
     </ContentPage.Content>
 </ContentPage>

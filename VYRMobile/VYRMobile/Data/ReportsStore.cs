@@ -20,8 +20,9 @@ namespace VYRMobile.Data
     {
         private HttpClient _client;
         FirebaseHelper _firebase = new FirebaseHelper();
-        public string ImageName;
-        public Stream ImageStream;
+        private List<string> ImagesNames = new List<string>();
+        private List<Stream> ImagesStreams = new List<Stream>();
+        string UserId;
         public ReportsStore()
         {
             _client = new ApiHelper();
@@ -44,13 +45,14 @@ namespace VYRMobile.Data
             if (report == null || !IsConnected)
                 return false;
 
-            ImageStream = App.ImageStream;
-            ImageName = App.ImageName;
+            UserId = await SecureStorage.GetAsync("id");
+            ImagesStreams = App.ImagesStreams;
+            ImagesNames = App.ImagesNames;
 
-            if (ImageStream != null & ImageName != null)
+            if (ImagesStreams != null & ImagesNames != null)
             {
-                await _firebase.Upload(ImageStream, ImageName);
-                report.Img = await _firebase.GetFile(ImageName);
+                await _firebase.RunList(ImagesStreams, ImagesNames, UserId, report.Created);
+                report.Image = await _firebase.GetLinks(ImagesNames, UserId, report.Created);
             }
 
             var responseReport = new Report()
@@ -61,7 +63,7 @@ namespace VYRMobile.Data
                 Description = report.Description,
                 Address = "",
                 ReportStatus = report.ReportStatus,
-                Img = report.Img
+                Image = report.Image
             };
 
             string serializedData = JsonConvert.SerializeObject(responseReport);
@@ -83,9 +85,10 @@ namespace VYRMobile.Data
 
         public async Task<IEnumerable<Report>> GetReportsAsync(bool forceRefresh = false)
         {
+            UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
-                var response = await _client.GetAsync("/api/v1/reports");
+                var response = await _client.GetAsync("/api/v1/reports?userId=" + UserId);
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
                 List<Report> reports = JsonConvert.DeserializeObject<List<Report>>(jsonReports);
                 return reports;
@@ -96,25 +99,28 @@ namespace VYRMobile.Data
 
         public async Task<IEnumerable<Antena>> GetAntenasAsync(bool forceRefresh = false)
         {
+            UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
-                List<Antena> antennas = new List<Antena>();
-                var assembly = typeof(MainPage).GetTypeInfo().Assembly;
-                Stream stream = assembly.GetManifestResourceStream($"VYRMobile.antenas.json");
-                
-                using (var reader = new StreamReader(stream))
-                {
-                    var json = reader.ReadToEnd();
-                    antennas =JsonConvert.DeserializeObject<List<Antena>>(json);
-                }
-                
-                /*var resource = ("VYRMobile.Antena.antena.json");
-                antennas = JsonConvert.DeserializeObject<List<Antena>>(resource);*/
+                var response = await _client.GetAsync("/api/v1/locations?userId=" + UserId);
+                var jsonReports = response.Content.ReadAsStringAsync().Result;
+                List<Antena> antennas = JsonConvert.DeserializeObject<List<Antena>>(jsonReports);
                 return antennas;
             }
             return null;
         }
-
+        public async Task<ApplicationUser> GetUserAsync()
+        {
+            UserId = await SecureStorage.GetAsync("id");
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                var response = await _client.GetAsync("/api/v1/users/" + UserId);
+                var jsonReports = response.Content.ReadAsStringAsync().Result;
+                ApplicationUser user = JsonConvert.DeserializeObject<ApplicationUser>(jsonReports);
+                return user;
+            }
+            return null;
+        }
         public Task<bool> UpdateReportAsync(Report report)
         {
             throw new System.NotImplementedException();

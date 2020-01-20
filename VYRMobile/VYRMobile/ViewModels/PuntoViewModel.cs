@@ -15,6 +15,7 @@ using System.Threading.Tasks;
 using VYRMobile.Views;
 using VYRMobile.Models;
 using Plugin.Messaging;
+using VYRMobile.Data;
 
 namespace VYRMobile.ViewModels
 {
@@ -104,9 +105,19 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged("Puntos");
             }
         }
+        private ObservableCollection<Antena> _antenas;
+        public ObservableCollection<Antena> Antenas
+        {
+            get { return _antenas; }
+            set
+            {
+                _antenas = value;
+                OnPropertyChanged("Antenas");
+            }
+        }
 
-        private ObservableCollection<Models.Tarea> _tareas;
-        public ObservableCollection<Models.Tarea> Tareas
+        private ObservableCollection<Report> _tareas;
+        public ObservableCollection<Report> Tareas
         {
             get { return _tareas; }
             set
@@ -118,8 +129,9 @@ namespace VYRMobile.ViewModels
 
         public PuntoViewModel()
         {
-            Puntos = new ObservableCollection<Models.Punto>();
-            Tareas = new ObservableCollection<Models.Tarea>();
+            Puntos = new ObservableCollection<Punto>();
+            Tareas = new ObservableCollection<Report>();
+            Antenas = new ObservableCollection<Antena>();
 
             LoadData();
             LoadData2();
@@ -171,8 +183,8 @@ namespace VYRMobile.ViewModels
 
         private async void Alert() 
         {
-            await App.Current.MainPage.DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             StartStopwatch();
+            await App.Current.MainPage.DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
             //MapCommand.Execute(null);
         }
         public void StartStopwatch()
@@ -186,34 +198,37 @@ namespace VYRMobile.ViewModels
 
         private async void CheckingAntenna()
         {
-            var puntos = Puntos;
+            var antenas = Antenas;
 
-            foreach (var punto in puntos)
+            foreach (var antena in antenas)
             {
-                string pointId = punto.PointId.ToString();
+                string antenaId = antena.Id.ToString();
 
-                if (pointId == Antenna)
+                if (antenaId == Antenna)
                 {
-                    punto.PointChecked = true;
+                    antena.PointChecked = true;
                 }
             }
         }
         private async void LoadData()
         {
-            var puntos = await PuntoService.Instance.GetPuntos();
-            Puntos.Clear();
-            foreach (var punto in puntos)
+            var antennas = await ReportsStore.Instance.GetAntenasAsync();
+            Antenas.Clear();
+            foreach (var antenna in antennas)
             {
-                Puntos.Add(punto);
+                Antenas.Add(antenna);
             }
         }
         private async void LoadData2()
         {
-            var tareas = await TareaService.Instance.GetTareas();
+            var tareas = await ReportsStore.Instance.GetReportsAsync();
             Tareas.Clear();
             foreach (var tarea in tareas)
             {
-                Tareas.Add(tarea);
+                if (tarea.ReportType == Report.ReportTypes.Daño & tarea.ReportStatus == Report.ReportStatuses.Abierto)
+                {
+                    Tareas.Add(tarea);
+                }
             }
         }
         private void ItemSelected(string parameter)

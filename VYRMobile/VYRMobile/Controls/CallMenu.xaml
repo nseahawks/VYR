@@ -38,26 +38,6 @@
                 HeightRequest="40" 
                 VerticalOptions="Center"
                 HorizontalOptions="Center"/>
-            <Image
-                x:Name="Claro"
-                Opacity="0" 
-                Margin="0,-60,130,0" 
-                Source="usuario2.png" 
-                Aspect="AspectFit"
-                WidthRequest="40" 
-                HeightRequest="40"
-                VerticalOptions="Fill"
-                HorizontalOptions="Fill" />
-            <Image
-                x:Name="Emergencias" 
-                Opacity="0"
-                Margin="0,60,130,0"
-                Source="attach2.png"
-                Aspect="AspectFit"
-                WidthRequest="40"
-                HeightRequest="40" 
-                VerticalOptions="Center"
-                HorizontalOptions="Center"/>
         </Grid>
     </ContentView.Content>
 </ContentView>

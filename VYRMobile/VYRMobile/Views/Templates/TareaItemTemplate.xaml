@@ -53,7 +53,7 @@
                     Margin="5,0,0,0"/>
         <Label      Grid.Column="1"
                     TextColor="{StaticResource BlackColor}"
-                    Text="{Binding TaskName}"
+                    Text="{Binding Title}"
                     Style="{StaticResource NameTextStyle}"
                     Margin="0,0,0,0"/>
         <Label      Grid.Column="2"

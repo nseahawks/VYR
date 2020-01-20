@@ -26,8 +26,6 @@ namespace VYRMobile.Views
             statusLabel.Text = ReportStatus.ToString();
             colorBoxView.BackgroundColor = StatusColor;
             dateLabel.Text = Created.ToString();
-
-
         }
     }
 }

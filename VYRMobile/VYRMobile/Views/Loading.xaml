@@ -20,18 +20,21 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid Grid.RowSpan="1"
-              RowSpacing="50"
-              VerticalOptions="Center">
+        <Grid 
+            Grid.RowSpan="1"
+            RowSpacing="50"
+            VerticalOptions="Center">
             <Grid.RowDefinitions>
                 <RowDefinition Height="150"/>
                 <RowDefinition Height="100"/>
             </Grid.RowDefinitions>
-            <Label  Grid.Row="0"
-                    Style="{StaticResource LabelStyle}"/>
-            <Grid>
+            <Label  
+                Grid.Row="0"
+                Style="{StaticResource LabelStyle}"/>
+            <Grid
+                Grid.Row="1"
+                Margin="0,30,0,0">
                 <ActivityIndicator
-                    Grid.Row="1"
                     IsRunning="True"
                     HorizontalOptions="Center"
                     VerticalOptions="End"

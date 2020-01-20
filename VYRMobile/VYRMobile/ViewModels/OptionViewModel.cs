@@ -6,6 +6,10 @@ using System.Threading.Tasks;
 using VYRMobile.Services;
 using Xamarin.Forms;
 using VYRMobile.Views;
+using Plugin.DeviceInfo;
+using Plugin.CloudFirestore;
+using Rg.Plugins.Popup.Extensions;
+using VYRMobile.Views.Popups;
 
 namespace VYRMobile.ViewModels
 {
@@ -16,6 +20,7 @@ namespace VYRMobile.ViewModels
         public Command ObjetivosCommand { get; set; }
         public Command FormacionCommand { get; set; }
         public Command CloseCommand { get; set; }
+        public Command LogoutCommand { get; set; }
 
         private ObservableCollection<Models.Option> _options;
 
@@ -28,6 +33,7 @@ namespace VYRMobile.ViewModels
             ObjetivosCommand = new Command(async () => await PushEstadisticas());
             FormacionCommand = new Command(async () => await PushFormacion());
             CloseCommand = new Command(async () => await ClosePage());
+            LogoutCommand = new Command(async () => await LogoutUser());
             LoadData();
         }
         public ObservableCollection<Models.Option> Options
@@ -67,6 +73,15 @@ namespace VYRMobile.ViewModels
         private async Task ClosePage()
         {
             await App.Current.MainPage.Navigation.PopModalAsync();
+        }
+        private async Task LogoutUser()
+        {
+            bool Logout;
+            Logout = await App.Current.MainPage.DisplayAlert("Confirmación", "¿Desea cerrar la sesión?", "ACEPTAR", "CANCELAR");
+            if (Logout)
+            {
+                await App.Current.MainPage.Navigation.PushPopupAsync(new LogingOutPopup());
+            }
         }
     }
 }

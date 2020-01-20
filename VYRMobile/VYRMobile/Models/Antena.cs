@@ -34,5 +34,15 @@ namespace VYRMobile.Models
 
         [JsonProperty("getAlarm")]
         public object GetAlarm { get; set; }
+
+        private bool pointChecked;
+        public bool PointChecked
+        {
+            get => pointChecked;
+            set
+            {
+                pointChecked = value;
+            }
+        }
     }
 }
