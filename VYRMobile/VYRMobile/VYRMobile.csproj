@@ -36,7 +36,9 @@
     <PackageReference Include="MvvmLightLibs" Version="5.4.1.1" />
     <PackageReference Include="Newtonsoft.Json" Version="12.0.3" />
     <PackageReference Include="Plugin.CloudFirestore" Version="2.0.0" />
+    <PackageReference Include="Plugin.FirebaseStorage" Version="2.0.0" />
     <PackageReference Include="Refractored.MvvmHelpers" Version="1.3.0" />
+    <PackageReference Include="Rg.Plugins.Popup" Version="1.2.0.223" />
     <PackageReference Include="SkiaSharp" Version="1.68.0" />
     <PackageReference Include="Syncfusion.Licensing" Version="17.3.0.29" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="17.3.0.29" />
@@ -45,6 +47,7 @@
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="17.3.0.29" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="17.3.0.29" />
     <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.3.0.29" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
     <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />
     <PackageReference Include="Xam.Plugin.Geolocator" Version="4.5.0.6" />
     <PackageReference Include="Xam.Plugin.Media" Version="4.0.1.5" />
@@ -70,9 +73,6 @@
   <ItemGroup>
     <Compile Update="Views\CreateReportPage.xaml.cs">
       <DependentUpon>CreateReportPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\signalR.xaml.cs">
-      <DependentUpon>SignalR.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -140,13 +140,16 @@
     <EmbeddedResource Update="Views\MenuPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popups\CallPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\Popups\LogingOutPopup.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\ReportDetailsPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Reportes.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\SignalR.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\StatisticsPage.xaml">

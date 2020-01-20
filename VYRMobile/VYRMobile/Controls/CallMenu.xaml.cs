@@ -20,9 +20,10 @@ namespace VYRMobile.Controls
             get { return (ICommand)GetValue(SelectedCommandProperty); }
             set { SetValue(SelectedCommandProperty, value); }
         }
+
         //public event EventHandler ItemTapped;
         private bool _isAnimating = false;
-        private uint _animationDelay = 50;
+        private uint _animationDelay = 150;
 
         public CallMenu()
         {
@@ -33,14 +34,11 @@ namespace VYRMobile.Controls
 
             HandleMenuCenterClicked();
             HandleCloseClicked();
-            //HandleOptionsClicked();
-            HandleSeahawksClicked();
+            HandleOptionsClicked();
         }
-        /*private void HandleOptionsClicked()
+        private void HandleOptionsClicked()
         {
-            HandleOptionClicked(Seahawks, "Seahawks");
-            HandleOptionClicked(Claro, "Claro");
-            HandleOptionClicked(Emergencias, "Emergencias");
+            HandleOptionClicked(Seahawks, "+18097966316");
         }
 
         private void HandleOptionClicked(Image image, string value)
@@ -55,18 +53,6 @@ namespace VYRMobile.Controls
                     {
                         SelectedCommand?.Execute(value);
                     }
-
-                }),
-                NumberOfTapsRequired = 1
-            });
-        }*/
-        private void HandleSeahawksClicked()
-        {
-            Seahawks.GestureRecognizers.Add(new TapGestureRecognizer
-            {
-                Command = new Command(async () =>
-                {
-                    await TapSeahawks();
                 }),
                 NumberOfTapsRequired = 1
             });
@@ -84,43 +70,10 @@ namespace VYRMobile.Controls
 
         }
 
-        private async Task TapSeahawks()
-        {
-            if (!_isAnimating)
-            {
-
-
-                _isAnimating = true;
-
-                Call.IsVisible = true;
-                Close.IsVisible = true;
-                await HideButtons();
-
-                await Close.RotateTo(0, _animationDelay);
-                await Close.FadeTo(0, _animationDelay);
-                await Call.RotateTo(0, _animationDelay);
-                await Call.FadeTo(1, _animationDelay);
-                await Outer.ScaleTo(1, 150, Easing.CubicInOut);
-
-                Close.IsVisible = false;
-
-                _isAnimating = false;
-            }
-        }
-        private void SeahawksTapped()
-        {
-            var phoneCallTask = CrossMessaging.Current.PhoneDialer;
-            if (phoneCallTask.CanMakePhoneCall)
-            {
-                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
-            }
-        }
-
         private async Task CloseMenu()
         {
             if (!_isAnimating)
             {
-
                 _isAnimating = true;
 
                 Call.IsVisible = true;
@@ -161,7 +114,6 @@ namespace VYRMobile.Controls
                         Call.IsVisible = false;
 
                         _isAnimating = false;
-
                     }
                 }),
                 NumberOfTapsRequired = 1
@@ -172,16 +124,12 @@ namespace VYRMobile.Controls
         {
             var speed = 25U;
             await Seahawks.FadeTo(0, speed);
-            await Claro.FadeTo(0, speed);
-            await Emergencias.FadeTo(0, speed);
         }
 
         private async Task ShowButtons()
         {
             var speed = 25U;
             await Seahawks.FadeTo(1, speed);
-            await Claro.FadeTo(1, speed);
-            await Emergencias.FadeTo(1, speed);
         }
        
     }

@@ -10,21 +10,22 @@ using Plugin.LocalNotifications;
 using Xamarin.Essentials;
 using VYRMobile.ViewModels;
 using System.IO;
+using System.Collections.Generic;
 
 namespace VYRMobile
 {
     public partial class App : Application
     {
         internal static bool IsUserLoggedIn;
-        internal static string ImageName;
-        internal static Stream ImageStream;
+        internal static List<Stream> ImagesStreams = new List<Stream>();
+        internal static List<string> ImagesNames = new List<string>();
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MTc2MjEzQDMxMzcyZTMzMmUzMFJEalRFSVZKM0g4OC9KWisvYjQxL0FMdmV3RUdzUWZlSEFwSUdCdVMwTVk9");
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
 
-            MainPage = new Login();
+            MainPage = new MainPage();
         }
         protected override void OnStart()
         {

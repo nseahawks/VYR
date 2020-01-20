@@ -16,7 +16,7 @@ namespace VYRMobile
 
         public static readonly BindableProperty TryLoginCommandProperty =
            BindableProperty.Create(nameof(TryLoginCommand), typeof(Command),
-               typeof(Mapa2), null, BindingMode.TwoWay);
+               typeof(Login), null, BindingMode.TwoWay);
 
         public Login()
         {
@@ -72,6 +72,7 @@ namespace VYRMobile
                     usuario.Email = Preferences.Get(nameof(usuario.Email), user);
                     Preferences.Set(usuario.Email, user);
                 }
+
 
                 Application.Current.MainPage = new NavigationPage(new Utensilios());
                 //await Navigation.PopAsync();

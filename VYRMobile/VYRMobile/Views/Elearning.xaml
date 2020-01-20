@@ -10,8 +10,8 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="outer.png"/>
         <ToolbarItem IconImageSource="close.png"
-                     x:Name="btnEnviar"
-                     Command="{Binding CreateReportCommand}"/>
+                     x:Name="btnClose"
+                     Command="{Binding CloseCommand}"/>
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>

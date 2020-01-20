@@ -39,14 +39,16 @@ namespace VYRMobile.Droid
             FormsMaps.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);
 
-            Intent intent = new Intent(this, typeof(TrackerService));
-            StartService(intent);
-            StartService(new Intent(this, typeof(AlertService)));
+            //Intent intent = new Intent(this, typeof(TrackerService));
+            //StartService(intent);
+            //StartService(new Intent(this, typeof(AlertService)));
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
-            //FirebaseApp.InitializeApp(Application.ApplicationContext);
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+
+            FirebaseApp.InitializeApp(Application.ApplicationContext);
             FirebaseFirestore firestore = FirebaseFirestore.GetInstance(Firebase.FirebaseApp.Instance);
             FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
             firestore.FirestoreSettings = settings;
@@ -58,7 +60,17 @@ namespace VYRMobile.Droid
         {
             CarouselViewRenderer.Init();
         }
-
+        public override void OnBackPressed()
+        {
+            if (Rg.Plugins.Popup.Popup.SendBackPressed(base.OnBackPressed))
+            {
+                // Do something if there are some pages in the `PopupStack`
+            }
+            else
+            {
+                // Do something if there are not any pages in the `PopupStack`
+            }
+        }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

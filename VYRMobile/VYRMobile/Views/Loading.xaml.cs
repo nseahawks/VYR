@@ -12,13 +12,13 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Loading : ContentPage
     {
-
         bool isWaiting;
         string _appId;
         public Loading()
         {
             _appId = CrossDeviceInfo.Current.Id;
             InitializeComponent();
+
             var document = CrossCloudFirestore.Current.Instance
                  .GetCollection("usersApp")
             .GetDocument(_appId)
@@ -26,12 +26,14 @@ namespace VYRMobile.Views
             {
                 var test = document.Data["Status"].ToString();
 
-                if(test == "ACCEPTED")
+                if (test == "ACCEPTED")
                 {
                     isWaiting = false;
                     Application.Current.MainPage = new NavigationPage(new MenuPage());
 
-                }else if(test == "CANCELED"){
+                }
+                else if (test == "CANCELED")
+                {
                     isWaiting = false;
                     App.IsUserLoggedIn = false;
                     Application.Current.MainPage = new NavigationPage(new Login());
@@ -55,17 +57,10 @@ namespace VYRMobile.Views
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-
-            
         }
 
         private async void Charge()
         {
-
-
-
-         
-
             while (isWaiting)
             {
                 //var result = CheckStatus().ToString();
@@ -76,7 +71,6 @@ namespace VYRMobile.Views
                 //}
                 await Task.Delay(100);
             }
-          
             //Application.Current.MainPage = new NavigationPage(new MenuPage());
         }
 

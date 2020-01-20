@@ -26,7 +26,6 @@ namespace VYRMobile.ViewModels
         public Command CreateReportCommand { get; }
         public Command LoadCommand { get; set; }
         public Command ReportDetailsCommand { get; set; }
-        public Command ImageCommand { get; set; }
 
 
         private ObservableCollection<Models.Image> _posts;
@@ -203,7 +202,6 @@ namespace VYRMobile.ViewModels
             CreateReportCommand = new Command(async () => await CreateReport());
             LoadCommand = new Command(async () => await LoadData2());
             ReportDetailsCommand = new Command(async () => await LoadData2());
-            ImageCommand = new Command(async () => await SetImage());
             _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
             _statusCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportStatuses)));
         }
@@ -213,11 +211,23 @@ namespace VYRMobile.ViewModels
             if (IsBusy)
                 return;
 
+            CreateReportPage crp = new CreateReportPage();
+
             IsBusy = true;
 
+            crp.DisableCommand.Execute(null);
+
             IsSuccess = await _store.AddReportAsync(CReport);
-            await LoadData2();
-            await App.Current.MainPage.Navigation.PopAsync();
+
+            if (IsSuccess == false)
+            {
+                crp.EnableCommand.Execute(null);
+            }
+            else
+            {
+                await LoadData2();
+                await App.Current.MainPage.Navigation.PopModalAsync();
+            }
 
             IsBusy = false;
         }
@@ -304,12 +314,6 @@ namespace VYRMobile.ViewModels
             }
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
-        }
-        private async Task SetImage()
-        {
-            await Task.Delay(0);
-            _store.ImageName = ImageName;
-            _store.ImageStream = ImageStream;
         }
         /*private void LoadPosts()
         {

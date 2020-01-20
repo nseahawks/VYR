@@ -10,6 +10,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using VYRMobile.Helper;
+using VYRMobile.ViewModels;
 
 namespace VYRMobile.Views
 {
@@ -21,12 +22,12 @@ namespace VYRMobile.Views
         public Test()
         {
             InitializeComponent();
-            //BindingContext = new TestViewModel();
+            BindingContext = new CallViewModel();
 
             //btn.Clicked += Btn_Clicked;
         }
 
-        private async void btnPick_Clicked(object sender, EventArgs e)
+        /*private async void btnPick_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
             try
@@ -47,12 +48,12 @@ namespace VYRMobile.Views
             {
                 Debug.WriteLine(ex.Message);
             }
-        }
+        }*/
 
-        private async void btnStore_Clicked(object sender, EventArgs e)
+        /*private async void btnStore_Clicked(object sender, EventArgs e)
         {
             await _firebase.Upload(file.GetStream(), Path.GetFileName(file.Path));
-        }
+        }*/
 
         /*private async void btnDownload_Clicked(object sender, EventArgs e)
         {

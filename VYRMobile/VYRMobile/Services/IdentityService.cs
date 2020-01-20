@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
@@ -32,8 +33,6 @@ namespace VYRMobile.Services
 
             string serializedData = JsonConvert.SerializeObject(request);
             var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
-           
-
             try
             {
                 var response = await _client.PostAsync("/api/v1/identity/login", contentData);
@@ -41,6 +40,7 @@ namespace VYRMobile.Services
                 JWT jwt = JsonConvert.DeserializeObject<JWT>(stringJWT);
                 await SecureStorage.SetAsync("token", jwt.Token);
                 ApiHelper.Token = jwt.Token;
+                DeserializeToken(jwt.Token);
                 return response.IsSuccessStatusCode;
             }
             catch (Exception)
@@ -48,12 +48,23 @@ namespace VYRMobile.Services
 
                 throw;
             }
-
         }
 
         public Task<bool> RefreshTokenAsync(string token, string refreshToken)
         {
             throw new NotImplementedException();
+        }
+        public async void DeserializeToken(string token)
+        {
+            var handler = new JwtSecurityTokenHandler();
+            var deserializedToken = handler.ReadToken(token) as JwtSecurityToken;
+
+            Dictionary<string, object> dictionary = deserializedToken.Payload;
+
+            foreach (KeyValuePair<string, object> pair in dictionary)
+            {
+                await SecureStorage.SetAsync(pair.Key.ToString(), pair.Value.ToString());
+            }
         }
     }
 }

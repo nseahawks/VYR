@@ -23,13 +23,13 @@ namespace VYRMobile.Views
 
         private async void BtnConfirmar_Clicked(object sender, EventArgs e)
         {
-            isAccepted = await DisplayAlert("Confirmacion", "¿Acepta los términos y condiciones de uso?", "ACEPTAR", "CANCELAR");
+            isAccepted = await DisplayAlert("Confirmación", "¿Acepta los términos y condiciones de uso?", "ACEPTAR", "CANCELAR");
             if (isAccepted)
             {
                 string _appId = CrossDeviceInfo.Current.Id;
-                var id = CrossCloudFirestore.Current.Instance
+                /*var id = CrossCloudFirestore.Current.Instance
                                  .GetCollection("usersApp")
-                                 .GetDocument(_appId).Id;
+                                 .GetDocument(_appId).Id;*/
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")

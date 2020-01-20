@@ -37,11 +37,17 @@ namespace VYRMobile.Views
                 Title = "Perfil"
             };
 
-            this.Children.Add(home);
             this.Children.Add(historial);
             this.Children.Add(map);
+            this.Children.Add(home);
             this.Children.Add(report);
             this.Children.Add(user);
+
+            var pages = Children.GetEnumerator();
+            pages.MoveNext();
+            pages.MoveNext();
+            pages.MoveNext();
+            CurrentPage = pages.Current;
         }
     }
 }

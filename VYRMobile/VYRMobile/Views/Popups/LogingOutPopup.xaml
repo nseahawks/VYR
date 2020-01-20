@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage  xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Popups.LogingOutPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="50"
+            DurationOut="50"
+            EasingIn="Linear"
+            EasingOut="Linear"
+            HasBackgroundAnimation="False"/>
+    </pages:PopupPage.Animation>
+    <StackLayout
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+        <Frame
+            WidthRequest="200"
+            HeightRequest="75"
+            CornerRadius="25"
+            BackgroundColor="#F5F5F5">
+            <StackLayout>
+                <Label 
+                    Text="Cerrando Sesión"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    TextColor="{StaticResource BlackColor}"
+                    FontSize="20"
+                    HorizontalOptions="Center"/>
+                <ActivityIndicator
+                    IsRunning="True"
+                    HorizontalOptions="Center"
+                    VerticalOptions="End"
+                    Color="{StaticResource BaseColor}"
+                    HeightRequest="50"
+                    WidthRequest="50"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</pages:PopupPage>

@@ -18,24 +18,23 @@
                 HorizontalOptions="Center"
                 Margin="0, 15, 0, 0"/>
             <chart:SfChart>
-
                 <chart:SfChart.PrimaryAxis>
                     <chart:CategoryAxis/>
                 </chart:SfChart.PrimaryAxis>
-
                 <chart:SfChart.SecondaryAxis>
                     <chart:NumericalAxis/>
                 </chart:SfChart.SecondaryAxis>
-
                 <chart:BarSeries 
+                    x:Name="BarChart"
                     Color="{StaticResource BaseColor}"
+                    ColorModel="{StaticResource BaseColor}"
+                    StrokeColor="Green"
                     CornerRadius="6"
                     DataMarkerPosition="Top"
                     Width="0.5"
                     ItemsSource="{Binding Data}" 
                     XBindingPath="Month" 
                     YBindingPath="Target"/>
-
             </chart:SfChart>
             <Label 
                 Text="Gráfica:"
@@ -48,21 +47,20 @@
                 <chart:SfChart.PrimaryAxis>
                     <chart:CategoryAxis/>
                 </chart:SfChart.PrimaryAxis>
-
                 <chart:SfChart.SecondaryAxis>
                     <chart:NumericalAxis/>
                 </chart:SfChart.SecondaryAxis>
-                <chart:RadarSeries x:Name="RadarChart"
-                                   SelectedDataPointColor="Purple"
-                                   ColorModel="{StaticResource BaseColor}"
-                                   StrokeColor="Green"
-                                   ItemsSource="{Binding Data}" 
-                                   DrawType="Line"
-                                   Color="{StaticResource BaseColor}"
-                                   XBindingPath="Month" 
-                                   YBindingPath="Target">
+                <chart:RadarSeries 
+                    x:Name="RadarChart"
+                    SelectedDataPointColor="Purple"
+                    ColorModel="{StaticResource BaseColor}"
+                    StrokeColor="Green"
+                    ItemsSource="{Binding Data}" 
+                    DrawType="Line"
+                    Color="{StaticResource BaseColor}"
+                    XBindingPath="Month" 
+                    YBindingPath="Target">
                 </chart:RadarSeries>
-
             </chart:SfChart>
         </StackLayout>
     </ContentPage.Content>

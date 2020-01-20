@@ -79,12 +79,12 @@ namespace VYRMobile.Models
             get => description; 
             set => SetProperty(ref description, value); 
         }
-        string img;
-        public string Img { 
+        List<string> img;
+        public List<string> Image { 
             get => img;
             set => SetProperty(ref img, value); 
         }
-       DateTime created;
+        DateTime created;
         public DateTime Created { 
             get => created; 
             set => SetProperty(ref created, value); 

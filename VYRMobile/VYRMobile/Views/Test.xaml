@@ -11,14 +11,18 @@
              x:Class="VYRMobile.Views.Test"
              BackgroundColor="White">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+        <!--<StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
                 <Image x:Name="imgChoosed" HeightRequest="200"/>
                 <Button x:Name="btnPick" Text="Pick" Clicked="btnPick_Clicked"/>
                 <Button x:Name="btnStore" Text="Store" Clicked="btnStore_Clicked"/>
                 <Button x:Name="btnDownload" Text="Download"/>
                 <Label x:Name="lblPath"/>
-            </StackLayout>
-        </StackLayout>
+            </StackLayout>-->
+            <controls:CallMenu 
+                SelectedCommand="{Binding ItemSelectedCommand}"
+                HeightRequest="60"
+                WidthRequest="60"
+                HorizontalOptions="CenterAndExpand" 
+                VerticalOptions="CenterAndExpand"/>
     </ContentPage.Content>
 </ContentPage>

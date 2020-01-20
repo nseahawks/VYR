@@ -36,7 +36,8 @@
         </Style>
     </ContentView.Resources>
     <ContentView.Content>
-        <Grid   ColumnSpacing="0"
+        <Grid   
+            ColumnSpacing="0"
             RowSpacing="1">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="35" />
@@ -52,7 +53,7 @@
                     Margin="5,0,0,0"/>
             <Label  Grid.Column="1"
                     TextColor="{StaticResource BlackColor}"
-                    Text="{Binding PointName}"
+                    Text="{Binding LocationName}"
                     Style="{StaticResource NameTextStyle}"
                     Margin="0,0,0,0"/>
             <CheckBox  Grid.Column="2"
