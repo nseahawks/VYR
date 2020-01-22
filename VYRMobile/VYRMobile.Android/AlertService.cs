@@ -6,6 +6,7 @@ using Android.OS;
 using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Extensions;
 using Plugin.LocalNotifications;
+using Xamarin.Essentials;
 
 namespace VYRMobile.Droid
 {
@@ -23,26 +24,27 @@ namespace VYRMobile.Droid
             //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
 
             //});
-
+            var id = await SecureStorage.GetAsync("id");
             var document = CrossCloudFirestore.Current.Instance
-                .GetCollection("alerts");
+                .GetCollection("usersApp").GetDocument(id).GetCollection("Alarms");
+            bool firstTIme = true;
             
-            document.ObserveModified()
-            .Subscribe(documentChange =>
-            {
-                var document = documentChange.Document;
-                var message = $"{document.Data["Latitude"].ToString()}, {document.Data["Longitude"].ToString()}";
-                CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
-            });
+            //document.ObserveModified()
+            //.Subscribe(documentChange =>
+            //{
+            //    var document = documentChange.Document;
+            //    //var message = $"{document.Data["Latitude"].ToString()}, {document.Data["Longitude"].ToString()}";
+            //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
+            //});
 
             document.ObserveAdded()
                 .Subscribe(documentChange =>
                 {
-                    var document = documentChange.Document;
-                    var message = $"{document.Data.ToString()}";
+                  var document = documentChange.Document;
+                    //var message = $"{document.Data.ToString()}";
                     CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
                 });
-
+           
             base.OnCreate();
         }
 
