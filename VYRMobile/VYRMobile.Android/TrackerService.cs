@@ -55,45 +55,29 @@ namespace VYRMobile.Droid
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int starId)
         {
             _cts = new CancellationTokenSource();
+            
             PollLocation(_cts);
-
-            //Task.Run(async () =>
-            //{
-            //    try
-            //    {
-            //        var location = await Geolocation.GetLastKnownLocationAsync();
-            //        if (location == null)
-            //        {
-            //            var request = new GeolocationRequest(GeolocationAccuracy.Best);
-            //            location = await Geolocation.GetLocationAsync(request);
-            //        }
-
-
-            //        await _hub.InvokeAsync("SendLocation", location.Latitude, location.Longitude, device);
-            //    }
-            //    catch (System.OperationCanceledException)
-            //    {
-
-            //    }
-
-            //}, _cts.Token);
-
-
-
 
             return StartCommandResult.Sticky;
         }
 
         private async void PollLocation(CancellationTokenSource cts)
         {
-           
+            var id = await SecureStorage.GetAsync("id");
+            var deviceId = await SecureStorage.GetAsync("device_id");
+            if (String.IsNullOrEmpty(id)) {
+                await Task.Delay(TimeSpan.FromSeconds(5));
+                PollLocation(cts);
+            }
+            else
+            {
+
 
             while (!cts.IsCancellationRequested)
             {
                 try
                 {
-                    IDocumentReference reference;
-                    var deviceId = await SecureStorage.GetAsync("device_id");
+                    //IDocumentReference reference;
 
                     var request = new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMilliseconds(1000));
                     var location = await Geolocation.GetLocationAsync(request);
@@ -103,65 +87,63 @@ namespace VYRMobile.Droid
                         location = await Geolocation.GetLastKnownLocationAsync();
                     }
 
-                    if (CrossDeviceInfo.IsSupported)
-                    {
-                        string _appId = CrossDeviceInfo.Current.Id;
-                        var id = CrossCloudFirestore.Current.Instance
-                                         .GetCollection("devices")
-                                         .GetDocument(_appId).Id;
-                                         
-                        //.SetDataAsync(location);
-
-                        await CrossCloudFirestore.Current.Instance
-                                          .GetCollection("devices")
-                                          .GetDocument(_appId).GetCollection("test").GetDocument("tesssst")
-                                          .SetDataAsync(location);
-
-                        await SecureStorage.SetAsync("device_id", _appId);
-                    }
-                    else
-                    {
-                        string _appId = new Guid().ToString();
-                        var id = CrossCloudFirestore.Current.Instance
-                                         .GetCollection("devices")
-                                         .GetDocument(_appId).Id;
-                        //.SetDataAsync(location);
-
-                        await CrossCloudFirestore.Current.Instance
-                                          .GetCollection("devices")
-                                          .GetDocument(_appId)
-                                          .SetDataAsync(location);
-
-                        await SecureStorage.SetAsync("device_id", _appId);
-                    }
-
-                    //if (deviceId == null)
+                    //if (CrossDeviceInfo.IsSupported)
                     //{
-                    //    //var id = new Guid().ToString();
-                    //    //await CrossCloudFirestore.Current.Instance.GetCollection("devices")
-                    //    //                                        .AddDocumentAsync(location);
-                    //    //.CreateDocument().SetDataAsync(location);
-                    //    if (CrossDeviceInfo.IsSupported)
-                    //    {
-                    //        appId = CrossDeviceInfo.Current.GenerateAppId(true, "VYR","X");
-                    //    }
-                    //    else
-                    //    {
-                    //        appId = "";
-                    //    }
+                    //    string _appId = CrossDeviceInfo.Current.Id;
+                    //    //var id = CrossCloudFirestore.Current.Instance
+                    //    //                 .GetCollection("usersApp")
+                    //    //                 .GetDocument(SecureStorage.GetAsync("id").ToString())
+                    //    //                 .GetCollection("Devices")
+                    //    //                 .GetDocument(_appId).Id;
+                                         
+                    //    await CrossCloudFirestore.Current.Instance
+                    //                      .GetCollection("usersApp")
+                    //                      .GetDocument(id)
+                    //                      .GetCollection("Devices")
+                    //                      .GetDocument(_appId)
+                    //                      .GetCollection("Locations").CreateDocument()
+                    //                      .SetDataAsync(location);
+
+                    //    await SecureStorage.SetAsync("device_id", _appId);
+                    //        deviceId = _appId;
                     //}
-               
-                    reference = CrossCloudFirestore.Current
-                    .Instance
-                    .GetCollection("devices").GetDocument(await SecureStorage.GetAsync("device_id"));
+                    //else
+                    //{
+                    //    string _appId = new Guid().ToString();
+                    //    //var id = CrossCloudFirestore.Current.Instance
+                    //    //                 .GetCollection("usersApp")
+                    //    //                 .GetDocument(SecureStorage.GetAsync("id").ToString())
+                    //    //                 .GetCollection("Devices")
+                    //    //                 .GetDocument(_appId).Id;
+                    //    //.SetDataAsync(location);
+
+                    //    await CrossCloudFirestore.Current.Instance
+                    //                      .GetCollection("usersApp")
+                    //                      .GetDocument(id)
+                    //                      .GetCollection("Devices")
+                    //                      .GetDocument(_appId)
+                    //                      .GetCollection("Locations").CreateDocument()
+                    //                      .SetDataAsync(location);
+
+                    //    await SecureStorage.SetAsync("device_id", _appId);
+                    //        deviceId = _appId;
+                    //}
 
                     await CrossCloudFirestore.Current
-                        .Instance.RunTransactionAsync((transaction) =>
-                        {
-                            var document = transaction.GetDocument(reference);
+                    .Instance
+                    .GetCollection("usersApp")
+                    .GetDocument(id)
+                    .GetCollection("Devices")
+                    .GetDocument(await SecureStorage.GetAsync("device_id"))
+                    .GetCollection("Locations").AddDocumentAsync(location);
 
-                            transaction.UpdateData(reference, location);
-                        });
+                    //await CrossCloudFirestore.Current
+                    //    .Instance.RunTransactionAsync((transaction) =>
+                    //    {
+                    //        var document = transaction.GetDocument(reference);
+
+                    //        transaction.UpdateData(reference, location);
+                    //    });
                         
                     await Task.Delay(TimeSpan.FromSeconds(5));
                 }
@@ -169,6 +151,7 @@ namespace VYRMobile.Droid
                 {
                     return;
                 }
+            }
             }
         }
 
