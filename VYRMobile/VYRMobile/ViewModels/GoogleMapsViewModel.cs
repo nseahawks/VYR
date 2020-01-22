@@ -158,7 +158,7 @@ namespace VYRMobile.ViewModels
             //GetPlaceDetailCommand = new Command<GooglePlaceAutoCompletePrediction>(async (param) => await GetPlacesDetail(param));
             //GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
 
-            LoadAntennas();
+            //LoadAntennas();
         }
 
 

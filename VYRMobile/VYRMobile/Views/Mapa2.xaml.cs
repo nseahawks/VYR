@@ -254,8 +254,6 @@ namespace VYRMobile.Views
             get { return (bool)GetValue(IsRouteRunningProperty); }
             set { SetValue(IsRouteRunningProperty, value); }
         }
-
-      
         public string OriginLocationlng
         {
             get { return (string)GetValue(OriginLocationlngProperty); }
@@ -266,7 +264,7 @@ namespace VYRMobile.Views
             get { return (string)GetValue(DestinationLocationlatProperty); }
             set { SetValue(DestinationLocationlatProperty, value); }
         }
-         public string DestinationLocationlng
+        public string DestinationLocationlng
         {
             get { return (string)GetValue(DestinationLocationlngProperty); }
             set { SetValue(DestinationLocationlngProperty, value); }
@@ -280,7 +278,6 @@ namespace VYRMobile.Views
 
         async Task GetActualLocation()
         {
-
             try
             {
                 //var request = new GeolocationRequest(GeolocationAccuracy.Best);

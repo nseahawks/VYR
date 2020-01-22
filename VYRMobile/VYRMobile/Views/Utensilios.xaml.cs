@@ -33,7 +33,7 @@ namespace VYRMobile.Views
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
-                                          .GetDocument(_appId).SetDataAsync(new { Status = "WAITING"});
+                                          .GetDocument(_appId).SetDataAsync(new { Status = "ACCEPTED"});
                
                 Application.Current.MainPage = new NavigationPage(new Loading());
 

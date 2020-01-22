@@ -53,7 +53,6 @@ namespace VYRMobile.Helper
             //.Child(imageName)
             .GetDownloadUrlAsync();
 
-
             return imageURL;
         }
     }

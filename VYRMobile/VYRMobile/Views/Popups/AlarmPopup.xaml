@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Popups.AlarmPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <Frame
+        BackgroundColor="White"
+        HeightRequest="230"
+        WidthRequest="300"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="0">
+        <StackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Spacing="15">
+            <Frame
+                BackgroundColor="#EBECEE"
+                HeightRequest="140"
+                WidthRequest="244"
+                HorizontalOptions="Center"
+                HasShadow="True"
+                Padding="0">
+                <StackLayout>
+                    <Image
+                        x:Name="alarmOne"
+                        Source="notifyAlarm.png"
+                        HeightRequest="72"
+                        WidthRequest="60"
+                        HorizontalOptions="Center"/>
+                    <Image
+                        x:Name="alarmTwo"
+                        Source="notifyAlarm2.png"
+                        HeightRequest="72"
+                        WidthRequest="60"
+                        HorizontalOptions="Center"
+                        IsVisible="False"/>
+                    <Label
+                        Text="NUEVA ALARMA:"
+                        TextColor="{StaticResource BlackColor}"
+                        FontFamily="{StaticResource PoppinsBold}"
+                        FontSize="18"
+                        HorizontalOptions="Center"/>
+                    <Label
+                        Text="Otra Banda-Nisibón 1"
+                        TextColor="{StaticResource BlackColor}"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="16"
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+            </Frame>
+            <button:SfButton 
+                x:Name="OK"
+                Command="{Binding StartCommand}"
+                FontFamily="{StaticResource PoppinsMedium}"
+                Text="IR"
+                TextColor="{StaticResource WhiteColor}"
+                CornerRadius="6"
+                BackgroundColor="{StaticResource BaseColor}"
+                HorizontalOptions="Center"
+                WidthRequest="68"
+                HeightRequest="40"
+                HasShadow="True"/>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>
