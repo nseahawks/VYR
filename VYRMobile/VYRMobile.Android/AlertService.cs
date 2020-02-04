@@ -37,14 +37,14 @@ namespace VYRMobile.Droid
             //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
             //});
 
-            document.ObserveAdded()
+            document.ObserveAdded()       
                 .Subscribe(documentChange =>
                 {
-                  var document = documentChange.Document;
+                  var documentC = documentChange.Document;
                     //var message = $"{document.Data.ToString()}";
                     CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
                 });
-           
+            
             base.OnCreate();
         }
 
