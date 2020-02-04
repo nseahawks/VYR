@@ -72,17 +72,14 @@ namespace VYRMobile.Data
             DependencyService.Get<IToast>().LongToast(response.StatusCode.ToString());
             return response.IsSuccessStatusCode;
         }
-
         public Task<bool> DeleteReportAsync(string id)
         {
             throw new System.NotImplementedException();
         }
-
         public Task<Report> GetReportAsync(string id)
         {
             throw new System.NotImplementedException();
         }
-
         public async Task<IEnumerable<Report>> GetReportsAsync(bool forceRefresh = false)
         {
             UserId = await SecureStorage.GetAsync("id");
@@ -93,11 +90,9 @@ namespace VYRMobile.Data
                 List<Report> reports = JsonConvert.DeserializeObject<List<Report>>(jsonReports);
                 return reports;
             }
-
             return null;
         }
-
-        public async Task<IEnumerable<Antena>> GetAntenasAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Antena>> GetAntenasAsync()
         {
             UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
@@ -119,6 +114,7 @@ namespace VYRMobile.Data
                 ApplicationUser user = JsonConvert.DeserializeObject<ApplicationUser>(jsonReports);
                 return user;
             }
+
             return null;
         }
         public Task<bool> UpdateReportAsync(Report report)

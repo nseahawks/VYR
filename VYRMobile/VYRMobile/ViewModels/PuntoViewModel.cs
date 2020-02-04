@@ -16,12 +16,17 @@ using VYRMobile.Views;
 using VYRMobile.Models;
 using Plugin.Messaging;
 using VYRMobile.Data;
+using Rg.Plugins.Popup.Extensions;
+using VYRMobile.Views.Popups;
+using Xamarin.Essentials;
+using Xamarin.Forms.GoogleMaps;
 
 namespace VYRMobile.ViewModels
 {
     public class PuntoViewModel : INotifyPropertyChanged
     {
         public Stopwatch stopWatch = new Stopwatch();
+        GoogleMapsViewModel MapsViewModel;
 
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
@@ -184,7 +189,10 @@ namespace VYRMobile.ViewModels
         private async void Alert() 
         {
             StartStopwatch();
-            await App.Current.MainPage.DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
+            await App.Current.MainPage.Navigation.PopPopupAsync();
+            await ShowMap();
+            await GetActualLocation();
+            //MapsViewModel.LoadRouteCommand.Execute(null);
             //MapCommand.Execute(null);
         }
         public void StartStopwatch()
@@ -238,6 +246,41 @@ namespace VYRMobile.ViewModels
             {
                 phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
             }
+        }
+        private async Task GetActualLocation()
+        {
+            try
+            {
+                var location = await Geolocation.GetLocationAsync();
+                Position position = new Position(location.Latitude, location.Longitude);
+
+                if (location != null)
+                {
+                    Mapa2 mapa = new Mapa2();
+                    mapa.OriginLocationlat = position.Latitude.ToString();
+                    mapa.OriginLocationlng = position.Longitude.ToString();
+                    mapa.DestinationLocationlat = "18.82011111";
+                    mapa.DestinationLocationlng = "-68.61708333";
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
+            }
+        }
+        private async Task ShowMap()
+        {
+            var menuPage = new MenuPage(); 
+            menuPage.CurrentPage = menuPage.Children[1];
+            await menuPage.CurrentPage.Navigation.PushAsync(new Mapa2());
+            App.Current.MainPage = new NavigationPage(menuPage);
+            /*MenuPage menupage = new MenuPage();
+            var pages = menupage.Children.GetEnumerator();
+            pages.Reset();
+            pages.MoveNext();
+            pages.MoveNext();
+
+            await App.Current.MainPage.Navigation.PushAsync(menupage);*/
         }
     }
 }
