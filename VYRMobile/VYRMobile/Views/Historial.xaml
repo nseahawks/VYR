@@ -23,14 +23,13 @@ xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusi
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
-    
+
     <ContentPage.Content>
-        
-            <Grid   Grid.Row="0">
+        <Grid Grid.Row="0">
                 <ListView 
+                    x:Name="recordList"
                     HorizontalOptions="FillAndExpand"
                     VerticalOptions="FillAndExpand"
-                    ItemsSource="{Binding Events}"
                     SelectionMode="None"
                     HasUnevenRows="True"
                     SeparatorVisibility="None">

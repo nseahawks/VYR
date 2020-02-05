@@ -1,4 +1,4 @@
-﻿using System;
+﻿/*using System;
 
 using Android.App;
 using Android.Content;
@@ -6,6 +6,8 @@ using Android.OS;
 using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Extensions;
 using Plugin.LocalNotifications;
+using Rg.Plugins.Popup.Extensions;
+using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
 
 namespace VYRMobile.Droid
@@ -40,9 +42,10 @@ namespace VYRMobile.Droid
             document.ObserveAdded()
                 .Subscribe(documentChange =>
                 {
-                  var document = documentChange.Document;
+                  var documentC = documentChange.Document;
                     //var message = $"{document.Data.ToString()}";
                     CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
+                    App.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup());
                 });
            
             base.OnCreate();
@@ -60,4 +63,4 @@ namespace VYRMobile.Droid
         }
 
     }
-}
+}*/

@@ -11,68 +11,58 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using VYRMobile.Helper;
 using VYRMobile.ViewModels;
+using Xamarin.Essentials;
+using VYRMobile.Models;
+using Newtonsoft.Json;
+using System.Net.Http;
 
 namespace VYRMobile.Views
 {
-    //[XamlCompilation(XamlCompilationOptions.Compile)]
+    //[XamlCompilation(XamlCompilationOptions.Compile]
     public partial class Test : ContentPage
     {
-        MediaFile file;
-        FirebaseHelper _firebase = new FirebaseHelper();
+        string localPath;
+        const string recordItems = "RecordItems";
         public Test()
         {
             InitializeComponent();
             BindingContext = new CallViewModel();
 
+            btnSave.Clicked += SaveRecord;
+            btnGet.Clicked += BtnGet_Clicked;
+
+            localPath = Path.Combine(FileSystem.AppDataDirectory, recordItems);
             //btn.Clicked += Btn_Clicked;
         }
 
-        /*private async void btnPick_Clicked(object sender, EventArgs e)
+        private async void BtnGet_Clicked(object sender, EventArgs e)
         {
-            await CrossMedia.Current.Initialize();
-            try
-            {
-                file = await CrossMedia.Current.PickPhotoAsync(new PickMediaOptions
-                {
-                    PhotoSize = PhotoSize.Medium
-                });
-                if (file == null)
-                    return;
-                imgChoosed.Source = ImageSource.FromStream(() =>
-                {
-                    var imageStram = file.GetStream();
-                    return imageStram;
-                });
-            }
-            catch (Exception ex)
-            {
-                Debug.WriteLine(ex.Message);
-            }
-        }*/
+            //string path = localPath + "/" + fileName;
+            string json = await File.ReadAllTextAsync(localPath);
+            //string jsonn = json.ToString();
+            Record response = JsonConvert.DeserializeObject<Record>(json);
 
-        /*private async void btnStore_Clicked(object sender, EventArgs e)
-        {
-            await _firebase.Upload(file.GetStream(), Path.GetFileName(file.Path));
-        }*/
+            lblType.Text = response.RecordType.ToString();
+            lblOwner.Text = response.Owner;
+            lblDate.Text = response.Date.ToString();
+            img.Source = response.Icon;
+        }
 
-        /*private async void btnDownload_Clicked(object sender, EventArgs e)
+        private async void SaveRecord(object sender, EventArgs e)
         {
-            string path = await _firebase.GetFile();
-            if (path != null)
+            List<Record> Records = new List<Record>();
+            var record = new Record()
             {
-                lblPath.Text = path;
-                await DisplayAlert("Success", path, "OK");
-                imgChoosed.Source = path;
-            }
+                UserId = await SecureStorage.GetAsync("id"),
+                RecordType = Record.RecordTypes.Call,
+                Icon = "callM.png",
+                Owner = "Yo",
+                Date = DateTime.Now
+            };
 
-        }*/
-        /*public async Task<string> StoreImages(Stream imageStream, string imageName)
-        {
-            var imageUrl = await firebaseStorage
-                .Child("ReportImages")
-                .Child(imageName)
-                .PutAsync(imageStream);
-            return imageUrl;
-        }*/
+            Records.Add(record);
+            var serializedRecords = JsonConvert.SerializeObject(Records);
+            await File.WriteAllTextAsync(localPath, serializedRecords, Encoding.UTF8);
+        }
     }
 }

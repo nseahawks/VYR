@@ -4,12 +4,114 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.ConfiguracionPage">
+             x:Class="VYRMobile.Views.ConfiguracionPage"
+             Title="Mi Cuenta"
+             NavigationPage.HasBackButton="True">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="outer.png"/>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <TableView RowHeight="80">
+            <TableRoot>
+                <TableSection>
+                    <ViewCell x:Name="languageCell">
+                        <Grid Grid.ColumnSpan="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="280"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                            </Grid.RowDefinitions>
+                            <Image
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Source="language.png"
+                                HorizontalOptions="End"
+                                HeightRequest="28"
+                                WidthRequest="28"/>
+                            <StackLayout
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Spacing="0"
+                                Margin="10,10,0,0">
+                                <Label
+                                    Text="Idioma"
+                                    FontFamily="{StaticResource PoppinsBold}"
+                                    FontSize="18"
+                                    TextColor="{StaticResource BlackColor}"
+                                    HorizontalOptions="Start"
+                                    VerticalOptions="End"/>
+                                <Label
+                                    Text="Español"
+                                    FontFamily="{StaticResource PoppinsBold}"
+                                    FontSize="16"
+                                    TextColor="{StaticResource GrayColor}"
+                                    HorizontalOptions="Start"/>
+                                <Label/>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid Grid.ColumnSpan="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="280"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                            </Grid.RowDefinitions>
+                            <Image
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Source="person_outlined.png"
+                                HorizontalOptions="End"
+                                HeightRequest="28"
+                                WidthRequest="28"/>
+                            <Label
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Text="Información del perfil"
+                                FontFamily="{StaticResource PoppinsBold}"
+                                FontSize="18"
+                                TextColor="{StaticResource BlackColor}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="10,7,0,0"/>
+                        </Grid>
+                    </ViewCell>
+                    <ViewCell>
+                        <Grid Grid.ColumnSpan="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="280"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                            </Grid.RowDefinitions>
+                            <Image
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Source="lock.png"
+                                HorizontalOptions="End"
+                                HeightRequest="28"
+                                WidthRequest="28"/>
+                            <Label
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Text="Recuperar contraseña"
+                                FontFamily="{StaticResource PoppinsBold}"
+                                FontSize="18"
+                                TextColor="{StaticResource BlackColor}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="10,7,0,0"/>
+                        </Grid>
+                    </ViewCell>
+                </TableSection>
+            </TableRoot>
+        </TableView>
     </ContentPage.Content>
 </ContentPage>

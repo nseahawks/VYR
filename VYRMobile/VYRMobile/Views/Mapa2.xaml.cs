@@ -23,6 +23,7 @@ namespace VYRMobile.Views
         private double TData;
         private double RouteDistance;
         LineHelper liner = new LineHelper();
+        public Command CalculateCommand2 { get; set; }
 
         public static readonly BindableProperty CalculateCommandProperty =
            BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
@@ -59,6 +60,18 @@ namespace VYRMobile.Views
             set { SetValue(UpdateCommandProperty, value); }
         }
 
+        private static Mapa2 _instance;
+        public static Mapa2 Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Mapa2();
+
+                return _instance;
+            }
+        }
+
         public Mapa2()
         {
             InitializeComponent();
@@ -68,6 +81,8 @@ namespace VYRMobile.Views
             comboBox.SelectionChanged += AntennaSelected;
            
             CalculateCommand = new Command<List<Position>>(Calculate);
+
+            CalculateCommand2 = new Command<List<Position>>(Calculate2);
 
             UpdateCommand = new Command<List<Position>>(Update);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
@@ -100,7 +115,7 @@ namespace VYRMobile.Views
             //    await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
             //};
 
-            map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(18.461294, -69.948531), Distance.FromMeters(5000)));
+            
         }
         
         private async void AddLocations()
@@ -122,6 +137,10 @@ namespace VYRMobile.Views
             }
         }
 
+        private void ClearPolylines(Object sender, EventArgs e)
+        {
+            map.Polylines.Clear();
+        }
         private async void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
             var ind = comboBox.SelectedIndex;
@@ -235,8 +254,15 @@ namespace VYRMobile.Views
             ToggleCompass();
             ToggleOrientation();
             GetActualLocationCommand.Execute(null);
+            MoveCamera();
         }
 
+        private async void MoveCamera()
+        {
+            var location = await Geolocation.GetLastKnownLocationAsync();
+            Position myPosition = new Position(location.Latitude, location.Longitude);
+            this.map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(5000)));
+        }
         public Command CalculateCommand
         {
             get { return (Command)GetValue(CalculateCommandProperty); }
@@ -281,7 +307,7 @@ namespace VYRMobile.Views
             try
             {
                 //var request = new GeolocationRequest(GeolocationAccuracy.Best);
-                var location = await Geolocation.GetLocationAsync();
+                var location = await Geolocation.GetLastKnownLocationAsync();
                 Position position = new Position(location.Latitude, location.Longitude );
 
                 if (location != null)
@@ -313,12 +339,12 @@ namespace VYRMobile.Views
         private async void Update(List<Position> list)
         {
             //var k = 0;
-            if (map.Polylines == null && map.Polylines?.Count == 0)
+            if (this.map.Polylines == null && this.map.Polylines?.Count == 0)
                 return;
               
             //var cPin = map.Pins.FirstOrDefault();
          
-            if (map.Polylines.Count >= 1 || list.Count == 0)
+            if (this.map.Polylines.Count >= 1 || list.Count == 0)
             {
                 GetActualLocationCommand.Execute(null);
                 //k = 0;
@@ -388,13 +414,12 @@ namespace VYRMobile.Views
                         RouteIndex = i;
                         minIntersection = intersection;
                    }
-
                 }
                 if(RouteIndex == -1)
                 {
                     //recalcular
-                    map.Polylines.Clear();
-                    map.Polylines?.FirstOrDefault()?.Positions?.Clear();
+                    this.map.Polylines.Clear();
+                    this.map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                     IsRouteRunning = false;
                     startRoute.Command.Execute(null);
                     return;
@@ -403,11 +428,11 @@ namespace VYRMobile.Views
                 {
                     for(var i=0; i <= RouteIndex; i++)
                     {
-                        var previousPosition = map?.Polylines?.FirstOrDefault()?.Positions?.FirstOrDefault();
-                        map?.Polylines?.FirstOrDefault()?.Positions?.Remove(previousPosition.Value);
+                        var previousPosition = this.map?.Polylines?.FirstOrDefault()?.Positions?.FirstOrDefault();
+                        this.map?.Polylines?.FirstOrDefault()?.Positions?.Remove(previousPosition.Value);
                         list.RemoveAt(0);
                     }
-                    map?.Polylines?.FirstOrDefault()?.Positions?.Insert(0,
+                    this.map?.Polylines?.FirstOrDefault()?.Positions?.Insert(0,
                             new Position(
                                double.Parse(minIntersection.Latitude.ToString()),
                                double.Parse(minIntersection.Longitude.ToString())
@@ -417,13 +442,9 @@ namespace VYRMobile.Views
                 //cPin.Position = new Position(position.Latitude, position.Longitude);
                 //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(position.Latitude, position.Longitude)));
 
-                await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
-                    new Position(/*position.Latitude, position.Longitude*/
-                        double.Parse(OriginLocationlat),
-                      double.Parse(OriginLocationlng)
-                ),18d,CData,TData
-
-                    ))) ;
+                MoveCamera();
+                /*await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+                    new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),18d,CData,TData)));*/
                 //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
                 //new Position(
                 //    position.Latitude,
@@ -443,8 +464,8 @@ namespace VYRMobile.Views
             else
             {
                 //END TRIP
-                map.Polylines.Clear();
-                map.Polylines?.FirstOrDefault()?.Positions?.Clear();
+                this.map.Polylines.Clear();
+                this.map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                 IsRouteRunning = false;
 
                 startRoute.Command.Execute(null);
@@ -455,7 +476,7 @@ namespace VYRMobile.Views
         async void Calculate(List<Position> list)
         {
             //searchLayout.IsVisible = false;
-            
+
             map.Polylines.Clear();
             var polyline = new Xamarin.Forms.GoogleMaps.Polyline() {
                 StrokeWidth = 12,
@@ -498,7 +519,27 @@ namespace VYRMobile.Views
             //};
             //map.Pins.Add(pin1);
         }
+        async void Calculate2(List<Position> list)
+        {
+            //searchLayout.IsVisible = false;
 
+            this.map.Polylines.Clear();
+            var polyline = new Xamarin.Forms.GoogleMaps.Polyline()
+            {
+                StrokeWidth = 12,
+                StrokeColor = Color.Orange
+            };
+            foreach (var p in list)
+            {
+                polyline.Positions.Add(p);
+            }
+            this.map.Polylines.Add(polyline);
+            //TimeSpan span = TimeSpan.FromSeconds(0);
+            //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Distance.FromMiles(0.50f)));
+            /*await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+                new Position(polyline.Positions[0].Latitude,polyline.Positions[0].Longitude), 18d, CData, TData)), span)*/
+            MoveCamera();
+        }
         void AddMapStyle()
         {
             var assembly = typeof(MainPage).GetTypeInfo().Assembly;
@@ -512,7 +553,6 @@ namespace VYRMobile.Views
             map.MapStyle = MapStyle.FromJson(styleFile);
         }
 
-        List<Place> placesList = new List<Place>();
 
         //public async void OnEnterAddressTapped(object sender, EventArgs e)
         //{

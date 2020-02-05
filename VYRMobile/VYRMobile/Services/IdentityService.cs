@@ -65,6 +65,7 @@ namespace VYRMobile.Services
             {
                 await SecureStorage.SetAsync(pair.Key.ToString(), pair.Value.ToString());
             }
+            App.ApplicationUserId = await SecureStorage.GetAsync("id");
         }
     }
 }

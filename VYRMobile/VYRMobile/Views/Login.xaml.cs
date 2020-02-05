@@ -6,12 +6,12 @@ using VYRMobile.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Newtonsoft.Json;
 
 namespace VYRMobile
 {
     public partial class Login : ContentPage
     {
-        ApplicationUser usuario = new ApplicationUser();
         IdentityViewModel _log = new IdentityViewModel();
 
         public static readonly BindableProperty TryLoginCommandProperty =
@@ -23,10 +23,13 @@ namespace VYRMobile
             InitializeComponent();
             BindingContext = new IdentityViewModel();
 
-            //email.TextChanged += RememberEmail;
-
             TryLoginCommand = new Command(async () => await TryLogin());
             Loginbtn.Clicked += Loginbtn_clicked;
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            RememberUser();
         }
 
         private void Loginbtn_clicked(object sender, EventArgs e)
@@ -36,11 +39,6 @@ namespace VYRMobile
             animation.IsPlaying = true;
         }
 
-        /*private void RememberEmail(object sender, TextChangedEventArgs e)
-        {
-            
-        }*/
-
         public Command TryLoginCommand
         {
             get { return (Command)GetValue(TryLoginCommandProperty); }
@@ -49,33 +47,35 @@ namespace VYRMobile
 
         async Task TryLogin()
         {
-            //Application.Current.MainPage = new NavigationPage(new Utensilios());
-
             if (App.IsUserLoggedIn)
             {
                 animation.IsPlaying = false;
                 await animation.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
-                /*animationCheck.IsVisible = true;
-                await animationCheck.FadeTo(0, 0, Easing.Linear);
-                await animationCheck.FadeTo(100, 50, Easing.Linear);
-                animationCheck.IsPlaying = true;
-                await Task.Delay(100);
-                animationCheck.IsPlaying = false;
-                await animationCheck.FadeTo(0, 50, Easing.Linear);*/
-
-
-                string user = email.Text.ToString();
 
                 if (_log.Checked == true)
                 {
-                    usuario.Email = Preferences.Get(nameof(usuario.Email), user);
-                    Preferences.Set(usuario.Email, user);
+                    string emailText = email.Text.ToString();
+
+                    await SecureStorage.SetAsync("EmailRemembered", emailText);
                 }
 
+                var record = new Record()
+                {
+                    UserId = await SecureStorage.GetAsync("id"),
+                    Type = "Inicio de sesión",
+                    RecordType = Record.RecordTypes.LogIn,
+                    Owner = "Yo",
+                    Date = DateTime.Now,
+                    Icon = "outer.png"
+                };
+
+                App.Records.Add(record);
+                var Records = App.Records;
+                var json = JsonConvert.SerializeObject(Records);
+                Application.Current.Properties["record"] = json;
 
                 Application.Current.MainPage = new NavigationPage(new Utensilios());
-                //await Navigation.PopAsync();
             }
             else
             {
@@ -84,6 +84,13 @@ namespace VYRMobile
                 await animation.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
                 Loginbtn.IsEnabled = true;
+            }
+        }
+        private async void RememberUser()
+        {
+            if(_log.Checked)
+            {
+                email.Text = await SecureStorage.GetAsync("EmailRemembered");
             }
         }
     }

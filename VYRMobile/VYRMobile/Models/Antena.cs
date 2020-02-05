@@ -1,12 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Globalization;
+using MvvmHelpers;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
     
 namespace VYRMobile.Models
-    {
-    public partial class Antena
+{
+    public partial class Antena : ObservableObject
     {
         [JsonProperty("id")]
         public Guid Id { get; set; }
@@ -42,6 +43,7 @@ namespace VYRMobile.Models
             set
             {
                 pointChecked = value;
+                OnPropertyChanged("PointChecked");
             }
         }
     }

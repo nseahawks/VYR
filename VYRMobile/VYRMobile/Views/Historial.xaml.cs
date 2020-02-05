@@ -15,12 +15,21 @@ using Xamarin.Forms.Xaml;
 using ZXing.Net.Mobile.Forms;
 
 using System.Windows.Input;
+using System.IO;
+using VYRMobile.Models;
+using Newtonsoft.Json;
+using Xamarin.Essentials;
+using Plugin.Settings;
+using PCLStorage;
+using VYRMobile.Services;
+using VYRMobile.Helper;
 
 namespace VYRMobile
 {
     public partial class Historial : ContentPage
     {
-        
+        //RecordHelper _record = new RecordHelper();
+        List<Record> Records = new List<Record>();
         public Historial()
         {
             InitializeComponent();
@@ -46,92 +55,19 @@ namespace VYRMobile
 
             };*/
         }
-        
-        
-        /*protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
             base.OnAppearing();
+            LoadRecordList();
         }
-        private async void alert_clicked(object sender, EventArgs e)
+        private void LoadRecordList()
         {
-            await DisplayAlert("Alerta", "ALARMA SEAHAWKS", "ACEPTAR");
-            showMap();
-        }
-
-        private void showMap()
-        {
-            Navigation.PushModalAsync(new Mapa2());
-        }*/
-        /*private void BtnStop_Clicked(object sender, EventArgs e)
-        {
-            btnStop.IsVisible = false;
-            btnStart.IsVisible = true;
-        }
-
-        private void BtnStart_Clicked(object sender, EventArgs e)
-        {
-            btnStart.IsVisible = false;
-            btnStop.IsVisible = true;
-        }*/
-        /*private void QR_Clicked(object sender, EventArgs e)
-        {
-            Escaner();
-        }
-        private async void Escaner()
-        {
-            var scannerPage = new ZXingScannerPage();
-
-            scannerPage.Title = "Lector de QR";
-
-            scannerPage.OnScanResult += (result) =>
+            if (App.Records != null)
             {
-                scannerPage.IsScanning = false;
-                Device.BeginInvokeOnMainThread(() =>
-                {
-                    Navigation.PopModalAsync();
-
-                    DisplayAlert("Valor Obtenido", result.Text, "OK");
-                    seaCheckbox.IsChecked = true;
-                });
-
-
-            };
-
-            await Navigation.PushModalAsync(scannerPage);
-        }
-
-        private void CallFrancisco_clicked(object sender, EventArgs e)
-        {
-            var phoneCallTask = CrossMessaging.Current.PhoneDialer;
-            if (phoneCallTask.CanMakePhoneCall)
-            {
-                phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
+                Records = App.Records;
+                Records = new List<Record>(Records.OrderByDescending(records => records.Date).ToList());
+                recordList.ItemsSource = Records;
             }
-        }*/
-
-        /*async void OnButtonClicked(object sender, EventArgs e)
-            {
-                Geocoder geoCoder = new Geocoder();
-                try
-                {
-                    var locator = CrossGeolocator.Current;
-                    locator.DesiredAccuracy = 50;
-                    var position = await locator.GetPositionAsync(TimeSpan.FromSeconds(2));
-                    double? latitude = Convert.ToDouble(position.Latitude);
-                    double? longitude = Convert.ToDouble(position.Longitude);
-                    if (latitude != null && longitude != null)
-                    {
-                        var revposition = new Position(latitude.Value, longitude.Value);
-                        var possibleAddresses = await geoCoder.GetAddressesForPositionAsync(revposition);
-                        foreach (var address in possibleAddresses)
-                            addressLabel.Text += address + "\n";
-                    }
-                    else addressLabel.Text += "error";
-                }
-                catch (Exception ex)
-                {
-                    await DisplayAlert("Notification", "Unable to get GPS Location " + ex, "Ok");
-                }
-            }*/
+        }
     }
 }

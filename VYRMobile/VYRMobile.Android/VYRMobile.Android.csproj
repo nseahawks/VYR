@@ -82,13 +82,16 @@
       <Version>0.7.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Push">
-      <Version>2.6.1</Version>
+      <Version>2.6.4</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.Net.Http">
       <Version>2.2.29</Version>
     </PackageReference>
     <PackageReference Include="MvvmLight">
       <Version>5.4.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="PCLStorage">
+      <Version>1.0.2</Version>
     </PackageReference>
     <PackageReference Include="Plugin.CloudFirestore">
       <Version>2.0.0</Version>
@@ -109,28 +112,28 @@
       <Version>1.2.0.223</Version>
     </PackageReference>
     <PackageReference Include="SkiaSharp">
-      <Version>1.68.0</Version>
+      <Version>1.68.1.1</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Licensing">
-      <Version>17.3.0.29</Version>
+      <Version>17.4.0.46</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>17.3.0.29</Version>
+      <Version>17.4.0.46</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart">
-      <Version>17.3.0.29</Version>
+      <Version>17.4.0.46</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
-      <Version>17.3.0.29</Version>
+      <Version>17.4.0.46</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
-      <Version>17.3.0.29</Version>
+      <Version>17.4.0.46</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
-      <Version>17.3.0.29</Version>
+      <Version>17.4.0.46</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfTabView">
-      <Version>17.3.0.29</Version>
+      <Version>17.4.0.46</Version>
     </PackageReference>
     <PackageReference Include="Xam.Plugin.DeviceInfo">
       <Version>4.1.1</Version>
@@ -162,17 +165,17 @@
     <PackageReference Include="Xamarin.Firebase.Firestore">
       <Version>71.1705.2</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.3.0.991211" />
+    <PackageReference Include="Xamarin.Forms" Version="4.4.0.991537" />
     <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
     <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
     <PackageReference Include="Xamarin.Forms.GoogleMaps">
       <Version>3.3.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.3.0.991211</Version>
+      <Version>4.4.0.991537</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Guava">
-      <Version>27.1.0</Version>
+      <Version>23.2.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Maps">
       <Version>71.1610.0</Version>
@@ -210,6 +213,7 @@
     <AndroidAsset Include="Assets\check.json" />
     <AndroidAsset Include="Assets\DroidSansMono.ttf" />
     <GoogleServicesJson Include="google-services.json" />
+    <AndroidAsset Include="Assets\record.json" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -446,6 +450,13 @@
     <AndroidResource Include="Resources\drawable\vyr.png" />
     <AndroidResource Include="Resources\drawable\notifyAlarm.png" />
     <AndroidResource Include="Resources\drawable\notifyAlarm2.png" />
+    <AndroidResource Include="Resources\drawable\language.png" />
+    <AndroidResource Include="Resources\drawable\lock.png" />
+    <AndroidResource Include="Resources\drawable\touch.png" />
+    <AndroidResource Include="Resources\drawable\person_outlined.png" />
+    <AndroidResource Include="Resources\drawable\touchWhite.png" />
+    <AndroidResource Include="Resources\drawable\qr.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

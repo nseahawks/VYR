@@ -78,7 +78,6 @@
                 <Setter Property="Color" Value="{StaticResource BaseColor}"/>
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="HorizontalOptions" Value="Center" />
-                <Setter Property="Margin" Value="0, 0, 8, 0" />
             </Style>
 
             <Style x:Key="PhotoStyle" TargetType="Image">
@@ -182,7 +181,8 @@
                                                             <CheckBox
                                                                 Grid.Column="2"
                                                                 IsEnabled="False"
-                                                                IsChecked="{Binding PointChecked}"
+                                                                IsChecked="{Binding IsChecked}"
+                                                                HeightRequest="25"
                                                                 Style="{StaticResource CheckBoxStyle}"/>
                                                         </Grid>
                                                     </ViewCell>

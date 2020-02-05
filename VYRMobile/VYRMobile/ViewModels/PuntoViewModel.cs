@@ -20,13 +20,15 @@ using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
 using Xamarin.Forms.GoogleMaps;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace VYRMobile.ViewModels
 {
     public class PuntoViewModel : INotifyPropertyChanged
     {
         public Stopwatch stopWatch = new Stopwatch();
-        GoogleMapsViewModel MapsViewModel;
+        
 
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
@@ -100,8 +102,8 @@ namespace VYRMobile.ViewModels
         }
 
 
-        private ObservableCollection<Models.Punto> _puntos;
-        public ObservableCollection<Models.Punto> Puntos
+        private ObservableCollection<Punto> _puntos;
+        public ObservableCollection<Punto> Puntos
         {
             get { return _puntos; }
             set
@@ -154,7 +156,8 @@ namespace VYRMobile.ViewModels
                 {
                     StopWatchFinal = (StopWatchSeconds +
                                    "." + StopWatchMilliseconds);
-                }else if (StopWatchHours == "00")
+                }
+                else if (StopWatchHours == "00")
                 {
                     StopWatchFinal = (StopWatchMinutes +
                                   ":" + StopWatchSeconds +
@@ -192,9 +195,10 @@ namespace VYRMobile.ViewModels
             await App.Current.MainPage.Navigation.PopPopupAsync();
             await ShowMap();
             await GetActualLocation();
-            //MapsViewModel.LoadRouteCommand.Execute(null);
+            GoogleMapsViewModel.Instance.LoadRouteCommand2.Execute(null);
             //MapCommand.Execute(null);
         }
+
         public void StartStopwatch()
         {
             stopWatch.Restart();
@@ -215,6 +219,22 @@ namespace VYRMobile.ViewModels
                 if (antenaId == Antenna)
                 {
                     antena.PointChecked = true;
+                    var record = new Record()
+                    {
+                        UserId = await SecureStorage.GetAsync("id"),
+                        Type = "Antena Cubierta",
+                        RecordType = Record.RecordTypes.AntennaCovered,
+                        Owner = antena.LocationName,
+                        Date = DateTime.Now,
+                        Icon = "qr.png"
+                    };
+
+                    App.Records.Add(record);
+                    var Records = App.Records;
+                    var json = JsonConvert.SerializeObject(Records);
+                    Application.Current.Properties["record"] = json;
+
+                    break;
                 }
             }
         }
@@ -251,7 +271,7 @@ namespace VYRMobile.ViewModels
         {
             try
             {
-                var location = await Geolocation.GetLocationAsync();
+                var location = await Geolocation.GetLastKnownLocationAsync();
                 Position position = new Position(location.Latitude, location.Longitude);
 
                 if (location != null)
@@ -259,8 +279,8 @@ namespace VYRMobile.ViewModels
                     Mapa2 mapa = new Mapa2();
                     mapa.OriginLocationlat = position.Latitude.ToString();
                     mapa.OriginLocationlng = position.Longitude.ToString();
-                    mapa.DestinationLocationlat = "18.82011111";
-                    mapa.DestinationLocationlng = "-68.61708333";
+                    mapa.DestinationLocationlat = "18.4047";
+                    mapa.DestinationLocationlng = "-70.0328";
                 }
             }
             catch (Exception ex)
@@ -270,11 +290,13 @@ namespace VYRMobile.ViewModels
         }
         private async Task ShowMap()
         {
-            var menuPage = new MenuPage(); 
-            menuPage.CurrentPage = menuPage.Children[1];
+            await App.Current.MainPage.Navigation.PushAsync(MenuPage.Instance);
+            MenuPage.Instance.ShowMapCommand.Execute(null);
+            /*var menuPage = new MenuPage(); 
+            MenuPage.Instance.CurrentPage = MenuPage.Instance.Children[1];
             await menuPage.CurrentPage.Navigation.PushAsync(new Mapa2());
             App.Current.MainPage = new NavigationPage(menuPage);
-            /*MenuPage menupage = new MenuPage();
+            MenuPage menupage = new MenuPage();
             var pages = menupage.Children.GetEnumerator();
             pages.Reset();
             pages.MoveNext();

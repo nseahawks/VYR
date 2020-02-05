@@ -27,16 +27,15 @@ namespace VYRMobile.Views
             if (isAccepted)
             {
                 string _appId = CrossDeviceInfo.Current.Id;
-                /*var id = CrossCloudFirestore.Current.Instance
+                var id = CrossCloudFirestore.Current.Instance
                                  .GetCollection("usersApp")
-                                 .GetDocument(_appId).Id;*/
+                                 .GetDocument(_appId).Id;
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_appId).SetDataAsync(new { Status = "ACCEPTED"});
                
                 Application.Current.MainPage = new NavigationPage(new Loading());
-
             }
         }
     }

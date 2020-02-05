@@ -6,6 +6,18 @@ namespace VYRMobile.Views
 {
     public partial class MenuPage : TabbedPage
     {
+        public Command ShowMapCommand { get; set; }
+        private static MenuPage _instance;
+        public static MenuPage Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new MenuPage();
+
+                return _instance;
+            }
+        }
         public MenuPage()
         {
             InitializeComponent();
@@ -33,7 +45,7 @@ namespace VYRMobile.Views
             }; 
             NavigationPage user = new NavigationPage(new Usuario())
             {
-                IconImageSource = "usuario2.png",
+                IconImageSource = "touchWhite.png",
                 Title = "Perfil"
             };
 
@@ -48,6 +60,12 @@ namespace VYRMobile.Views
             pages.MoveNext();
             pages.MoveNext();
             CurrentPage = pages.Current;
+
+            ShowMapCommand = new Command(ShowMap);
+        }
+        private void ShowMap()
+        {
+            CurrentPage = Children[1];
         }
     }
 }

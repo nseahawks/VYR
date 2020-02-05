@@ -11,6 +11,9 @@ using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
 using MvvmHelpers;
 using VYRMobile.Data;
+using System.Globalization;
+using VYRMobile.Views;
+using Newtonsoft.Json;
 
 namespace VYRMobile.ViewModels
 {
@@ -19,9 +22,21 @@ namespace VYRMobile.ViewModels
         public Command CalculateRouteCommand { get; set; }
         public Command UpdatePositionCommand { get; set; }
         public Command LoadRouteCommand { get; set; }
+        public Command LoadRouteCommand2 { get; set; }
         public Command StopRouteCommand { get; set; }
         public Command ActualLocationCommand { get; set; }
         SensorSpeed speed = SensorSpeed.Default;
+        private static GoogleMapsViewModel _instance;
+        public static GoogleMapsViewModel Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new GoogleMapsViewModel();
+
+                return _instance;
+            }
+        }
         private string accelerometerData;
         public string AccelerometerData
         {
@@ -60,7 +75,6 @@ namespace VYRMobile.ViewModels
                 }
             }
         }
-            
         public string _originLatitud { get; set; }
         public string _originLongitud { get; set; }
         public string _destinationLatitud { get; set; }
@@ -151,16 +165,16 @@ namespace VYRMobile.ViewModels
             Antennas = new ObservableCollection<Models.Antena>();
             //CalculateRouteCommand = new Command(async () => await Calculate());
             ToggleAccelerometer();
-            Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
+            //Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             LoadRouteCommand = new Command(async () => await LoadRoute());
+            LoadRouteCommand2 = new Command(async () => await LoadRoute2());
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
             //GetPlaceDetailCommand = new Command<GooglePlaceAutoCompletePrediction>(async (param) => await GetPlacesDetail(param));
             //GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
 
-            //LoadAntennas();
+            LoadAntennas();
         }
-
 
         private async void LoadAntennas()
         {
@@ -176,23 +190,36 @@ namespace VYRMobile.ViewModels
         public async Task LoadRoute()
         {
             ActualLocationCommand.Execute(null);
-            var googleDirection = await googleMapsApi.GetDirections(
-               _originLatitud, _originLongitud,
-                _destinationLatitud, _destinationLongitud
-                );
+            var googleDirection = await googleMapsApi.GetDirections(_originLatitud, _originLongitud, _destinationLatitud, _destinationLongitud);
+
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
             {
                 var positions = (Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points)));
                 CalculateRouteCommand.Execute(positions);
 
                 HasRouteRunning = true;
-                           
+
+                var record = new Record()
+                {
+                    UserId = await SecureStorage.GetAsync("id"),
+                    Type = "Ruta Iniciada",
+                    RecordType = Record.RecordTypes.RouteStarted,
+                    Owner = "Yo",
+                    Date = DateTime.Now,
+                    Icon = "startRoute.png"
+                };
+
+                App.Records.Add(record);
+                var Records = App.Records;
+                var json = JsonConvert.SerializeObject(Records);
+                Application.Current.Properties["record"] = json;
+
                 //Location tracking simulation
                 Device.StartTimer(TimeSpan.FromSeconds(1), () =>
                 {
+                    CalculateDistance();
                     if (HasRouteRunning)
                     {
-                        
                         UpdatePositionCommand.Execute(positions);
                         return true;
                     }
@@ -209,13 +236,48 @@ namespace VYRMobile.ViewModels
                            
                         return false;
                     }
+
                 });
             }
             else
             {
                 await App.Current.MainPage.DisplayAlert(":)", "No route found", "Ok");
             }
+        }
+        public async Task LoadRoute2()
+        {
+            await GetActualLocation();
+            _destinationLatitud = "18.4047";
+            _destinationLongitud = "-70.0328";
+            var googleDirection = await googleMapsApi.GetDirections(_originLatitud, _originLongitud,  _destinationLatitud, _destinationLongitud);
 
+            if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
+            {
+                var positions = (Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points)));
+
+                Mapa2.Instance.CalculateCommand2.Execute(positions);
+
+                HasRouteRunning = true;
+
+                //Location tracking simulation
+                Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+                {
+                    CalculateDistance();
+                    if (HasRouteRunning)
+                    {
+                        Mapa2.Instance.UpdateCommand.Execute(positions);
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                });
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert(":)", "No route found", "Ok");
+            }
         }
         public void StopRoute()
         {
@@ -299,7 +361,7 @@ namespace VYRMobile.ViewModels
         //    }
         //}
 
-        void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
+        /*void Accelerometer_ReadingChanged(object sender, AccelerometerChangedEventArgs e)
         {
             var dataX = e.Reading.Acceleration.X.ToString();
             var dataY = e.Reading.Acceleration.Y.ToString();
@@ -308,7 +370,7 @@ namespace VYRMobile.ViewModels
             AccelerometerData = $"{dataX}, {dataY}, {dataZ}";
 
             // Process Acceleration X, Y, and Z
-        }
+        }*/
 
         public void ToggleAccelerometer()
         {
@@ -328,7 +390,42 @@ namespace VYRMobile.ViewModels
                 // Other error has occurred.
             }
         }
+        private async Task CalculateDistance()
+        {
+            PuntoViewModel puntoViewModel = new PuntoViewModel();
+            var myLatitude = double.Parse(this._destinationLatitud);
+            var myLongitude = double.Parse(this._destinationLongitud);
 
+            var myLoc = await Geolocation.GetLastKnownLocationAsync();
+            Location rootLoc = new Location(myLoc.Latitude, myLoc.Longitude);
+            Location destinationLoc = new Location(myLatitude, myLongitude);
+
+            var distance = Location.CalculateDistance(rootLoc, destinationLoc, DistanceUnits.Kilometers);
+
+            if(distance < 0.5)
+            {
+                puntoViewModel.StopCommand.Execute(null);
+                StopRoute();
+            }
+        }
+        private async Task GetActualLocation()
+        {
+            try
+            {
+                var location = await Geolocation.GetLastKnownLocationAsync();
+                Position position = new Position(location.Latitude, location.Longitude);
+
+                if (location != null)
+                {
+                    _originLatitud = position.Latitude.ToString();
+                    _originLongitud = position.Longitude.ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
+            }
+        }
         //public event PropertyChangedEventHandler PropertyChanged;
 
     }

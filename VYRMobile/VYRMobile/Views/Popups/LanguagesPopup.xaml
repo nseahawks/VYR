@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="VYRMobile.Views.Popups.LanguagesPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="100"
+            DurationOut="100"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <Frame
+        BackgroundColor="{StaticResource GrayColor}"
+        CornerRadius="15"
+        HeightRequest="270"
+        WidthRequest="300"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="0"
+        IsClippedToBounds="True">
+        <StackLayout
+            Spacing="0">
+            <Grid
+                BackgroundColor="#EEEEEE"
+                HeightRequest="40"
+                VerticalOptions="Center">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40"/>
+                </Grid.RowDefinitions>
+                <Label 
+                    Text="Idiomas"
+                    FontSize="18"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            </Grid>
+            <Grid
+                Grid.ColumnSpan="1"
+                BackgroundColor="White"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                VerticalOptions="Center">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="300"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <button:SfRadioGroup
+                        Margin="15,15,0,0">
+                    <button:SfRadioButton
+                        HeightRequest="35"
+                        WidthRequest="300"
+                        UncheckedColor="{StaticResource GrayColor}"
+                        CheckedColor="{StaticResource BaseColor}"
+                        IsChecked="True"
+                        HorizontalOptions="Center"
+                        IsEnabled="True"
+                        Text="Español"
+                        TextColor="{StaticResource BlackColor}"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="18"/>
+                    <button:SfRadioButton
+                        HeightRequest="35"
+                        WidthRequest="300"
+                        UncheckedColor="{StaticResource GrayColor}"
+                        CheckedColor="{StaticResource BaseColor}"
+                        IsChecked="False"
+                        HorizontalOptions="Center"
+                        IsEnabled="True"
+                        Text="English"
+                        TextColor="{StaticResource BlackColor}"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="18"/>
+                    <button:SfRadioButton
+                        HeightRequest="35"
+                        WidthRequest="300"
+                        UncheckedColor="{StaticResource GrayColor}"
+                        CheckedColor="{StaticResource BaseColor}"
+                        IsChecked="False"
+                        HorizontalOptions="Center"
+                        IsEnabled="True"
+                        Text="Português"
+                        TextColor="{StaticResource BlackColor}"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="18"/>
+                </button:SfRadioGroup>
+            </Grid>
+            <Grid 
+                BackgroundColor="#EEEEEE"
+                HeightRequest="90">
+                <button:SfButton
+                    x:Name="okButton"
+                    BackgroundColor="{StaticResource BaseColor}"
+                    HeightRequest="45"
+                    WidthRequest="60"
+                    CornerRadius="6"
+                    Text="OK"
+                    TextColor="White"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"
+                    HasShadow="True"/>
+            </Grid>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

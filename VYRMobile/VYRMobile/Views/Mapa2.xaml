@@ -86,6 +86,7 @@
                         HorizontalOptions="Center"/>
         <Button         x:Name="stopRoute"
                         Command="{Binding StopRouteCommand}"
+                        Clicked="ClearPolylines"
                         Text="STOP ROUTE"
                         IsVisible="{Binding HasRouteRunning}"
                         BackgroundColor="#AE220E"

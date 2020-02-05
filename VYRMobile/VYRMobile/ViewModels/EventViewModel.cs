@@ -1,32 +1,48 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Text;
+using VYRMobile.Models;
 using VYRMobile.Services;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VYRMobile.ViewModels
 {
     public class EventViewModel : BindableObject
     {
-        private ObservableCollection<Models.Event> _events;
-        
-        public EventViewModel() 
+        internal static string localPath;
+        string recordItems = "record.json";
+        //List<Record> Events = new List<Record>();
+        private static EventViewModel _instance;
+        public static EventViewModel Instance
         {
-            Events = new ObservableCollection<Models.Event>();
-            LoadData();
-        }
-        public ObservableCollection<Models.Event> Events
-        {
-            get { return _events; }
-            set
+            get
             {
-                _events = value;
-                OnPropertyChanged();
+                if (_instance == null)
+                    _instance = new EventViewModel();
+
+                return _instance;
             }
         }
+        public EventViewModel() 
+        {
+            localPath = Path.Combine(FileSystem.AppDataDirectory, recordItems);
+            //LoadRecords();
+            //LoadData();
+        }
 
-        private void LoadData()
+        private async void LoadRecords()
+        {
+            var stream = await FileSystem.OpenAppPackageFileAsync("record.json");
+            StreamReader reader = new StreamReader(stream);
+            var json = await reader.ReadToEndAsync();
+            //Events = JsonConvert.DeserializeObject<List<Record>>(json);
+        }
+
+        /*private void LoadData()
         {
             var events = EventService.Instance.GetEvents();
 
@@ -35,6 +51,6 @@ namespace VYRMobile.ViewModels
             {
                 Events.Add(evento);
             }
-        }
+        }*/
     }
 }

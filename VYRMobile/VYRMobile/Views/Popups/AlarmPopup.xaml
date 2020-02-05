@@ -26,6 +26,7 @@
         WidthRequest="300"
         VerticalOptions="Center"
         HorizontalOptions="Center"
+        HasShadow="True"
         Padding="0">
         <StackLayout
             VerticalOptions="Center"

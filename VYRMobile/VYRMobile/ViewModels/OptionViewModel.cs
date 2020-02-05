@@ -56,7 +56,7 @@ namespace VYRMobile.ViewModels
         }
         private async Task PushConfiguracion()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Configuracion()));
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ConfiguracionPage()));
         }
         private async Task PushEquipamiento()
         {

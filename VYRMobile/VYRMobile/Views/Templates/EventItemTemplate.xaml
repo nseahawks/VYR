@@ -3,8 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:converter="clr-namespace:VYRMobile.Controllers"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Templates.EventItemTemplate">
+
     <ContentView.Resources>
         <Style x:Key="LineStyle" TargetType="BoxView">
             <Setter Property="HorizontalOptions" Value="Start" />
@@ -44,6 +46,9 @@
             <Setter Property="Margin" Value="16, 0, 0, 0" />
         </Style>
 
+        <ResourceDictionary>
+            <converter:IntEnumConverter x:Key="IntEnum"/>
+        </ResourceDictionary>
     </ContentView.Resources>
     <ContentView.Content>
         <Grid
@@ -63,13 +68,13 @@
                 Grid.RowSpan="4"
                 BackgroundColor="#005EB2"
                 Style="{StaticResource LineStyle}" />
-            <Image  Source="{Binding EventIcon}"
+            <Image  Source="{Binding Icon}"
                     Grid.Row="0"
                     Aspect="AspectFit"
                     Style="{StaticResource PhotoStyle}"/>
             <Label
                 Grid.Row="0"
-                Text="{Binding EventName}"
+                Text="{Binding Type}"
                 Style="{StaticResource NameTextStyle}"/>
             <Label
                 Grid.Row="0"
@@ -77,7 +82,7 @@
                 Style="{StaticResource CategoryTextStyle}"/>
             <Label
                 Grid.Row="0"
-                Text="{Binding Time}"
+                Text="{Binding Date}"
                 Style="{StaticResource TimeTextStyle}"/>
 
         </Grid>

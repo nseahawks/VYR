@@ -48,8 +48,6 @@ namespace VYRMobile
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            antenasView.ItemsSource = null;
-            antenasView.ItemsSource = pvm.Puntos;
         }
 
         public void LoadView()
@@ -104,7 +102,7 @@ namespace VYRMobile
 
         private async void btnCall_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushPopupAsync(new AlarmPopup());
+            await Navigation.PushPopupAsync(new CallPopup());
         }
     }
 }
