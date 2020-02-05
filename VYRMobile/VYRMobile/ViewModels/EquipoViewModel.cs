@@ -22,9 +22,9 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
-        private void LoadData()
+        private async void LoadData()
         {
-            var equipos = EquipoService.Instance.GetEquipos();
+            var equipos = await EquipoService.Instance.GetEquipos();
             Equipos.Clear();
             foreach (var equipo in equipos)
             {

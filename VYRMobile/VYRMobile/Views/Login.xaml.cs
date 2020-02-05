@@ -6,6 +6,7 @@ using VYRMobile.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.CloudFirestore;
 
 namespace VYRMobile
 {
@@ -50,7 +51,7 @@ namespace VYRMobile
         async Task TryLogin()
         {
             //Application.Current.MainPage = new NavigationPage(new Utensilios());
-
+            string _userId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn)
             {
                 animation.IsPlaying = false;
@@ -63,7 +64,12 @@ namespace VYRMobile
                 await Task.Delay(100);
                 animationCheck.IsPlaying = false;
                 await animationCheck.FadeTo(0, 50, Easing.Linear);*/
+                
 
+                await CrossCloudFirestore.Current.Instance
+                                          .GetCollection("usersApp")
+                                          .GetDocument(_userId)
+                                          .UpdateDataAsync(new { LoggedIn = true});
 
                 string user = email.Text.ToString();
 
@@ -79,6 +85,10 @@ namespace VYRMobile
             }
             else
             {
+                await CrossCloudFirestore.Current.Instance
+                                         .GetCollection("usersApp")
+                                         .GetDocument(_userId)
+                                         .UpdateDataAsync(new { LoggedIn = false });
                 //Login Failed
                 await DisplayAlert("Login Failed", $"Verifique su usuario y contraseña", "Ok");
                 await animation.FadeTo(0, 100, Easing.Linear);

@@ -16,10 +16,9 @@ namespace VYRMobile.Helper
             get => Preferences.Get(nameof(Token), "");
             set => Preferences.Set(nameof(Token), value);
         }
-
         public ApiHelper()
         {
-            BaseAddress = new Uri("https://vyr-x.azurewebsites.net");
+            BaseAddress = new Uri("https://api-dot-vyrproyect-1571249849268.appspot.com");
             DefaultRequestHeaders.Accept
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
             DefaultRequestHeaders.Authorization =
@@ -30,6 +29,6 @@ namespace VYRMobile.Helper
 
             //}
         }
-        
+
     }
 }

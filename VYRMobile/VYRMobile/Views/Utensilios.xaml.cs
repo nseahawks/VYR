@@ -1,13 +1,9 @@
 ﻿using Plugin.CloudFirestore;
 using Plugin.DeviceInfo;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VYRMobile.ViewModels;
+using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
 {
@@ -26,17 +22,14 @@ namespace VYRMobile.Views
             isAccepted = await DisplayAlert("Confirmación", "¿Acepta los términos y condiciones de uso?", "ACEPTAR", "CANCELAR");
             if (isAccepted)
             {
-                string _appId = CrossDeviceInfo.Current.Id;
-                /*var id = CrossCloudFirestore.Current.Instance
-                                 .GetCollection("usersApp")
-                                 .GetDocument(_appId).Id;*/
+                string _userId = await SecureStorage.GetAsync("id");
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
-                                          .GetDocument(_appId).SetDataAsync(new { Status = "ACCEPTED"});
-               
-                Application.Current.MainPage = new NavigationPage(new Loading());
+                                          .GetDocument(_userId)
+                                          .UpdateDataAsync(new { Status = "WAITING" });
 
+                Application.Current.MainPage = new NavigationPage(new Loading());
             }
         }
     }
