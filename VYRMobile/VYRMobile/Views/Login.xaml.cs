@@ -6,6 +6,7 @@ using VYRMobile.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Plugin.CloudFirestore;
 using Newtonsoft.Json;
 
 namespace VYRMobile
@@ -47,16 +48,28 @@ namespace VYRMobile
 
         async Task TryLogin()
         {
+            //Application.Current.MainPage = new NavigationPage(new Utensilios());
+            string _userId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn)
             {
                 animation.IsPlaying = false;
                 await animation.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
+                /*animationCheck.IsVisible = true;
+                await animationCheck.FadeTo(0, 0, Easing.Linear);
+                await animationCheck.FadeTo(100, 50, Easing.Linear);
+                animationCheck.IsPlaying = true;
+                await Task.Delay(100);
+                animationCheck.IsPlaying = false;
+                await animationCheck.FadeTo(0, 50, Easing.Linear);*/
 
-                if (_log.Checked == true)
-                {
-                    string emailText = email.Text.ToString();
 
+                await CrossCloudFirestore.Current.Instance
+                                          .GetCollection("usersApp")
+                                          .GetDocument(_userId)
+                                          .UpdateDataAsync(new { LoggedIn = true});
+
+                string user = email.Text.ToString();
                     await SecureStorage.SetAsync("EmailRemembered", emailText);
                 }
 
@@ -79,6 +92,10 @@ namespace VYRMobile
             }
             else
             {
+                await CrossCloudFirestore.Current.Instance
+                                         .GetCollection("usersApp")
+                                         .GetDocument(_userId)
+                                         .UpdateDataAsync(new { LoggedIn = false });
                 //Login Failed
                 await DisplayAlert("Login Failed", $"Verifique su usuario y contraseña", "Ok");
                 await animation.FadeTo(0, 100, Easing.Linear);
