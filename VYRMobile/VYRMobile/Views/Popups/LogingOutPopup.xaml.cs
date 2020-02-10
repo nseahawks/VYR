@@ -6,7 +6,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -32,11 +31,12 @@ namespace VYRMobile.Views.Popups
         {
             await Task.Delay(50);
 
-            string _appId = CrossDeviceInfo.Current.Id;
+            string _userId = App.ApplicationUserId;
 
             await CrossCloudFirestore.Current.Instance
                                       .GetCollection("usersApp")
-                                      .GetDocument(_appId).SetDataAsync(new { Status = "CANCELED" });
+                                      .GetDocument(_userId)
+                                      .UpdateDataAsync(new { LoggedIn = false });
 
             Navigation.InsertPageBefore(new Login(), Navigation.NavigationStack[0]);
             await Navigation.PopPopupAsync();

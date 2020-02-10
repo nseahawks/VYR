@@ -18,10 +18,6 @@ namespace VYRMobile.Views
         {
             BindingContext = new ViewModels.ChartViewModel();
             InitializeComponent();
-
-            
-
-            //var chart = new BarChart() { Entries = entries };
         }
     }
 }

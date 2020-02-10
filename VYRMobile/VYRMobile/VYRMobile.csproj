@@ -47,6 +47,7 @@
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox" Version="17.4.0.46" />
     <PackageReference Include="Syncfusion.Xamarin.SfPicker" Version="17.4.0.46" />
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout" Version="17.4.0.46" />
+    <PackageReference Include="Syncfusion.Xamarin.SfProgressBar" Version="17.4.0.46" />
     <PackageReference Include="Syncfusion.Xamarin.SfTabView" Version="17.4.0.46" />
     <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="5.6.0" />
     <PackageReference Include="Xam.Plugin.DeviceInfo" Version="4.1.1" />

@@ -191,7 +191,7 @@ namespace VYRMobile.ViewModels
 
         private async void Alert() 
         {
-            StartStopwatch();
+            stopWatch.Start();
             await App.Current.MainPage.Navigation.PopPopupAsync();
             await ShowMap();
             await GetActualLocation();
@@ -219,6 +219,7 @@ namespace VYRMobile.ViewModels
                 if (antenaId == Antenna)
                 {
                     antena.PointChecked = true;
+
                     var record = new Record()
                     {
                         UserId = await SecureStorage.GetAsync("id"),

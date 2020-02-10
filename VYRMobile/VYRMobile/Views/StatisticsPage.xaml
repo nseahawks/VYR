@@ -1,9 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
+             xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.StatisticsPage"
              BackgroundColor="White"
@@ -15,34 +17,36 @@
                 FontFamily="{StaticResource PoppinsBold}"
                 TextColor="{StaticResource BlackColor}"
                 FontSize="18"
-                HorizontalOptions="Center"
-                Margin="0, 15, 0, 0"/>
-            <chart:SfChart>
-                <chart:SfChart.PrimaryAxis>
-                    <chart:CategoryAxis/>
-                </chart:SfChart.PrimaryAxis>
-                <chart:SfChart.SecondaryAxis>
-                    <chart:NumericalAxis/>
-                </chart:SfChart.SecondaryAxis>
-                <chart:BarSeries 
-                    x:Name="BarChart"
-                    Color="{StaticResource BaseColor}"
-                    ColorModel="{StaticResource BaseColor}"
-                    StrokeColor="Green"
-                    CornerRadius="6"
-                    DataMarkerPosition="Top"
-                    Width="0.5"
-                    ItemsSource="{Binding Data}" 
-                    XBindingPath="Month" 
-                    YBindingPath="Target"/>
-            </chart:SfChart>
+                HorizontalOptions="Start"
+                Margin="20, 15, 0, 0"/>
+            <progressBar:SfLinearProgressBar 
+                Progress="100"
+                HeightRequest="20"
+                TrackHeight="20"
+                MinimumHeightRequest="20"
+                ProgressColor="#00F90C"
+                Margin="20, 0, 20, 0"
+                CornerRadius="30"
+                BackgroundColor="{StaticResource BoneColor}"
+                SegmentCount="3"
+                ProgressCompleted="SfLinearProgressBar_ProgressCompleted"/>
+            <forms:AnimationView 
+                x:Name="animation"
+                IsVisible="False"
+	            Animation="complete.json" 
+                IsEnabled="False"
+	            AutoPlay="false"
+                WidthRequest="100"
+                HeightRequest="100"
+	            VerticalOptions="Center"
+	            HorizontalOptions="Center" />
             <Label 
                 Text="Gráfica:"
                 FontFamily="{StaticResource PoppinsBold}"
                 TextColor="{StaticResource BlackColor}"
                 FontSize="18"
                 HorizontalOptions="Center"
-                Margin="0, 15, 0, 0"/>
+                Margin="20, 15, 0, 0"/>
             <chart:SfChart>
                 <chart:SfChart.PrimaryAxis>
                     <chart:CategoryAxis/>
@@ -52,12 +56,10 @@
                 </chart:SfChart.SecondaryAxis>
                 <chart:RadarSeries 
                     x:Name="RadarChart"
-                    SelectedDataPointColor="Purple"
-                    ColorModel="{StaticResource BaseColor}"
-                    StrokeColor="Green"
                     ItemsSource="{Binding Data}" 
-                    DrawType="Line"
-                    Color="{StaticResource BaseColor}"
+                    DrawType="Area"
+                    StrokeColor="OrangeRed"
+                    Color="LightCoral"
                     XBindingPath="Month" 
                     YBindingPath="Target">
                 </chart:RadarSeries>

@@ -13,13 +13,13 @@ namespace VYRMobile.ViewModels
         public StatsViewModel()
         {
             Data = new ObservableCollection<Stat>()
-        {
-            new Stat("Educacion", 50),
-            new Stat("Respeto", 70),
-            new Stat("Puntualidad", 65),
-            new Stat("Comportamiento", 57),
-            new Stat("Incidentes", 48),
-        };
+            {
+                new Stat("Educacion", 50),
+                new Stat("Respeto", 70),
+                new Stat("Puntualidad", 65),
+                new Stat("Comportamiento", 57),
+                new Stat("Incidentes", 48),
+            };
         }
     }
 }

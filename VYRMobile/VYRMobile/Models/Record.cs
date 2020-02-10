@@ -28,6 +28,7 @@ namespace VYRMobile.Models
         public enum RecordTypes
         {
             LogIn,
+            LogOut,
             AlarmAccepted,
             AlarmAssisted,
             RouteStarted,

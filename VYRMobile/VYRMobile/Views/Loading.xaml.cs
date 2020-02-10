@@ -24,7 +24,7 @@ namespace VYRMobile.Views
         protected async override void OnAppearing()
         {
             base.OnAppearing();
-            _userId = await SecureStorage.GetAsync("id");
+            /*_userId = await SecureStorage.GetAsync("id");
             var document = CrossCloudFirestore.Current.Instance
                  .GetCollection("usersApp")
             .GetDocument(_userId)
@@ -36,22 +36,21 @@ namespace VYRMobile.Views
                 {
                     isWaiting = false;
                     Application.Current.MainPage = new NavigationPage(new MenuPage());
-
                 }
                 else if (test == "CANCELED")
                 {
                     isWaiting = false;
                     App.IsUserLoggedIn = false;
                     Application.Current.MainPage = new NavigationPage(new Login());
-
                 }
                 else
                 {
                     isWaiting = true;
                 }
-            });
+            });*/
 
-            isWaiting = true;
+            isWaiting = false;
+            Application.Current.MainPage = new NavigationPage(new MenuPage());
         }
 
         protected override void OnDisappearing()

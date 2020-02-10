@@ -27,42 +27,11 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
             BindingContext = new CallViewModel();
-
-            btnSave.Clicked += SaveRecord;
-            btnGet.Clicked += BtnGet_Clicked;
-
-            localPath = Path.Combine(FileSystem.AppDataDirectory, recordItems);
-            //btn.Clicked += Btn_Clicked;
         }
 
-        private async void BtnGet_Clicked(object sender, EventArgs e)
+        private void switch_Toggled(object sender, ToggledEventArgs e)
         {
-            //string path = localPath + "/" + fileName;
-            string json = await File.ReadAllTextAsync(localPath);
-            //string jsonn = json.ToString();
-            Record response = JsonConvert.DeserializeObject<Record>(json);
 
-            lblType.Text = response.RecordType.ToString();
-            lblOwner.Text = response.Owner;
-            lblDate.Text = response.Date.ToString();
-            img.Source = response.Icon;
-        }
-
-        private async void SaveRecord(object sender, EventArgs e)
-        {
-            List<Record> Records = new List<Record>();
-            var record = new Record()
-            {
-                UserId = await SecureStorage.GetAsync("id"),
-                RecordType = Record.RecordTypes.Call,
-                Icon = "callM.png",
-                Owner = "Yo",
-                Date = DateTime.Now
-            };
-
-            Records.Add(record);
-            var serializedRecords = JsonConvert.SerializeObject(Records);
-            await File.WriteAllTextAsync(localPath, serializedRecords, Encoding.UTF8);
         }
     }
 }

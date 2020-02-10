@@ -102,7 +102,7 @@ namespace VYRMobile
 
         private async void btnCall_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushPopupAsync(new CallPopup());
+            await Navigation.PushPopupAsync(new AlarmPopup());
         }
     }
 }

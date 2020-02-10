@@ -45,25 +45,26 @@ namespace VYRMobile.Data
             if (report == null || !IsConnected)
                 return false;
 
+            DateTime date = DateTime.UtcNow;
             UserId = await SecureStorage.GetAsync("id");
             ImagesStreams = App.ImagesStreams;
             ImagesNames = App.ImagesNames;
 
             if (ImagesStreams != null & ImagesNames != null)
             {
-                await _firebase.RunList(ImagesStreams, ImagesNames, UserId, report.Created);
-                report.Image = await _firebase.GetLinks(ImagesNames, UserId, report.Created);
+                await _firebase.RunList(ImagesStreams, ImagesNames, UserId, date);
+                report.Img = await _firebase.GetLink(ImagesNames, UserId, date);
             }
 
             var responseReport = new Report()
             {
                 Title = report.Title,
                 ReportType = report.ReportType,
-                Created = DateTime.UtcNow,
+                Created = date,
                 Description = report.Description,
                 Address = "",
                 ReportStatus = report.ReportStatus,
-                Image = report.Image
+                Img = report.Img
             };
 
             string serializedData = JsonConvert.SerializeObject(responseReport);

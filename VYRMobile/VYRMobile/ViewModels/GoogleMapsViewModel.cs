@@ -150,8 +150,8 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        private ObservableCollection<Models.Antena> _antennas;
-        public ObservableCollection<Models.Antena> Antennas
+        private ObservableCollection<Antena> _antennas;
+        public ObservableCollection<Antena> Antennas
         {
             get { return _antennas; }
             set
@@ -162,16 +162,12 @@ namespace VYRMobile.ViewModels
         }
         public GoogleMapsViewModel()
         {
-            Antennas = new ObservableCollection<Models.Antena>();
-            //CalculateRouteCommand = new Command(async () => await Calculate());
+            Antennas = new ObservableCollection<Antena>();
             ToggleAccelerometer();
-            //Accelerometer.ReadingChanged += Accelerometer_ReadingChanged;
             LoadRouteCommand = new Command(async () => await LoadRoute());
             LoadRouteCommand2 = new Command(async () => await LoadRoute2());
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
-            //GetPlaceDetailCommand = new Command<GooglePlaceAutoCompletePrediction>(async (param) => await GetPlacesDetail(param));
-            //GetLocationNameCommand = new Command<Position>(async (param) => await GetLocationName(param));
 
             LoadAntennas();
         }
@@ -406,6 +402,8 @@ namespace VYRMobile.ViewModels
             {
                 puntoViewModel.StopCommand.Execute(null);
                 StopRoute();
+                Mapa2.Instance.PolylinesCommand.Execute(null);
+                await App.Current.MainPage.DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
             }
         }
         private async Task GetActualLocation()

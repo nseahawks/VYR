@@ -79,8 +79,8 @@ namespace VYRMobile.Models
             get => description; 
             set => SetProperty(ref description, value); 
         }
-        List<string> img;
-        public List<string> Image { 
+        string img;
+        public string Img { 
             get => img;
             set => SetProperty(ref img, value); 
         }

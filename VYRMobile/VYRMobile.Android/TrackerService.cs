@@ -71,21 +71,19 @@ namespace VYRMobile.Droid
             }
             else
             {
-
-
-            while (!cts.IsCancellationRequested)
-            {
-                try
+                while (!cts.IsCancellationRequested)
                 {
+                    try
+                    {
                     //IDocumentReference reference;
 
-                    var request = new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMilliseconds(1000));
-                    var location = await Geolocation.GetLocationAsync(request);
+                        var request = new GeolocationRequest(GeolocationAccuracy.Default, TimeSpan.FromMilliseconds(1000));
+                        var location = await Geolocation.GetLocationAsync(request);
 
-                    if (location == null)
-                    {
-                        location = await Geolocation.GetLastKnownLocationAsync();
-                    }
+                        if (location == null)
+                        {
+                            location = await Geolocation.GetLastKnownLocationAsync();
+                        }
 
                     //if (CrossDeviceInfo.IsSupported)
                     //{
@@ -129,13 +127,13 @@ namespace VYRMobile.Droid
                     //        deviceId = _appId;
                     //}
 
-                    await CrossCloudFirestore.Current
-                    .Instance
-                    .GetCollection("usersApp")
-                    .GetDocument(id)
-                    .GetCollection("Devices")
-                    .GetDocument(await SecureStorage.GetAsync("device_id"))
-                    .GetCollection("Locations").AddDocumentAsync(location);
+                        await CrossCloudFirestore.Current
+                        .Instance
+                        .GetCollection("usersApp")
+                        .GetDocument(id)
+                        .GetCollection("Devices")
+                        .GetDocument(await SecureStorage.GetAsync("device_id"))
+                        .GetCollection("Locations").AddDocumentAsync(location);
 
                     //await CrossCloudFirestore.Current
                     //    .Instance.RunTransactionAsync((transaction) =>
@@ -145,16 +143,14 @@ namespace VYRMobile.Droid
                     //        transaction.UpdateData(reference, location);
                     //    });
                         
-                    await Task.Delay(TimeSpan.FromSeconds(5));
+                        await Task.Delay(TimeSpan.FromSeconds(5));
+                        }
+                        catch (System.OperationCanceledException)
+                        {
+                            return;
+                        }
                 }
-                catch (System.OperationCanceledException)
-                {
-                    return;
-                }
-            }
             }
         }
-
-   
     }
 }

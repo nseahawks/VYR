@@ -24,6 +24,7 @@ namespace VYRMobile.Views
         private double RouteDistance;
         LineHelper liner = new LineHelper();
         public Command CalculateCommand2 { get; set; }
+        public Command PolylinesCommand { get; set; }
 
         public static readonly BindableProperty CalculateCommandProperty =
            BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
@@ -85,12 +86,14 @@ namespace VYRMobile.Views
             CalculateCommand2 = new Command<List<Position>>(Calculate2);
 
             UpdateCommand = new Command<List<Position>>(Update);
+            PolylinesCommand = new Command(ClearPolylinesCommand);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
             startRoute.IsEnabled = false;
             Pin seahawksPin = null;
             seahawksPin = new Pin()
             {
                 Type = PinType.SavedPin,
+                Icon = BitmapDescriptorFactory.FromBundle("mapAntenna.png"),
                 Label = "Negocios Seahawks",
                 Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
                 Position = new Position(18.461294, -69.948531),
@@ -128,6 +131,7 @@ namespace VYRMobile.Views
                 {
                     Type = PinType.SavedPin,
                     Label = antenna.LocationName,
+                    Icon = BitmapDescriptorFactory.FromBundle("mapAntenna.png"),
                     Address = antenna.Address,
                     Position = new Position(antenna.Latitude, antenna.Longitude),
                     Tag = antenna.Id
@@ -136,8 +140,12 @@ namespace VYRMobile.Views
                 map.Pins.Add(antennaPin);
             }
         }
-
-        private void ClearPolylines(Object sender, EventArgs e)
+        private async void ClearPolylines(Object sender, EventArgs e)
+        {
+            map.Polylines.Clear();
+            await DisplayAlert("Ruta detenida", "Has cancelado el progreso de la ruta", "OK");
+        }
+        private void ClearPolylinesCommand()
         {
             map.Polylines.Clear();
         }
@@ -261,7 +269,7 @@ namespace VYRMobile.Views
         {
             var location = await Geolocation.GetLastKnownLocationAsync();
             Position myPosition = new Position(location.Latitude, location.Longitude);
-            this.map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(5000)));
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(1000)));
         }
         public Command CalculateCommand
         {
@@ -442,9 +450,10 @@ namespace VYRMobile.Views
                 //cPin.Position = new Position(position.Latitude, position.Longitude);
                 //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(position.Latitude, position.Longitude)));
 
-                MoveCamera();
-                /*await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
-                    new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),18d,CData,TData)));*/
+                //MoveCamera();
+                
+                await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+                    new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),18d,CData,TData)));
                 //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
                 //new Position(
                 //    position.Latitude,

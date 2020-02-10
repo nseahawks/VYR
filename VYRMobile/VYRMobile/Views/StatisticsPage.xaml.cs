@@ -18,5 +18,19 @@ namespace VYRMobile.Views
 
             BindingContext = new StatsViewModel();
         }
+        /*protected override void OnAppearing()
+        {
+        }*/
+        protected override void OnDisappearing()
+        {
+            animation.IsVisible = false;
+            animation.IsPlaying = false;
+        }
+
+        private void SfLinearProgressBar_ProgressCompleted(object sender, Syncfusion.XForms.ProgressBar.ProgressValueEventArgs e)
+        {
+            animation.IsVisible = true;
+            animation.IsPlaying = true;
+        }
     }
 }

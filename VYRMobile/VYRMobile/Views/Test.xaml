@@ -12,12 +12,22 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
-            <Button x:Name="btnSave" Text="Save"/>
-            <Button x:Name="btnGet" Text="Get"/>
-            <Label x:Name="lblType"/>
-            <Label x:Name="lblOwner"/>
-            <Label x:Name="lblDate"/>
-            <Image x:Name="img"/>
+            <Frame
+                HeightRequest="100"
+                WidthRequest="200"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsClippedToBounds="True"
+                Padding="0"
+                HasShadow="True">
+                <Image
+                    Source="face.jpg"
+                    Aspect="AspectFill"/>
+            </Frame>
+            <Switch
+                x:Name="switch"
+                Toggled="switch_Toggled"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

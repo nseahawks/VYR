@@ -55,23 +55,18 @@ namespace VYRMobile
                 animation.IsPlaying = false;
                 await animation.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
-                /*animationCheck.IsVisible = true;
-                await animationCheck.FadeTo(0, 0, Easing.Linear);
-                await animationCheck.FadeTo(100, 50, Easing.Linear);
-                animationCheck.IsPlaying = true;
-                await Task.Delay(100);
-                animationCheck.IsPlaying = false;
-                await animationCheck.FadeTo(0, 50, Easing.Linear);*/
 
+                CrossCloudFirestore.Current.Instance
+                                          .GetCollection("usersApp")
+                                          .GetDocument(_userId);
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_userId)
-                                          .UpdateDataAsync(new { LoggedIn = true});
+                                          .SetDataAsync(new { LoggedIn = true });
 
                 string user = email.Text.ToString();
-                    await SecureStorage.SetAsync("EmailRemembered", emailText);
-                }
+                await SecureStorage.SetAsync("EmailRemembered", user);
 
                 var record = new Record()
                 {
@@ -102,6 +97,7 @@ namespace VYRMobile
                 animation.IsVisible = false;
                 Loginbtn.IsEnabled = true;
             }
+            
         }
         private async void RememberUser()
         {

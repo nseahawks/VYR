@@ -33,15 +33,22 @@ namespace VYRMobile.Helper
             return imageUrl;
         }
 
-        public async Task<List<string>> GetLinks(List<string> Names, string UserId, DateTime date)
+        public async Task<string> GetLink(List<string> Names, string UserId, DateTime date)
         {
-            List<string> Links = new List<string>();
+            string Link = null;
 
             foreach (var name in Names)
             {
-                Links.Add(await GetFile(name, UserId, date));
+                if (Link == null)
+                {
+                    Link = await GetFile(name, UserId, date);
+                }
+                else
+                {
+                    Link = Link + ", " + await GetFile(name, UserId, date);
+                }
             }
-            return Links;
+            return Link;
         }
         public async Task<string> GetFile(string imageName, string UserId, DateTime date)
         {
@@ -49,7 +56,7 @@ namespace VYRMobile.Helper
             .Child("Report")
             .Child(UserId)
             .Child(date.ToShortTimeString())
-            //.Child(imageName)
+            .Child(imageName)
             .GetDownloadUrlAsync();
 
             return imageURL;

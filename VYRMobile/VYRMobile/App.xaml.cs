@@ -36,9 +36,9 @@ namespace VYRMobile
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjA0NTM1QDMxMzcyZTM0MmUzMG9ONVZEbnYzTDU4OTFaYnpTVW42YUpGME9ZSU90aXVCWi81WTZ4RHNlcDQ9");
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
-            CreateDirectory();
+            //CreateDirectory();
 
-            MainPage = new Login();
+            MainPage = new Test();
         }
         protected override void OnStart()
         {
