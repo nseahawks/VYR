@@ -1,0 +1,378 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.EvaluationPage"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="White"
+             Title="Ficha de evaluación">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="attach2.png" 
+                     x:Name="btnAttach"
+                     Clicked="btnAttach_Clicked"/>
+        <ToolbarItem IconImageSource="camera.png" 
+                     x:Name="btnPhoto"
+                     Clicked="btnPhoto_Clicked"/>
+        <ToolbarItem IconImageSource="send2.png"
+                     x:Name="btnEnviar"/>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="LabelStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
+                <Setter Property="FontSize" Value="16"/>
+                <Setter Property="VerticalOptions" Value="Center"/>
+                <Setter Property="Margin" Value="10,0,0,0"/>
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <ScrollView
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                AbsoluteLayout.LayoutFlags="All"
+                x:Name="pageScroll">
+                <StackLayout
+                    Margin="0, 15, 0, 0">
+                    <StackLayout
+                        Orientation="Horizontal"
+                        HorizontalOptions="Center">
+                        <Image
+                            Source="user2.png"
+                            HeightRequest="25"
+                            WidthRequest="25"/>
+                        <Label
+                            Text="Trabajador:"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="20"
+                            VerticalOptions="Center"
+                            HorizontalOptions="Start"/>
+                    </StackLayout>
+                    <Label
+                        x:Name="userLabel"
+                        TextColor="Black"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="18"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    <Label
+                        Text="Seleccionar fecha:"
+                        TextColor="{StaticResource GrayColor}"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="18"
+                        Margin="15, 20, 0, 0"/>
+                    <DatePicker
+                        MinimumDate="02/01/2020"
+                        MaximumDate="02/29/2020"
+                        Date="02/10/2020"
+                        FontSize="16"
+                        WidthRequest="80"
+                        TextColor="Black"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        Margin="15, 0, 15, 0"/>
+                    <StackLayout
+                        Orientation="Horizontal"
+                        Margin="15, 20, 0, 0">
+                        <Label
+                            Text="Editar segmento"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="18"/>
+                        <Switch
+                            IsToggled="False"
+                            ThumbColor="{StaticResource BaseColor}"
+                            OnColor="{StaticResource BaseColor}"
+                            Toggled="Switch_Toggled"/>
+                    </StackLayout>
+                    <StackLayout
+                        x:Name="segmentLayout"
+                        Opacity="0.5"
+                        IsEnabled="False"
+                        Margin="15, 0, 15, 0">
+                        <Label
+                            Text="Rellene los siguientes campos según su porcentaje:"
+                            TextColor="{StaticResource GrayColor}"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="18"/>
+                        <Label
+                            Text="Respeto hacia los compañeros y superiores"
+                            TextColor="{StaticResource GrayColor}"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="0, 20, 0, 0"/>
+                        <Slider
+                            x:Name="slider1"
+                            MinimumTrackColor="{StaticResource BaseColor}"
+                            ThumbColor="{StaticResource BaseColor}"
+                            Maximum="100"/>
+                        <Label
+                            x:Name="lbl1"
+                            Text="{Binding Source={x:Reference slider1}, Path=Value, StringFormat='{0:F0}%'}"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"/>
+                        <Editor
+                            x:Name="editor1"
+                            Placeholder="Comentarios..."
+                            PlaceholderColor="DarkGray"
+                            BackgroundColor="#F9F8F8"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            HeightRequest="100"
+                            HorizontalOptions="FillAndExpand"/>
+                        <Label
+                            Text="Educación mostrada por el trabajador"
+                            TextColor="{StaticResource GrayColor}"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"/>
+                        <Slider
+                            x:Name="slider2"
+                            MinimumTrackColor="{StaticResource BaseColor}"
+                            ThumbColor="{StaticResource BaseColor}"
+                            Maximum="100"/>
+                        <Label
+                            x:Name="lbl2"
+                            Text="{Binding Source={x:Reference slider2}, Path=Value, StringFormat='{0:F0}%'}"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"/>
+                        <Editor
+                            x:Name="editor2"
+                            Placeholder="Comentarios..."
+                            PlaceholderColor="DarkGray"
+                            BackgroundColor="#F9F8F8"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            HeightRequest="100"
+                            HorizontalOptions="FillAndExpand"/>
+                    </StackLayout>
+                    <button:SfButton
+                        x:Name="btnFaltas"
+                        Text="Añadir faltas"
+                        BackgroundColor="{StaticResource BaseColor}"
+                        TextColor="White"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="18"
+                        Clicked="btnFaltas_Clicked"
+                        HasShadow="True"
+                        HeightRequest="40"
+                        WidthRequest="140"
+                        CornerRadius="6"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Start"
+                        Margin="15,10,0,0"/>
+                    <StackLayout
+                        x:Name="faultList">
+                        <Frame
+                            BackgroundColor="#F9F8F8"
+                            HeightRequest="36"
+                            WidthRequest="120"
+                            CornerRadius="20"
+                            IsClippedToBounds="True"
+                            HasShadow="True"
+                            Padding="0"
+                            Margin="15, 0, 15, 0">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                HorizontalOptions="FillAndExpand">
+                                <Label 
+                                    Text="Uso inadecuado de las armas"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource PoppinsMedium}"
+                                    FontSize="16"
+                                    VerticalOptions="Center"
+                                    Margin="10,0,0,0"/>
+                                <Image
+                                    Source="clear.png"
+                                    HeightRequest="35"
+                                    WidthRequest="35"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="End"
+                                    Margin="0, 0, 10, 0"/>
+                            </StackLayout>
+                        </Frame>
+                    </StackLayout>
+                    <Label
+                        Text="Pruebas multimedia"
+                        TextColor="{StaticResource GrayColor}"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="16"
+                        HorizontalOptions="Center"
+                        Margin="0, 15,0,0"/>
+                    <Label
+                        x:Name="emptyLabel"
+                        Text="No hay archivos..."
+                        TextColor="LightGray"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="14"
+                        HorizontalOptions="Center"
+                        Margin="0, 15,0, 60"/>
+                    <Frame
+                        x:Name="archiveFrame"
+                        HeightRequest="100"
+                        WidthRequest="200"
+                        CornerRadius="20"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        IsClippedToBounds="True"
+                        Padding="0"
+                        HasShadow="True"
+                        Margin="0, 0, 0, 25"
+                        IsVisible="False">
+                        <Image
+                            x:Name="archive"
+                            Aspect="AspectFill"/>
+                    </Frame>
+                </StackLayout>
+            </ScrollView>
+            <StackLayout
+                AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.9, 0.9"
+                AbsoluteLayout.LayoutFlags="All"
+                x:Name="faultsView"
+                IsVisible="False"
+                IsEnabled="False">
+                <Frame
+                    BackgroundColor="White"
+                    CornerRadius="8"
+                    Padding="0"
+                    IsClippedToBounds="True"
+                    HeightRequest="430"
+                    WidthRequest="340"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    BorderColor="Black">
+                    <StackLayout
+                        Margin="15, 15, 15, 0">
+                        <Label
+                            Text="Seleccione:"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="18"/>
+                        <StackLayout
+                            Margin="0, 10, 0, 0">
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="Uso inadecuado de las armas"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="No portar carnet de empleado"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="Uso inadecuado de la flota"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="Uso inadecuado del vehículo"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="Uso inadecuado de la radio"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="Abandono de servicio"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="Tiro zafado"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                            <syncfusion:SfCheckBox
+                                HeightRequest="35"
+                                WidthRequest="300"
+                                UncheckedColor="{StaticResource GrayColor}"
+                                CheckedColor="{StaticResource BaseColor}"
+                                HorizontalOptions="Center"
+                                IsEnabled="True"
+                                Text="Dormir en horas de trabajo"
+                                TextColor="{StaticResource BlackColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"
+                                StateChanged="SfCheckBox_StateChanged"/>
+                        </StackLayout>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            VerticalOptions="End"
+                            HorizontalOptions="End"
+                            Margin="0, 0, 15, 15">
+                            <Label
+                                x:Name="okLabel"
+                                Text="OK"
+                                TextColor="{StaticResource BaseColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="18"/>
+                            <Label
+                                x:Name="cancelLabel"
+                                Text="Cancelar"
+                                TextColor="{StaticResource BaseColor}"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="18"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

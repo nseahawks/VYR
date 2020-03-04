@@ -29,5 +29,17 @@ namespace VYRMobile.Models
             get => password; 
             set => SetProperty(ref password, value);
         }
+        private string supervisorUserId;
+        public string SupervisorUserId
+        {
+            get => supervisorUserId;
+            set => SetProperty(ref supervisorUserId, value);
+        }
+        private string name;
+        public string Name
+        {
+            get => name;
+            set => SetProperty(ref name, value);
+        }
     }
 }

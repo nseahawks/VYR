@@ -6,6 +6,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:vm="clr-namespace:VYRMobile.ViewModels"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
@@ -24,7 +25,7 @@
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
     <Grid>
-        <maps:Map       
+        <controls:CustomMap       
             x:Name="map" 
             VerticalOptions="FillAndExpand"
             HorizontalOptions="FillAndExpand"
@@ -34,7 +35,7 @@
             IsIndoorEnabled="True"
             IsEnabled="True"
             Visual="Material"/>
-        <combobox:SfComboBox
+        <!--<combobox:SfComboBox
             x:Name="comboBox"
             Margin="0, 13,0,0"
             BackgroundColor="LightGray"
@@ -53,7 +54,7 @@
             ImageMemberPath="antenna.png"
             DropDownItemFontFamily="{StaticResource PoppinsMedium}"
             Opacity="1">
-        </combobox:SfComboBox>
+        </combobox:SfComboBox>-->
         <Button         
             x:Name="startRoute"
             Command="{Binding LoadRouteCommand}"

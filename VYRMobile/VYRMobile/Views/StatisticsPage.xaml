@@ -1,69 +1,105 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:progressBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:chart="clr-namespace:Syncfusion.SfChart.XForms;assembly=Syncfusion.SfChart.XForms"
              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.StatisticsPage"
              BackgroundColor="White"
              Title="Estadisticas">
     <ContentPage.Content>
-        <StackLayout>
-            <Label 
-                Text="Mediciones:"
-                FontFamily="{StaticResource PoppinsBold}"
-                TextColor="{StaticResource BlackColor}"
-                FontSize="18"
-                HorizontalOptions="Start"
-                Margin="20, 15, 0, 0"/>
-            <progressBar:SfLinearProgressBar 
-                Progress="100"
-                HeightRequest="20"
-                TrackHeight="20"
-                MinimumHeightRequest="20"
-                ProgressColor="#00F90C"
-                Margin="20, 0, 20, 0"
-                CornerRadius="30"
-                BackgroundColor="{StaticResource BoneColor}"
-                SegmentCount="3"
-                ProgressCompleted="SfLinearProgressBar_ProgressCompleted"/>
-            <forms:AnimationView 
-                x:Name="animation"
-                IsVisible="False"
-	            Animation="complete.json" 
-                IsEnabled="False"
-	            AutoPlay="false"
-                WidthRequest="100"
-                HeightRequest="100"
-	            VerticalOptions="Center"
-	            HorizontalOptions="Center" />
-            <Label 
-                Text="Gráfica:"
-                FontFamily="{StaticResource PoppinsBold}"
-                TextColor="{StaticResource BlackColor}"
-                FontSize="18"
-                HorizontalOptions="Center"
-                Margin="20, 15, 0, 0"/>
-            <chart:SfChart>
-                <chart:SfChart.PrimaryAxis>
-                    <chart:CategoryAxis/>
-                </chart:SfChart.PrimaryAxis>
-                <chart:SfChart.SecondaryAxis>
-                    <chart:NumericalAxis/>
-                </chart:SfChart.SecondaryAxis>
-                <chart:RadarSeries 
-                    x:Name="RadarChart"
-                    ItemsSource="{Binding Data}" 
-                    DrawType="Area"
-                    StrokeColor="OrangeRed"
-                    Color="LightCoral"
-                    XBindingPath="Month" 
-                    YBindingPath="Target">
-                </chart:RadarSeries>
-            </chart:SfChart>
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <combobox:SfComboBox
+                    x:Name="userComboBox"
+                    Margin="0, 13, 0, 0"
+                    DataSource="{Binding Users}"
+                    DisplayMemberPath="Name"
+                    SelectionChanged="userComboBox_SelectionChanged"
+                    BackgroundColor="White"
+                    HeightRequest="42"
+                    WidthRequest="280"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    Text="Usuarios"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    DropDownCornerRadius="2"
+                    MaximumDropDownHeight="200"
+                    DropDownBackgroundColor="White"
+                    DropDownItemFontFamily="{StaticResource PoppinsMedium}"
+                    Opacity="1"/>
+                <button:SfButton
+                    x:Name="btnCalificar"
+                    Text="Calificar"
+                    BackgroundColor="{StaticResource BaseColor}"
+                    TextColor="White"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="18"
+                    HasShadow="True"
+                    HeightRequest="40"
+                    WidthRequest="100"
+                    CornerRadius="6"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    Margin="0,10,0,0"/>
+                <Label 
+                    Text="Mediciones:"
+                    FontFamily="{StaticResource PoppinsBold}"
+                    TextColor="{StaticResource BlackColor}"
+                    FontSize="18"
+                    HorizontalOptions="Start"
+                    Margin="20, 15, 0, 0"/>
+                <progressBar:SfLinearProgressBar 
+                    Progress="100"
+                    HeightRequest="20"
+                    TrackHeight="20"
+                    MinimumHeightRequest="20"
+                    ProgressColor="#00F90C"
+                    Margin="20, 0, 20, 0"
+                    CornerRadius="30"
+                    BackgroundColor="{StaticResource BoneColor}"
+                    SegmentCount="3"
+                    ProgressCompleted="SfLinearProgressBar_ProgressCompleted"/>
+                <forms:AnimationView 
+                    x:Name="animation"
+                    IsVisible="False"
+	                Animation="complete.json" 
+                    IsEnabled="False"
+	                AutoPlay="false"
+                    WidthRequest="100"
+                    HeightRequest="100"
+	                VerticalOptions="Center"
+	                HorizontalOptions="Center" />
+                <Label 
+                    Text="Gráfica:"
+                    FontFamily="{StaticResource PoppinsBold}"
+                    TextColor="{StaticResource BlackColor}"
+                    FontSize="18"
+                    HorizontalOptions="Center"
+                    Margin="20, 15, 0, 0"/>
+                <chart:SfChart>
+                    <chart:SfChart.PrimaryAxis>
+                        <chart:CategoryAxis/>
+                    </chart:SfChart.PrimaryAxis>
+                    <chart:SfChart.SecondaryAxis>
+                        <chart:NumericalAxis/>
+                    </chart:SfChart.SecondaryAxis>
+                    <chart:RadarSeries 
+                        x:Name="RadarChart"
+                        ItemsSource="{Binding Data}" 
+                        DrawType="Area"
+                        StrokeColor="OrangeRed"
+                        Color="LightCoral"
+                        XBindingPath="Month" 
+                        YBindingPath="Target">
+                    </chart:RadarSeries>
+                </chart:SfChart>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

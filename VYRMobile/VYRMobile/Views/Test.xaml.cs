@@ -11,27 +11,100 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using VYRMobile.Helper;
 using VYRMobile.ViewModels;
-using Xamarin.Essentials;
-using VYRMobile.Models;
-using Newtonsoft.Json;
-using System.Net.Http;
+using Plugin.FilePicker;
 
 namespace VYRMobile.Views
 {
     //[XamlCompilation(XamlCompilationOptions.Compile]
     public partial class Test : ContentPage
     {
-        string localPath;
-        const string recordItems = "RecordItems";
+        AzureStorageHelper _azureHelper = new AzureStorageHelper();
         public Test()
         {
             InitializeComponent();
             BindingContext = new CallViewModel();
         }
-
-        private void switch_Toggled(object sender, ToggledEventArgs e)
+        private async void btnPick_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                var fileData = await CrossFilePicker.Current.PickFile();
+                if (fileData == null)
+                    return;
 
+                string fileName = fileData.FileName;
+                byte[] contents = fileData.DataArray;
+
+                var Uri = await _azureHelper.SaveBlockBlob("images", contents, fileName);
+                Link.Text = Uri;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Exception choosing file: " + ex.ToString());
+            }
         }
+        /*private void PubNub()
+        {
+            PNConfiguration pnConfiguration = new PNConfiguration();
+            pnConfiguration.PublishKey = "pub-c-78ea4244-4ba9-460d-acea-39d7f1c51a52";
+            pnConfiguration.SubscribeKey = "sub-c-9f8d4e36-5a53-11ea-b226-5aef0d0da10f";
+
+            Pubnub pubnub = new Pubnub(pnConfiguration);
+
+            SubscribeCallbackExt mySubscribeListener = new SubscribeCallbackExt(
+            delegate (Pubnub pnObj, PNMessageResult<object> message)
+            {
+                Console.WriteLine(pubnub.JsonPluggableLibrary.SerializeToJsonString(message));
+            },
+            delegate (Pubnub pnObj, PNPresenceEventResult presence)
+            {
+                if (presence != null)
+                {
+                    Console.WriteLine(pubnub.JsonPluggableLibrary.SerializeToJsonString(presence));
+                }
+            },
+            delegate (Pubnub pnObj, PNStatus status)
+            {
+                if (status != null && status.StatusCode == 200 && status.Category == PNStatusCategory.PNConnectedCategory)
+                {
+                    pubnub.Publish()
+                    .Channel("pubnub_onboarding_channel")
+                    .Message(new Dictionary<string, string>() { { "sender", pnConfiguration.Uuid }, { "content", "Hello From C# SDK" } })
+                    .Execute(new PNPublishResultExt((result, publishStatus) =>
+                    {
+                        if (result != null)
+                        {
+                            Console.WriteLine(pubnub.JsonPluggableLibrary.SerializeToJsonString(result));
+                        }
+                        else if (publishStatus != null && publishStatus.Error && publishStatus.ErrorData != null)
+                        {
+                            Console.WriteLine(pubnub.JsonPluggableLibrary.SerializeToJsonString(publishStatus));
+                        }
+                    }));
+
+                }
+                if (status.Error && status.ErrorData != null)
+                {
+                    Console.WriteLine(pubnub.JsonPluggableLibrary.SerializeToJsonString(status.ErrorData.Information));
+                }
+            }
+            );
+
+            pubnub.AddListener(mySubscribeListener);
+
+            pubnub.Subscribe<string>()
+            .Channels(new string[] { "pubnub_onboarding_channel" })
+            .WithPresence()
+            .Execute();
+
+            pubnub.History()
+            .Channel("pubnub_onboarding_channel")
+            .Execute(new PNHistoryResultExt((result, status) =>
+            {
+                Console.WriteLine(pubnub.JsonPluggableLibrary.SerializeToJsonString(result));
+            }));
+
+            Console.ReadLine();
+        }*/
     }
 }

@@ -48,7 +48,6 @@ namespace VYRMobile
 
         async Task TryLogin()
         {
-            //Application.Current.MainPage = new NavigationPage(new Utensilios());
             string _userId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn)
             {
@@ -56,14 +55,14 @@ namespace VYRMobile
                 await animation.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
 
-                CrossCloudFirestore.Current.Instance
+                /*CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_userId);
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_userId)
-                                          .SetDataAsync(new { LoggedIn = true });
+                                          .UpdateDataAsync(new { LoggedIn = true });*/
 
                 string user = email.Text.ToString();
                 await SecureStorage.SetAsync("EmailRemembered", user);
@@ -83,7 +82,8 @@ namespace VYRMobile
                 var json = JsonConvert.SerializeObject(Records);
                 Application.Current.Properties["record"] = json;
 
-                Application.Current.MainPage = new NavigationPage(new Utensilios());
+
+                Application.Current.MainPage = new NavigationPage(new Loading());
             }
             else
             {

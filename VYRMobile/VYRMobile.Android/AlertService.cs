@@ -12,7 +12,6 @@ namespace VYRMobile.Droid
     [Service]
     class AlertService : Service
     {
-
         public async override void OnCreate()
         {
             //var document = CrossCloudFirestore.Current.Instance
@@ -25,8 +24,11 @@ namespace VYRMobile.Droid
             //});
             var id = await SecureStorage.GetAsync("id");
             var document = CrossCloudFirestore.Current.Instance
-                .GetCollection("usersApp").GetDocument(id).GetCollection("Alarms");
-            bool firstTIme = true;
+                .GetCollection("usersApp")
+                .GetDocument(id)
+                .GetCollection("Alarms");
+
+            bool firstTime = true;
             
             //document.ObserveModified()
             //.Subscribe(documentChange =>
@@ -36,7 +38,8 @@ namespace VYRMobile.Droid
             //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
             //});
 
-            document.ObserveAdded()       
+            document
+                .ObserveAdded()       
                 .Subscribe(documentChange =>
                 {
                   var documentC = documentChange.Document;
@@ -46,17 +49,13 @@ namespace VYRMobile.Droid
             
             base.OnCreate();
         }
-
         public override IBinder OnBind(Intent intent)
         {
             return null;
         }
-
         public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int starId)
         {
-
             return StartCommandResult.Sticky;
         }
-
     }
 }

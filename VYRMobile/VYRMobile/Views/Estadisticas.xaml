@@ -10,16 +10,18 @@
              BackgroundColor="White">
     <ContentPage.Content>
         <Grid>
-            <Frame BackgroundColor="#005EB2" 
-                           HeightRequest="25" 
-                           HorizontalOptions="FillAndExpand" 
-                           VerticalOptions="Start"
-                           CornerRadius="0"/>
-            <Label Text="Mi Usuario" 
-                           TextColor="White" 
-                           FontSize="Large"
-                           FontAttributes="Bold"
-                           Margin="10, 16, 0, 0"/>
+            <Frame 
+                BackgroundColor="#005EB2" 
+                HeightRequest="25" 
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="Start"
+                CornerRadius="0"/>
+            <Label 
+                Text="Mi Usuario" 
+                TextColor="White" 
+                FontSize="Large"
+                FontAttributes="Bold"
+                Margin="10, 16, 0, 0"/>
             <StackLayout 
                 BackgroundColor="#D5D3DC"
                 HeightRequest="600"

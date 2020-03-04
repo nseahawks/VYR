@@ -24,7 +24,6 @@
         HorizontalOptions="Center">
         <Frame
             WidthRequest="200"
-            HeightRequest="75"
             CornerRadius="25"
             BackgroundColor="#F5F5F5">
             <StackLayout>

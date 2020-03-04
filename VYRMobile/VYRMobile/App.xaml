@@ -17,5 +17,6 @@
                 <styles:Fonts />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
+        <ResourceDictionary Source="Styles/SupervisorTheme.xaml"/>
     </Application.Resources>
 </Application>

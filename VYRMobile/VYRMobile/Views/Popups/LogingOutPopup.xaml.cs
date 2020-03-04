@@ -39,8 +39,8 @@ namespace VYRMobile.Views.Popups
                                       .UpdateDataAsync(new { LoggedIn = false });
 
             Navigation.InsertPageBefore(new Login(), Navigation.NavigationStack[0]);
-            await Navigation.PopPopupAsync();
             await Navigation.PopToRootAsync();
+            await Navigation.PopPopupAsync();
         }
     }
 }

@@ -34,10 +34,9 @@
                 <StackLayout Grid.Row="2" 
                              Orientation="Horizontal"
                              HorizontalOptions="Center">
-                    <controls:ImageEntry 
-                           x:Name="email"
-                           Image="user2"
-                           Text="{Binding Email}"
+                    <Entry
+                        x:Name="email"
+                        Text="{Binding Email}"
                            ClearButtonVisibility="WhileEditing"
                            FontSize="18" 
                            BackgroundColor="White" 
@@ -57,10 +56,9 @@
                 <StackLayout Grid.Row="4" 
                              Orientation="Horizontal"
                              HorizontalOptions="Center">
-                    <controls:ImageEntry 
+                    <Entry 
                            x:Name="password"
                            Text="{Binding Password}"
-                           Image="key2"
                            IsPassword="True"
                            ClearButtonVisibility="WhileEditing"
                            FontSize="18"

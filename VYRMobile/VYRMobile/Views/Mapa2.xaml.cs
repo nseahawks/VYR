@@ -12,7 +12,6 @@ using VYRMobile.ViewModels;
 using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
-using VYRMobile.Models;
 
 namespace VYRMobile.Views
 {
@@ -78,17 +77,16 @@ namespace VYRMobile.Views
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
             AddMapStyle();
-            AddLocations();
-            comboBox.SelectionChanged += AntennaSelected;
+            //AddLocations();
+            //comboBox.SelectionChanged += AntennaSelected;
            
             CalculateCommand = new Command<List<Position>>(Calculate);
-
             CalculateCommand2 = new Command<List<Position>>(Calculate2);
-
             UpdateCommand = new Command<List<Position>>(Update);
             PolylinesCommand = new Command(ClearPolylinesCommand);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
             startRoute.IsEnabled = false;
+
             Pin seahawksPin = null;
             seahawksPin = new Pin()
             {
@@ -99,10 +97,15 @@ namespace VYRMobile.Views
                 Position = new Position(18.461294, -69.948531),
                 Tag = "id_seahawks",
             };
+
+            map.Circle = new CustomCircle
+            {
+                Position = new Position(18.461294, -69.948531),
+                Radius = 50
+            };
+
             map.Pins.Add(seahawksPin);
 
-            
-            
             Compass.ReadingChanged += Compass_ReadingChanged;
             OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
             map.PinClicked += Map_PinClicked;
@@ -117,8 +120,6 @@ namespace VYRMobile.Views
             //    string pinName = ((Pin)e).Label;
             //    await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
             //};
-
-            
         }
         
         private async void AddLocations()
@@ -149,7 +150,7 @@ namespace VYRMobile.Views
         {
             map.Polylines.Clear();
         }
-        private async void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
+        /*private async void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
             var ind = comboBox.SelectedIndex;
             var pin = map.Pins.ElementAt<Pin>(ind);
@@ -164,7 +165,7 @@ namespace VYRMobile.Views
             Location prueba = new Location();
             prueba = await Geolocation.GetLocationAsync();
             var velocidad = prueba.Speed;
-        }
+        }*/
         private void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
         {
             var data = e.Reading;

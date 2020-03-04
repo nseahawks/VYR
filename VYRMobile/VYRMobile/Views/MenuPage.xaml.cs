@@ -8,7 +8,6 @@ namespace VYRMobile.Views
 {
     public partial class MenuPage : TabbedPage
     {
-        string UserRole;
         public Command ShowMapCommand { get; set; }
         private static MenuPage _instance;
         public static MenuPage Instance
@@ -26,7 +25,6 @@ namespace VYRMobile.Views
             InitializeComponent();
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
-            GetRole();
             NavigationPage historial = new NavigationPage(new Historial())
             {
                 IconImageSource = "historial2.png",
@@ -53,22 +51,12 @@ namespace VYRMobile.Views
                 Title = "Perfil"
             };
 
-            if(UserRole == "User")
-            {
-                Children.Add(historial);
-                Children.Add(map);
-                Children.Add(home);
-                Children.Add(report);
-                Children.Add(user);
-            }
-            else
-            {
-                Children.Add(historial);
-                Children.Add(map);
-                Children.Add(home);
-                Children.Add(report);
-            }
-
+            Children.Add(historial);
+            Children.Add(map);
+            Children.Add(home);
+            Children.Add(report);
+            Children.Add(user);
+            
             var pages = Children.GetEnumerator();
             pages.MoveNext();
             pages.MoveNext();
@@ -80,10 +68,6 @@ namespace VYRMobile.Views
         private void ShowMap()
         {
             CurrentPage = Children[1];
-        }
-        private async void GetRole()
-        {
-            UserRole = await SecureStorage.GetAsync("role");
         }
     }
 }

@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Popups.FaultsPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame
+        BackgroundColor="White"
+        CornerRadius="8"
+        Padding="0"
+        IsClippedToBounds="True"
+        HeightRequest="430"
+        WidthRequest="340"
+        VerticalOptions="Center"
+        HorizontalOptions="Center">
+        <StackLayout
+            Margin="15, 15, 15, 0">
+            <Label
+                Text="Seleccione:"
+                TextColor="Black"
+                FontFamily="{StaticResource PoppinsMedium}"
+                FontSize="18"/>
+            <StackLayout
+                Margin="0, 10, 0, 0">
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="Uso inadecuado de las armas"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="No portar carnet de empleado"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="Uso inadecuado de la flota"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="Uso inadecuado del vehículo"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="Uso inadecuado de la radio"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="Abandono de servicio"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="Tiro zafado"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+                <syncfusion:SfCheckBox
+                    HeightRequest="35"
+                    WidthRequest="300"
+                    UncheckedColor="{StaticResource GrayColor}"
+                    CheckedColor="{StaticResource BaseColor}"
+                    HorizontalOptions="Center"
+                    IsEnabled="True"
+                    Text="Dormir en horas de trabajo"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
+                    StateChanged="SfCheckBox_StateChanged"/>
+            </StackLayout>
+            <StackLayout
+                Orientation="Horizontal"
+                VerticalOptions="End"
+                HorizontalOptions="End"
+                Margin="0, 0, 15, 15">
+                <Label
+                    x:Name="okLabel"
+                    Text="OK"
+                    TextColor="{StaticResource BaseColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="18"/>
+                <Label
+                    x:Name="cancelLabel"
+                    Text="Cancelar"
+                    TextColor="{StaticResource BaseColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="18"/>
+            </StackLayout>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

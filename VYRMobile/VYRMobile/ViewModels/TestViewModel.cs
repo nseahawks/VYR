@@ -10,7 +10,7 @@ namespace VYRMobile.ViewModels
 {
     public class TestViewModel : BindableObject
     {
-        private ObservableCollection<Models.Image> _posts;
+        private ObservableCollection<ApplicationUser> _users;
         private Models.Image _currentPost;
         private string imgTotal;
         
@@ -18,12 +18,12 @@ namespace VYRMobile.ViewModels
         {
             //LoadPosts();
         }
-        public ObservableCollection<Models.Image> Posts
+        public ObservableCollection<ApplicationUser> Users
         {
-            get { return _posts; }
+            get { return _users; }
             set
             {
-                _posts = value;
+                _users = value;
                 OnPropertyChanged();
             }
         }
@@ -48,12 +48,15 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        /*private void LoadPosts()
+        private void LoadUsers()
         {
-            var posts = MockImageService.Instance.GetCommunityPosts();
-            Posts = new ObservableCollection<Models.Image>(posts);
-            CurrentPost = Posts[0];
-            ImgTotal = posts.Count.ToString();
-        }*/
+            /*var users = UsersService.Instance.GetUsers();
+            Users.Clear();
+
+            foreach(var user in users)
+            {
+                Users.Add(user);
+            }*/
+        }
     }
 }

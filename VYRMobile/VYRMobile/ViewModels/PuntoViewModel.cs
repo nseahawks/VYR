@@ -28,8 +28,6 @@ namespace VYRMobile.ViewModels
     public class PuntoViewModel : INotifyPropertyChanged
     {
         public Stopwatch stopWatch = new Stopwatch();
-        
-
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; }

@@ -22,12 +22,18 @@
                 Padding="0"
                 HasShadow="True">
                 <Image
-                    Source="face.jpg"
+                    x:Name="archive"
                     Aspect="AspectFill"/>
             </Frame>
-            <Switch
-                x:Name="switch"
-                Toggled="switch_Toggled"/>
+            <Button
+                x:Name="btnPick"
+                Text="Pick"
+                Clicked="btnPick_Clicked"/>
+            <Label
+                x:Name="Link"
+                TextColor="Black"
+                FontSize="18"
+                HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

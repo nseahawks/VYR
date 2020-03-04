@@ -169,7 +169,7 @@ namespace VYRMobile.ViewModels
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
 
-            LoadAntennas();
+            //LoadAntennas();
         }
 
         private async void LoadAntennas()
@@ -424,8 +424,6 @@ namespace VYRMobile.ViewModels
                 await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
             }
         }
-        //public event PropertyChangedEventHandler PropertyChanged;
-
     }
 }
 

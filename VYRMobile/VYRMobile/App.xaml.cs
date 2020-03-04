@@ -16,29 +16,28 @@ using PCLStorage;
 using System.Threading.Tasks;
 using VYRMobile.Helper;
 using Newtonsoft.Json;
+using Syncfusion.XForms.Buttons;
 
 namespace VYRMobile
 {
     public partial class App : Application
     {
-        //RecordHelper _record = new RecordHelper();
         internal static bool IsUserLoggedIn = true;
         internal static string ApplicationUserId;
+        internal static string ApplicationUserRole;
         internal static List<Stream> ImagesStreams = new List<Stream>();
         internal static List<string> ImagesNames = new List<string>();
+        internal static List<byte[]> ImagesData = new List<byte[]>();
         internal static List<Record> Records = new List<Record>();
-        /*internal const string DirectoryName = "RecordList";
-        internal const string FileName = "record.json";
-        internal static IFolder folder = PCLStorage.FileSystem.Current.LocalStorage;
-        internal static IFile file;*/
+        internal static List<SfCheckBox> Faults = new List<SfCheckBox>();
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjA0NTM1QDMxMzcyZTM0MmUzMG9ONVZEbnYzTDU4OTFaYnpTVW42YUpGME9ZSU90aXVCWi81WTZ4RHNlcDQ9");
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
-            //CreateDirectory();
+            CreateDirectory();
 
-            MainPage = new Test();
+            MainPage = new MainPage();
         }
         protected override void OnStart()
         {

@@ -20,7 +20,6 @@ namespace VYRMobile.Views.Popups
             BindingContext = new PuntoViewModel();
 
             shakeImage();
-            //OK.Clicked += OK_Clicked;
         }
         protected override void OnAppearing()
         {
@@ -45,7 +44,6 @@ namespace VYRMobile.Views.Popups
         private async void OK_Clicked(object sender, EventArgs e) 
         {
             await Navigation.PopPopupAsync();
-            //puntoVM.StartCommand.Execute(null);
         }
     }
 }
