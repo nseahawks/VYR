@@ -60,7 +60,7 @@
                         FontSize="18"
                         HorizontalOptions="Center"/>
                     <Label
-                        Text="Otra Banda-Nisibón 1"
+                        x:Name="locationNameLbl"
                         TextColor="{StaticResource BlackColor}"
                         FontFamily="{StaticResource PoppinsMedium}"
                         FontSize="16"

@@ -18,6 +18,7 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
 
+            
             btnReporte.Clicked += btnReporte_Clicked;
             reportsView.ItemTapped += ReportsView_ItemTapped;
 

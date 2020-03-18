@@ -1,14 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
-using Microcharts;
-using SkiaSharp;
-using Entry = Microcharts.Entry;
+﻿using Xamarin.Forms;
 
 namespace VYRMobile.Views
 {

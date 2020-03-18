@@ -6,6 +6,6 @@ namespace VYRMobile
 {
     public static class Constants
     {
-        public const string GoogleMapsApiKey = "AIzaSyCRKhNAkaHcGeN7rvZabsCogdupeOQ24Zc";
+        public const string GoogleMapsApiKey = "AIzaSyDMho8xfTkiFKYXmK2-bneALVrWlLqd6kQ";
     }
 }

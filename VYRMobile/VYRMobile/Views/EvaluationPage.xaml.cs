@@ -4,7 +4,9 @@ using Rg.Plugins.Popup.Extensions;
 using Syncfusion.XForms.Buttons;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using VYRMobile.Views.Popups;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -67,12 +69,15 @@ namespace VYRMobile.Views
                 Name = "seahawks.png"
             });
 
+
             if (file == null)
                 return;
 
-            archive.Source = ImageSource.FromStream(() => file.GetStream());
-            emptyLabel.IsVisible = false;
-            archiveFrame.IsVisible = true;
+            string fileName = Path.GetFileName(file.Path);
+            Stream fileStream = file.GetStream();
+            string fileExtension = fileName.Substring(fileName.Length - 3);
+
+            AddFiles(fileName, fileExtension);
         }
         private async void btnAttach_Clicked(object sender, EventArgs e)
         {
@@ -83,10 +88,10 @@ namespace VYRMobile.Views
                     return; 
 
                 string fileName = fileData.FileName;
-                string contents = Encoding.UTF8.GetString(fileData.DataArray);
+                Stream fileStream = new MemoryStream(fileData.DataArray);
+                string fileExtension = fileName.Substring(fileName.Length - 3);
 
-                Console.WriteLine("File name chosen: " + fileName);
-                Console.WriteLine("File data: " + contents);
+                AddFiles(fileName, fileExtension);
             }
             catch (Exception ex)
             {
@@ -110,8 +115,7 @@ namespace VYRMobile.Views
             Label label = new Label
             {
                 Text = checkBox.Text,
-                TextColor = Color.Black,
-                FontSize = 16,
+                //Style = (Style)Application.Current.Resources["faultLabelStyle"],
                 VerticalOptions = LayoutOptions.Center,
                 Margin = new Thickness(10, 0, 0, 0)
             };
@@ -126,12 +130,10 @@ namespace VYRMobile.Views
                 Margin = new Thickness(0, 0, 10, 0)
             };
 
-            StackLayout stack = new StackLayout
-            {
-                Orientation = StackOrientation.Horizontal,
-                HorizontalOptions = LayoutOptions.FillAndExpand,
-               
-            };
+            Grid grid = new Grid();
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(300) });
+            grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(30) });
+
 
             Frame frame = new Frame
             {
@@ -145,9 +147,9 @@ namespace VYRMobile.Views
                 Margin = new Thickness(15, 0, 15, 0),
             };
 
-            stack.Children.Add(label);
-            stack.Children.Add(image);
-            frame.Content = stack;
+            grid.Children.Add(label, 0, 0);
+            grid.Children.Add(image, 1, 0);
+            frame.Content = grid;
 
             faultList.Children.Add(frame);
         }
@@ -157,6 +159,8 @@ namespace VYRMobile.Views
             {
                 Command = new Command(() =>
                 {
+                    faultsView.IsVisible = false;
+                    faultsView.IsEnabled = false;
                     AddFaults(App.Faults);
                 }),
                 NumberOfTapsRequired = 1
@@ -168,6 +172,8 @@ namespace VYRMobile.Views
             {
                 Command = new Command(async () =>
                 {
+                    faultsView.IsVisible = false;
+                    faultsView.IsEnabled = false;
                     App.Faults.Clear();
                 }),
                 NumberOfTapsRequired = 1
@@ -190,6 +196,67 @@ namespace VYRMobile.Views
             {
                 //Do nothing
             }
+        }
+        private async void btnEnviar_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushPopupAsync(new LoadingPopup());
+            await Task.Delay(500);
+            await Navigation.PopPopupAsync();
+            await Navigation.PopModalAsync();
+        }
+        private async void AddFiles(string fileName, string fileExtension)
+        {
+            Image image = new Image 
+            {
+                Aspect = Aspect.AspectFill
+            };
+            Label label = new Label
+            {
+                TextColor = Color.Black,
+                FontSize = 14,
+                FontAttributes = FontAttributes.Bold,
+                VerticalOptions = LayoutOptions.Center,
+                HorizontalOptions = LayoutOptions.Center
+            };
+            Frame frame = new Frame
+            {
+                HeightRequest = 100,
+                WidthRequest = 200,
+                CornerRadius = 20,
+                HorizontalOptions = LayoutOptions.Center,
+                VerticalOptions = LayoutOptions.Center,
+                IsClippedToBounds = true,
+                Padding = 0,
+                HasShadow = true,
+                Margin = new Thickness(0, 0, 0, 25)
+            };
+
+            if(fileExtension == "png" || fileExtension == "jpg" || fileExtension == "peg")
+            {
+                image.Source = ImageSource.FromFile(fileName);
+                label.Text = fileName;
+                
+            }
+            else if(fileExtension == "mp4")
+            {
+                image.Source = "video.png";
+                label.Text = fileName;
+            }
+            else if(fileExtension == "pus" || fileExtension == "mp3" || fileExtension == "ogg")
+            {
+                image.Source = "audio.png";
+                label.Text = fileName;
+            }
+            else
+            {
+                await DisplayAlert("Error", "Formato de archivo no valido, por favor inténtelo de nuevo", "OK");
+            }
+
+            frame.Content = image;
+
+            noFilesLayout.IsVisible = false;
+            contentStack.Children.Add(label);
+            contentStack.Children.Add(frame);
         }
     }
 }

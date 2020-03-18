@@ -24,10 +24,10 @@ namespace VYRMobile.Views
             {
                 string _userId = await SecureStorage.GetAsync("id");
 
-                /*await CrossCloudFirestore.Current.Instance
+                await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_userId)
-                                          .UpdateDataAsync(new { Status = "WAITING" });*/
+                                          .UpdateDataAsync(new { Status = "WAITING" });
 
                 Application.Current.MainPage = new NavigationPage(new Loading());
             }

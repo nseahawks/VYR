@@ -27,7 +27,7 @@ namespace VYRMobile.Droid
             Forms.SetFlags("CarouselView_Experimental");
             Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            //FirebaseApp.InitializeApp(Application.ApplicationContext);
+            FirebaseApp.InitializeApp(Application.ApplicationContext);
 
             LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.seahawks;
 
@@ -39,17 +39,17 @@ namespace VYRMobile.Droid
             FormsMaps.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);
 
-            //Intent intent = new Intent(this, typeof(TrackerService));
-            //StartService(intent);
+            /*Intent intent = new Intent(this, typeof(AlertService));
+            StartService(intent);*/
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
-            Xamarin.FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
+            FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
-            /*FirebaseFirestore firestore = FirebaseFirestore.GetInstance(Firebase.FirebaseApp.Instance);
+            FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
             FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
-            firestore.FirestoreSettings = settings;*/
+            firestore.FirestoreSettings = settings;
 
             LoadApplication(new App());
         }

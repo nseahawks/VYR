@@ -19,7 +19,7 @@ namespace VYRMobile.Helper
 
         public ApiHelper()
         {
-            BaseAddress = new Uri("https://vyrx-api.azurewebsites.net");
+            BaseAddress = new Uri("https://localhost:5001");
             DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
         }

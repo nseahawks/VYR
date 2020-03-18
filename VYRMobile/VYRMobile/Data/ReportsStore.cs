@@ -122,5 +122,39 @@ namespace VYRMobile.Data
         {
             throw new System.NotImplementedException();
         }
+        public async Task<bool> AddEvaluationReportAsync(EvaluationReport evaluationReport, List<Calculation> calculations, List<Fault> faults)
+        {
+            if (evaluationReport == null || !IsConnected)
+                return false;
+
+            DateTime date = DateTime.UtcNow;
+            UserId = await SecureStorage.GetAsync("id");
+            ImagesStreams = App.ImagesStreams;
+            ImagesNames = App.ImagesNames;
+
+            if (ImagesStreams != null & ImagesNames != null)
+            {
+                await _firebase.RunList(ImagesStreams, ImagesNames, UserId, date);
+                evaluationReport.Img = await _firebase.GetLink(ImagesNames, UserId, date);
+            }
+            
+            var responseEvaluationReport = new EvaluationReport()
+            {
+                ReviewedUserId = evaluationReport.ReviewedUserId,
+                Created = date,
+                EventDate = evaluationReport.EventDate,
+                Img = evaluationReport.Img,
+                Videos = evaluationReport.Videos,
+                Audios = evaluationReport.Audios,
+                GetCalculations = calculations,
+                GetFaults = faults
+            };
+
+            string serializedData = JsonConvert.SerializeObject(responseEvaluationReport);
+            var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+            var response = await _client.PostAsync("/api/v1/evalReports", contentData);
+            DependencyService.Get<IToast>().LongToast(response.StatusCode.ToString());
+            return response.IsSuccessStatusCode;
+        }
     }
 }

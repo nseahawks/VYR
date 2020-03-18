@@ -1,11 +1,8 @@
-﻿using Rg.Plugins.Popup.Extensions;
+﻿using Plugin.CloudFirestore;
+using Rg.Plugins.Popup.Extensions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using VYRMobile.ViewModels;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views.Popups
@@ -14,6 +11,21 @@ namespace VYRMobile.Views.Popups
     public partial class AlarmPopup : Rg.Plugins.Popup.Pages.PopupPage
     {
         bool IsShaking = true;
+        public AlarmPopup(string locationName, GeoPoint position, string locationType)
+        {
+            InitializeComponent();
+            BindingContext = new PuntoViewModel();
+
+            locationNameLbl.Text = locationName;
+
+            App.Alarm.LocationName = locationName;
+            App.Alarm.Location = position;
+
+            shakeImage();
+
+            /*App.Alarm.LocationName = locationName;
+            App.Alarm.Type = locationType;*/
+        }
         public AlarmPopup()
         {
             InitializeComponent();
@@ -40,10 +52,6 @@ namespace VYRMobile.Views.Popups
                 alarmOne.IsVisible = true;
                 await Task.Delay(60);
             }
-        }
-        private async void OK_Clicked(object sender, EventArgs e) 
-        {
-            await Navigation.PopPopupAsync();
         }
     }
 }

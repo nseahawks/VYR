@@ -1,22 +1,13 @@
-﻿using System;
-using VYRMobile.Services;
-using VYRMobile.Views;
+﻿using VYRMobile.Services;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Push;
-using Plugin.CloudFirestore;
-using Plugin.LocalNotifications;
-using Xamarin.Essentials;
-using VYRMobile.ViewModels;
 using System.IO;
 using System.Collections.Generic;
 using VYRMobile.Models;
-using PCLStorage;
-using System.Threading.Tasks;
-using VYRMobile.Helper;
 using Newtonsoft.Json;
 using Syncfusion.XForms.Buttons;
+using VYRMobile.Views;
 
 namespace VYRMobile
 {
@@ -25,6 +16,7 @@ namespace VYRMobile
         internal static bool IsUserLoggedIn = true;
         internal static string ApplicationUserId;
         internal static string ApplicationUserRole;
+        internal static FirestoreAlarm Alarm = new FirestoreAlarm();
         internal static List<Stream> ImagesStreams = new List<Stream>();
         internal static List<string> ImagesNames = new List<string>();
         internal static List<byte[]> ImagesData = new List<byte[]>();
@@ -37,7 +29,7 @@ namespace VYRMobile
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
             CreateDirectory();
 
-            MainPage = new MainPage();
+            MainPage = new Login();
         }
         protected override void OnStart()
         {

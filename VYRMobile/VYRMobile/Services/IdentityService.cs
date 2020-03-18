@@ -7,7 +7,10 @@ using System.Text;
 using System.Threading.Tasks;
 using VYRMobile.Helper;
 using VYRMobile.Models;
+using VYRMobile.Styles;
 using Xamarin.Essentials;
+using Xamarin.Forms;
+using static Android.Content.Res.Resources;
 
 namespace VYRMobile.Services
 {
@@ -68,6 +71,26 @@ namespace VYRMobile.Services
 
             App.ApplicationUserId = await SecureStorage.GetAsync("id");
             App.ApplicationUserRole = await SecureStorage.GetAsync("role");
+
+            ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
+            if (mergedDictionaries != null)
+            {
+                mergedDictionaries.Clear();
+
+                switch(App.ApplicationUserRole)
+                {
+                    default:
+                        mergedDictionaries.Add(new WorkerTheme());
+                        break;
+                    case "Supervisor":
+                        mergedDictionaries.Add(new SupervisorTheme());
+                        break;
+                    case "Master":
+                        mergedDictionaries.Add(new WorkerTheme());
+                        break;
+                }
+            }
         }
     }
+    
 }

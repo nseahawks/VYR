@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VYRMobile.Styles
+namespace VYRMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SupervisorTheme : ResourceDictionary
+    public partial class PositionPage : ContentPage
     {
-        public SupervisorTheme()
+        public PositionPage()
         {
             InitializeComponent();
         }

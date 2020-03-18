@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace VYRMobile.Styles
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SupervisorTheme : ResourceDictionary
+    public partial class WorkerTheme : ResourceDictionary
     {
-        public SupervisorTheme()
+        public WorkerTheme()
         {
             InitializeComponent();
         }

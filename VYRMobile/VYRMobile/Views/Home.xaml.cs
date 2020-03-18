@@ -1,23 +1,13 @@
 ﻿using Plugin.CloudFirestore;
-using Plugin.CloudFirestore.Extensions;
-using Plugin.LocalNotifications;
-using Plugin.Messaging;
 using Rg.Plugins.Popup.Extensions;
 using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
-using System.Linq;
 using System.Net.Http;
-using System.Reflection;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using VYRMobile.Helper;
 using VYRMobile.Models;
-using VYRMobile.Services;
 using VYRMobile.ViewModels;
 using VYRMobile.Views;
 using VYRMobile.Views.Popups;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 using ZXing.Net.Mobile.Forms;
 
@@ -25,7 +15,7 @@ namespace VYRMobile
 {
     public partial class Home : ContentPage
     {
-        private HttpClient _client;
+        HttpClient _client;
         public static readonly BindableProperty ShowMapCommandProperty =
            BindableProperty.Create(nameof(ShowMapCommand), typeof(Command), typeof(Home), null, BindingMode.TwoWay);
 
@@ -42,14 +32,11 @@ namespace VYRMobile
             QR.Clicked += QR_Clicked;
             btnCall.Clicked += btnCall_Clicked;
             ShowMapCommand = new Command(ShowMap);
-
         }
-
         protected override void OnAppearing()
         {
             base.OnAppearing();
         }
-
         public void LoadView()
         {
             antenasView.ItemsSource = null;
@@ -65,12 +52,10 @@ namespace VYRMobile
             get { return (Command)GetValue(ShowMapCommandProperty); }
             set { SetValue(ShowMapCommandProperty, value); }
         }
-
         private void ShowMap()
         {
             Navigation.PushModalAsync(new Mapa2());
         }
-
         private void QR_Clicked(object sender, EventArgs e)
         {
             Escaner();
@@ -102,7 +87,13 @@ namespace VYRMobile
 
         private async void btnCall_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushPopupAsync(new AlarmPopup());
+            FirestoreAlarm alarmDocument = new FirestoreAlarm()
+            {
+                LocationName = "Seahawks",
+                Location = new GeoPoint(18.4047, -70.0328),
+                Type = "Alarm"
+            }; 
+            await Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));
         }
     }
 }

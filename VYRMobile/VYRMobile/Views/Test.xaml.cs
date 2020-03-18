@@ -18,13 +18,59 @@ namespace VYRMobile.Views
     //[XamlCompilation(XamlCompilationOptions.Compile]
     public partial class Test : ContentPage
     {
-        AzureStorageHelper _azureHelper = new AzureStorageHelper();
+        bool IsUrgent = false;
         public Test()
         {
             InitializeComponent();
             BindingContext = new CallViewModel();
+            alarmMode();
         }
-        private async void btnPick_Clicked(object sender, EventArgs e)
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+        }
+        private async void alarmMode()
+        {
+            await Task.Delay(2500);
+            IsUrgent = true;
+            while(IsUrgent)
+            {
+                /*await Task.Delay(50);
+                lateral1.Opacity = 0.9;
+                lateral2.Opacity = 0.9;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.8;
+                lateral2.Opacity = 0.8;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.7;
+                lateral2.Opacity = 0.7;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.6;
+                lateral2.Opacity = 0.6;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.5;
+                lateral2.Opacity = 0.5;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.6;
+                lateral2.Opacity = 0.6;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.7;
+                lateral2.Opacity = 0.7;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.8;
+                lateral2.Opacity = 0.8;
+                await Task.Delay(50);
+                lateral1.Opacity = 0.8;
+                lateral2.Opacity = 0.8;*/
+
+
+                await animation.FadeTo(0.5, 500, Easing.Linear);
+                //await lateral2.FadeTo(0.5, 300, Easing.Linear);
+                await animation.FadeTo(1, 500, Easing.Linear);
+                //await lateral2.FadeTo(1, 300, Easing.Linear);
+            }
+        }
+        /*private async void btnPick_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -42,7 +88,7 @@ namespace VYRMobile.Views
             {
                 Console.WriteLine("Exception choosing file: " + ex.ToString());
             }
-        }
+        }*/
         /*private void PubNub()
         {
             PNConfiguration pnConfiguration = new PNConfiguration();

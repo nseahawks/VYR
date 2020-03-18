@@ -18,10 +18,10 @@
             </Style>
             <Style x:Key="ButtonStyle" TargetType="Button">
                 <Setter Property="Text" Value="Confirmar" />
-                <Setter Property="BackgroundColor" Value="{StaticResource BaseColor}"/>
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
                 <Setter Property="FontSize" Value="{StaticResource FontSize14}" />
-                <Setter Property="TextColor" Value="{StaticResource WhiteColor}" />
+                <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
                 <Setter Property="HeightRequest" Value="40" />
                 <Setter Property="WidthRequest" Value="120" />
                 <Setter Property="HorizontalOptions" Value="End" />

@@ -1,27 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Text;
-using System.Timers;
-using MvvmHelpers;
 using System.Windows.Input;
-using VYRMobile.Services;
 using Xamarin.Forms;
-using GalaSoft.MvvmLight;
-using GalaSoft.MvvmLight.Command;
 using System.Threading.Tasks;
 using VYRMobile.Views;
 using VYRMobile.Models;
 using Plugin.Messaging;
 using VYRMobile.Data;
 using Rg.Plugins.Popup.Extensions;
-using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
 using Xamarin.Forms.GoogleMaps;
 using Newtonsoft.Json;
-using System.IO;
 
 namespace VYRMobile.ViewModels
 {
@@ -30,7 +21,7 @@ namespace VYRMobile.ViewModels
         public Stopwatch stopWatch = new Stopwatch();
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
-        public ICommand StartCommand { get; }
+        public ICommand StartCommand { get; set; }
         public ICommand CheckAntenna { get; }
         public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
@@ -98,7 +89,6 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged("StopWatchMilliseconds");
             }
         }
-
 
         private ObservableCollection<Punto> _puntos;
         public ObservableCollection<Punto> Puntos
@@ -168,7 +158,6 @@ namespace VYRMobile.ViewModels
                                    ":" + StopWatchSeconds +
                                    "." + StopWatchMilliseconds);
                 }
-
                 return true;
             });
 
@@ -181,19 +170,19 @@ namespace VYRMobile.ViewModels
         protected virtual void OnPropertyChanged(string propertyName)
         {
             var changed = PropertyChanged;
-            if (changed != null)
             {
+            if (changed != null)
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
-
         private async void Alert() 
         {
             stopWatch.Start();
             await App.Current.MainPage.Navigation.PopPopupAsync();
-            await ShowMap();
-            await GetActualLocation();
-            GoogleMapsViewModel.Instance.LoadRouteCommand2.Execute(null);
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Mapa2(App.Alarm.LocationName, App.Alarm.Location)));
+            //ShowMap();
+            //await GetActualLocation();
+            //GoogleMapsViewModel.Instance.LoadRouteCommand2.Execute(null);
             //MapCommand.Execute(null);
         }
 
@@ -266,7 +255,7 @@ namespace VYRMobile.ViewModels
                 phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
             }
         }
-        private async Task GetActualLocation()
+        /*private async Task GetActualLocation()
         {
             try
             {
@@ -278,15 +267,17 @@ namespace VYRMobile.ViewModels
                     Mapa2 mapa = new Mapa2();
                     mapa.OriginLocationlat = position.Latitude.ToString();
                     mapa.OriginLocationlng = position.Longitude.ToString();
-                    mapa.DestinationLocationlat = "18.4047";
-                    mapa.DestinationLocationlng = "-70.0328";
+                    mapa.DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
+                    mapa.DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
+                    //mapa.DestinationLocationlat = "18.4047";
+                    //mapa.DestinationLocationlng = "-70.0328";
                 }
             }
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
             }
-        }
+        }*/
         private async Task ShowMap()
         {
             await App.Current.MainPage.Navigation.PushAsync(MenuPage.Instance);

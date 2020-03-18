@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "613379307559",
-    "firebase_url": "https://vyrproyect-1571249849268.firebaseio.com",
-    "project_id": "vyrproyect-1571249849268",
-    "storage_bucket": "vyrproyect-1571249849268.appspot.com"
+    "project_number": "48085431455",
+    "firebase_url": "https://vyr-x-270115.firebaseio.com",
+    "project_id": "vyr-x-270115",
+    "storage_bucket": "vyr-x-270115.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:613379307559:android:ae04fcc3404984e8f07602",
+        "mobilesdk_app_id": "1:48085431455:android:187e6a4c26f8f656f65eaa",
         "android_client_info": {
-          "package_name": "com.labs369.vyrx"
+          "package_name": "tech.labs369.vyrx"
         }
       },
       "oauth_client": [
         {
-          "client_id": "613379307559-ggfdneauukmfqc25q85bi8jebuh4sipb.apps.googleusercontent.com",
+          "client_id": "48085431455-1tv9463kfmuvd62akhcr9h380mqmt9p8.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBwmHFGKgLdbe07Th0KGLYAOuOQcHVdNf0"
+          "current_key": "AIzaSyDMho8xfTkiFKYXmK2-bneALVrWlLqd6kQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "613379307559-ggfdneauukmfqc25q85bi8jebuh4sipb.apps.googleusercontent.com",
+              "client_id": "48085431455-1tv9463kfmuvd62akhcr9h380mqmt9p8.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

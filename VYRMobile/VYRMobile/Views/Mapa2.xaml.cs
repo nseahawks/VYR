@@ -12,11 +12,15 @@ using VYRMobile.ViewModels;
 using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
+using Plugin.CloudFirestore;
+using VYRMobile.Services;
 
 namespace VYRMobile.Views
 {
     public partial class Mapa2 : ContentPage
     {
+        bool AlarmMode = false;
+        IGoogleMapsApiService googleMapsApi = new GoogleMapsApiService();
         SensorSpeed speed = SensorSpeed.Default;
         private double CData;
         private double TData;
@@ -72,13 +76,55 @@ namespace VYRMobile.Views
             }
         }
 
+        public Mapa2(string locationName, GeoPoint geoPoint)
+        {
+            InitializeComponent();
+            BindingContext = new GoogleMapsViewModel();
+            AddMapStyle();
+
+            comboBox.IsVisible = false;
+            startRoute.IsVisible = false;
+            animation.IsVisible = true;
+            AlarmMode = true;
+            DestinationLocationlat = geoPoint.Latitude.ToString();
+            DestinationLocationlng = geoPoint.Longitude.ToString();
+
+            CalculateCommand = new Command<List<Position>>(Calculate);
+            CalculateCommand2 = new Command<List<Position>>(Calculate2);
+            UpdateCommand = new Command<List<Position>>(Update);
+            PolylinesCommand = new Command(ClearPolylinesCommand);
+            GetActualLocationCommand = new Command(async () => await GetActualLocation());
+
+
+            alarmMode();
+            Pin destinationPin;
+            destinationPin = new Pin()
+            {
+                Type = PinType.SavedPin,
+                Icon = BitmapDescriptorFactory.FromBundle("mapAntenna.png"),
+                Label = locationName,
+                Position = new Position(geoPoint.Latitude, geoPoint.Longitude)
+            };
+
+            map.Circle = new CustomCircle
+            {
+                Position = destinationPin.Position,
+                Radius = 50
+            };
+
+            map.Pins.Add(destinationPin);
+
+            Compass.ReadingChanged += Compass_ReadingChanged;
+            OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
+            LoadRoute2();
+        }
         public Mapa2()
         {
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
             AddMapStyle();
-            //AddLocations();
-            //comboBox.SelectionChanged += AntennaSelected;
+            AddLocations();
+            comboBox.SelectionChanged += AntennaSelected;
            
             CalculateCommand = new Command<List<Position>>(Calculate);
             CalculateCommand2 = new Command<List<Position>>(Calculate2);
@@ -100,7 +146,7 @@ namespace VYRMobile.Views
 
             map.Circle = new CustomCircle
             {
-                Position = new Position(18.461294, -69.948531),
+                Position = seahawksPin.Position,
                 Radius = 50
             };
 
@@ -150,7 +196,7 @@ namespace VYRMobile.Views
         {
             map.Polylines.Clear();
         }
-        /*private async void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
+        private async void AntennaSelected(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
             var ind = comboBox.SelectedIndex;
             var pin = map.Pins.ElementAt<Pin>(ind);
@@ -165,7 +211,7 @@ namespace VYRMobile.Views
             Location prueba = new Location();
             prueba = await Geolocation.GetLocationAsync();
             var velocidad = prueba.Speed;
-        }*/
+        }
         private void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
         {
             var data = e.Reading;
@@ -321,20 +367,10 @@ namespace VYRMobile.Views
 
                 if (location != null)
                 {
-                    //map.MoveToRegion(MapSpan.FromCenterAndRadius(
-                    //    position,
-                    //    Distance.FromMiles(0.3)));
-                    //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(location.Latitude, location.Longitude)));
-                    //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
-                    //new Position(
-                    //    position.Latitude,
-                    //    position.Longitude),
-                    //    19d,
-                    //    CData,
-                    //    65d
-                    //)));
                     OriginLocationlat = position.Latitude.ToString();
                     OriginLocationlng = position.Longitude.ToString();
+                    DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
+                    DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
                 }
             }
 
@@ -488,7 +524,7 @@ namespace VYRMobile.Views
             //searchLayout.IsVisible = false;
 
             map.Polylines.Clear();
-            var polyline = new Xamarin.Forms.GoogleMaps.Polyline() {
+            var polyline = new Polyline() {
                 StrokeWidth = 12,
                 StrokeColor = Color.Orange
             };
@@ -531,10 +567,9 @@ namespace VYRMobile.Views
         }
         async void Calculate2(List<Position> list)
         {
-            //searchLayout.IsVisible = false;
 
-            this.map.Polylines.Clear();
-            var polyline = new Xamarin.Forms.GoogleMaps.Polyline()
+            map.Polylines.Clear();
+            var polyline = new Polyline()
             {
                 StrokeWidth = 12,
                 StrokeColor = Color.Orange
@@ -543,7 +578,7 @@ namespace VYRMobile.Views
             {
                 polyline.Positions.Add(p);
             }
-            this.map.Polylines.Add(polyline);
+            map.Polylines.Add(polyline);
             //TimeSpan span = TimeSpan.FromSeconds(0);
             //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Distance.FromMiles(0.50f)));
             /*await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
@@ -562,12 +597,72 @@ namespace VYRMobile.Views
 
             map.MapStyle = MapStyle.FromJson(styleFile);
         }
+        private async void alarmMode()
+        {
+            await Task.Delay(2500);
+            while (AlarmMode == true)
+            {
+                await animation.FadeTo(0.3, 500, Easing.Linear);
+                await animation.FadeTo(0.8, 500, Easing.Linear);
+            }
+        }
+        public async Task LoadRoute2()
+        {
+            await GetActualLocation();
 
+            var googleDirection = await googleMapsApi.GetDirections(OriginLocationlat, OriginLocationlng, DestinationLocationlat, DestinationLocationlng);
 
-        //public async void OnEnterAddressTapped(object sender, EventArgs e)
-        //{
-        //    await Navigation.PushAsync(new SearchPlacePage() { BindingContext = this.BindingContext }, false);
-        //}
+            if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
+            {
+                var positions = (Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points)));
 
+                Calculate2(positions);
+
+                IsRouteRunning = true;
+
+                //Location tracking simulation
+                Device.StartTimer(TimeSpan.FromSeconds(1), () =>
+                {
+                    CalculateDistance();
+                    if (IsRouteRunning)
+                    {
+                        Update(positions);
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                });
+            }
+            else
+            {
+                await App.Current.MainPage.DisplayAlert(":)", "No route found", "Ok");
+            }
+        }
+        private async Task CalculateDistance()
+        {
+            PuntoViewModel puntoViewModel = new PuntoViewModel();
+            var myLatitude = double.Parse(DestinationLocationlat);
+            var myLongitude = double.Parse(DestinationLocationlng);
+
+            var myLoc = await Geolocation.GetLastKnownLocationAsync();
+            Location rootLoc = new Location(myLoc.Latitude, myLoc.Longitude);
+            Location destinationLoc = new Location(myLatitude, myLongitude);
+
+            var distance = Location.CalculateDistance(rootLoc, destinationLoc, DistanceUnits.Kilometers);
+
+            if (distance < 0.5)
+            {
+                puntoViewModel.StopCommand.Execute(null);
+                StopRoute();
+                ClearPolylinesCommand();
+                await App.Current.MainPage.DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
+            }
+        }
+        public void StopRoute()
+        {
+            IsRouteRunning = false;
+        }
     }
 }

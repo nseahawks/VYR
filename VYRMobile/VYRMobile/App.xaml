@@ -7,16 +7,24 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.App">
     <Application.Resources>
-        <Style TargetType="NavigationPage">
-            <Setter Property="BarBackgroundColor" Value="#005EB2"></Setter>
-            
-        </Style>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <styles:Colors />
                 <styles:Fonts />
             </ResourceDictionary.MergedDictionaries>
         </ResourceDictionary>
-        <ResourceDictionary Source="Styles/SupervisorTheme.xaml"/>
+        <ResourceDictionary Source="Styles/WorkerTheme.xaml"/>
+        <Style x:Key="barStyle" TargetType="NavigationPage">
+            <Setter Property="BarBackgroundColor" Value="{DynamicResource NavigationBarColor}"/>
+        </Style>
+        <Style x:Key="buttonStyle" TargetType="Button">
+            <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+        </Style>
+        <Style x:Key="iconStyle" TargetType="Image">
+            <Setter Property="BackgroundColor" Value="{DynamicResource SecondaryColor}"/>
+        </Style>
+        <Style x:Key="activityIndicatorStyle" TargetType="ActivityIndicator">
+            <Setter Property="Color" Value="{DynamicResource PrimaryColor}"/>
+        </Style>
     </Application.Resources>
 </Application>

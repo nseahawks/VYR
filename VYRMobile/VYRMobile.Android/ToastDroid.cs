@@ -22,7 +22,6 @@ namespace VYRMobile.Droid
         {
             Toast.MakeText(Application.Context, message, ToastLength.Long).Show();
         }
-
         public void ShortToast(string message)
         {
             Toast.MakeText(Application.Context, message, ToastLength.Short).Show();

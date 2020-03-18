@@ -31,6 +31,5 @@ namespace VYRMobile.ViewModels
                 Equipos.Add(equipo);
             }
         }
-        
     }
 }

@@ -11,7 +11,7 @@ namespace VYRMobile.Helper
 {
     public class FirebaseHelper
     {
-        FirebaseStorage firebaseStorage = new FirebaseStorage("vyrproyect-1571249849268.appspot.com");
+        FirebaseStorage firebaseStorage = new FirebaseStorage("vyr-x-270115.appspot.com");
         public async Task RunList(List<Stream> Streams, List<string> Names, string UserId, DateTime date)
         { 
             var streamsAndNames = Streams.Zip(Names, (s, n) => new { stream = s, name = n });

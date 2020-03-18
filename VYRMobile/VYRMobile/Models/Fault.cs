@@ -7,18 +7,27 @@ namespace VYRMobile.Models
 {
     public class Fault : ObservableObject
     {
-        string faultName;
-        public string FaultName
+        string name;
+        public string Name
         {
-            get => faultName;
+            get => name;
             set
             {
-                SetProperty(ref faultName, value);
+                SetProperty(ref name, value);
+            }
+        }
+        int severity;
+        public int Severity
+        {
+            get => severity;
+            set
+            {
+                SetProperty(ref severity, value);
             }
         }
         public Fault(string fault)
         {
-            FaultName = fault;
+            Name = fault;
         }
     }
 }

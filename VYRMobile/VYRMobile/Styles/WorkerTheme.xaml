@@ -4,11 +4,11 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Styles.GerentialTheme">
+             x:Class="VYRMobile.Styles.WorkerTheme">
     <Color x:Key="PageBackgroundColor">White</Color>
-    <Color x:Key="NavigationBarColor">#938A8A</Color>
-    <Color x:Key="PrimaryColor">#938A8A</Color>
-    <Color x:Key="SecondaryColor">#005EB2</Color>
+    <Color x:Key="NavigationBarColor">#005EB2</Color>
+    <Color x:Key="PrimaryColor">#005EB2</Color>
+    <Color x:Key="SecondaryColor">White</Color>
     <Color x:Key="TertiaryColor">#F9F8F8</Color>
     <Color x:Key="PrimaryTextColor">Black</Color>
     <Color x:Key="SecondaryTextColor">#938A8A</Color>

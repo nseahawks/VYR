@@ -5,11 +5,11 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.MenuPage"
-             BarBackgroundColor="#005EB2"
-             BarTextColor="#FFFFFF"
+             BarBackgroundColor="{DynamicResource PrimaryColor}"
+             BarTextColor="{DynamicResource SecondaryColor}"
              BackgroundColor="White"
              NavigationPage.HasNavigationBar="False"
-             UnselectedTabColor="White"
-             SelectedTabColor="White">
+             UnselectedTabColor="{DynamicResource SecondaryColor}"
+             SelectedTabColor="{DynamicResource SecondaryColor}">
     
 </TabbedPage>

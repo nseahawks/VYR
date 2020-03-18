@@ -9,6 +9,7 @@
              xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
@@ -35,7 +36,7 @@
             IsIndoorEnabled="True"
             IsEnabled="True"
             Visual="Material"/>
-        <!--<combobox:SfComboBox
+        <combobox:SfComboBox
             x:Name="comboBox"
             Margin="0, 13,0,0"
             BackgroundColor="LightGray"
@@ -54,8 +55,8 @@
             ImageMemberPath="antenna.png"
             DropDownItemFontFamily="{StaticResource PoppinsMedium}"
             Opacity="1">
-        </combobox:SfComboBox>-->
-        <Button         
+        </combobox:SfComboBox>
+        <Button
             x:Name="startRoute"
             Command="{Binding LoadRouteCommand}"
             Text="START ROUTE"
@@ -69,7 +70,7 @@
             CornerRadius="2"
             Margin="0, 0, 0, 10"
             HorizontalOptions="Center"/>
-        <Button         
+        <Button
             x:Name="stopRoute"
             Command="{Binding StopRouteCommand}"
             Clicked="ClearPolylines"
@@ -83,5 +84,53 @@
             CornerRadius="2"
             Margin="0, 0, 0, 10"
             HorizontalOptions="Center"/>
+        <StackLayout
+            x:Name="animation"
+            Orientation="Horizontal"
+            IsVisible="False"
+            IsEnabled="False">
+            <StackLayout
+                HorizontalOptions="FillAndExpand">
+                <magic:GradientView
+                    x:Name="lateral1"
+                    WidthRequest="30"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="Start">
+                    <magic:GradientView.GradientSource>
+                        <magic:GradientCollection>
+                            <magic:LinearGradient
+                                Angle="90">
+                                <magic:GradientStop 
+                                    Color="Red" 
+                                    Offset="1"/>
+                                <magic:GradientStop 
+                                    Color="Transparent" 
+                                    Offset="0"/>
+                            </magic:LinearGradient>
+                        </magic:GradientCollection>
+                    </magic:GradientView.GradientSource>
+                </magic:GradientView>
+            </StackLayout>
+            <StackLayout
+                HorizontalOptions="FillAndExpand">
+                <magic:GradientView
+                    x:Name="lateral2"
+                    WidthRequest="30"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="End">
+                    <magic:GradientView.GradientSource>
+                        <magic:LinearGradient
+                            Angle="90">
+                            <magic:GradientStop 
+                                Color="Red" 
+                                Offset="0"/>
+                            <magic:GradientStop 
+                                Color="Transparent" 
+                                Offset="1"/>
+                        </magic:LinearGradient>
+                    </magic:GradientView.GradientSource>
+                </magic:GradientView>
+            </StackLayout>
+        </StackLayout>
     </Grid>
 </ContentPage>

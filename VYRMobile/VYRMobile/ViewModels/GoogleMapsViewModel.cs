@@ -243,8 +243,7 @@ namespace VYRMobile.ViewModels
         public async Task LoadRoute2()
         {
             await GetActualLocation();
-            _destinationLatitud = "18.4047";
-            _destinationLongitud = "-70.0328";
+
             var googleDirection = await googleMapsApi.GetDirections(_originLatitud, _originLongitud,  _destinationLatitud, _destinationLongitud);
 
             if (googleDirection.Routes != null && googleDirection.Routes.Count > 0)
@@ -417,6 +416,8 @@ namespace VYRMobile.ViewModels
                 {
                     _originLatitud = position.Latitude.ToString();
                     _originLongitud = position.Longitude.ToString();
+                    _destinationLatitud = App.Alarm.Location.Latitude.ToString();
+                    _destinationLongitud = App.Alarm.Location.Longitude.ToString();
                 }
             }
             catch (Exception ex)

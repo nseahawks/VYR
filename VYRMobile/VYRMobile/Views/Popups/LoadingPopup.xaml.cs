@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace VYRMobile.Styles
+namespace VYRMobile.Views.Popups
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SupervisorTheme : ResourceDictionary
+    public partial class LoadingPopup : Rg.Plugins.Popup.Pages.PopupPage
     {
-        public SupervisorTheme()
+        public LoadingPopup()
         {
             InitializeComponent();
         }

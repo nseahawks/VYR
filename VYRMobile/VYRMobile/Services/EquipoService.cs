@@ -23,7 +23,7 @@ namespace VYRMobile.Services
             }
         }
 
-        public async Task<IEnumerable<Models.Equipo>> GetEquipos()
+        public async Task<IEnumerable<Equipo>> GetEquipos()
         {
             string _userId = await SecureStorage.GetAsync("id");
             var equipo = new Equipo {

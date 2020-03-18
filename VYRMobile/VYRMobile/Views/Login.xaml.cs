@@ -55,14 +55,14 @@ namespace VYRMobile
                 await animation.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
 
-                /*CrossCloudFirestore.Current.Instance
+                CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_userId);
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_userId)
-                                          .UpdateDataAsync(new { LoggedIn = true });*/
+                                          .UpdateDataAsync(new { LoggedIn = true });
 
                 string user = email.Text.ToString();
                 await SecureStorage.SetAsync("EmailRemembered", user);
@@ -83,7 +83,7 @@ namespace VYRMobile
                 Application.Current.Properties["record"] = json;
 
 
-                Application.Current.MainPage = new NavigationPage(new Loading());
+                Application.Current.MainPage = new NavigationPage(new Utensilios());
             }
             else
             {
