@@ -19,7 +19,7 @@ namespace VYRMobile.Helper
 
         public ApiHelper()
         {
-            BaseAddress = new Uri("https://localhost:5001");
+            BaseAddress = new Uri("https://vyr-x-270115.appspot.com");
             DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
         }

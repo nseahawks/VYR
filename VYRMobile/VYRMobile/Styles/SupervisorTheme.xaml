@@ -4,13 +4,20 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Styles.SupervisorTheme">
+             x:Class="VYRMobile.Styles.SupervisorTheme"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
     <Color x:Key="PageBackgroundColor">White</Color>
-    <Color x:Key="NavigationBarColor">#F9F8F8</Color>
-    <Color x:Key="PrimaryColor">#F9F8F8</Color>
-    <Color x:Key="SecondaryColor">#005EB2</Color>
-    <Color x:Key="TertiaryColor">White</Color>
+    <Color x:Key="NavigationBarColor">#3A86CA</Color>
+    <Color x:Key="PrimaryColor">#3A86CA</Color>
+    <Color x:Key="SecondaryColor">White</Color>
+    <Color x:Key="TertiaryColor">#005EB2</Color>
     <Color x:Key="PrimaryTextColor">Black</Color>
-    <Color x:Key="SecondaryTextColor">#938A8A</Color>
+    <Color x:Key="SecondaryTextColor">DarkGray</Color>
     <Color x:Key="TertiaryTextColor">#005EB2</Color>
+    <Style x:Key="PlusIcon" TargetType="button:SfButton">
+        <Setter Property="BackgroundImage" Value="plus3.png"/>
+    </Style>
+    <Style x:Key="CallIcon" TargetType="button:SfButton">
+        <Setter Property="BackgroundImage" Value="closeplano3.png"/>
+    </Style>
 </ResourceDictionary>

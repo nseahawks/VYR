@@ -13,6 +13,8 @@ using Rg.Plugins.Popup.Extensions;
 using Xamarin.Essentials;
 using Xamarin.Forms.GoogleMaps;
 using Newtonsoft.Json;
+using VYRMobile.Views.Popups;
+using Plugin.CloudFirestore;
 
 namespace VYRMobile.ViewModels
 {
@@ -22,6 +24,8 @@ namespace VYRMobile.ViewModels
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; set; }
+        public ICommand RestartCommand { get; set; }
+        public ICommand AlertCommand { get; set; }
         public ICommand CheckAntenna { get; }
         public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
@@ -162,8 +166,10 @@ namespace VYRMobile.ViewModels
             });
 
             StopCommand = new Command(StopStopwatch);
-            StartCommand = new Command(Alert);
+            StartCommand = new Command(StartStopwatch);
+            RestartCommand = new Command(RestartStopwatch);
             CheckAntenna = new Command(CheckingAntenna);
+            AlertCommand = new Command(Alert);
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -177,7 +183,7 @@ namespace VYRMobile.ViewModels
         }
         private async void Alert() 
         {
-            stopWatch.Start();
+            //stopWatch.Start();
             await App.Current.MainPage.Navigation.PopPopupAsync();
             await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Mapa2(App.Alarm.LocationName, App.Alarm.Location)));
             //ShowMap();
@@ -186,7 +192,18 @@ namespace VYRMobile.ViewModels
             //MapCommand.Execute(null);
         }
 
-        public void StartStopwatch()
+        private async void StartStopwatch()
+        {
+            FirestoreAlarm alarmDocument = new FirestoreAlarm()
+            {
+                LocationName = "Seahawks",
+                Location = new GeoPoint(18.4047, -70.0328),
+                Type = "Alarm"
+            };
+            await App.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));
+            stopWatch.Start();
+        }
+        private void RestartStopwatch()
         {
             stopWatch.Restart();
         }

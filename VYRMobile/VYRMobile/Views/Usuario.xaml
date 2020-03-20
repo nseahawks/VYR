@@ -9,10 +9,6 @@
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              Title="Mi Cuenta"
              NavigationPage.HasBackButton="False">
-    
-    <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="outer.png"/>
-    </ContentPage.ToolbarItems>
     <ContentPage.Resources>
         <Style x:Key="NameTextStyle" TargetType="Label">
             <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>

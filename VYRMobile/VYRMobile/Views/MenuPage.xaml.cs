@@ -31,30 +31,35 @@ namespace VYRMobile.Views
             NavigationPage historial = new NavigationPage(new Historial())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                 IconImageSource = "historial2.png",
                 Title = "Historial"
             };
             NavigationPage home = new NavigationPage(new Home())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                 IconImageSource = "home2.png",
                 Title = "Home"
             }; 
             NavigationPage map = new NavigationPage(new Mapa2())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                 IconImageSource = "mapa2.png",
                 Title = "Mapa"
             }; 
             NavigationPage report = new NavigationPage(new Reportes())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                 IconImageSource = "reportes2.png",
                 Title = "Reportes"
             }; 
             NavigationPage user = new NavigationPage(new Usuario())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                 IconImageSource = "touchWhite.png",
                 Title = "Perfil"
             };

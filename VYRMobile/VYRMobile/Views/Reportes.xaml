@@ -13,9 +13,6 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
              Title="Reportes"
              NavigationPage.HasBackButton="False">
 
-    <!--<ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="more3.png" x:Name="btnReporte"></ToolbarItem>
-    </ContentPage.ToolbarItems>-->
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="LineStyle" TargetType="BoxView">
@@ -51,7 +48,7 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                 <button:SfButton 
                     Grid.Row="0"
                     x:Name="btnReporte"
-                    BackgroundImage="plus.png"
+                    Style="{DynamicResource PlusIcon}"
                     HasShadow="True"
                     HeightRequest="60"
                     WidthRequest="60"
@@ -60,14 +57,16 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                     HorizontalOptions="End"
                     Margin="0,0,8,8"/>
             </Grid>
-            <ContentView x:Name="reportDetails"
-                         BackgroundColor="White"
-                         IsVisible="False"
-                         AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
-                         AbsoluteLayout.LayoutFlags="All"
-                         HorizontalOptions="FillAndExpand"
-                         VerticalOptions="FillAndExpand">
-                <Grid Grid.RowSpan="3">
+            <ContentView 
+                x:Name="reportDetails"
+                BackgroundColor="White"
+                IsVisible="False"
+                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+                AbsoluteLayout.LayoutFlags="All"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand">
+                <Grid 
+                    Grid.RowSpan="3">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"/>
                         <RowDefinition Height="60"/>
@@ -76,46 +75,52 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                         <RowDefinition Height="50"/>
                         <RowDefinition Height="30"/>
                     </Grid.RowDefinitions>
-                    <Button x:Name="closeReport"
-                            Grid.Row="0"
-                            BackgroundColor="OrangeRed"
-                            ImageSource="quit.png"
-                            HeightRequest="20"
-                            WidthRequest="20"
-                            HorizontalOptions="End"
-                            VerticalOptions="Center"
-                            Margin="0, 0, 15, 0"/>
-                    <Image  Grid.Row="1"
-                            x:Name="iconImage"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start"
-                            HeightRequest="40"
-                            WidthRequest="40"
-                            Margin="10, 0, 0, 0"/>
-                    <Label  Grid.Row="1"
-                            x:Name="titleLabel"
+                    <Button 
+                        x:Name="closeReport"
+                        Grid.Row="0"
+                        BackgroundColor="OrangeRed"
+                        ImageSource="quit.png"
+                        HeightRequest="20"
+                        WidthRequest="20"
+                        HorizontalOptions="End"
+                        VerticalOptions="Center"
+                        Margin="0, 0, 15, 0"/>
+                    <Image  
+                        Grid.Row="1"
+                        x:Name="iconImage"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        HeightRequest="40"
+                        WidthRequest="40"
+                        Margin="10, 0, 0, 0"/>
+                    <Label  
+                        Grid.Row="1"
+                        x:Name="titleLabel"
+                        TextColor="{StaticResource BlackColor}"
+                        FontFamily="{StaticResource PoppinsRegular}"
+                        FontSize="18"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        Margin="65, 0, 0, 0"/>
+                    <StackLayout 
+                        Orientation="Horizontal"
+                        Grid.Row="2"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center">
+                        <Label 
+                            Text="Tipo: "
+                            TextColor="DarkGray"
+                            FontFamily="{StaticResource PoppinsRegular}"
+                            FontSize="16"
+                            VerticalOptions="Start"
+                            HorizontalOptions="Center"/>
+                        <Label 
+                            x:Name="typeLabel"
                             TextColor="{StaticResource BlackColor}"
                             FontFamily="{StaticResource PoppinsRegular}"
-                            FontSize="18"
-                            VerticalOptions="Center"
-                            HorizontalOptions="Start"
-                            Margin="65, 0, 0, 0"/>
-                    <StackLayout Orientation="Horizontal"
-                                 Grid.Row="2"
-                                 VerticalOptions="Start"
-                                 HorizontalOptions="Center">
-                        <Label Text="Tipo: "
-                               TextColor="DarkGray"
-                               FontFamily="{StaticResource PoppinsRegular}"
-                               FontSize="16"
-                               VerticalOptions="Start"
-                               HorizontalOptions="Center"/>
-                        <Label x:Name="typeLabel"
-                               TextColor="{StaticResource BlackColor}"
-                               FontFamily="{StaticResource PoppinsRegular}"
-                               FontSize="16"
-                               VerticalOptions="Start"
-                               HorizontalOptions="Center"/>
+                            FontSize="16"
+                            VerticalOptions="Start"
+                            HorizontalOptions="Center"/>
                     </StackLayout>
                     <Label Grid.Row="3"
                            x:Name="descriptionLabel"

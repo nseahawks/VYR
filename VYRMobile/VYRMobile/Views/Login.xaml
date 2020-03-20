@@ -95,18 +95,6 @@
                         HeightRequest="40"
 	                    VerticalOptions="Center"
 	                    HorizontalOptions="Center" />
-                <forms:AnimationView 
-	                    Grid.Row="6"
-                        x:Name="animationCheck"
-                        IsVisible="False"
-	                    Animation="check.json" 
-                        IsEnabled="False"
-	                    Loop="True" 
-	                    AutoPlay="false"
-                        WidthRequest="85"
-                        HeightRequest="40"
-	                    VerticalOptions="Center"
-	                    HorizontalOptions="Center" />
                 <StackLayout Grid.Row="7"
                              Orientation="Horizontal"
                              HorizontalOptions="Center">

@@ -51,8 +51,6 @@ namespace VYRMobile
             string _userId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn)
             {
-                animation.IsPlaying = false;
-                await animation.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
 
                 CrossCloudFirestore.Current.Instance
@@ -82,6 +80,8 @@ namespace VYRMobile
                 var json = JsonConvert.SerializeObject(Records);
                 Application.Current.Properties["record"] = json;
 
+                animation.IsPlaying = false;
+                await animation.FadeTo(0, 100, Easing.Linear);
 
                 Application.Current.MainPage = new NavigationPage(new Utensilios());
             }
