@@ -81,12 +81,18 @@ namespace VYRMobile.Services
                 {
                     default:
                         mergedDictionaries.Add(new WorkerTheme());
+                        mergedDictionaries.Add(new Colors());
+                        mergedDictionaries.Add(new Fonts());
                         break;
                     case "Supervisor":
                         mergedDictionaries.Add(new SupervisorTheme());
+                        mergedDictionaries.Add(new Colors());
+                        mergedDictionaries.Add(new Fonts());
                         break;
                     case "Master":
-                        mergedDictionaries.Add(new WorkerTheme());
+                        mergedDictionaries.Add(new GerentialTheme());
+                        mergedDictionaries.Add(new Colors());
+                        mergedDictionaries.Add(new Fonts());
                         break;
                 }
             }

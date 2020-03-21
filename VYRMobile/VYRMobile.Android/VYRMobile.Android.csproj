@@ -478,6 +478,10 @@
     <AndroidResource Include="Resources\drawable\clear.png" />
     <AndroidResource Include="Resources\drawable\audio.png" />
     <AndroidResource Include="Resources\drawable\video.png" />
+    <AndroidResource Include="Resources\drawable\closeplano2.png" />
+    <AndroidResource Include="Resources\drawable\closeplano3.png" />
+    <AndroidResource Include="Resources\drawable\plus2.png" />
+    <AndroidResource Include="Resources\drawable\plus3.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

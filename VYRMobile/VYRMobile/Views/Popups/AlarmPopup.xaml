@@ -69,7 +69,7 @@
             </Frame>
             <button:SfButton 
                 x:Name="OK"
-                Command="{Binding StartCommand}"
+                Command="{Binding AlertCommand}"
                 FontFamily="{StaticResource PoppinsMedium}"
                 Text="IR"
                 TextColor="{StaticResource WhiteColor}"

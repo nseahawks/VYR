@@ -76,7 +76,7 @@
                 Grid.Column="0"
                 Grid.Row="0"
                 Grid.RowSpan="4"
-                BackgroundColor="#005EB2"
+                BackgroundColor="{DynamicResource PrimaryColor}"
                 Style="{StaticResource LineStyle}" />
             <Image  Source="{Binding TypeIcon}"
                     Grid.Row="0"

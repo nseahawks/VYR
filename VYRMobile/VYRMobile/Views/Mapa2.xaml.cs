@@ -14,6 +14,7 @@ using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
 using Plugin.CloudFirestore;
 using VYRMobile.Services;
+using Plugin.Geolocator;
 
 namespace VYRMobile.Views
 {
@@ -155,17 +156,6 @@ namespace VYRMobile.Views
             Compass.ReadingChanged += Compass_ReadingChanged;
             OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
             map.PinClicked += Map_PinClicked;
-            
-            //map.PinClicked += (object s, SelectedPinChangedEventArgs e) =>
-            //{
-            //    string pinName = s.;
-            //    DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
-            //};
-            //map.PinClicked += async (e, args) =>
-            //{
-            //    string pinName = ((Pin)e).Label;
-            //    await DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
-            //};
         }
         
         private async void AddLocations()
@@ -207,16 +197,12 @@ namespace VYRMobile.Views
             await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition
                 (new Position(pin.Position.Latitude, pin.Position.Longitude),12d,0,0)));
             startRoute.IsEnabled = true;
-
-            Location prueba = new Location();
-            prueba = await Geolocation.GetLocationAsync();
-            var velocidad = prueba.Speed;
         }
         private void OrientationSensor_ReadingChanged(object sender, OrientationSensorChangedEventArgs e)
         {
             var data = e.Reading;
-            //Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
             var angle = (2 * Math.Acos(data.Orientation.W))* 60;
+
             if(angle >= 90.0)
             {
                 TData = 90.0;
@@ -233,9 +219,7 @@ namespace VYRMobile.Views
         void Compass_ReadingChanged(object sender, CompassChangedEventArgs e)
         {
             var data = e.Reading;
-            //Console.WriteLine($"Reading: {data.HeadingMagneticNorth} degrees");
             CData = data.HeadingMagneticNorth;
-            // Process Heading Magnetic North
         }
 
         public void ToggleCompass()
@@ -277,9 +261,6 @@ namespace VYRMobile.Views
         }
         void Map_PinClicked(object sender, PinClickedEventArgs e)
         {
-            //e.Handled = switchHandlePinClicked.IsToggled;
-            //string pinName = e.Pin.Label;
-            //DisplayAlert("Pin Clicked", $"{pinName} was clicked.", "Ok");
             DestinationLocationlat = e.Pin.Position.Latitude.ToString();
             DestinationLocationlng = e.Pin.Position.Longitude.ToString();
 
@@ -287,17 +268,6 @@ namespace VYRMobile.Views
             {
                 startRoute.IsEnabled = true;
             }
-           
-            //startRoute.IsEnabled = true
-            // If you set e.Handled = true,
-            // then Pin selection doesn't work automatically.
-            // All pin selection operations are delegated to you.
-            // Sample codes are below.
-            //if (switchHandlePinClicked.IsToggled)
-            //{
-            //    map.SelectedPin = e.Pin;
-            //    map.AnimateCamera(CameraUpdateFactory.NewPosition(e.Pin.Position));
-            //}
         }
 
         protected override void OnAppearing()
@@ -360,17 +330,21 @@ namespace VYRMobile.Views
         async Task GetActualLocation()
         {
             try
-            {
-                //var request = new GeolocationRequest(GeolocationAccuracy.Best);
+            { 
                 var location = await Geolocation.GetLastKnownLocationAsync();
                 Position position = new Position(location.Latitude, location.Longitude );
 
-                if (location != null)
+                if (App.Alarm.Location != null)
                 {
                     OriginLocationlat = position.Latitude.ToString();
                     OriginLocationlng = position.Longitude.ToString();
                     DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
                     DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
+                }
+                else if(location != null)
+                {
+                    OriginLocationlat = position.Latitude.ToString();
+                    OriginLocationlng = position.Longitude.ToString();
                 }
             }
 
@@ -383,43 +357,13 @@ namespace VYRMobile.Views
 
         private async void Update(List<Position> list)
         {
-            //var k = 0;
-            if (this.map.Polylines == null && this.map.Polylines?.Count == 0)
+            if (map.Polylines == null && map.Polylines?.Count == 0)
                 return;
-              
-            //var cPin = map.Pins.FirstOrDefault();
          
-            if (this.map.Polylines.Count >= 1 || list.Count == 0)
+            if (map.Polylines.Count >= 1 || list.Count == 0)
             {
                 GetActualLocationCommand.Execute(null);
-                //k = 0;
-                //while (list[k] != null && OriginLocationlat == list[k].Latitude.ToString() && OriginLocationlng == list[k].Longitude.ToString())
-                //{
-
-                //    k++;
-
-                //    if (k >= list.Count)
-                //    {
-                //        map.Polylines.Clear();
-                //        map.Polylines?.FirstOrDefault()?.Positions?.Clear();
-                //        IsRouteRunning = false;
-                //        return;
-                //    }
-                //}
-                //OriginLocationlat = list[k].Latitude.ToString();
-                //OriginLocationlng = list[k].Longitude.ToString();
-
-
-                //var pin = new Pin()
-                //{
-                //    Type = PinType.Place,
-                //    Position = new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),
-                //    Label = "First",
-                //    Address = "First",
-                //    Tag = string.Empty
-
-                //};
-                //map.Pins.Add(pin);
+                
                 RouteDistance = 99999999999999999;
                 var RouteIndex = -1;
                 var minIntersection = new Location(0,0); 
@@ -463,8 +407,8 @@ namespace VYRMobile.Views
                 if(RouteIndex == -1)
                 {
                     //recalcular
-                    this.map.Polylines.Clear();
-                    this.map.Polylines?.FirstOrDefault()?.Positions?.Clear();
+                    map.Polylines.Clear();
+                    map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                     IsRouteRunning = false;
                     startRoute.Command.Execute(null);
                     return;
@@ -473,45 +417,26 @@ namespace VYRMobile.Views
                 {
                     for(var i=0; i <= RouteIndex; i++)
                     {
-                        var previousPosition = this.map?.Polylines?.FirstOrDefault()?.Positions?.FirstOrDefault();
-                        this.map?.Polylines?.FirstOrDefault()?.Positions?.Remove(previousPosition.Value);
+                        var previousPosition = map?.Polylines?.FirstOrDefault()?.Positions?.FirstOrDefault();
+                        map?.Polylines?.FirstOrDefault()?.Positions?.Remove(previousPosition.Value);
                         list.RemoveAt(0);
                     }
-                    this.map?.Polylines?.FirstOrDefault()?.Positions?.Insert(0,
+                    map?.Polylines?.FirstOrDefault()?.Positions?.Insert(0,
                             new Position(
                                double.Parse(minIntersection.Latitude.ToString()),
                                double.Parse(minIntersection.Longitude.ToString())
                                ));
                     list.Insert(0,new Position( minIntersection.Latitude, minIntersection.Longitude));
                 }
-                //cPin.Position = new Position(position.Latitude, position.Longitude);
-                //await map.MoveCamera(CameraUpdateFactory.NewPosition(new Position(position.Latitude, position.Longitude)));
 
-                //MoveCamera();
-                
                 await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
                     new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),18d,CData,TData)));
-                //await map.MoveCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
-                //new Position(
-                //    position.Latitude,
-                //     position.Longitude),
-                //    18d,
-                //    0d,
-                //    75d
-                //)));
-                //var previousPosition = map?.Polylines?.FirstOrDefault()?.Positions?.FirstOrDefault();
-                //map?.Polylines?.FirstOrDefault()?.Positions?.Insert(1,
-                //    new Position(
-                //       double.Parse(OriginLocationlat),
-                //       double.Parse(OriginLocationlng)
-                //       ));
-                //map.Polylines?.FirstOrDefault()?.Positions?.Remove(previousPosition.Value);
             }
             else
             {
                 //END TRIP
-                this.map.Polylines.Clear();
-                this.map.Polylines?.FirstOrDefault()?.Positions?.Clear();
+                map.Polylines.Clear();
+                map.Polylines?.FirstOrDefault()?.Positions?.Clear();
                 IsRouteRunning = false;
 
                 startRoute.Command.Execute(null);
@@ -521,8 +446,6 @@ namespace VYRMobile.Views
 
         async void Calculate(List<Position> list)
         {
-            //searchLayout.IsVisible = false;
-
             map.Polylines.Clear();
             var polyline = new Polyline() {
                 StrokeWidth = 12,
@@ -533,7 +456,6 @@ namespace VYRMobile.Views
                 polyline.Positions.Add(p);
             }
             map.Polylines.Add(polyline);
-            //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Distance.FromMiles(0.50f)));
             await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
                 new Position(
                     polyline.Positions[0].Latitude,
@@ -542,28 +464,6 @@ namespace VYRMobile.Views
                     CData,
                     TData
                 )));
-            
-
-            //var pin = new Pin
-            //{
-            //    Type = PinType.Place,
-            //    Position = new Position(polyline.Positions.First().Latitude, polyline.Positions.First().Longitude),
-            //    Label = "First",
-            //    Address = "First",
-            //    Tag = string.Empty
-
-            //};
-            //map.Pins.Add(pin);
-            //var pin1 = new Pin
-            //{
-            //    Type = PinType.Place,
-            //    Position = new Position(polyline.Positions.Last().Latitude, polyline.Positions.Last().Longitude),
-            //    Label = "Last",
-            //    Address = "Last",
-            //    Tag = string.Empty,
-                
-            //};
-            //map.Pins.Add(pin1);
         }
         async void Calculate2(List<Position> list)
         {
@@ -579,10 +479,7 @@ namespace VYRMobile.Views
                 polyline.Positions.Add(p);
             }
             map.Polylines.Add(polyline);
-            //TimeSpan span = TimeSpan.FromSeconds(0);
-            //map.MoveToRegion(MapSpan.FromCenterAndRadius(new Position(polyline.Positions[0].Latitude, polyline.Positions[0].Longitude), Distance.FromMiles(0.50f)));
-            /*await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
-                new Position(polyline.Positions[0].Latitude,polyline.Positions[0].Longitude), 18d, CData, TData)), span)*/
+
             MoveCamera();
         }
         void AddMapStyle()
@@ -657,12 +554,14 @@ namespace VYRMobile.Views
                 puntoViewModel.StopCommand.Execute(null);
                 StopRoute();
                 ClearPolylinesCommand();
+                App.Alarm = null;
                 await App.Current.MainPage.DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
             }
         }
         public void StopRoute()
         {
             IsRouteRunning = false;
+            App.Alarm = null;
         }
     }
 }

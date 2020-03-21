@@ -4,7 +4,8 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Styles.WorkerTheme">
+             x:Class="VYRMobile.Styles.WorkerTheme"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms">
     <Color x:Key="PageBackgroundColor">White</Color>
     <Color x:Key="NavigationBarColor">#005EB2</Color>
     <Color x:Key="PrimaryColor">#005EB2</Color>
@@ -13,4 +14,10 @@
     <Color x:Key="PrimaryTextColor">Black</Color>
     <Color x:Key="SecondaryTextColor">#938A8A</Color>
     <Color x:Key="TertiaryTextColor">#005EB2</Color>
+    <Style x:Key="PlusIcon" TargetType="button:SfButton">
+        <Setter Property="BackgroundImage" Value="plus.png"/>
+    </Style>
+    <Style x:Key="CallIcon" TargetType="button:SfButton">
+        <Setter Property="BackgroundImage" Value="closeplano.png"/>
+    </Style>
 </ResourceDictionary>
