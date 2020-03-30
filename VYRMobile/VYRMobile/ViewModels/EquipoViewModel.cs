@@ -10,7 +10,6 @@ namespace VYRMobile.ViewModels
         public EquipoViewModel()
         {
             Equipos = new ObservableCollection<Models.Equipo>();
-
             LoadData();
         }
         public ObservableCollection<Models.Equipo> Equipos

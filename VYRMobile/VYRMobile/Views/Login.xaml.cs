@@ -58,7 +58,7 @@ namespace VYRMobile
                                           .GetDocument(_userId)
                                           .GetDocumentAsync(); ;
 
-                var model = document.ToObject<ApplicationUser>();
+                //var model = document.ToObject<ApplicationUser>();
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
