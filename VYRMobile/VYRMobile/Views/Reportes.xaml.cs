@@ -28,7 +28,11 @@ namespace VYRMobile.Views
         {
             var sel = e.Item as Report;
 
-            await Navigation.PushModalAsync(new NavigationPage (new ReportDetailsPage(sel.Title, sel.Description, sel.TypeIcon, sel.ReportType, sel.ReportStatus, sel.Created, sel.StatusColor)));
+            await Navigation.PushModalAsync(new NavigationPage (new ReportDetailsPage(sel.Title, sel.Description, sel.TypeIcon, sel.ReportType, sel.ReportStatus, sel.Created, sel.StatusColor))
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"]
+            });
         }
         protected async override void OnAppearing()
         {
@@ -36,7 +40,11 @@ namespace VYRMobile.Views
         }
         private void btnReporte_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new CreateReportPage()));
+            Navigation.PushModalAsync(new NavigationPage(new CreateReportPage())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"]
+            });
         }
     }
 }

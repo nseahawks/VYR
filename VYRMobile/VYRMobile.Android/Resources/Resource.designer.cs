@@ -20228,115 +20228,118 @@ namespace VYRMobile.Droid
 			public const int plus3 = 2131165629;
 			
 			// aapt resource value: 0x7F0701BE
-			public const int popup_forms_android_close_icon = 2131165630;
+			public const int point = 2131165630;
 			
 			// aapt resource value: 0x7F0701BF
-			public const int popup_forms_android_shadow = 2131165631;
+			public const int popup_forms_android_close_icon = 2131165631;
 			
 			// aapt resource value: 0x7F0701C0
-			public const int popup_forms_dark_theme_close_icon = 2131165632;
+			public const int popup_forms_android_shadow = 2131165632;
 			
 			// aapt resource value: 0x7F0701C1
-			public const int popup_forms_light_theme_close_icon = 2131165633;
+			public const int popup_forms_dark_theme_close_icon = 2131165633;
 			
 			// aapt resource value: 0x7F0701C2
-			public const int Prev = 2131165634;
+			public const int popup_forms_light_theme_close_icon = 2131165634;
 			
 			// aapt resource value: 0x7F0701C3
-			public const int qr = 2131165635;
+			public const int Prev = 2131165635;
 			
 			// aapt resource value: 0x7F0701C4
-			public const int quit = 2131165636;
+			public const int qr = 2131165636;
 			
 			// aapt resource value: 0x7F0701C5
-			public const int reportes2 = 2131165637;
+			public const int quit = 2131165637;
 			
 			// aapt resource value: 0x7F0701C6
-			public const int robo = 2131165638;
+			public const int reportes2 = 2131165638;
 			
 			// aapt resource value: 0x7F0701C7
-			public const int seahawks = 2131165639;
+			public const int robo = 2131165639;
 			
 			// aapt resource value: 0x7F0701C8
-			public const int seahawks2 = 2131165640;
+			public const int seahawks = 2131165640;
 			
 			// aapt resource value: 0x7F0701C9
-			public const int seahawks3 = 2131165641;
+			public const int seahawks2 = 2131165641;
 			
 			// aapt resource value: 0x7F0701CA
-			public const int send = 2131165642;
+			public const int seahawks3 = 2131165642;
 			
 			// aapt resource value: 0x7F0701CB
-			public const int send2 = 2131165643;
+			public const int send = 2131165643;
 			
 			// aapt resource value: 0x7F0701CC
-			public const int sfprogressbar_determinate_linear = 2131165644;
+			public const int send2 = 2131165644;
 			
 			// aapt resource value: 0x7F0701CD
-			public const int sfprogressbar_indeterminate_circular = 2131165645;
+			public const int sfprogressbar_determinate_linear = 2131165645;
 			
 			// aapt resource value: 0x7F0701CE
-			public const int sfprogressbar_indeterminate_linear = 2131165646;
+			public const int sfprogressbar_indeterminate_circular = 2131165646;
 			
 			// aapt resource value: 0x7F0701CF
-			public const int solido = 2131165647;
+			public const int sfprogressbar_indeterminate_linear = 2131165647;
 			
 			// aapt resource value: 0x7F0701D0
-			public const int solidosh = 2131165648;
+			public const int solido = 2131165648;
 			
 			// aapt resource value: 0x7F0701D1
-			public const int startRoute = 2131165649;
+			public const int solidosh = 2131165649;
 			
 			// aapt resource value: 0x7F0701D2
-			public const int support = 2131165650;
+			public const int startRoute = 2131165650;
 			
 			// aapt resource value: 0x7F0701D3
-			public const int support2 = 2131165651;
+			public const int support = 2131165651;
 			
 			// aapt resource value: 0x7F0701D4
-			public const int tool = 2131165652;
+			public const int support2 = 2131165652;
 			
 			// aapt resource value: 0x7F0701D5
-			public const int tool1 = 2131165653;
+			public const int tool = 2131165653;
 			
 			// aapt resource value: 0x7F0701D6
-			public const int tooltip_frame_dark = 2131165654;
+			public const int tool1 = 2131165654;
 			
 			// aapt resource value: 0x7F0701D7
-			public const int tooltip_frame_light = 2131165655;
+			public const int tooltip_frame_dark = 2131165655;
 			
 			// aapt resource value: 0x7F0701D8
-			public const int touch = 2131165656;
+			public const int tooltip_frame_light = 2131165656;
 			
 			// aapt resource value: 0x7F0701D9
-			public const int touchWhite = 2131165657;
+			public const int touch = 2131165657;
 			
 			// aapt resource value: 0x7F0701DA
-			public const int Up = 2131165658;
+			public const int touchWhite = 2131165658;
 			
 			// aapt resource value: 0x7F0701DB
-			public const int user = 2131165659;
+			public const int Up = 2131165659;
 			
 			// aapt resource value: 0x7F0701DC
-			public const int user2 = 2131165660;
+			public const int user = 2131165660;
 			
 			// aapt resource value: 0x7F0701DD
-			public const int usuario = 2131165661;
+			public const int user2 = 2131165661;
 			
 			// aapt resource value: 0x7F0701DE
-			public const int usuario2 = 2131165662;
+			public const int usuario = 2131165662;
 			
 			// aapt resource value: 0x7F0701DF
-			public const int video = 2131165663;
+			public const int usuario2 = 2131165663;
 			
 			// aapt resource value: 0x7F0701E0
-			public const int vyr = 2131165664;
+			public const int video = 2131165664;
 			
 			// aapt resource value: 0x7F0701E1
-			public const int vyrx = 2131165665;
+			public const int vyr = 2131165665;
 			
 			// aapt resource value: 0x7F0701E2
-			public const int vyrxall = 2131165666;
+			public const int vyrx = 2131165666;
+			
+			// aapt resource value: 0x7F0701E3
+			public const int vyrxall = 2131165667;
 			
 			static Drawable()
 			{

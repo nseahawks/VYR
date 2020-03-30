@@ -18,6 +18,16 @@ namespace VYRMobile.Views
             InitializeComponent();
 
             languageCell.Tapped += LanguageCell_Tapped;
+            pointsCell.Tapped += PointsCell_Tapped;
+        }
+
+        private void PointsCell_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushModalAsync(new NavigationPage(new PositionPage()) 
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"]
+            });
         }
 
         private void LanguageCell_Tapped(object sender, EventArgs e)

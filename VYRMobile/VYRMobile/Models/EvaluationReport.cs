@@ -25,23 +25,11 @@ namespace VYRMobile.Models
             get => eventDate;
             set => SetProperty(ref eventDate, value);
         }
-        string img;
-        public string Img
+        string files;
+        public string Files
         {
-            get => img;
-            set => SetProperty(ref img, value);
-        }
-        string videos;
-        public string Videos
-        {
-            get => videos;
-            set => SetProperty(ref videos, value);
-        }
-        string audios;
-        public string Audios
-        {
-            get => audios;
-            set => SetProperty(ref audios, value);
+            get => files;
+            set => SetProperty(ref files, value);
         }
         List<Calculation> getCalculations;
         public List<Calculation> GetCalculations
@@ -54,6 +42,11 @@ namespace VYRMobile.Models
         {
             get => getFaults;
             set => SetProperty(ref getFaults, value);
+        }
+
+        public EvaluationReport()
+        {
+            EventDate = DateTime.Today;
         }
     }
 }

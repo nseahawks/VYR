@@ -14,14 +14,17 @@ namespace VYRMobile
     public partial class App : Application
     {
         internal static bool IsUserLoggedIn = true;
+        internal static bool IsEquipmentValitated = false;
         internal static string ApplicationUserId;
         internal static string ApplicationUserRole;
+        internal static string AntennaId;
+        internal static string ReviewedUserId;
         internal static FirestoreAlarm Alarm = new FirestoreAlarm();
         internal static List<Stream> ImagesStreams = new List<Stream>();
         internal static List<string> ImagesNames = new List<string>();
-        internal static List<byte[]> ImagesData = new List<byte[]>();
         internal static List<Record> Records = new List<Record>();
         internal static List<SfCheckBox> Faults = new List<SfCheckBox>();
+        internal static List<Calculation> Calculations = new List<Calculation>();
         public App()
         {
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("MjA0NTM1QDMxMzcyZTM0MmUzMG9ONVZEbnYzTDU4OTFaYnpTVW42YUpGME9ZSU90aXVCWi81WTZ4RHNlcDQ9");

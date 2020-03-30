@@ -110,20 +110,16 @@
                     <Label  
                         Grid.Row="0"
                         VerticalOptions="Start"
-                        HorizontalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
                         Style="{StaticResource TitleStyle}"/>
-                    <Grid 
-                        Grid.ColumnSpan="3"
+                    <Label  
                         Grid.Row="1"
-                        HorizontalOptions="Center">
-                        <Label  
-                            FontSize="40"
-                            FontAttributes="Bold"
-                            VerticalOptions="End"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource MonoStyle}"
-                            Text="{Binding StopWatchFinal}"/>
-                    </Grid>
+                        FontSize="40"
+                        FontAttributes="Bold"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        Style="{StaticResource MonoStyle}"
+                        Text="{Binding StopWatchFinal}"/>
                 </Grid>
             </Frame>
             <Frame 
@@ -148,7 +144,7 @@
                                     <tabview:SfTabItem.Content>
                                         <ListView
                                             x:Name="antenasView"
-                                            ItemsSource="{Binding Antenas}"
+                                            ItemsSource="{Binding Antenas, Mode=TwoWay}"
                                             SelectionMode="None"
                                             HasUnevenRows="True"
                                             SeparatorVisibility="None">
@@ -180,7 +176,7 @@
                                                             <CheckBox
                                                                 Grid.Column="2"
                                                                 IsEnabled="False"
-                                                                IsChecked="{Binding IsChecked}"
+                                                                IsChecked="{Binding IsChecked, Mode=TwoWay}"
                                                                 HeightRequest="25"
                                                                 Style="{StaticResource CheckBoxStyle}"/>
                                                         </Grid>

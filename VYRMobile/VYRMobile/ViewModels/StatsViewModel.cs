@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
+using VYRMobile.Data;
 using VYRMobile.Models;
 using VYRMobile.Services;
 
@@ -20,11 +22,22 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
+        private ObservableCollection<Antena> _locations;
+        public ObservableCollection<Antena> Locations
+        {
+            get { return _locations; }
+            set
+            {
+                _locations = value;
+                OnPropertyChanged();
+            }
+        }
         public ObservableCollection<Stat> Data { get; set; }
         public ObservableCollection<Fault> Faults { get; set; }
         public StatsViewModel()
         {
             Users = new ObservableCollection<ApplicationUser>();
+            Locations = new ObservableCollection<Antena>();
 
             Data = new ObservableCollection<Stat>()
             {
@@ -47,15 +60,36 @@ namespace VYRMobile.ViewModels
             };
 
             LoadUsers();
+            LoadLocations();
         }
         private async void LoadUsers()
         {
-            var users = await UsersService.Instance.GetUsers();
+            var users = await ReportsStore.Instance.GetUsersAsync();
 
             Users.Clear();
             foreach(var user in users)
             {
+                user.FullName = user.FirstName + " " + user.LastName;
                 Users.Add(user);
+            }
+        }
+        private async void LoadLocations()
+        {
+            var locations = await ReportsStore.Instance.GetAntenasAsync();
+
+            Locations.Clear();
+            foreach (var location in locations)
+            {
+                Locations.Add(location);
+            }
+        }
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            var changed = PropertyChanged;
+            {
+                if (changed != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
     }

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -35,6 +36,7 @@ namespace VYRMobile.Views
         public EvaluationPage(string User)
         {
             InitializeComponent();
+            BindingContext = new ReportViewModel();
             userLabel.Text = User;
             OkLabelClicked();
             CancelLabelClicked();
@@ -77,26 +79,34 @@ namespace VYRMobile.Views
             Stream fileStream = file.GetStream();
             string fileExtension = fileName.Substring(fileName.Length - 3);
 
-            AddFiles(fileName, fileExtension);
+            App.ImagesNames.Add(fileName);
+            App.ImagesStreams.Add(fileStream);
+
+            AddFiles(fileName, fileStream, fileExtension);
         }
         private async void btnAttach_Clicked(object sender, EventArgs e)
         {
-            try
-            {
-                var fileData = await CrossFilePicker.Current.PickFile();
-                if (fileData == null)
-                    return; 
+            await CrossMedia.Current.Initialize();
 
-                string fileName = fileData.FileName;
-                Stream fileStream = new MemoryStream(fileData.DataArray);
-                string fileExtension = fileName.Substring(fileName.Length - 3);
-
-                AddFiles(fileName, fileExtension);
-            }
-            catch (Exception ex)
+            if (!CrossMedia.Current.IsPickVideoSupported)
             {
-                Console.WriteLine("Exception choosing file: " + ex.ToString());
+                await DisplayAlert("Error", "Tu dispositivo no soporta seleccionar archivos", "OK");
+                return;
             }
+
+            var file = await CrossMedia.Current.PickVideoAsync();
+
+            if (file == null)
+                return;
+
+            string fileName = Path.GetFileName(file.Path);
+            Stream fileStream = file.GetStream();
+            string fileExtension = fileName.Substring(fileName.Length - 3);
+
+            App.ImagesNames.Add(fileName);
+            App.ImagesStreams.Add(fileStream);
+
+            AddFiles(fileName, fileStream, fileExtension);
         }
         private void btnFaltas_Clicked(object sender, EventArgs e)
         {
@@ -197,14 +207,27 @@ namespace VYRMobile.Views
                 //Do nothing
             }
         }
-        private async void btnEnviar_Clicked(object sender, EventArgs e)
+        private void btnEnviar_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushPopupAsync(new LoadingPopup());
-            await Task.Delay(500);
-            await Navigation.PopPopupAsync();
-            await Navigation.PopModalAsync();
+            if (_switch.IsToggled == true)
+            {
+                App.Calculations.Add(new Models.Calculation
+                {
+                    Name = "Respeto",
+                    Commentary = editor1.Text,
+                    Percentage = slider1.Value
+                });
+                App.Calculations.Add(new Models.Calculation
+                {
+                    Name = "Educación",
+                    Commentary = editor2.Text,
+                    Percentage = slider2.Value
+                });
+            }
+
+            ReportViewModel.Instance.CreateEvaluationReportCommand.Execute(null);
         }
-        private async void AddFiles(string fileName, string fileExtension)
+        private async void AddFiles(string fileName, Stream fileStream, string fileExtension)
         {
             Image image = new Image 
             {
@@ -233,18 +256,13 @@ namespace VYRMobile.Views
 
             if(fileExtension == "png" || fileExtension == "jpg" || fileExtension == "peg")
             {
-                image.Source = ImageSource.FromFile(fileName);
+                image.Source = ImageSource.FromStream(() => fileStream);
                 label.Text = fileName;
                 
             }
             else if(fileExtension == "mp4")
             {
                 image.Source = "video.png";
-                label.Text = fileName;
-            }
-            else if(fileExtension == "pus" || fileExtension == "mp3" || fileExtension == "ogg")
-            {
-                image.Source = "audio.png";
                 label.Text = fileName;
             }
             else
