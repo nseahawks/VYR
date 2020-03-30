@@ -56,19 +56,36 @@ namespace VYRMobile.ViewModels
         }
         private async Task PushConfiguracion()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ConfiguracionPage()));
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ConfiguracionPage())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+            });
         }
         private async Task PushEquipamiento()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Utensilios()));
+            App.IsEquipmentValitated = true;
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Utensilios())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+            });
         }
         private async Task PushEstadisticas()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new StatisticsPage()));
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new StatisticsPage())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+            });
         }
         private async Task PushFormacion()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Elearning()));
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Elearning())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+            });
         }
         private async Task ClosePage()
         {

@@ -126,7 +126,7 @@ namespace VYRMobile.Views
             AddMapStyle();
             AddLocations();
             comboBox.SelectionChanged += AntennaSelected;
-           
+
             CalculateCommand = new Command<List<Position>>(Calculate);
             CalculateCommand2 = new Command<List<Position>>(Calculate2);
             UpdateCommand = new Command<List<Position>>(Update);
@@ -539,7 +539,6 @@ namespace VYRMobile.Views
         }
         private async Task CalculateDistance()
         {
-            PuntoViewModel puntoViewModel = new PuntoViewModel();
             var myLatitude = double.Parse(DestinationLocationlat);
             var myLongitude = double.Parse(DestinationLocationlng);
 
@@ -551,10 +550,13 @@ namespace VYRMobile.Views
 
             if (distance < 0.5)
             {
-                puntoViewModel.StopCommand.Execute(null);
+                if(AlarmMode == true)
+                {
+                    PuntoViewModel.Instance.StopCommand.Execute(null);
+                    App.Alarm = null;
+                }
                 StopRoute();
                 ClearPolylinesCommand();
-                App.Alarm = null;
                 await App.Current.MainPage.DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
             }
         }

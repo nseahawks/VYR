@@ -70,8 +70,8 @@ namespace VYRMobile
             {
                 scannerPage.IsScanning = false;
 
-                string antenna = result.ToString();
-                pvm.Antenna = antenna;
+                App.AntennaId = result.ToString();
+
                 pvm.CheckAntenna.Execute(null);
 
                 Device.BeginInvokeOnMainThread(async() =>
@@ -81,8 +81,9 @@ namespace VYRMobile
                     await DisplayAlert("Valor Obtenido", result.Text, "OK");
                 });
             };
-            
+
             await Navigation.PushModalAsync(scannerPage);
+            
         }
 
         /*private async void btnCall_Clicked(object sender, EventArgs e)

@@ -19,6 +19,7 @@ namespace VYRMobile.ViewModels
 {
     public class GoogleMapsViewModel : BaseViewModel
     {
+        private RecordsStore _store { get; set; }
         public Command CalculateRouteCommand { get; set; }
         public Command UpdatePositionCommand { get; set; }
         public Command LoadRouteCommand { get; set; }
@@ -162,6 +163,7 @@ namespace VYRMobile.ViewModels
         }
         public GoogleMapsViewModel()
         {
+            _store = new RecordsStore();
             Antennas = new ObservableCollection<Antena>();
             ToggleAccelerometer();
             LoadRouteCommand = new Command(async () => await LoadRoute());
@@ -209,6 +211,8 @@ namespace VYRMobile.ViewModels
                 var Records = App.Records;
                 var json = JsonConvert.SerializeObject(Records);
                 Application.Current.Properties["record"] = json;
+
+                await _store.AddRecordAsync(record);
 
                 //Location tracking simulation
                 Device.StartTimer(TimeSpan.FromSeconds(1), () =>

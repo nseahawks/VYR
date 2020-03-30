@@ -19,7 +19,7 @@ namespace VYRMobile.Services
                 return _instance;
             }
         }
-        public async Task<List<ApplicationUser>> GetUsers()
+        /*public async Task<List<ApplicationUser>> GetUsers()
         {
             var response = new List<ApplicationUser>
             {
@@ -31,7 +31,7 @@ namespace VYRMobile.Services
             };
 
             return response;
-        }
+        }*/
     }
 }
 

@@ -29,6 +29,22 @@
                 <Setter Property="CornerRadius" Value="5" />
                 <Setter Property="Margin" Value="0, 0, 40, 10" />
             </Style>
+            <Style x:Key="TextStyle" TargetType="Label">
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
+                <Setter Property="FontSize" Value="{StaticResource FontSize20}" />
+                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+            </Style>
+            <Style x:Key="IconStyle" TargetType="Image">
+                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HeightRequest" Value="15" />
+                <Setter Property="WidthRequest" Value="15" />
+                <Setter Property="VerticalOptions" Value="Center" />
+            </Style>
+            <Style x:Key="SwitchStyle" TargetType="Switch">
+                <Setter Property="IsToggled" Value="True"/>
+                <Setter Property="ThumbColor" Value="Green"/>
+                <Setter Property="OnColor" Value="Green"/>
+            </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
     
@@ -55,6 +71,7 @@
                 </Grid.ColumnDefinitions>
                 <Label  
                     Grid.Row="0"
+                    x:Name="titleLabel"
                     Text="Complete su equipo:"
                     Style="{StaticResource LabelStyle}"
                     VerticalOptions="Center"
@@ -71,7 +88,37 @@
                     SeparatorVisibility="Default">
                     <ListView.ItemTemplate>
                         <DataTemplate>
-                            <cells:EquipoItemViewCell />
+                            <ViewCell>
+                                <Grid   
+                                    ColumnSpacing="0"
+                                    RowSpacing="1">
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="60" />
+                                        <ColumnDefinition Width="200" />
+                                        <ColumnDefinition Width="60" />
+                                    </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="40" />
+                                    </Grid.RowDefinitions>
+                                    <Image  
+                                        Source="label.png"
+                                        Grid.Column="0"
+                                        Style="{StaticResource IconStyle}"
+                                        Margin="5,0,0,0"/>
+                                    <Label  
+                                        Grid.Column="1"
+                                        TextColor="{StaticResource BlackColor}"
+                                        Text="{Binding Name}"
+                                        Style="{StaticResource TextStyle}"
+                                        Margin="10,5,0,0"/>
+                                    <Switch 
+                                        Grid.Column="2"
+                                        x:Name="optionSwitch"
+                                        IsToggled="True"
+                                        ThumbColor="{StaticResource GreenColor}"
+                                        OnColor="{StaticResource GreenColor}"/> 
+                                </Grid>
+                            </ViewCell>
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>

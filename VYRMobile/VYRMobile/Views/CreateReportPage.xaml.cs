@@ -28,9 +28,19 @@ namespace VYRMobile.Views
             EnableCommand = new Command(async () => await EnableButtons());
             DisableCommand = new Command(async () => await DisableButtons());
         }
+        /*protected override bool OnBackButtonPressed()
+        {
+            bool action = IsBackingResponse().Result;
+            if (action)
+            {
+                Navigation.PopModalAsync();
+            }
+
+            return action;
+        }*/ 
         protected override bool OnBackButtonPressed()
         {
-            bool action = IsBackingResponse().IsCanceled;
+            bool action = IsBackingResponse().Result;
             if (action)
             {
                 Navigation.PopModalAsync();

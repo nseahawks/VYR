@@ -25,7 +25,11 @@ namespace VYRMobile.Views
 
         private void BtnCalificar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new EvaluationPage(User)));
+            Navigation.PushModalAsync(new NavigationPage(new EvaluationPage(User))
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+            });
         }
 
         protected override void OnDisappearing()
@@ -43,7 +47,8 @@ namespace VYRMobile.Views
         private void userComboBox_SelectionChanged(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
             var selection = e.Value as ApplicationUser;
-            User = selection.Name;
+            User = selection.FullName;
+            App.ReviewedUserId = selection.UserId;
         }
 
         private void UserFilter()

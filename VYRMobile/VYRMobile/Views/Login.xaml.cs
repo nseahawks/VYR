@@ -8,12 +8,14 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Plugin.CloudFirestore;
 using Newtonsoft.Json;
+using VYRMobile.Data;
 
 namespace VYRMobile
 {
     public partial class Login : ContentPage
     {
         IdentityViewModel _log = new IdentityViewModel();
+        private RecordsStore _store { get; set; }
 
         public static readonly BindableProperty TryLoginCommandProperty =
            BindableProperty.Create(nameof(TryLoginCommand), typeof(Command),
@@ -24,6 +26,7 @@ namespace VYRMobile
             InitializeComponent();
             BindingContext = new IdentityViewModel();
 
+            _store = new RecordsStore();
             TryLoginCommand = new Command(async () => await TryLogin());
             Loginbtn.Clicked += Loginbtn_clicked;
         }
@@ -83,6 +86,8 @@ namespace VYRMobile
                 var json = JsonConvert.SerializeObject(Records);
                 Application.Current.Properties["record"] = json;
 
+                await _store.AddRecordAsync(record);
+
                 animation.IsPlaying = false;
                 await animation.FadeTo(0, 100, Easing.Linear);
 
@@ -100,7 +105,6 @@ namespace VYRMobile
                 animation.IsVisible = false;
                 Loginbtn.IsEnabled = true;
             }
-            
         }
         private async void RememberUser()
         {

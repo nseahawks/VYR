@@ -68,15 +68,16 @@
                         FontFamily="{StaticResource PoppinsMedium}"
                         FontSize="18"
                         Margin="15, 20, 0, 0"/>
-                    <DatePicker
-                        MinimumDate="02/01/2020"
-                        MaximumDate="02/29/2020"
-                        Date="02/10/2020"
-                        FontSize="16"
-                        WidthRequest="80"
-                        TextColor="Black"
-                        FontFamily="{StaticResource PoppinsMedium}"
-                        Margin="15, 0, 15, 0"/>
+                        <DatePicker
+                            x:Name="datePicker"
+                            MinimumDate="02/01/2020"
+                            MaximumDate="12/31/2020"
+                            Date="{Binding EventDate}"
+                            FontSize="16"
+                            WidthRequest="80"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            Margin="15, 0, 15, 0"/>
                     <StackLayout
                         Orientation="Horizontal"
                         Margin="15, 20, 0, 0">
@@ -86,6 +87,7 @@
                             FontFamily="{StaticResource PoppinsMedium}"
                             FontSize="18"/>
                         <Switch
+                            x:Name="_switch"
                             IsToggled="False"
                             ThumbColor="{StaticResource BaseColor}"
                             OnColor="{StaticResource BaseColor}"

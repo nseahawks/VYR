@@ -19,8 +19,8 @@ namespace VYRMobile.Models
             get => commentary;
             set => SetProperty(ref commentary, value);
         }
-        int percentage;
-        public int Percentage
+        double percentage;
+        public double Percentage
         {
             get => percentage;
             set => SetProperty(ref percentage, value);

@@ -71,7 +71,12 @@ namespace VYRMobile.Data
             var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
             var response = await _client.PostAsync("/api/v1/reports", contentData);
             DependencyService.Get<IToast>().LongToast(response.StatusCode.ToString());
+
+            App.ImagesStreams.Clear();
+            App.ImagesNames.Clear();
+
             return response.IsSuccessStatusCode;
+
         }
         public Task<bool> DeleteReportAsync(string id)
         {
@@ -118,34 +123,54 @@ namespace VYRMobile.Data
 
             return null;
         }
+        public async Task<IEnumerable<ApplicationUser>> GetUsersAsync()
+        {
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                var response = await _client.GetAsync("/api/v1/users");
+                var jsonReports = response.Content.ReadAsStringAsync().Result;
+                List<ApplicationUser> users = JsonConvert.DeserializeObject<List<ApplicationUser>>(jsonReports);
+                return users;
+            }
+            return null;
+        }
         public Task<bool> UpdateReportAsync(Report report)
         {
             throw new System.NotImplementedException();
         }
-        public async Task<bool> AddEvaluationReportAsync(EvaluationReport evaluationReport, List<Calculation> calculations, List<Fault> faults)
+        public async Task<bool> AddEvaluationReportAsync(EvaluationReport evaluationReport, List<Calculation> calculations)
         {
             if (evaluationReport == null || !IsConnected)
                 return false;
 
             DateTime date = DateTime.UtcNow;
             UserId = await SecureStorage.GetAsync("id");
+
             ImagesStreams = App.ImagesStreams;
             ImagesNames = App.ImagesNames;
 
             if (ImagesStreams != null & ImagesNames != null)
             {
                 await _firebase.RunList(ImagesStreams, ImagesNames, UserId, date);
-                evaluationReport.Img = await _firebase.GetLink(ImagesNames, UserId, date);
+                evaluationReport.Files = await _firebase.GetLink(ImagesNames, UserId, date);
             }
-            
+
+            List<Fault> faults = new List<Fault>();
+
+            foreach (var fault in App.Faults) 
+            {
+                faults.Add(new Fault(fault.Text)
+                {
+                    Name = fault.Text
+                });
+            }
+
             var responseEvaluationReport = new EvaluationReport()
             {
-                ReviewedUserId = evaluationReport.ReviewedUserId,
+                ReviewedUserId = App.ReviewedUserId,
                 Created = date,
                 EventDate = evaluationReport.EventDate,
-                Img = evaluationReport.Img,
-                Videos = evaluationReport.Videos,
-                Audios = evaluationReport.Audios,
+                Files = evaluationReport.Files,
                 GetCalculations = calculations,
                 GetFaults = faults
             };
@@ -154,6 +179,13 @@ namespace VYRMobile.Data
             var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
             var response = await _client.PostAsync("/api/v1/evalReports", contentData);
             DependencyService.Get<IToast>().LongToast(response.StatusCode.ToString());
+
+            App.ReviewedUserId = null;
+            App.ImagesStreams.Clear();
+            App.ImagesNames.Clear();
+            App.Calculations.Clear();
+            App.Faults.Clear();
+
             return response.IsSuccessStatusCode;
         }
     }

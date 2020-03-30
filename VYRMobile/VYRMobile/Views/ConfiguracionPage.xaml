@@ -110,6 +110,34 @@
                                 Margin="10,7,0,0"/>
                         </Grid>
                     </ViewCell>
+                    <ViewCell x:Name="pointsCell">
+                        <Grid Grid.ColumnSpan="1">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="280"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="80"/>
+                            </Grid.RowDefinitions>
+                            <Image
+                                Grid.Column="0"
+                                Grid.Row="0"
+                                Source="point.png"
+                                HorizontalOptions="End"
+                                HeightRequest="28"
+                                WidthRequest="28"/>
+                            <Label
+                                Grid.Column="1"
+                                Grid.Row="0"
+                                Text="Configuración de puntos"
+                                FontFamily="{StaticResource PoppinsBold}"
+                                FontSize="18"
+                                TextColor="{StaticResource BlackColor}"
+                                HorizontalOptions="Start"
+                                VerticalOptions="Center"
+                                Margin="10,7,0,0"/>
+                        </Grid>
+                    </ViewCell>
                 </TableSection>
             </TableRoot>
         </TableView>

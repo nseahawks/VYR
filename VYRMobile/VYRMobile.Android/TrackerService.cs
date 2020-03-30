@@ -132,7 +132,7 @@ namespace VYRMobile.Droid
                         .GetCollection("usersApp")
                         .GetDocument(id)
                         .GetCollection("Devices")
-                        .GetDocument(await SecureStorage.GetAsync("device_id"))
+                        .GetDocument(deviceId)
                         .GetCollection("Locations").AddDocumentAsync(location);
 
                     //await CrossCloudFirestore.Current

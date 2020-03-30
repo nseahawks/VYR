@@ -3,13 +3,119 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.PositionPage">
+             x:Class="VYRMobile.Views.PositionPage"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             Title="Configuración de puntos">
+    <ContentPage.Resources>
+        <Style x:Key="TextStyle" TargetType="Label">
+            <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}" />
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
+        </Style>
+    </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout>
+                <Label
+                    Text="Configuración del puesto"
+                    TextColor="Black"
+                    FontSize="18"
+                    FontFamily="{StaticResource PoppinsBold}"
+                    Margin="15, 20, 0, 0"/>
+                <Label
+                    Text="Seleccione punto a configurar:"
+                    Style="{StaticResource TextStyle}"
+                    Margin="15, 10, 0, 0"/>
+                <combobox:SfComboBox
+                    x:Name="locationsComboBox"
+                    Margin="15, 0, 0, 0"
+                    DataSource="{Binding Locations}"
+                    DisplayMemberPath="LocationName"
+                    BackgroundColor="White"
+                    HeightRequest="42"
+                    WidthRequest="280"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    AllowFiltering="True"
+                    IsEditableMode="True"
+                    Watermark="Locaciones"
+                    WatermarkColor="Black"
+                    NoResultsFoundText="Ninguna locación encontrada"
+                    NoResultsFoundFontSize="16"
+                    NoResultsFoundTextColor="Gray"
+                    TextColor="Black"
+                    TextSize="16"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    DropDownCornerRadius="2"
+                    MaximumDropDownHeight="200"
+                    DropDownBackgroundColor="White"
+                    DropDownItemFontFamily="{StaticResource PoppinsMedium}"
+                    Opacity="1"/>
+                <Frame
+                    BackgroundColor="#C3C3C3"
+                    HasShadow="True"
+                    HorizontalOptions="FillAndExpand"
+                    HeightRequest="1"
+                    Padding="0"
+                    Margin="15, 10, 15, 0"/>
+                <Label
+                    Text="Seleccionar trabajador"
+                    Style="{StaticResource TextStyle}"
+                    Margin="15, 0, 0, 0"/>
+                <combobox:SfComboBox
+                    x:Name="usersComboBox"
+                    Margin="15, 0, 0, 0"
+                    DataSource="{Binding Users}"
+                    DisplayMemberPath="FullName"
+                    BackgroundColor="White"
+                    HeightRequest="42"
+                    WidthRequest="280"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    AllowFiltering="True"
+                    IsEditableMode="True"
+                    Watermark="Vigilantes"
+                    WatermarkColor="Black"
+                    NoResultsFoundText="Ningun usuario encontrado"
+                    NoResultsFoundFontSize="16"
+                    NoResultsFoundTextColor="Gray"
+                    TextColor="Black"
+                    TextSize="16"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    DropDownCornerRadius="2"
+                    MaximumDropDownHeight="200"
+                    DropDownBackgroundColor="White"
+                    DropDownItemFontFamily="{StaticResource PoppinsMedium}"
+                    Opacity="1"/>
+                <Label
+                    Text="Detalles generales:"
+                    Style="{StaticResource TextStyle}"
+                    Margin="15, 10, 0, 0"/>
+                <Editor
+                    Placeholder="Escriba aquí"
+                    PlaceholderColor="DarkGray"
+                    BackgroundColor="#F9F8F8"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    HeightRequest="100"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="15, 0, 15, 0"/>
+                <Label
+                    Text="Detalles específicos:"
+                    Style="{StaticResource TextStyle}"
+                    Margin="15, 10, 0, 0"/>
+                <Editor
+                    Placeholder="Escriba aquí"
+                    PlaceholderColor="DarkGray"
+                    BackgroundColor="#F9F8F8"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    HeightRequest="100"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="15, 0, 15, 0"/>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

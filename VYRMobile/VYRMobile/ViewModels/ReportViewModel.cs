@@ -14,6 +14,8 @@ using System.Reflection;
 using System.IO;
 using Newtonsoft.Json;
 using System.Collections.Generic;
+using Rg.Plugins.Popup.Extensions;
+using VYRMobile.Views.Popups;
 
 namespace VYRMobile.ViewModels
 {
@@ -23,11 +25,23 @@ namespace VYRMobile.ViewModels
         public bool isBusy = false;
         private ReportsStore _store { get; set; }
         public Report CReport { get; set; }
+        public EvaluationReport EReport { get; set; }
         public Command CreateReportCommand { get; }
+        public Command CreateEvaluationReportCommand { get; }
         public Command LoadCommand { get; set; }
         public Command ReportDetailsCommand { get; set; }
 
+        private static ReportViewModel _instance;
+        public static ReportViewModel Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new ReportViewModel();
 
+                return _instance;
+            }
+        }
         private ObservableCollection<Models.Image> _posts;
         public ObservableCollection<Models.Image> Posts
         {
@@ -188,7 +202,6 @@ namespace VYRMobile.ViewModels
             get { return imageInfo; }
             set { imageInfo = value; }
         }
-
         public ReportViewModel()
         {
             ImageInfo = new ObservableCollection<Models.Image>();
@@ -198,8 +211,10 @@ namespace VYRMobile.ViewModels
             LoadData();
 
             CReport = new Report();
+            EReport = new EvaluationReport();
             _store = new ReportsStore();
             CreateReportCommand = new Command(async () => await CreateReport());
+            CreateEvaluationReportCommand = new Command(async () => await CreateEvaluationReport());
             LoadCommand = new Command(async () => await LoadData2());
             ReportDetailsCommand = new Command(async () => await LoadData2());
             _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
@@ -230,6 +245,23 @@ namespace VYRMobile.ViewModels
             }
 
             IsBusy = false;
+        }
+        private async Task CreateEvaluationReport()
+        {
+            if (IsBusy)
+                return;
+
+            await App.Current.MainPage.Navigation.PushPopupAsync(new LoadingPopup());
+
+            IsBusy = true;
+
+            IsSuccess = await _store.AddEvaluationReportAsync(EReport, App.Calculations);
+
+            IsBusy = false;
+
+            await App.Current.MainPage.Navigation.PopPopupAsync();
+
+            await App.Current.MainPage.Navigation.PopModalAsync();
         }
         private async void LoadData()
         {
@@ -315,11 +347,5 @@ namespace VYRMobile.ViewModels
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
         }
-        /*private void LoadPosts()
-        {
-            var posts = MockImageService.Instance.GetCommunityPosts();
-            Posts = new ObservableCollection<Models.Image>(posts);
-            CurrentPost = Posts[0];
-        }*/
     }
 }

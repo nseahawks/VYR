@@ -15,6 +15,13 @@ namespace VYRMobile.Views
             InitializeComponent();
             BindingContext = new EquipoViewModel();
             btnConfirmar.Clicked += BtnConfirmar_Clicked;
+
+            if (App.IsEquipmentValitated == true)
+            {
+                btnConfirmar.IsVisible = false;
+                btnConfirmar.IsEnabled = false;
+                titleLabel.Text = "Equipo seleccionado";
+            }
         }
 
         private async void BtnConfirmar_Clicked(object sender, EventArgs e)
@@ -32,5 +39,6 @@ namespace VYRMobile.Views
                 Application.Current.MainPage = new NavigationPage(new Loading());
             }
         }
+
     }
 }

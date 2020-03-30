@@ -20,6 +20,7 @@ namespace VYRMobile.ViewModels
 {
     public class PuntoViewModel : INotifyPropertyChanged
     {
+        private RecordsStore _store { get; set; }
         public Stopwatch stopWatch = new Stopwatch();
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
@@ -29,6 +30,17 @@ namespace VYRMobile.ViewModels
         public ICommand CheckAntenna { get; }
         public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
+        private static PuntoViewModel _instance;
+        public static PuntoViewModel Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new PuntoViewModel();
+
+                return _instance;
+            }
+        }
         private string antenna;
         public string Antenna
         {
@@ -111,7 +123,7 @@ namespace VYRMobile.ViewModels
             set
             {
                 _antenas = value;
-                OnPropertyChanged("Antenas");
+                OnPropertyChanged(nameof(Antenas));
             }
         }
 
@@ -128,6 +140,7 @@ namespace VYRMobile.ViewModels
 
         public PuntoViewModel()
         {
+            _store = new RecordsStore();
             Puntos = new ObservableCollection<Punto>();
             Tareas = new ObservableCollection<Report>();
             Antenas = new ObservableCollection<Antena>();
@@ -209,7 +222,10 @@ namespace VYRMobile.ViewModels
         }
         public void StopStopwatch()
         {
-            stopWatch.Stop();
+            if(stopWatch.IsRunning == true)
+            {
+                stopWatch.Stop();
+            }
         }
 
         private async void CheckingAntenna()
@@ -220,9 +236,17 @@ namespace VYRMobile.ViewModels
             {
                 string antenaId = antena.Id.ToString();
 
-                if (antenaId == Antenna)
+                if (antenaId == App.AntennaId)
                 {
                     antena.PointChecked = true;
+
+                    await CrossCloudFirestore.Current
+                        .Instance
+                        .GetCollection("usersApp")
+                        .GetDocument(App.ApplicationUserId)
+                        .GetCollection("Stands")
+                        .GetDocument(antenaId)
+                        .UpdateDataAsync(new { Covered = true });
 
                     var record = new Record()
                     {
@@ -238,6 +262,8 @@ namespace VYRMobile.ViewModels
                     var Records = App.Records;
                     var json = JsonConvert.SerializeObject(Records);
                     Application.Current.Properties["record"] = json;
+
+                    await _store.AddRecordAsync(record);
 
                     break;
                 }
