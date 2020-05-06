@@ -23,7 +23,6 @@ namespace VYRMobile.Droid
             //.AsObservable().Subscribe(documentChanged =>
             //{
             //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
-
             //});
             var id = await SecureStorage.GetAsync("id");
             var document = CrossCloudFirestore.Current.Instance

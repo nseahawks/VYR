@@ -56,9 +56,12 @@ namespace VYRMobile
             {
                 animation.IsVisible = false;
 
-                CrossCloudFirestore.Current.Instance
+                var document = await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
-                                          .GetDocument(_userId);
+                                          .GetDocument(_userId)
+                                          .GetDocumentAsync(); ;
+
+                //var model = document.ToObject<ApplicationUser>();
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
