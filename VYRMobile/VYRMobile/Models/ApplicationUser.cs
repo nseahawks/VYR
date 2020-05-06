@@ -53,5 +53,17 @@ namespace VYRMobile.Models
             get => fullName;
             set => SetProperty(ref fullName, value);
         }
+        private string shiftId;
+        public string ShiftId
+        {
+            get => shiftId;
+            set => SetProperty(ref shiftId, value);
+        }
+        private string hasAttended = "undefined.png";
+        public string HasAttended
+        {
+            get => hasAttended;
+            set => SetProperty(ref hasAttended, value);
+        }
     }
 }

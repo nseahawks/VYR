@@ -485,6 +485,11 @@
     <AndroidResource Include="Resources\drawable\plus2.png" />
     <AndroidResource Include="Resources\drawable\plus3.png" />
     <AndroidResource Include="Resources\drawable\point.png" />
+    <AndroidResource Include="Resources\drawable\undefined.png" />
+    <AndroidResource Include="Resources\drawable\attended.png" />
+    <AndroidResource Include="Resources\drawable\notAttended.png" />
+    <AndroidResource Include="Resources\drawable\camera2.png" />
+    <AndroidResource Include="Resources\drawable\supervision.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

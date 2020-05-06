@@ -96,7 +96,6 @@ namespace VYRMobile.Views
             PolylinesCommand = new Command(ClearPolylinesCommand);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
 
-
             alarmMode();
             Pin destinationPin;
             destinationPin = new Pin()
@@ -142,7 +141,7 @@ namespace VYRMobile.Views
                 Label = "Negocios Seahawks",
                 Address = "Av. Roberto Pastoriza 869, Santo Domingo 10147",
                 Position = new Position(18.461294, -69.948531),
-                Tag = "id_seahawks",
+                Tag = "id_seahawks"
             };
 
             map.Circle = new CustomCircle
@@ -153,8 +152,8 @@ namespace VYRMobile.Views
 
             map.Pins.Add(seahawksPin);
 
-            Compass.ReadingChanged += Compass_ReadingChanged;
-            OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
+            //Compass.ReadingChanged += Compass_ReadingChanged;
+            ///OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
             map.PinClicked += Map_PinClicked;
         }
         
@@ -284,7 +283,8 @@ namespace VYRMobile.Views
 
         private async void MoveCamera()
         {
-            var location = await Geolocation.GetLastKnownLocationAsync();
+            var request = new GeolocationRequest(GeolocationAccuracy.Default);
+            var location = await Geolocation.GetLocationAsync(request);
             Position myPosition = new Position(location.Latitude, location.Longitude);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(1000)));
         }

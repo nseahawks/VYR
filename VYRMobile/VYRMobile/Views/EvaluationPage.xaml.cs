@@ -54,7 +54,6 @@ namespace VYRMobile.Views
                 segmentLayout.Opacity = 0.5;
             }
         }
-
         private async void btnPhoto_Clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();
@@ -65,12 +64,7 @@ namespace VYRMobile.Views
                 return;
             }
 
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
-            {
-                SaveToAlbum = true,
-                Name = "seahawks.png"
-            });
-
+            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions{ });
 
             if (file == null)
                 return;
@@ -143,7 +137,6 @@ namespace VYRMobile.Views
             Grid grid = new Grid();
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(300) });
             grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(30) });
-
 
             Frame frame = new Frame
             {

@@ -63,17 +63,10 @@ namespace VYRMobile.Views
 
         private async void Charge()
         {
-            while (isWaiting)
+            while(isWaiting == false)
             {
-                //var result = CheckStatus().ToString();
-
-                //if(result == "ACCEPTED")
-                //{
-                //    isWaiting = false;
-                //}
                 await Task.Delay(100);
             }
-            //Application.Current.MainPage = new NavigationPage(new MenuPage());
         }
 
         public class StatusU

@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
@@ -10,101 +11,228 @@
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:stepBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Test"
+             NavigationPage.HasBackButton="False"
+             Title="Validación de Asistencia"
              BackgroundColor="White">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style x:Key="ButtonStyle" TargetType="button:SfButton">
+                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
+                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
+                <Setter Property="FontSize" Value="{StaticResource FontSize14}" />
+                <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
+                <Setter Property="HeightRequest" Value="40" />
+                <Setter Property="WidthRequest" Value="120" />
+                <Setter Property="CornerRadius" Value="5" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
     <Grid>
         <StackLayout>
-            <Label
-                Text="{Binding StopWatchFinal}"
-                FontAttributes="Bold"
-                FontSize="20"
-                TextColor="Black"
-                VerticalOptions="Center"
+            <stepBar:SfStepProgressBar
+                x:Name="progressBar"
                 HorizontalOptions="Center"
-                Margin="0, 30, 0, 0"/>
-            <Button
-                BackgroundColor="{DynamicResource PrimaryColor}"
-                Text="INICIAR"
-                TextColor="{DynamicResource SecondaryColor}"
-                Command="{Binding StartCommand}"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Margin="0, 10, 0, 0"/>
-            <Button
-                BackgroundColor="{DynamicResource PrimaryColor}"
-                Text="REINICIAR"
-                TextColor="{DynamicResource SecondaryColor}"
-                Command="{Binding RestartCommand}"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Margin="0, 10, 0, 0"/>
-            <Button
-                BackgroundColor="{DynamicResource PrimaryColor}"
-                Text="DETENER"
-                TextColor="{DynamicResource SecondaryColor}"
-                Command="{Binding StopCommand}"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"
-                Margin="0, 10, 0, 0"/>
+                Orientation="Horizontal"
+                TitleSpace="10"
+                TitleAlignment="Center" 
+                BackgroundColor="Transparent"
+                HeightRequest="60"
+                Margin="0, 20, 0, 0">
+                <stepBar:SfStepProgressBar.NotStartedStepStyle>
+                    <stepBar:StepStyle
+                        x:TypeArguments="stepBar:NotStartedStepState"
+                        MarkerShapeType="Circle" 
+                        MarkerStrokeColor="{DynamicResource PrimaryColor}"
+                        MarkerStrokeWidth="3" 
+                        MarkerContentType="Dot" 
+                        MarkerContentFillColor="Transparent"
+                        MarkerSize="25"
+                        MarkerContentSize="10"/>
+                </stepBar:SfStepProgressBar.NotStartedStepStyle>
+                <stepBar:SfStepProgressBar.InProgressStepStyle>
+                    <stepBar:StepStyle
+                        x:TypeArguments="stepBar:InProgressStepState"
+                        MarkerShapeType="Circle" 
+                        MarkerStrokeColor="{DynamicResource PrimaryColor}" 
+                        MarkerStrokeWidth="3"
+                        MarkerContentType="None" 
+                        MarkerContentFillColor="White"
+                        MarkerSize="25"
+                        MarkerContentSize="10"/>
+                </stepBar:SfStepProgressBar.InProgressStepStyle>
+                <stepBar:SfStepProgressBar.CompletedStepStyle>
+                    <stepBar:StepStyle
+                        x:TypeArguments="stepBar:CompletedStepState"
+                        MarkerShapeType="Circle" 
+                        MarkerStrokeColor="{DynamicResource PrimaryColor}" 
+                        MarkerStrokeWidth="3"
+                        MarkerContentType="Tick" 
+                        MarkerContentFillColor="{DynamicResource PrimaryColor}"
+                        MarkerSize="25"
+                        MarkerContentSize="10"/>
+                </stepBar:SfStepProgressBar.CompletedStepStyle>
+                <stepBar:StepView 
+                    x:Name="step1"
+                    Status="InProgress"
+                    HorizontalOptions="Center">
+                    <stepBar:StepView.PrimaryFormattedText>
+                        <FormattedString>
+                            <Span 
+                                Text="Paso 1" 
+                                FontSize="14" 
+                                TextColor="Black"
+                                FontAttributes="Bold"/>
+                        </FormattedString>
+                    </stepBar:StepView.PrimaryFormattedText>
+                    <stepBar:StepView.SecondaryFormattedText>
+                        <FormattedString>
+                            <Span 
+                                Text="Codigo" 
+                                FontSize="12" 
+                                TextColor="Black"/>
+                        </FormattedString>
+                    </stepBar:StepView.SecondaryFormattedText>
+                </stepBar:StepView>
+                <stepBar:StepView 
+                    x:Name="step2"
+                    Status="NotStarted"
+                    HorizontalOptions="Center">
+                    <stepBar:StepView.PrimaryFormattedText>
+                        <FormattedString>
+                            <Span 
+                                Text="Paso 2" 
+                                FontSize="14" 
+                                TextColor="Black"
+                                FontAttributes="Bold"/>
+                        </FormattedString>
+                    </stepBar:StepView.PrimaryFormattedText>
+                    <stepBar:StepView.SecondaryFormattedText>
+                        <FormattedString>
+                            <Span 
+                                Text="Archivo de imagen" 
+                                FontSize="12" 
+                                TextColor="Black"/>
+                        </FormattedString>
+                    </stepBar:StepView.SecondaryFormattedText>
+                </stepBar:StepView>
+                <!--<stepBar:StepView 
+                    x:Name="step3"
+                    Status="NotStarted"
+                    HorizontalOptions="Center">
+                    <stepBar:StepView.PrimaryFormattedText>
+                        <FormattedString>
+                            <Span 
+                                Text="Paso 3" 
+                                FontSize="14" 
+                                TextColor="Black"
+                                FontAttributes="Bold"/>
+                        </FormattedString>
+                    </stepBar:StepView.PrimaryFormattedText>
+                    <stepBar:StepView.SecondaryFormattedText>
+                        <FormattedString>
+                            <Span 
+                                Text="Confirmación" 
+                                FontSize="12" 
+                                TextColor="Black"/>
+                        </FormattedString>
+                    </stepBar:StepView.SecondaryFormattedText>
+                </stepBar:StepView>-->
+            </stepBar:SfStepProgressBar>
         </StackLayout>
-        <maps:Map      
-            x:Name="map" 
-            VerticalOptions="FillAndExpand"
-            HorizontalOptions="FillAndExpand"
-            HasScrollEnabled="True"
-            IsShowingUser="True"
-            IsTrafficEnabled="False"
-            IsIndoorEnabled="True"
-            IsEnabled="True"
-            Visual="Material"
-            IsVisible="False"/>
         <StackLayout
-            x:Name="animation"
-            Orientation="Horizontal"
-            IsVisible="False">
-            <StackLayout
-                HorizontalOptions="FillAndExpand">
-                <magic:GradientView
-                    x:Name="lateral1"
-                    WidthRequest="40"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="Start">  
-                    <magic:GradientView.GradientSource>
-                        <magic:GradientCollection>
-                            <magic:LinearGradient
-                                Angle="90">
-                                <magic:GradientStop 
-                                    Color="Red" 
-                                    Offset="1"/>
-                                <magic:GradientStop 
-                                    Color="Transparent" 
-                                    Offset="0"/>
-                            </magic:LinearGradient>
-                        </magic:GradientCollection>
-                    </magic:GradientView.GradientSource>
-                </magic:GradientView>
-            </StackLayout>
-            <StackLayout
-                HorizontalOptions="FillAndExpand">
-                <magic:GradientView
-                    x:Name="lateral2"
-                    WidthRequest="40"
-                    VerticalOptions="FillAndExpand"
-                    HorizontalOptions="End">
-                    <magic:GradientView.GradientSource>
-                        <magic:LinearGradient
-                            Angle="90">
-                            <magic:GradientStop 
-                                Color="Red" 
-                                Offset="0"/>
-                            <magic:GradientStop 
-                                Color="Transparent" 
-                                Offset="1"/>
-                        </magic:LinearGradient>
-                    </magic:GradientView.GradientSource>
-                </magic:GradientView>
-            </StackLayout>
+            x:Name="loadingLayout"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Opacity="0">
+            <Label
+                Text="Validando..."
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="18"/>
+            <ActivityIndicator
+                x:Name="indicator"
+                Color="{DynamicResource PrimaryColor}"
+                HeightRequest="80"
+                WidthRequest="80"
+                IsRunning="False"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"/>
         </StackLayout>
+        <StackLayout
+            x:Name="imageLayout"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Opacity="0">
+            <Label
+                Text="Adjunte una foto"
+                TextColor="Black"
+                FontSize="18"
+                FontAttributes="Bold"
+                HorizontalOptions="Center"/>
+            <Frame
+                x:Name="photoFrame"
+                BackgroundColor="{DynamicResource PrimaryColor}"
+                HeightRequest="100"
+                WidthRequest="200"
+                CornerRadius="20"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                IsClippedToBounds="True"
+                Padding="0"
+                HasShadow="True">
+                <Image
+                    x:Name="pic"
+                    Source="camera2.png"
+                    Aspect="AspectFit"/>
+            </Frame>
+            <Label
+                Text="(presione la imagen)"
+                TextColor="Black"
+                FontSize="12"
+                FontAttributes="None"
+                HorizontalOptions="Center"/>
+        </StackLayout>
+        <StackLayout
+            x:Name="codeLayout"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Label
+                Text="Introduzca el codigo del vigilante"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="18"/>
+            <Entry
+                x:Name="codeEntry"
+                Keyboard="Numeric"
+                HorizontalTextAlignment="Center"
+                ClearButtonVisibility="WhileEditing"
+                FontSize="22"
+                FontAttributes="Bold"
+                BackgroundColor="White"
+                TextColor="Black"
+                HeightRequest="60" 
+                WidthRequest="150"/>
+        </StackLayout>
+        <button:SfButton
+            x:Name="btnNext"
+            Text="Siguiente"
+            Style="{StaticResource ButtonStyle}"
+            VerticalOptions="End"
+            HorizontalOptions="End"
+            HasShadow="True"
+            Margin="0, 0, 35, 70"/>
+        <button:SfButton
+            x:Name="btnBack"
+            Text="Atras"
+            Style="{StaticResource ButtonStyle}"
+            VerticalOptions="End"
+            HorizontalOptions="Start"
+            HasShadow="True"
+            Opacity="0"
+            IsEnabled="False"
+            Margin="35, 0, 0, 70"/>
     </Grid>
 </ContentPage>

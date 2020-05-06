@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.SupervisionPage"
+             BackgroundColor="White"
+             NavigationPage.HasBackButton="False"
+             Title="Supervisión de Asistencia">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+            <StackLayout>
+                <Label 
+                    Text="Turno:"
+                    TextColor="{StaticResource GrayColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="18"
+                    Margin="15, 25, 0, 0"/>
+                <Label
+                    Text="6PM a 6AM"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="18"
+                    Margin="15, 0, 0, 0"/>
+                <Label
+                    Text="Trabajadores"
+                    TextColor="{StaticResource BlackColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="18"
+                    Margin="15, 30, 0, 0"/>
+                <Frame
+                    BackgroundColor="#909090"
+                    HasShadow="True"
+                    HorizontalOptions="FillAndExpand"
+                    Padding="0"
+                    HeightRequest="1"
+                    Margin="15, 0, 15, 0"/>
+                <ListView
+                    x:Name="workersView"
+                    ItemsSource="{Binding Users}"
+                    SelectionMode="None"
+                    HasUnevenRows="True"
+                    SeparatorVisibility="None"
+                    HorizontalOptions="FillAndExpand"
+                    Margin="15, 0, 15, 0">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <ViewCell.ContextActions>
+                                    <MenuItem
+                                        Clicked="OnReplace"
+                                        Text="Sustituir"/>
+                                    <MenuItem
+                                        Clicked="OnValidate"
+                                        Text="Confirmar asistencia"/>
+                                </ViewCell.ContextActions>
+                                <Grid
+                                    Grid.RowSpan="1"
+                                    RowSpacing="1">
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="30"/>
+                                    </Grid.RowDefinitions>
+                                    <StackLayout
+                                        HorizontalOptions="StartAndExpand"
+                                        Orientation="Horizontal">
+                                        <Image
+                                            Grid.Column="0"
+                                            Source="{Binding HasAttended}"
+                                            HorizontalOptions="Start"
+                                            HeightRequest="20"
+                                            WidthRequest="20"
+                                            Margin="2, 0, 0, 0"/>
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding FullName}"
+                                            TextColor="{StaticResource BlackColor}"
+                                            FontFamily="{StaticResource PoppinsBold}"
+                                            FontSize="14"
+                                            HorizontalOptions="Start"
+                                            Margin="2, 0, 0, 0"/>
+                                    </StackLayout>
+                                </Grid>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <StackLayout
+                AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.9, 0.9"
+                AbsoluteLayout.LayoutFlags="All"
+                x:Name="pickerView"
+                IsVisible="False"
+                IsEnabled="False">
+                <Frame
+                    HeightRequest="250"
+                    WidthRequest="270"
+                    HasShadow="True"
+                    CornerRadius="8"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Padding="0"
+                    IsClippedToBounds="True">
+                    <picker:SfPicker
+                        x:Name="picker"
+                        ItemsSource="{Binding Users2}"
+                        DisplayMemberPath="FullName"
+                        HeaderBackgroundColor="{DynamicResource PrimaryColor}"
+                        HeaderTextColor="{DynamicResource SecondaryColor}"
+                        OKButtonTextColor="{DynamicResource PrimaryColor}"
+                        CancelButtonTextColor="{DynamicResource PrimaryColor}"
+                        OKButtonBackgroundColor="Green"
+                        CancelButtonBackgroundColor="Red"
+                        SelectedItemFontSize="16"
+                        UnSelectedItemFontSize="16"
+                        PickerMode="Default"
+                        HeightRequest="250"
+                        WidthRequest="270"
+                        ItemHeight="30"
+                        HeaderHeight="40"
+                        HeaderText="Seleccionar"
+                        ShowColumnHeader="True"
+                        ColumnHeaderText="Trabajadores"
+                        SelectedItemTextColor="{DynamicResource PrimaryColor}"
+                        FooterHeight="40"
+                        ShowFooter="True"
+                        OkButtonClicked="Picker_OkButtonClicked"
+                        CancelButtonClicked="Picker_CancelButtonClicked"
+                        IsOpen="True"/>
+                </Frame>
+            </StackLayout>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</ContentPage>

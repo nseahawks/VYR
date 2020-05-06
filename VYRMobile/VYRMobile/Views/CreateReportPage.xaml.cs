@@ -64,11 +64,7 @@ namespace VYRMobile.Views
                 return;
             } 
 
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
-            {
-                SaveToAlbum = true,
-                Name = "seahawks.png"
-            });
+            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions{ });
 
             if (file == null)
                 return;
