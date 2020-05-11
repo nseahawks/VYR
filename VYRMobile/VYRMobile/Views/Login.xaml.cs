@@ -5,7 +5,8 @@ using VYRMobile.Models;
 using VYRMobile.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+
+
 using Plugin.CloudFirestore;
 using Newtonsoft.Json;
 using VYRMobile.Data;
@@ -30,6 +31,7 @@ namespace VYRMobile
             TryLoginCommand = new Command(async () => await TryLogin());
             Loginbtn.Clicked += Loginbtn_clicked;
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
