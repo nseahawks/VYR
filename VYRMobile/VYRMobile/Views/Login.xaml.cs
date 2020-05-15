@@ -58,17 +58,35 @@ namespace VYRMobile
             {
                 animation.IsVisible = false;
 
-                var document = await CrossCloudFirestore.Current.Instance
-                                          .GetCollection("usersApp")
-                                          .GetDocument(_userId)
-                                          .GetDocumentAsync(); ;
+                if(App.ApplicationUserRole == "Supervisor")
+                {
+                    var document = await CrossCloudFirestore.Current.Instance
+                                              .GetCollection("supervisorsApp")
+                                              .GetDocument(_userId)
+                                              .GetDocumentAsync(); ;
 
-                //var model = document.ToObject<ApplicationUser>();
+                    //var model = document.ToObject<ApplicationUser>();
 
-                await CrossCloudFirestore.Current.Instance
-                                          .GetCollection("usersApp")
-                                          .GetDocument(_userId)
-                                          .UpdateDataAsync(new { LoggedIn = true });
+                    await CrossCloudFirestore.Current.Instance
+                                              .GetCollection("supervisorsApp")
+                                              .GetDocument(_userId)
+                                              .UpdateDataAsync(new { LoggedIn = true });
+
+                }
+                else
+                {
+                    var document = await CrossCloudFirestore.Current.Instance
+                                              .GetCollection("usersApp")
+                                              .GetDocument(_userId)
+                                              .GetDocumentAsync(); ;
+
+                    //var model = document.ToObject<ApplicationUser>();
+
+                    await CrossCloudFirestore.Current.Instance
+                                              .GetCollection("usersApp")
+                                              .GetDocument(_userId)
+                                              .UpdateDataAsync(new { LoggedIn = true });
+                }
 
                 string user = email.Text.ToString();
                 await SecureStorage.SetAsync("EmailRemembered", user);
@@ -88,12 +106,26 @@ namespace VYRMobile
                 var json = JsonConvert.SerializeObject(Records);
                 Application.Current.Properties["record"] = json;
 
-                await _store.AddRecordAsync(record);
+                try
+                {
+                    await _store.AddRecordAsync(record);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "No es posible conectar con la API", "OK");
+                }
 
                 animation.IsPlaying = false;
                 await animation.FadeTo(0, 100, Easing.Linear);
 
-                Application.Current.MainPage = new NavigationPage(new Utensilios());
+                if(App.ApplicationUserRole == "Supervisor")
+                {
+                    Application.Current.MainPage = new NavigationPage(new Loading());
+                }
+                else
+                {
+                    Application.Current.MainPage = new NavigationPage(new Utensilios());
+                }
             }
             else
             {

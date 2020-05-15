@@ -131,7 +131,6 @@ namespace VYRMobile.Views
             uint duration = 50;
 
 
-
             var animation = new Animation();
 
             animation.WithConcurrent((f) => imageLayout.Opacity = f, 1, 0, Easing.Linear);

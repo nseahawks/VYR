@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Utensilios"
              NavigationPage.HasNavigationBar="False"
@@ -16,7 +17,7 @@
                 <Setter Property="FontSize" Value="{StaticResource FontSize20}" />
                 <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
             </Style>
-            <Style x:Key="ButtonStyle" TargetType="Button">
+            <Style x:Key="ButtonStyle" TargetType="button:SfButton">
                 <Setter Property="Text" Value="Confirmar" />
                 <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
@@ -28,6 +29,7 @@
                 <Setter Property="VerticalOptions" Value="Center" />
                 <Setter Property="CornerRadius" Value="5" />
                 <Setter Property="Margin" Value="0, 0, 40, 10" />
+                <Setter Property="HasShadow" Value="True"/>
             </Style>
             <Style x:Key="TextStyle" TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
@@ -122,7 +124,19 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button
+                <Label
+                    x:Name="isEmptyLabel"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    IsVisible="{Binding IsEmpty}"
+                    IsEnabled="{Binding IsEmpty}"
+                    Text="Usted no tiene equipamiento asignado"
+                    TextColor="Gray"
+                    FontAttributes="Italic"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+                <button:SfButton
                     Grid.Row="2"
                     x:Name="btnConfirmar" 
                     Style="{StaticResource ButtonStyle}"/>

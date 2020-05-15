@@ -133,8 +133,8 @@
                         <tabview:SfTabView 
                             x:Name="tabView" 
                             VerticalOptions="FillAndExpand"
-                            VisibleHeaderCount="2" 
-                            Grid.Row="0" >
+                            VisibleHeaderCount="1" 
+                            Grid.Row="0">
                             <tabview:SfTabView.Items>
                                 <tabview:SfTabItem 
                                     Title="Antenas"
@@ -142,51 +142,63 @@
                                     SelectionColor="{StaticResource BaseColor}"
                                     TitleFontSize="{StaticResource FontSize16}">
                                     <tabview:SfTabItem.Content>
-                                        <ListView
-                                            x:Name="antenasView"
-                                            ItemsSource="{Binding Antenas, Mode=TwoWay}"
-                                            SelectionMode="None"
-                                            HasUnevenRows="True"
-                                            SeparatorVisibility="None">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <ViewCell>
-                                                        <Grid   
-                                                            ColumnSpacing="0"
-                                                            RowSpacing="1">
-                                                            <Grid.ColumnDefinitions>
-                                                                <ColumnDefinition Width="35" />
-                                                                <ColumnDefinition Width="250" />
-                                                                <ColumnDefinition Width="35" />
-                                                            </Grid.ColumnDefinitions>
-                                                            <Grid.RowDefinitions>
-                                                                <RowDefinition Height="35" />
-                                                            </Grid.RowDefinitions>
-                                                            <Image
-                                                                Source="antenna.png"
-                                                                Grid.Column="0"
-                                                                Style="{StaticResource PhotoStyle}"
-                                                                Margin="5,0,0,0"/>
-                                                            <Label
-                                                                Grid.Column="1"
-                                                                TextColor="{StaticResource BlackColor}"
-                                                                Text="{Binding LocationName}"
-                                                                Style="{StaticResource NameTextStyle}"
-                                                                Margin="0,0,0,0"/>
-                                                            <CheckBox
-                                                                Grid.Column="2"
-                                                                IsEnabled="False"
-                                                                IsChecked="{Binding IsChecked, Mode=TwoWay}"
-                                                                HeightRequest="25"
-                                                                Style="{StaticResource CheckBoxStyle}"/>
-                                                        </Grid>
-                                                    </ViewCell>
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
+                                        <Grid>
+                                            <ListView
+                                                x:Name="antenasView"
+                                                ItemsSource="{Binding Antenas, Mode=TwoWay}"
+                                                SelectionMode="None"
+                                                HasUnevenRows="True"
+                                                SeparatorVisibility="None">
+                                                <ListView.ItemTemplate>
+                                                    <DataTemplate>
+                                                        <ViewCell>
+                                                            <Grid   
+                                                                ColumnSpacing="0"
+                                                                RowSpacing="1">
+                                                                <Grid.ColumnDefinitions>
+                                                                    <ColumnDefinition Width="35" />
+                                                                    <ColumnDefinition Width="250" />
+                                                                    <ColumnDefinition Width="35" />
+                                                                </Grid.ColumnDefinitions>
+                                                                <Grid.RowDefinitions>
+                                                                    <RowDefinition Height="35" />
+                                                                </Grid.RowDefinitions>
+                                                                <Image
+                                                                    Source="antenna.png"
+                                                                    Grid.Column="0"
+                                                                    Style="{StaticResource PhotoStyle}"
+                                                                    Margin="5,0,0,0"/>
+                                                                <Label
+                                                                    Grid.Column="1"
+                                                                    TextColor="{StaticResource BlackColor}"
+                                                                    Text="{Binding LocationName}"
+                                                                    Style="{StaticResource NameTextStyle}"
+                                                                    Margin="0,0,0,0"/>
+                                                                <CheckBox
+                                                                    Grid.Column="2"
+                                                                    IsEnabled="False"
+                                                                    IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                                                    HeightRequest="25"
+                                                                    Style="{StaticResource CheckBoxStyle}"/>
+                                                            </Grid>
+                                                        </ViewCell>
+                                                    </DataTemplate>
+                                                </ListView.ItemTemplate>
+                                            </ListView>
+                                            <Label
+                                                x:Name="isEmptyLabel"
+                                                IsVisible="{Binding IsEmpty}"
+                                                IsEnabled="{Binding IsEmpty}"
+                                                Text="No hay locaciones que mostrar"
+                                                TextColor="Gray"
+                                                FontAttributes="Italic"
+                                                FontSize="14"
+                                                HorizontalOptions="Center"
+                                                VerticalOptions="Center"/>
+                                        </Grid>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
-                                <tabview:SfTabItem 
+                                <!--<tabview:SfTabItem 
                                     Title="Tareas" 
                                     TitleFontFamily="{StaticResource PoppinsBold}"
                                     SelectionColor="{StaticResource BaseColor}"
@@ -204,7 +216,7 @@
                                             </ListView.ItemTemplate>
                                         </ListView>
                                     </tabview:SfTabItem.Content>
-                                </tabview:SfTabItem>
+                                </tabview:SfTabItem>-->
                             </tabview:SfTabView.Items>
                         </tabview:SfTabView>
                     </StackLayout>
@@ -232,7 +244,6 @@
                     Margin="0,15,0,0"/>
                 <button:SfButton 
                     x:Name="btnCall"
-                    Command="{Binding StartCommand}"
                     Style="{DynamicResource CallIcon}"
                     HasShadow="True"
                     HeightRequest="60"

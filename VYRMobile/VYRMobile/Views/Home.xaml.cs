@@ -30,7 +30,7 @@ namespace VYRMobile
             _client = new ApiHelper();
 
             QR.Clicked += QR_Clicked;
-            //btnCall.Clicked += btnCall_Clicked;
+            btnCall.Clicked += btnCall_Clicked;
             ShowMapCommand = new Command(ShowMap);
         }
         protected override void OnAppearing()
@@ -86,15 +86,9 @@ namespace VYRMobile
             
         }
 
-        /*private async void btnCall_Clicked(object sender, EventArgs e)
+        private async void btnCall_Clicked(object sender, EventArgs e)
         {
-            FirestoreAlarm alarmDocument = new FirestoreAlarm()
-            {
-                LocationName = "Seahawks",
-                Location = new GeoPoint(18.4047, -70.0328),
-                Type = "Alarm"
-            }; 
-            await Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));
-        }*/
+            await Navigation.PushPopupAsync(new CallPopup());
+        }
     }
 }

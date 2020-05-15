@@ -205,7 +205,8 @@ namespace VYRMobile.Views
             if(angle >= 90.0)
             {
                 TData = 90.0;
-            } else if (angle <= 0)
+            } 
+            else if (angle <= 0)
             {
                 TData = 0;
             }
@@ -283,7 +284,7 @@ namespace VYRMobile.Views
 
         private async void MoveCamera()
         {
-            var request = new GeolocationRequest(GeolocationAccuracy.Default);
+            var request = new GeolocationRequest(GeolocationAccuracy.High);
             var location = await Geolocation.GetLocationAsync(request);
             Position myPosition = new Position(location.Latitude, location.Longitude);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(1000)));
@@ -352,7 +353,6 @@ namespace VYRMobile.Views
             {
                 await DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
             }
-          
         }
 
         private async void Update(List<Position> list)

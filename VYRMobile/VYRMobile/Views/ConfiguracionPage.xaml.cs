@@ -19,6 +19,12 @@ namespace VYRMobile.Views
 
             languageCell.Tapped += LanguageCell_Tapped;
             pointsCell.Tapped += PointsCell_Tapped;
+            passwordCell.Tapped += PasswordCell_Tapped;
+            Filter();
+        }
+        private void PasswordCell_Tapped(object sender, EventArgs e)
+        {
+            Navigation.PushPopupAsync(new ChangePasswordPopup());
         }
 
         private void PointsCell_Tapped(object sender, EventArgs e)
@@ -33,6 +39,15 @@ namespace VYRMobile.Views
         private void LanguageCell_Tapped(object sender, EventArgs e)
         {
             Navigation.PushPopupAsync(new LanguagesPopup());
+        }
+
+        private void Filter()
+        {
+            if (App.ApplicationUserRole == "Supervisor")
+            {
+                pointsView.IsVisible = true;
+                pointsView.IsEnabled = true;
+            }
         }
     }
 }

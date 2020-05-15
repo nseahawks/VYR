@@ -28,7 +28,8 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                         VerticalOptions="FillAndExpand" 
                         HorizontalOptions="FillAndExpand">
             <Grid>
-                <ListView x:Name="reportsView"
+                <ListView 
+                    x:Name="reportsView"
                     Grid.Row="0"
                     IsPullToRefreshEnabled="True"
                     RefreshCommand="{Binding LoadCommand}"
@@ -45,6 +46,16 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <Label
+                    x:Name="isEmptyLabel"
+                    IsVisible="{Binding IsEmpty}"
+                    IsEnabled="{Binding IsEmpty}"
+                    Text="Tu lista de reportes está vacía"
+                    TextColor="Gray"
+                    FontAttributes="Italic"
+                    FontSize="14"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
                 <button:SfButton 
                     Grid.Row="0"
                     x:Name="btnReporte"

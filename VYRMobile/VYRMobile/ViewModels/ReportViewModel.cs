@@ -137,6 +137,16 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(IsBusy));
             }
         }
+        private bool _isEmpty;
+        public bool IsEmpty
+        {
+            get { return _isEmpty; }
+            set
+            {
+                _isEmpty = value;
+                OnPropertyChanged(nameof(IsEmpty));
+            }
+        }
         private string name;
         public string ImageName
         {
@@ -310,6 +320,15 @@ namespace VYRMobile.ViewModels
                 Reports.Add(report);
             }
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
+
+            if (Reports.Count == 0)
+            {
+                IsEmpty = true;
+            }
+            else
+            {
+                IsEmpty = false;
+            }
         }
         private async Task LoadData2()
         {
@@ -346,6 +365,15 @@ namespace VYRMobile.ViewModels
             }
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
+
+            if (Reports.Count == 0)
+            {
+                IsEmpty = true;
+            }
+            else
+            {
+                IsEmpty = false;
+            }
         }
     }
 }
