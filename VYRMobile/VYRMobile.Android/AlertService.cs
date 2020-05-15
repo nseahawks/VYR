@@ -44,14 +44,14 @@ namespace VYRMobile.Droid
                 .ObserveAdded()
                 .Subscribe(documentChange =>
                 {
-                    /*var documentC = documentChange.Document;
-                    var alarmDocument = documentC.ToObject<FirestoreAlarm>();*/
-                    FirestoreAlarm alarmDocument = new FirestoreAlarm()
-                    {
-                        LocationName = "Seahawks",
-                        Location = new GeoPoint(18.4047, -70.0328),
-                        Type = "Alarm"
-                    };
+                    var documentC = documentChange.Document;
+                    var alarmDocument = documentC.ToObject<FirestoreAlarm>();
+                    //FirestoreAlarm alarmDocument = new FirestoreAlarm()
+                    //{
+                    //    LocationName = alarmDocument.LocationName,
+                    //    Location = new GeoPoint(18.4047, -70.0328),
+                    //    Type = "Alarm"
+                    //};
 
                     CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
 
