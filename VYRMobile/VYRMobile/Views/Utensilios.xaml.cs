@@ -26,7 +26,7 @@ namespace VYRMobile.Views
 
         private async void BtnConfirmar_Clicked(object sender, EventArgs e)
         {
-            isAccepted = await DisplayAlert("Confirmación", "¿Acepta los términos y condiciones de uso?", "ACEPTAR", "CANCELAR");
+            isAccepted = await DisplayAlert("Confirmación", "Confirmo que la información suministrada es comprobable y veraz", "ACEPTAR", "CANCELAR");
             if (isAccepted)
             {
                 string _userId = await SecureStorage.GetAsync("id");

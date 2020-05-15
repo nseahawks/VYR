@@ -137,16 +137,25 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged("Tareas");
             }
         }
-
+        private bool _isEmpty;
+        public bool IsEmpty
+        {
+            get { return _isEmpty; }
+            set
+            {
+                _isEmpty = value;
+                OnPropertyChanged(nameof(IsEmpty));
+            }
+        }
         public PuntoViewModel()
         {
             _store = new RecordsStore();
             Puntos = new ObservableCollection<Punto>();
-            Tareas = new ObservableCollection<Report>();
+            //Tareas = new ObservableCollection<Report>();
             Antenas = new ObservableCollection<Antena>();
 
             LoadData();
-            LoadData2();
+            //LoadData2();
 
             //stopWatch.Start();
 
@@ -276,6 +285,15 @@ namespace VYRMobile.ViewModels
             foreach (var antenna in antennas)
             {
                 Antenas.Add(antenna);
+            }
+
+            if(Antenas.Count == 0)
+            {
+                IsEmpty = true;
+            }
+            else
+            {
+                IsEmpty = false;
             }
         }
         private async void LoadData2()

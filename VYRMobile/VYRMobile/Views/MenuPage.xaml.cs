@@ -72,16 +72,16 @@ namespace VYRMobile.Views
                 Children.Add(home);
                 Children.Add(report);
                 Children.Add(user);
+
+
+                var pages = Children.GetEnumerator();
+                pages.MoveNext();
+                pages.MoveNext();
+                pages.MoveNext();
+                CurrentPage = pages.Current;
             }
             else
             {
-                NavigationPage historial = new NavigationPage(new Historial())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "historial2.png",
-                    Title = "Historial"
-                };
                 NavigationPage home = new NavigationPage(new Home())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
@@ -111,18 +111,18 @@ namespace VYRMobile.Views
                     Title = "Perfil"
                 };
 
-                Children.Add(historial);
                 Children.Add(map);
                 Children.Add(home);
                 Children.Add(report);
                 Children.Add(user);
+
+
+                var pages = Children.GetEnumerator();
+                pages.MoveNext();
+                pages.MoveNext();
+                CurrentPage = pages.Current;
             }
 
-            var pages = Children.GetEnumerator();
-            pages.MoveNext();
-            pages.MoveNext();
-            pages.MoveNext();
-            CurrentPage = pages.Current;
 
             ShowMapCommand = new Command(ShowMap);
         }
