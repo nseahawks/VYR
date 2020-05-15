@@ -5,8 +5,10 @@ using Android.OS;
 using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Extensions;
 using Plugin.LocalNotifications;
+using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Models;
 using VYRMobile.Services;
+using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -44,9 +46,12 @@ namespace VYRMobile.Droid
                 .ObserveAdded()
                 .Subscribe(documentChange =>
                 {
-                    /*var documentC = documentChange.Document;
-                    var alarmDocument = documentC.ToObject<FirestoreAlarm>();*/
-                    FirestoreAlarm alarmDocument = new FirestoreAlarm()
+                    var documentC = documentChange.Document;
+                    var alarmDocument = documentC.ToObject<FirestoreAlarm>();
+
+                    
+                    Xamarin.Forms.Application.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));
+                    /*FirestoreAlarm alarmDocument = new FirestoreAlarm()
                     {
                         LocationName = "Seahawks",
                         Location = new GeoPoint(18.4047, -70.0328),
@@ -57,7 +62,7 @@ namespace VYRMobile.Droid
 
                     AlarmPopupService alarmPopupService = new AlarmPopupService();
 
-                    alarmPopupService.ShowDialog(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type);
+                    alarmPopupService.ShowDialog(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type);*/
 
                     //DependencyService.Get<IAlarmPopup>().ShowDialog(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type);
                 });

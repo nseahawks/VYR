@@ -36,7 +36,9 @@
                     MaximumDropDownHeight="200"
                     DropDownBackgroundColor="White"
                     DropDownItemFontFamily="{StaticResource PoppinsMedium}"
-                    Opacity="1"/>
+                    Opacity="1"
+                    IsVisible="False"
+                    IsEnabled="False"/>
                 <button:SfButton
                     x:Name="btnCalificar"
                     Text="Calificar"
@@ -44,6 +46,8 @@
                     TextColor="White"
                     FontFamily="{StaticResource PoppinsMedium}"
                     FontSize="18"
+                    IsVisible="False"
+                    IsEnabled="False"
                     HasShadow="True"
                     HeightRequest="40"
                     WidthRequest="100"

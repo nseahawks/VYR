@@ -38,6 +38,17 @@ namespace VYRMobile.Views
             animation.IsPlaying = false;
         }
 
+        protected override void OnAppearing()
+        {
+            if(App.ApplicationUserRole == "Admin")
+            {
+                userComboBox.IsVisible = false;
+                userComboBox.IsEnabled = false;
+                btnCalificar.IsVisible = false;
+                btnCalificar.IsEnabled = false;
+            }
+        }
+
         private void SfLinearProgressBar_ProgressCompleted(object sender, Syncfusion.XForms.ProgressBar.ProgressValueEventArgs e)
         {
             animation.IsVisible = true;
@@ -47,16 +58,26 @@ namespace VYRMobile.Views
         private void userComboBox_SelectionChanged(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
             var selection = e.Value as ApplicationUser;
-            User = selection.FullName;
-            App.ReviewedUserId = selection.UserId;
+
+            if (selection == null)
+            {
+                btnCalificar.IsEnabled = false;
+            }
+            else
+            {
+                btnCalificar.IsEnabled = true;
+                User = selection.FullName;
+                App.ReviewedUserId = selection.Id;
+            }
         }
 
         private void UserFilter()
         {
-            if(App.ApplicationUserRole == "User")
+            if(App.ApplicationUserRole == "Supervisor")
             {
-                userComboBox.IsVisible = false;
-                btnCalificar.IsVisible = false;
+                userComboBox.IsVisible = true;
+                userComboBox.IsEnabled = true;
+                btnCalificar.IsVisible = true;
             }
         }
     }

@@ -27,16 +27,18 @@
     </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
-        <Grid Grid.RowSpan="1"
-              Margin="0,10,0,0">
+        <Grid 
+            Grid.RowSpan="1"
+            Margin="0,10,0,0">
             <Grid.RowDefinitions>
                 <RowDefinition Height="150"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid Grid.Row="0"
-                  Grid.RowSpan="2"
-                  Grid.ColumnSpan="1"
-                  RowSpacing="3">
+            <Grid 
+                Grid.Row="0"
+                Grid.RowSpan="2"
+                Grid.ColumnSpan="1"
+                RowSpacing="3">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="50"/>
                     <RowDefinition Height="50"/>
@@ -46,81 +48,94 @@
                     <ColumnDefinition Width="80"/>
                     <ColumnDefinition Width="270"/>
                 </Grid.ColumnDefinitions>
-                <Label  Grid.Column="0"
-                        Grid.Row="0"
-                        Text="Titulo:" 
-                        TextColor="Gray"
-                        FontFamily="{StaticResource PoppinsMedium}"
-                        FontSize="17"
-                        VerticalOptions="End"
-                        Margin="6,0,0,12"/>
-                <Entry  Grid.Row="0"
-                        Grid.Column="1"
-                        x:Name="Title"
-                        Text="{Binding Title}"
-                        FontFamily="{StaticResource PoppinsMedium}"
-                        PlaceholderColor="DarkGray"
-                        TextColor="Black"
-                        HorizontalOptions="FillAndExpand"
-                        VerticalOptions="Start"
-                        BackgroundColor="White"
-                        Margin="0,0,8,0"
-                        HeightRequest="45"/>
-                <Label  Grid.Row="1"
-                        Grid.Column="0"
-                        Text="Estatus:" 
-                        FontFamily="{StaticResource PoppinsMedium}"
-                        TextColor="Gray"
-                        FontSize="17"
-                        VerticalOptions="Center"
-                        Margin="6,0,0,12"/>
+                <Label  
+                    Grid.Column="0"
+                    Grid.Row="0"
+                    Text="Titulo:" 
+                    TextColor="Gray"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="17"
+                    VerticalOptions="End"
+                    Margin="6,0,0,12"/>
+                <Entry  
+                    Grid.Row="0"
+                    Grid.Column="1"
+                    x:Name="Title"
+                    Keyboard="Text"
+                    Text="{Binding Title}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    PlaceholderColor="DarkGray"
+                    TextColor="Black"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    BackgroundColor="White"
+                    Margin="0,0,8,0"
+                    HeightRequest="45"/>
+                <Label 
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Text="Estatus:" 
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    TextColor="Gray"
+                    FontSize="17"
+                    VerticalOptions="Center"
+                    Margin="6,0,0,12"/>
                 <StackLayout Grid.Row="1"
-                             Grid.Column="1"
-                             VerticalOptions="Start">
-                    <combobox:SfComboBox x:Name="estatusComboBox" 
-                                         Margin="4,0,8,0"
-                                         HeightRequest="45"
-                                         FontFamily="{StaticResource PoppinsMedium}"
-                                         SelectedIndex="{Binding ReportStatus, Converter={StaticResource IntEnum}, Mode=TwoWay}"
-                                         DataSource="{Binding StatusCollection}">
+                    Grid.Column="1"
+                    VerticalOptions="Start">
+                    <combobox:SfComboBox 
+                        x:Name="estatusComboBox" 
+                        Watermark="Seleccione"
+                        Margin="4,0,8,0"
+                        HeightRequest="45"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        SelectedIndex="{Binding ReportStatus, Converter={StaticResource IntEnum}, Mode=OneWayToSource}"
+                        DataSource="{Binding StatusCollection}">
                     </combobox:SfComboBox>
                 </StackLayout>
-                <Label  Grid.Column="0"
-                        Grid.Row="2"
-                        Text="Tipo:" 
+                <Label  
+                    Grid.Column="0"
+                    Grid.Row="2"
+                    Text="Tipo:" 
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    TextColor="Gray"
+                    FontSize="17"
+                    VerticalOptions="Center"
+                    Margin="6,0,0,12"/>
+                <StackLayout    
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    VerticalOptions="Start">
+                    <combobox:SfComboBox 
+                        x:Name="tipoComboBox" 
+                        Watermark="Seleccione"
+                        Margin="4,0,8,0"
+                        HeightRequest="45"
                         FontFamily="{StaticResource PoppinsMedium}"
-                        TextColor="Gray"
-                        FontSize="17"
-                        VerticalOptions="Center"
-                        Margin="6,0,0,12"/>
-                <StackLayout    Grid.Column="1"
-                                Grid.Row="2"
-                                VerticalOptions="Start">
-                    <combobox:SfComboBox x:Name="tipoComboBox" 
-                                         Margin="4,0,8,0"
-                                         HeightRequest="45"
-                                         FontFamily="{StaticResource PoppinsMedium}"
-                                         SelectedIndex="{Binding ReportType, Converter={StaticResource IntEnum}, Mode=TwoWay}"
-                                         DataSource="{Binding TypeCollection}">
+                        SelectedIndex="{Binding ReportType, Converter={StaticResource IntEnum}, Mode=OneWayToSource}"
+                        DataSource="{Binding TypeCollection}">
                     </combobox:SfComboBox>
                 </StackLayout>
             </Grid>
-            <Grid   Grid.Row="1"
-                    Grid.RowSpan="1">
+            <Grid   
+                Grid.Row="1"
+                Grid.RowSpan="1">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="200"/>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
-                <Editor Placeholder="Descripcion"
-                        Text="{Binding Description}"
-                        PlaceholderColor="DarkGray"
-                        TextColor="Black"
-                        HeightRequest="200"
-                        FontFamily="{StaticResource PoppinsMedium}"
-                        BackgroundColor="White"
-                        VerticalOptions="Start"
-                        Grid.Row="0"
-                        Margin="6, 0, 8, 0"/>
+                <Editor 
+                    Placeholder="Descripcion"
+                    Text="{Binding Description}"
+                    PlaceholderColor="DarkGray"
+                    Keyboard="Text"
+                    TextColor="Black"
+                    HeightRequest="200"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    BackgroundColor="White"
+                    VerticalOptions="Start"
+                    Grid.Row="0"
+                    Margin="6, 0, 8, 0"/>
                 <StackLayout
                     Grid.Row="1">
                     <Label

@@ -48,5 +48,9 @@ namespace VYRMobile.Views
         {
             VM.LogoutCommand.Execute(null);
         }
+        private void historyCell_Tapped(object sender, EventArgs e)
+        {
+            VM.HistoryCommand.Execute(null);
+        }
     }
 }

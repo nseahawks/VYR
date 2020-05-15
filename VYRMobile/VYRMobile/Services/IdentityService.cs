@@ -39,16 +39,23 @@ namespace VYRMobile.Services
             try
             {
                 var response = await _client.PostAsync("/api/v1/identity/login", contentData);
-                string stringJWT = response.Content.ReadAsStringAsync().Result;
-                JWT jwt = JsonConvert.DeserializeObject<JWT>(stringJWT);
-                await SecureStorage.SetAsync("token", jwt.Token);
-                ApiHelper.Token = jwt.Token;
-                DeserializeToken(jwt.Token);
-                return response.IsSuccessStatusCode;
+
+                if(response.IsSuccessStatusCode == true) 
+                {
+                    string stringJWT = response.Content.ReadAsStringAsync().Result;
+                    JWT jwt = JsonConvert.DeserializeObject<JWT>(stringJWT);
+                    await SecureStorage.SetAsync("token", jwt.Token);
+                    ApiHelper.Token = jwt.Token;
+                    DeserializeToken(jwt.Token);
+                    return response.IsSuccessStatusCode;
+                }
+                else
+                {
+                    return response.IsSuccessStatusCode;
+                } 
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
