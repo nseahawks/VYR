@@ -24,9 +24,5 @@ namespace VYRMobile.Views.Popups
         {
             Navigation.PopPopupAsync();
         }
-        protected override bool OnBackgroundClicked()
-        {
-            return false;
-        }
     }
 }

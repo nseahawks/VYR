@@ -21,6 +21,7 @@ namespace VYRMobile.ViewModels
         public Command FormacionCommand { get; set; }
         public Command CloseCommand { get; set; }
         public Command LogoutCommand { get; set; }
+        public Command HistoryCommand { get; set; }
 
         private ObservableCollection<Models.Option> _options;
 
@@ -34,6 +35,7 @@ namespace VYRMobile.ViewModels
             FormacionCommand = new Command(async () => await PushFormacion());
             CloseCommand = new Command(async () => await ClosePage());
             LogoutCommand = new Command(async () => await LogoutUser());
+            HistoryCommand = new Command(async () => await PushHistory());
             LoadData();
         }
         public ObservableCollection<Models.Option> Options
@@ -82,6 +84,14 @@ namespace VYRMobile.ViewModels
         private async Task PushFormacion()
         {
             await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Elearning())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+            });
+        }
+        private async Task PushHistory()
+        {
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Historial())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                 BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],

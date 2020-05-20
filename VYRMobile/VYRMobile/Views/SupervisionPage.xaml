@@ -4,6 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.SupervisionPage"
              BackgroundColor="White"
@@ -43,6 +44,7 @@
                     SelectionMode="None"
                     HasUnevenRows="True"
                     SeparatorVisibility="None"
+                    HeightRequest="200"
                     HorizontalOptions="FillAndExpand"
                     Margin="15, 0, 15, 0">
                     <ListView.ItemTemplate>
@@ -86,6 +88,22 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
+                <button:SfButton
+                    Grid.Row="2"
+                    x:Name="btnGuardar" 
+                    Text="Guardar"
+                    IsEnabled="False"
+                    HasShadow="True"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="{StaticResource FontSize14}"
+                    TextColor="{DynamicResource SecondaryColor}"
+                    HeightRequest="40"
+                    WidthRequest="120"
+                    HorizontalOptions="End"
+                    VerticalOptions="End"
+                    CornerRadius="5"
+                    Margin="0, 15, 40, 10"/>
             </StackLayout>
             <StackLayout
                 AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.9, 0.9"

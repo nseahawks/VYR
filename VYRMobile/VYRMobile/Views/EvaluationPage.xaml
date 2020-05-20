@@ -123,6 +123,7 @@
                             FontSize="16"/>
                         <Editor
                             x:Name="editor1"
+                            Keyboard="Text"
                             Placeholder="Comentarios..."
                             PlaceholderColor="DarkGray"
                             BackgroundColor="#F9F8F8"
@@ -148,6 +149,7 @@
                             FontSize="16"/>
                         <Editor
                             x:Name="editor2"
+                            Keyboard="Text"
                             Placeholder="Comentarios..."
                             PlaceholderColor="DarkGray"
                             BackgroundColor="#F9F8F8"
@@ -320,7 +322,8 @@
                             Orientation="Horizontal"
                             VerticalOptions="End"
                             HorizontalOptions="End"
-                            Margin="0, 0, 15, 15">
+                            Margin="0, 0, 15, 15"
+                            Spacing="4">
                             <Label
                                 x:Name="okLabel"
                                 Text="OK"

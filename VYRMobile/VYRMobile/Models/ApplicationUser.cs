@@ -11,11 +11,11 @@ namespace VYRMobile.Models
     public class ApplicationUser : ObservableObject
     {
         //
-        string userId;
-        public string UserId
+        string id;
+        public string Id
         {
-            get => userId;
-            set => SetProperty(ref userId, value);
+            get => id;
+            set => SetProperty(ref id, value);
         }
         //
         string email;

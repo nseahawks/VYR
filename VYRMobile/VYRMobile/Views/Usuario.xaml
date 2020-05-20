@@ -56,10 +56,10 @@
                     </StackLayout>
                 </Frame>
                 <Frame 
-                    HeightRequest="181"
+                    HeightRequest="226"
                     IsClippedToBounds="True"
                     Padding="0">
-                    <TableView HeightRequest="182">
+                    <TableView HeightRequest="227">
                         <TableRoot>
                             <TableSection>
                                 <ViewCell 
@@ -166,6 +166,33 @@
                                             Grid.Column="1"
                                             TextColor="{StaticResource BlackColor}"
                                             Text="FORMACION"
+                                            Style="{StaticResource NameTextStyle}"
+                                            Margin="0,0,0,0"/>
+                                    </Grid>
+                                </ViewCell>
+                                <ViewCell
+                                    x:Name="historyCell"
+                                    Tapped="historyCell_Tapped">
+                                    <Grid   
+                                        ColumnSpacing="0"
+                                        RowSpacing="1"
+                                        Grid.Row="3">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="50" />
+                                            <ColumnDefinition Width="270" />
+                                        </Grid.ColumnDefinitions>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="45" />
+                                        </Grid.RowDefinitions>
+                                        <Image  
+                                            Source="formacion.png"
+                                            Grid.Column="0"
+                                            Style="{StaticResource PhotoStyle}"
+                                            Margin="5,0,0,0"/>
+                                        <Label  
+                                            Grid.Column="1"
+                                            TextColor="{StaticResource BlackColor}"
+                                            Text="HISTORIAL"
                                             Style="{StaticResource NameTextStyle}"
                                             Margin="0,0,0,0"/>
                                     </Grid>

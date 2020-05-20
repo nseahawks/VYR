@@ -490,6 +490,8 @@
     <AndroidResource Include="Resources\drawable\notAttended.png" />
     <AndroidResource Include="Resources\drawable\camera2.png" />
     <AndroidResource Include="Resources\drawable\supervision.png" />
+    <AndroidResource Include="Resources\drawable\closedEye.png" />
+    <AndroidResource Include="Resources\drawable\openEye.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
