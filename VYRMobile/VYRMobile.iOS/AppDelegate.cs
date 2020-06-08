@@ -28,8 +28,8 @@ namespace VYRMobile.iOS
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
         {
-global::Xamarin.Forms.Forms.Init();
-SfLinearProgressBarRenderer.Init();
+            global::Xamarin.Forms.Forms.Init();
+            SfLinearProgressBarRenderer.Init();
             SfButtonRenderer.Init();
             SfPopupLayoutRenderer.Init();
             SfTabViewRenderer.Init();

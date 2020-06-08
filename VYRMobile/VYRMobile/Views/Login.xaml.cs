@@ -9,6 +9,8 @@ using Xamarin.Forms.Xaml;
 using Plugin.CloudFirestore;
 using Newtonsoft.Json;
 using VYRMobile.Data;
+using Rg.Plugins.Popup.Extensions;
+using VYRMobile.Views.Popups;
 
 namespace VYRMobile
 {
@@ -39,7 +41,7 @@ namespace VYRMobile
         private void Loginbtn_clicked(object sender, EventArgs e)
         {
             Loginbtn.IsEnabled = false;
-            animation.IsVisible = true;
+            animationView.IsVisible = true;
             animation.IsPlaying = true;
         }
 
@@ -54,7 +56,6 @@ namespace VYRMobile
             string _userId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn)
             {
-                animation.IsVisible = false;
 
                 if(App.ApplicationUserRole == "Supervisor")
                 {
@@ -69,7 +70,6 @@ namespace VYRMobile
                                               .GetCollection("supervisorsApp")
                                               .GetDocument(_userId)
                                               .UpdateDataAsync(new { LoggedIn = true });
-
                 }
                 else
                 {
@@ -114,7 +114,7 @@ namespace VYRMobile
                 }
 
                 animation.IsPlaying = false;
-                await animation.FadeTo(0, 100, Easing.Linear);
+                await animationView.FadeTo(0, 100, Easing.Linear);
 
                 if(App.ApplicationUserRole == "Supervisor")
                 {
@@ -122,7 +122,7 @@ namespace VYRMobile
                 }
                 else
                 {
-                    Application.Current.MainPage = new NavigationPage(new Utensilios());
+                    Application.Current.MainPage = new NavigationPage(new MenuPage());
                 }
             }
             else

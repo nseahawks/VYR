@@ -10,106 +10,124 @@
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              TryLoginCommand="{Binding TLoginCommand}">
-
+    
     <ContentPage.Padding>
         <OnPlatform x:TypeArguments="Thickness"/>
     </ContentPage.Padding>
 
     <ContentPage.Content>
-        <Grid BackgroundColor="#FFFFFF"
-              Padding="1">
+        <Grid 
+            BackgroundColor="#FFFFFF"
+            Padding="1">
             <StackLayout VerticalOptions="CenterAndExpand">
-                <Image Grid.Row="0"
-                       Source="vyrxall.png"
-                       HorizontalOptions="Center"
-                       HeightRequest="200"
-                       WidthRequest="150"
-                       Margin="0,0,0,0"/>
-                <Label Grid.Row="1" 
-                       Text="Usuario" 
-                       TextColor="#005EB2"
-                       FontSize="Small"
-                       FontFamily="{StaticResource PoppinsMedium}"
-                       Margin="28,0,0,0"/>
-                <StackLayout Grid.Row="2" 
-                             Orientation="Horizontal"
-                             HorizontalOptions="Center">
+                <Image 
+                    Grid.Row="0"
+                    Source="vyrxall.png"
+                    HorizontalOptions="Center"
+                    HeightRequest="200"
+                    WidthRequest="150"
+                    Margin="0,0,0,0"/>
+                <Label 
+                    Grid.Row="1" 
+                    Text="Usuario" 
+                    TextColor="#005EB2"
+                    FontSize="Small"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    Margin="28,0,0,0"/>
+                <StackLayout 
+                    Grid.Row="2" 
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
                     <Entry
                         x:Name="email"
                         Text="{Binding Email}"
-                           ClearButtonVisibility="WhileEditing"
-                           FontSize="18" 
-                           BackgroundColor="White" 
-                           TextColor="Black" 
-                           HeightRequest="50" 
-                           WidthRequest="308"
-                           VerticalOptions="Start" 
-                           HorizontalOptions="Center"/>
-                </StackLayout>
-                <Label Grid.Row="3"
-                       Text="Contraseña" 
-                       TextColor="#005EB2"
-                       FontSize="Small"
-                       FontAttributes="None"
-                       FontFamily="{StaticResource PoppinsMedium}"
-                       Margin="28,0,0,0"/>
-                <StackLayout Grid.Row="4" 
-                             Orientation="Horizontal"
-                             HorizontalOptions="Center">
-                    <Entry 
-                           x:Name="password"
-                           Text="{Binding Password}"
-                           IsPassword="True"
-                           ClearButtonVisibility="WhileEditing"
-                           FontSize="18"
-                           BackgroundColor="White"
-                           TextColor="Black"
-                           HeightRequest="50" 
-                           WidthRequest="308"
-                           VerticalOptions="Start" 
-                           HorizontalOptions="Center"
-                           Visual="Material"/>
-                </StackLayout>
-                <Button x:Name="Loginbtn" 
-                        Grid.Row="5" 
-                        Command="{Binding LoginCommand}"
-                        BorderRadius="5"  
-                        Text="Iniciar sesión" 
-                        BackgroundColor="#005EB2" 
-                        TextColor="White" 
-                        FontSize="14"
-                        FontFamily="{StaticResource PoppinsMedium}"
-                        HeightRequest="40"
-                        WidthRequest="300"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="18" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        HeightRequest="50" 
+                        WidthRequest="308"
                         VerticalOptions="Start" 
                         HorizontalOptions="Center"/>
-                <forms:AnimationView 
-	                    Grid.Row="6"
+                </StackLayout>
+                <Label 
+                    Grid.Row="3"
+                    Text="Contraseña" 
+                    TextColor="#005EB2"
+                    FontSize="Small"
+                    FontAttributes="None"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    Margin="28,0,0,0"/>
+                <StackLayout 
+                    Grid.Row="4" 
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <Entry 
+                        x:Name="password"
+                        Text="{Binding Password}"
+                        IsPassword="True"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="18"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        HeightRequest="50" 
+                        WidthRequest="308"
+                        VerticalOptions="Start" 
+                        HorizontalOptions="Center"
+                        Visual="Material"/>
+                </StackLayout>
+                <Button 
+                    x:Name="Loginbtn" 
+                    Grid.Row="5" 
+                    Command="{Binding LoginCommand}"
+                    BorderRadius="5"  
+                    Text="Iniciar sesión" 
+                    BackgroundColor="#005EB2" 
+                    TextColor="White" 
+                    FontSize="14"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    HeightRequest="40"
+                    WidthRequest="300"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Center"/>
+                <StackLayout
+                    x:Name="animationView"
+	                Grid.Row="6"
+                    IsVisible="False"
+                    IsEnabled="False"
+	                HorizontalOptions="Center">
+                    <forms:AnimationView 
                         x:Name="animation"
-                        IsVisible="False"
 	                    Animation="loading.json" 
-                        IsEnabled="False"
 	                    Loop="True" 
 	                    AutoPlay="false"
                         WidthRequest="85"
                         HeightRequest="40"
-	                    VerticalOptions="Center"
 	                    HorizontalOptions="Center" />
-                <StackLayout Grid.Row="7"
-                             Orientation="Horizontal"
-                             HorizontalOptions="Center">
-                    <CheckBox HorizontalOptions="Center"
-                              VerticalOptions="Center"
-                              IsChecked="{Binding Checked}"
-                              Color="{StaticResource BaseColor}"
-                              WidthRequest="25"/>
-                    <Label WidthRequest="75"
-                           VerticalOptions="Center"
-                           HorizontalOptions="Center"
-                           Text="Recordarme"
-                           FontSize="12"
-                           FontFamily="{StaticResource PoppinsMedium}"
-                           TextColor="{StaticResource BaseColor}"/>
+                    <Label 
+                        HorizontalOptions="Center"
+                        Text="Conectando con monitoreo..."
+                        FontSize="11"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        TextColor="Black"/>
+                </StackLayout>
+                <StackLayout 
+                    Grid.Row="7"
+                    Orientation="Horizontal"
+                    HorizontalOptions="Center">
+                    <CheckBox 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        IsChecked="{Binding Checked}"
+                        Color="{StaticResource BaseColor}"
+                        WidthRequest="25"/>
+                    <Label 
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Text="Recordarme"
+                        FontSize="12"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        TextColor="{StaticResource BaseColor}"/>
                 </StackLayout>
             </StackLayout>
         </Grid>

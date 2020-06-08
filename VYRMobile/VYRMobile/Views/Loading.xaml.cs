@@ -27,8 +27,19 @@ namespace VYRMobile.Views
             Charge();
             _userId = await SecureStorage.GetAsync("id");
 
+            string repository;
+
+            if(App.ApplicationUserRole == "Supervisor")
+            {
+                repository = "supervisorsApp";
+            }
+            else
+            {
+                repository = "usersApp";
+            }
+
             var document =  CrossCloudFirestore.Current.Instance
-            .GetCollection("usersApp")
+            .GetCollection(repository)
             .GetDocument(_userId)
             .AsObservable()
             .Subscribe(document =>

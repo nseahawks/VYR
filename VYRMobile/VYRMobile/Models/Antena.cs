@@ -30,6 +30,9 @@ namespace VYRMobile.Models
         [JsonProperty("userId")]
         public object UserId { get; set; }
 
+        [JsonProperty("locationType")]
+        public object LocationType { get; set; }
+
         [JsonProperty("getRoutes")]
         public object[] GetRoutes { get; set; }
 

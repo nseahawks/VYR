@@ -1,10 +1,14 @@
-﻿using System;
+﻿using Plugin.CloudFirestore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+using VYRMobile.Controls;
+using VYRMobile.ViewModels;
 using Xamarin.Forms;
+using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
@@ -12,40 +16,109 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TestIcon : ContentPage
     {
+        bool IsFading = true;
         public TestIcon()
         {
             InitializeComponent();
 
-            NewPasswordOffClicked();
-            NewPasswordOnClicked();
+            string param = "";
+            BindingContext = new GoogleMapsViewModel(param);
+
+            /*typeLbl.Text = App.Alarm.Type;
+
+            AddPin(App.Alarm);
+
+            AddMapStyle();
+            shakeImage();*/
         }
-        private void NewPasswordOffClicked()
+        protected override void OnAppearing()
         {
-            newPasswordOff.GestureRecognizers.Add(new TapGestureRecognizer()
-            {
-                Command = new Command(() =>
-                {
-                    img1.IsVisible = false;
-                    img1.IsEnabled = false;
-                    img2.IsVisible = true;
-                    img2.IsEnabled = true;
-                }),
-                NumberOfTapsRequired = 1
-            });
+            base.OnAppearing();
+            Animate();
         }
-        private void NewPasswordOnClicked()
+        private async void Animate()
         {
-            newPasswordOn.GestureRecognizers.Add(new TapGestureRecognizer()
+            Animation a = new Animation();
+            while (IsFading == true)
             {
-                Command = new Command(() =>
-                {
-                    img2.IsVisible = false;
-                    img2.IsEnabled = false;
-                    img1.IsVisible = true;
-                    img1.IsEnabled = true;
-                }),
-                NumberOfTapsRequired = 1
-            });
+                    a.Add(0, 1, new Animation(f => this.startColor.Opacity = f, 1, 0, Easing.Linear, null));
+                    a.Add(0, 1, new Animation(f => this.endColor.Opacity = f, 0, 1, Easing.Linear, null));
+                    a.Commit(
+                        owner: this.startColor,
+                        name: "DoubleFader",
+                        length: 1000,
+                        finished: (x, y) =>
+                        {
+                            this.startColor.FadeTo(1, 1000, Easing.CubicIn);
+                        });
+
+                await Task.Delay(1000);
+
+                    a.Add(0, 1, new Animation(f => this.startColor.Opacity = f, 0, 1, Easing.Linear, null));
+                    a.Add(0, 1, new Animation(f => this.endColor.Opacity = f, 1, 0, Easing.Linear, null));
+                    a.Commit(
+                        owner: this.startColor,
+                        name: "DoubleFader",
+                        length: 1000,
+                        finished: (x, y) =>
+                        {
+                            this.startColor.FadeTo(0, 1000, Easing.CubicIn);
+                        });
+
+                await Task.Delay(1000);
+            }
+
         }
+        /*private void AddPin(FirestoreAlarm alarm)
+        {
+
+            Pin locationPin = new Pin
+            {
+                Type = PinType.SavedPin,
+                Label = alarm.LocationName,
+                Icon = BitmapDescriptorFactory.FromBundle("mapAntenna.png"),
+                Position = new Position(alarm.Location.Latitude, alarm.Location.Longitude)
+            };
+
+            map.Pins.Add(locationPin);
+
+            map.Circle = new CustomCircle
+            {
+                Position = locationPin.Position,
+                Radius = 50
+            };
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            MoveCamera(App.Alarm.Location);
+        }
+        void AddMapStyle()
+        {
+            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream($"VYRMobile.MapStyle.json");
+            string styleFile;
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                styleFile = reader.ReadToEnd();
+            }
+
+            map.MapStyle = MapStyle.FromJson(styleFile);
+        }
+        private async void shakeImage()
+        {
+            while (IsFading == true)
+            {
+                await gradient.FadeTo(0.3, 500, Easing.Linear);
+                await gradient.FadeTo(0.8, 500, Easing.Linear);
+                await gradient.FadeTo(0.3, 500, Easing.Linear);
+                await gradient.FadeTo(0.8, 500, Easing.Linear);
+            }
+        }
+        private async void MoveCamera(GeoPoint geoPoint)
+        {
+            Position myPosition = new Position(geoPoint.Latitude, geoPoint.Longitude);
+            map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(500)));
+        }*/
     }
 }

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:vm="clr-namespace:VYRMobile.ViewModels"
@@ -46,7 +45,7 @@
             DisplayMemberPath="LocationName"
             VerticalOptions="Start"
             HorizontalOptions="Center"
-            Text="Antenas"
+            Text="Locaciones"
             FontFamily="{StaticResource PoppinsMedium}"
             DropDownCornerRadius="2"
             SelectionChanged="AntennaSelected"
@@ -56,6 +55,45 @@
             DropDownItemFontFamily="{StaticResource PoppinsMedium}"
             Opacity="1">
         </combobox:SfComboBox>
+        <Frame
+            x:Name="chronoFrame"
+            BackgroundColor="Transparent"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            HeightRequest="50"
+            WidthRequest="220"
+            CornerRadius="5"
+            Padding="0"
+            TranslationY="-30"
+            Opacity="1"
+            Margin="10, 0, 0, 0">
+            <Grid>
+                <BoxView
+                    x:Name="startColor"
+                    BackgroundColor="#5edd0d"
+                    Opacity="1"
+                    VerticalOptions="Fill"
+                    HorizontalOptions="Fill"/>
+                <BoxView
+                    x:Name="endColor"
+                    BackgroundColor="#4ab207"
+                    Opacity="0"
+                    VerticalOptions="Fill"
+                    HorizontalOptions="Fill"/>
+                <StackLayout>
+                    <Label
+                        x:Name="typeLbl"
+                        Text="{Binding StopWatchFinal}"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        Margin="0, 5, 0, 0"
+                        FontFamily="{StaticResource MonoDroid}"
+                        FontSize="24"
+                        TextColor="Black"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
         <Button
             x:Name="startRoute"
             Command="{Binding LoadRouteCommand}"
@@ -75,7 +113,7 @@
             Command="{Binding StopRouteCommand}"
             Clicked="ClearPolylines"
             Text="STOP ROUTE"
-            IsVisible="{Binding HasRouteRunning}"
+            IsVisible="False"
             BackgroundColor="#AE220E"
             TextColor="White"
             HeightRequest="50"
@@ -132,5 +170,27 @@
                 </magic:GradientView>
             </StackLayout>
         </StackLayout>
+        <Frame
+            x:Name="estimatedTimeFrame"
+            BackgroundColor="{StaticResource BoneColor}"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            HeightRequest="60"
+            WidthRequest="250"
+            CornerRadius="5"
+            Padding="0"
+            TranslationY="+30"
+            Opacity="1"
+            Margin="0, 0, 10, 0">
+            <Label
+                x:Name="estimatedTimeLbl"
+                Text="A 21m 5s aprox."
+                BackgroundColor="Transparent"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontFamily="{StaticResource PoppinsMedium}"
+                FontSize="20"
+                TextColor="Black"/>
+        </Frame>
     </Grid>
 </ContentPage>

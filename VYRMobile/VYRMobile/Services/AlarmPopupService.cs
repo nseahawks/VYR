@@ -13,7 +13,7 @@ namespace VYRMobile.Services
     {
         public void ShowDialog(string locationName, GeoPoint position, string locationType)
         {
-            App.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(locationName, position, locationType));
+            //App.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(locationName, position, locationType));
         }
     }
 }

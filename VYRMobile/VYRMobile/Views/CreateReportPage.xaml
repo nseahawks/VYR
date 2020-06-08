@@ -34,7 +34,7 @@
                 <RowDefinition Height="150"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <Grid 
+            <Grid
                 Grid.Row="0"
                 Grid.RowSpan="2"
                 Grid.ColumnSpan="1"
@@ -45,32 +45,40 @@
                     <RowDefinition Height="50"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="80"/>
-                    <ColumnDefinition Width="270"/>
+                    <ColumnDefinition Width="105"/>
+                    <ColumnDefinition Width="245"/>
                 </Grid.ColumnDefinitions>
                 <Label  
                     Grid.Column="0"
                     Grid.Row="0"
-                    Text="Titulo:" 
+                    Text="Locación:" 
                     TextColor="Gray"
                     FontFamily="{StaticResource PoppinsMedium}"
                     FontSize="17"
                     VerticalOptions="End"
                     Margin="6,0,0,12"/>
-                <Entry  
-                    Grid.Row="0"
+                <StackLayout Grid.Row="0"
                     Grid.Column="1"
-                    x:Name="Title"
-                    Keyboard="Text"
-                    Text="{Binding Title}"
-                    FontFamily="{StaticResource PoppinsMedium}"
-                    PlaceholderColor="DarkGray"
-                    TextColor="Black"
-                    HorizontalOptions="FillAndExpand"
-                    VerticalOptions="Start"
-                    BackgroundColor="White"
-                    Margin="0,0,8,0"
-                    HeightRequest="45"/>
+                    VerticalOptions="Start">
+                    <combobox:SfComboBox 
+                        x:Name="locationsComboBox" 
+                        Watermark="Seleccione"
+                        HeightRequest="45"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        SelectedIndex="{Binding Title, Converter={StaticResource IntEnum}, Mode=OneWayToSource}"
+                        DataSource="{Binding Locations}"
+                        DisplayMemberPath="LocationName"
+                        DropDownCornerRadius="2"
+                        MaximumDropDownHeight="200"
+                        DropDownBackgroundColor="White"
+                        ImageMemberPath="antenna.png"
+                        DropDownItemFontFamily="{StaticResource PoppinsMedium}"
+                        Opacity="1"
+                        Margin="4,0,8,0">
+                    </combobox:SfComboBox>
+                </StackLayout>
                 <Label 
                     Grid.Row="1"
                     Grid.Column="0"
@@ -90,7 +98,8 @@
                         HeightRequest="45"
                         FontFamily="{StaticResource PoppinsMedium}"
                         SelectedIndex="{Binding ReportStatus, Converter={StaticResource IntEnum}, Mode=OneWayToSource}"
-                        DataSource="{Binding StatusCollection}">
+                        DataSource="{Binding StatusCollection}"
+                        DropDownItemFontFamily="{StaticResource PoppinsMedium}">
                     </combobox:SfComboBox>
                 </StackLayout>
                 <Label  
@@ -113,7 +122,8 @@
                         HeightRequest="45"
                         FontFamily="{StaticResource PoppinsMedium}"
                         SelectedIndex="{Binding ReportType, Converter={StaticResource IntEnum}, Mode=OneWayToSource}"
-                        DataSource="{Binding TypeCollection}">
+                        DataSource="{Binding TypeCollection}"
+                        DropDownItemFontFamily="{StaticResource PoppinsMedium}">
                     </combobox:SfComboBox>
                 </StackLayout>
             </Grid>

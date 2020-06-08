@@ -29,7 +29,7 @@ namespace VYRMobile
             LoadCommand = new Command(LoadView);
             _client = new ApiHelper();
 
-            QR.Clicked += QR_Clicked;
+            //QR.Clicked += QR_Clicked;
             btnCall.Clicked += btnCall_Clicked;
             ShowMapCommand = new Command(ShowMap);
         }

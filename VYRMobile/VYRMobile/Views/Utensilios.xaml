@@ -130,7 +130,7 @@
                     Grid.Column="0"
                     IsVisible="{Binding IsEmpty}"
                     IsEnabled="{Binding IsEmpty}"
-                    Text="Usted no tiene equipamiento asignado"
+                    Text="Usted no tiene equipo asignado"
                     TextColor="Gray"
                     FontAttributes="Italic"
                     FontSize="14"

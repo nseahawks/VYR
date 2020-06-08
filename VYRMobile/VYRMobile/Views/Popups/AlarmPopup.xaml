@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="utf-8" ?>
 <pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -7,6 +7,8 @@
              xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              x:Class="VYRMobile.Views.Popups.AlarmPopup">
     <pages:PopupPage.Animation>
         <animations:ScaleAnimation 
@@ -20,65 +22,81 @@
             EasingOut="SinIn"
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
-    <Frame
-        BackgroundColor="White"
-        HeightRequest="230"
-        WidthRequest="300"
-        VerticalOptions="Center"
-        HorizontalOptions="Center"
-        HasShadow="True"
-        Padding="0">
-        <StackLayout
+    <ContentPage.Content>
+        <Frame
+            BackgroundColor="White"
+            HeightRequest="230"
+            WidthRequest="300"
             VerticalOptions="Center"
             HorizontalOptions="Center"
-            Spacing="15">
-            <Frame
-                BackgroundColor="#EBECEE"
-                HeightRequest="140"
-                WidthRequest="244"
-                HorizontalOptions="Center"
-                HasShadow="True"
-                Padding="0">
-                <StackLayout>
-                    <Image
-                        x:Name="alarmOne"
-                        Source="notifyAlarm.png"
-                        HeightRequest="72"
-                        WidthRequest="60"
-                        HorizontalOptions="Center"/>
-                    <Image
-                        x:Name="alarmTwo"
-                        Source="notifyAlarm2.png"
-                        HeightRequest="72"
-                        WidthRequest="60"
+            HasShadow="True"
+            CornerRadius="15"
+            Padding="0"
+            IsClippedToBounds="True">
+            <Grid>
+                <controls:CustomMap       
+                    x:Name="map" 
+                    VerticalOptions="Fill"
+                    HorizontalOptions="Fill"
+                    HasScrollEnabled="True"
+                    IsTrafficEnabled="False"
+                    IsIndoorEnabled="True"
+                    IsEnabled="True"
+                    Visual="Material"/>
+                <magic:GradientView
+                    x:Name="gradient"
+                    HeightRequest="60"
+                    VerticalOptions="Start"
+                    HorizontalOptions="FillAndExpand">
+                    <magic:GradientView.GradientSource>
+                        <magic:GradientCollection>
+                            <magic:LinearGradient
+                                Angle="180">
+                                <magic:GradientStop 
+                                    Color="Red"
+                                    Offset="1"/>
+                                <magic:GradientStop 
+                                    Color="Transparent" 
+                                    Offset="0"/>
+                            </magic:LinearGradient>
+                        </magic:GradientCollection>
+                    </magic:GradientView.GradientSource>
+                </magic:GradientView>
+                <Frame
+                    BackgroundColor="{StaticResource BaseColor}"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Center"
+                    HeightRequest="40"
+                    WidthRequest="120"
+                    CornerRadius="5"
+                    Padding="0"
+                    TranslationY="-10">
+                    <Label
+                        x:Name="typeLbl"
+                        VerticalOptions="End"
                         HorizontalOptions="Center"
-                        IsVisible="False"/>
-                    <Label
-                        Text="NUEVA ALARMA:"
-                        TextColor="{StaticResource BlackColor}"
-                        FontFamily="{StaticResource PoppinsBold}"
-                        FontSize="18"
-                        HorizontalOptions="Center"/>
-                    <Label
-                        x:Name="locationNameLbl"
-                        TextColor="{StaticResource BlackColor}"
+                        Margin="0, 8, 0, 0"
                         FontFamily="{StaticResource PoppinsMedium}"
-                        FontSize="16"
-                        HorizontalOptions="Center"/>
+                        FontSize="22"
+                        TextColor="White"/>
+                </Frame>
+                <StackLayout
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"
+                    Margin="0, 0, 0, 10">
+                    <button:SfButton 
+                        x:Name="goBtn"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        Command="{Binding StartCommand}"
+                        Text="IR"
+                        TextColor="White"
+                        CornerRadius="6"
+                        BackgroundColor="LimeGreen"
+                        WidthRequest="68"
+                        HeightRequest="40"
+                        HasShadow="True"/>
                 </StackLayout>
-            </Frame>
-            <button:SfButton 
-                x:Name="OK"
-                Command="{Binding AlertCommand}"
-                FontFamily="{StaticResource PoppinsMedium}"
-                Text="IR"
-                TextColor="{StaticResource WhiteColor}"
-                CornerRadius="6"
-                BackgroundColor="{StaticResource BaseColor}"
-                HorizontalOptions="Center"
-                WidthRequest="68"
-                HeightRequest="40"
-                HasShadow="True"/>
-        </StackLayout>
-    </Frame>
+            </Grid>
+        </Frame>
+    </ContentPage.Content>
 </pages:PopupPage>

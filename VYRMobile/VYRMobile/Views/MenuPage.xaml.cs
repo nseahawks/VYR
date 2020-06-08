@@ -63,7 +63,7 @@ namespace VYRMobile.Views
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "touchWhite.png",
+                    IconImageSource = "usuario2.png",
                     Title = "Perfil"
                 };
 

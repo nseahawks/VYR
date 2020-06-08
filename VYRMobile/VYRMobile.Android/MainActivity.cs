@@ -11,6 +11,8 @@ using Xamarin.Forms;
 using CarouselView.FormsPlugin.Android;
 using Firebase;
 using Firebase.Firestore;
+using Android.Net;
+using Plugin.PushNotification;
 
 namespace VYRMobile.Droid
 {
@@ -40,12 +42,19 @@ namespace VYRMobile.Droid
             CachedImageRenderer.Init(true);
 
             Intent intent = new Intent(this, typeof(AlertService));
+
+            /*var phoneNumber = "+18097966316";
+            var phoneCall = new Intent(Intent.ActionCall);
+            phoneCall.SetData(Uri.Parse(phoneNumber));
+            StartActivity(phoneCall);*/
+
             StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
+            PushNotificationManager.ProcessIntent(this, Intent);
 
             FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
             FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
@@ -58,17 +67,6 @@ namespace VYRMobile.Droid
         {
             CarouselViewRenderer.Init();
         }
-        public override void OnBackPressed()
-        {
-            if (Rg.Plugins.Popup.Popup.SendBackPressed(base.OnBackPressed))
-            {
-                // Do something if there are some pages in the `PopupStack`
-            }
-            else
-            {
-                // Do something if there are not any pages in the `PopupStack`
-            }
-        }
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -76,6 +74,11 @@ namespace VYRMobile.Droid
 
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
+        }
+        protected override void OnNewIntent(Intent intent)
+        {
+            base.OnNewIntent(intent);
+            PushNotificationManager.ProcessIntent(this, intent);
         }
     }
 }

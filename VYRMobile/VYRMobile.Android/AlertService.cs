@@ -5,6 +5,7 @@ using Android.OS;
 using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Extensions;
 using Plugin.LocalNotifications;
+using Plugin.PushNotification;
 using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Models;
 using VYRMobile.Services;
@@ -48,9 +49,8 @@ namespace VYRMobile.Droid
                 {
                     var documentC = documentChange.Document;
                     var alarmDocument = documentC.ToObject<FirestoreAlarm>();
-
                     
-                    Xamarin.Forms.Application.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));
+                    Xamarin.Forms.Application.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument));
                     /*FirestoreAlarm alarmDocument = new FirestoreAlarm()
                     {
                         LocationName = "Seahawks",

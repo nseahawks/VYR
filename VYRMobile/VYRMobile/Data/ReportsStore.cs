@@ -45,6 +45,12 @@ namespace VYRMobile.Data
             if (report == null || !IsConnected)
                 return false;
 
+            if (report.Title == null || report.Title == "" || report.Description == null || report.Description == "")
+            {
+                await App.Current.MainPage.DisplayAlert("Inválido", "Rellene todos los campos para continuar correctamente", "O");
+                return false;
+            }
+
             DateTime date = DateTime.UtcNow;
             UserId = await SecureStorage.GetAsync("id");
             ImagesStreams = App.ImagesStreams;
