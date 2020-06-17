@@ -41,18 +41,13 @@ namespace VYRMobile.Droid
             FormsMaps.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);
 
-            //Intent intent = new Intent(this, typeof(AlertService));
+            Intent intent = new Intent(this, typeof(AlertService));
 
-            /*var phoneNumber = "+18097966316";
-            var phoneCall = new Intent(Intent.ActionCall);
-            phoneCall.SetData(Uri.Parse(phoneNumber));
-            StartActivity(phoneCall);*/
-
-            //StartService(intent);
+            StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
-            //global::Xamarin.FormsMaps.Init(this, savedInstanceState);
+            global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
             PushNotificationManager.ProcessIntent(this, Intent);
 

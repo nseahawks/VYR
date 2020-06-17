@@ -207,14 +207,15 @@ namespace VYRMobile.Data
 
             return response.IsSuccessStatusCode;
         }
-        public async Task<bool> ValidateWorkerAsync(string Id, string photoLink)
+        public async Task<bool> ValidateWorkerAsync(string id, string userCode, string photoLink)
         {
             UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
                 var request = new ValidateRequest()
                 {
-                    UserId = Id,
+                    UserId = id,
+                    Code = userCode,
                     SupervisorId = UserId,
                     DateTime = DateTime.Now,
                     IsAssist = true,

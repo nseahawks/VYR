@@ -499,10 +499,10 @@ namespace VYRMobile.Views
         }
         private async Task<bool> Validate(string photoLink) 
         {
-
-            string workerId = codeEntry.Text;
-            var IsValidated = await _store.ValidateWorkerAsync(workerId, photoLink);
-
+            string workerCode = codeEntry.Text;
+            string workerId = workerIdLabel.Text;
+            var IsValidated = await _store.ValidateWorkerAsync(workerId, workerCode, photoLink);
+            
             if (IsValidated == true)
             {
                 isValidatedLabel.Text = "(validado)";
