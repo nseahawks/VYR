@@ -215,7 +215,7 @@ namespace VYRMobile.Data
                 var request = new ValidateRequest()
                 {
                     UserId = id,
-                    UserCode = userCode,
+                    Code = userCode,
                     SupervisorId = UserId,
                     DateTime = DateTime.Now,
                     IsAssist = true,
