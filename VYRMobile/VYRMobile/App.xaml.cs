@@ -20,12 +20,14 @@ namespace VYRMobile
         internal static string ApplicationUserRole;
         internal static string AntennaId;
         internal static string ReviewedUserId;
+        internal static ApplicationUser WorkerOnReview;
         internal static FirestoreAlarm Alarm;
         internal static List<Stream> ImagesStreams = new List<Stream>();
         internal static List<string> ImagesNames = new List<string>();
         internal static List<Record> Records = new List<Record>();
         internal static List<SfCheckBox> Faults = new List<SfCheckBox>();
         internal static List<Calculation> Calculations = new List<Calculation>();
+        internal static List<ApplicationUser> Workers = new List<ApplicationUser>();
 
         public App()
         {
@@ -34,7 +36,7 @@ namespace VYRMobile
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
             CreateDirectory();
 
-            MainPage = new Login();
+            MainPage = new MainPage();
         }
         protected override void OnStart()
         {

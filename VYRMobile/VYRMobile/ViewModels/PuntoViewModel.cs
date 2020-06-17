@@ -127,7 +127,6 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(Antenas));
             }
         }
-
         private ObservableCollection<Report> _tareas;
         public ObservableCollection<Report> Tareas
         {
@@ -322,7 +321,14 @@ namespace VYRMobile.ViewModels
 
                 if (antenaId == App.AntennaId)
                 {
-                    antena.PointChecked = true;
+                    var newAntena = antena;
+                    
+                    var index = antena.GetHashCode();
+                    newAntena.PointChecked = true;
+                    
+                    Antenas.Remove(antena);
+                    Antenas.Add(newAntena);
+                    //.Insert(index, newAntena);
 
                     await CrossCloudFirestore.Current
                         .Instance
@@ -331,7 +337,7 @@ namespace VYRMobile.ViewModels
                         .GetCollection("Stands")
                         .GetDocument(antenaId)
                         .UpdateDataAsync(new { Covered = true });
-
+                    
                     var record = new Record()
                     {
                         UserId = await SecureStorage.GetAsync("id"),

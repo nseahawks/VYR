@@ -29,11 +29,11 @@ namespace VYRMobile.Models
             get => password; 
             set => SetProperty(ref password, value);
         }
-        private string supervisorUserId;
-        public string SupervisorUserId
+        private string supervisor;
+        public string Supervisor
         {
-            get => supervisorUserId;
-            set => SetProperty(ref supervisorUserId, value);
+            get => supervisor;
+            set => SetProperty(ref supervisor, value);
         }
         private string firstName;
         public string FirstName
@@ -53,17 +53,35 @@ namespace VYRMobile.Models
             get => fullName;
             set => SetProperty(ref fullName, value);
         }
-        private string shiftId;
-        public string ShiftId
+        private string profilePicture;
+        public string ProfilePicture
         {
-            get => shiftId;
-            set => SetProperty(ref shiftId, value);
+            get => profilePicture;
+            set => SetProperty(ref profilePicture, value);
         }
-        private string hasAttended = "undefined.png";
-        public string HasAttended
+        private string schedule;
+        public string Schedule
         {
-            get => hasAttended;
-            set => SetProperty(ref hasAttended, value);
+            get => schedule;
+            set => SetProperty(ref schedule, value);
+        }
+        private bool isAssist;
+        public bool IsAssist
+        {
+            get => isAssist;
+            set => SetProperty(ref isAssist, value);
+        }
+        private bool exchange;
+        public bool Exchange
+        {
+            get => exchange;
+            set => SetProperty(ref exchange, value);
+        }
+        private bool capacitated;
+        public bool Capacitated
+        {
+            get => capacitated;
+            set => SetProperty(ref capacitated, value);
         }
     }
 }

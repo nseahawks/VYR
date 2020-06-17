@@ -236,6 +236,7 @@
     <AndroidAsset Include="Assets\record.json" />
     <AndroidAsset Include="Assets\complete.json" />
     <GoogleServicesJson Include="google-services.json" />
+    <AndroidAsset Include="Assets\SFTheramin-Gothic-Shaded.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />
@@ -497,6 +498,10 @@
     <AndroidResource Include="Resources\drawable\supervision.png" />
     <AndroidResource Include="Resources\drawable\closedEye.png" />
     <AndroidResource Include="Resources\drawable\openEye.png" />
+    <AndroidResource Include="Resources\drawable\star.png" />
+    <AndroidResource Include="Resources\drawable\vigilante.png" />
+    <AndroidResource Include="Resources\drawable\photo.png" />
+    <AndroidResource Include="Resources\drawable\save.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

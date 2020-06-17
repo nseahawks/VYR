@@ -140,6 +140,19 @@ namespace VYRMobile.Data
             }
             return null;
         }
+        public async Task<ApplicationUser> GetUsersByUserIdAsync()
+        {
+            UserId = await SecureStorage.GetAsync("id");
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                var response = await _client.GetAsync("/api/v1/users/supervisor=" + UserId);
+                var jsonReports = response.Content.ReadAsStringAsync().Result;
+                ApplicationUser user = JsonConvert.DeserializeObject<ApplicationUser>(jsonReports);
+                return user;
+            }
+
+            return null;
+        }
         public Task<bool> UpdateReportAsync(Report report)
         {
             throw new System.NotImplementedException();
@@ -193,6 +206,82 @@ namespace VYRMobile.Data
             App.Faults.Clear();
 
             return response.IsSuccessStatusCode;
+        }
+        public async Task<bool> ValidateWorkerAsync(string Id, string photoLink)
+        {
+            UserId = await SecureStorage.GetAsync("id");
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                var request = new ValidateRequest()
+                {
+                    UserId = Id,
+                    SupervisorId = UserId,
+                    DateTime = DateTime.Now,
+                    IsAssist = true,
+                    Picture = photoLink
+                };
+
+                string serializedData = JsonConvert.SerializeObject(request);
+                var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+                var apiResponse = await _client.PostAsync("/api/v1/supervisors", contentData);
+                if (apiResponse.IsSuccessStatusCode == true)
+                {
+                    DependencyService.Get<IToast>().LongToast("Trabajador validado");
+                    return true;
+                }
+                else
+                {
+                    DependencyService.Get<IToast>().LongToast("No validado");
+                    return false;
+                }
+            }
+            return false;
+        }
+        public async Task<bool> SetWorkerScheduleAsync(ApplicationUser worker, string schedule)
+        {
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                var request = new SustituteRequest()
+                {
+                    Schedule = schedule
+                };
+
+                string serializedData = JsonConvert.SerializeObject(request);
+                var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+                var apiResponse = await _client.PutAsync("/api/v1/users/" + worker.Id, contentData);
+                if (apiResponse.IsSuccessStatusCode == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return false;
+        }
+        public async Task<bool> ExchangeWorkerAsync(string workerId, bool exchange)
+        {
+            if (App.IsUserLoggedIn && IsConnected)
+            {
+                var request = new ExchangeRequest()
+                {
+                    Exchange = exchange
+                };
+
+                string serializedData = JsonConvert.SerializeObject(request);
+                var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+                var apiResponse = await _client.PutAsync("/api/v1/users/" + workerId, contentData);
+                if (apiResponse.IsSuccessStatusCode == true)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            return false;
         }
     }
 }

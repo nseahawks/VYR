@@ -63,8 +63,8 @@ namespace VYRMobile.Views
                 }
             });
 
-            isWaiting = false;
-            Application.Current.MainPage = new NavigationPage(new MenuPage());
+            /*isWaiting = false;
+            Application.Current.MainPage = new NavigationPage(new MenuPage());*/
         }
 
         protected override void OnDisappearing()
@@ -74,7 +74,7 @@ namespace VYRMobile.Views
 
         private async void Charge()
         {
-            while(isWaiting == false)
+            while(isWaiting == true)
             {
                 await Task.Delay(100);
             }

@@ -1,0 +1,256 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             mc:Ignorable="d"
+             x:Class="VYRMobile.Views.Popups.CaptionPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <Frame
+        BackgroundColor="#EEEEEE"
+        CornerRadius="15"
+        HeightRequest="270"
+        WidthRequest="300"
+        VerticalOptions="Center"
+        HorizontalOptions="Center"
+        Padding="0"
+        IsClippedToBounds="True">
+            <StackLayout
+                Spacing="1">
+                <Grid
+                    BackgroundColor="#EEEEEE"
+                    HeightRequest="40"
+                    VerticalOptions="Center">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+                    <Label 
+                        Text="Leyenda"
+                        FontSize="18"
+                        TextColor="{StaticResource BlackColor}"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+            </Grid>
+            <ScrollView>
+                <StackLayout
+                    BackgroundColor="White"
+                    HeightRequest="200"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Center">
+                    <Grid
+                        Grid.ColumnSpan="1"
+                        Grid.RowSpan="10">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="0"/>
+                            <ColumnDefinition Width="60"/>
+                            <ColumnDefinition Width="240"/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                            <RowDefinition Height="35"/>
+                        </Grid.RowDefinitions>
+                    </Grid>
+                    <Image
+                            Grid.Column="0"
+                            Grid.Row="0"
+                            Source="star.png"
+                            HeightRequest="24"
+                            WidthRequest="24"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="0"
+                            Text="trabajador precalificado"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="1"
+                            Text="(VS)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            Text="vigilante estandar"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="2"
+                            Text="(VO)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="2"
+                            Text="vigilante de rondas"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="3"
+                            Text="(JE)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="3"
+                            Text="jefe de equipo"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="4"
+                            Text="(SV)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="4"
+                            Text="supervisor"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="5"
+                            Text="(PRR)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="5"
+                            Text="patrulla"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="6"
+                            Text="(AO)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="6"
+                            Text="asistente de operaciones"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="7"
+                            Text="(GR)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="7"
+                            Text="gerente regional"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="8"
+                            Text="(GO)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="8"
+                            Text="gerente de operaciones"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="9"
+                            Text="(OM)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="9"
+                            Text="operador de monitoreo"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                    <Label
+                            Grid.Column="0"
+                            Grid.Row="10"
+                            Text="(JS)"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="16"
+                            HorizontalOptions="End"/>
+                    <Label
+                            Grid.Column="1"
+                            Grid.Row="10"
+                            Text="jefe de sala"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            Margin="5, 0, 0, 0"/>
+                </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

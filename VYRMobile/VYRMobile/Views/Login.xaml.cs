@@ -122,7 +122,7 @@ namespace VYRMobile
                 }
                 else
                 {
-                    Application.Current.MainPage = new NavigationPage(new MenuPage());
+                    Application.Current.MainPage = new NavigationPage(new Utensilios());
                 }
             }
             else

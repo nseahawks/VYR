@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Globalization;
 using MvvmHelpers;
 using Newtonsoft.Json;
@@ -7,8 +8,18 @@ using Newtonsoft.Json.Converters;
     
 namespace VYRMobile.Models
 {
-    public partial class Antena : ObservableObject
+    public partial class Antena : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            var changed = PropertyChanged;
+            {
+                if (changed != null)
+                    PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
         [JsonProperty("id")]
         public Guid Id { get; set; }
 

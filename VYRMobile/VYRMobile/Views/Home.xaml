@@ -157,9 +157,9 @@
                                         <Grid>
                                             <ListView
                                                 x:Name="antenasView"
-                                                ItemsSource="{Binding Antenas, Mode=TwoWay}"
+                                                ItemsSource="{Binding Antenas}"
                                                 SelectionMode="None"
-                                                HasUnevenRows="True"
+                                                HasUnevenRows="True" 
                                                 SeparatorVisibility="None">
                                                 <ListView.ItemTemplate>
                                                     <DataTemplate>
@@ -189,7 +189,7 @@
                                                                 <CheckBox
                                                                     Grid.Column="2"
                                                                     IsEnabled="False"
-                                                                    IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                                                    IsChecked="{Binding PointChecked, Mode=TwoWay}"
                                                                     HeightRequest="25"
                                                                     Style="{StaticResource CheckBoxStyle}"/>
                                                             </Grid>
@@ -243,7 +243,6 @@
                 </Grid.RowDefinitions>
                 <button:SfButton 
                     x:Name="QR"
-                    Command="{Binding StartCommand}"
                     FontFamily="{StaticResource PoppinsMedium}"
                     Text="ESCANEAR QR"
                     TextColor="{DynamicResource SecondaryColor}"

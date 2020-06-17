@@ -331,8 +331,8 @@ namespace VYRMobile.Views
 
         private async void MoveCamera()
         {
-            //var request = new GeolocationRequest(GeolocationAccuracy.High);
-            var location = await Geolocation.GetLastKnownLocationAsync();
+            var request = new GeolocationRequest(GeolocationAccuracy.High);
+            var location = await Geolocation.GetLocationAsync(request);
             Position myPosition = new Position(location.Latitude, location.Longitude);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(1000)));
         }
