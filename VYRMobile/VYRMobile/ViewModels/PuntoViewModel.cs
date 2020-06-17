@@ -26,6 +26,7 @@ namespace VYRMobile.ViewModels
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; set; }
         public ICommand RestartCommand { get; set; }
+        public ICommand RestoreLogoCommand { get; set; }
         public ICommand AlertCommand { get; set; }
         public ICommand CheckAntenna { get; }
         public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
@@ -126,7 +127,6 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(Antenas));
             }
         }
-
         private ObservableCollection<Report> _tareas;
         public ObservableCollection<Report> Tareas
         {
@@ -147,8 +147,53 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(IsEmpty));
             }
         }
+        private bool _isLogo;
+        public bool IsLogo
+        {
+            get { return _isLogo; }
+            set
+            {
+                _isLogo = value;
+                OnPropertyChanged(nameof(IsLogo));
+            }
+        }
+        private bool _isChrono;
+        public bool IsChrono
+        {
+            get { return _isChrono; }
+            set
+            {
+                _isChrono = value;
+                OnPropertyChanged(nameof(IsChrono));
+            }
+        }
+        private bool _isButton;
+        public bool IsButton
+        {
+            get { return _isButton; }
+            set
+            {
+                _isButton = value;
+                OnPropertyChanged(nameof(IsButton));
+            }
+        }
+        private Color _chronoColor;
+        public Color ChronoColor
+        {
+            get { return _chronoColor; }
+            set
+            {
+                _chronoColor = value;
+                OnPropertyChanged(nameof(ChronoColor));
+            }
+        }
         public PuntoViewModel()
         {
+            IsLogo = true;
+            IsChrono = false;
+            IsButton = false;
+            ChronoColor = Color.Black;
+
             _store = new RecordsStore();
             Puntos = new ObservableCollection<Punto>();
             //Tareas = new ObservableCollection<Report>();
@@ -190,6 +235,7 @@ namespace VYRMobile.ViewModels
             StopCommand = new Command(StopStopwatch);
             StartCommand = new Command(StartStopwatch);
             RestartCommand = new Command(RestartStopwatch);
+            RestoreLogoCommand = new Command(RestoreLogo);
             CheckAntenna = new Command(CheckingAntenna);
             AlertCommand = new Command(Alert);
         }
@@ -205,8 +251,18 @@ namespace VYRMobile.ViewModels
         }
         private async void Alert() 
         {
-            //stopWatch.Start();
+            TimeSpan timeSpan = new TimeSpan();
+            timeSpan = TimeSpan.FromSeconds(60);
+
             await App.Current.MainPage.Navigation.PopPopupAsync();
+
+            await Task.Delay(100);
+            IsLogo = false;
+            IsChrono = true;
+            IsButton = false;
+            stopWatch.Start();
+            ChronoColorChange(timeSpan);
+
             await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Mapa2(App.Alarm.LocationName, App.Alarm.Location)));
             //ShowMap();
             //await GetActualLocation();
@@ -214,16 +270,31 @@ namespace VYRMobile.ViewModels
             //MapCommand.Execute(null);
         }
 
-        private async void StartStopwatch()
+        private void StartStopwatch()
         {
-            FirestoreAlarm alarmDocument = new FirestoreAlarm()
+            /*FirestoreAlarm alarmDocument = new FirestoreAlarm()
             {
                 LocationName = "Seahawks",
                 Location = new GeoPoint(18.4047, -70.0328),
                 Type = "Alarm"
             };
-            await App.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));
-            stopWatch.Start();
+            await App.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));*/
+
+            TimeSpan timeSpan = new TimeSpan();
+            timeSpan = TimeSpan.FromSeconds(60); 
+            IsLogo = false;
+            IsChrono = true;
+
+            if (stopWatch.ElapsedTicks != 0)
+            {
+                stopWatch.Restart();
+            }
+            else
+            {
+                stopWatch.Start();
+            }
+
+            ChronoColorChange(timeSpan);
         }
         private void RestartStopwatch()
         {
@@ -234,6 +305,9 @@ namespace VYRMobile.ViewModels
             if(stopWatch.IsRunning == true)
             {
                 stopWatch.Stop();
+
+                IsChrono = false;
+                IsButton = true;
             }
         }
 
@@ -247,7 +321,14 @@ namespace VYRMobile.ViewModels
 
                 if (antenaId == App.AntennaId)
                 {
-                    antena.PointChecked = true;
+                    var newAntena = antena;
+                    
+                    var index = antena.GetHashCode();
+                    newAntena.PointChecked = true;
+                    
+                    Antenas.Remove(antena);
+                    Antenas.Add(newAntena);
+                    //.Insert(index, newAntena);
 
                     await CrossCloudFirestore.Current
                         .Instance
@@ -256,7 +337,7 @@ namespace VYRMobile.ViewModels
                         .GetCollection("Stands")
                         .GetDocument(antenaId)
                         .UpdateDataAsync(new { Covered = true });
-
+                    
                     var record = new Record()
                     {
                         UserId = await SecureStorage.GetAsync("id"),
@@ -315,6 +396,30 @@ namespace VYRMobile.ViewModels
             {
                 phoneCallTask.MakePhoneCall("+18097966316", "Francisco Rojas");
             }
+        }
+        private async void ChronoColorChange(TimeSpan timeSpan)
+        {
+            while(stopWatch.IsRunning == true && timeSpan > stopWatch.Elapsed)
+            {
+                ChronoColor = Color.Green;
+                await Task.Delay(1000);
+                ChronoColor = Color.Black;
+                await Task.Delay(1000);
+            }
+            
+            while(stopWatch.IsRunning == true && timeSpan < stopWatch.Elapsed)
+            {
+                ChronoColor = Color.Red;
+                await Task.Delay(1000);
+                ChronoColor = Color.Black;
+                await Task.Delay(1000);
+            }
+        }
+        private void RestoreLogo()
+        {
+            IsChrono = false;
+            IsButton = false;
+            IsLogo = true;
         }
         /*private async Task GetActualLocation()
         {

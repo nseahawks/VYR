@@ -35,19 +35,19 @@ namespace VYRMobile.ViewModels
         {
             Users = new ObservableCollection<ApplicationUser>() 
             {
-                new ApplicationUser{FullName = "Jorge Perez", HasAttended="attended.png"},
-                new ApplicationUser{FullName = "Carlos Martinez", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Santiago Cabrera", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Ramon Castillo", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Alberto Jaquez", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Roberto Quezada", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Javier Rodriguez", HasAttended="undefined.png"},
+                new ApplicationUser{FullName = "Jorge Perez"},
+                new ApplicationUser{FullName = "Carlos Martinez"},
+                new ApplicationUser{FullName = "Santiago Cabrera"},
+                new ApplicationUser{FullName = "Ramon Castillo"},
+                new ApplicationUser{FullName = "Alberto Jaquez"},
+                new ApplicationUser{FullName = "Roberto Quezada"},
+                new ApplicationUser{FullName = "Javier Rodriguez"},
             };
 
             Users2 = new ObservableCollection<ApplicationUser>()
             {
-                new ApplicationUser{FullName = "Andres Tejada", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Adrian Feliz", HasAttended="undefined.png"}
+                new ApplicationUser{FullName = "Andres Tejada"},
+                new ApplicationUser{FullName = "Adrian Feliz"}
             };
 
             //LoadUsers();

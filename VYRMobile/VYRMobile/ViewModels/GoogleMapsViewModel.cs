@@ -14,11 +14,14 @@ using VYRMobile.Data;
 using System.Globalization;
 using VYRMobile.Views;
 using Newtonsoft.Json;
+using System.Windows.Input;
+using Rg.Plugins.Popup.Extensions;
 
 namespace VYRMobile.ViewModels
 {
     public class GoogleMapsViewModel : BaseViewModel
     {
+        public Stopwatch stopWatch = new Stopwatch();
         private RecordsStore _store { get; set; }
         public Command CalculateRouteCommand { get; set; }
         public Command UpdatePositionCommand { get; set; }
@@ -26,6 +29,10 @@ namespace VYRMobile.ViewModels
         public Command LoadRouteCommand2 { get; set; }
         public Command StopRouteCommand { get; set; }
         public Command ActualLocationCommand { get; set; }
+        public ICommand StopCommand { get; }
+        public ICommand StartCommand { get; set; }
+        public ICommand RestartCommand { get; set; }
+        
         SensorSpeed speed = SensorSpeed.Default;
         private static GoogleMapsViewModel _instance;
         public static GoogleMapsViewModel Instance
@@ -74,6 +81,70 @@ namespace VYRMobile.ViewModels
                     hasRouteRunning = value;
                     OnPropertyChanged("HasRouteRunning");
                 }
+            }
+        }
+
+        private string _stopWatchFinal;
+        public string StopWatchFinal
+        {
+            get { return _stopWatchFinal; }
+            set
+            {
+                _stopWatchFinal = value;
+                OnPropertyChanged("StopWatchFinal");
+            }
+        }
+
+        private string _stopWatchHours;
+        public string StopWatchHours
+        {
+            get { return _stopWatchHours; }
+            set
+            {
+                _stopWatchHours = value;
+                OnPropertyChanged("StopWatchHours");
+            }
+        }
+        private string _stopWatchMinutes;
+        public string StopWatchMinutes
+        {
+            get { return _stopWatchMinutes; }
+            set
+            {
+                _stopWatchMinutes = value;
+                OnPropertyChanged("StopWatchMinutes");
+            }
+        }
+
+        private string _stopWatchSeconds;
+        public string StopWatchSeconds
+        {
+            get { return _stopWatchSeconds; }
+            set
+            {
+                _stopWatchSeconds = value;
+                OnPropertyChanged("StopWatchSeconds");
+            }
+        }
+
+        private string _stopWatchMilliseconds;
+        public string StopWatchMilliseconds
+        {
+            get { return _stopWatchMilliseconds; }
+            set
+            {
+                _stopWatchMilliseconds = value;
+                OnPropertyChanged("StopWatchMilliseconds");
+            }
+        }
+        private Color _chronoColor;
+        public Color ChronoColor
+        {
+            get { return _chronoColor; }
+            set
+            {
+                _chronoColor = value;
+                OnPropertyChanged(nameof(ChronoColor));
             }
         }
         public string _originLatitud { get; set; }
@@ -171,6 +242,51 @@ namespace VYRMobile.ViewModels
             StopRouteCommand = new Command(StopRoute);
             GetPlacesCommand = new Command<string>(async (param) => await GetPlacesByName(param));
 
+            LoadAntennas();
+        }
+        public GoogleMapsViewModel(string param)
+        {
+            _store = new RecordsStore();
+            Antennas = new ObservableCollection<Antena>();
+            ToggleAccelerometer();
+            LoadRouteCommand = new Command(async () => await LoadRoute());
+            LoadRouteCommand2 = new Command(async () => await LoadRoute2());
+            StopRouteCommand = new Command(StopRoute);
+            
+            stopWatch.Start(); 
+
+            Device.StartTimer(TimeSpan.FromMilliseconds(1), () =>
+            {
+                StopWatchHours = stopWatch.Elapsed.Hours.ToString("00");
+                StopWatchMinutes = stopWatch.Elapsed.Minutes.ToString("00");
+                StopWatchSeconds = stopWatch.Elapsed.Seconds.ToString("00");
+                StopWatchMilliseconds = stopWatch.Elapsed.Milliseconds.ToString("00");
+
+                if (StopWatchHours == "00" && StopWatchMinutes == "00")
+                {
+                    StopWatchFinal = (StopWatchSeconds +
+                                   "." + StopWatchMilliseconds);
+                }
+                else if (StopWatchHours == "00")
+                {
+                    StopWatchFinal = (StopWatchMinutes +
+                                  ":" + StopWatchSeconds +
+                                  "." + StopWatchMilliseconds);
+                }
+                else
+                {
+                    StopWatchFinal = (StopWatchHours +
+                                   ":" + StopWatchMinutes +
+                                   ":" + StopWatchSeconds +
+                                   "." + StopWatchMilliseconds);
+                }
+                return true;
+            });
+
+            
+            StopCommand = new Command(StopStopwatch);
+            StartCommand = new Command(StartStopwatch);
+            RestartCommand = new Command(RestartStopwatch);
             LoadAntennas();
         }
 
@@ -427,6 +543,56 @@ namespace VYRMobile.ViewModels
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
+            }
+        }
+        private async void StartStopwatch()
+        {
+            /* await App.Current.MainPage.Navigation.PopPopupAsync();
+
+             await Task.Delay(100);
+             IsLogo = false;
+             IsChrono = true;
+             IsButton = false;
+             stopWatch.Start();
+             ChronoColorChange(timeSpan);*/
+
+            await App.Current.MainPage.Navigation.PopPopupAsync();
+
+            TimeSpan timeSpan = new TimeSpan();
+            timeSpan = TimeSpan.FromSeconds(60);
+
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Mapa2(App.Alarm.LocationName, App.Alarm.Location)));
+            //stopWatch.Start();
+
+            //ChronoColorChange(timeSpan);
+        }
+        private void RestartStopwatch()
+        {
+            stopWatch.Restart();
+        }
+        public void StopStopwatch()
+        {
+            if (stopWatch.IsRunning == true)
+            {
+                stopWatch.Stop();
+            }
+        }
+        private async void ChronoColorChange(TimeSpan timeSpan)
+        {
+            while (stopWatch.IsRunning == true && timeSpan > stopWatch.Elapsed)
+            {
+                ChronoColor = Color.Green;
+                await Task.Delay(1000);
+                ChronoColor = Color.Black;
+                await Task.Delay(1000);
+            }
+
+            while (stopWatch.IsRunning == true && timeSpan < stopWatch.Elapsed)
+            {
+                ChronoColor = Color.Red;
+                await Task.Delay(1000);
+                ChronoColor = Color.Black;
+                await Task.Delay(1000);
             }
         }
     }

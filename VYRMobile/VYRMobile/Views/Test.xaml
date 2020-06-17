@@ -118,28 +118,6 @@
                         </FormattedString>
                     </stepBar:StepView.SecondaryFormattedText>
                 </stepBar:StepView>
-                <!--<stepBar:StepView 
-                    x:Name="step3"
-                    Status="NotStarted"
-                    HorizontalOptions="Center">
-                    <stepBar:StepView.PrimaryFormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="Paso 3" 
-                                FontSize="14" 
-                                TextColor="Black"
-                                FontAttributes="Bold"/>
-                        </FormattedString>
-                    </stepBar:StepView.PrimaryFormattedText>
-                    <stepBar:StepView.SecondaryFormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="Confirmación" 
-                                FontSize="12" 
-                                TextColor="Black"/>
-                        </FormattedString>
-                    </stepBar:StepView.SecondaryFormattedText>
-                </stepBar:StepView>-->
             </stepBar:SfStepProgressBar>
         </StackLayout>
         <StackLayout

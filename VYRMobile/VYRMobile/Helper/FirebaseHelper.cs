@@ -45,7 +45,7 @@ namespace VYRMobile.Helper
                 }
                 else
                 {
-                    Link = Link + ", " + await GetFile(name, UserId, date);
+                    Link = Link + " " + await GetFile(name, UserId, date);
                 }
             }
             return Link;

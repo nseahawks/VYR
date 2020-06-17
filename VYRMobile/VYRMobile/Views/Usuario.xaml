@@ -111,7 +111,7 @@
                                         <Label  
                                             Grid.Column="1"
                                             TextColor="{StaticResource BlackColor}"
-                                            Text="EQUIPAMIENTO"
+                                            Text="EQUIPO"
                                             Style="{StaticResource NameTextStyle}"
                                             Margin="0,0,0,0"/>
                                     </Grid>

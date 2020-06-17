@@ -97,7 +97,7 @@
                     BackgroundColor="{DynamicResource PrimaryColor}"
                     FontFamily="{StaticResource PoppinsMedium}"
                     FontSize="{StaticResource FontSize14}"
-                    TextColor="{DynamicResource SecondaryColor}"
+                    TextColor="{DynamicResource WhiteColor}"
                     HeightRequest="40"
                     WidthRequest="120"
                     HorizontalOptions="End"

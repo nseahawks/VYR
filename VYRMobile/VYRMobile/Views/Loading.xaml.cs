@@ -27,8 +27,19 @@ namespace VYRMobile.Views
             Charge();
             _userId = await SecureStorage.GetAsync("id");
 
+            string repository;
+
+            if(App.ApplicationUserRole == "Supervisor")
+            {
+                repository = "supervisorsApp";
+            }
+            else
+            {
+                repository = "usersApp";
+            }
+
             var document =  CrossCloudFirestore.Current.Instance
-            .GetCollection("usersApp")
+            .GetCollection(repository)
             .GetDocument(_userId)
             .AsObservable()
             .Subscribe(document =>
@@ -52,8 +63,8 @@ namespace VYRMobile.Views
                 }
             });
 
-            isWaiting = false;
-            Application.Current.MainPage = new NavigationPage(new MenuPage());
+            /*isWaiting = false;
+            Application.Current.MainPage = new NavigationPage(new MenuPage());*/
         }
 
         protected override void OnDisappearing()
@@ -63,7 +74,7 @@ namespace VYRMobile.Views
 
         private async void Charge()
         {
-            while(isWaiting == false)
+            while(isWaiting == true)
             {
                 await Task.Delay(100);
             }

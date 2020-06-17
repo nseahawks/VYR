@@ -15,7 +15,7 @@ namespace VYRMobile.Droid
 {
 	
 	
-	[global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
+	[System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Android.Build.Tasks", "1.0.0.0")]
 	public partial class Resource
 	{
 		
@@ -7872,6 +7872,275 @@ namespace VYRMobile.Droid
 			global::PCLStorage.Resource.String.ApplicationName = global::VYRMobile.Droid.Resource.String.ApplicationName;
 			global::PCLStorage.Resource.String.Hello = global::VYRMobile.Droid.Resource.String.Hello;
 			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::VYRMobile.Droid.Resource.Drawable.plugin_lc_smallicon;
+			global::Plugin.PushNotification.Resource.Attribute.alpha = global::VYRMobile.Droid.Resource.Attribute.alpha;
+			global::Plugin.PushNotification.Resource.Attribute.buttonSize = global::VYRMobile.Droid.Resource.Attribute.buttonSize;
+			global::Plugin.PushNotification.Resource.Attribute.circleCrop = global::VYRMobile.Droid.Resource.Attribute.circleCrop;
+			global::Plugin.PushNotification.Resource.Attribute.colorScheme = global::VYRMobile.Droid.Resource.Attribute.colorScheme;
+			global::Plugin.PushNotification.Resource.Attribute.coordinatorLayoutStyle = global::VYRMobile.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.PushNotification.Resource.Attribute.font = global::VYRMobile.Droid.Resource.Attribute.font;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderAuthority = global::VYRMobile.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderCerts = global::VYRMobile.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderFetchStrategy = global::VYRMobile.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderFetchTimeout = global::VYRMobile.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderPackage = global::VYRMobile.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderQuery = global::VYRMobile.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.PushNotification.Resource.Attribute.fontStyle = global::VYRMobile.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.PushNotification.Resource.Attribute.fontVariationSettings = global::VYRMobile.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.PushNotification.Resource.Attribute.fontWeight = global::VYRMobile.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.PushNotification.Resource.Attribute.imageAspectRatio = global::VYRMobile.Droid.Resource.Attribute.imageAspectRatio;
+			global::Plugin.PushNotification.Resource.Attribute.imageAspectRatioAdjust = global::VYRMobile.Droid.Resource.Attribute.imageAspectRatioAdjust;
+			global::Plugin.PushNotification.Resource.Attribute.keylines = global::VYRMobile.Droid.Resource.Attribute.keylines;
+			global::Plugin.PushNotification.Resource.Attribute.layout_anchor = global::VYRMobile.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.PushNotification.Resource.Attribute.layout_anchorGravity = global::VYRMobile.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.PushNotification.Resource.Attribute.layout_behavior = global::VYRMobile.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.PushNotification.Resource.Attribute.layout_dodgeInsetEdges = global::VYRMobile.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.PushNotification.Resource.Attribute.layout_insetEdge = global::VYRMobile.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.PushNotification.Resource.Attribute.layout_keyline = global::VYRMobile.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.PushNotification.Resource.Attribute.scopeUris = global::VYRMobile.Droid.Resource.Attribute.scopeUris;
+			global::Plugin.PushNotification.Resource.Attribute.statusBarBackground = global::VYRMobile.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.PushNotification.Resource.Attribute.ttcIndex = global::VYRMobile.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_dark;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_default = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_dark_default;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_disabled = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_dark_disabled;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_focused = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_dark_focused;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_pressed = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_dark_pressed;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_light;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_default = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_light_default;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_disabled = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_light_disabled;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_focused = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_light_focused;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_pressed = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_text_light_pressed;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_tint = global::VYRMobile.Droid.Resource.Color.common_google_signin_btn_tint;
+			global::Plugin.PushNotification.Resource.Color.notification_action_color_filter = global::VYRMobile.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.PushNotification.Resource.Color.notification_icon_bg_color = global::VYRMobile.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.PushNotification.Resource.Color.notification_material_background_media_default_color = global::VYRMobile.Droid.Resource.Color.notification_material_background_media_default_color;
+			global::Plugin.PushNotification.Resource.Color.primary_text_default_material_dark = global::VYRMobile.Droid.Resource.Color.primary_text_default_material_dark;
+			global::Plugin.PushNotification.Resource.Color.ripple_material_light = global::VYRMobile.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.PushNotification.Resource.Color.secondary_text_default_material_dark = global::VYRMobile.Droid.Resource.Color.secondary_text_default_material_dark;
+			global::Plugin.PushNotification.Resource.Color.secondary_text_default_material_light = global::VYRMobile.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_inset_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_inset_vertical_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_padding_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_padding_vertical_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_control_corner_material = global::VYRMobile.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_notification_large_icon_max_height = global::VYRMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.PushNotification.Resource.Dimension.compat_notification_large_icon_max_width = global::VYRMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.PushNotification.Resource.Dimension.notification_action_icon_size = global::VYRMobile.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_action_text_size = global::VYRMobile.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_big_circle_margin = global::VYRMobile.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.PushNotification.Resource.Dimension.notification_content_margin_start = global::VYRMobile.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.PushNotification.Resource.Dimension.notification_large_icon_height = global::VYRMobile.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.PushNotification.Resource.Dimension.notification_large_icon_width = global::VYRMobile.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.PushNotification.Resource.Dimension.notification_main_column_padding_top = global::VYRMobile.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.PushNotification.Resource.Dimension.notification_media_narrow_margin = global::VYRMobile.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.PushNotification.Resource.Dimension.notification_right_icon_size = global::VYRMobile.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_right_side_padding_top = global::VYRMobile.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.PushNotification.Resource.Dimension.notification_small_icon_background_padding = global::VYRMobile.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.PushNotification.Resource.Dimension.notification_small_icon_size_as_large = global::VYRMobile.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.PushNotification.Resource.Dimension.notification_subtext_size = global::VYRMobile.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_top_pad = global::VYRMobile.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.PushNotification.Resource.Dimension.notification_top_pad_large_text = global::VYRMobile.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.PushNotification.Resource.Dimension.subtitle_corner_radius = global::VYRMobile.Droid.Resource.Dimension.subtitle_corner_radius;
+			global::Plugin.PushNotification.Resource.Dimension.subtitle_outline_width = global::VYRMobile.Droid.Resource.Dimension.subtitle_outline_width;
+			global::Plugin.PushNotification.Resource.Dimension.subtitle_shadow_offset = global::VYRMobile.Droid.Resource.Dimension.subtitle_shadow_offset;
+			global::Plugin.PushNotification.Resource.Dimension.subtitle_shadow_radius = global::VYRMobile.Droid.Resource.Dimension.subtitle_shadow_radius;
+			global::Plugin.PushNotification.Resource.Drawable.common_full_open_on_phone = global::VYRMobile.Droid.Resource.Drawable.common_full_open_on_phone;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_dark;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_focused = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_normal = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_disabled = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_disabled;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_light;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light_focused = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_light_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light_normal = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light_normal_background = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_dark;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark_focused = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_dark_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark_normal = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark_normal_background = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_disabled = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_disabled;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_light;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light_focused = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_light_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light_normal = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light_normal_background = global::VYRMobile.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.googleg_disabled_color_18 = global::VYRMobile.Droid.Resource.Drawable.googleg_disabled_color_18;
+			global::Plugin.PushNotification.Resource.Drawable.googleg_standard_color_18 = global::VYRMobile.Droid.Resource.Drawable.googleg_standard_color_18;
+			global::Plugin.PushNotification.Resource.Drawable.notification_action_background = global::VYRMobile.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg = global::VYRMobile.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_low = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_low_normal = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_low_pressed = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_normal = global::VYRMobile.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_normal_pressed = global::VYRMobile.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.PushNotification.Resource.Drawable.notification_icon_background = global::VYRMobile.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.PushNotification.Resource.Drawable.notification_template_icon_bg = global::VYRMobile.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notification_template_icon_low_bg = global::VYRMobile.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notification_tile_bg = global::VYRMobile.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notify_panel_notification_icon_bg = global::VYRMobile.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.PushNotification.Resource.Id.action0 = global::VYRMobile.Droid.Resource.Id.action0;
+			global::Plugin.PushNotification.Resource.Id.actions = global::VYRMobile.Droid.Resource.Id.actions;
+			global::Plugin.PushNotification.Resource.Id.action_container = global::VYRMobile.Droid.Resource.Id.action_container;
+			global::Plugin.PushNotification.Resource.Id.action_divider = global::VYRMobile.Droid.Resource.Id.action_divider;
+			global::Plugin.PushNotification.Resource.Id.action_image = global::VYRMobile.Droid.Resource.Id.action_image;
+			global::Plugin.PushNotification.Resource.Id.action_text = global::VYRMobile.Droid.Resource.Id.action_text;
+			global::Plugin.PushNotification.Resource.Id.adjust_height = global::VYRMobile.Droid.Resource.Id.adjust_height;
+			global::Plugin.PushNotification.Resource.Id.adjust_width = global::VYRMobile.Droid.Resource.Id.adjust_width;
+			global::Plugin.PushNotification.Resource.Id.all = global::VYRMobile.Droid.Resource.Id.all;
+			global::Plugin.PushNotification.Resource.Id.async = global::VYRMobile.Droid.Resource.Id.async;
+			global::Plugin.PushNotification.Resource.Id.auto = global::VYRMobile.Droid.Resource.Id.auto;
+			global::Plugin.PushNotification.Resource.Id.blocking = global::VYRMobile.Droid.Resource.Id.blocking;
+			global::Plugin.PushNotification.Resource.Id.bottom = global::VYRMobile.Droid.Resource.Id.bottom;
+			global::Plugin.PushNotification.Resource.Id.cancel_action = global::VYRMobile.Droid.Resource.Id.cancel_action;
+			global::Plugin.PushNotification.Resource.Id.center = global::VYRMobile.Droid.Resource.Id.center;
+			global::Plugin.PushNotification.Resource.Id.center_horizontal = global::VYRMobile.Droid.Resource.Id.center_horizontal;
+			global::Plugin.PushNotification.Resource.Id.center_vertical = global::VYRMobile.Droid.Resource.Id.center_vertical;
+			global::Plugin.PushNotification.Resource.Id.chronometer = global::VYRMobile.Droid.Resource.Id.chronometer;
+			global::Plugin.PushNotification.Resource.Id.clip_horizontal = global::VYRMobile.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.PushNotification.Resource.Id.clip_vertical = global::VYRMobile.Droid.Resource.Id.clip_vertical;
+			global::Plugin.PushNotification.Resource.Id.dark = global::VYRMobile.Droid.Resource.Id.dark;
+			global::Plugin.PushNotification.Resource.Id.end = global::VYRMobile.Droid.Resource.Id.end;
+			global::Plugin.PushNotification.Resource.Id.end_padder = global::VYRMobile.Droid.Resource.Id.end_padder;
+			global::Plugin.PushNotification.Resource.Id.fill = global::VYRMobile.Droid.Resource.Id.fill;
+			global::Plugin.PushNotification.Resource.Id.fill_horizontal = global::VYRMobile.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.PushNotification.Resource.Id.fill_vertical = global::VYRMobile.Droid.Resource.Id.fill_vertical;
+			global::Plugin.PushNotification.Resource.Id.forever = global::VYRMobile.Droid.Resource.Id.forever;
+			global::Plugin.PushNotification.Resource.Id.icon = global::VYRMobile.Droid.Resource.Id.icon;
+			global::Plugin.PushNotification.Resource.Id.icon_group = global::VYRMobile.Droid.Resource.Id.icon_group;
+			global::Plugin.PushNotification.Resource.Id.icon_only = global::VYRMobile.Droid.Resource.Id.icon_only;
+			global::Plugin.PushNotification.Resource.Id.info = global::VYRMobile.Droid.Resource.Id.info;
+			global::Plugin.PushNotification.Resource.Id.italic = global::VYRMobile.Droid.Resource.Id.italic;
+			global::Plugin.PushNotification.Resource.Id.left = global::VYRMobile.Droid.Resource.Id.left;
+			global::Plugin.PushNotification.Resource.Id.light = global::VYRMobile.Droid.Resource.Id.light;
+			global::Plugin.PushNotification.Resource.Id.line1 = global::VYRMobile.Droid.Resource.Id.line1;
+			global::Plugin.PushNotification.Resource.Id.line3 = global::VYRMobile.Droid.Resource.Id.line3;
+			global::Plugin.PushNotification.Resource.Id.media_actions = global::VYRMobile.Droid.Resource.Id.media_actions;
+			global::Plugin.PushNotification.Resource.Id.none = global::VYRMobile.Droid.Resource.Id.none;
+			global::Plugin.PushNotification.Resource.Id.normal = global::VYRMobile.Droid.Resource.Id.normal;
+			global::Plugin.PushNotification.Resource.Id.notification_background = global::VYRMobile.Droid.Resource.Id.notification_background;
+			global::Plugin.PushNotification.Resource.Id.notification_main_column = global::VYRMobile.Droid.Resource.Id.notification_main_column;
+			global::Plugin.PushNotification.Resource.Id.notification_main_column_container = global::VYRMobile.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.PushNotification.Resource.Id.right = global::VYRMobile.Droid.Resource.Id.right;
+			global::Plugin.PushNotification.Resource.Id.right_icon = global::VYRMobile.Droid.Resource.Id.right_icon;
+			global::Plugin.PushNotification.Resource.Id.right_side = global::VYRMobile.Droid.Resource.Id.right_side;
+			global::Plugin.PushNotification.Resource.Id.standard = global::VYRMobile.Droid.Resource.Id.standard;
+			global::Plugin.PushNotification.Resource.Id.start = global::VYRMobile.Droid.Resource.Id.start;
+			global::Plugin.PushNotification.Resource.Id.status_bar_latest_event_content = global::VYRMobile.Droid.Resource.Id.status_bar_latest_event_content;
+			global::Plugin.PushNotification.Resource.Id.tag_transition_group = global::VYRMobile.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.PushNotification.Resource.Id.tag_unhandled_key_event_manager = global::VYRMobile.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.PushNotification.Resource.Id.tag_unhandled_key_listeners = global::VYRMobile.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.PushNotification.Resource.Id.text = global::VYRMobile.Droid.Resource.Id.text;
+			global::Plugin.PushNotification.Resource.Id.text2 = global::VYRMobile.Droid.Resource.Id.text2;
+			global::Plugin.PushNotification.Resource.Id.time = global::VYRMobile.Droid.Resource.Id.time;
+			global::Plugin.PushNotification.Resource.Id.title = global::VYRMobile.Droid.Resource.Id.title;
+			global::Plugin.PushNotification.Resource.Id.top = global::VYRMobile.Droid.Resource.Id.top;
+			global::Plugin.PushNotification.Resource.Id.wide = global::VYRMobile.Droid.Resource.Id.wide;
+			global::Plugin.PushNotification.Resource.Integer.cancel_button_image_alpha = global::VYRMobile.Droid.Resource.Integer.cancel_button_image_alpha;
+			global::Plugin.PushNotification.Resource.Integer.google_play_services_version = global::VYRMobile.Droid.Resource.Integer.google_play_services_version;
+			global::Plugin.PushNotification.Resource.Integer.status_bar_notification_info_maxnum = global::VYRMobile.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.PushNotification.Resource.Layout.notification_action = global::VYRMobile.Droid.Resource.Layout.notification_action;
+			global::Plugin.PushNotification.Resource.Layout.notification_action_tombstone = global::VYRMobile.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.PushNotification.Resource.Layout.notification_media_action = global::VYRMobile.Droid.Resource.Layout.notification_media_action;
+			global::Plugin.PushNotification.Resource.Layout.notification_media_cancel_action = global::VYRMobile.Droid.Resource.Layout.notification_media_cancel_action;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_big_media = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_big_media_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_custom;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_big_media_narrow = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_narrow;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_big_media_narrow_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_custom_big = global::VYRMobile.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_icon_group = global::VYRMobile.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_lines_media = global::VYRMobile.Droid.Resource.Layout.notification_template_lines_media;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_media = global::VYRMobile.Droid.Resource.Layout.notification_template_media;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_media_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_media_custom;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_part_chronometer = global::VYRMobile.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_part_time = global::VYRMobile.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_enable_button = global::VYRMobile.Droid.Resource.String.common_google_play_services_enable_button;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_enable_text = global::VYRMobile.Droid.Resource.String.common_google_play_services_enable_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_enable_title = global::VYRMobile.Droid.Resource.String.common_google_play_services_enable_title;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_install_button = global::VYRMobile.Droid.Resource.String.common_google_play_services_install_button;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_install_text = global::VYRMobile.Droid.Resource.String.common_google_play_services_install_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_install_title = global::VYRMobile.Droid.Resource.String.common_google_play_services_install_title;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_notification_channel_name = global::VYRMobile.Droid.Resource.String.common_google_play_services_notification_channel_name;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_notification_ticker = global::VYRMobile.Droid.Resource.String.common_google_play_services_notification_ticker;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_unknown_issue = global::VYRMobile.Droid.Resource.String.common_google_play_services_unknown_issue;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_unsupported_text = global::VYRMobile.Droid.Resource.String.common_google_play_services_unsupported_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_update_button = global::VYRMobile.Droid.Resource.String.common_google_play_services_update_button;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_update_text = global::VYRMobile.Droid.Resource.String.common_google_play_services_update_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_update_title = global::VYRMobile.Droid.Resource.String.common_google_play_services_update_title;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_updating_text = global::VYRMobile.Droid.Resource.String.common_google_play_services_updating_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_wear_update_text = global::VYRMobile.Droid.Resource.String.common_google_play_services_wear_update_text;
+			global::Plugin.PushNotification.Resource.String.common_open_on_phone = global::VYRMobile.Droid.Resource.String.common_open_on_phone;
+			global::Plugin.PushNotification.Resource.String.common_signin_button_text = global::VYRMobile.Droid.Resource.String.common_signin_button_text;
+			global::Plugin.PushNotification.Resource.String.common_signin_button_text_long = global::VYRMobile.Droid.Resource.String.common_signin_button_text_long;
+			global::Plugin.PushNotification.Resource.String.fcm_fallback_notification_channel_label = global::VYRMobile.Droid.Resource.String.fcm_fallback_notification_channel_label;
+			global::Plugin.PushNotification.Resource.String.status_bar_notification_info_overflow = global::VYRMobile.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Info = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Time = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
+			global::Plugin.PushNotification.Resource.Style.Widget_Compat_NotificationActionContainer = global::VYRMobile.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.PushNotification.Resource.Style.Widget_Compat_NotificationActionText = global::VYRMobile.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.PushNotification.Resource.Style.Widget_Support_CoordinatorLayout = global::VYRMobile.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem_alpha = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem_android_alpha = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem_android_color = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_keylines = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.PushNotification.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily = global::VYRMobile.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_font = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_fontStyle = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_fontWeight = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_font = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_fontStyle = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_fontWeight = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_ttcIndex = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderAuthority = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderCerts = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderPackage = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderQuery = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColorItem = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColorItem_android_color = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColorItem_android_offset = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_centerColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_centerX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_centerY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_endColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_endX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_endY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_gradientRadius = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_startColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_startX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_startY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_tileMode = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_type = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView = global::VYRMobile.Droid.Resource.Styleable.LoadingImageView;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView_circleCrop = global::VYRMobile.Droid.Resource.Styleable.LoadingImageView_circleCrop;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView_imageAspectRatio = global::VYRMobile.Droid.Resource.Styleable.LoadingImageView_imageAspectRatio;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust = global::VYRMobile.Droid.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton = global::VYRMobile.Droid.Resource.Styleable.SignInButton;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton_buttonSize = global::VYRMobile.Droid.Resource.Styleable.SignInButton_buttonSize;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton_colorScheme = global::VYRMobile.Droid.Resource.Styleable.SignInButton_colorScheme;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton_scopeUris = global::VYRMobile.Droid.Resource.Styleable.SignInButton_scopeUris;
 			global::Prism.Resource.Animation.abc_fade_in = global::VYRMobile.Droid.Resource.Animation.abc_fade_in;
 			global::Prism.Resource.Animation.abc_fade_out = global::VYRMobile.Droid.Resource.Animation.abc_fade_out;
 			global::Prism.Resource.Animation.abc_grow_fade_in_from_bottom = global::VYRMobile.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -20231,136 +20500,148 @@ namespace VYRMobile.Droid
 			public const int person_outlined = 2131165630;
 			
 			// aapt resource value: 0x7F0701BF
-			public const int plugin_lc_smallicon = 2131165631;
+			public const int photo = 2131165631;
 			
 			// aapt resource value: 0x7F0701C0
-			public const int plus = 2131165632;
+			public const int plugin_lc_smallicon = 2131165632;
 			
 			// aapt resource value: 0x7F0701C1
-			public const int plus2 = 2131165633;
+			public const int plus = 2131165633;
 			
 			// aapt resource value: 0x7F0701C2
-			public const int plus3 = 2131165634;
+			public const int plus2 = 2131165634;
 			
 			// aapt resource value: 0x7F0701C3
-			public const int point = 2131165635;
+			public const int plus3 = 2131165635;
 			
 			// aapt resource value: 0x7F0701C4
-			public const int popup_forms_android_close_icon = 2131165636;
+			public const int point = 2131165636;
 			
 			// aapt resource value: 0x7F0701C5
-			public const int popup_forms_android_shadow = 2131165637;
+			public const int popup_forms_android_close_icon = 2131165637;
 			
 			// aapt resource value: 0x7F0701C6
-			public const int popup_forms_dark_theme_close_icon = 2131165638;
+			public const int popup_forms_android_shadow = 2131165638;
 			
 			// aapt resource value: 0x7F0701C7
-			public const int popup_forms_light_theme_close_icon = 2131165639;
+			public const int popup_forms_dark_theme_close_icon = 2131165639;
 			
 			// aapt resource value: 0x7F0701C8
-			public const int Prev = 2131165640;
+			public const int popup_forms_light_theme_close_icon = 2131165640;
 			
 			// aapt resource value: 0x7F0701C9
-			public const int qr = 2131165641;
+			public const int Prev = 2131165641;
 			
 			// aapt resource value: 0x7F0701CA
-			public const int quit = 2131165642;
+			public const int qr = 2131165642;
 			
 			// aapt resource value: 0x7F0701CB
-			public const int reportes2 = 2131165643;
+			public const int quit = 2131165643;
 			
 			// aapt resource value: 0x7F0701CC
-			public const int robo = 2131165644;
+			public const int reportes2 = 2131165644;
 			
 			// aapt resource value: 0x7F0701CD
-			public const int seahawks = 2131165645;
+			public const int robo = 2131165645;
 			
 			// aapt resource value: 0x7F0701CE
-			public const int seahawks2 = 2131165646;
+			public const int save = 2131165646;
 			
 			// aapt resource value: 0x7F0701CF
-			public const int seahawks3 = 2131165647;
+			public const int seahawks = 2131165647;
 			
 			// aapt resource value: 0x7F0701D0
-			public const int send = 2131165648;
+			public const int seahawks2 = 2131165648;
 			
 			// aapt resource value: 0x7F0701D1
-			public const int send2 = 2131165649;
+			public const int seahawks3 = 2131165649;
 			
 			// aapt resource value: 0x7F0701D2
-			public const int sfprogressbar_determinate_linear = 2131165650;
+			public const int send = 2131165650;
 			
 			// aapt resource value: 0x7F0701D3
-			public const int sfprogressbar_indeterminate_circular = 2131165651;
+			public const int send2 = 2131165651;
 			
 			// aapt resource value: 0x7F0701D4
-			public const int sfprogressbar_indeterminate_linear = 2131165652;
+			public const int sfprogressbar_determinate_linear = 2131165652;
 			
 			// aapt resource value: 0x7F0701D5
-			public const int solido = 2131165653;
+			public const int sfprogressbar_indeterminate_circular = 2131165653;
 			
 			// aapt resource value: 0x7F0701D6
-			public const int solidosh = 2131165654;
+			public const int sfprogressbar_indeterminate_linear = 2131165654;
 			
 			// aapt resource value: 0x7F0701D7
-			public const int startRoute = 2131165655;
+			public const int solido = 2131165655;
 			
 			// aapt resource value: 0x7F0701D8
-			public const int supervision = 2131165656;
+			public const int solidosh = 2131165656;
 			
 			// aapt resource value: 0x7F0701D9
-			public const int support = 2131165657;
+			public const int star = 2131165657;
 			
 			// aapt resource value: 0x7F0701DA
-			public const int support2 = 2131165658;
+			public const int startRoute = 2131165658;
 			
 			// aapt resource value: 0x7F0701DB
-			public const int tool = 2131165659;
+			public const int supervision = 2131165659;
 			
 			// aapt resource value: 0x7F0701DC
-			public const int tool1 = 2131165660;
+			public const int support = 2131165660;
 			
 			// aapt resource value: 0x7F0701DD
-			public const int tooltip_frame_dark = 2131165661;
+			public const int support2 = 2131165661;
 			
 			// aapt resource value: 0x7F0701DE
-			public const int tooltip_frame_light = 2131165662;
+			public const int tool = 2131165662;
 			
 			// aapt resource value: 0x7F0701DF
-			public const int touch = 2131165663;
+			public const int tool1 = 2131165663;
 			
 			// aapt resource value: 0x7F0701E0
-			public const int touchWhite = 2131165664;
+			public const int tooltip_frame_dark = 2131165664;
 			
 			// aapt resource value: 0x7F0701E1
-			public const int undefined = 2131165665;
+			public const int tooltip_frame_light = 2131165665;
 			
 			// aapt resource value: 0x7F0701E2
-			public const int Up = 2131165666;
+			public const int touch = 2131165666;
 			
 			// aapt resource value: 0x7F0701E3
-			public const int user = 2131165667;
+			public const int touchWhite = 2131165667;
 			
 			// aapt resource value: 0x7F0701E4
-			public const int user2 = 2131165668;
+			public const int undefined = 2131165668;
 			
 			// aapt resource value: 0x7F0701E5
-			public const int usuario = 2131165669;
+			public const int Up = 2131165669;
 			
 			// aapt resource value: 0x7F0701E6
-			public const int usuario2 = 2131165670;
+			public const int user = 2131165670;
 			
 			// aapt resource value: 0x7F0701E7
-			public const int video = 2131165671;
+			public const int user2 = 2131165671;
 			
 			// aapt resource value: 0x7F0701E8
-			public const int vyr = 2131165672;
+			public const int usuario = 2131165672;
 			
 			// aapt resource value: 0x7F0701E9
-			public const int vyrx = 2131165673;
+			public const int usuario2 = 2131165673;
 			
 			// aapt resource value: 0x7F0701EA
-			public const int vyrxall = 2131165674;
+			public const int video = 2131165674;
+			
+			// aapt resource value: 0x7F0701EB
+			public const int vigilante = 2131165675;
+			
+			// aapt resource value: 0x7F0701EC
+			public const int vyr = 2131165676;
+			
+			// aapt resource value: 0x7F0701ED
+			public const int vyrx = 2131165677;
+			
+			// aapt resource value: 0x7F0701EE
+			public const int vyrxall = 2131165678;
 			
 			static Drawable()
 			{
