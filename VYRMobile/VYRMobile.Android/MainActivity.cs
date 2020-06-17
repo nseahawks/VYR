@@ -41,9 +41,9 @@ namespace VYRMobile.Droid
             FormsMaps.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);
 
-            Intent intent = new Intent(this, typeof(AlertService));
+            //Intent intent = new Intent(this, typeof(AlertService));
 
-            StartService(intent);
+            //StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
