@@ -43,11 +43,6 @@ namespace VYRMobile.Droid
 
             Intent intent = new Intent(this, typeof(AlertService));
 
-            /*var phoneNumber = "+18097966316";
-            var phoneCall = new Intent(Intent.ActionCall);
-            phoneCall.SetData(Uri.Parse(phoneNumber));
-            StartActivity(phoneCall);*/
-
             StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);

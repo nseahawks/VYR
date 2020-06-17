@@ -13,6 +13,12 @@ namespace VYRMobile.Models
             get => userId;
             set => SetProperty(ref userId, value);
         }
+        string userCode;
+        public string UserCode
+        {
+            get => userCode;
+            set => SetProperty(ref userCode, value);
+        }
         private string supervisorId;
         public string SupervisorId
         {
