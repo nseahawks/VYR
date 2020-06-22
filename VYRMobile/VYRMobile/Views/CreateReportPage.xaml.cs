@@ -38,22 +38,22 @@ namespace VYRMobile.Views
 
             return action;
         }*/ 
-        /*protected override bool OnBackButtonPressed()
+        protected override bool OnBackButtonPressed()
         {
-            bool action = IsBackingResponse().Result;
-            if (action)
-            {
-                Navigation.PopModalAsync();
-            }
+            OnBack();
 
-            return action;
+            return IsBacking;
+        }
+        private async void OnBack()
+        {
+            await IsBackingResponse();
         }
         private async Task<bool> IsBackingResponse()
         {
             IsBacking = await DisplayAlert("Confirmación", "¿Está seguro que desea salir? (Los cambios no serán guardados)", "ACEPTAR", "CANCELAR");
             
             return IsBacking;
-        }*/
+        }
         private async void BtnAttach_clicked(object sender, EventArgs e)
         {
             await CrossMedia.Current.Initialize();

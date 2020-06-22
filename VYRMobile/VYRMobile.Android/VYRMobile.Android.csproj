@@ -228,6 +228,7 @@
     <Compile Include="Renderers\CustomMapRenderer.cs" />
     <Compile Include="Renderers\ImageEntryRenderer.cs" />
     <Compile Include="Renderers\MakePhoneCall.cs" />
+    <Compile Include="Renderers\StartAlarmService.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ToastDroid.cs" />
@@ -517,6 +518,7 @@
     <AndroidResource Include="Resources\drawable\vigilante.png" />
     <AndroidResource Include="Resources\drawable\photo.png" />
     <AndroidResource Include="Resources\drawable\save.png" />
+    <AndroidResource Include="Resources\drawable\chrono.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

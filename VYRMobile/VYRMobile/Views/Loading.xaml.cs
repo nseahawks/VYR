@@ -50,6 +50,8 @@ namespace VYRMobile.Views
                 {
                     isWaiting = false;
                     Application.Current.MainPage = new NavigationPage(new MenuPage());
+
+                    DependencyService.Get<IStartAlarmService>().StartService();
                 }
                 else if (test == "CANCELED")
                 {

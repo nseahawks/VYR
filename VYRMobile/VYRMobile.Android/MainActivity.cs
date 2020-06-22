@@ -19,6 +19,18 @@ namespace VYRMobile.Droid
     [Activity(Label = "VYR-X", Icon = "@drawable/vyrx", Theme = "@style/MainTheme", MainLauncher = true, ResizeableActivity = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
+        //MainActivity activity;
+        private static MainActivity _instance;
+        public static MainActivity Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new MainActivity();
+
+                return _instance;
+            }
+        }
         protected override void OnCreate(Bundle savedInstanceState)
         {
             InitControls();
@@ -41,9 +53,6 @@ namespace VYRMobile.Droid
             FormsMaps.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);
 
-            //Intent intent = new Intent(this, typeof(AlertService));
-
-            //StartService(intent);
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
@@ -54,10 +63,10 @@ namespace VYRMobile.Droid
             FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
             FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
             firestore.FirestoreSettings = settings;
+            //this.activity = Instance;
 
             LoadApplication(new App());
         }
-
         private void InitControls()
         {
             CarouselViewRenderer.Init();
@@ -70,10 +79,22 @@ namespace VYRMobile.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
         }
-        protected override void OnNewIntent(Intent intent)
+        /*protected override void OnNewIntent(Intent intent)
         {
             base.OnNewIntent(intent);
             PushNotificationManager.ProcessIntent(this, intent);
+        }*/
+        public void StartAlarmService()
+        {
+            Intent intent = new Intent(Android.App.Application.Context.ApplicationContext, typeof(AlertService));
+
+            Android.App.Application.Context.StartService(intent);
+        }
+        public void StopAlarmService()
+        {
+            Intent intent = new Intent(Android.App.Application.Context.ApplicationContext, typeof(AlertService));
+
+            Android.App.Application.Context.StopService(intent);
         }
     }
 }
