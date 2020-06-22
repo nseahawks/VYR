@@ -10,6 +10,7 @@ using Syncfusion.XForms.Buttons;
 using VYRMobile.Views;
 using Plugin.CloudFirestore;
 using System.Collections.ObjectModel;
+using Xamarin.Essentials;
 
 namespace VYRMobile
 {
@@ -52,15 +53,20 @@ namespace VYRMobile
         {
             // Handle when your app resumes
         }
-        private void CreateDirectory()
+        private async void CreateDirectory()
         {
-            if (Current.Properties.ContainsKey("record"))
+            /*if (Current.Properties.ContainsKey("record"))
             {
                 var json = Current.Properties["record"].ToString();
                 if (json != null)
                 {
                     Records = JsonConvert.DeserializeObject<List<Record>>(json);
                 }
+            }*/
+            var json = await SecureStorage.GetAsync("records");
+            if (json != null)
+            {
+                Records = JsonConvert.DeserializeObject<List<Record>>(json);
             }
         }
     }

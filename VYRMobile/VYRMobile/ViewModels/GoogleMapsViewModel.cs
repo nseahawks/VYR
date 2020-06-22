@@ -326,7 +326,7 @@ namespace VYRMobile.ViewModels
                 App.Records.Add(record);
                 var Records = App.Records;
                 var json = JsonConvert.SerializeObject(Records);
-                Application.Current.Properties["record"] = json;
+                await SecureStorage.SetAsync("records", json);
 
                 await _store.AddRecordAsync(record);
 
@@ -394,9 +394,28 @@ namespace VYRMobile.ViewModels
                 await App.Current.MainPage.DisplayAlert(":)", "No route found", "Ok");
             }
         }
-        public void StopRoute()
+        public async void StopRoute()
         {
             HasRouteRunning = false;
+
+            var record = new Record()
+            {
+                UserId = await SecureStorage.GetAsync("id"),
+                Type = "Tiempo recorrido",
+                RecordType = Record.RecordTypes.LogIn,
+                Owner = stopWatch.Elapsed.ToString(),
+                Date = DateTime.Now,
+                Icon = "chrono.png"
+            };
+
+            App.Records.Add(record);
+            var Records = App.Records;
+            var json = JsonConvert.SerializeObject(Records);
+            await SecureStorage.SetAsync("records", json);
+
+            stopWatch.Stop();
+
+            await _store.AddRecordAsync(record);
         }
 
         public async Task GetPlacesByName(string placeText)
