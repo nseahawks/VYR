@@ -9,6 +9,7 @@ using Newtonsoft.Json;
 using Syncfusion.XForms.Buttons;
 using VYRMobile.Views;
 using Plugin.CloudFirestore;
+using System.Collections.ObjectModel;
 
 namespace VYRMobile
 {
@@ -28,6 +29,7 @@ namespace VYRMobile
         internal static List<SfCheckBox> Faults = new List<SfCheckBox>();
         internal static List<Calculation> Calculations = new List<Calculation>();
         internal static List<ApplicationUser> Workers = new List<ApplicationUser>();
+        internal static ObservableCollection<ApplicationUser> ExchangeableWorkers = new ObservableCollection<ApplicationUser>();
 
         public App()
         {

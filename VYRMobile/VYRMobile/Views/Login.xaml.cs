@@ -104,6 +104,12 @@ namespace VYRMobile
                 var json = JsonConvert.SerializeObject(Records);
                 Application.Current.Properties["record"] = json;
 
+                /*await SecureStorage.SetAsync("json", json);
+                var jsonn = await SecureStorage.GetAsync("json");
+                if (jsonn != null)
+                {
+                    Records = JsonConvert.DeserializeObject<List<Record>>(json);
+                }*/
                 try
                 {
                     await _store.AddRecordAsync(record);

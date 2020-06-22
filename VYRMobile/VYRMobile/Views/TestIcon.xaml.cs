@@ -28,7 +28,6 @@ namespace VYRMobile.Views
     {
         private ReportsStore _store { get; set; }
         static List<ApplicationUser> Workers;
-        static List<ApplicationUser> ExchangeableWorkers;
         FirebaseHelper _firebase = new FirebaseHelper();
         public TestIcon()
         {
@@ -39,7 +38,6 @@ namespace VYRMobile.Views
             _store = new ReportsStore();
 
             Workers = new List<ApplicationUser>();
-            ExchangeableWorkers = new List<ApplicationUser>();
 
             saveChangesButton.IsEnabled = false;
             TakePhoto();
@@ -78,6 +76,7 @@ namespace VYRMobile.Views
         private async void Picker_OkButtonClicked(object sender, Syncfusion.SfPicker.XForms.SelectionChangedEventArgs e)
         {
             var selectedWorker = e.NewValue as ApplicationUser;
+
             if(selectedWorker != null)
             {
                 await Navigation.PushPopupAsync(new LoadingPopup("Procesando..."));
@@ -110,7 +109,7 @@ namespace VYRMobile.Views
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            picker.ItemsSource = ExchangeableWorkers;
+            picker.ItemsSource = App.ExchangeableWorkers;
         }
         IEnumerable<ApplicationUser> GetWorkers(string searchText = null)
         {
@@ -175,7 +174,7 @@ namespace VYRMobile.Views
 
             activityIndicator.IsVisible = false;
             workerNameLabel.Text = sel.FullName;
-            dateLabel.Text = "Fecha: " + DateTime.Today.Date.ToString();
+            dateLabel.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
             workerIdLabel.Text = sel.Id;
             workerScheduleLabel.Text = "Turno:" + sel.Schedule;
 
@@ -300,9 +299,11 @@ namespace VYRMobile.Views
             {
                 worker.FullName = worker.FirstName + " " + worker.LastName;
 
-                if(worker.Exchange == true)
+                if (App.ExchangeableWorkers.Contains(worker) == false || worker.Exchange == true)
                 {
-                    ExchangeableWorkers.Add(worker);
+                    App.ExchangeableWorkers.Add(worker);
+
+                    App.ExchangeableWorkers = new System.Collections.ObjectModel.ObservableCollection<ApplicationUser>(App.ExchangeableWorkers.OrderByDescending(workers => workers.FullName));
                 }
 
                 Workers.Add(worker);
@@ -442,6 +443,13 @@ namespace VYRMobile.Views
 
             indicator.IsRunning = false;
 
+            var animation3 = new Animation();
+
+            animation3.WithConcurrent((f) => loadingLayout.Opacity = f, 1, 0, Easing.Linear);
+
+            loadingLayout.Animate("FadeIn", animation3, 16, Convert.ToUInt32(duration));
+            AnimateLayoutToRight(codeLayout);
+
             OnValidationViewDisappearing();
 
             step1.Status = Syncfusion.XForms.ProgressBar.StepStatus.InProgress;
@@ -516,6 +524,7 @@ namespace VYRMobile.Views
                 Workers[Workers.FindIndex(ind => ind.Equals(oldUser))] = newUser;
                 workersList.ItemsSource = Workers;
 
+
                 return IsValidated;
             }
             else
@@ -565,6 +574,19 @@ namespace VYRMobile.Views
                 Workers[Workers.FindIndex(ind => ind.Equals(oldUser))] = newUser;
 
                 workersList.ItemsSource = Workers;
+
+
+                if (App.ExchangeableWorkers.Contains(oldUser) || newUser.Exchange == false)
+                {
+                    App.ExchangeableWorkers.Remove(oldUser);
+                }
+                else if(App.ExchangeableWorkers.Contains(oldUser) == false || newUser.Exchange == true)
+                {
+                    App.ExchangeableWorkers.Add(newUser);
+                }
+
+                App.ExchangeableWorkers = new System.Collections.ObjectModel.ObservableCollection<ApplicationUser>(App.ExchangeableWorkers.OrderByDescending(workers => workers.FullName));
+
 
                 DependencyService.Get<IToast>().LongToast("Hecho");
 
