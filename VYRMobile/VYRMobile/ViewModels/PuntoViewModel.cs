@@ -351,7 +351,7 @@ namespace VYRMobile.ViewModels
                     App.Records.Add(record);
                     var Records = App.Records;
                     var json = JsonConvert.SerializeObject(Records);
-                    Application.Current.Properties["record"] = json;
+                    await SecureStorage.SetAsync("records", json);
 
                     await _store.AddRecordAsync(record);
 

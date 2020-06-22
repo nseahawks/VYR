@@ -88,7 +88,7 @@ namespace VYRMobile.Views
             comboBox.IsVisible = false;
             startRoute.IsVisible = false;
             //animation.IsVisible = true;
-            //AlarmMode = true;
+            AlarmMode = true;
             DestinationLocationlat = geoPoint.Latitude.ToString();
             DestinationLocationlng = geoPoint.Longitude.ToString();
 
@@ -607,18 +607,18 @@ namespace VYRMobile.Views
             {
                 if(AlarmMode == true)
                 {
-                    PuntoViewModel.Instance.StopCommand.Execute(null);
+                    GoogleMapsViewModel.Instance.StopCommand.Execute(null);
                     App.Alarm = null;
                 }
                 StopRoute();
                 ClearPolylinesCommand();
-                await App.Current.MainPage.DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
+                await DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
+                await Navigation.PopModalAsync();
             }
         }
         public void StopRoute()
         {
             IsRouteRunning = false;
-            App.Alarm = null;
         }
         private async void ShowChrono()
         {

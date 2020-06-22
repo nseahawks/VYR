@@ -242,43 +242,6 @@
                         FontSize="14"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"/>
-                    <Frame
-                        x:Name="pickerView"
-                        IsVisible="False"
-                        IsEnabled="False"
-                        Opacity="0"
-                        HeightRequest="250"
-                        WidthRequest="270"
-                        HasShadow="True"
-                        CornerRadius="8"
-                        VerticalOptions="Center"
-                        HorizontalOptions="Center"
-                        Padding="0"
-                        IsClippedToBounds="True">
-                        <picker:SfPicker
-                            x:Name="picker"
-                            DisplayMemberPath="FullName"
-                            HeaderBackgroundColor="{DynamicResource PrimaryColor}"
-                            HeaderTextColor="{DynamicResource SecondaryColor}"
-                            OKButtonTextColor="{DynamicResource PrimaryColor}"
-                            CancelButtonTextColor="{DynamicResource PrimaryColor}"
-                            SelectedItemFontSize="16"
-                            UnSelectedItemFontSize="16"
-                            PickerMode="Default"
-                            HeightRequest="250"
-                            WidthRequest="270"
-                            ItemHeight="30"
-                            HeaderHeight="40"
-                            HeaderText="Seleccionar"
-                            ShowColumnHeader="True"
-                            ColumnHeaderText="Disponibles"
-                            SelectedItemTextColor="{DynamicResource PrimaryColor}"
-                            FooterHeight="40"
-                            ShowFooter="True"
-                            OkButtonClicked="Picker_OkButtonClicked"
-                            CancelButtonClicked="Picker_CancelButtonClicked"
-                            IsOpen="True"/>
-                    </Frame>
                 </Grid>
         </ScrollView>
             

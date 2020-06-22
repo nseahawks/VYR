@@ -54,7 +54,7 @@ namespace VYRMobile.Views.Popups
             App.Records.Add(record);
             var Records = App.Records;
             var json = JsonConvert.SerializeObject(Records);
-            Application.Current.Properties["record"] = json;
+            await SecureStorage.SetAsync("records", json);
 
         }
         private async void call2_Clicked(object sender, EventArgs e)
@@ -77,7 +77,7 @@ namespace VYRMobile.Views.Popups
             App.Records.Add(record);
             var Records = App.Records;
             var json = JsonConvert.SerializeObject(Records);
-            Application.Current.Properties["record"] = json;
+            await SecureStorage.SetAsync("records", json);
         }
     }
 }

@@ -50,10 +50,9 @@ namespace VYRMobile.Views
             //captionLabelClicked();
         }
 
-        private void SustituteButton_Clicked(object sender, EventArgs e)
+        private async void SustituteButton_Clicked(object sender, EventArgs e)
         {
-            OnPickerAppearing();
-            workerInfo.IsEnabled = false;
+            await Navigation.PushPopupAsync(new PickerPopup());
         }
 
         private void ValidateButton_Clicked(object sender, EventArgs e)
@@ -73,43 +72,9 @@ namespace VYRMobile.Views
 
             await Navigation.PopPopupAsync();
         }
-        private async void Picker_OkButtonClicked(object sender, Syncfusion.SfPicker.XForms.SelectionChangedEventArgs e)
-        {
-            var selectedWorker = e.NewValue as ApplicationUser;
-
-            if(selectedWorker != null)
-            {
-                await Navigation.PushPopupAsync(new LoadingPopup("Procesando..."));
-
-                await SustituteWorker(App.WorkerOnReview, selectedWorker);
-
-                await Navigation.PopPopupAsync();
-
-                workersList.IsEnabled = true;
-                workersList.IsEnabled = true;
-                workersList.IsEnabled = true;
-                OnPickerDisappearing();
-            }
-            else
-            {
-                workersList.IsEnabled = true;
-                workersList.IsEnabled = true;
-                workersList.IsEnabled = true;
-                OnPickerDisappearing();
-            }
-        }
-
-        private void Picker_CancelButtonClicked(object sender, Syncfusion.SfPicker.XForms.SelectionChangedEventArgs e)
-        {
-            workersList.IsEnabled = true;
-            workersList.IsEnabled = true;
-            workersList.IsEnabled = true;
-            OnPickerDisappearing();
-        }
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            picker.ItemsSource = App.ExchangeableWorkers;
         }
         IEnumerable<ApplicationUser> GetWorkers(string searchText = null)
         {
@@ -264,32 +229,6 @@ namespace VYRMobile.Views
 
             validationView.Animate("FadeOut", animation, 16, Convert.ToUInt32(duration));
         }
-        private void OnPickerAppearing()
-        {
-            uint duration = 250;
-
-            var animation = new Animation();
-
-            pickerView.IsVisible = true;
-            pickerView.IsEnabled = true;
-
-            animation.WithConcurrent((f) => pickerView.Opacity = f, 0, 1, Easing.Linear);
-
-            pickerView.Animate("FadeOut", animation, 16, Convert.ToUInt32(duration));
-        }
-        private void OnPickerDisappearing()
-        {
-            uint duration = 250;
-
-            var animation = new Animation();
-
-            animation.WithConcurrent((f) => pickerView.Opacity = f, 1, 0, Easing.Linear);
-
-            pickerView.IsVisible = false;
-            pickerView.IsEnabled = false;
-
-            pickerView.Animate("FadeOut", animation, 16, Convert.ToUInt32(duration));
-        }
         private async void GetWorkers()
         {
             var workers = await ReportsStore.Instance.GetUsersAsync();
@@ -299,7 +238,7 @@ namespace VYRMobile.Views
             {
                 worker.FullName = worker.FirstName + " " + worker.LastName;
 
-                if (App.ExchangeableWorkers.Contains(worker) == false || worker.Exchange == true)
+                if (App.ExchangeableWorkers.Contains(worker) == false && worker.Exchange == true)
                 {
                     App.ExchangeableWorkers.Add(worker);
 
@@ -530,35 +469,6 @@ namespace VYRMobile.Views
             else
             {
                 return IsValidated;
-            }
-        }
-        private async Task SustituteWorker(ApplicationUser OldWorker, ApplicationUser NewWorker)
-        {
-            bool WasOldWorkerSuccess = await _store.SetWorkerScheduleAsync(OldWorker, "Sustituido");
-            bool WasNewWorkerSuccess = await _store.SetWorkerScheduleAsync(NewWorker, OldWorker.Schedule);
-
-            if(WasOldWorkerSuccess == true || WasNewWorkerSuccess == true)
-            {
-                var oldNewUser = Workers.Find(p => p.Id.Equals(NewWorker.Id));
-                var newNewUser = oldNewUser;
-                newNewUser.Schedule = OldWorker.Schedule;
-
-                Workers[Workers.FindIndex(ind => ind.Equals(oldNewUser))] = newNewUser;
-
-
-                var oldOldUser = Workers.Find(p => p.Id.Equals(OldWorker.Id));
-                var newOldUser = oldOldUser;
-                newOldUser.Schedule = "Sustituido";
-
-                Workers[Workers.FindIndex(ind => ind.Equals(oldOldUser))] = newOldUser;
-
-                workersList.ItemsSource = Workers;
-
-                DependencyService.Get<IToast>().LongToast("Sustituido correctamente");
-            }
-            else
-            {
-                DependencyService.Get<IToast>().LongToast("Proceso fallido");
             }
         }
         private async Task ExchangeWorker()
