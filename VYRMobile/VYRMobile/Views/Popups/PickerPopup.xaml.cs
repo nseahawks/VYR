@@ -25,6 +25,9 @@ namespace VYRMobile.Views.Popups
         protected override void OnAppearing()
         {
             base.OnAppearing();
+            App.ExchangeableWorkers = new System.Collections.ObjectModel
+                .ObservableCollection<ApplicationUser>(App.ExchangeableWorkers
+                                                            .OrderByDescending(workers => workers.FullName));
             picker.ItemsSource = App.ExchangeableWorkers;
         }
         private async void Picker_OkButtonClicked(object sender, Syncfusion.SfPicker.XForms.SelectionChangedEventArgs e)

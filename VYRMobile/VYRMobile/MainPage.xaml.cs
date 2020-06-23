@@ -9,7 +9,6 @@ namespace VYRMobile
     public partial class MainPage : ContentPage
     {
         Image splashImage;
-        Image imageName;
         public MainPage()
         {
             InitializeComponent();

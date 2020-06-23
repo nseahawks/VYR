@@ -31,7 +31,7 @@ namespace VYRMobile.Views
 
             if(App.ApplicationUserRole == "Supervisor")
             {
-                NavigationPage supervision = new NavigationPage(new TestIcon())
+                NavigationPage supervision = new NavigationPage(new SupervisionPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],

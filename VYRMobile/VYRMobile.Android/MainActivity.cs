@@ -16,7 +16,13 @@ using Plugin.PushNotification;
 
 namespace VYRMobile.Droid
 {
-    [Activity(Label = "VYR-X", Icon = "@drawable/vyrx", Theme = "@style/MainTheme", MainLauncher = true, ResizeableActivity = false, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
+    [Activity(
+        Label = "VYR-X", 
+        Icon = "@drawable/vyrx", 
+        Theme = "@style/MainTheme", 
+        MainLauncher = true, 
+        ResizeableActivity = false, 
+        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         //MainActivity activity;
@@ -42,8 +48,6 @@ namespace VYRMobile.Droid
             Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             FirebaseApp.InitializeApp(Application.ApplicationContext);
-
-            LocalNotificationsImplementation.NotificationIconId = Resource.Drawable.seahawks;
 
             var platformConfig = new PlatformConfig
             {
@@ -79,11 +83,6 @@ namespace VYRMobile.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
         }
-        /*protected override void OnNewIntent(Intent intent)
-        {
-            base.OnNewIntent(intent);
-            PushNotificationManager.ProcessIntent(this, intent);
-        }*/
         public void StartAlarmService()
         {
             Intent intent = new Intent(Android.App.Application.Context.ApplicationContext, typeof(AlertService));

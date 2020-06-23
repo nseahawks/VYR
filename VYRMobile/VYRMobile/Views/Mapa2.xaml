@@ -83,7 +83,7 @@
                 <StackLayout>
                     <Label
                         x:Name="typeLbl"
-                        Text="{Binding StopWatchFinal}"
+                        Text="{Binding StopWatchFinal, StringFormat='{0:D2}'}"
                         BackgroundColor="Transparent"
                         VerticalOptions="End"
                         HorizontalOptions="Center"

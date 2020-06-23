@@ -236,17 +236,26 @@ namespace VYRMobile.Views
             Workers.Clear();
             foreach (var worker in workers)
             {
+                var lastEvaluatedDate = await SecureStorage.GetAsync("lastEvaluatedDate");
                 worker.FullName = worker.FirstName + " " + worker.LastName;
-
+                
                 if (App.ExchangeableWorkers.Contains(worker) == false && worker.Exchange == true)
                 {
-                    App.ExchangeableWorkers.Add(worker);
-
-                    App.ExchangeableWorkers = new System.Collections.ObjectModel.ObservableCollection<ApplicationUser>(App.ExchangeableWorkers.OrderByDescending(workers => workers.FullName));
+                    if(lastEvaluatedDate != DateTime.Now.ToString("dd/MM/yyyy"))
+                    {
+                        worker.IsAssist = false;
+                        App.ExchangeableWorkers.Add(worker);
+                    }
+                    else
+                    {
+                        App.ExchangeableWorkers.Add(worker);
+                    }
                 }
 
                 Workers.Add(worker);
             }
+
+            await SecureStorage.SetAsync("lastEvaluatedDate", DateTime.Now.ToString("dd/MM/yyyy"));
         }
         private void BtnNext_Clicked(object sender, EventArgs e)
         {
