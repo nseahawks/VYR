@@ -46,8 +46,6 @@ Global
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Debug|iPhoneSimulator.Deploy.0 = Debug|iPhoneSimulator
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Release|Any CPU.ActiveCfg = Release|iPhone
-		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Release|Any CPU.Build.0 = Release|iPhone
-		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Release|Any CPU.Deploy.0 = Release|iPhone
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Release|iPhone.ActiveCfg = Release|iPhone
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Release|iPhone.Build.0 = Release|iPhone
 		{CEF3B31D-AF23-4AC3-8EFA-8D56AF6A740F}.Release|iPhone.Deploy.0 = Release|iPhone
