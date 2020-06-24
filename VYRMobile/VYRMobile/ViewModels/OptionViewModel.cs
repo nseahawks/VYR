@@ -108,7 +108,6 @@ namespace VYRMobile.ViewModels
             if (Logout)
             {
                 await App.Current.MainPage.Navigation.PushPopupAsync(new LogingOutPopup());
-                DependencyService.Get<IStartAlarmService>().StopService();
             }
         }
     }

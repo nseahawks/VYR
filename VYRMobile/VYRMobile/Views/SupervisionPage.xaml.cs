@@ -227,6 +227,8 @@ namespace VYRMobile.Views
             var workers = await ReportsStore.Instance.GetUsersAsync();
 
             App.Workers.Clear();
+            App.ExchangeableWorkers.Clear();
+
             foreach (var worker in workers)
             {
                 var lastEvaluatedDate = await SecureStorage.GetAsync("lastEvaluatedDate");
@@ -262,7 +264,6 @@ namespace VYRMobile.Views
             }
             else if (step2.Status == Syncfusion.XForms.ProgressBar.StepStatus.InProgress)
             {
-                step2.Status = Syncfusion.XForms.ProgressBar.StepStatus.Completed;
                 ConfirmValidation();
             }
         }
@@ -278,6 +279,7 @@ namespace VYRMobile.Views
                 AnimateLayoutToRight(imageLayout);
                 step1.Status = Syncfusion.XForms.ProgressBar.StepStatus.InProgress;
                 step2.Status = Syncfusion.XForms.ProgressBar.StepStatus.NotStarted;
+                btnNext.Text = "Siguiente";
                 AnimateLayoutToRight(codeLayout);
             }
             else if (step2.Status == Syncfusion.XForms.ProgressBar.StepStatus.Completed)
@@ -370,26 +372,22 @@ namespace VYRMobile.Views
 
             if (string.IsNullOrEmpty(photoLink) == false)
             {
-                bool IsSuccess = await Validate(photoLink);
-
-                if (IsSuccess == true)
-                {
-                    DependencyService.Get<IToast>().LongToast("Usuario validado");
-                }
-                else
-                {
-                    DependencyService.Get<IToast>().LongToast("Error en la validación");
-                }
+                await Validate(photoLink);
             }
 
             indicator.IsRunning = false;
 
             var animation3 = new Animation();
 
-            animation3.WithConcurrent((f) => loadingLayout.Opacity = f, 1, 0, Easing.Linear);
+            animation3.WithConcurrent((f) => loadingLayout.Opacity = f, 1, 0, Easing.Linear); f5{ }
 
             loadingLayout.Animate("FadeIn", animation3, 16, Convert.ToUInt32(duration));
+            AnimateLayoutToRight(imageLayout);
             AnimateLayoutToRight(codeLayout);
+            ///codeLayout.Opacity = 1;
+            codeEntry.Text = "";
+            pic.Source = ImageSource.FromFile("camera2.png");
+            //pic.Aspect = Aspect.AspectFit;
 
             OnValidationViewDisappearing();
 

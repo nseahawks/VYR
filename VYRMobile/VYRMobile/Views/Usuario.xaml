@@ -36,13 +36,13 @@
                     Padding="0">
                     <StackLayout>
                         <controls:CircleImage 
-                            Source="face2.jpg"
+                            Source="face3.png"
                             VerticalOptions="Start"
                             HeightRequest="150"
                             WidthRequest="150"/>
                         <Label  
                             x:Name="userLbl"
-                            Text="Ashby Hernandez"
+                            Text="Trabajador"
                             FontFamily="{StaticResource PoppinsMedium}"
                             TextColor="Black"
                             FontSize="14"
@@ -185,7 +185,7 @@
                                             <RowDefinition Height="45" />
                                         </Grid.RowDefinitions>
                                         <Image  
-                                            Source="formacion.png"
+                                            Source="historial.png"
                                             Grid.Column="0"
                                             Style="{StaticResource PhotoStyle}"
                                             Margin="5,0,0,0"/>

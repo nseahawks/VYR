@@ -63,15 +63,15 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
-        public string Title
+        public Antena Location
         {
-            get => CReport.Title;
+            get => CReport.Location;
             set
             {
-                if (CReport.Title == value)
+                if (CReport.Location == value)
                     return;
-                CReport.Title = value;
-                OnPropertyChanged(nameof(Title));
+                CReport.Location = value;
+                OnPropertyChanged(nameof(Location));
             }
         }
         public string Description

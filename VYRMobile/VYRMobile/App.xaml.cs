@@ -11,6 +11,9 @@ using VYRMobile.Views;
 using Plugin.CloudFirestore;
 using System.Collections.ObjectModel;
 using Xamarin.Essentials;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace VYRMobile
 {
@@ -37,13 +40,16 @@ namespace VYRMobile
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Constants.SyncfusionLicenseKey);
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
-            CreateDirectory();
+            CreateDirectory(); 
 
             MainPage = new MainPage();
         }
         protected override void OnStart()
         {
             //AppCenter.Start("bff38954-6dd9-4a23-a41a-13430c73bfd8", typeof(Push));
+
+            /*AppCenter.Start("android=bff38954-6dd9-4a23-a41a-13430c73bfd8;",
+                              typeof(Analytics), typeof(Crashes));*/
         }
         protected override void OnSleep()
         {
@@ -55,19 +61,12 @@ namespace VYRMobile
         }
         private async void CreateDirectory()
         {
-            /*if (Current.Properties.ContainsKey("record"))
-            {
-                var json = Current.Properties["record"].ToString();
-                if (json != null)
-                {
-                    Records = JsonConvert.DeserializeObject<List<Record>>(json);
-                }
-            }*/
             var json = await SecureStorage.GetAsync("records");
             if (json != null)
             {
                 Records = JsonConvert.DeserializeObject<List<Record>>(json);
             }
+            //ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
         }
     }
 }

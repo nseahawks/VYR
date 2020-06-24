@@ -42,8 +42,8 @@
     </AndroidLinkSkip>
     <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
-    <AndroidUseSharedRuntime>true</AndroidUseSharedRuntime>
-    <EmbedAssembliesIntoApk>false</EmbedAssembliesIntoApk>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidLinkTool>proguard</AndroidLinkTool>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
@@ -102,6 +102,12 @@
     </PackageReference>
     <PackageReference Include="Microcharts.Forms">
       <Version>0.7.1</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>3.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Push">
       <Version>2.6.4</Version>
@@ -513,7 +519,6 @@
     <AndroidResource Include="Resources\drawable\attended.png" />
     <AndroidResource Include="Resources\drawable\notAttended.png" />
     <AndroidResource Include="Resources\drawable\camera2.png" />
-    <AndroidResource Include="Resources\drawable\supervision.png" />
     <AndroidResource Include="Resources\drawable\closedEye.png" />
     <AndroidResource Include="Resources\drawable\openEye.png" />
     <AndroidResource Include="Resources\drawable\star.png" />
@@ -521,6 +526,9 @@
     <AndroidResource Include="Resources\drawable\photo.png" />
     <AndroidResource Include="Resources\drawable\save.png" />
     <AndroidResource Include="Resources\drawable\chrono.png" />
+    <AndroidResource Include="Resources\drawable\supervision.png" />
+    <AndroidResource Include="Resources\drawable\historial.png" />
+    <AndroidResource Include="Resources\drawable\face3.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

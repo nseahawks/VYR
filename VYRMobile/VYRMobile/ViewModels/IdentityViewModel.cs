@@ -72,6 +72,7 @@ namespace VYRMobile.ViewModels
         public IdentityViewModel()
         {
             User = new ApplicationUser();
+
             _identity = new IdentityService();
             LoginCommand = new Command(async () => await LoginAsync());
 

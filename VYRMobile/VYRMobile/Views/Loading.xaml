@@ -20,27 +20,24 @@
         </ResourceDictionary>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <Grid 
-            Grid.RowSpan="1"
-            RowSpacing="50"
-            VerticalOptions="Center">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="150"/>
-                <RowDefinition Height="100"/>
-            </Grid.RowDefinitions>
+        <StackLayout
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
             <Label  
-                Grid.Row="0"
-                Style="{StaticResource LabelStyle}"/>
-            <Grid
-                Grid.Row="1"
-                Margin="0,30,0,0">
-                <ActivityIndicator
-                    IsRunning="True"
-                    HorizontalOptions="Center"
-                    VerticalOptions="End"
-                    Color="{StaticResource BaseColor}"
-                    Margin="0, 30, 0, 0"/>
-            </Grid>
-        </Grid>
+                x:Name="loadingMessageLabel"
+                Text="Esperando respuesta de monitoreo..."
+                HorizontalTextAlignment="Center"
+                FontFamily="{StaticResource PoppinsBold}"
+                FontSize="20"
+                TextColor="Black"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <ActivityIndicator
+                IsRunning="True"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                HeightRequest="40"
+                Color="{DynamicResource PrimaryColor}"/>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

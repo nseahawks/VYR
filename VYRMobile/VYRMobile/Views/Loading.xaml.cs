@@ -48,6 +48,8 @@ namespace VYRMobile.Views
 
                 if (test == "ACCEPTED")
                 {
+                    loadingMessageLabel.Text = "Inicio de sesión confirmado" + System.Environment.NewLine + "Cargando Componentes...";
+                    loadingMessageLabel.TextColor = Color.FromHex("#05A66A");
                     isWaiting = false;
                     Application.Current.MainPage = new NavigationPage(new MenuPage());
                     if(App.ApplicationUserRole != "Supervisor")
@@ -57,6 +59,8 @@ namespace VYRMobile.Views
                 }
                 else if (test == "CANCELED")
                 {
+                    loadingMessageLabel.Text = "Acceso denegado por monitoreo" + System.Environment.NewLine + "Volviendo al inicio...";
+                    loadingMessageLabel.TextColor = Color.FromHex("#DD0808");
                     isWaiting = false;
                     App.IsUserLoggedIn = false;
                     Application.Current.MainPage = new NavigationPage(new Login());

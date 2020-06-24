@@ -72,6 +72,12 @@ namespace VYRMobile
                                               .GetCollection("supervisorsApp")
                                               .GetDocument(_userId)
                                               .UpdateDataAsync(new { LoggedIn = true });
+
+                    await CrossCloudFirestore.Current.Instance
+                                              .GetCollection("supervisorsApp")
+                                              .GetDocument(_userId)
+                                              .UpdateDataAsync(new { Status = "WAITING" });
+
                 }
                 else
                 {
@@ -86,6 +92,7 @@ namespace VYRMobile
                                               .GetCollection("usersApp")
                                               .GetDocument(_userId)
                                               .UpdateDataAsync(new { LoggedIn = true });
+
                 }
 
                 string user = email.Text.ToString();
@@ -141,7 +148,7 @@ namespace VYRMobile
                                          .UpdateDataAsync(new { LoggedIn = false });
                 //Login Failed
                 await DisplayAlert("Login Failed", $"Verifique su usuario y contraseña", "Ok");
-                await animation.FadeTo(0, 100, Easing.Linear);
+                await animationView.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
                 Loginbtn.IsEnabled = true;
             }

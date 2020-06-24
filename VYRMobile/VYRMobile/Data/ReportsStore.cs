@@ -45,7 +45,7 @@ namespace VYRMobile.Data
             if (report == null || !IsConnected)
                 return false;
 
-            if (report.Title == null || report.Title == "" || report.Description == null || report.Description == "")
+            if (report.Location == null || report.Description == null || report.Description == "")
             {
                 await App.Current.MainPage.DisplayAlert("Inválido", "Rellene todos los campos para continuar correctamente", "O");
                 return false;
@@ -64,7 +64,7 @@ namespace VYRMobile.Data
 
             var responseReport = new Report()
             {
-                Title = report.Title,
+                Title = report.Location.LocationName.ToString(),
                 ReportType = report.ReportType,
                 Created = date,
                 Description = report.Description,
@@ -232,7 +232,7 @@ namespace VYRMobile.Data
                 }
                 else
                 {
-                    DependencyService.Get<IToast>().LongToast("No validado");
+                    DependencyService.Get<IToast>().LongToast("Codigo invalido");
                     return false;
                 }
             }

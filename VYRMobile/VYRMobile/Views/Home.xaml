@@ -189,7 +189,7 @@
                                                                 <CheckBox
                                                                     Grid.Column="2"
                                                                     IsEnabled="False"
-                                                                    IsChecked="{Binding PointChecked, Mode=TwoWay}"
+                                                                    IsChecked="{Binding PointChecked}"
                                                                     HeightRequest="25"
                                                                     Style="{StaticResource CheckBoxStyle}"/>
                                                             </Grid>
@@ -264,6 +264,12 @@
                     VerticalOptions="Start"
                     HorizontalOptions="End"
                     Margin="0,15,8,0"/>
+                <Button
+                    x:Name="locationChecking"
+                    Command="{Binding CheckAntenna}"
+                    IsVisible="False"
+                    IsEnabled="False"
+                    Opacity="0"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

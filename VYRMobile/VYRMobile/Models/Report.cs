@@ -21,7 +21,12 @@ namespace VYRMobile.Models
             get => title;
             set => SetProperty(ref title, value);
         }
-
+        Antena location;
+        public Antena Location
+        {
+            get => location;
+            set => SetProperty(ref location, value);
+        }
         string typeIcon;
         public string TypeIcon
         {

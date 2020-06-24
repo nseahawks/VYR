@@ -22,23 +22,23 @@ namespace VYRMobile.Views
             passwordCell.Tapped += PasswordCell_Tapped;
             Filter();
         }
-        private void PasswordCell_Tapped(object sender, EventArgs e)
+        private async void PasswordCell_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushPopupAsync(new ChangePasswordPopup());
+            await Navigation.PushPopupAsync(new ChangePasswordPopup());
         }
 
-        private void PointsCell_Tapped(object sender, EventArgs e)
+        private async void PointsCell_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new PositionPage()) 
+            await Navigation.PushModalAsync(new NavigationPage(new PositionPage()) 
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                 BarTextColor = (Color)Application.Current.Resources["SecondaryColor"]
             });
         }
 
-        private void LanguageCell_Tapped(object sender, EventArgs e)
+        private async void LanguageCell_Tapped(object sender, EventArgs e)
         {
-            Navigation.PushPopupAsync(new LanguagesPopup());
+            await Navigation.PushPopupAsync(new LanguagesPopup());
         }
 
         private void Filter()

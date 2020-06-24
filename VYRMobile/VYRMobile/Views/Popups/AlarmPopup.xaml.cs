@@ -28,6 +28,7 @@ namespace VYRMobile.Views.Popups
 
             typeLbl.Text = alarm.Type;
             destination = alarm.Location;
+            App.Alarm = alarm;
 
             AddPin(alarm);
 

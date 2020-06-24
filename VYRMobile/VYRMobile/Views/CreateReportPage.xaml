@@ -67,7 +67,7 @@
                         HorizontalOptions="FillAndExpand"
                         VerticalOptions="Start"
                         FontFamily="{StaticResource PoppinsMedium}"
-                        SelectedIndex="{Binding Title, Converter={StaticResource IntEnum}, Mode=OneWayToSource}"
+                        SelectedItem="{Binding Location}"
                         DataSource="{Binding Locations}"
                         DisplayMemberPath="LocationName"
                         DropDownCornerRadius="2"

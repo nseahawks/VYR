@@ -81,7 +81,15 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-
+            <Label
+                x:Name="isEmptyLabel"
+                Text="No hay trabajadores seleccionados"
+                TextColor="Red"
+                FontAttributes="Italic"
+                FontSize="14"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            
             <!--FICHA DE TRABAJADOR-->
 
             <ScrollView>
@@ -231,14 +239,6 @@
                             HorizontalOptions="End"
                             Margin="0, 30, 15, 25"/>
                     </StackLayout>
-                    <Label
-                        x:Name="isEmptyLabel"
-                        Text="No hay trabajadores seleccionados"
-                        TextColor="Gray"
-                        FontAttributes="Italic"
-                        FontSize="14"
-                        HorizontalOptions="Center"
-                        VerticalOptions="Center"/>
                 </Grid>
             </ScrollView>
 
@@ -419,7 +419,7 @@
                         FontSize="18"/>
                     <Entry
                         x:Name="codeEntry"
-                        Keyboard="Default"
+                        Keyboard="Numeric"
                         HorizontalTextAlignment="Center"
                         ClearButtonVisibility="WhileEditing"
                         FontSize="22"

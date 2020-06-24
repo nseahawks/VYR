@@ -141,6 +141,12 @@
     <PackageReference Include="Microcharts.Forms">
       <Version>0.7.1</Version>
     </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>3.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>3.2.2</Version>
+    </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Push">
       <Version>2.6.4</Version>
     </PackageReference>

@@ -113,6 +113,7 @@
             </TableView>
             <TableView
                 x:Name="pointsView"
+                RowHeight="80"
                 IsVisible="False"
                 IsEnabled="False">
                 <TableRoot>

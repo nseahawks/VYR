@@ -233,7 +233,7 @@ namespace VYRMobile.ViewModels
             });
 
             StopCommand = new Command(StopStopwatch);
-            StartCommand = new Command(StartStopwatch);
+            StartCommand = new Command(Alert);
             RestartCommand = new Command(RestartStopwatch);
             RestoreLogoCommand = new Command(RestoreLogo);
             CheckAntenna = new Command(CheckingAntenna);
@@ -313,22 +313,13 @@ namespace VYRMobile.ViewModels
 
         private async void CheckingAntenna()
         {
-            var antenas = Antenas;
-
-            foreach (var antena in antenas)
+            foreach (var antena in Antenas)
             {
                 string antenaId = antena.Id.ToString();
 
-                if (antenaId == App.AntennaId)
+                if(antenaId == App.AntennaId)
                 {
-                    var newAntena = antena;
-                    
-                    var index = antena.GetHashCode();
-                    newAntena.PointChecked = true;
-                    
-                    Antenas.Remove(antena);
-                    Antenas.Add(newAntena);
-                    //.Insert(index, newAntena);
+                    antena.PointChecked = true;
 
                     await CrossCloudFirestore.Current
                         .Instance

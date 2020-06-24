@@ -12,7 +12,9 @@ using CarouselView.FormsPlugin.Android;
 using Firebase;
 using Firebase.Firestore;
 using Android.Net;
-using Plugin.PushNotification;
+using Microsoft.AppCenter;
+using Microsoft.AppCenter.Analytics;
+using Microsoft.AppCenter.Crashes;
 
 namespace VYRMobile.Droid
 {
@@ -54,6 +56,9 @@ namespace VYRMobile.Droid
                 BitmapDescriptorFactory = new CachingNativeBitmapDescriptorFactory()
             };
 
+            /*AppCenter.Start("bff38954-6dd9-4a23-a41a-13430c73bfd8",
+                    typeof(Analytics), typeof(Crashes));*/
+
             FormsMaps.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);
 
@@ -62,7 +67,6 @@ namespace VYRMobile.Droid
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
             global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
-            PushNotificationManager.ProcessIntent(this, Intent);
 
             FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
             FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
