@@ -25,6 +25,7 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
 
     <ContentPage.Content>
         <Grid>
+            <!--LISTA DE REPORTES-->
             <ListView 
                 x:Name="reportsView"
                 Grid.Row="0"
@@ -43,6 +44,7 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <!--MENSAJE SI LA LISTA ESTA VACIA-->
             <Label
                 x:Name="isEmptyLabel"
                 IsVisible="{Binding IsEmpty}"
@@ -53,6 +55,7 @@ xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Button
                 FontSize="14"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
+            <!--BOTON PARA AÑADIR NUEVO REPORTE-->
             <button:SfButton 
                 Grid.Row="0"
                 x:Name="btnReporte"

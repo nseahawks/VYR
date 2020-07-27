@@ -42,7 +42,6 @@ namespace VYRMobile.Droid
             //    //var message = $"{document.Data["Latitude"].ToString()}, {document.Data["Longitude"].ToString()}";
             //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
             //});
-
             document
                 .ObserveAdded()
                 .Subscribe(documentChange =>
@@ -50,7 +49,7 @@ namespace VYRMobile.Droid
                     var documentC = documentChange.Document;
                     var alarmDocument = documentC.ToObject<FirestoreAlarm>();
                     
-                    Xamarin.Forms.Application.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument));
+                    Xamarin.Forms.Application.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument, documentC.Id.ToString()));
                     /*FirestoreAlarm alarmDocument = new FirestoreAlarm()
                     {
                         LocationName = "Seahawks",

@@ -186,12 +186,12 @@ namespace VYRMobile.Data
 
             var responseEvaluationReport = new EvaluationReport()
             {
-                ReviewedUserId = App.ReviewedUserId,
+                ReviewedUser = App.ReviewedUserId,
                 Created = date,
                 EventDate = evaluationReport.EventDate,
                 Files = evaluationReport.Files,
-                GetCalculations = calculations,
-                GetFaults = faults
+                Calculations = calculations,
+                Faults = faults
             };
 
             string serializedData = JsonConvert.SerializeObject(responseEvaluationReport);

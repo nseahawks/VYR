@@ -24,6 +24,7 @@
                     HorizontalOptions="FillAndExpand"
                     VerticalScrollBarVisibility="Default">
                     <StackLayout>
+                        <!--LOCACION, TIPO Y FECHA DE REPORTE-->
                         <StackLayout 
                             Grid.Row="0"
                             Margin="20, 20, 20, 0">
@@ -63,6 +64,7 @@
                                 FontSize="18"
                                 HorizontalOptions="Start"/>
                         </StackLayout>
+                        <!--DESCRIPCION DEL REPORTE-->
                         <StackLayout 
                             Grid.Row="1"
                             Margin="15, 20, 15, 0"
@@ -71,8 +73,7 @@
                                 Text="Descripción:"
                                 TextColor="Black"
                                 FontFamily="{StaticResource PoppinsRegular}"
-                                FontSize="18"
-                                HeightRequest="22"/>
+                                FontSize="18"/>
                             <CheckBox
                                 BackgroundColor="Black"
                                 HeightRequest="2"/>
@@ -91,6 +92,7 @@
                                     HorizontalOptions="StartAndExpand"/>
                             </ScrollView>
                         </StackLayout>
+                        <!--ESTATUS DEL REPORTE-->
                         <StackLayout
                             Grid.Row="2">
                             <StackLayout 
@@ -119,6 +121,7 @@
                                     VerticalOptions="Center"
                                     HorizontalOptions="Center"/>
                             </StackLayout>
+                            <!--CAROUSEL CON IMAGENES DEL REPORTE-->
                             <!--<controls:CarouselViewControl 
                                 x:Name="carousel"
                                 ItemsSource="{Binding ReportImages}"

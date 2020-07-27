@@ -14,17 +14,20 @@ using Xamarin.Essentials;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using System.Threading.Tasks;
 
 namespace VYRMobile
 {
     public partial class App : Application
     {
+        internal bool isUserConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         internal static bool IsUserLoggedIn = true;
         internal static bool IsEquipmentValitated = false;
         internal static string ApplicationUserId;
         internal static string ApplicationUserRole;
         internal static string AntennaId;
         internal static string ReviewedUserId;
+        internal static string AlarmDocumentId;
         internal static ApplicationUser WorkerOnReview;
         internal static FirestoreAlarm Alarm;
         internal static List<Stream> ImagesStreams = new List<Stream>();

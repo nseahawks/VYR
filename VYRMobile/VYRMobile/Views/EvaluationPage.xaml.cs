@@ -38,6 +38,7 @@ namespace VYRMobile.Views
             InitializeComponent();
             BindingContext = new ReportViewModel();
             userLabel.Text = User;
+            datePicker.Date = DateTime.Today;
             OkLabelClicked();
             CancelLabelClicked();
         }

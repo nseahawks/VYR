@@ -22,7 +22,9 @@
     <ContentPage.Content>
         <StackLayout
             VerticalOptions="Center"
-            HorizontalOptions="Center">
+            HorizontalOptions="Center"
+            Margin="30, 0, 30, 0">
+            <!--MENSAJE DE ESPERA-->
             <Label  
                 x:Name="loadingMessageLabel"
                 Text="Esperando respuesta de monitoreo..."
@@ -32,6 +34,7 @@
                 TextColor="Black"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
+            <!--INDICADOR DE PROCESO-->
             <ActivityIndicator
                 IsRunning="True"
                 VerticalOptions="Center"

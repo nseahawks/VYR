@@ -10,6 +10,7 @@
              NavigationPage.HasBackButton="False"
              BackgroundColor="White"
              Title="Ficha de evaluación">
+    <!--BOTONES DE LA BARRA SUPERIOR PARA ADJUNTAR ARCHIVO, TOMAR FOTO DE LA CAMARA Y ENVIAR-->
     <ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="attach2.png" 
                      x:Name="btnAttach"
@@ -21,6 +22,8 @@
                      x:Name="btnEnviar"
                      Clicked="btnEnviar_Clicked"/>
     </ContentPage.ToolbarItems>
+    <!--FIN DE LA BARRA SUPERIOR-->
+    
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="LabelStyle" TargetType="Label">
@@ -40,6 +43,7 @@
                 <StackLayout
                     x:Name="contentStack"
                     Margin="0, 15, 0, 0">
+                    <!--INFORMACION DE TRABAJADOR EVALUADO-->
                     <StackLayout
                         Orientation="Horizontal"
                         HorizontalOptions="Center">
@@ -62,22 +66,24 @@
                         FontSize="18"
                         VerticalOptions="Center"
                         HorizontalOptions="Center"/>
+                    <!--CASILLA PARA LA FECHA DE EVALUACION-->
                     <Label
                         Text="Seleccionar fecha:"
                         TextColor="{StaticResource GrayColor}"
                         FontFamily="{StaticResource PoppinsMedium}"
                         FontSize="18"
                         Margin="15, 20, 0, 0"/>
-                        <DatePicker
-                            x:Name="datePicker"
-                            MinimumDate="02/01/2020"
-                            MaximumDate="12/31/2020"
-                            Date="{Binding EventDate}"
-                            FontSize="16"
-                            WidthRequest="80"
-                            TextColor="Black"
-                            FontFamily="{StaticResource PoppinsMedium}"
-                            Margin="15, 0, 15, 0"/>
+                    <DatePicker
+                        x:Name="datePicker"
+                        MinimumDate="02/01/2020"
+                        MaximumDate="12/31/2020"
+                        Date="{Binding EventDate}"
+                        FontSize="16"
+                        WidthRequest="80"
+                        TextColor="Black"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        Margin="15, 0, 15, 0"/>
+                    <!--SEGMENTO DE PORCENTAJES DE CONDUCTA-->
                     <StackLayout
                         Orientation="Horizontal"
                         Margin="15, 20, 0, 0">
@@ -157,6 +163,7 @@
                             HeightRequest="100"
                             HorizontalOptions="FillAndExpand"/>
                     </StackLayout>
+                    <!--BOTON PARA AÑADIR FALTAS Y ESPACIO PARA INTEGRAR LOS  FALTAS SELECCIONADAS-->
                     <button:SfButton
                         x:Name="btnFaltas"
                         Text="Añadir faltas"
@@ -174,8 +181,9 @@
                         Margin="15,10,0,0"/>
                     <StackLayout
                         x:Name="faultList">
-                        
+
                     </StackLayout>
+                    <!--MENSAJE QUE APARECE CUANDO NO HAY IMAGENES ADJUNTAS-->
                     <StackLayout
                         x:Name="noFilesLayout">
                         <Label
@@ -196,6 +204,7 @@
                     </StackLayout>
                 </StackLayout>
             </ScrollView>
+            <!--VISTA PARA SELECCIONAR LAS FALTAS-->
             <StackLayout
                 AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.9, 0.9"
                 AbsoluteLayout.LayoutFlags="All"
@@ -340,6 +349,7 @@
                     </StackLayout>
                 </Frame>
             </StackLayout>
+            <!--INDICADOR DE PROCESO-->
             <ActivityIndicator 
                 x:Name="_loader"
                 Color="{StaticResource BaseColor}"/>

@@ -40,8 +40,6 @@ namespace VYRMobile.Views.Popups
                 repository = "usersApp";
             }
 
-            await Task.Delay(50);
-
             string _userId = App.ApplicationUserId;
 
             await CrossCloudFirestore.Current.Instance

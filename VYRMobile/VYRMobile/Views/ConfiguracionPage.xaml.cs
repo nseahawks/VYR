@@ -19,9 +19,20 @@ namespace VYRMobile.Views
 
             languageCell.Tapped += LanguageCell_Tapped;
             pointsCell.Tapped += PointsCell_Tapped;
+            profileInfoCell.Tapped += ProfileInfoCell_Tapped;
             passwordCell.Tapped += PasswordCell_Tapped;
-            Filter();
+            FilterUserRole();
         }
+
+        private async void ProfileInfoCell_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new NavigationPage(new ProfileInfoPage())
+            {
+                BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                BarTextColor = (Color)Application.Current.Resources["SecondaryColor"]
+            });
+        }
+
         private async void PasswordCell_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushPopupAsync(new ChangePasswordPopup());
@@ -41,7 +52,7 @@ namespace VYRMobile.Views
             await Navigation.PushPopupAsync(new LanguagesPopup());
         }
 
-        private void Filter()
+        private void FilterUserRole()
         {
             if (App.ApplicationUserRole == "Supervisor")
             {

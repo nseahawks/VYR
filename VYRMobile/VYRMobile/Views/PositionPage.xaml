@@ -20,12 +20,14 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
+                <!--ENCABEZADO DE PAGINA-->
                 <Label
                     Text="Configuración del puesto"
                     TextColor="Black"
                     FontSize="18"
                     FontFamily="{StaticResource PoppinsBold}"
                     Margin="15, 20, 0, 0"/>
+                <!--COMBOBOX CON LOCACIONES ASIGNADAS-->
                 <Label
                     Text="Seleccione punto a configurar:"
                     Style="{StaticResource TextStyle}"
@@ -55,6 +57,7 @@
                     DropDownBackgroundColor="White"
                     DropDownItemFontFamily="{StaticResource PoppinsMedium}"
                     Opacity="1"/>
+                <!--DIVISOR DE SEGMENTOS-->
                 <Frame
                     BackgroundColor="#C3C3C3"
                     HasShadow="True"
@@ -62,6 +65,7 @@
                     HeightRequest="1"
                     Padding="0"
                     Margin="15, 10, 15, 0"/>
+                <!--COMBOBOX CON LISTA DE TRABAJADORES ASIGNADOS-->
                 <Label
                     Text="Seleccionar trabajador"
                     Style="{StaticResource TextStyle}"
@@ -91,6 +95,7 @@
                     DropDownBackgroundColor="White"
                     DropDownItemFontFamily="{StaticResource PoppinsMedium}"
                     Opacity="1"/>
+                <!--CASILLAS PARA EDITAR LOS DETALLES GENERALES Y ESPECIFICOS DEL PUNTO-->
                 <Label
                     Text="Detalles generales:"
                     Style="{StaticResource TextStyle}"
@@ -117,6 +122,7 @@
                     HeightRequest="100"
                     HorizontalOptions="FillAndExpand"
                     Margin="15, 0, 15, 0"/>
+                <!--BOTON PARA GUARDAR-->
                 <button:SfButton
                     Grid.Row="2"
                     x:Name="btnGuardar" 

@@ -9,6 +9,7 @@
              x:Class="VYRMobile.Login"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
+             BackgroundColor="White"
              TryLoginCommand="{Binding TLoginCommand}">
     
     <ContentPage.Padding>
@@ -16,28 +17,23 @@
     </ContentPage.Padding>
 
     <ContentPage.Content>
-        <Grid 
-            BackgroundColor="#FFFFFF"
-            Padding="1">
-            <StackLayout VerticalOptions="CenterAndExpand">
+        <ScrollView>
+            <StackLayout VerticalOptions="Center">
+                <!--LOGO DEL PRODUCTO-->
                 <Image 
-                    Grid.Row="0"
                     Source="vyrxall.png"
                     HorizontalOptions="Center"
                     HeightRequest="200"
-                    WidthRequest="150"
-                    Margin="0,0,0,0"/>
-                <Label 
-                    Grid.Row="1" 
-                    Text="Usuario" 
-                    TextColor="#005EB2"
-                    FontSize="Small"
-                    FontFamily="{StaticResource PoppinsMedium}"
-                    Margin="28,0,0,0"/>
+                    WidthRequest="150"/>
+                <!--ENTRADAS PARA LAS CREDENCIALES DE USUARIO-->
                 <StackLayout 
-                    Grid.Row="2" 
-                    Orientation="Horizontal"
-                    HorizontalOptions="Center">
+                    HorizontalOptions="Center"
+                    WidthRequest="308">
+                    <Label 
+                        Text="Usuario" 
+                        TextColor="#005EB2"
+                        FontSize="Small"
+                        FontFamily="{StaticResource PoppinsMedium}"/>
                     <Entry
                         x:Name="email"
                         Text="{Binding Email}"
@@ -46,22 +42,18 @@
                         BackgroundColor="White" 
                         TextColor="Black" 
                         HeightRequest="50" 
-                        WidthRequest="308"
                         VerticalOptions="Start" 
-                        HorizontalOptions="Center"/>
+                        HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
-                <Label 
-                    Grid.Row="3"
-                    Text="Contraseña" 
-                    TextColor="#005EB2"
-                    FontSize="Small"
-                    FontAttributes="None"
-                    FontFamily="{StaticResource PoppinsMedium}"
-                    Margin="28,0,0,0"/>
                 <StackLayout 
-                    Grid.Row="4" 
-                    Orientation="Horizontal"
-                    HorizontalOptions="Center">
+                    HorizontalOptions="Center"
+                    WidthRequest="308">
+                    <Label 
+                        Text="Contraseña" 
+                        TextColor="#005EB2"
+                        FontSize="Small"
+                        FontAttributes="None"
+                        FontFamily="{StaticResource PoppinsMedium}"/>
                     <Entry 
                         x:Name="password"
                         Text="{Binding Password}"
@@ -71,14 +63,13 @@
                         BackgroundColor="White"
                         TextColor="Black"
                         HeightRequest="50" 
-                        WidthRequest="308"
                         VerticalOptions="Start" 
-                        HorizontalOptions="Center"
+                        HorizontalOptions="FillAndExpand"
                         Visual="Material"/>
                 </StackLayout>
+                <!--BOTON PARA INICIAR SESIÓN-->
                 <Button 
                     x:Name="Loginbtn" 
-                    Grid.Row="5" 
                     Command="{Binding LoginCommand}"
                     BorderRadius="5"  
                     Text="Iniciar sesión" 
@@ -90,9 +81,9 @@
                     WidthRequest="300"
                     VerticalOptions="Start" 
                     HorizontalOptions="Center"/>
+                <!--ANIMACION Y MENSAJE DE CARGA MIENTRAS INICIA SESION-->
                 <StackLayout
                     x:Name="animationView"
-	                Grid.Row="6"
                     IsVisible="False"
                     IsEnabled="False"
 	                HorizontalOptions="Center">
@@ -111,8 +102,8 @@
                         FontFamily="{StaticResource PoppinsMedium}"
                         TextColor="Black"/>
                 </StackLayout>
+                <!--RECORDAR CONTRASEÑA-->
                 <StackLayout 
-                    Grid.Row="7"
                     Orientation="Horizontal"
                     HorizontalOptions="Center">
                     <CheckBox 
@@ -130,6 +121,6 @@
                         TextColor="{StaticResource BaseColor}"/>
                 </StackLayout>
             </StackLayout>
-        </Grid>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -44,11 +44,11 @@ namespace VYRMobile.Views.Popups
 
         protected override bool OnBackButtonPressed()
         {
-            return base.OnBackButtonPressed();
+            return false;
         }
         protected override bool OnBackgroundClicked()
         {
-            return base.OnBackgroundClicked();
+            return true;
         }
         bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         private async void BtnNext_Clicked(object sender, EventArgs e)

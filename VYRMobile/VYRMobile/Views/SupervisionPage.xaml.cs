@@ -379,7 +379,7 @@ namespace VYRMobile.Views
 
             var animation3 = new Animation();
 
-            animation3.WithConcurrent((f) => loadingLayout.Opacity = f, 1, 0, Easing.Linear); f5{ }
+            animation3.WithConcurrent((f) => loadingLayout.Opacity = f, 1, 0, Easing.Linear);
 
             loadingLayout.Animate("FadeIn", animation3, 16, Convert.ToUInt32(duration));
             AnimateLayoutToRight(imageLayout);

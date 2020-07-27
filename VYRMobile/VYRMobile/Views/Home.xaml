@@ -99,6 +99,7 @@
                 <RowDefinition Height="300"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <!--LOGO EN LA PANTALLA HOME-->
             <Frame 
                 Style="{StaticResource FrameStyle}"
                 Grid.Row="0">
@@ -110,30 +111,9 @@
                         HeightRequest="95"
                         Aspect="AspectFit"
                         VerticalOptions="Center"/>
-                    <Grid 
-                        Grid.RowSpan="1"
-                        IsVisible="{Binding IsChrono}">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="28"/>
-                            <RowDefinition Height="55"/>
-                        </Grid.RowDefinitions>
-                        <Label  
-                            Grid.Row="0"
-                            VerticalOptions="Start"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource TitleStyle}"/>
-                        <Label  
-                            Grid.Row="1"
-                            FontSize="40"
-                            FontAttributes="Bold"
-                            VerticalOptions="End"
-                            HorizontalOptions="Center"
-                            Style="{StaticResource MonoStyle}"
-                            Text="{Binding StopWatchFinal}"
-                            TextColor="{Binding ChronoColor}"/>
-                    </Grid>
                 </StackLayout>
             </Frame>
+            <!--LISTA DE LOCACIONES ASIGNADAS-->
             <Frame 
                 HeightRequest="350"
                 Grid.Row="1">
@@ -210,25 +190,6 @@
                                         </Grid>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
-                                <!--<tabview:SfTabItem 
-                                    Title="Tareas" 
-                                    TitleFontFamily="{StaticResource PoppinsBold}"
-                                    SelectionColor="{StaticResource BaseColor}"
-                                    TitleFontSize="{StaticResource FontSize16}">
-                                    <tabview:SfTabItem.Content>
-                                        <ListView 
-                                            ItemsSource="{Binding Tareas}"
-                                            SelectionMode="None"
-                                            HasUnevenRows="True"
-                                            SeparatorVisibility="None">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <cells:TareaItemViewCell />
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-                                    </tabview:SfTabItem.Content>
-                                </tabview:SfTabItem>-->
                             </tabview:SfTabView.Items>
                         </tabview:SfTabView>
                     </StackLayout>
@@ -241,6 +202,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
+                <!--BOTON PARA ESCANEAR QR-->
                 <button:SfButton 
                     x:Name="QR"
                     FontFamily="{StaticResource PoppinsMedium}"
@@ -254,6 +216,7 @@
                     HeightRequest="60"
                     HasShadow="True"
                     Margin="0,15,0,0"/>
+                <!--BOTON DE LA LLAMADA-->
                 <button:SfButton 
                     x:Name="btnCall"
                     Style="{DynamicResource CallIcon}"
@@ -264,6 +227,7 @@
                     VerticalOptions="Start"
                     HorizontalOptions="End"
                     Margin="0,15,8,0"/>
+                <!--BOTON FANTASMA PARA CHEQUEAR LA ANTENA EN XAML.CS ATRAVES DEL COMANDO-->
                 <Button
                     x:Name="locationChecking"
                     Command="{Binding CheckAntenna}"

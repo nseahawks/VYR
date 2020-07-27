@@ -21,9 +21,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-
             <!--BARRA DE BUSQUEDA DE TRABAJADORES-->
-
             <Frame
                 x:Name="searchBarFrame"
                 BackgroundColor="#EEEEEE"
@@ -89,9 +87,7 @@
                 FontSize="14"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
-            
             <!--FICHA DE TRABAJADOR-->
-
             <ScrollView>
                 <Grid>
                     <StackLayout
@@ -241,9 +237,7 @@
                     </StackLayout>
                 </Grid>
             </ScrollView>
-
             <!--INDICADOR DE ACTIVIDAD-->
-
             <ActivityIndicator
                 x:Name="activityIndicator"
                 IsVisible="False"
@@ -257,9 +251,7 @@
                 x:Name="workerIdLabel"
                 IsVisible="False"
                 IsEnabled="False"/>
-
             <!--VISTA DE VALIDACION DE ASISTENCIA-->
-
             <Grid
                 x:Name="validationView"
                 IsVisible="False"

@@ -7,20 +7,20 @@ namespace VYRMobile.Models
 {
     public class EvaluationReport : ObservableObject
     {
-        string reviewedUserId;
-        public string ReviewedUserId
+        string reviewedUser;
+        public string ReviewedUser
         {
-            get => reviewedUserId;
-            set => SetProperty(ref reviewedUserId, value);
+            get => reviewedUser;
+            set => SetProperty(ref reviewedUser, value);
         }
-        DateTime created;
-        public DateTime Created
+        DateTimeOffset created;
+        public DateTimeOffset Created
         {
             get => created;
             set => SetProperty(ref created, value);
         }
-        DateTime eventDate;
-        public DateTime EventDate
+        DateTimeOffset eventDate;
+        public DateTimeOffset EventDate
         {
             get => eventDate;
             set => SetProperty(ref eventDate, value);
@@ -31,22 +31,17 @@ namespace VYRMobile.Models
             get => files;
             set => SetProperty(ref files, value);
         }
-        List<Calculation> getCalculations;
-        public List<Calculation> GetCalculations
+        List<Calculation> calculations;
+        public List<Calculation> Calculations
         {
-            get => getCalculations;
-            set => SetProperty(ref getCalculations, value);
+            get => calculations;
+            set => SetProperty(ref calculations, value);
         }
-        List<Fault> getFaults;
-        public List<Fault> GetFaults
+        List<Fault> faults;
+        public List<Fault> Faults
         {
-            get => getFaults;
-            set => SetProperty(ref getFaults, value);
-        }
-
-        public EvaluationReport()
-        {
-            EventDate = DateTime.Today;
+            get => faults;
+            set => SetProperty(ref faults, value);
         }
     }
 }

@@ -15,10 +15,13 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
+                <!--LISTA DE TRABAJADORES ASIGNADOS Y BOTON PARA CALIFICAR (SOLO VISIBLE PARA SUPERVISORES)-->
                 <combobox:SfComboBox
                     x:Name="userComboBox"
                     Margin="0, 13, 0, 0"
                     DataSource="{Binding Users}"
+                    Watermark="Seleccione"
+                    WatermarkColor="Black"
                     DisplayMemberPath="FullName"
                     SelectionChanged="userComboBox_SelectionChanged"
                     BackgroundColor="White"
@@ -42,7 +45,7 @@
                 <button:SfButton
                     x:Name="btnCalificar"
                     Text="Calificar"
-                    BackgroundColor="{StaticResource BaseColor}"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
                     TextColor="White"
                     FontFamily="{StaticResource PoppinsMedium}"
                     FontSize="18"
@@ -55,7 +58,8 @@
                     VerticalOptions="Start"
                     HorizontalOptions="Center"
                     Margin="0,10,0,0"/>
-                <Label 
+                <!--BARRA DE PROGRESO DE OBJETIVOS DEL TRABAJADOR Y ANIMACION SI ESTA AL 100-->
+                <Label  
                     Text="Mediciones:"
                     FontFamily="{StaticResource PoppinsBold}"
                     TextColor="{StaticResource BlackColor}"
@@ -83,6 +87,7 @@
                     HeightRequest="100"
 	                VerticalOptions="Center"
 	                HorizontalOptions="Center" />
+                <!--GRAFICA CON LAS ACTITUDES DEL TRABAJADOR-->
                 <Label 
                     Text="Gráfica:"
                     FontFamily="{StaticResource PoppinsBold}"

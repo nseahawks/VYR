@@ -25,6 +25,7 @@
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
     <Grid>
+        <!--MAPA DE GOOGLE-->
         <controls:CustomMap       
             x:Name="map" 
             VerticalOptions="FillAndExpand"
@@ -35,6 +36,7 @@
             IsIndoorEnabled="True"
             IsEnabled="True"
             Visual="Material"/>
+        <!--COMBOBOX CON LOCACIONES ASIGNADAS-->
         <combobox:SfComboBox
             x:Name="comboBox"
             Margin="0, 13,0,0"
@@ -53,8 +55,8 @@
             DropDownBackgroundColor="LightGray"
             ImageMemberPath="antenna.png"
             DropDownItemFontFamily="{StaticResource PoppinsMedium}"
-            Opacity="1">
-        </combobox:SfComboBox>
+            Opacity="1"/>
+        <!--PANEL DEL CRONOMETRO (SOLO VISIBLE EN MODO ALARMA)-->
         <Frame
             x:Name="chronoFrame"
             BackgroundColor="Transparent"
@@ -94,13 +96,14 @@
                 </StackLayout>
             </Grid>
         </Frame>
+        <!--BOTON PARA EMPEZAR RUTA-->
         <Button
             x:Name="startRoute"
             Command="{Binding LoadRouteCommand}"
             Text="START ROUTE"
             IsVisible="{Binding IsRouteNotRunning}"
             IsEnabled="False"
-            BackgroundColor="#005EB2"
+            BackgroundColor="{DynamicResource PrimaryColor}"
             TextColor="White"
             HeightRequest="50"
             WidthRequest="200"
@@ -108,6 +111,7 @@
             CornerRadius="2"
             Margin="0, 0, 0, 10"
             HorizontalOptions="Center"/>
+        <!--BOTON PARA TERMINAR RUTA-->
         <Button
             x:Name="stopRoute"
             Command="{Binding StopRouteCommand}"
@@ -122,6 +126,7 @@
             CornerRadius="2"
             Margin="0, 0, 0, 10"
             HorizontalOptions="Center"/>
+        <!--ANIMACION DE PANTALLA BORDEADA EN ROJO (SOLO VISIBLE EN EL MODO ALARMA)-->
         <StackLayout
             x:Name="animation"
             Orientation="Horizontal"
@@ -170,6 +175,7 @@
                 </magic:GradientView>
             </StackLayout>
         </StackLayout>
+        <!--PANEL CON EL TIEMPO ESTIMADO DE LA RUTA-->
         <Frame
             x:Name="estimatedTimeFrame"
             BackgroundColor="{StaticResource BoneColor}"

@@ -238,7 +238,7 @@ namespace VYRMobile.ViewModels
         {
             Locations = new ObservableCollection<Antena>();
             ImageInfo = new ObservableCollection<Models.Image>();
-            Reports = new ObservableCollection<Models.Report>();
+            Reports = new ObservableCollection<Report>();
 
             //LoadPosts();
             LoadLocations();

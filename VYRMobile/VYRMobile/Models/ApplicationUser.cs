@@ -29,6 +29,31 @@ namespace VYRMobile.Models
             get => password; 
             set => SetProperty(ref password, value);
         }
+        private string job;
+        public string Job
+        {
+            get => job;
+            set => SetProperty(ref job, value);
+        }
+
+        private string code;
+        public string Code
+        {
+            get => code;
+            set => SetProperty(ref code, value);
+        }
+        private string address;
+        public string Address
+        {
+            get => address;
+            set => SetProperty(ref address, value);
+        }
+        private string city;
+        public string City
+        {
+            get => city;
+            set => SetProperty(ref city, value);
+        }
         private string supervisor;
         public string Supervisor
         {

@@ -15,11 +15,13 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
+            <!--BARRA DE CARGA-->
             <ProgressBar
                 x:Name="progress"
                 Progress="0.2"
                 HorizontalOptions="FillAndExpand"
                 IsVisible="False"/>
+            <!--VISTA WEB DE PLATZI-->
             <WebView
                 x:Name="webView"
                 Source="https://platzi.com/"

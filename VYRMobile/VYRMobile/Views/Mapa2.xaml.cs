@@ -13,6 +13,7 @@ using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
 using Plugin.CloudFirestore;
+using Plugin.CloudFirestore.Extensions;
 using VYRMobile.Services;
 using Plugin.Geolocator;
 
@@ -389,13 +390,16 @@ namespace VYRMobile.Views
                     DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
                     DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
                 }
-                else if(location != null)
+                else if (location != null)
                 {
                     OriginLocationlat = position.Latitude.ToString();
                     OriginLocationlng = position.Longitude.ToString();
                 }
+                else
+                {
+                    throw new Exception("No se pudo obtener la ubicación");
+                }
             }
-
             catch (Exception ex)
             {
                 //nothing
@@ -607,8 +611,18 @@ namespace VYRMobile.Views
             {
                 if(AlarmMode == true)
                 {
+                    var id = await SecureStorage.GetAsync("id");
+
+                    await CrossCloudFirestore.Current.Instance
+                        .GetCollection("usersApp")
+                        .GetDocument(id)
+                        .GetCollection("Alarms")
+                        .GetDocument(App.AlarmDocumentId)
+                        .DeleteDocumentAsync();
+
                     GoogleMapsViewModel.Instance.StopCommand.Execute(null);
                     App.Alarm = null;
+                    App.AlarmDocumentId = null;
                 }
                 StopRoute();
                 ClearPolylinesCommand();

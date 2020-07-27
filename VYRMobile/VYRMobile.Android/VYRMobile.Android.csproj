@@ -130,9 +130,6 @@
     <PackageReference Include="Plugin.PushNotification">
       <Version>3.3.3</Version>
     </PackageReference>
-    <PackageReference Include="Prism.Forms">
-      <Version>7.2.0.1422</Version>
-    </PackageReference>
     <PackageReference Include="Refractored.FloatingActionButton">
       <Version>2.1.0</Version>
     </PackageReference>
@@ -141,9 +138,6 @@
     </PackageReference>
     <PackageReference Include="Rg.Plugins.Popup">
       <Version>1.2.0.223</Version>
-    </PackageReference>
-    <PackageReference Include="SkiaSharp">
-      <Version>1.68.1.1</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Licensing">
       <Version>17.4.0.46</Version>

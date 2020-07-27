@@ -19,7 +19,7 @@ namespace VYRMobile.Views.Popups
     {
         bool IsFading = true;
         GeoPoint destination;
-        public AlarmPopup(FirestoreAlarm alarm)
+        public AlarmPopup(FirestoreAlarm alarm, string alarmDocumentId)
         {
             InitializeComponent();
 
