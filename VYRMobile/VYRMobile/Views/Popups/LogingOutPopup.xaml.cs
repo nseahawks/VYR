@@ -29,12 +29,21 @@ namespace VYRMobile.Views.Popups
         }
         private async void LogingOut()
         {
-            await Task.Delay(50);
+            string repository;
+
+            if(App.ApplicationUserRole == "Supervisor")
+            {
+                repository = "supervisorsApp";
+            }
+            else
+            {
+                repository = "usersApp";
+            }
 
             string _userId = App.ApplicationUserId;
 
             await CrossCloudFirestore.Current.Instance
-                                      .GetCollection("usersApp")
+                                      .GetCollection(repository)
                                       .GetDocument(_userId)
                                       .UpdateDataAsync(new { LoggedIn = false });
 

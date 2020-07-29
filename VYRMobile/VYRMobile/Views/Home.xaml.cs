@@ -72,7 +72,7 @@ namespace VYRMobile
 
                 App.AntennaId = result.ToString();
 
-                pvm.CheckAntenna.Execute(null);
+                locationChecking.Command.Execute(null);
 
                 Device.BeginInvokeOnMainThread(async() =>
                 {

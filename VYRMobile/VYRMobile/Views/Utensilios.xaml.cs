@@ -29,13 +29,12 @@ namespace VYRMobile.Views
             isAccepted = await DisplayAlert("Confirmación", "Confirmo que la información suministrada es comprobable y veraz", "ACEPTAR", "CANCELAR");
             if (isAccepted)
             {
-                string _userId = await SecureStorage.GetAsync("id");
+                var _userId = await SecureStorage.GetAsync("id"); 
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(_userId)
                                           .UpdateDataAsync(new { Status = "WAITING" });
-
                 Application.Current.MainPage = new NavigationPage(new Loading());
             }
         }

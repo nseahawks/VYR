@@ -32,18 +32,21 @@ namespace VYRMobile.Views.Popups
 
         private async void call1_Clicked(object sender, EventArgs e)
         {
-            var phoneCallTask = CrossMessaging.Current.PhoneDialer;
+            string phoneNumber = "+1911";
+            DependencyService.Get<IMakePhoneCall>().MakeCall(phoneNumber);
+
+            /*var phoneCallTask = CrossMessaging.Current.PhoneDialer;
             if (phoneCallTask.CanMakePhoneCall)
             {
                 phoneCallTask.MakePhoneCall("911", "Emergencias");
-            }
+            }*/
 
             var record = new Record()
             {
                 UserId = await SecureStorage.GetAsync("id"),
                 Type = "Llamada",
                 RecordType = Record.RecordTypes.AntennaCovered,
-                Owner = "Yo",
+                Owner = "Emergencias",
                 Date = DateTime.Now,
                 Icon = "callM.png"
             };
@@ -51,19 +54,22 @@ namespace VYRMobile.Views.Popups
             App.Records.Add(record);
             var Records = App.Records;
             var json = JsonConvert.SerializeObject(Records);
-            Application.Current.Properties["record"] = json;
+            await SecureStorage.SetAsync("records", json);
 
         }
         private async void call2_Clicked(object sender, EventArgs e)
         {
-            CrossMessaging.Current.PhoneDialer.MakePhoneCall("+18097966316", "Francisco Rojas");
+            string phoneNumber = "+18097966316";
+            DependencyService.Get<IMakePhoneCall>().MakeCall(phoneNumber);
+
+            //CrossMessaging.Current.PhoneDialer.MakePhoneCall("+18097966316", "Francisco Rojas");
 
             var record = new Record()
             {
                 UserId = await SecureStorage.GetAsync("id"),
                 Type = "Llamada",
                 RecordType = Record.RecordTypes.AntennaCovered,
-                Owner = "Yo",
+                Owner = "Monitoreo",
                 Date = DateTime.Now,
                 Icon = "callM.png"
             };
@@ -71,7 +77,7 @@ namespace VYRMobile.Views.Popups
             App.Records.Add(record);
             var Records = App.Records;
             var json = JsonConvert.SerializeObject(Records);
-            Application.Current.Properties["record"] = json;
+            await SecureStorage.SetAsync("records", json);
         }
     }
 }

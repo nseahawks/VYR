@@ -44,9 +44,9 @@
             </Style>
             <Style x:Key="MonoStyle" TargetType="Label">
                 <Setter Property="FontFamily" Value="{StaticResource MonoDroid}" />
-                <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
             </Style>
             <Style x:Key="FrameStyle" TargetType="Frame">
+                <Setter Property="Padding" Value="0"/>
                 <Setter Property="HeightRequest" Value="100" />
                 <Setter Property="BackgroundColor" Value="{StaticResource WhiteColor}" />
             </Style>
@@ -99,29 +99,21 @@
                 <RowDefinition Height="300"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
+            <!--LOGO EN LA PANTALLA HOME-->
             <Frame 
                 Style="{StaticResource FrameStyle}"
                 Grid.Row="0">
-                <Grid Grid.RowSpan="1">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="28"/>
-                        <RowDefinition Height="55"/>
-                    </Grid.RowDefinitions>
-                    <Label  
-                        Grid.Row="0"
-                        VerticalOptions="Start"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource TitleStyle}"/>
-                    <Label  
-                        Grid.Row="1"
-                        FontSize="40"
-                        FontAttributes="Bold"
-                        VerticalOptions="End"
-                        HorizontalOptions="Center"
-                        Style="{StaticResource MonoStyle}"
-                        Text="{Binding StopWatchFinal}"/>
-                </Grid>
+                <StackLayout
+                    VerticalOptions="Center">
+                    <Image
+                        Source="vyrx.png"
+                        IsVisible="{Binding IsLogo}"
+                        HeightRequest="95"
+                        Aspect="AspectFit"
+                        VerticalOptions="Center"/>
+                </StackLayout>
             </Frame>
+            <!--LISTA DE LOCACIONES ASIGNADAS-->
             <Frame 
                 HeightRequest="350"
                 Grid.Row="1">
@@ -137,7 +129,7 @@
                             Grid.Row="0">
                             <tabview:SfTabView.Items>
                                 <tabview:SfTabItem 
-                                    Title="Antenas"
+                                    Title="Locaciones asignadas"
                                     TitleFontFamily="{StaticResource PoppinsBold}"
                                     SelectionColor="{StaticResource BaseColor}"
                                     TitleFontSize="{StaticResource FontSize16}">
@@ -145,9 +137,9 @@
                                         <Grid>
                                             <ListView
                                                 x:Name="antenasView"
-                                                ItemsSource="{Binding Antenas, Mode=TwoWay}"
+                                                ItemsSource="{Binding Antenas}"
                                                 SelectionMode="None"
-                                                HasUnevenRows="True"
+                                                HasUnevenRows="True" 
                                                 SeparatorVisibility="None">
                                                 <ListView.ItemTemplate>
                                                     <DataTemplate>
@@ -177,7 +169,7 @@
                                                                 <CheckBox
                                                                     Grid.Column="2"
                                                                     IsEnabled="False"
-                                                                    IsChecked="{Binding IsChecked, Mode=TwoWay}"
+                                                                    IsChecked="{Binding PointChecked}"
                                                                     HeightRequest="25"
                                                                     Style="{StaticResource CheckBoxStyle}"/>
                                                             </Grid>
@@ -198,25 +190,6 @@
                                         </Grid>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
-                                <!--<tabview:SfTabItem 
-                                    Title="Tareas" 
-                                    TitleFontFamily="{StaticResource PoppinsBold}"
-                                    SelectionColor="{StaticResource BaseColor}"
-                                    TitleFontSize="{StaticResource FontSize16}">
-                                    <tabview:SfTabItem.Content>
-                                        <ListView 
-                                            ItemsSource="{Binding Tareas}"
-                                            SelectionMode="None"
-                                            HasUnevenRows="True"
-                                            SeparatorVisibility="None">
-                                            <ListView.ItemTemplate>
-                                                <DataTemplate>
-                                                    <cells:TareaItemViewCell />
-                                                </DataTemplate>
-                                            </ListView.ItemTemplate>
-                                        </ListView>
-                                    </tabview:SfTabItem.Content>
-                                </tabview:SfTabItem>-->
                             </tabview:SfTabView.Items>
                         </tabview:SfTabView>
                     </StackLayout>
@@ -229,6 +202,7 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
+                <!--BOTON PARA ESCANEAR QR-->
                 <button:SfButton 
                     x:Name="QR"
                     FontFamily="{StaticResource PoppinsMedium}"
@@ -242,6 +216,7 @@
                     HeightRequest="60"
                     HasShadow="True"
                     Margin="0,15,0,0"/>
+                <!--BOTON DE LA LLAMADA-->
                 <button:SfButton 
                     x:Name="btnCall"
                     Style="{DynamicResource CallIcon}"
@@ -252,6 +227,13 @@
                     VerticalOptions="Start"
                     HorizontalOptions="End"
                     Margin="0,15,8,0"/>
+                <!--BOTON FANTASMA PARA CHEQUEAR LA ANTENA EN XAML.CS ATRAVES DEL COMANDO-->
+                <Button
+                    x:Name="locationChecking"
+                    Command="{Binding CheckAntenna}"
+                    IsVisible="False"
+                    IsEnabled="False"
+                    Opacity="0"/>
             </Grid>
         </Grid>
     </ContentPage.Content>

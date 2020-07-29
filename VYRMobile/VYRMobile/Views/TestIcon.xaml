@@ -3,38 +3,54 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:stepBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:controls="clr-namespace:VYRMobile.Controls"
+             xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
+             xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.TestIcon">
+             x:Class="VYRMobile.Views.TestIcon"
+             Title="Supervision"
+             NavigationPage.HasBackButton="False"
+             BackgroundColor="White">
+
     <ContentPage.Content>
         <StackLayout>
-            <StackLayout
-                x:Name="img1"
+            <ListView
+                x:Name="antenasView"
+                ItemsSource="{Binding Antenas}"
+                SelectionMode="None"
+                HasUnevenRows="True" 
+                SeparatorVisibility="None">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <CheckBox
+                                IsEnabled="False"
+                                IsChecked="{Binding PointChecked}"
+                                HeightRequest="25"
+                                Color="{StaticResource BaseColor}"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"/>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Button
+                Text="Change"
+                Command="{Binding ChangeStateCommand}"
+                TextColor="Black"
+                HorizontalOptions="Center"/>
+            <button:SfButton 
+                x:Name="btnReporte"
+                BackgroundImage="plus.png"
+                HasShadow="True"
+                HeightRequest="60"
+                WidthRequest="60"
+                CornerRadius="60"
                 HorizontalOptions="Center"
-                VerticalOptions="Center">
-                <Image
-                    x:Name="newPasswordOff"
-                    Source="closedEye.png"
-                    HeightRequest="26"
-                    WidthRequest="26"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    Margin="10, 0, 0, 0"/>
-            </StackLayout>
-            <StackLayout
-                x:Name="img2"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                IsVisible="False"
-                IsEnabled="False">
-                <Image
-                    x:Name="newPasswordOn"
-                    Source="openEye.png"
-                    HeightRequest="26"
-                    WidthRequest="26"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    Margin="10, 0, 0, 0"/>
-            </StackLayout>
+                Clicked="btnReporte_Clicked"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

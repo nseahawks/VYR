@@ -27,8 +27,19 @@ namespace VYRMobile.Views
             Charge();
             _userId = await SecureStorage.GetAsync("id");
 
+            string repository;
+
+            if(App.ApplicationUserRole == "Supervisor")
+            {
+                repository = "supervisorsApp";
+            }
+            else
+            {
+                repository = "usersApp";
+            }
+
             var document =  CrossCloudFirestore.Current.Instance
-            .GetCollection("usersApp")
+            .GetCollection(repository)
             .GetDocument(_userId)
             .AsObservable()
             .Subscribe(document =>
@@ -37,11 +48,19 @@ namespace VYRMobile.Views
 
                 if (test == "ACCEPTED")
                 {
+                    loadingMessageLabel.Text = "Inicio de sesión confirmado" + Environment.NewLine + "Cargando componentes...";
+                    loadingMessageLabel.TextColor = Color.FromHex("#05A66A");
                     isWaiting = false;
                     Application.Current.MainPage = new NavigationPage(new MenuPage());
+                    if (App.ApplicationUserRole != "Supervisor")
+                    {
+                        DependencyService.Get<IStartAlarmService>().StartService();
+                    }
                 }
                 else if (test == "CANCELED")
                 {
+                    loadingMessageLabel.Text = "Acceso denegado por monitoreo" + Environment.NewLine + "Volviendo al inicio...";
+                    loadingMessageLabel.TextColor = Color.FromHex("#DD0808");
                     isWaiting = false;
                     App.IsUserLoggedIn = false;
                     Application.Current.MainPage = new NavigationPage(new Login());
@@ -52,8 +71,8 @@ namespace VYRMobile.Views
                 }
             });
 
-            isWaiting = false;
-            Application.Current.MainPage = new NavigationPage(new MenuPage());
+            /*isWaiting = false;
+            Application.Current.MainPage = new NavigationPage(new MenuPage());*/
         }
 
         protected override void OnDisappearing()
@@ -63,7 +82,7 @@ namespace VYRMobile.Views
 
         private async void Charge()
         {
-            while(isWaiting == false)
+            while(isWaiting == true)
             {
                 await Task.Delay(100);
             }

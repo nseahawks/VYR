@@ -5,149 +5,451 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:picker="clr-namespace:Syncfusion.SfPicker.XForms;assembly=Syncfusion.SfPicker.XForms"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:stepBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.SupervisionPage"
              BackgroundColor="White"
              NavigationPage.HasBackButton="False"
              Title="Supervisión de Asistencia">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="saveChangesButton"
+            IconImageSource="save.png"
+            Clicked="saveChangesButton_Clicked">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <AbsoluteLayout>
-            <StackLayout>
-                <Label 
-                    Text="Turno:"
-                    TextColor="{StaticResource GrayColor}"
-                    FontFamily="{StaticResource PoppinsMedium}"
-                    FontSize="18"
-                    Margin="15, 25, 0, 0"/>
-                <Label
-                    Text="6PM a 6AM"
-                    TextColor="{StaticResource BlackColor}"
-                    FontFamily="{StaticResource PoppinsMedium}"
-                    FontSize="18"
-                    Margin="15, 0, 0, 0"/>
-                <Label
-                    Text="Trabajadores"
-                    TextColor="{StaticResource BlackColor}"
-                    FontFamily="{StaticResource PoppinsMedium}"
-                    FontSize="18"
-                    Margin="15, 30, 0, 0"/>
-                <Frame
-                    BackgroundColor="#909090"
-                    HasShadow="True"
-                    HorizontalOptions="FillAndExpand"
-                    Padding="0"
-                    HeightRequest="1"
-                    Margin="15, 0, 15, 0"/>
-                <ListView
-                    x:Name="workersView"
-                    ItemsSource="{Binding Users}"
-                    SelectionMode="None"
-                    HasUnevenRows="True"
-                    SeparatorVisibility="None"
-                    HeightRequest="200"
-                    HorizontalOptions="FillAndExpand"
-                    Margin="15, 0, 15, 0">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
-                                <ViewCell.ContextActions>
-                                    <MenuItem
-                                        Clicked="OnReplace"
-                                        Text="Sustituir"/>
-                                    <MenuItem
-                                        Clicked="OnValidate"
-                                        Text="Confirmar asistencia"/>
-                                </ViewCell.ContextActions>
-                                <Grid
-                                    Grid.RowSpan="1"
-                                    RowSpacing="1">
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="30"/>
-                                    </Grid.RowDefinitions>
-                                    <StackLayout
-                                        HorizontalOptions="StartAndExpand"
-                                        Orientation="Horizontal">
-                                        <Image
-                                            Grid.Column="0"
-                                            Source="{Binding HasAttended}"
-                                            HorizontalOptions="Start"
-                                            HeightRequest="20"
-                                            WidthRequest="20"
-                                            Margin="2, 0, 0, 0"/>
-                                        <Label
-                                            Grid.Column="1"
-                                            Text="{Binding FullName}"
-                                            TextColor="{StaticResource BlackColor}"
-                                            FontFamily="{StaticResource PoppinsBold}"
-                                            FontSize="14"
-                                            HorizontalOptions="Start"
-                                            Margin="2, 0, 0, 0"/>
-                                    </StackLayout>
-                                </Grid>
-                            </ViewCell>
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+        <StackLayout>
+            <!--BARRA DE BUSQUEDA DE TRABAJADORES-->
+            <Frame
+                x:Name="searchBarFrame"
+                BackgroundColor="#EEEEEE"
+                VerticalOptions="Start"
+                HorizontalOptions="Center"
+                HeightRequest="45"
+                WidthRequest="255"
+                BorderColor="Transparent"
+                HasShadow="True"
+                CornerRadius="80"
+                Padding="0"
+                Opacity="1"
+                Margin="0, 25, 0, 0">
+                <SearchBar 
+                    Placeholder="Escriba para buscar..." 
+                    BackgroundColor="Transparent"
+                    PlaceholderColor="#938A8A"
+                    TextColor="Black"
+                    FontSize="14"
+                    CancelButtonColor="Black"
+                    TextChanged="SearchBar_TextChanged"/>
+            </Frame>
+            <ListView
+                x:Name="workersList"
+                SelectionMode="None"
+                HasUnevenRows="True"
+                SeparatorVisibility="None"
+                HeightRequest="200"
+                WidthRequest="255"
+                ItemTapped="workersList_ItemTapped"
+                HorizontalOptions="Center">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid
+                                Grid.RowSpan="1"
+                                RowSpacing="1">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"/>
+                                </Grid.RowDefinitions>
+                                <StackLayout
+                                    HorizontalOptions="StartAndExpand"
+                                    Orientation="Horizontal">
+                                    <Label
+                                        Grid.Column="1"
+                                        Text="{Binding FullName}"
+                                        TextColor="{StaticResource BlackColor}"
+                                        FontFamily="{StaticResource PoppinsMedium}"
+                                        FontSize="14"
+                                        HorizontalOptions="Start"
+                                        Margin="10, 0, 0, 0"/>
+                                </StackLayout>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            <Label
+                x:Name="isEmptyLabel"
+                Text="No hay trabajadores seleccionados"
+                TextColor="Red"
+                FontAttributes="Italic"
+                FontSize="14"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <!--FICHA DE TRABAJADOR-->
+            <ScrollView>
+                <Grid>
+                    <StackLayout
+                        x:Name="workerInfo"
+                        Opacity="0"
+                        IsVisible="False"
+                        IsEnabled="False"
+                        Margin="0, 0, 0, 25">
+                        <Frame
+                            BackgroundColor="#C3C3C3"
+                            HasShadow="True"
+                            HorizontalOptions="FillAndExpand"
+                            HeightRequest="1"
+                            Padding="0"
+                            Margin="15, 10, 15, 25"/>
+                        <Label
+                            x:Name="isValidatedLabel"
+                            Text="(validado)"
+                            TextColor="#06C17C"
+                            FontSize="12"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            HorizontalOptions="Center"/>
+                        <Label
+                            x:Name="workerNameLabel"
+                            Text="Ashby Hernández"
+                            TextColor="Black"
+                            FontSize="20"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            HorizontalOptions="Center"/>
+                        <Label
+                            x:Name="workerScheduleLabel"
+                            Text="(6pm - 6am)"
+                            TextColor="Black"
+                            FontSize="18"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            HorizontalOptions="Center"/>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Center">
+                            <Label
+                                Text="PRR"
+                                TextColor="Black"
+                                FontFamily="{StaticResource SFTheraminGothicShaded}"
+                                FontSize="22"/>
+                            <Label
+                                Text=" - "
+                                TextColor="Black"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="18"/>
+                            <Image
+                                x:Name="capacitatedImg"
+                                Source="star.png"
+                                HeightRequest="24"
+                                WidthRequest="24"/>
+                        </StackLayout>
+                        <Frame
+                            HeightRequest="30"
+                            WidthRequest="88"
+                            HasShadow="True"
+                            BackgroundColor="#EEEEEE"
+                            HorizontalOptions="Center">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                HorizontalOptions="Center">
+                                <Image
+                                    Source="photo.png"
+                                    HeightRequest="24"
+                                    WidthRequest="24"
+                                    VerticalOptions="Center"/>
+                                <Label
+                                    Text="Ver foto"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource PoppinsMedium}"
+                                    FontSize="14"
+                                    VerticalOptions="Center"/>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Start"
+                            Margin="15, 21, 0, 0">
+                            <CheckBox
+                                x:Name="exchangeCheckbox"
+                                HeightRequest="25"
+                                IsChecked="False"
+                                CheckedChanged="exchangeCheckbox_CheckedChanged"
+                                Color="{DynamicResource PrimaryColor}"
+                                VerticalOptions="Center"/>
+                            <Label
+                                Text="Disponible para cambio"
+                                TextColor="Black"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                FontSize="16"/>
+                        </StackLayout>
+                        <Label
+                            x:Name="notSavedLabel"
+                            Text="cambios sin guardar"
+                            TextColor="Red"
+                            FontSize="12"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            IsVisible="False"
+                            HorizontalOptions="Start"
+                            Margin="30, 0, 0, 0"/>
+                        <StackLayout
+                            Orientation="Horizontal"
+                            HorizontalOptions="Center"
+                            Margin="0, 20, 0, 0">
+                            <button:SfButton 
+                                x:Name="sustituteButton"
+                                Text="Sustituir"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                TextColor="White"
+                                BackgroundColor="#DD0808"
+                                HasShadow="True"
+                                HeightRequest="40"
+                                WidthRequest="140"
+                                CornerRadius="20"/>
+                            <button:SfButton 
+                                x:Name="validateButton"
+                                Text="Validar asistencia"
+                                FontFamily="{StaticResource PoppinsMedium}"
+                                TextColor="White"
+                                BackgroundColor="#05A66A"
+                                HasShadow="True"
+                                HeightRequest="40"
+                                WidthRequest="140"
+                                CornerRadius="20"/>
+                        </StackLayout>
+                        <Label
+                            x:Name="captionLabel"
+                            Text="Leyenda"
+                            TextColor="#3A86CA"
+                            TextDecorations="Underline"
+                            FontFamily="{StaticResource PoppinsMedium}"
+                            FontSize="16"
+                            HorizontalOptions="Center"
+                            Margin="0, 32, 0, 0"/>
+                        <Label
+                            x:Name="dateLabel"
+                            Text="Fecha: 06/12/2020"
+                            TextColor="Black"
+                            FontFamily="{StaticResource PoppinsBold}"
+                            FontSize="14"
+                            VerticalOptions="End"
+                            HorizontalOptions="End"
+                            Margin="0, 30, 15, 25"/>
+                    </StackLayout>
+                </Grid>
+            </ScrollView>
+            <!--INDICADOR DE ACTIVIDAD-->
+            <ActivityIndicator
+                x:Name="activityIndicator"
+                IsVisible="False"
+                IsRunning="True"
+                Color="{DynamicResource PrimaryColor}"
+                HeightRequest="40"
+                WidthRequest="40"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <Label
+                x:Name="workerIdLabel"
+                IsVisible="False"
+                IsEnabled="False"/>
+            <!--VISTA DE VALIDACION DE ASISTENCIA-->
+            <Grid
+                x:Name="validationView"
+                IsVisible="False"
+                IsEnabled="False"
+                VerticalOptions="FillAndExpand"
+                Opacity="0">
+                <StackLayout>
+                    <stepBar:SfStepProgressBar
+                        x:Name="progressBar"
+                        HorizontalOptions="Center"
+                        Orientation="Horizontal"
+                        TitleSpace="10"
+                        TitleAlignment="Center" 
+                        BackgroundColor="Transparent"
+                        HeightRequest="40"
+                        Margin="0, 20, 0, 0">
+                        <stepBar:SfStepProgressBar.NotStartedStepStyle>
+                            <stepBar:StepStyle
+                                x:TypeArguments="stepBar:NotStartedStepState"
+                                MarkerShapeType="Circle" 
+                                MarkerStrokeColor="{DynamicResource PrimaryColor}"
+                                MarkerStrokeWidth="3" 
+                                MarkerContentType="Dot" 
+                                MarkerContentFillColor="Transparent"
+                                MarkerSize="20"
+                                MarkerContentSize="7"/>
+                        </stepBar:SfStepProgressBar.NotStartedStepStyle>
+                        <stepBar:SfStepProgressBar.InProgressStepStyle>
+                            <stepBar:StepStyle
+                                x:TypeArguments="stepBar:InProgressStepState"
+                                MarkerShapeType="Circle" 
+                                MarkerStrokeColor="{DynamicResource PrimaryColor}" 
+                                MarkerStrokeWidth="3"
+                                MarkerContentType="None" 
+                                MarkerContentFillColor="White"
+                                MarkerSize="20"
+                                MarkerContentSize="7"/>
+                        </stepBar:SfStepProgressBar.InProgressStepStyle>
+                        <stepBar:SfStepProgressBar.CompletedStepStyle>
+                            <stepBar:StepStyle
+                                x:TypeArguments="stepBar:CompletedStepState"
+                                MarkerShapeType="Circle" 
+                                MarkerStrokeColor="{DynamicResource PrimaryColor}" 
+                                MarkerStrokeWidth="3"
+                                MarkerContentType="Tick" 
+                                MarkerContentFillColor="{DynamicResource PrimaryColor}"
+                                MarkerSize="20"
+                                MarkerContentSize="7"/>
+                        </stepBar:SfStepProgressBar.CompletedStepStyle>
+                        <stepBar:StepView 
+                            x:Name="step1"
+                            Status="InProgress"
+                            HorizontalOptions="Center">
+                            <stepBar:StepView.PrimaryFormattedText>
+                                <FormattedString>
+                                    <Span 
+                                        Text="Paso 1" 
+                                        FontSize="14" 
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                </FormattedString>
+                            </stepBar:StepView.PrimaryFormattedText>
+                            <stepBar:StepView.SecondaryFormattedText>
+                                <FormattedString>
+                                    <Span 
+                                        Text="Codigo" 
+                                        FontSize="12" 
+                                        TextColor="Black"/>
+                                </FormattedString>
+                            </stepBar:StepView.SecondaryFormattedText>
+                        </stepBar:StepView>
+                        <stepBar:StepView 
+                            x:Name="step2"
+                            Status="NotStarted"
+                            HorizontalOptions="Center">
+                            <stepBar:StepView.PrimaryFormattedText>
+                                <FormattedString>
+                                    <Span 
+                                        Text="Paso 2" 
+                                        FontSize="14" 
+                                        TextColor="Black"
+                                        FontAttributes="Bold"/>
+                                </FormattedString>
+                            </stepBar:StepView.PrimaryFormattedText>
+                            <stepBar:StepView.SecondaryFormattedText>
+                                <FormattedString>
+                                    <Span 
+                                        Text="Archivo de imagen" 
+                                        FontSize="12" 
+                                        TextColor="Black"/>
+                                </FormattedString>
+                            </stepBar:StepView.SecondaryFormattedText>
+                        </stepBar:StepView>
+                    </stepBar:SfStepProgressBar>
+                </StackLayout>
+                <StackLayout
+                    x:Name="loadingLayout"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Opacity="0">
+                    <Label
+                        Text="Validando..."
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+                    <ActivityIndicator
+                        x:Name="indicator"
+                        Color="{DynamicResource PrimaryColor}"
+                        HeightRequest="80"
+                        WidthRequest="80"
+                        IsRunning="False"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout
+                    x:Name="imageLayout"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"
+                    Opacity="0">
+                    <Label
+                        Text="Adjunte una foto"
+                        TextColor="Black"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"/>
+                    <Frame
+                        x:Name="photoFrame"
+                        BackgroundColor="{DynamicResource PrimaryColor}"
+                        HeightRequest="100"
+                        WidthRequest="200"
+                        CornerRadius="20"
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        IsClippedToBounds="True"
+                        Padding="0"
+                        HasShadow="True">
+                        <Image
+                            x:Name="pic"
+                            Source="camera2.png"
+                            Aspect="AspectFit"/>
+                    </Frame>
+                    <Label
+                        Text="(presione la imagen)"
+                        TextColor="Black"
+                        FontSize="12"
+                        FontAttributes="None"
+                        HorizontalOptions="Center"/>
+                </StackLayout>
+                <StackLayout
+                    x:Name="codeLayout"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center">
+                    <Label
+                        Text="Introduzca el codigo del vigilante"
+                        TextColor="Black"
+                        FontAttributes="Bold"
+                        FontSize="18"/>
+                    <Entry
+                        x:Name="codeEntry"
+                        Keyboard="Numeric"
+                        HorizontalTextAlignment="Center"
+                        ClearButtonVisibility="WhileEditing"
+                        FontSize="22"
+                        FontAttributes="Bold"
+                        BackgroundColor="White"
+                        TextColor="Black"
+                        HeightRequest="60" 
+                        WidthRequest="150"/>
+                </StackLayout>
                 <button:SfButton
-                    Grid.Row="2"
-                    x:Name="btnGuardar" 
-                    Text="Guardar"
-                    IsEnabled="False"
-                    HasShadow="True"
+                    x:Name="btnNext"
+                    Text="Siguiente"
                     BackgroundColor="{DynamicResource PrimaryColor}"
                     FontFamily="{StaticResource PoppinsMedium}"
-                    FontSize="{StaticResource FontSize14}"
+                    FontSize="14"
                     TextColor="{DynamicResource SecondaryColor}"
                     HeightRequest="40"
                     WidthRequest="120"
-                    HorizontalOptions="End"
-                    VerticalOptions="End"
                     CornerRadius="5"
-                    Margin="0, 15, 40, 10"/>
-            </StackLayout>
-            <StackLayout
-                AbsoluteLayout.LayoutBounds="0.5, 0.7, 0.9, 0.9"
-                AbsoluteLayout.LayoutFlags="All"
-                x:Name="pickerView"
-                IsVisible="False"
-                IsEnabled="False">
-                <Frame
-                    HeightRequest="250"
-                    WidthRequest="270"
+                    VerticalOptions="End"
+                    HorizontalOptions="End"
                     HasShadow="True"
-                    CornerRadius="8"
-                    VerticalOptions="Center"
-                    HorizontalOptions="Center"
-                    Padding="0"
-                    IsClippedToBounds="True">
-                    <picker:SfPicker
-                        x:Name="picker"
-                        ItemsSource="{Binding Users2}"
-                        DisplayMemberPath="FullName"
-                        HeaderBackgroundColor="{DynamicResource PrimaryColor}"
-                        HeaderTextColor="{DynamicResource SecondaryColor}"
-                        OKButtonTextColor="{DynamicResource PrimaryColor}"
-                        CancelButtonTextColor="{DynamicResource PrimaryColor}"
-                        OKButtonBackgroundColor="Green"
-                        CancelButtonBackgroundColor="Red"
-                        SelectedItemFontSize="16"
-                        UnSelectedItemFontSize="16"
-                        PickerMode="Default"
-                        HeightRequest="250"
-                        WidthRequest="270"
-                        ItemHeight="30"
-                        HeaderHeight="40"
-                        HeaderText="Seleccionar"
-                        ShowColumnHeader="True"
-                        ColumnHeaderText="Trabajadores"
-                        SelectedItemTextColor="{DynamicResource PrimaryColor}"
-                        FooterHeight="40"
-                        ShowFooter="True"
-                        OkButtonClicked="Picker_OkButtonClicked"
-                        CancelButtonClicked="Picker_CancelButtonClicked"
-                        IsOpen="True"/>
-                </Frame>
-            </StackLayout>
-        </AbsoluteLayout>
+                    Margin="0, 0, 35, 70"/>
+                <button:SfButton
+                    x:Name="btnBack"
+                    Text="Atras"
+                    BackgroundColor="{DynamicResource PrimaryColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="14"
+                    TextColor="{DynamicResource SecondaryColor}"
+                    HeightRequest="40"
+                    WidthRequest="120"
+                    CornerRadius="5"
+                    VerticalOptions="End"
+                    HorizontalOptions="Start"
+                    HasShadow="True"
+                    Margin="35, 0, 0, 70"/>
+            </Grid>
+        </StackLayout>
     </ContentPage.Content>
 </ContentPage>

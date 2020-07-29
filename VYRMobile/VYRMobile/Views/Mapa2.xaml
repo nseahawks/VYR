@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:combobox="clr-namespace:Syncfusion.XForms.ComboBox;assembly=Syncfusion.SfComboBox.XForms"
-             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=mscorlib"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:vm="clr-namespace:VYRMobile.ViewModels"
@@ -26,6 +25,7 @@
         <vm:GoogleMapsViewModel/>
     </ContentPage.BindingContext>
     <Grid>
+        <!--MAPA DE GOOGLE-->
         <controls:CustomMap       
             x:Name="map" 
             VerticalOptions="FillAndExpand"
@@ -36,6 +36,7 @@
             IsIndoorEnabled="True"
             IsEnabled="True"
             Visual="Material"/>
+        <!--COMBOBOX CON LOCACIONES ASIGNADAS-->
         <combobox:SfComboBox
             x:Name="comboBox"
             Margin="0, 13,0,0"
@@ -46,7 +47,7 @@
             DisplayMemberPath="LocationName"
             VerticalOptions="Start"
             HorizontalOptions="Center"
-            Text="Antenas"
+            Text="Locaciones"
             FontFamily="{StaticResource PoppinsMedium}"
             DropDownCornerRadius="2"
             SelectionChanged="AntennaSelected"
@@ -54,15 +55,55 @@
             DropDownBackgroundColor="LightGray"
             ImageMemberPath="antenna.png"
             DropDownItemFontFamily="{StaticResource PoppinsMedium}"
-            Opacity="1">
-        </combobox:SfComboBox>
+            Opacity="1"/>
+        <!--PANEL DEL CRONOMETRO (SOLO VISIBLE EN MODO ALARMA)-->
+        <Frame
+            x:Name="chronoFrame"
+            BackgroundColor="Transparent"
+            VerticalOptions="Start"
+            HorizontalOptions="Center"
+            HeightRequest="50"
+            WidthRequest="220"
+            CornerRadius="5"
+            Padding="0"
+            TranslationY="-30"
+            Opacity="1"
+            Margin="10, 0, 0, 0">
+            <Grid>
+                <BoxView
+                    x:Name="startColor"
+                    BackgroundColor="#5edd0d"
+                    Opacity="1"
+                    VerticalOptions="Fill"
+                    HorizontalOptions="Fill"/>
+                <BoxView
+                    x:Name="endColor"
+                    BackgroundColor="#4ab207"
+                    Opacity="0"
+                    VerticalOptions="Fill"
+                    HorizontalOptions="Fill"/>
+                <StackLayout>
+                    <Label
+                        x:Name="typeLbl"
+                        Text="{Binding StopWatchFinal, StringFormat='{0:D2}'}"
+                        BackgroundColor="Transparent"
+                        VerticalOptions="End"
+                        HorizontalOptions="Center"
+                        Margin="0, 5, 0, 0"
+                        FontFamily="{StaticResource MonoDroid}"
+                        FontSize="24"
+                        TextColor="Black"/>
+                </StackLayout>
+            </Grid>
+        </Frame>
+        <!--BOTON PARA EMPEZAR RUTA-->
         <Button
             x:Name="startRoute"
             Command="{Binding LoadRouteCommand}"
             Text="START ROUTE"
             IsVisible="{Binding IsRouteNotRunning}"
             IsEnabled="False"
-            BackgroundColor="#005EB2"
+            BackgroundColor="{DynamicResource PrimaryColor}"
             TextColor="White"
             HeightRequest="50"
             WidthRequest="200"
@@ -70,12 +111,13 @@
             CornerRadius="2"
             Margin="0, 0, 0, 10"
             HorizontalOptions="Center"/>
+        <!--BOTON PARA TERMINAR RUTA-->
         <Button
             x:Name="stopRoute"
             Command="{Binding StopRouteCommand}"
             Clicked="ClearPolylines"
             Text="STOP ROUTE"
-            IsVisible="{Binding HasRouteRunning}"
+            IsVisible="False"
             BackgroundColor="#AE220E"
             TextColor="White"
             HeightRequest="50"
@@ -84,6 +126,7 @@
             CornerRadius="2"
             Margin="0, 0, 0, 10"
             HorizontalOptions="Center"/>
+        <!--ANIMACION DE PANTALLA BORDEADA EN ROJO (SOLO VISIBLE EN EL MODO ALARMA)-->
         <StackLayout
             x:Name="animation"
             Orientation="Horizontal"
@@ -132,5 +175,28 @@
                 </magic:GradientView>
             </StackLayout>
         </StackLayout>
+        <!--PANEL CON EL TIEMPO ESTIMADO DE LA RUTA-->
+        <Frame
+            x:Name="estimatedTimeFrame"
+            BackgroundColor="{StaticResource BoneColor}"
+            VerticalOptions="End"
+            HorizontalOptions="Center"
+            HeightRequest="60"
+            WidthRequest="250"
+            CornerRadius="5"
+            Padding="0"
+            TranslationY="+30"
+            Opacity="1"
+            Margin="0, 0, 10, 0">
+            <Label
+                x:Name="estimatedTimeLbl"
+                Text="A 21m 5s aprox."
+                BackgroundColor="Transparent"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                FontFamily="{StaticResource PoppinsMedium}"
+                FontSize="20"
+                TextColor="Black"/>
+        </Frame>
     </Grid>
 </ContentPage>

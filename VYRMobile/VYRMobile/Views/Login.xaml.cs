@@ -5,10 +5,13 @@ using VYRMobile.Models;
 using VYRMobile.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
+
+
 using Plugin.CloudFirestore;
 using Newtonsoft.Json;
 using VYRMobile.Data;
+using Rg.Plugins.Popup.Extensions;
+using VYRMobile.Views.Popups;
 
 namespace VYRMobile
 {
@@ -30,6 +33,7 @@ namespace VYRMobile
             TryLoginCommand = new Command(async () => await TryLogin());
             Loginbtn.Clicked += Loginbtn_clicked;
         }
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -39,7 +43,7 @@ namespace VYRMobile
         private void Loginbtn_clicked(object sender, EventArgs e)
         {
             Loginbtn.IsEnabled = false;
-            animation.IsVisible = true;
+            animationView.IsVisible = true;
             animation.IsPlaying = true;
         }
 
@@ -54,7 +58,6 @@ namespace VYRMobile
             string _userId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn)
             {
-                animation.IsVisible = false;
 
                 if(App.ApplicationUserRole == "Supervisor")
                 {
@@ -70,6 +73,11 @@ namespace VYRMobile
                                               .GetDocument(_userId)
                                               .UpdateDataAsync(new { LoggedIn = true });
 
+                    await CrossCloudFirestore.Current.Instance
+                                              .GetCollection("supervisorsApp")
+                                              .GetDocument(_userId)
+                                              .UpdateDataAsync(new { Status = "WAITING" });
+
                 }
                 else
                 {
@@ -84,6 +92,7 @@ namespace VYRMobile
                                               .GetCollection("usersApp")
                                               .GetDocument(_userId)
                                               .UpdateDataAsync(new { LoggedIn = true });
+
                 }
 
                 string user = email.Text.ToString();
@@ -102,8 +111,14 @@ namespace VYRMobile
                 App.Records.Add(record);
                 var Records = App.Records;
                 var json = JsonConvert.SerializeObject(Records);
-                Application.Current.Properties["record"] = json;
+                await SecureStorage.SetAsync("records", json);
 
+                /*await SecureStorage.SetAsync("json", json);
+                var jsonn = await SecureStorage.GetAsync("json");
+                if (jsonn != null)
+                {
+                    Records = JsonConvert.DeserializeObject<List<Record>>(json);
+                }*/
                 try
                 {
                     await _store.AddRecordAsync(record);
@@ -114,7 +129,7 @@ namespace VYRMobile
                 }
 
                 animation.IsPlaying = false;
-                await animation.FadeTo(0, 100, Easing.Linear);
+                await animationView.FadeTo(0, 100, Easing.Linear);
 
                 if(App.ApplicationUserRole == "Supervisor")
                 {
@@ -133,7 +148,7 @@ namespace VYRMobile
                                          .UpdateDataAsync(new { LoggedIn = false });
                 //Login Failed
                 await DisplayAlert("Login Failed", $"Verifique su usuario y contraseña", "Ok");
-                await animation.FadeTo(0, 100, Easing.Linear);
+                await animationView.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
                 Loginbtn.IsEnabled = true;
             }

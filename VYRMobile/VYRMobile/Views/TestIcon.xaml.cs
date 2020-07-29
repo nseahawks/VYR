@@ -1,10 +1,24 @@
-﻿using System;
+﻿using Plugin.CloudFirestore;
+using Plugin.Media;
+using Rg.Plugins.Popup.Extensions;
+using Syncfusion.XForms.Buttons;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
-
+using VYRMobile.Controls;
+using VYRMobile.Data;
+using VYRMobile.Helper;
+using VYRMobile.Models;
+using VYRMobile.Services;
+using VYRMobile.ViewModels;
+using VYRMobile.Views.Popups;
+using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
@@ -16,36 +30,12 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
 
-            NewPasswordOffClicked();
-            NewPasswordOnClicked();
+            BindingContext = new SupervisionViewModel();
         }
-        private void NewPasswordOffClicked()
+
+        private async void btnReporte_Clicked(object sender, EventArgs e)
         {
-            newPasswordOff.GestureRecognizers.Add(new TapGestureRecognizer()
-            {
-                Command = new Command(() =>
-                {
-                    img1.IsVisible = false;
-                    img1.IsEnabled = false;
-                    img2.IsVisible = true;
-                    img2.IsEnabled = true;
-                }),
-                NumberOfTapsRequired = 1
-            });
-        }
-        private void NewPasswordOnClicked()
-        {
-            newPasswordOn.GestureRecognizers.Add(new TapGestureRecognizer()
-            {
-                Command = new Command(() =>
-                {
-                    img2.IsVisible = false;
-                    img2.IsEnabled = false;
-                    img1.IsVisible = true;
-                    img1.IsEnabled = true;
-                }),
-                NumberOfTapsRequired = 1
-            });
+            await Navigation.PushModalAsync(new NavigationPage(new CreateReportPage()));
         }
     }
 }

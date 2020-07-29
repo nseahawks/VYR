@@ -63,15 +63,15 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
-        public string Title
+        public Antena Location
         {
-            get => CReport.Title;
+            get => CReport.Location;
             set
             {
-                if (CReport.Title == value)
+                if (CReport.Location == value)
                     return;
-                CReport.Title = value;
-                OnPropertyChanged(nameof(Title));
+                CReport.Location = value;
+                OnPropertyChanged(nameof(Location));
             }
         }
         public string Description
@@ -212,12 +212,36 @@ namespace VYRMobile.ViewModels
             get { return imageInfo; }
             set { imageInfo = value; }
         }
+        private ObservableCollection<Models.Image> _reportImages;
+        public ObservableCollection<Models.Image> ReportImages
+        {
+            get { return _reportImages; }
+            set
+            {
+                _reportImages = value;
+                OnPropertyChanged(nameof(ReportImages));
+            }
+        }
+
+
+        private ObservableCollection<Antena> _locations;
+        public ObservableCollection<Antena> Locations
+        {
+            get { return _locations; }
+            set
+            {
+                _locations = value;
+                OnPropertyChanged();
+            }
+        }
         public ReportViewModel()
         {
+            Locations = new ObservableCollection<Antena>();
             ImageInfo = new ObservableCollection<Models.Image>();
-            Reports = new ObservableCollection<Models.Report>();
+            Reports = new ObservableCollection<Report>();
 
             //LoadPosts();
+            LoadLocations();
             LoadData();
 
             CReport = new Report();
@@ -230,7 +254,23 @@ namespace VYRMobile.ViewModels
             _typeCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportTypes)));
             _statusCollection = new ObservableCollection<string>(Enum.GetNames(typeof(Report.ReportStatuses)));
         }
+        public ReportViewModel(string Img)
+        {
+            ReportImages = new ObservableCollection<Models.Image>();
 
+            SplitString(Img);
+        }
+
+        private async void LoadLocations()
+        {
+            var locations = await ReportsStore.Instance.GetAntenasAsync();
+
+            Locations.Clear();
+            foreach (var location in locations)
+            {
+                Locations.Add(location);
+            }
+        }
         private async Task CreateReport()
         {
             if (IsBusy)
@@ -264,13 +304,10 @@ namespace VYRMobile.ViewModels
             await App.Current.MainPage.Navigation.PushPopupAsync(new LoadingPopup());
 
             IsBusy = true;
-
             IsSuccess = await _store.AddEvaluationReportAsync(EReport, App.Calculations);
-
             IsBusy = false;
 
             await App.Current.MainPage.Navigation.PopPopupAsync();
-
             await App.Current.MainPage.Navigation.PopModalAsync();
         }
         private async void LoadData()
@@ -338,7 +375,7 @@ namespace VYRMobile.ViewModels
             IsBusy = true;
 
             var reports = await ReportsStore.Instance.GetReportsAsync();
-
+            
             Reports.Clear();
             foreach (var report in reports)
             {
@@ -363,6 +400,7 @@ namespace VYRMobile.ViewModels
                 }
                 Reports.Add(report);
             }
+
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
 
@@ -373,6 +411,15 @@ namespace VYRMobile.ViewModels
             else
             {
                 IsEmpty = false;
+            }
+        }
+        private void SplitString(string Img)
+        {
+            string[] images = Img.Split(' ');
+
+            foreach (var image in images)
+            {
+                ReportImages.Add(new Models.Image { Source = image });
             }
         }
     }

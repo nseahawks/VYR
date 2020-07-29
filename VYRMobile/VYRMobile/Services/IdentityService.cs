@@ -79,6 +79,13 @@ namespace VYRMobile.Services
             App.ApplicationUserId = await SecureStorage.GetAsync("id");
             App.ApplicationUserRole = await SecureStorage.GetAsync("role");
 
+            if (App.ApplicationUserRole != "User" && App.ApplicationUserRole != "Supervisor" && App.ApplicationUserRole != "Master")
+            {
+                await Application.Current.MainPage.DisplayAlert("Denegado", "La cuenta ingresada no tiene un rol válido para empezar a usar la aplicación", "OK");
+                return;
+            }
+
+
             ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
             if (mergedDictionaries != null)
             {
@@ -93,11 +100,6 @@ namespace VYRMobile.Services
                         break;
                     case "Supervisor":
                         mergedDictionaries.Add(new SupervisorTheme());
-                        mergedDictionaries.Add(new Colors());
-                        mergedDictionaries.Add(new Fonts());
-                        break;
-                    case "Master":
-                        mergedDictionaries.Add(new GerentialTheme());
                         mergedDictionaries.Add(new Colors());
                         mergedDictionaries.Add(new Fonts());
                         break;

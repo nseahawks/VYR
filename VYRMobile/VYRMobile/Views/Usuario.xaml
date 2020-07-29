@@ -31,18 +31,19 @@
             VerticalScrollBarVisibility="Always">
             <StackLayout 
                 Margin="0,10,0,0">
+                <!--IMAGEN, NOMBRE Y CORREO DEL TRABAJADOR-->
                 <Frame  
                     HeightRequest="205"
                     Padding="0">
                     <StackLayout>
                         <controls:CircleImage 
-                            Source="face2.jpg"
+                            Source="face3.png"
                             VerticalOptions="Start"
                             HeightRequest="150"
                             WidthRequest="150"/>
                         <Label  
                             x:Name="userLbl"
-                            Text="Ashby Hernandez"
+                            Text="Trabajador"
                             FontFamily="{StaticResource PoppinsMedium}"
                             TextColor="Black"
                             FontSize="14"
@@ -55,6 +56,7 @@
                             HorizontalOptions="Center"/>
                     </StackLayout>
                 </Frame>
+                <!--LISTA DE OPCIONES-->
                 <Frame 
                     HeightRequest="226"
                     IsClippedToBounds="True"
@@ -62,6 +64,7 @@
                     <TableView HeightRequest="227">
                         <TableRoot>
                             <TableSection>
+                                <!--CONFIGURACION-->
                                 <ViewCell 
                                     x:Name="configuracionCell"
                                     Tapped="configuracionCell_Tapped">
@@ -89,6 +92,7 @@
                                             Margin="0,0,0,0"/>
                                     </Grid>
                                 </ViewCell>
+                                <!--EQUIPO-->
                                 <ViewCell 
                                     x:Name="equipamientoCell"
                                     Tapped="equipamientoCell_Tapped">
@@ -111,11 +115,12 @@
                                         <Label  
                                             Grid.Column="1"
                                             TextColor="{StaticResource BlackColor}"
-                                            Text="EQUIPAMIENTO"
+                                            Text="EQUIPO"
                                             Style="{StaticResource NameTextStyle}"
                                             Margin="0,0,0,0"/>
                                     </Grid>
                                 </ViewCell>
+                                <!--OBJETIVOS-->
                                 <ViewCell 
                                     x:Name="estadisticasCell"
                                     Tapped="estadisticasCell_Tapped">
@@ -143,6 +148,7 @@
                                             Margin="0,0,0,0"/>
                                     </Grid>
                                 </ViewCell>
+                                <!--FORMACION-->
                                 <ViewCell  
                                     x:Name="formacionCell"
                                     Tapped="formacionCell_Tapped">
@@ -170,6 +176,7 @@
                                             Margin="0,0,0,0"/>
                                     </Grid>
                                 </ViewCell>
+                                <!--HISTORIAL-->
                                 <ViewCell
                                     x:Name="historyCell"
                                     Tapped="historyCell_Tapped">
@@ -185,7 +192,7 @@
                                             <RowDefinition Height="45" />
                                         </Grid.RowDefinitions>
                                         <Image  
-                                            Source="formacion.png"
+                                            Source="historial.png"
                                             Grid.Column="0"
                                             Style="{StaticResource PhotoStyle}"
                                             Margin="5,0,0,0"/>
@@ -201,6 +208,7 @@
                         </TableRoot>
                     </TableView>
                 </Frame>
+                <!--CERRAR SESIÓN-->
                 <Frame
                     HeightRequest="45"
                     BackgroundColor="White"

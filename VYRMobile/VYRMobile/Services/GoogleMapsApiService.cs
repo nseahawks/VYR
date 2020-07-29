@@ -28,7 +28,7 @@ namespace VYRMobile.Services
             return httpClient;
         }
         public static void Initialize(string googleMapsKey)
-        {
+        { 
             _googleMapsKey = googleMapsKey;
         }
 
@@ -44,9 +44,8 @@ namespace VYRMobile.Services
                     var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     if (!string.IsNullOrWhiteSpace(json))
                     {
-                        googleDirection = await Task.Run(() =>
-                           JsonConvert.DeserializeObject<GoogleDirection>(json)
-                        ).ConfigureAwait(false);
+                        googleDirection = await Task.Run(() => JsonConvert.DeserializeObject<GoogleDirection>(json))
+                                                                          .ConfigureAwait(false);
 
                     }
                 }
@@ -67,10 +66,8 @@ namespace VYRMobile.Services
                     var json = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
                     if (!string.IsNullOrWhiteSpace(json) && json != "ERROR")
                     {
-                        results = await Task.Run(() =>
-                           JsonConvert.DeserializeObject<GooglePlaceAutoCompleteResult>(json)
-                        ).ConfigureAwait(false);
-
+                        results = await Task.Run(() => JsonConvert.DeserializeObject<GooglePlaceAutoCompleteResult>(json))
+                                                                  .ConfigureAwait(false);
                     }
                 }
             }

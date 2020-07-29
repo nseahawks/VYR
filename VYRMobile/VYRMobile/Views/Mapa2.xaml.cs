@@ -13,6 +13,7 @@ using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
 using Plugin.CloudFirestore;
+using Plugin.CloudFirestore.Extensions;
 using VYRMobile.Services;
 using Plugin.Geolocator;
 
@@ -20,6 +21,7 @@ namespace VYRMobile.Views
 {
     public partial class Mapa2 : ContentPage
     {
+        bool IsFading = true;
         bool AlarmMode = false;
         IGoogleMapsApiService googleMapsApi = new GoogleMapsApiService();
         SensorSpeed speed = SensorSpeed.Default;
@@ -80,12 +82,13 @@ namespace VYRMobile.Views
         public Mapa2(string locationName, GeoPoint geoPoint)
         {
             InitializeComponent();
-            BindingContext = new GoogleMapsViewModel();
+            string param = "";
+            BindingContext = new GoogleMapsViewModel(param);
             AddMapStyle();
 
             comboBox.IsVisible = false;
             startRoute.IsVisible = false;
-            animation.IsVisible = true;
+            //animation.IsVisible = true;
             AlarmMode = true;
             DestinationLocationlat = geoPoint.Latitude.ToString();
             DestinationLocationlng = geoPoint.Longitude.ToString();
@@ -96,7 +99,7 @@ namespace VYRMobile.Views
             PolylinesCommand = new Command(ClearPolylinesCommand);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
 
-            alarmMode();
+            //alarmMode();
             Pin destinationPin;
             destinationPin = new Pin()
             {
@@ -116,12 +119,54 @@ namespace VYRMobile.Views
 
             Compass.ReadingChanged += Compass_ReadingChanged;
             OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
+            map.MapClicked += Map_MapClicked;
             LoadRoute2();
+
+            //await();
         }
+        private async void await()
+        {
+            await Task.Delay(2000);
+        }
+        private void Map_MapClicked(object sender, MapClickedEventArgs e)
+        {
+            if(chronoFrame.Opacity == 1)
+            {
+                uint duration = 500;
+                var animation = new Animation();
+                var animation2 = new Animation();
+
+                animation.WithConcurrent(
+                  (f) => chronoFrame.TranslationY = f,
+                  chronoFrame.TranslationY - 0, -  10,
+                  Easing.CubicOut, 1, 0);
+
+                animation.WithConcurrent((f) => chronoFrame.Opacity = f, 1, 0, Easing.CubicIn);
+
+                animation2.WithConcurrent(
+                  (f) => estimatedTimeFrame.TranslationY = f,
+                  estimatedTimeFrame.TranslationY + 0, + 10,
+                  Easing.CubicOut, 1, 0);
+
+                animation2.WithConcurrent((f) => estimatedTimeFrame.Opacity = f, 1, 0, Easing.CubicIn);
+
+                chronoFrame.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
+                estimatedTimeFrame.Animate("FadeIn", animation2, 16, Convert.ToUInt32(duration));
+            }
+            else
+            {
+                ShowChrono();
+            }
+        }
+
         public Mapa2()
         {
             InitializeComponent();
             BindingContext = new GoogleMapsViewModel();
+            chronoFrame.IsVisible = false;
+            chronoFrame.IsEnabled = false;
+            estimatedTimeFrame.IsVisible = false;
+            estimatedTimeFrame.IsEnabled = false;
             AddMapStyle();
             AddLocations();
             comboBox.SelectionChanged += AntennaSelected;
@@ -149,6 +194,7 @@ namespace VYRMobile.Views
                 Position = seahawksPin.Position,
                 Radius = 50
             };
+
 
             map.Pins.Add(seahawksPin);
 
@@ -280,12 +326,14 @@ namespace VYRMobile.Views
             ToggleOrientation();
             GetActualLocationCommand.Execute(null);
             MoveCamera();
+            ShowChrono();
+            Animate();
         }
 
         private async void MoveCamera()
         {
-            var request = new GeolocationRequest(GeolocationAccuracy.High);
-            var location = await Geolocation.GetLocationAsync(request);
+            //var request = new GeolocationRequest(GeolocationAccuracy.High);
+            var location = await Geolocation.GetLastKnownLocationAsync();
             Position myPosition = new Position(location.Latitude, location.Longitude);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(1000)));
         }
@@ -342,16 +390,19 @@ namespace VYRMobile.Views
                     DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
                     DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
                 }
-                else if(location != null)
+                else if (location != null)
                 {
                     OriginLocationlat = position.Latitude.ToString();
                     OriginLocationlng = position.Longitude.ToString();
                 }
+                else
+                {
+                    throw new Exception("No se pudo obtener la ubicación");
+                }
             }
-
             catch (Exception ex)
             {
-                await DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
+                //nothing
             }
         }
 
@@ -429,8 +480,8 @@ namespace VYRMobile.Views
                     list.Insert(0,new Position( minIntersection.Latitude, minIntersection.Longitude));
                 }
 
-                await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
-                    new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),18d,CData,TData)));
+                /*await map.AnimateCamera(CameraUpdateFactory.NewCameraPosition(new CameraPosition(
+                    new Position(double.Parse(OriginLocationlat), double.Parse(OriginLocationlng)),18d,CData,TData)));*/
             }
             else
             {
@@ -501,6 +552,14 @@ namespace VYRMobile.Views
             {
                 await animation.FadeTo(0.3, 500, Easing.Linear);
                 await animation.FadeTo(0.8, 500, Easing.Linear);
+                await animation.FadeTo(0.3, 500, Easing.Linear);
+                await animation.FadeTo(0.8, 500, Easing.Linear);
+                await animation.FadeTo(0.3, 500, Easing.Linear);
+                await animation.FadeTo(0.8, 500, Easing.Linear);
+                await animation.FadeTo(0, 500, Easing.Linear);
+                animation.IsVisible = false;
+                animation.IsEnabled = false;
+                AlarmMode = false;
             }
         }
         public async Task LoadRoute2()
@@ -552,18 +611,85 @@ namespace VYRMobile.Views
             {
                 if(AlarmMode == true)
                 {
-                    PuntoViewModel.Instance.StopCommand.Execute(null);
+                    var id = await SecureStorage.GetAsync("id");
+
+                    await CrossCloudFirestore.Current.Instance
+                        .GetCollection("usersApp")
+                        .GetDocument(id)
+                        .GetCollection("Alarms")
+                        .GetDocument(App.AlarmDocumentId)
+                        .DeleteDocumentAsync();
+
+                    GoogleMapsViewModel.Instance.StopCommand.Execute(null);
                     App.Alarm = null;
+                    App.AlarmDocumentId = null;
                 }
                 StopRoute();
                 ClearPolylinesCommand();
-                await App.Current.MainPage.DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
+                await DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
+                await Navigation.PopModalAsync();
             }
         }
         public void StopRoute()
         {
             IsRouteRunning = false;
-            App.Alarm = null;
+        }
+        private async void ShowChrono()
+        {
+            uint duration = 750;
+            var animation = new Animation();
+            var animation2 = new Animation();
+
+            animation.WithConcurrent((f) => chronoFrame.Opacity = f, 0, 1, Easing.CubicOut);
+
+            animation.WithConcurrent(
+              (f) => chronoFrame.TranslationY = f,
+              chronoFrame.TranslationY - 50, - 10,
+              Easing.CubicOut, 0, 1);
+
+            animation2.WithConcurrent((f) => estimatedTimeFrame.Opacity = f, 0, 1, Easing.CubicOut);
+
+            animation2.WithConcurrent(
+              (f) => estimatedTimeFrame.TranslationY = f,
+              estimatedTimeFrame.TranslationY  + 50, + 10,
+              Easing.CubicOut, 0, 1);
+
+            chronoFrame.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
+            estimatedTimeFrame.Animate("FadeIn", animation2, 16, Convert.ToUInt32(duration));
+
+        }
+        private async void Animate()
+        {
+            Animation a = new Animation();
+            while (IsFading == true)
+            {
+                a.Add(0, 1, new Animation(f => this.startColor.Opacity = f, 1, 0, Easing.Linear, null));
+                a.Add(0, 1, new Animation(f => this.endColor.Opacity = f, 0, 1, Easing.Linear, null));
+                a.Commit(
+                    owner: this.startColor,
+                    name: "DoubleFader",
+                    length: 1000,
+                    finished: (x, y) =>
+                    {
+                        this.startColor.FadeTo(1, 1000, Easing.CubicIn);
+                    });
+
+                await Task.Delay(1000);
+
+                a.Add(0, 1, new Animation(f => this.startColor.Opacity = f, 0, 1, Easing.Linear, null));
+                a.Add(0, 1, new Animation(f => this.endColor.Opacity = f, 1, 0, Easing.Linear, null));
+                a.Commit(
+                    owner: this.startColor,
+                    name: "DoubleFader",
+                    length: 1000,
+                    finished: (x, y) =>
+                    {
+                        this.startColor.FadeTo(0, 1000, Easing.CubicIn);
+                    });
+
+                await Task.Delay(1000);
+            }
+
         }
     }
 }

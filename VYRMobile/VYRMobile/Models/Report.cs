@@ -21,7 +21,12 @@ namespace VYRMobile.Models
             get => title;
             set => SetProperty(ref title, value);
         }
-
+        Antena location;
+        public Antena Location
+        {
+            get => location;
+            set => SetProperty(ref location, value);
+        }
         string typeIcon;
         public string TypeIcon
         {
@@ -52,11 +57,10 @@ namespace VYRMobile.Models
 
         public enum ReportTypes
         {
-            Default = 0,
-            Alarma = 1,
-            Robo = 2,
-            Asistencia = 3,
-            Daño = 4
+            Alarma,
+            Robo,
+            Asistencia,
+            Daño
         }
 
         ReportStatuses reportStatus;
@@ -67,10 +71,9 @@ namespace VYRMobile.Models
         }
         public enum ReportStatuses
         {
-            Default = 0,
-            Abierto = 1,
-            Cerrado = 2,
-            PorAsignar = 3
+            Abierto,
+            Cerrado,
+            PorAsignar
         }
 
         string description;

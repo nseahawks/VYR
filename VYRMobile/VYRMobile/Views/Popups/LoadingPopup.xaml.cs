@@ -15,7 +15,12 @@ namespace VYRMobile.Views.Popups
         public LoadingPopup()
         {
             InitializeComponent();
-            BindingContext = new ReportViewModel();
+        }
+        public LoadingPopup(string description)
+        {
+            InitializeComponent();
+
+            descriptionLabel.Text = description;
         }
     }
 }

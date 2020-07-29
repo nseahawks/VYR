@@ -22,20 +22,19 @@
     </pages:PopupPage.Animation>
     <Frame
         BackgroundColor="White"
-        HeightRequest="125"
+        HeightRequest="175"
         WidthRequest="275"
         HasShadow="True"
         CornerRadius="15"
         IsClippedToBounds="True"
         HorizontalOptions="Center"
-        VerticalOptions="Center">
+        VerticalOptions="Center"
+        Padding="0">
         <StackLayout>
             <Grid>
                 <StackLayout 
                     Grid.Column="0"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center" 
-                    Spacing="5">
+                    VerticalOptions="Center">
                     <button:SfButton
                         x:Name="call1"
                         HeightRequest="100"
@@ -45,6 +44,7 @@
                         CornerRadius="6"
                         BorderWidth="0"
                         HasShadow="True"
+                        VerticalOptions="Center"
                         HorizontalOptions="Center"/>
                     <Label
                         Text="Emergencias"
@@ -66,6 +66,7 @@
                         CornerRadius="6"
                         BorderWidth="0"
                         HasShadow="True"
+                        VerticalOptions="Center"
                         HorizontalOptions="Center"/>
                     <Label
                         Text="Monitoreo"

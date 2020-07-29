@@ -32,7 +32,6 @@ namespace VYRMobile.Views.Popups
             ConfirmationPasswordOffClicked();
             ConfirmationPasswordOnClicked();
         }
-
         private void BtnBack_Clicked(object sender, EventArgs e)
         {
             AnimateLayoutToRight(newPassLayout);
@@ -43,6 +42,14 @@ namespace VYRMobile.Views.Popups
             AnimateLayoutToRight(oldPassLayout);
         }
 
+        protected override bool OnBackButtonPressed()
+        {
+            return false;
+        }
+        protected override bool OnBackgroundClicked()
+        {
+            return true;
+        }
         bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         private async void BtnNext_Clicked(object sender, EventArgs e)
         {

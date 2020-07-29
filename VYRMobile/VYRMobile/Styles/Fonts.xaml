@@ -51,4 +51,9 @@
                 x:TypeArguments="x:String"
                 iOS="Poppins-SemiBold"
                 Android="Poppins-SemiBold.ttf#Poppins"/>
+    
+    <OnPlatform x:Key="SFTheraminGothicShaded" 
+                x:TypeArguments="x:String"
+                iOS="SFTheramin-Gothic-Shaded"
+                Android="SFTheramin-Gothic-Shaded.ttf#SFTheramin"/>
 </ResourceDictionary>

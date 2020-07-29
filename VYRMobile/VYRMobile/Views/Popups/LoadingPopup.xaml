@@ -28,6 +28,7 @@
             BackgroundColor="#F5F5F5">
             <StackLayout>
                 <Label 
+                    x:Name="descriptionLabel"
                     Text="Enviando..."
                     FontFamily="{StaticResource PoppinsMedium}"
                     TextColor="{StaticResource BlackColor}"

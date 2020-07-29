@@ -5,107 +5,46 @@ using System.Collections.ObjectModel;
 using System.Text;
 using VYRMobile.Data;
 using VYRMobile.Models;
+using Xamarin.Forms;
 
 namespace VYRMobile.ViewModels
 {
 
     public class SupervisionViewModel : ObservableObject
     {
-        private ObservableCollection<ApplicationUser> _users;
-        public ObservableCollection<ApplicationUser> Users
+        public Command ChangeStateCommand { get; set; }
+        private ObservableCollection<Antena> antenas;
+        public ObservableCollection<Antena> Antenas
         {
-            get { return _users; }
+            get { return antenas; }
             set
             {
-                _users = value;
-                OnPropertyChanged();
-            }
-        }
-        private ObservableCollection<ApplicationUser> _users2;
-        public ObservableCollection<ApplicationUser> Users2
-        {
-            get { return _users2; }
-            set
-            {
-                _users2 = value;
+                antenas = value;
                 OnPropertyChanged();
             }
         }
         public SupervisionViewModel()
         {
-            Users = new ObservableCollection<ApplicationUser>() 
+            Antenas = new ObservableCollection<Antena>()
             {
-                new ApplicationUser{FullName = "Jorge Perez", HasAttended="attended.png"},
-                new ApplicationUser{FullName = "Carlos Martinez", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Santiago Cabrera", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Ramon Castillo", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Alberto Jaquez", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Roberto Quezada", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Javier Rodriguez", HasAttended="undefined.png"},
+                new Antena{PointChecked = false},
+                new Antena{PointChecked = true},
+                new Antena{PointChecked = false}
             };
 
-            Users2 = new ObservableCollection<ApplicationUser>()
+            ChangeStateCommand = new Command(ChangeAntennaState);
+        }
+        private void ChangeAntennaState()
+        {
+            foreach(var antena in Antenas)
             {
-                new ApplicationUser{FullName = "Andres Tejada", HasAttended="undefined.png"},
-                new ApplicationUser{FullName = "Adrian Feliz", HasAttended="undefined.png"}
-            };
-
-            //LoadUsers();
-        }
-        public SupervisionViewModel(ApplicationUser applicationUser)
-        {
-            Users = new ObservableCollection<ApplicationUser>();
-
-            LoadPickerUsers(applicationUser);
-        }
-        public SupervisionViewModel(ApplicationUser applicationUser, ApplicationUser applicationUser2)
-        {
-            Users = new ObservableCollection<ApplicationUser>();
-
-            LoadUpdatedUsers(applicationUser, applicationUser2);
-        }
-        private async void LoadUsers()
-        {
-            var users = await ReportsStore.Instance.GetUsersAsync();
-
-            Users.Clear();
-            foreach (var user in users)
-            {
-                user.FullName = user.FirstName + " " + user.LastName;
-                Users.Add(user);
-            }
-        }
-        private async void LoadPickerUsers(ApplicationUser applicationUser)
-        {
-            var users = await ReportsStore.Instance.GetUsersAsync();
-
-            Users.Clear();
-            foreach (var user in users)
-            {
-                user.FullName = user.FirstName + " " + user.LastName;
-
-                if(user.FullName != applicationUser.FullName)
+                if(antena.PointChecked == false)
                 {
-                    Users.Add(user);
-                }
-            }
-        }
-        private async void LoadUpdatedUsers(ApplicationUser applicationUser, ApplicationUser applicationUser2)
-        {
-            var users = await ReportsStore.Instance.GetUsersAsync();
-
-            Users.Clear();
-            foreach (var user in users)
-            {
-                user.FullName = user.FirstName + " " + user.LastName;
-
-                if (user.FullName != applicationUser.FullName)
-                {
-                    Users.Add(user);
+                    antena.PointChecked = true;
                 }
                 else
                 {
-                    Users.Add(applicationUser2);
+                    antena.PointChecked = false;
                 }
             }
         }

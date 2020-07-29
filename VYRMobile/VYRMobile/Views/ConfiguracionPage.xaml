@@ -5,13 +5,14 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.ConfiguracionPage"
-             Title="Mi Cuenta"
+             Title="Configuracion"
              NavigationPage.HasBackButton="True">
     <ContentPage.Content>
         <StackLayout>
             <TableView RowHeight="80">
                 <TableRoot>
                     <TableSection>
+                        <!--CELDA OPCION DE LENGUAJE-->
                         <ViewCell x:Name="languageCell">
                             <Grid Grid.ColumnSpan="1">
                                 <Grid.ColumnDefinitions>
@@ -52,7 +53,8 @@
                                 </StackLayout>
                             </Grid>
                         </ViewCell>
-                        <ViewCell>
+                        <!--CELDA INFORMACION DEL PERFIL-->
+                        <ViewCell x:Name="profileInfoCell">
                             <Grid Grid.ColumnSpan="1">
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="60"/>
@@ -80,6 +82,7 @@
                                     Margin="10,7,0,0"/>
                             </Grid>
                         </ViewCell>
+                        <!--CELDA CAMBIAR CONTRASEÑA-->
                         <ViewCell x:Name="passwordCell">
                             <Grid Grid.ColumnSpan="1">
                                 <Grid.ColumnDefinitions>
@@ -117,6 +120,7 @@
                 IsEnabled="False">
                 <TableRoot>
                     <TableSection>
+                        <!--CELDA CONFIGURACION DE PUNTOS(PARA SUPERVISORES SOLO)-->
                         <ViewCell 
                             x:Name="pointsCell"
                             IsEnabled="False">
