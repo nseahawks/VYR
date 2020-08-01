@@ -16,6 +16,7 @@ using VYRMobile.Views;
 using Newtonsoft.Json;
 using System.Windows.Input;
 using Rg.Plugins.Popup.Extensions;
+using System.Collections.Generic;
 
 namespace VYRMobile.ViewModels
 {
@@ -535,8 +536,8 @@ namespace VYRMobile.ViewModels
             Location destinationLoc = new Location(myLatitude, myLongitude);
 
             var distance = Location.CalculateDistance(rootLoc, destinationLoc, DistanceUnits.Kilometers);
-
-            if(distance < 0.5)
+            
+            if(distance < 0.1)
             {
                 puntoViewModel.StopCommand.Execute(null);
                 StopRoute();

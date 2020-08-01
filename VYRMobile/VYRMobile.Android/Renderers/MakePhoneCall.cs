@@ -12,6 +12,7 @@ using VYRMobile.Droid.Renderers;
 using VYRMobile.Models;
 using VYRMobile.Services;
 using VYRMobile.ViewModels;
+using VYRMobile.Views;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(MakePhoneCall))]

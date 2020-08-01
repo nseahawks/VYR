@@ -27,7 +27,6 @@ namespace VYRMobile.Droid
         ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
-        //MainActivity activity;
         private static MainActivity _instance;
         public static MainActivity Instance
         {

@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -80,7 +81,7 @@ namespace VYRMobile.Views
                 pages.MoveNext();
                 CurrentPage = pages.Current;
             }
-            else
+            else if(App.ApplicationUserRole == "Patrol")
             {
                 NavigationPage home = new NavigationPage(new Home())
                 {
@@ -122,7 +123,44 @@ namespace VYRMobile.Views
                 pages.MoveNext();
                 CurrentPage = pages.Current;
             }
+            else if(App.ApplicationUserRole == "Vigilant")
+            {
+                NavigationPage home = new NavigationPage(new Home())
+                {
+                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                    IconImageSource = "home2.png",
+                    Title = "Home"
+                };
+                NavigationPage report = new NavigationPage(new Reportes())
+                {
+                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                    IconImageSource = "reportes2.png",
+                    Title = "Reportes"
+                };
+                NavigationPage user = new NavigationPage(new Usuario())
+                {
+                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                    IconImageSource = "usuario2.png",
+                    Title = "Perfil"
+                };
 
+                Children.Add(report);
+                Children.Add(home);
+                Children.Add(user);
+
+
+                var pages = Children.GetEnumerator();
+                pages.MoveNext();
+                pages.MoveNext();
+                CurrentPage = pages.Current;
+            }
+            else
+            {
+                DisplayAlert("Denegado", "Tu cuenta no tiene permitido ingresar a VYR-X App", "Aceptar");
+            }
 
             ShowMapCommand = new Command(ShowMap);
         }

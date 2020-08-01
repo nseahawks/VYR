@@ -73,13 +73,6 @@ namespace VYRMobile
                 App.AntennaId = result.ToString();
 
                 locationChecking.Command.Execute(null);
-
-                Device.BeginInvokeOnMainThread(async() =>
-                {
-                    await Navigation.PopModalAsync();
-
-                    await DisplayAlert("Valor Obtenido", result.Text, "OK");
-                });
             };
 
             await Navigation.PushModalAsync(scannerPage);

@@ -25,13 +25,13 @@ namespace VYRMobile.Services
 
         public async Task<IEnumerable<Equipo>> GetEquipos()
         {
-            string _userId = await SecureStorage.GetAsync("id");
             var equipo = new Equipo {
                 EquipmentId = "1",
                 Icon  = "label.png",
                 Name ="test",
                 Toggle = false
                 };
+            
 
             //set test for firebase
             //await CrossCloudFirestore.Current.Instance
@@ -55,9 +55,9 @@ namespace VYRMobile.Services
             // NOTE: In this sample the focus is on the UI. This is a Fake service.
 
             var items =  await CrossCloudFirestore.Current.Instance
-                                        .GetCollection("usersApp")
-                                        .GetDocument(_userId)
                                         .GetCollection("Items")
+                                        .GetDocument(App.ApplicationUserId)
+                                        .GetCollection("Item")
                                         .GetDocumentsAsync();
            
 

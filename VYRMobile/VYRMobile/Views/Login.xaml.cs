@@ -55,7 +55,6 @@ namespace VYRMobile
 
         async Task TryLogin()
         {
-            string _userId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn)
             {
 
@@ -63,19 +62,19 @@ namespace VYRMobile
                 {
                     var document = await CrossCloudFirestore.Current.Instance
                                               .GetCollection("supervisorsApp")
-                                              .GetDocument(_userId)
+                                              .GetDocument(App.ApplicationUserId)
                                               .GetDocumentAsync(); ;
 
                     //var model = document.ToObject<ApplicationUser>();
 
                     await CrossCloudFirestore.Current.Instance
                                               .GetCollection("supervisorsApp")
-                                              .GetDocument(_userId)
+                                              .GetDocument(App.ApplicationUserId)
                                               .UpdateDataAsync(new { LoggedIn = true });
 
                     await CrossCloudFirestore.Current.Instance
                                               .GetCollection("supervisorsApp")
-                                              .GetDocument(_userId)
+                                              .GetDocument(App.ApplicationUserId)
                                               .UpdateDataAsync(new { Status = "WAITING" });
 
                 }
@@ -83,14 +82,14 @@ namespace VYRMobile
                 {
                     var document = await CrossCloudFirestore.Current.Instance
                                               .GetCollection("usersApp")
-                                              .GetDocument(_userId)
+                                              .GetDocument(App.ApplicationUserId)
                                               .GetDocumentAsync(); ;
 
                     //var model = document.ToObject<ApplicationUser>();
 
                     await CrossCloudFirestore.Current.Instance
-                                              .GetCollection("usersApp")
-                                              .GetDocument(_userId)
+                                              .GetCollection("Users")
+                                              .GetDocument(App.ApplicationUserId)
                                               .UpdateDataAsync(new { LoggedIn = true });
 
                 }
@@ -143,8 +142,8 @@ namespace VYRMobile
             else
             {
                 await CrossCloudFirestore.Current.Instance
-                                         .GetCollection("usersApp")
-                                         .GetDocument(_userId)
+                                         .GetCollection("Users")
+                                         .GetDocument(App.ApplicationUserId)
                                          .UpdateDataAsync(new { LoggedIn = false });
                 //Login Failed
                 await DisplayAlert("Login Failed", $"Verifique su usuario y contraseña", "Ok");

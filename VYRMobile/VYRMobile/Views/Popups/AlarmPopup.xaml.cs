@@ -48,10 +48,9 @@ namespace VYRMobile.Views.Popups
 
             map.Pins.Add(locationPin);
 
-            map.Circle = new CustomCircle
+            map.Circles = new List<CustomCircle>
             {
-                Position = locationPin.Position,
-                Radius = 50
+                new CustomCircle{ Position = locationPin.Position, Radius = 50}
             };
         }
         protected override void OnAppearing()

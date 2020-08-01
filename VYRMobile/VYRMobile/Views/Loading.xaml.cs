@@ -2,10 +2,13 @@
 using Plugin.CloudFirestore.Extensions;
 using Plugin.DeviceInfo;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
+using VYRMobile.Data;
 using VYRMobile.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
@@ -19,13 +22,14 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
 
+            StartGeofence();
             isWaiting = true;
         }
         protected async override void OnAppearing()
         {
             base.OnAppearing();
             Charge();
-            _userId = await SecureStorage.GetAsync("id");
+            /*_userId = await SecureStorage.GetAsync("id");
 
             string repository;
 
@@ -69,7 +73,7 @@ namespace VYRMobile.Views
                 {
                     isWaiting = true;
                 }
-            });
+            });*/
 
             /*isWaiting = false;
             Application.Current.MainPage = new NavigationPage(new MenuPage());*/
@@ -82,12 +86,30 @@ namespace VYRMobile.Views
 
         private async void Charge()
         {
-            while(isWaiting == true)
+            //while(isWaiting == true)
+            //{
+                await Task.Delay(1000);
+                Application.Current.MainPage = new NavigationPage(new MenuPage());
+            //}
+        }
+        private async void StartGeofence() 
+        { 
+            if(App.ApplicationUserRole == "Vigilant")
             {
-                await Task.Delay(100);
+                var locationPoints = await ReportsStore.Instance.GetAntenasAsync();
+                List<Position> list = new List<Position>(); 
+
+                foreach (var locationPoint in locationPoints)
+                {
+                    list.Add(new Position(locationPoint.Latitude, locationPoint.Longitude));
+                }
+
+                IGeofenceService geofencesService = DependencyService.Get<IGeofenceService>();
+                var location = await Geolocation.GetLastKnownLocationAsync();
+
+                geofencesService.SetGeofences(list, new Position(location.Latitude, location.Longitude));
             }
         }
-
         public class StatusU
         {
             public string Status { get; set; }

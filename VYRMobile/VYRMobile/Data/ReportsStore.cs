@@ -104,7 +104,7 @@ namespace VYRMobile.Data
             }
             return null;
         }
-        public async Task<IEnumerable<Antena>> GetAntenasAsync()
+        public async Task<List<Antena>> GetAntenasAsync()
         {
             UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
