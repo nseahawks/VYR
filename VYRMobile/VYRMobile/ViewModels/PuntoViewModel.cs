@@ -331,8 +331,8 @@ namespace VYRMobile.ViewModels
 
                     //if(distance <= 0.2)
                     //{
+                        var oldAntena = App.UserLocations.Find(ant => ant.Equals(antena));
                         antena.PointChecked = true;
-                        var oldAntena = App.UserLocations[App.UserLocations.FindIndex(ind => ind.Equals(antena.Id))];
                         App.UserLocations.Remove(oldAntena);
                         App.UserLocations.Add(antena);
                         CheckIfAllPointsAreDone();
@@ -455,7 +455,6 @@ namespace VYRMobile.ViewModels
                     IsButton = false;
                     IsList = false;
                     IsDoneMessage = true;
-                    App.Current.MainPage.DisplayAlert("Terminado", "Completaste todas las rondas asignadas a tu turno", "Aceptar");
                 }
             }
         }

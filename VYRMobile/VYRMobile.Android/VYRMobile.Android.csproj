@@ -231,7 +231,6 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="MainApplication.cs" />
     <Compile Include="Renderers\CustomMapRenderer.cs" />
-    <Compile Include="Renderers\ImageEntryRenderer.cs" />
     <Compile Include="Renderers\MakePhoneCall.cs" />
     <Compile Include="Renderers\StartAlarmService.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
