@@ -71,7 +71,7 @@
                 <Setter Property="FontFamily" Value="{StaticResource PoppinsRegular}"/>
                 <Setter Property="FontSize" Value="{StaticResource FontSize16}" />
                 <Setter Property="TextColor" Value="{StaticResource BlackColor}" />
-                <Setter Property="VerticalOptions" Value="Center" />
+                <Setter Property="VerticalOptions" Value="Center"/>
             </Style>
 
             <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
@@ -107,7 +107,7 @@
                     VerticalOptions="Center">
                     <Image
                         Source="vyrx.png"
-                        IsVisible="{Binding IsLogo}"
+                        IsVisible="True"
                         HeightRequest="95"
                         Aspect="AspectFit"
                         VerticalOptions="Center"/>
@@ -129,7 +129,7 @@
                             Grid.Row="0">
                             <tabview:SfTabView.Items>
                                 <tabview:SfTabItem 
-                                    Title="Locaciones asignadas"
+                                    Title="{Binding RoundNumber, StringFormat='Ronda: {0:D1}/4'}"
                                     TitleFontFamily="{StaticResource PoppinsBold}"
                                     SelectionColor="{StaticResource BaseColor}"
                                     TitleFontSize="{StaticResource FontSize16}">
@@ -138,6 +138,8 @@
                                             <ListView
                                                 x:Name="antenasView"
                                                 ItemsSource="{Binding Antenas}"
+                                                IsVisible="{Binding IsList}"
+                                                IsEnabled="{Binding IsList}"
                                                 SelectionMode="None"
                                                 HasUnevenRows="True" 
                                                 SeparatorVisibility="None">
@@ -149,8 +151,7 @@
                                                                 RowSpacing="1">
                                                                 <Grid.ColumnDefinitions>
                                                                     <ColumnDefinition Width="35" />
-                                                                    <ColumnDefinition Width="250" />
-                                                                    <ColumnDefinition Width="35" />
+                                                                    <ColumnDefinition Width="*" />
                                                                 </Grid.ColumnDefinitions>
                                                                 <Grid.RowDefinitions>
                                                                     <RowDefinition Height="35" />
@@ -165,9 +166,10 @@
                                                                     TextColor="{StaticResource BlackColor}"
                                                                     Text="{Binding LocationName}"
                                                                     Style="{StaticResource NameTextStyle}"
+                                                                    HorizontalOptions="FillAndExpand"
                                                                     Margin="0,0,0,0"/>
                                                                 <CheckBox
-                                                                    Grid.Column="2"
+                                                                    Grid.Column="1"
                                                                     IsEnabled="False"
                                                                     IsChecked="{Binding PointChecked}"
                                                                     HeightRequest="25"
@@ -187,6 +189,25 @@
                                                 FontSize="14"
                                                 HorizontalOptions="Center"
                                                 VerticalOptions="Center"/>
+                                            <StackLayout
+                                                VerticalOptions="Center"
+                                                HorizontalOptions="Center"
+                                                Orientation="Horizontal"
+                                                IsVisible="{Binding IsDoneMessage}"
+                                                IsEnabled="{Binding IsDoneMessage}">
+                                                <Image
+                                                    Source="clock.png"
+                                                    HeightRequest="15"
+                                                    WidthRequest="15"
+                                                    VerticalOptions="Center"/>
+                                                <Label
+                                                    x:Name="isDoneMessageLabel"
+                                                    Text="Rondas del dia terminadas"
+                                                    TextColor="Black"
+                                                    FontAttributes="Bold"
+                                                    FontSize="18"
+                                                    VerticalOptions="Center"/>
+                                            </StackLayout>
                                         </Grid>
                                     </tabview:SfTabItem.Content>
                                 </tabview:SfTabItem>
@@ -212,6 +233,7 @@
                     BackgroundColor="{DynamicResource PrimaryColor}"
                     VerticalOptions="Start"
                     HorizontalOptions="Center"
+                    IsEnabled="{Binding IsButton}"
                     WidthRequest="150"
                     HeightRequest="60"
                     HasShadow="True"

@@ -7,6 +7,6 @@ namespace VYRMobile.Controls
 {
     public class CustomMap : Map
     {
-        public CustomCircle Circle { get; set; }
+        public List<CustomCircle> Circles { get; set; }
     }
 }

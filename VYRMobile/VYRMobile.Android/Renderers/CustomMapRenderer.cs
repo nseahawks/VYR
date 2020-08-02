@@ -22,7 +22,7 @@ namespace VYRMobile.Droid.Renderers
 {
     public class CustomMapRenderer : MapRenderer
     {
-        CustomCircle circle;
+        List<CustomCircle> circles;
 
         public CustomMapRenderer(Context context) : base(context)
         {
@@ -40,21 +40,23 @@ namespace VYRMobile.Droid.Renderers
             if (e.NewElement != null)
             {
                 var formsMap = (CustomMap)e.NewElement;
-                circle = formsMap.Circle;
+                circles = formsMap.Circles;
             }
         }
         protected override void OnMapReady(GoogleMap nativeMap, Map map)
         {
             base.OnMapReady(nativeMap, map);
 
-            var circleOptions = new CircleOptions();
-            circleOptions.InvokeCenter(new LatLng(circle.Position.Latitude, circle.Position.Longitude));
-            circleOptions.InvokeRadius(circle.Radius);
-            circleOptions.InvokeFillColor(0X2000FF00);
-            circleOptions.InvokeStrokeColor(0X2000FF00);
-            circleOptions.InvokeStrokeWidth(0);
-
-            NativeMap.AddCircle(circleOptions);
+            foreach(var circle in circles)
+            {
+                var circleOptions = new CircleOptions();
+                circleOptions.InvokeCenter(new LatLng(circle.Position.Latitude, circle.Position.Longitude));
+                circleOptions.InvokeRadius(circle.Radius);
+                circleOptions.InvokeFillColor(0X2000FF00);
+                circleOptions.InvokeStrokeColor(0X2000FF00);
+                circleOptions.InvokeStrokeWidth(0);
+                NativeMap.AddCircle(circleOptions);
+            }
         }
     }
 }

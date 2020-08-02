@@ -22,7 +22,6 @@ namespace VYRMobile.Data
         FirebaseHelper _firebase = new FirebaseHelper();
         private List<string> ImagesNames = new List<string>();
         private List<Stream> ImagesStreams = new List<Stream>();
-        string UserId;
         public ReportsStore()
         {
             _client = new ApiHelper();
@@ -52,14 +51,13 @@ namespace VYRMobile.Data
             }
 
             DateTime date = DateTime.UtcNow;
-            UserId = await SecureStorage.GetAsync("id");
             ImagesStreams = App.ImagesStreams;
             ImagesNames = App.ImagesNames;
 
             if (ImagesStreams != null & ImagesNames != null)
             {
-                await _firebase.RunList(ImagesStreams, ImagesNames, UserId, date);
-                report.Img = await _firebase.GetLink(ImagesNames, UserId, date);
+                await _firebase.RunList(ImagesStreams, ImagesNames, App.ApplicationUserId, date);
+                report.Img = await _firebase.GetLink(ImagesNames, App.ApplicationUserId, date);
             }
 
             var responseReport = new Report()
@@ -94,22 +92,20 @@ namespace VYRMobile.Data
         }
         public async Task<IEnumerable<Report>> GetReportsAsync(bool forceRefresh = false)
         {
-            UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
-                var response = await _client.GetAsync("/api/v1/reports?userId=" + UserId);
+                var response = await _client.GetAsync("/api/v1/reports?userId=" + App.ApplicationUserId);
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
                 List<Report> reports = JsonConvert.DeserializeObject<List<Report>>(jsonReports);
                 return reports;
             }
             return null;
         }
-        public async Task<IEnumerable<Antena>> GetAntenasAsync()
+        public async Task<List<Antena>> GetAntenasAsync()
         {
-            UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
-                var response = await _client.GetAsync("/api/v1/locations?userId=" + UserId);
+                var response = await _client.GetAsync("/api/v1/locations?userId=" + App.ApplicationUserId);
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
                 List<Antena> antennas = JsonConvert.DeserializeObject<List<Antena>>(jsonReports);
                 return antennas;
@@ -118,10 +114,9 @@ namespace VYRMobile.Data
         }
         public async Task<ApplicationUser> GetUserAsync()
         {
-            UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
-                var response = await _client.GetAsync("/api/v1/users/" + UserId);
+                var response = await _client.GetAsync("/api/v1/users/" + App.ApplicationUserId);
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
                 ApplicationUser user = JsonConvert.DeserializeObject<ApplicationUser>(jsonReports);
                 return user;
@@ -142,10 +137,9 @@ namespace VYRMobile.Data
         }
         public async Task<ApplicationUser> GetUsersByUserIdAsync()
         {
-            UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
-                var response = await _client.GetAsync("/api/v1/users/supervisor=" + UserId);
+                var response = await _client.GetAsync("/api/v1/users/supervisor=" + App.ApplicationUserId);
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
                 ApplicationUser user = JsonConvert.DeserializeObject<ApplicationUser>(jsonReports);
                 return user;
@@ -163,15 +157,14 @@ namespace VYRMobile.Data
                 return false;
 
             DateTime date = DateTime.UtcNow;
-            UserId = await SecureStorage.GetAsync("id");
 
             ImagesStreams = App.ImagesStreams;
             ImagesNames = App.ImagesNames;
 
             if (ImagesStreams != null & ImagesNames != null)
             {
-                await _firebase.RunList(ImagesStreams, ImagesNames, UserId, date);
-                evaluationReport.Files = await _firebase.GetLink(ImagesNames, UserId, date);
+                await _firebase.RunList(ImagesStreams, ImagesNames, App.ApplicationUserId, date);
+                evaluationReport.Files = await _firebase.GetLink(ImagesNames, App.ApplicationUserId, date);
             }
 
             List<Fault> faults = new List<Fault>();
@@ -209,14 +202,13 @@ namespace VYRMobile.Data
         }
         public async Task<bool> ValidateWorkerAsync(string id, string userCode, string photoLink)
         {
-            UserId = await SecureStorage.GetAsync("id");
             if (App.IsUserLoggedIn && IsConnected)
             {
                 var request = new ValidateRequest()
                 {
                     UserId = id,
                     Code = userCode,
-                    SupervisorId = UserId,
+                    SupervisorId = App.ApplicationUserId,
                     DateTime = DateTime.Now,
                     IsAssist = true,
                     Picture = photoLink

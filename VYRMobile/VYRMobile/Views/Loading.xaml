@@ -27,7 +27,7 @@
             <!--MENSAJE DE ESPERA-->
             <Label  
                 x:Name="loadingMessageLabel"
-                Text="Esperando respuesta de monitoreo..."
+                Text="Cargando componentes..."
                 HorizontalTextAlignment="Center"
                 FontFamily="{StaticResource PoppinsBold}"
                 FontSize="20"

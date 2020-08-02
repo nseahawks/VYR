@@ -79,7 +79,7 @@ namespace VYRMobile.Services
             App.ApplicationUserId = await SecureStorage.GetAsync("id");
             App.ApplicationUserRole = await SecureStorage.GetAsync("role");
 
-            if (App.ApplicationUserRole != "User" && App.ApplicationUserRole != "Supervisor" && App.ApplicationUserRole != "Master")
+            if (App.ApplicationUserRole != "User" && App.ApplicationUserRole != "Patrol" && App.ApplicationUserRole != "Vigilant" && App.ApplicationUserRole != "Supervisor" && App.ApplicationUserRole != "Master")
             {
                 await Application.Current.MainPage.DisplayAlert("Denegado", "La cuenta ingresada no tiene un rol válido para empezar a usar la aplicación", "OK");
                 return;

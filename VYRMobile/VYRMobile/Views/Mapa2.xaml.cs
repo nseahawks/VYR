@@ -109,10 +109,9 @@ namespace VYRMobile.Views
                 Position = new Position(geoPoint.Latitude, geoPoint.Longitude)
             };
 
-            map.Circle = new CustomCircle
+            map.Circles = new List<CustomCircle>
             {
-                Position = destinationPin.Position,
-                Radius = 50
+                new CustomCircle{ Position = destinationPin.Position, Radius = 50}
             };
 
             map.Pins.Add(destinationPin);
@@ -178,7 +177,7 @@ namespace VYRMobile.Views
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
             startRoute.IsEnabled = false;
 
-            Pin seahawksPin = null;
+            /*Pin seahawksPin = null;
             seahawksPin = new Pin()
             {
                 Type = PinType.SavedPin,
@@ -193,10 +192,17 @@ namespace VYRMobile.Views
             {
                 Position = seahawksPin.Position,
                 Radius = 50
+            };*/
+
+            Position centralPosition = new Position(18.433335, -70.038150);
+            Position myHouse = new Position(18.548349, -69.867463);
+            
+            map.Circles = new List<CustomCircle>
+            {
+                new CustomCircle{ Position = centralPosition, Radius = 200},
+                new CustomCircle{ Position = myHouse, Radius = 100}
             };
-
-
-            map.Pins.Add(seahawksPin);
+            //map.Pins.Add(seahawksPin);
 
             //Compass.ReadingChanged += Compass_ReadingChanged;
             ///OrientationSensor.ReadingChanged += OrientationSensor_ReadingChanged;
@@ -333,7 +339,7 @@ namespace VYRMobile.Views
         private async void MoveCamera()
         {
             //var request = new GeolocationRequest(GeolocationAccuracy.High);
-            var location = await Geolocation.GetLastKnownLocationAsync();
+            var location = await Geolocation.GetLocationAsync(new GeolocationRequest(GeolocationAccuracy.High, TimeSpan.FromSeconds(3)));
             Position myPosition = new Position(location.Latitude, location.Longitude);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(1000)));
         }
