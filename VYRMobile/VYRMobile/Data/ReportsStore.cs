@@ -22,6 +22,7 @@ namespace VYRMobile.Data
         FirebaseHelper _firebase = new FirebaseHelper();
         private List<string> ImagesNames = new List<string>();
         private List<Stream> ImagesStreams = new List<Stream>();
+        string Image;
         public ReportsStore()
         {
             _client = new ApiHelper();
@@ -46,7 +47,7 @@ namespace VYRMobile.Data
 
             if (report.Location == null || report.Description == null || report.Description == "")
             {
-                await App.Current.MainPage.DisplayAlert("Inválido", "Rellene todos los campos para continuar correctamente", "O");
+                await App.Current.MainPage.DisplayAlert("Inválido", "Rellene todos los campos para continuar correctamente", "Aceptar");
                 return false;
             }
 
@@ -78,6 +79,55 @@ namespace VYRMobile.Data
 
             App.ImagesStreams.Clear();
             App.ImagesNames.Clear();
+
+            return response.IsSuccessStatusCode;
+
+        }
+        public async Task<bool> AddTemporaryReportAsync(Antena antena, string imageName, Stream imageStream)
+        {
+            if (antena == null || !IsConnected)
+                return false;
+
+            if (antena.LocationName == null || antena.LocationName == "")
+            {
+                await App.Current.MainPage.DisplayAlert("Inválido", "Seleccione una localidad para continuar", "Aceptar");
+                return false;
+            }
+
+            DateTime date = DateTime.UtcNow;
+
+            if (ImagesStreams != null & ImagesNames != null)
+            {
+                await _firebase.Upload(imageStream, App.ApplicationUserId, imageName, date);
+                Image = await _firebase.GetFile(imageName, App.ApplicationUserId, date);
+            }
+
+            var requestReport = new Report()
+            {
+                Title = antena.LocationName.ToString(),
+                Created = date,
+                Img = this.Image
+            };
+
+            string serializedData = JsonConvert.SerializeObject(requestReport);
+            var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+            var response = await _client.PostAsync("/api/v1/reports", contentData);
+            DependencyService.Get<IToast>().LongToast(response.StatusCode.ToString());
+
+            App.ImagesStreams.Clear();
+            App.ImagesNames.Clear();
+
+            return response.IsSuccessStatusCode;
+
+        }
+        public async Task<bool> SendGeofenceReportAsync(Report report)
+        {
+            if (!IsConnected)
+                return false;
+
+            string serializedData = JsonConvert.SerializeObject(report);
+            var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+            var response = await _client.PostAsync("/api/v1/reports", contentData);
 
             return response.IsSuccessStatusCode;
 

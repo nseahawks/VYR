@@ -12,6 +12,8 @@ using Android.Widget;
 using Android.Gms.Location;
 using Xamarin.Essentials;
 using System.Threading.Tasks;
+using VYRMobile.Data;
+using VYRMobile.Models;
 
 namespace VYRMobile.Droid.Services
 {
@@ -38,10 +40,22 @@ namespace VYRMobile.Droid.Services
             switch (geofenceTransition)
             {
                 case Geofence.GeofenceTransitionEnter:
-                    //SendEmail("Vigilante acaba de entrar al area asignada en la fecha y hora: " + DateTime.Now.ToString());
+                    Report reportEnter = new Report()
+                    {
+                        Title = "Entrada",
+                        Description = "El vigilante acaba de entrar al area designada de trabajo",
+                        Created = DateTime.Now
+                    };
+                    ReportsStore.Instance.SendGeofenceReportAsync(reportEnter);
                     break;
                 case Geofence.GeofenceTransitionExit:
-                    //SendEmail("Vigilante acaba de salir del area asignada en la fecha y hora: " + DateTime.Now.ToString());
+                    Report reportExit = new Report()
+                    {
+                        Title = "Salida",
+                        Description = "El vigilante acaba de salir de su area asignada de trabajo",
+                        Created = DateTime.Now
+                    };
+                    ReportsStore.Instance.SendGeofenceReportAsync(reportExit);
                     break;
                 default:
                     // Log the error.

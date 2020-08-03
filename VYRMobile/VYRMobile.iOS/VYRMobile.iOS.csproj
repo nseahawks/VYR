@@ -129,6 +129,9 @@
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
       <Version>3.0.3</Version>
     </PackageReference>
+    <PackageReference Include="CoordinateSharp">
+      <Version>2.7.1.1</Version>
+    </PackageReference>
     <PackageReference Include="FirebaseStorage.net">
       <Version>1.0.3</Version>
     </PackageReference>
