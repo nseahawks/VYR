@@ -12,8 +12,7 @@
              mc:Ignorable="d"
              x:Class="VYRMobile.Home"
              NavigationPage.HasNavigationBar="False"
-             NavigationPage.HasBackButton="False"
-             ShowMapCommand ="{Binding MapCommand}">
+             NavigationPage.HasBackButton="False">
     
     <ContentPage.Resources>
         <ResourceDictionary>
@@ -227,7 +226,7 @@
                 <button:SfButton 
                     x:Name="QR"
                     FontFamily="{StaticResource PoppinsMedium}"
-                    Text="ESCANEAR QR"
+                    Text="Reportar puntos"
                     TextColor="{DynamicResource SecondaryColor}"
                     CornerRadius="3"
                     BackgroundColor="{DynamicResource PrimaryColor}"

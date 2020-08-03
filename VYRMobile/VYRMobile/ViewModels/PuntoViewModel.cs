@@ -15,6 +15,7 @@ using Xamarin.Forms.GoogleMaps;
 using Newtonsoft.Json;
 using VYRMobile.Views.Popups;
 using Plugin.CloudFirestore;
+using CoordinateSharp;
 
 namespace VYRMobile.ViewModels
 {
@@ -30,14 +31,11 @@ namespace VYRMobile.ViewModels
         public ICommand CheckAntenna { get; }
         public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
-        private static PuntoViewModel _instance;
+        private readonly static PuntoViewModel _instance = new PuntoViewModel();
         public static PuntoViewModel Instance
         {
             get
             {
-                if (_instance == null)
-                    _instance = new PuntoViewModel();
-
                 return _instance;
             }
         }
@@ -318,23 +316,30 @@ namespace VYRMobile.ViewModels
 
         private async void CheckingAntenna()
         {
-            foreach (var antena in Antenas)
+            //FulfillAntenasCollection();
+
+            foreach (var antena in Antenas /*.UserLocations Antenas*/)
             {
                 string antenaId = antena.Id.ToString();
 
                 if(antenaId == App.AntennaId)
                 {
-                    //var userLocation = await Geolocation.GetLastKnownLocationAsync();
-                    //Location locationCoordinates = new Location(antena.Latitude, antena.Longitude);
+                    var userLocation = await Geolocation.GetLastKnownLocationAsync();
+                    Location locationCoordinates = new Location(antena.Latitude, antena.Longitude);
 
-                    //var distance = Location.CalculateDistance(userLocation.Latitude, userLocation.Longitude, locationCoordinates, DistanceUnits.Kilometers);
+                    var distance = Location.CalculateDistance(userLocation.Latitude, userLocation.Longitude, locationCoordinates, DistanceUnits.Kilometers);
 
-                    //if(distance <= 0.2)
-                    //{
-                        var oldAntena = App.UserLocations.Find(ant => ant.Equals(antena));
+                    if(distance <= 0.2)
+                    {
                         antena.PointChecked = true;
-                        App.UserLocations.Remove(oldAntena);
-                        App.UserLocations.Add(antena);
+                        foreach(var location in App.UserLocations)
+                        {
+                            if (location.Id.ToString() == antenaId)
+                            {
+                                location.PointChecked = true;
+                            }
+                        }
+
                         CheckIfAllPointsAreDone();
                         /*await CrossCloudFirestore.Current
                             .Instance
@@ -361,19 +366,20 @@ namespace VYRMobile.ViewModels
 
                         await _store.AddRecordAsync(record);
 
-                        await App.Current.MainPage.Navigation.PopModalAsync();
+                        await App.Current.MainPage.DisplayAlert("Completado", "Punto verificado correctamente", "Aceptar");
+                        //await App.Current.MainPage.Navigation.PopModalAsync();
 
                         break;
                         //
                         //await App.Current.MainPage.DisplayAlert("Completado", "Punto verificado correctamente", "Aceptar");
 
-                    //}
-                    /*else
+                    }
+                    else
                     {
-                        await App.Current.MainPage.Navigation.PopModalAsync();
+                        await App.Current.MainPage.DisplayAlert("Muy lejos", "No estas en el punto que quieres verificar", "Aceptar");
                         break;
                         //
-                    }*/
+                    }
                 }
             }
         }
@@ -435,18 +441,34 @@ namespace VYRMobile.ViewModels
                 await Task.Delay(1000);
             }
         }
-        private void CheckIfAllPointsAreDone()
+        private async void CheckIfAllPointsAreDone()
         {
+            Coordinate coordinate = new Coordinate(18.433335, -70.038150, DateTime.Now);
+            bool isSunUp = coordinate.CelestialInfo.IsSunUp;
             bool areAllDone = App.UserLocations.TrueForAll(isTrueForAll);
+            int maximumRounds;
+
+            if (isSunUp)
+            {
+                maximumRounds = 4;
+            }
+            else
+            {
+                maximumRounds = 2;
+            }
 
             if (areAllDone)
             {
                 foreach(var antena in Antenas)
                 {
                     antena.PointChecked = false;
+                    foreach(var location in App.UserLocations)
+                    {
+                        location.PointChecked = false;
+                    }
                 }
 
-                if (RoundNumber < 4)
+                if (RoundNumber < maximumRounds)
                 {
                     RoundNumber++;
                 }
@@ -455,6 +477,7 @@ namespace VYRMobile.ViewModels
                     IsButton = false;
                     IsList = false;
                     IsDoneMessage = true;
+                    await App.Current.MainPage.DisplayAlert("Completado", "Ya no tienes mas rondas por hoy", "Aceptar");
                 }
             }
         }
@@ -496,6 +519,13 @@ namespace VYRMobile.ViewModels
             pages.MoveNext();
 
             await App.Current.MainPage.Navigation.PushAsync(menupage);*/
+        }
+        private void FulfillAntenasCollection()
+        {
+            foreach(var location in App.UserLocations)
+            {
+                Antenas.Add(location);
+            }
         }
     }
 }

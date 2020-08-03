@@ -16,45 +16,39 @@ namespace VYRMobile
     public partial class Home : ContentPage
     {
         HttpClient _client;
-        public static readonly BindableProperty ShowMapCommandProperty =
-           BindableProperty.Create(nameof(ShowMapCommand), typeof(Command), typeof(Home), null, BindingMode.TwoWay);
 
         PuntoViewModel pvm = new PuntoViewModel();
-        public ICommand LoadCommand { get; }
+        public Command LocationCheckingCommand { get; set; }
+        private static Home _instance;
+        public static Home Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new Home();
 
+                return _instance;
+            }
+        }
         public Home()
         {
             InitializeComponent();
-            BindingContext = new PuntoViewModel();
-            LoadCommand = new Command(LoadView);
+            BindingContext = PuntoViewModel.Instance;
+            LocationCheckingCommand = new Command(LocationChecking);
+
             _client = new ApiHelper();
 
             QR.Clicked += QR_Clicked;
             btnCall.Clicked += btnCall_Clicked;
-            ShowMapCommand = new Command(ShowMap);
         }
         protected override void OnAppearing()
         {
             base.OnAppearing();
         }
-        public void LoadView()
-        {
-            antenasView.ItemsSource = null;
-            antenasView.ItemsSource = pvm.Puntos;
-        }
 
         protected override void OnDisappearing()
         {
             base.OnDisappearing();
-        }
-        public Command ShowMapCommand
-        {
-            get { return (Command)GetValue(ShowMapCommandProperty); }
-            set { SetValue(ShowMapCommandProperty, value); }
-        }
-        private void ShowMap()
-        {
-            Navigation.PushModalAsync(new Mapa2());
         }
         private void QR_Clicked(object sender, EventArgs e)
         {
@@ -62,7 +56,7 @@ namespace VYRMobile
         }
         private async void Escaner()
         {
-            var scannerPage = new ZXingScannerPage();
+            /*var scannerPage = new ZXingScannerPage();
             
             scannerPage.Title = "Lector de QR";
 
@@ -72,16 +66,20 @@ namespace VYRMobile
 
                 App.AntennaId = result.ToString();
 
-                locationChecking.Command.Execute(null);
+                LocationChecking();
             };
 
-            await Navigation.PushModalAsync(scannerPage);
-            
+            await Navigation.PushModalAsync(scannerPage);*/
+            await Navigation.PushPopupAsync(new LocationReportPopup());
         }
 
         private async void btnCall_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushPopupAsync(new CallPopup());
+        }
+        private void LocationChecking()
+        {
+            locationChecking.Command.Execute(null);
         }
     }
 }
