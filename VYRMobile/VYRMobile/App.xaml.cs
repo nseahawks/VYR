@@ -33,6 +33,7 @@ namespace VYRMobile
         internal static List<Antena> UserLocations = new List<Antena>();
         internal static List<Stream> ImagesStreams = new List<Stream>();
         internal static List<string> ImagesNames = new List<string>();
+        internal static List<string> ChipsNames = new List<string>();
         internal static List<Record> Records = new List<Record>();
         internal static List<SfCheckBox> Faults = new List<SfCheckBox>();
         internal static List<Calculation> Calculations = new List<Calculation>();

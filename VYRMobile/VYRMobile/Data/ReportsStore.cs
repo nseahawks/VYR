@@ -45,7 +45,7 @@ namespace VYRMobile.Data
             if (report == null || !IsConnected)
                 return false;
 
-            if (report.Location == null || report.Description == null || report.Description == "")
+            if (report.Location == null || string.IsNullOrEmpty(report.Description))
             {
                 await App.Current.MainPage.DisplayAlert("Inválido", "Rellene todos los campos para continuar correctamente", "Aceptar");
                 return false;
@@ -88,7 +88,7 @@ namespace VYRMobile.Data
             if (antena == null || !IsConnected)
                 return false;
 
-            if (antena.LocationName == null || antena.LocationName == "")
+            if (string.IsNullOrEmpty(antena.LocationName))
             {
                 await App.Current.MainPage.DisplayAlert("Inválido", "Seleccione una localidad para continuar", "Aceptar");
                 return false;
@@ -120,7 +120,7 @@ namespace VYRMobile.Data
             return response.IsSuccessStatusCode;
 
         }
-        public async Task<bool> SendGeofenceReportAsync(Report report)
+        public async Task<bool> SendEventualityReport(Report report)
         {
             if (!IsConnected)
                 return false;

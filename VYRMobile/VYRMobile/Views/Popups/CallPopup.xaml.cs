@@ -59,7 +59,7 @@ namespace VYRMobile.Views.Popups
         }
         private async void call2_Clicked(object sender, EventArgs e)
         {
-            string phoneNumber = "+18097966316";
+            string phoneNumber = "+18292926529";
             DependencyService.Get<IMakePhoneCall>().MakeCall(phoneNumber);
 
             //CrossMessaging.Current.PhoneDialer.MakePhoneCall("+18097966316", "Francisco Rojas");

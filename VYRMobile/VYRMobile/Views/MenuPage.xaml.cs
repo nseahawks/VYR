@@ -30,7 +30,7 @@ namespace VYRMobile.Views
 
             ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
 
-            if(App.ApplicationUserRole == "Supervisor")
+            if(App.ApplicationUserRole == "Supervisor" || App.ApplicationUserRole == "Master")
             {
                 NavigationPage supervision = new NavigationPage(new SupervisionPage())
                 {

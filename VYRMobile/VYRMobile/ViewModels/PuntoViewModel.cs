@@ -272,22 +272,10 @@ namespace VYRMobile.ViewModels
             ChronoColorChange(timeSpan);
 
             await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Mapa2(App.Alarm.LocationName, App.Alarm.Location)));
-            //ShowMap();
-            //await GetActualLocation();
-            //GoogleMapsViewModel.Instance.LoadRouteCommand2.Execute(null);
-            //MapCommand.Execute(null);
         }
 
         private void StartStopwatch()
         {
-            /*FirestoreAlarm alarmDocument = new FirestoreAlarm()
-            {
-                LocationName = "Seahawks",
-                Location = new GeoPoint(18.4047, -70.0328),
-                Type = "Alarm"
-            };
-            await App.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type));*/
-
             TimeSpan timeSpan = new TimeSpan();
             timeSpan = TimeSpan.FromSeconds(60); 
 
@@ -316,9 +304,7 @@ namespace VYRMobile.ViewModels
 
         private async void CheckingAntenna()
         {
-            //FulfillAntenasCollection();
-
-            foreach (var antena in Antenas /*.UserLocations Antenas*/)
+            foreach (var antena in Antenas)
             {
                 string antenaId = antena.Id.ToString();
 
@@ -479,52 +465,6 @@ namespace VYRMobile.ViewModels
                     IsDoneMessage = true;
                     await App.Current.MainPage.DisplayAlert("Completado", "Ya no tienes mas rondas por hoy", "Aceptar");
                 }
-            }
-        }
-        /*private async Task GetActualLocation()
-        {
-            try
-            {
-                var location = await Geolocation.GetLastKnownLocationAsync();
-                Position position = new Position(location.Latitude, location.Longitude);
-
-                if (location != null)
-                {
-                    Mapa2 mapa = new Mapa2();
-                    mapa.OriginLocationlat = position.Latitude.ToString();
-                    mapa.OriginLocationlng = position.Longitude.ToString();
-                    mapa.DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
-                    mapa.DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
-                    //mapa.DestinationLocationlat = "18.4047";
-                    //mapa.DestinationLocationlng = "-70.0328";
-                }
-            }
-            catch (Exception ex)
-            {
-                await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
-            }
-        }*/
-        private async Task ShowMap()
-        {
-            await App.Current.MainPage.Navigation.PushAsync(MenuPage.Instance);
-            MenuPage.Instance.ShowMapCommand.Execute(null);
-            /*var menuPage = new MenuPage(); 
-            MenuPage.Instance.CurrentPage = MenuPage.Instance.Children[1];
-            await menuPage.CurrentPage.Navigation.PushAsync(new Mapa2());
-            App.Current.MainPage = new NavigationPage(menuPage);
-            MenuPage menupage = new MenuPage();
-            var pages = menupage.Children.GetEnumerator();
-            pages.Reset();
-            pages.MoveNext();
-            pages.MoveNext();
-
-            await App.Current.MainPage.Navigation.PushAsync(menupage);*/
-        }
-        private void FulfillAntenasCollection()
-        {
-            foreach(var location in App.UserLocations)
-            {
-                Antenas.Add(location);
             }
         }
     }
