@@ -86,7 +86,7 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    ItemsSource="{Binding Equipos}"
+                    ItemsSource="{Binding Equipos, Mode=TwoWay}"
                     SelectionMode="None"
                     HasUnevenRows="True"
                     SeparatorVisibility="Default">
@@ -118,7 +118,7 @@
                                     <Switch 
                                         Grid.Column="2"
                                         x:Name="optionSwitch"
-                                        IsToggled="True"
+                                        IsToggled="{Binding Toggle, Mode=TwoWay}"
                                         ThumbColor="{StaticResource GreenColor}"
                                         OnColor="{StaticResource GreenColor}"/> 
                                 </Grid>

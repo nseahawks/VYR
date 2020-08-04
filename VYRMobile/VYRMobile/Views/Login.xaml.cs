@@ -57,42 +57,10 @@ namespace VYRMobile
         {
             if (App.IsUserLoggedIn)
             {
-
-                if(App.ApplicationUserRole == "Supervisor")
-                {
-                    var document = await CrossCloudFirestore.Current.Instance
-                                              .GetCollection("supervisorsApp")
-                                              .GetDocument(App.ApplicationUserId)
-                                              .GetDocumentAsync(); ;
-
-                    //var model = document.ToObject<ApplicationUser>();
-
-                    await CrossCloudFirestore.Current.Instance
-                                              .GetCollection("supervisorsApp")
-                                              .GetDocument(App.ApplicationUserId)
-                                              .UpdateDataAsync(new { LoggedIn = true });
-
-                    await CrossCloudFirestore.Current.Instance
-                                              .GetCollection("supervisorsApp")
-                                              .GetDocument(App.ApplicationUserId)
-                                              .UpdateDataAsync(new { Status = "WAITING" });
-
-                }
-                else
-                {
-                    var document = await CrossCloudFirestore.Current.Instance
-                                              .GetCollection("usersApp")
-                                              .GetDocument(App.ApplicationUserId)
-                                              .GetDocumentAsync(); ;
-
-                    //var model = document.ToObject<ApplicationUser>();
-
-                    await CrossCloudFirestore.Current.Instance
-                                              .GetCollection("Users")
-                                              .GetDocument(App.ApplicationUserId)
-                                              .UpdateDataAsync(new { LoggedIn = true });
-
-                }
+                await CrossCloudFirestore.Current.Instance
+                                         .GetCollection("Users")
+                                         .GetDocument(App.ApplicationUserId)
+                                         .UpdateDataAsync(new { LoggedIn = true });
 
                 string user = email.Text.ToString();
                 await SecureStorage.SetAsync("EmailRemembered", user);

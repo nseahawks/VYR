@@ -93,7 +93,7 @@ namespace VYRMobile.Views
             //}
         }
         private async void StartGeofence() 
-        { 
+        {
             if(App.ApplicationUserRole == "Vigilant")
             {
                 var locationPoints = await ReportsStore.Instance.GetAntenasAsync();

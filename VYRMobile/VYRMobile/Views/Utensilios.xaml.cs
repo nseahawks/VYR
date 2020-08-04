@@ -1,7 +1,11 @@
 ﻿using Plugin.CloudFirestore;
 using Plugin.DeviceInfo;
+using Rg.Plugins.Popup.Extensions;
 using System;
+using System.Collections.Generic;
+using VYRMobile.Models;
 using VYRMobile.ViewModels;
+using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
@@ -13,7 +17,7 @@ namespace VYRMobile.Views
         public Utensilios()
         {
             InitializeComponent();
-            BindingContext = new EquipoViewModel();
+            BindingContext = EquipoViewModel.Instance;
             btnConfirmar.Clicked += BtnConfirmar_Clicked;
 
             if (App.IsEquipmentValitated == true)
@@ -32,9 +36,29 @@ namespace VYRMobile.Views
                 /*await CrossCloudFirestore.Current.Instance
                                           .GetCollection("usersApp")
                                           .GetDocument(App.ApplicationUserId)
-                                          .UpdateDataAsync(new { Status = "WAITING" });*/
+                                          .UpdateDataAsync(new { Status = "WAITING" });
 
-                Application.Current.MainPage = new NavigationPage(new Loading());
+                List<Equipo> items = new List<Equipo>();
+                
+                items = itemsList.ItemsSource as List<Equipo>;
+                
+                foreach(var item in itemsList.ItemsSource)
+                {
+                    item.
+                }
+                var isEquipmentReady = isTrueForAll(itemsList.ItemsSource);*/
+
+                bool isEquipmentReady = EquipoViewModel.Instance.getEquipos();
+
+                if(isEquipmentReady)
+                {
+                    Application.Current.MainPage = new NavigationPage(new Loading());
+                }
+                else
+                {
+                    List<Equipo> items = EquipoViewModel.Instance.getMissingEquipment();
+                    await Navigation.PushPopupAsync(new MissingEquipmentReport(items));
+                }
             }
         }
 
