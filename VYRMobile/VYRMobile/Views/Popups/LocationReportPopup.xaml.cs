@@ -34,9 +34,12 @@ namespace VYRMobile.Views.Popups
         {
             await Navigation.PushPopupAsync(new LoadingPopup("Cargando..."));
 
-            await ReportsStore.Instance.AddTemporaryReportAsync(location, imageName, imageStream);
-            App.AntennaId = location.Id.ToString();
-            Home.Instance.LocationCheckingCommand.Execute(null);
+            bool isSuccess = await ReportsStore.Instance.AddTemporaryReportAsync(location, imageName, imageStream);
+            if (isSuccess)
+            {
+                App.AntennaId = location.Id.ToString();
+                Home.Instance.LocationCheckingCommand.Execute(null);
+            }
 
             await Navigation.PopAllPopupAsync();
         }

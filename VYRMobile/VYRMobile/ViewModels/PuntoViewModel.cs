@@ -16,6 +16,7 @@ using Newtonsoft.Json;
 using VYRMobile.Views.Popups;
 using Plugin.CloudFirestore;
 using CoordinateSharp;
+using System.Collections.Generic;
 
 namespace VYRMobile.ViewModels
 {
@@ -23,6 +24,7 @@ namespace VYRMobile.ViewModels
     {
         private RecordsStore _store { get; set; }
         public Stopwatch stopWatch = new Stopwatch();
+        static List<Antena> BackupLocations = new List<Antena>();
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; set; }
@@ -134,6 +136,7 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged("Tareas");
             }
         }
+        
         private bool _isEmpty;
         public bool IsEmpty
         {
@@ -194,10 +197,35 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(RoundNumber));
             }
         }
+        private int maximumRounds;
+        public int MaximumRounds
+        {
+            get { return maximumRounds; }
+            set
+            {
+                maximumRounds = value;
+                OnPropertyChanged(nameof(MaximumRounds));
+            }
+        }
+        private string roundsDisplay;
+        public string RoundsDisplay
+        {
+            get { return roundsDisplay; }
+            set
+            {
+                roundsDisplay = value;
+                OnPropertyChanged(nameof(RoundsDisplay));
+            }
+        }
         private static bool isTrueForAll(Antena antena)
         {
             return (antena.PointChecked == true);
         }
+        private static bool isTrueForAllLocationNames(Antena antena)
+        {
+            return BackupLocations.Exists(p => p.LocationName.Equals(antena.LocationName));
+        }
+
         public PuntoViewModel()
         {
             IsList = true;
@@ -304,6 +332,7 @@ namespace VYRMobile.ViewModels
 
         private async void CheckingAntenna()
         {
+            bool wereChangesDone = false;
             foreach (var antena in Antenas)
             {
                 string antenaId = antena.Id.ToString();
@@ -318,6 +347,7 @@ namespace VYRMobile.ViewModels
                     if(distance <= 0.2)
                     {
                         antena.PointChecked = true;
+
                         foreach(var location in App.UserLocations)
                         {
                             if (location.Id.ToString() == antenaId)
@@ -325,6 +355,8 @@ namespace VYRMobile.ViewModels
                                 location.PointChecked = true;
                             }
                         }
+
+                        wereChangesDone = true;
 
                         CheckIfAllPointsAreDone();
                         /*await CrossCloudFirestore.Current
@@ -338,7 +370,7 @@ namespace VYRMobile.ViewModels
                         var record = new Record()
                         {
                             UserId = await SecureStorage.GetAsync("id"),
-                            Type = "Antena Cubierta",
+                            Type = "Punto verificado",
                             RecordType = Record.RecordTypes.AntennaCovered,
                             Owner = antena.LocationName,
                             Date = DateTime.Now,
@@ -368,10 +400,34 @@ namespace VYRMobile.ViewModels
                     }
                 }
             }
+
+            if(wereChangesDone)
+            {
+                var roundsStateBackupJson = JsonConvert.SerializeObject(App.UserLocations);
+                await SecureStorage.SetAsync("roundsStateBackup", roundsStateBackupJson);
+            }
         }
         private async void LoadData()
         {
             var antennas = await ReportsStore.Instance.GetAntenasAsync();
+            var roundsStateBackup = await SecureStorage.GetAsync("roundsStateBackup");
+            string roundsStateNumber = await SecureStorage.GetAsync("roundsStateNumberBackup");
+
+            if(!string.IsNullOrEmpty(roundsStateNumber))
+            {
+                RoundNumber = Convert.ToInt32(roundsStateNumber);
+            }
+
+            if(roundsStateBackup != null)
+            {
+                BackupLocations = JsonConvert.DeserializeObject<List<Antena>>(roundsStateBackup);
+
+                if(antennas.TrueForAll(isTrueForAllLocationNames))
+                {
+                    antennas = BackupLocations;
+                }
+            }
+
             App.UserLocations = antennas;
             Antenas.Clear();
 
@@ -380,7 +436,7 @@ namespace VYRMobile.ViewModels
                 Antenas.Add(antenna);
             }
 
-            if(Antenas.Count == 0)
+            if (Antenas.Count == 0)
             {
                 IsEmpty = true;
             }
@@ -388,6 +444,8 @@ namespace VYRMobile.ViewModels
             {
                 IsEmpty = false;
             }
+
+            DetermineNumberOfRounds();
         }
         private async void LoadData2()
         {
@@ -429,21 +487,9 @@ namespace VYRMobile.ViewModels
         }
         private async void CheckIfAllPointsAreDone()
         {
-            Coordinate coordinate = new Coordinate(18.433335, -70.038150, DateTime.Now);
-            bool isSunUp = coordinate.CelestialInfo.IsSunUp;
             bool areAllDone = App.UserLocations.TrueForAll(isTrueForAll);
-            int maximumRounds;
 
-            if (isSunUp)
-            {
-                maximumRounds = 4;
-            }
-            else
-            {
-                maximumRounds = 2;
-            }
-
-            if (areAllDone)
+            if(areAllDone)
             {
                 foreach(var antena in Antenas)
                 {
@@ -454,9 +500,11 @@ namespace VYRMobile.ViewModels
                     }
                 }
 
-                if (RoundNumber < maximumRounds)
+                if(RoundNumber < MaximumRounds)
                 {
                     RoundNumber++;
+                    RoundsDisplay = RoundNumber.ToString() + "/" + MaximumRounds.ToString();
+                    await SecureStorage.SetAsync("roundsNumberStateBackup", RoundNumber.ToString());
                 }
                 else
                 {
@@ -466,6 +514,38 @@ namespace VYRMobile.ViewModels
                     await App.Current.MainPage.DisplayAlert("Completado", "Ya no tienes mas rondas por hoy", "Aceptar");
                 }
             }
+        }
+        static public bool IsTimeOfDayBetween(DateTime time, TimeSpan startTime, TimeSpan endTime)
+        {
+            if (endTime == startTime)
+            {
+                return true;
+            }
+            else if (endTime < startTime)
+            {
+                return time.TimeOfDay <= endTime ||
+                    time.TimeOfDay >= startTime;
+            }
+            else
+            {
+                return time.TimeOfDay >= startTime &&
+                    time.TimeOfDay <= endTime;
+            }
+        }
+        private void DetermineNumberOfRounds()
+        {
+            bool IsDayShift = IsTimeOfDayBetween(DateTime.Now, new TimeSpan(6, 0, 0), new TimeSpan(18, 0, 0));
+
+            if (IsDayShift)
+            {
+                MaximumRounds = 4;
+            }
+            else
+            {
+                MaximumRounds = 2;
+            }
+
+            RoundsDisplay = RoundNumber.ToString() + "/" + MaximumRounds.ToString();
         }
     }
 }

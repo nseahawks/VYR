@@ -76,7 +76,7 @@
             <Style x:Key="CheckBoxStyle" TargetType="CheckBox">
                 <Setter Property="Color" Value="{StaticResource BaseColor}"/>
                 <Setter Property="VerticalOptions" Value="Center" />
-                <Setter Property="HorizontalOptions" Value="Center" />
+                <Setter Property="HorizontalOptions" Value="End" />
             </Style>
 
             <Style x:Key="PhotoStyle" TargetType="Image">
@@ -116,7 +116,8 @@
             <Frame 
                 HeightRequest="350"
                 Grid.Row="1">
-                <Grid Grid.RowSpan="2">
+                <Grid Grid.RowSpan="2"
+                      HorizontalOptions="FillAndExpand">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="255"/>
                     </Grid.RowDefinitions>
@@ -124,16 +125,18 @@
                         <tabview:SfTabView 
                             x:Name="tabView" 
                             VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"
                             VisibleHeaderCount="1" 
                             Grid.Row="0">
                             <tabview:SfTabView.Items>
                                 <tabview:SfTabItem 
-                                    Title="{Binding RoundNumber, StringFormat='Ronda: {0:D1}/4'}"
+                                    Title="{Binding RoundsDisplay, StringFormat='Ronda: {0}'}"
                                     TitleFontFamily="{StaticResource PoppinsBold}"
                                     SelectionColor="{StaticResource BaseColor}"
                                     TitleFontSize="{StaticResource FontSize16}">
                                     <tabview:SfTabItem.Content>
-                                        <Grid>
+                                        <Grid
+                                            HorizontalOptions="FillAndExpand">
                                             <ListView
                                                 x:Name="antenasView"
                                                 ItemsSource="{Binding Antenas}"

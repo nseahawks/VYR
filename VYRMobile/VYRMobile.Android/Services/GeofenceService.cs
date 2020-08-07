@@ -36,7 +36,7 @@ namespace VYRMobile.Droid.Services
             {
                 IGeofence geofence = new GeofenceBuilder()
                     .SetRequestId($"{item.Latitude}_{item.Longitude}")
-                    .SetCircularRegion(item.Latitude, item.Longitude, 10000)
+                    .SetCircularRegion(item.Latitude, item.Longitude, 250)
                     .SetLoiteringDelay(60 * 1000)
                     .SetTransitionTypes(Geofence.GeofenceTransitionEnter | Geofence.GeofenceTransitionExit)
                     .SetExpirationDuration((long)365 * 24 * 60 * 60 * 1000)
