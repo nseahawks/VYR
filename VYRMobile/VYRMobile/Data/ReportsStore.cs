@@ -98,8 +98,16 @@ namespace VYRMobile.Data
 
             if (ImagesStreams != null & ImagesNames != null)
             {
-                await _firebase.Upload(imageStream, App.ApplicationUserId, imageName, date);
-                Image = await _firebase.GetFile(imageName, App.ApplicationUserId, date);
+                try
+                {
+                    await _firebase.Upload(imageStream, App.ApplicationUserId, imageName, date);
+                    Image = await _firebase.GetFile(imageName, App.ApplicationUserId, date);
+                }
+                catch
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", "No se pudo procesar la informacion correctamente", "Aceptar");
+                    return false;
+                }
             }
 
             var requestReport = new Report()
