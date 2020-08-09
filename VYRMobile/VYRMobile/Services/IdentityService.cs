@@ -1,10 +1,12 @@
-﻿using Newtonsoft.Json;
+﻿using Microsoft.AppCenter.Crashes;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using VYRMobile.Data;
 using VYRMobile.Helper;
 using VYRMobile.Models;
 using VYRMobile.Styles;
@@ -40,13 +42,16 @@ namespace VYRMobile.Services
             {
                 var response = await _client.PostAsync("/api/v1/identity/login", contentData);
 
-                if(response.IsSuccessStatusCode == true) 
+                if(response.IsSuccessStatusCode == true)
                 {
                     string stringJWT = response.Content.ReadAsStringAsync().Result;
                     JWT jwt = JsonConvert.DeserializeObject<JWT>(stringJWT);
                     await SecureStorage.SetAsync("token", jwt.Token);
                     ApiHelper.Token = jwt.Token;
                     DeserializeToken(jwt.Token);
+
+                    await CheckRecentCrash();
+
                     return response.IsSuccessStatusCode;
                 }
                 else
@@ -58,6 +63,7 @@ namespace VYRMobile.Services
             {
                 throw;
             }
+
         }
 
         public Task<bool> RefreshTokenAsync(string token, string refreshToken)
@@ -106,6 +112,31 @@ namespace VYRMobile.Services
                 }
             }
         }
+        private async Task CheckRecentCrash()
+        {
+            try
+            {
+                bool hasStopped = await Crashes.HasCrashedInLastSessionAsync();
+
+                if (hasStopped)
+                {
+                    ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
+
+                    Report crashDetails = new Report()
+                    {
+                        Title = "Reporte de error",
+                        Description = crashReport.AndroidDetails.ToString(),
+                        Created = DateTime.Now
+                    };
+
+                    await ReportsStore.Instance.SendEventualityReportAsync(crashDetails);
+                }
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
+            }
+
+        }
     }
-    
 }

@@ -15,6 +15,7 @@ using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using System.Threading.Tasks;
+using System;
 
 namespace VYRMobile
 {
@@ -71,8 +72,6 @@ namespace VYRMobile
             {
                 Records = JsonConvert.DeserializeObject<List<Record>>(json);
             }
-            //ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
         }
-        
     }
 }

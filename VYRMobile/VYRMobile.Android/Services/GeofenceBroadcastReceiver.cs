@@ -46,7 +46,7 @@ namespace VYRMobile.Droid.Services
                         Description = "El vigilante acaba de entrar al area designada de trabajo",
                         Created = DateTime.Now
                     };
-                    ReportsStore.Instance.SendEventualityReport(reportEnter);
+                    ReportsStore.Instance.SendEventualityReportAsync(reportEnter);
                     break;
                 case Geofence.GeofenceTransitionExit:
                     Report reportExit = new Report()
@@ -55,7 +55,7 @@ namespace VYRMobile.Droid.Services
                         Description = "El vigilante acaba de salir de su area asignada de trabajo",
                         Created = DateTime.Now
                     };
-                    ReportsStore.Instance.SendEventualityReport(reportExit);
+                    ReportsStore.Instance.SendEventualityReportAsync(reportExit);
                     break;
                 default:
                     // Log the error.

@@ -44,7 +44,7 @@ namespace VYRMobile.Views.Popups
                 Created = DateTime.Now
             };
             await Navigation.PushPopupAsync(new LoadingPopup("Cargando..."));
-            bool isSuccess = await ReportsStore.Instance.SendEventualityReport(reporte);
+            bool isSuccess = await ReportsStore.Instance.SendEventualityReportAsync(reporte);
 
             if (isSuccess)
             {

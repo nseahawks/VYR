@@ -128,7 +128,7 @@ namespace VYRMobile.Data
             return response.IsSuccessStatusCode;
 
         }
-        public async Task<bool> SendEventualityReport(Report report)
+        public async Task<bool> SendEventualityReportAsync(Report report)
         {
             if (!IsConnected)
                 return false;
