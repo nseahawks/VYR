@@ -55,8 +55,8 @@ namespace VYRMobile.Droid
                 BitmapDescriptorFactory = new CachingNativeBitmapDescriptorFactory()
             };
 
-            /*AppCenter.Start("bff38954-6dd9-4a23-a41a-13430c73bfd8",
-                    typeof(Analytics), typeof(Crashes));*/
+            AppCenter.Start("bff38954-6dd9-4a23-a41a-13430c73bfd8",
+                    typeof(Analytics), typeof(Crashes));
 
             FormsMaps.Init(this, savedInstanceState);
             CachedImageRenderer.Init(true);

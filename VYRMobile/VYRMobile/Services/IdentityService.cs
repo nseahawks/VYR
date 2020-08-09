@@ -50,7 +50,7 @@ namespace VYRMobile.Services
                     ApiHelper.Token = jwt.Token;
                     DeserializeToken(jwt.Token);
 
-                    await CheckRecentCrash();
+                    //await CheckRecentCrash();
 
                     return response.IsSuccessStatusCode;
                 }
@@ -63,7 +63,6 @@ namespace VYRMobile.Services
             {
                 throw;
             }
-
         }
 
         public Task<bool> RefreshTokenAsync(string token, string refreshToken)
@@ -114,29 +113,12 @@ namespace VYRMobile.Services
         }
         private async Task CheckRecentCrash()
         {
-            try
+            if(App.HasAppCrashed)
             {
-                bool hasStopped = await Crashes.HasCrashedInLastSessionAsync();
-
-                if (hasStopped)
-                {
-                    ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
-
-                    Report crashDetails = new Report()
-                    {
-                        Title = "Reporte de error",
-                        Description = crashReport.AndroidDetails.ToString(),
-                        Created = DateTime.Now
-                    };
-
-                    await ReportsStore.Instance.SendEventualityReportAsync(crashDetails);
-                }
+                string crashReportSerializedData = await SecureStorage.GetAsync("crashReportData");
+                Report crashReport = JsonConvert.DeserializeObject<Report>(crashReportSerializedData);
+                await ReportsStore.Instance.SendEventualityReportAsync(crashReport);
             }
-            catch (Exception ex)
-            {
-                ex.ToString();
-            }
-
         }
     }
 }

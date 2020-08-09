@@ -24,6 +24,7 @@ namespace VYRMobile
         internal bool isUserConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         internal static bool IsUserLoggedIn = true;
         internal static bool IsEquipmentValitated = false;
+        internal static bool HasAppCrashed = false;
         internal static string ApplicationUserId;
         internal static string ApplicationUserRole;
         internal static string AntennaId;
@@ -46,7 +47,8 @@ namespace VYRMobile
             Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense(Constants.SyncfusionLicenseKey);
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
-            CreateDirectory(); 
+            CreateDirectory();
+            //SaveCrashReport();
 
             MainPage = new MainPage();
         }
@@ -71,6 +73,32 @@ namespace VYRMobile
             if (json != null)
             {
                 Records = JsonConvert.DeserializeObject<List<Record>>(json);
+            }
+        }
+        private async void SaveCrashReport()
+        {
+            try
+            {
+                /*bool hasStopped = await Crashes.HasCrashedInLastSessionAsync();
+
+                if (hasStopped)
+                {*/
+                    ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
+
+                    Report crashDetails = new Report()
+                    {
+                        Title = "Reporte de error",
+                        Description = crashReport.AndroidDetails.ToString(),
+                        Created = DateTime.Now
+                    };
+
+                    await SecureStorage.SetAsync("crashReportData", JsonConvert.SerializeObject(crashDetails));
+                    HasAppCrashed = true;
+                //}
+            }
+            catch (Exception ex)
+            {
+                ex.ToString();
             }
         }
     }
