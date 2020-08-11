@@ -20,7 +20,7 @@ namespace VYRMobile.Droid.Services
     [BroadcastReceiver()]
     public class GeofenceBroadcastReceiver : BroadcastReceiver
     {
-        public override void OnReceive(Context context, Intent intent)
+        public async override void OnReceive(Context context, Intent intent)
         {
             GeofencingEvent geofencingEvent = GeofencingEvent.FromIntent(intent);
             if (geofencingEvent.HasError)
@@ -46,7 +46,7 @@ namespace VYRMobile.Droid.Services
                         Description = "El vigilante acaba de entrar al area designada de trabajo",
                         Created = DateTime.Now
                     };
-                    ReportsStore.Instance.SendEventualityReportAsync(reportEnter);
+                    await ReportsStore.Instance.SendEventualityReportAsync(reportEnter);
                     break;
                 case Geofence.GeofenceTransitionExit:
                     Report reportExit = new Report()
@@ -55,7 +55,7 @@ namespace VYRMobile.Droid.Services
                         Description = "El vigilante acaba de salir de su area asignada de trabajo",
                         Created = DateTime.Now
                     };
-                    ReportsStore.Instance.SendEventualityReportAsync(reportExit);
+                    await ReportsStore.Instance.SendEventualityReportAsync(reportExit);
                     break;
                 default:
                     // Log the error.

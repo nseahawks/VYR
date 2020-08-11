@@ -1,20 +1,13 @@
 ﻿using VYRMobile.Services;
 using Xamarin.Forms;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Push;
 using System.IO;
 using System.Collections.Generic;
 using VYRMobile.Models;
 using Newtonsoft.Json;
 using Syncfusion.XForms.Buttons;
-using VYRMobile.Views;
-using Plugin.CloudFirestore;
 using System.Collections.ObjectModel;
 using Xamarin.Essentials;
-using Microsoft.AppCenter;
-using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
-using System.Threading.Tasks;
 using System;
 
 namespace VYRMobile

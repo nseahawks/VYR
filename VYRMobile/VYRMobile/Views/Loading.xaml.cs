@@ -105,8 +105,12 @@ namespace VYRMobile.Views
                 }
 
                 IGeofenceService geofencesService = DependencyService.Get<IGeofenceService>();
-                var location = await Geolocation.GetLastKnownLocationAsync();
 
+                var location = await Geolocation.GetLocationAsync();
+                if (location == null)
+                {
+                    location = await Geolocation.GetLastKnownLocationAsync();
+                }
                 geofencesService.SetGeofences(list, new Position(location.Latitude, location.Longitude));
             }
         }

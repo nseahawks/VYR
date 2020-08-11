@@ -44,7 +44,7 @@ namespace VYRMobile.Droid
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
             base.OnCreate(savedInstanceState);
-            Forms.SetFlags("FastRenderers_Experimental");
+            //Forms.SetFlags("FastRenderers_Experimental");
             Forms.SetFlags("CarouselView_Experimental");
             Forms.SetFlags("CollectionView_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -64,7 +64,7 @@ namespace VYRMobile.Droid
             Xamarin.Essentials.Platform.Init(this, savedInstanceState);
             FormsGoogleMaps.Init(this, savedInstanceState, platformConfig);
             Plugin.CurrentActivity.CrossCurrentActivity.Current.Init(this, savedInstanceState);
-            global::Xamarin.FormsMaps.Init(this, savedInstanceState);
+            //global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
             FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
