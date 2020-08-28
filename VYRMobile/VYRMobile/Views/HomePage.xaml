@@ -10,7 +10,7 @@
              xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Home"
+             x:Class="VYRMobile.HomePage"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False">
     

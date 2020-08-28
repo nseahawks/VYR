@@ -10,10 +10,10 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
 {
-    public partial class Usuario : ContentPage
+    public partial class UserPage : ContentPage
     {
         OptionViewModel VM = new OptionViewModel();
-        public Usuario()
+        public UserPage()
         {
             InitializeComponent();
             BindingContext = new OptionViewModel();

@@ -1,30 +1,29 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Plugin.CloudFirestore;
+using Plugin.Messaging;
+using Rg.Plugins.Popup.Extensions;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
-using System.Windows.Input;
-using Xamarin.Forms;
 using System.Threading.Tasks;
-using VYRMobile.Views;
-using VYRMobile.Models;
-using Plugin.Messaging;
+using System.Windows.Input;
 using VYRMobile.Data;
-using Rg.Plugins.Popup.Extensions;
+using VYRMobile.Helper;
+using VYRMobile.Models;
+using VYRMobile.Views;
 using Xamarin.Essentials;
-using Xamarin.Forms.GoogleMaps;
-using Newtonsoft.Json;
-using VYRMobile.Views.Popups;
-using Plugin.CloudFirestore;
-using CoordinateSharp;
-using System.Collections.Generic;
+using Xamarin.Forms;
 
 namespace VYRMobile.ViewModels
 {
-    public class PuntoViewModel : INotifyPropertyChanged
+    public class HomeViewModel : INotifyPropertyChanged
     {
         private RecordsStore _store { get; set; }
         public Stopwatch stopWatch = new Stopwatch();
-        static List<Antena> BackupLocations = new List<Antena>();
+        static List<CompanyLocation> BackupLocations = new List<CompanyLocation>();
+        PermissionsHelper _permissions = new PermissionsHelper();
         public Command MapCommand { get; set; }
         public ICommand StopCommand { get; }
         public ICommand StartCommand { get; set; }
@@ -33,8 +32,8 @@ namespace VYRMobile.ViewModels
         public ICommand CheckAntenna { get; }
         public ICommand ItemSelectedCommand => new Command<string>(ItemSelected);
 
-        private readonly static PuntoViewModel _instance = new PuntoViewModel();
-        public static PuntoViewModel Instance
+        private readonly static HomeViewModel _instance = new HomeViewModel();
+        public static HomeViewModel Instance
         {
             get
             {
@@ -106,18 +105,8 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        private ObservableCollection<Punto> _puntos;
-        public ObservableCollection<Punto> Puntos
-        {
-            get { return _puntos; }
-            set
-            {
-                _puntos = value;
-                OnPropertyChanged("Puntos");
-            }
-        }
-        private ObservableCollection<Antena> _antenas;
-        public ObservableCollection<Antena> Antenas
+        private ObservableCollection<CompanyLocation> _antenas;
+        public ObservableCollection<CompanyLocation> Antenas
         {
             get { return _antenas; }
             set
@@ -217,16 +206,16 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(RoundsDisplay));
             }
         }
-        private static bool isTrueForAll(Antena antena)
+        private static bool isTrueForAll(CompanyLocation antena)
         {
             return (antena.PointChecked == true);
         }
-        private static bool isTrueForAllLocationNames(Antena antena)
+        private static bool isTrueForAllLocationNames(CompanyLocation antena)
         {
             return BackupLocations.Exists(p => p.LocationName.Equals(antena.LocationName));
         }
 
-        public PuntoViewModel()
+        public HomeViewModel()
         {
             IsList = true;
             IsDoneMessage = false;
@@ -234,9 +223,8 @@ namespace VYRMobile.ViewModels
             ChronoColor = Color.Black;
 
             _store = new RecordsStore();
-            Puntos = new ObservableCollection<Punto>();
             //Tareas = new ObservableCollection<Report>();
-            Antenas = new ObservableCollection<Antena>();
+            Antenas = new ObservableCollection<CompanyLocation>();
 
             LoadData();
             //LoadData2();
@@ -299,7 +287,7 @@ namespace VYRMobile.ViewModels
             stopWatch.Start();
             ChronoColorChange(timeSpan);
 
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Mapa2(App.Alarm.LocationName, App.Alarm.Location)));
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new MapPage(App.Alarm.LocationName, App.Alarm.Location)));
         }
 
         private void StartStopwatch()
@@ -339,64 +327,76 @@ namespace VYRMobile.ViewModels
 
                 if(antenaId == App.AntennaId)
                 {
-                    var userLocation = await Geolocation.GetLastKnownLocationAsync();
-                    Location locationCoordinates = new Location(antena.Latitude, antena.Longitude);
+                    bool isLocationPermited = await _permissions.CheckLocationPermissionsStatus();
 
-                    var distance = Location.CalculateDistance(userLocation.Latitude, userLocation.Longitude, locationCoordinates, DistanceUnits.Kilometers);
-
-                    if(distance <= 0.2)
+                    if (isLocationPermited)
                     {
-                        antena.PointChecked = true;
-
-                        foreach(var location in App.UserLocations)
+                        try
                         {
-                            if (location.Id.ToString() == antenaId)
+                            var userLocation = await Geolocation.GetLastKnownLocationAsync();
+                            Location locationCoordinates = new Location(antena.Latitude, antena.Longitude);
+
+                            var distance = Location.CalculateDistance(userLocation.Latitude, userLocation.Longitude, locationCoordinates, DistanceUnits.Kilometers);
+
+                            if (distance <= 0.2)
                             {
-                                location.PointChecked = true;
+                                antena.PointChecked = true;
+
+                                foreach (var location in App.UserLocations)
+                                {
+                                    if (location.Id.ToString() == antenaId)
+                                    {
+                                        location.PointChecked = true;
+                                    }
+                                }
+
+                                wereChangesDone = true;
+
+                                CheckIfAllPointsAreDone();
+                                await CrossCloudFirestore.Current
+                                    .Instance
+                                    .GetCollection("Stands")
+                                    .GetDocument(App.ApplicationUserId)
+                                    .GetCollection("Locations")
+                                    .GetDocument(antenaId)
+                                    .UpdateDataAsync(new { IsChecked = true });
+
+                                var record = new Record()
+                                {
+                                    UserId = await SecureStorage.GetAsync("id"),
+                                    Type = "Punto verificado",
+                                    RecordType = Record.RecordTypes.AntennaCovered,
+                                    Owner = antena.LocationName,
+                                    Date = DateTime.Now,
+                                    Icon = "qr.png"
+                                };
+
+                                App.Records.Add(record);
+                                var Records = App.Records;
+                                var json = JsonConvert.SerializeObject(Records);
+                                await SecureStorage.SetAsync("records", json);
+
+
+                                await _store.AddRecordAsync(record);
+
+                                await App.Current.MainPage.DisplayAlert("Completado", "Punto verificado correctamente", "Aceptar");
+
+                                break;
+                            }
+                            else
+                            {
+                                await App.Current.MainPage.DisplayAlert("Muy lejos", "No estás en el punto que quieres verificar", "Aceptar");
+                                break;
                             }
                         }
-
-                        wereChangesDone = true;
-
-                        CheckIfAllPointsAreDone();
-                        /*await CrossCloudFirestore.Current
-                            .Instance
-                            .GetCollection("usersApp")
-                            .GetDocument(App.ApplicationUserId)
-                            .GetCollection("Stands")
-                            .GetDocument(antenaId)
-                            .UpdateDataAsync(new { Covered = true });*/
-
-                        var record = new Record()
+                        catch
                         {
-                            UserId = await SecureStorage.GetAsync("id"),
-                            Type = "Punto verificado",
-                            RecordType = Record.RecordTypes.AntennaCovered,
-                            Owner = antena.LocationName,
-                            Date = DateTime.Now,
-                            Icon = "qr.png"
-                        };
-
-                        App.Records.Add(record);
-                        var Records = App.Records;
-                        var json = JsonConvert.SerializeObject(Records);
-                        await SecureStorage.SetAsync("records", json);
-
-                        await _store.AddRecordAsync(record);
-
-                        await App.Current.MainPage.DisplayAlert("Completado", "Punto verificado correctamente", "Aceptar");
-                        //await App.Current.MainPage.Navigation.PopModalAsync();
-
-                        break;
-                        //
-                        //await App.Current.MainPage.DisplayAlert("Completado", "Punto verificado correctamente", "Aceptar");
-
+                            await App.Current.MainPage.DisplayAlert("Error", "Ocurrió un problema al procesar la información", "Aceptar");
+                        }
                     }
                     else
                     {
-                        await App.Current.MainPage.DisplayAlert("Muy lejos", "No estas en el punto que quieres verificar", "Aceptar");
-                        break;
-                        //
+                        await App.Current.MainPage.DisplayAlert("Fallido", "Por favor activa tu GPS para continuar", "Aceptar");
                     }
                 }
             }
@@ -410,7 +410,9 @@ namespace VYRMobile.ViewModels
         private async void LoadData()
         {
             var antennas = await ReportsStore.Instance.GetAntenasAsync();
-            var roundsStateBackup = await SecureStorage.GetAsync("roundsStateBackup");
+
+            var backupLocationsData = await SecureStorage.GetAsync("roundsStateBackup");
+            List<CompanyLocation> backupLocationsList = JsonConvert.DeserializeObject<List<CompanyLocation>>(backupLocationsData);
             string roundsStateNumber = await SecureStorage.GetAsync("roundsStateNumberBackup");
 
             if(!string.IsNullOrEmpty(roundsStateNumber))
@@ -418,10 +420,13 @@ namespace VYRMobile.ViewModels
                 RoundNumber = Convert.ToInt32(roundsStateNumber);
             }
 
-            if(roundsStateBackup != null)
+            if(backupLocationsList != null)
             {
-                BackupLocations = JsonConvert.DeserializeObject<List<Antena>>(roundsStateBackup);
-
+                foreach (var location in backupLocationsList)
+                {
+                    BackupLocations.Add(location);
+                }
+                
                 if(antennas.TrueForAll(isTrueForAllLocationNames))
                 {
                     antennas = BackupLocations;
@@ -497,6 +502,14 @@ namespace VYRMobile.ViewModels
                     foreach(var location in App.UserLocations)
                     {
                         location.PointChecked = false;
+
+                        await CrossCloudFirestore.Current
+                            .Instance
+                            .GetCollection("Stands")
+                            .GetDocument(App.ApplicationUserId)
+                            .GetCollection("Locations")
+                            .GetDocument(location.Id.ToString())
+                            .UpdateDataAsync(new { IsChecked = false });
                     }
                 }
 
@@ -546,6 +559,18 @@ namespace VYRMobile.ViewModels
             }
 
             RoundsDisplay = RoundNumber.ToString() + "/" + MaximumRounds.ToString();
+        }
+        private async Task<IEnumerable<CompanyLocation>> GetBackupLocations()
+        {
+            var items = await CrossCloudFirestore.Current.Instance
+                                        .GetCollection("Stands")
+                                        .GetDocument(App.ApplicationUserId)
+                                        .GetCollection("Locations")
+                                        .GetDocumentsAsync();
+            
+            IEnumerable<CompanyLocation> itemslist = items.ToObjects<CompanyLocation>();
+
+            return itemslist;
         }
     }
 }

@@ -1,6 +1,11 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.ComponentModel;
+using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
+using VYRMobile.Helper;
+using VYRMobile.Views;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VYRMobile
@@ -20,27 +25,16 @@ namespace VYRMobile
                 WidthRequest = 100,
                 HeightRequest = 100
             };
-            /*imageName = new Image
-            {
-                Source = "vyr.png",
-                WidthRequest = 100,
-                HeightRequest = 100
-            };*/
 
             AbsoluteLayout.SetLayoutFlags(splashImage,
                 AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(splashImage,
                 new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
-            /*AbsoluteLayout.SetLayoutFlags(imageName,
-                AbsoluteLayoutFlags.PositionProportional);
-            AbsoluteLayout.SetLayoutBounds(splashImage,
-                new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));*/
 
             sub.Children.Add(splashImage);
-            //sub.Children.Add(imageName);
 
-            this.BackgroundColor = Color.FromHex("#FFFFFF");
-            this.Content = sub;
+            BackgroundColor = Color.FromHex("#FFFFFF");
+            Content = sub;
            
         }
         protected override async void OnAppearing() 
@@ -48,25 +42,36 @@ namespace VYRMobile
             base.OnAppearing();
 
             await splashImage.ScaleTo(2.0, 1000, Easing.CubicOut);
-            //await ImageAppearing(imageName);
-            Application.Current.MainPage = new NavigationPage(new Login());
+
+            await RecoverLoginState();
+            
+            if (App.IsUserLoggedIn)
+            {
+                Application.Current.MainPage = new NavigationPage(new LoadingPage());
+            }
+            else
+            {
+                Application.Current.MainPage = new NavigationPage(new LoginPage());
+            }
         }
-        private async Task ImageAppearing(Image image)
+        private async Task RecoverLoginState()
         {
-            uint duration = 300;
+            var loginStateData = await SecureStorage.GetAsync("isLogged");
+            var tokenData = await SecureStorage.GetAsync("token");
 
-            await image.FadeTo(0, 0);
+            if (loginStateData == "true" && !string.IsNullOrEmpty(tokenData))
+            {
+                JwtSecurityToken token = JsonConvert.DeserializeObject<JwtSecurityToken>(tokenData);
 
-            var animation = new Animation();
-
-            animation.WithConcurrent((f) => image.Opacity = f, 0, 1, Easing.CubicOut);
-
-            animation.WithConcurrent(
-              (f) => image.TranslationY = f,
-              image.TranslationY + 100, 0,
-              Easing.CubicOut, 0, 1);
-
-            image.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
+                if(token.ValidTo > DateTime.Now)
+                {
+                    App.ApplicationUserId = await SecureStorage.GetAsync("id");
+                    App.ApplicationUserRole = await SecureStorage.GetAsync("role");
+                    App.IsUserLoggedIn = Convert.ToBoolean(loginStateData);
+                    App.ApplicationUserToken = token;
+                    ApiHelper.Token = token.Id;
+                }
+            }
         }
     }
 }

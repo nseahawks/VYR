@@ -13,9 +13,9 @@ using Xamarin.Forms.Xaml;
 namespace VYRMobile.Views.Popups
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MissingEquipmentReport : Rg.Plugins.Popup.Pages.PopupPage
+    public partial class MissingEquipmentReportPopup : Rg.Plugins.Popup.Pages.PopupPage
     {
-        public MissingEquipmentReport(List<Equipo> items)
+        public MissingEquipmentReportPopup(List<EquipmentItem> items)
         {
             InitializeComponent();
 
@@ -34,7 +34,7 @@ namespace VYRMobile.Views.Popups
             string description = "";
 
             foreach(var itemName in App.ChipsNames)
-            {
+            {                
                 description = description + itemName + ", ";
             }
             Report reporte = new Report() 
@@ -49,7 +49,7 @@ namespace VYRMobile.Views.Popups
             if (isSuccess)
             {
                 await Navigation.PopAllPopupAsync();
-                Application.Current.MainPage = new NavigationPage(new Loading());
+                Application.Current.MainPage = new NavigationPage(new LoadingPage());
             }
             else
             {
@@ -58,7 +58,7 @@ namespace VYRMobile.Views.Popups
             }
         }
 
-        private void GenerateChips(List<Equipo> items)
+        private void GenerateChips(List<EquipmentItem> items)
         {
             foreach(var item in items)
             {

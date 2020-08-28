@@ -16,13 +16,15 @@ using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
 using System.Threading.Tasks;
 using System;
+using System.IdentityModel.Tokens.Jwt;
+using VYRMobile.Helper;
 
 namespace VYRMobile
 {
     public partial class App : Application
     {
-        internal bool isUserConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
-        internal static bool IsUserLoggedIn = true;
+        internal static bool isUserConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
+        internal static bool IsUserLoggedIn;
         internal static bool IsEquipmentValitated = false;
         internal static bool HasAppCrashed = false;
         internal static string ApplicationUserId;
@@ -32,7 +34,8 @@ namespace VYRMobile
         internal static string AlarmDocumentId;
         internal static ApplicationUser WorkerOnReview;
         internal static FirestoreAlarm Alarm;
-        internal static List<Antena> UserLocations = new List<Antena>();
+        internal static JwtSecurityToken ApplicationUserToken;
+        internal static List<CompanyLocation> UserLocations = new List<CompanyLocation>();
         internal static List<Stream> ImagesStreams = new List<Stream>();
         internal static List<string> ImagesNames = new List<string>();
         internal static List<string> ChipsNames = new List<string>();
@@ -49,7 +52,6 @@ namespace VYRMobile
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
             CreateDirectory();
             //SaveCrashReport();
-
             MainPage = new MainPage();
         }
         protected override void OnStart()

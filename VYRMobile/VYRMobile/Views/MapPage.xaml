@@ -12,7 +12,7 @@
              mc:Ignorable="d"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
-             x:Class="VYRMobile.Views.Mapa2"
+             x:Class="VYRMobile.Views.MapPage"
              IsRouteRunning="{Binding HasRouteRunning}"
              CalculateCommand="{Binding CalculateRouteCommand}"
              UpdateCommand="{Binding UpdatePositionCommand}"

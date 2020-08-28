@@ -9,12 +9,11 @@ using Xamarin.Forms;
 
 namespace VYRMobile.ViewModels
 {
-
     public class SupervisionViewModel : ObservableObject
     {
         public Command ChangeStateCommand { get; set; }
-        private ObservableCollection<Antena> antenas;
-        public ObservableCollection<Antena> Antenas
+        private ObservableCollection<CompanyLocation> antenas;
+        public ObservableCollection<CompanyLocation> Antenas
         {
             get { return antenas; }
             set
@@ -25,11 +24,11 @@ namespace VYRMobile.ViewModels
         }
         public SupervisionViewModel()
         {
-            Antenas = new ObservableCollection<Antena>()
+            Antenas = new ObservableCollection<CompanyLocation>()
             {
-                new Antena{PointChecked = false},
-                new Antena{PointChecked = true},
-                new Antena{PointChecked = false}
+                new CompanyLocation{PointChecked = false},
+                new CompanyLocation{PointChecked = true},
+                new CompanyLocation{PointChecked = false}
             };
 
             ChangeStateCommand = new Command(ChangeAntennaState);

@@ -262,51 +262,58 @@ namespace VYRMobile.Views.Popups
 
         private async void TryChange()
         {
-            uint duration = 50;
-
-
-            var animation = new Animation();
-
-            animation.WithConcurrent((f) => newPassLayout.Opacity = f, 1, 0, Easing.Linear);
-
-            newPassLayout.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
-
-            var animation2 = new Animation();
-
-            animation2.WithConcurrent((f) => loadingLayout.Opacity = f, 0, 1, Easing.Linear);
-
-            loadingLayout.Animate("FadeIn", animation2, 16, Convert.ToUInt32(duration));
-
-            indicator.IsRunning = true;
-
-
-            ChangePassword password = new ChangePassword()
+            try
             {
-                OldPassword = oldPass.Text,
-                NewPassword = newPass.Text
-            };
-
-            bool IsSuccess = await _service.ChangePasswordAsync(password);
+                uint duration = 50;
 
 
-            indicator.IsRunning = false;
-            if (IsSuccess == true)
-            {
-                DependencyService.Get<IToast>().LongToast("Contraseña actualizada exitosamente");
-                await Navigation.PopPopupAsync();
+                var animation = new Animation();
+
+                animation.WithConcurrent((f) => newPassLayout.Opacity = f, 1, 0, Easing.Linear);
+
+                newPassLayout.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
+
+                var animation2 = new Animation();
+
+                animation2.WithConcurrent((f) => loadingLayout.Opacity = f, 0, 1, Easing.Linear);
+
+                loadingLayout.Animate("FadeIn", animation2, 16, Convert.ToUInt32(duration));
+
+                indicator.IsRunning = true;
+
+
+                ChangePassword password = new ChangePassword()
+                {
+                    OldPassword = oldPass.Text,
+                    NewPassword = newPass.Text
+                };
+
+
+                bool IsSuccess = await _service.ChangePasswordAsync(password);
+
+                indicator.IsRunning = false;
+                if (IsSuccess == true)
+                {
+                    DependencyService.Get<IToast>().LongToast("Contraseña actualizada exitosamente");
+                    await Navigation.PopPopupAsync();
+                }
+                else
+                {
+                    animation.WithConcurrent((f) => loadingLayout.Opacity = f, 1, 0, Easing.Linear);
+
+                    loadingLayout.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
+
+                    await App.Current.MainPage.DisplayAlert("Error", "Contraseña invalida, verifique e intente de nuevo", "Aceptar");
+
+
+                    animation2.WithConcurrent((f) => newPassLayout.Opacity = f, 0, 1, Easing.Linear);
+
+                    newPassLayout.Animate("FadeIn", animation2, 16, Convert.ToUInt32(duration));
+                }
             }
-            else
+            catch
             {
-                animation.WithConcurrent((f) => loadingLayout.Opacity = f, 1, 0, Easing.Linear);
-
-                loadingLayout.Animate("FadeIn", animation, 16, Convert.ToUInt32(duration));
-
-                await App.Current.MainPage.DisplayAlert("Error", "Contraseña invalida, verifique e intente de nuevo", "Aceptar");
-
-
-                animation2.WithConcurrent((f) => newPassLayout.Opacity = f, 0, 1, Easing.Linear);
-
-                newPassLayout.Animate("FadeIn", animation2, 16, Convert.ToUInt32(duration));
+                await DisplayAlert("Error", "Ocurrió un problema al procesar la información", "Aceptar");
             }
         }
     }

@@ -63,7 +63,7 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
-        public Antena Location
+        public CompanyLocation Location
         {
             get => CReport.Location;
             set
@@ -224,8 +224,8 @@ namespace VYRMobile.ViewModels
         }
 
 
-        private ObservableCollection<Antena> _locations;
-        public ObservableCollection<Antena> Locations
+        private ObservableCollection<CompanyLocation> _locations;
+        public ObservableCollection<CompanyLocation> Locations
         {
             get { return _locations; }
             set
@@ -236,7 +236,7 @@ namespace VYRMobile.ViewModels
         }
         public ReportViewModel()
         {
-            Locations = new ObservableCollection<Antena>();
+            Locations = new ObservableCollection<CompanyLocation>();
             ImageInfo = new ObservableCollection<Models.Image>();
             Reports = new ObservableCollection<Report>();
 

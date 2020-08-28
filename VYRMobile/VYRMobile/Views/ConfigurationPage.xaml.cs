@@ -11,9 +11,9 @@ using Xamarin.Forms.Xaml;
 namespace VYRMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ConfiguracionPage : ContentPage
+    public partial class ConfigurationPage : ContentPage
     {
-        public ConfiguracionPage()
+        public ConfigurationPage()
         {
             InitializeComponent();
 

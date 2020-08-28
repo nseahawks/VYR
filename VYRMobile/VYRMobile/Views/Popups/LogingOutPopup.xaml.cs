@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -29,16 +30,23 @@ namespace VYRMobile.Views.Popups
         }
         private async void LogingOut()
         {
-            string _userId = App.ApplicationUserId;
+            try
+            {
+                await CrossCloudFirestore.Current.Instance
+                                          .GetCollection("Users")
+                                          .GetDocument(App.ApplicationUserId)
+                                          .UpdateDataAsync(new { LoggedIn = false });
 
-            await CrossCloudFirestore.Current.Instance
-                                      .GetCollection("Users")
-                                      .GetDocument(_userId)
-                                      .UpdateDataAsync(new { LoggedIn = false });
-
-            Navigation.InsertPageBefore(new Login(), Navigation.NavigationStack[0]);
-            await Navigation.PopToRootAsync();
-            await Navigation.PopPopupAsync();
+                Navigation.InsertPageBefore(new LoginPage(), Navigation.NavigationStack[0]);
+                await SecureStorage.SetAsync("isLogged", App.IsUserLoggedIn.ToString());
+                await SecureStorage.SetAsync("token", "");
+                await Navigation.PopToRootAsync();
+                await Navigation.PopPopupAsync();
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Ocurrió un problema al procesar la información", "Aceptar");
+            }
         }
     }
 }

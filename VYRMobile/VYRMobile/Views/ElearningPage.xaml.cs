@@ -10,10 +10,10 @@ using Xamarin.Forms.Xaml;
 namespace VYRMobile.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Elearning : ContentPage
+    public partial class ElearningPage : ContentPage
     {
         
-        public Elearning()
+        public ElearningPage()
         {
             InitializeComponent();
 

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VYRMobile.Models
 {
-    public class Equipo : ObservableObject
+    public class EquipmentItem : ObservableObject
     {
         string equipmentId;
         public string EquipmentId

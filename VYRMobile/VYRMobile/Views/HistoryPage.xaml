@@ -8,7 +8,7 @@ xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusi
              xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Historial"
+             x:Class="VYRMobile.HistoryPage"
              Title="Historial"
              NavigationPage.HasBackButton="False">
     <!--<ContentPage.ToolbarItems>

@@ -5,7 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.Usuario"
+             x:Class="VYRMobile.Views.UserPage"
              xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              Title="Mi Cuenta"
              NavigationPage.HasBackButton="False">

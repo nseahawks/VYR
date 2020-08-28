@@ -15,16 +15,15 @@ using VYRMobile.Views.Popups;
 
 namespace VYRMobile
 {
-    public partial class Login : ContentPage
+    public partial class LoginPage : ContentPage
     {
-        IdentityViewModel _log = new IdentityViewModel();
         private RecordsStore _store { get; set; }
 
         public static readonly BindableProperty TryLoginCommandProperty =
            BindableProperty.Create(nameof(TryLoginCommand), typeof(Command),
-               typeof(Login), null, BindingMode.TwoWay);
+               typeof(LoginPage), null, BindingMode.TwoWay);
 
-        public Login()
+        public LoginPage()
         {
             InitializeComponent();
             BindingContext = new IdentityViewModel();
@@ -43,6 +42,7 @@ namespace VYRMobile
         private void Loginbtn_clicked(object sender, EventArgs e)
         {
             Loginbtn.IsEnabled = false;
+            Loginbtn.Text = "Conectando...";
             animationView.IsVisible = true;
             animation.IsPlaying = true;
         }
@@ -57,14 +57,6 @@ namespace VYRMobile
         {
             if (App.IsUserLoggedIn)
             {
-                await CrossCloudFirestore.Current.Instance
-                                         .GetCollection("Users")
-                                         .GetDocument(App.ApplicationUserId)
-                                         .UpdateDataAsync(new { LoggedIn = true });
-
-                string user = email.Text.ToString();
-                await SecureStorage.SetAsync("EmailRemembered", user);
-
                 var record = new Record()
                 {
                     UserId = await SecureStorage.GetAsync("id"),
@@ -75,10 +67,31 @@ namespace VYRMobile
                     Icon = "outer.png"
                 };
 
+                try
+                {
+                    await _store.AddRecordAsync(record);
+                    await CrossCloudFirestore.Current.Instance
+                                             .GetCollection("Users")
+                                             .GetDocument(App.ApplicationUserId)
+                                             .UpdateDataAsync(new { LoggedIn = true });
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "No es posible conectar con el servidor", "Aceptar");
+                    animation.IsPlaying = false;
+                    await animationView.FadeTo(0, 100, Easing.Linear);
+                    Loginbtn.IsEnabled = true;
+                    Loginbtn.Text = "Iniciar sesión";
+
+                    return;
+                }
+
                 App.Records.Add(record);
                 var Records = App.Records;
                 var json = JsonConvert.SerializeObject(Records);
                 await SecureStorage.SetAsync("records", json);
+            
+                await SecureStorage.SetAsync("EmailRemembered", email.Text.ToString());
 
                 /*await SecureStorage.SetAsync("json", json);
                 var jsonn = await SecureStorage.GetAsync("json");
@@ -86,43 +99,32 @@ namespace VYRMobile
                 {
                     Records = JsonConvert.DeserializeObject<List<Record>>(json);
                 }*/
-                try
-                {
-                    await _store.AddRecordAsync(record);
-                }
-                catch
-                {
-                    await DisplayAlert("Error", "No es posible conectar con la API", "OK");
-                }
 
                 animation.IsPlaying = false;
                 await animationView.FadeTo(0, 100, Easing.Linear);
 
                 if(App.ApplicationUserRole == "Supervisor")
                 {
-                    Application.Current.MainPage = new NavigationPage(new Loading());
+                    Application.Current.MainPage = new NavigationPage(new LoadingPage());
                 }
                 else
                 {
-                    Application.Current.MainPage = new NavigationPage(new Utensilios());
+                    Application.Current.MainPage = new NavigationPage(new EquipmentPage());
                 }
             }
             else
             {
-                await CrossCloudFirestore.Current.Instance
-                                         .GetCollection("Users")
-                                         .GetDocument(App.ApplicationUserId)
-                                         .UpdateDataAsync(new { LoggedIn = false });
                 //Login Failed
                 await DisplayAlert("Login Failed", $"Verifique su usuario y contraseña", "Ok");
                 await animationView.FadeTo(0, 100, Easing.Linear);
                 animation.IsVisible = false;
                 Loginbtn.IsEnabled = true;
+                Loginbtn.Text = "Iniciar sesión";
             }
         }
         private async void RememberUser()
         {
-            if(_log.Checked)
+            if(rememberMeCheckbox.IsChecked)
             {
                 email.Text = await SecureStorage.GetAsync("EmailRemembered");
             }

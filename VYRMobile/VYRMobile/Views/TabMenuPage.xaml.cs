@@ -9,21 +9,21 @@ using TabbedPage = Xamarin.Forms.TabbedPage;
 
 namespace VYRMobile.Views
 {
-    public partial class MenuPage : TabbedPage
+    public partial class TabMenuPage : TabbedPage
     {
         public Command ShowMapCommand { get; set; }
-        private static MenuPage _instance;
-        public static MenuPage Instance
+        private static TabMenuPage _instance;
+        public static TabMenuPage Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new MenuPage();
+                    _instance = new TabMenuPage();
 
                 return _instance;
             }
         }
-        public MenuPage()
+        public TabMenuPage()
         {
             InitializeComponent();
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
@@ -39,28 +39,28 @@ namespace VYRMobile.Views
                     IconImageSource = "supervision.png",
                     Title = "Supervision"
                 };
-                NavigationPage home = new NavigationPage(new Home())
+                NavigationPage home = new NavigationPage(new HomePage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "home2.png",
                     Title = "Home"
                 };
-                NavigationPage map = new NavigationPage(new Mapa2())
+                NavigationPage map = new NavigationPage(new MapPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "mapa2.png",
                     Title = "Mapa"
                 };
-                NavigationPage report = new NavigationPage(new Reportes())
+                NavigationPage report = new NavigationPage(new ReportsPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "reportes2.png",
                     Title = "Reportes"
                 };
-                NavigationPage user = new NavigationPage(new Usuario())
+                NavigationPage user = new NavigationPage(new UserPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
@@ -83,28 +83,28 @@ namespace VYRMobile.Views
             }
             else if(App.ApplicationUserRole == "Patrol")
             {
-                NavigationPage home = new NavigationPage(new Home())
+                NavigationPage home = new NavigationPage(new HomePage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "home2.png",
                     Title = "Home"
                 };
-                NavigationPage map = new NavigationPage(new Mapa2())
+                NavigationPage map = new NavigationPage(new MapPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "mapa2.png",
                     Title = "Mapa"
                 };
-                NavigationPage report = new NavigationPage(new Reportes())
+                NavigationPage report = new NavigationPage(new ReportsPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "reportes2.png",
                     Title = "Reportes"
                 };
-                NavigationPage user = new NavigationPage(new Usuario())
+                NavigationPage user = new NavigationPage(new UserPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
@@ -125,21 +125,21 @@ namespace VYRMobile.Views
             }
             else if(App.ApplicationUserRole == "Vigilant")
             {
-                NavigationPage home = new NavigationPage(new Home())
+                NavigationPage home = new NavigationPage(new HomePage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "home2.png",
                     Title = "Home"
                 };
-                NavigationPage report = new NavigationPage(new Reportes())
+                NavigationPage report = new NavigationPage(new ReportsPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
                     IconImageSource = "reportes2.png",
                     Title = "Reportes"
                 };
-                NavigationPage user = new NavigationPage(new Usuario())
+                NavigationPage user = new NavigationPage(new UserPage())
                 {
                     BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                     BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],

@@ -58,7 +58,7 @@ namespace VYRMobile.ViewModels
         }
         private async Task PushConfiguracion()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ConfiguracionPage())
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ConfigurationPage())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                 BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
@@ -67,7 +67,7 @@ namespace VYRMobile.ViewModels
         private async Task PushEquipamiento()
         {
             App.IsEquipmentValitated = true;
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Utensilios())
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new EquipmentPage())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                 BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
@@ -83,7 +83,7 @@ namespace VYRMobile.ViewModels
         }
         private async Task PushFormacion()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Elearning())
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new ElearningPage())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                 BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
@@ -91,7 +91,7 @@ namespace VYRMobile.ViewModels
         }
         private async Task PushHistory()
         {
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Historial())
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new HistoryPage())
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                 BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],

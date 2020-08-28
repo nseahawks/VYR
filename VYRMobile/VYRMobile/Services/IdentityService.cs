@@ -24,10 +24,10 @@ namespace VYRMobile.Services
         {
             _client = new ApiHelper();
         }
-        bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
+        //bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         public async Task<bool> LoginAsync(ApplicationUser user)
         {
-            if (user.Email == null || user.Password == null || !IsConnected)
+            if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password) || !App.isUserConnected)
                 return false;
 
             var request = new ApplicationUser()
@@ -38,10 +38,11 @@ namespace VYRMobile.Services
 
             string serializedData = JsonConvert.SerializeObject(request);
             var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+
             try
             {
                 var response = await _client.PostAsync("/api/v1/identity/login", contentData);
-
+                
                 if(response.IsSuccessStatusCode == true)
                 {
                     string stringJWT = response.Content.ReadAsStringAsync().Result;
@@ -49,6 +50,7 @@ namespace VYRMobile.Services
                     await SecureStorage.SetAsync("token", jwt.Token);
                     ApiHelper.Token = jwt.Token;
                     DeserializeToken(jwt.Token);
+                    App.IsUserLoggedIn = true;
 
                     //await CheckRecentCrash();
 
@@ -61,7 +63,8 @@ namespace VYRMobile.Services
             }
             catch (Exception)
             {
-                throw;
+                await App.Current.MainPage.DisplayAlert("Error", "No es posible conectar con el servidor", "Aceptar");
+                return false;
             }
         }
 
@@ -72,14 +75,18 @@ namespace VYRMobile.Services
         public async void DeserializeToken(string token)
         {
             var handler = new JwtSecurityTokenHandler();
-            var deserializedToken = handler.ReadToken(token) as JwtSecurityToken;
+            App.ApplicationUserToken = handler.ReadToken(token) as JwtSecurityToken;
 
-            Dictionary<string, object> dictionary = deserializedToken.Payload;
+            Dictionary<string, object> dictionary = App.ApplicationUserToken.Payload;
 
             foreach (KeyValuePair<string, object> pair in dictionary)
             {
                 await SecureStorage.SetAsync(pair.Key.ToString(), pair.Value.ToString());
             }
+
+            var tokenSerializedData = JsonConvert.SerializeObject(App.ApplicationUserToken);
+            await SecureStorage.SetAsync("token", tokenSerializedData);
+            await SecureStorage.SetAsync("isLogged", App.IsUserLoggedIn.ToString());
 
             App.ApplicationUserId = await SecureStorage.GetAsync("id");
             App.ApplicationUserRole = await SecureStorage.GetAsync("role");
@@ -96,7 +103,7 @@ namespace VYRMobile.Services
             {
                 mergedDictionaries.Clear();
 
-                switch(App.ApplicationUserRole)
+                switch (App.ApplicationUserRole)
                 {
                     default:
                         mergedDictionaries.Add(new WorkerTheme());

@@ -8,7 +8,7 @@ using Newtonsoft.Json.Converters;
     
 namespace VYRMobile.Models
 {
-    public partial class Antena : INotifyPropertyChanged
+    public partial class CompanyLocation : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyName)

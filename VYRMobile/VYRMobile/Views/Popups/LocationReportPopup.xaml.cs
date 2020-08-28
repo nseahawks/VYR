@@ -17,14 +17,14 @@ namespace VYRMobile.Views.Popups
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LocationReportPopup : Rg.Plugins.Popup.Pages.PopupPage
     {
-        Antena location;
+        CompanyLocation location;
         string imageName;
         Stream imageStream;
         public LocationReportPopup()
         {
             InitializeComponent();
 
-            BindingContext = PuntoViewModel.Instance;
+            BindingContext = HomeViewModel.Instance;
 
             TakePhoto();
             sendBtn.Clicked += SendBtn_Clicked;
@@ -34,11 +34,18 @@ namespace VYRMobile.Views.Popups
         {
             await Navigation.PushPopupAsync(new LoadingPopup("Cargando..."));
 
-            bool isSuccess = await ReportsStore.Instance.AddTemporaryReportAsync(location, imageName, imageStream);
-            if (isSuccess)
+            try
             {
-                App.AntennaId = location.Id.ToString();
-                Home.Instance.LocationCheckingCommand.Execute(null);
+                bool isSuccess = await ReportsStore.Instance.AddTemporaryReportAsync(location, imageName, imageStream);
+                if (isSuccess)
+                {
+                    App.AntennaId = location.Id.ToString();
+                    HomePage.Instance.LocationCheckingCommand.Execute(null);
+                }
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Ocurrió un problema al procesar la información", "Aceptar");
             }
 
             await Navigation.PopAllPopupAsync();
@@ -76,7 +83,7 @@ namespace VYRMobile.Views.Popups
 
         private void locationsComboBox_SelectionChanged(object sender, Syncfusion.XForms.ComboBox.SelectionChangedEventArgs e)
         {
-            location = e.Value as Antena;
+            location = e.Value as CompanyLocation;
         }
     }
 }

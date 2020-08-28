@@ -21,7 +21,7 @@ namespace VYRMobile.Views.Popups
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CallPopup : Rg.Plugins.Popup.Pages.PopupPage
     {
-        //RecordHelper _record = new RecordHelper();
+        PermissionsHelper _permissions = new PermissionsHelper();
         public CallPopup()
         {
             InitializeComponent();
@@ -32,52 +32,75 @@ namespace VYRMobile.Views.Popups
 
         private async void call1_Clicked(object sender, EventArgs e)
         {
-            string phoneNumber = "+1911";
-            DependencyService.Get<IMakePhoneCall>().MakeCall(phoneNumber);
+            bool isCallPermited = await _permissions.CheckPhonecallPermissionsStatus();
 
-            /*var phoneCallTask = CrossMessaging.Current.PhoneDialer;
-            if (phoneCallTask.CanMakePhoneCall)
+            if (isCallPermited)
             {
-                phoneCallTask.MakePhoneCall("911", "Emergencias");
-            }*/
+                try
+                {
+                    string phoneNumber = "+1911";
+                    DependencyService.Get<IMakePhoneCall>().MakeCall(phoneNumber);
 
-            var record = new Record()
+                    var record = new Record()
+                    {
+                        UserId = await SecureStorage.GetAsync("id"),
+                        Type = "Llamada",
+                        RecordType = Record.RecordTypes.AntennaCovered,
+                        Owner = "Emergencias",
+                        Date = DateTime.Now,
+                        Icon = "callM.png"
+                    };
+
+                    App.Records.Add(record);
+                    var Records = App.Records;
+                    var json = JsonConvert.SerializeObject(Records);
+                    await SecureStorage.SetAsync("records", json);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Ocurrió un problema al intentar realizar la llamada", "Aceptar");
+                }
+            }
+            else
             {
-                UserId = await SecureStorage.GetAsync("id"),
-                Type = "Llamada",
-                RecordType = Record.RecordTypes.AntennaCovered,
-                Owner = "Emergencias",
-                Date = DateTime.Now,
-                Icon = "callM.png"
-            };
-
-            App.Records.Add(record);
-            var Records = App.Records;
-            var json = JsonConvert.SerializeObject(Records);
-            await SecureStorage.SetAsync("records", json);
-
+                await DisplayAlert("Fallido", "Otorga los permisos del teléfono para continuar", "Aceptar");
+            }
         }
         private async void call2_Clicked(object sender, EventArgs e)
         {
-            string phoneNumber = "+18292926529";
-            DependencyService.Get<IMakePhoneCall>().MakeCall(phoneNumber);
+            bool isCallPermited = await _permissions.CheckPhonecallPermissionsStatus();
 
-            //CrossMessaging.Current.PhoneDialer.MakePhoneCall("+18097966316", "Francisco Rojas");
-
-            var record = new Record()
+            if (isCallPermited)
             {
-                UserId = await SecureStorage.GetAsync("id"),
-                Type = "Llamada",
-                RecordType = Record.RecordTypes.AntennaCovered,
-                Owner = "Monitoreo",
-                Date = DateTime.Now,
-                Icon = "callM.png"
-            };
+                try
+                {
+                    string phoneNumber = "+18292926529";
+                    DependencyService.Get<IMakePhoneCall>().MakeCall(phoneNumber);
 
-            App.Records.Add(record);
-            var Records = App.Records;
-            var json = JsonConvert.SerializeObject(Records);
-            await SecureStorage.SetAsync("records", json);
+                    var record = new Record()
+                    {
+                        UserId = await SecureStorage.GetAsync("id"),
+                        Type = "Llamada",
+                        RecordType = Record.RecordTypes.AntennaCovered,
+                        Owner = "Monitoreo",
+                        Date = DateTime.Now,
+                        Icon = "callM.png"
+                    };
+
+                    App.Records.Add(record);
+                    var Records = App.Records;
+                    var json = JsonConvert.SerializeObject(Records);
+                    await SecureStorage.SetAsync("records", json);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Ocurrió un problema al intentar realizar la llamada", "Aceptar");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Fallido", "Otorga los permisos del teléfono para continuar", "Aceptar");
+            }
         }
     }
 }

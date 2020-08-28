@@ -6,7 +6,7 @@
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Views.Utensilios"
+             x:Class="VYRMobile.Views.EquipmentPage"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False">
     
@@ -86,7 +86,7 @@
                     Grid.Row="1"
                     Grid.Column="0"
                     Grid.ColumnSpan="2"
-                    ItemsSource="{Binding Equipos, Mode=TwoWay}"
+                    ItemsSource="{Binding Equipment, Mode=TwoWay}"
                     SelectionMode="None"
                     HasUnevenRows="True"
                     SeparatorVisibility="Default">

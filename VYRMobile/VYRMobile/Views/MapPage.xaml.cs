@@ -16,10 +16,12 @@ using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Extensions;
 using VYRMobile.Services;
 using Plugin.Geolocator;
+using Android.Content;
+using Android.Locations;
 
 namespace VYRMobile.Views
 {
-    public partial class Mapa2 : ContentPage
+    public partial class MapPage : ContentPage
     {
         bool IsFading = true;
         bool AlarmMode = false;
@@ -29,37 +31,38 @@ namespace VYRMobile.Views
         private double TData;
         private double RouteDistance;
         LineHelper liner = new LineHelper();
+        PermissionsHelper _permissions = new PermissionsHelper();
         public Command CalculateCommand2 { get; set; }
         public Command PolylinesCommand { get; set; }
 
         public static readonly BindableProperty CalculateCommandProperty =
-           BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
+           BindableProperty.Create(nameof(CalculateCommand), typeof(Command), typeof(MapPage), null, BindingMode.TwoWay);
         
         public static readonly BindableProperty IsRouteRunningProperty =
-           BindableProperty.Create(nameof(IsRouteRunning), typeof(bool), typeof(Mapa2), null, BindingMode.TwoWay);
+           BindableProperty.Create(nameof(IsRouteRunning), typeof(bool), typeof(MapPage), null, BindingMode.TwoWay);
 
         public static readonly BindableProperty GetActualLocationCommandProperty =
             BindableProperty.Create(nameof(GetActualLocationCommand), typeof(Command),
-                typeof(Mapa2), null, BindingMode.TwoWay);
+                typeof(MapPage), null, BindingMode.TwoWay);
 
         public static readonly BindableProperty OriginLocationlatProperty =
            BindableProperty.Create(nameof(OriginLocationlat), typeof(string),
-               typeof(Mapa2), null, BindingMode.TwoWay);
+               typeof(MapPage), null, BindingMode.TwoWay);
 
         public static readonly BindableProperty OriginLocationlngProperty =
         BindableProperty.Create(nameof(OriginLocationlng), typeof(string),
-            typeof(Mapa2), null, BindingMode.TwoWay);
+            typeof(MapPage), null, BindingMode.TwoWay);
         
         public static readonly BindableProperty DestinationLocationlatProperty =
         BindableProperty.Create(nameof(DestinationLocationlat), typeof(string),
-            typeof(Mapa2), null, BindingMode.TwoWay);
+            typeof(MapPage), null, BindingMode.TwoWay);
         
         public static readonly BindableProperty DestinationLocationlngProperty =
         BindableProperty.Create(nameof(DestinationLocationlng), typeof(string),
-            typeof(Mapa2), null, BindingMode.TwoWay);
+            typeof(MapPage), null, BindingMode.TwoWay);
    
         public static readonly BindableProperty UpdateCommandProperty =
-          BindableProperty.Create(nameof(UpdateCommand), typeof(Command), typeof(Mapa2), null, BindingMode.TwoWay);
+          BindableProperty.Create(nameof(UpdateCommand), typeof(Command), typeof(MapPage), null, BindingMode.TwoWay);
 
         public Command UpdateCommand
         {
@@ -67,19 +70,19 @@ namespace VYRMobile.Views
             set { SetValue(UpdateCommandProperty, value); }
         }
 
-        private static Mapa2 _instance;
-        public static Mapa2 Instance
+        private static MapPage _instance;
+        public static MapPage Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Mapa2();
+                    _instance = new MapPage();
 
                 return _instance;
             }
         }
 
-        public Mapa2(string locationName, GeoPoint geoPoint)
+        public MapPage(string locationName, GeoPoint geoPoint)
         {
             InitializeComponent();
             string param = "";
@@ -98,7 +101,6 @@ namespace VYRMobile.Views
             UpdateCommand = new Command<List<Position>>(Update);
             PolylinesCommand = new Command(ClearPolylinesCommand);
             GetActualLocationCommand = new Command(async () => await GetActualLocation());
-
             //alarmMode();
             Pin destinationPin;
             destinationPin = new Pin()
@@ -158,9 +160,10 @@ namespace VYRMobile.Views
             }
         }
 
-        public Mapa2()
+        public MapPage()
         {
             InitializeComponent();
+            
             BindingContext = new GoogleMapsViewModel();
             chronoFrame.IsVisible = false;
             chronoFrame.IsEnabled = false;
@@ -385,30 +388,21 @@ namespace VYRMobile.Views
         async Task GetActualLocation()
         {
             try
-            { 
-                var location = await Geolocation.GetLastKnownLocationAsync();
-                Position position = new Position(location.Latitude, location.Longitude );
+            {
+                var isLocationEnabled = await _permissions.CheckLocationPermissionsStatus();
 
-                if (App.Alarm.Location != null)
+                if(isLocationEnabled)
                 {
-                    OriginLocationlat = position.Latitude.ToString();
-                    OriginLocationlng = position.Longitude.ToString();
-                    DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
-                    DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
-                }
-                else if (location != null)
-                {
-                    OriginLocationlat = position.Latitude.ToString();
-                    OriginLocationlng = position.Longitude.ToString();
+                    await GetMyActualLocation();
                 }
                 else
                 {
-                    throw new Exception("No se pudo obtener la ubicación");
+                    await App.Current.MainPage.DisplayAlert("Fallido", "Activa el GPS para continuar", "Aceptar");
                 }
             }
-            catch (Exception ex)
+            catch
             {
-                //nothing
+                //Nothing
             }
         }
 
@@ -696,6 +690,28 @@ namespace VYRMobile.Views
                 await Task.Delay(1000);
             }
 
+        }
+        private async Task GetMyActualLocation()
+        {
+            var location = await Geolocation.GetLastKnownLocationAsync();
+            Position position = new Position(location.Latitude, location.Longitude);
+
+            if (App.Alarm.Location != null)
+            {
+                OriginLocationlat = position.Latitude.ToString();
+                OriginLocationlng = position.Longitude.ToString();
+                DestinationLocationlat = App.Alarm.Location.Latitude.ToString();
+                DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
+            }
+            else if (location != null)
+            {
+                OriginLocationlat = position.Latitude.ToString();
+                OriginLocationlng = position.Longitude.ToString();
+            }
+            else
+            {
+                throw new Exception("No se pudo obtener la ubicación");
+            }
         }
     }
 }

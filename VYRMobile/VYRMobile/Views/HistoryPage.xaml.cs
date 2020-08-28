@@ -6,10 +6,10 @@ using VYRMobile.Models;
 
 namespace VYRMobile
 {
-    public partial class Historial : ContentPage
+    public partial class HistoryPage : ContentPage
     {
         List<Record> Records = new List<Record>();
-        public Historial()
+        public HistoryPage()
         {
             InitializeComponent();
             BindingContext = new EventViewModel();

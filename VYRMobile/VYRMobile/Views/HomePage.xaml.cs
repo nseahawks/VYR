@@ -13,30 +13,25 @@ using ZXing.Net.Mobile.Forms;
 
 namespace VYRMobile
 {
-    public partial class Home : ContentPage
+    public partial class HomePage : ContentPage
     {
-        HttpClient _client;
-
-        PuntoViewModel pvm = new PuntoViewModel();
         public Command LocationCheckingCommand { get; set; }
-        private static Home _instance;
-        public static Home Instance
+        private static HomePage _instance;
+        public static HomePage Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Home();
+                    _instance = new HomePage();
 
                 return _instance;
             }
         }
-        public Home()
+        public HomePage()
         {
             InitializeComponent();
-            BindingContext = PuntoViewModel.Instance;
+            BindingContext = HomeViewModel.Instance;
             LocationCheckingCommand = new Command(LocationChecking);
-
-            _client = new ApiHelper();
 
             QR.Clicked += QR_Clicked;
             btnCall.Clicked += btnCall_Clicked;

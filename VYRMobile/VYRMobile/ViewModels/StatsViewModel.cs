@@ -22,8 +22,8 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
-        private ObservableCollection<Antena> _locations;
-        public ObservableCollection<Antena> Locations
+        private ObservableCollection<CompanyLocation> _locations;
+        public ObservableCollection<CompanyLocation> Locations
         {
             get { return _locations; }
             set
@@ -37,7 +37,7 @@ namespace VYRMobile.ViewModels
         public StatsViewModel()
         {
             Users = new ObservableCollection<ApplicationUser>();
-            Locations = new ObservableCollection<Antena>();
+            Locations = new ObservableCollection<CompanyLocation>();
 
             Data = new ObservableCollection<Stat>()
             {

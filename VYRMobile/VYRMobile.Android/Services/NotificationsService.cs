@@ -29,6 +29,7 @@ namespace VYRMobile.Droid.Services
             {
                 Intent intent = new Intent(context, typeof(MainActivity));
                 intent.AddFlags(ActivityFlags.ClearTop);
+  
                 PendingIntent pendingIntent = PendingIntent.GetActivity(context, 0, intent, PendingIntentFlags.OneShot);
                 Notification notification = CreateNotification(title, text, when, pendingIntent);
                 NotificationManager notificationManager = NotificationManager.FromContext(context);

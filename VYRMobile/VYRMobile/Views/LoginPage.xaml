@@ -6,7 +6,7 @@
              xmlns:controls="clr-namespace:VYRMobile.Controls"
              xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
              mc:Ignorable="d"
-             x:Class="VYRMobile.Login"
+             x:Class="VYRMobile.LoginPage"
              NavigationPage.HasNavigationBar="False"
              NavigationPage.HasBackButton="False"
              BackgroundColor="White"
@@ -95,18 +95,19 @@
                         WidthRequest="85"
                         HeightRequest="40"
 	                    HorizontalOptions="Center" />
-                    <Label 
+                    <!--<Label 
                         HorizontalOptions="Center"
                         Text="Conectando con monitoreo..."
                         FontSize="11"
                         FontFamily="{StaticResource PoppinsMedium}"
-                        TextColor="Black"/>
+                        TextColor="Black"/>-->
                 </StackLayout>
                 <!--RECORDAR CONTRASEÑA-->
                 <StackLayout 
                     Orientation="Horizontal"
                     HorizontalOptions="Center">
                     <CheckBox 
+                        x:Name="rememberMeCheckbox"
                         HorizontalOptions="Center"
                         VerticalOptions="Center"
                         IsChecked="{Binding Checked}"

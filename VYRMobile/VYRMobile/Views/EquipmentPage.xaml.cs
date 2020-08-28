@@ -11,13 +11,13 @@ using Xamarin.Forms;
 
 namespace VYRMobile.Views
 {
-    public partial class Utensilios : ContentPage
+    public partial class EquipmentPage : ContentPage
     {
         bool isAccepted;
-        public Utensilios()
+        public EquipmentPage()
         {
             InitializeComponent();
-            BindingContext = EquipoViewModel.Instance;
+            BindingContext = EquipmentViewModel.Instance;
             btnConfirmar.Clicked += BtnConfirmar_Clicked;
 
             if (App.IsEquipmentValitated == true)
@@ -48,16 +48,16 @@ namespace VYRMobile.Views
                 }
                 var isEquipmentReady = isTrueForAll(itemsList.ItemsSource);*/
 
-                bool isEquipmentReady = EquipoViewModel.Instance.getEquipos();
+                bool isEquipmentReady = EquipmentViewModel.Instance.getEquipos();
 
                 if(isEquipmentReady)
                 {
-                    Application.Current.MainPage = new NavigationPage(new Loading());
+                    Application.Current.MainPage = new NavigationPage(new LoadingPage());
                 }
                 else
                 {
-                    List<Equipo> items = EquipoViewModel.Instance.getMissingEquipment();
-                    await Navigation.PushPopupAsync(new MissingEquipmentReport(items));
+                    List<EquipmentItem> items = EquipmentViewModel.Instance.getMissingEquipment();
+                    await Navigation.PushPopupAsync(new MissingEquipmentReportPopup(items));
                 }
             }
         }

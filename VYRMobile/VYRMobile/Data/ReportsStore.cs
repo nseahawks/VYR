@@ -83,7 +83,7 @@ namespace VYRMobile.Data
             return response.IsSuccessStatusCode;
 
         }
-        public async Task<bool> AddTemporaryReportAsync(Antena antena, string imageName, Stream imageStream)
+        public async Task<bool> AddTemporaryReportAsync(CompanyLocation antena, string imageName, Stream imageStream)
         {
             if (antena == null || !IsConnected)
                 return false;
@@ -132,17 +132,22 @@ namespace VYRMobile.Data
         {
             if (!IsConnected)
                 return false;
+            try
+            {
+                string serializedData = JsonConvert.SerializeObject(report);
+                var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
+                var response = await _client.PostAsync("/api/v1/reports", contentData);
 
-            string serializedData = JsonConvert.SerializeObject(report);
-            var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
-            var response = await _client.PostAsync("/api/v1/reports", contentData);
-
-            return response.IsSuccessStatusCode;
-
+                return response.IsSuccessStatusCode;
+            }
+            catch
+            {
+                return false;
+            }
         }
         public Task<bool> DeleteReportAsync(string id)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
         public Task<Report> GetReportAsync(string id)
         {
@@ -159,13 +164,13 @@ namespace VYRMobile.Data
             }
             return null;
         }
-        public async Task<List<Antena>> GetAntenasAsync()
+        public async Task<List<CompanyLocation>> GetAntenasAsync()
         {
             if (App.IsUserLoggedIn && IsConnected)
             {
                 var response = await _client.GetAsync("/api/v1/locations?userId=" + App.ApplicationUserId);
                 var jsonReports = response.Content.ReadAsStringAsync().Result;
-                List<Antena> antennas = JsonConvert.DeserializeObject<List<Antena>>(jsonReports);
+                List<CompanyLocation> antennas = JsonConvert.DeserializeObject<List<CompanyLocation>>(jsonReports);
                 return antennas;
             }
             return null;

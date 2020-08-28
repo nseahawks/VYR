@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using System.Threading.Tasks;
+using VYRMobile.Helper;
 using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
 using Xamarin.Forms;
@@ -17,6 +18,7 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class EvaluationPage : ContentPage
     {
+        PermissionsHelper _permissions = new PermissionsHelper();
         public Command AddFaultsCommand { get; set; }
         private static EvaluationPage _instance;
         public static EvaluationPage Instance
@@ -57,51 +59,83 @@ namespace VYRMobile.Views
         }
         private async void btnPhoto_Clicked(object sender, EventArgs e)
         {
-            await CrossMedia.Current.Initialize();
+            bool isCameraPermited = await _permissions.CheckCameraPermissionsStatus();
 
-            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            if (isCameraPermited)
             {
-                await DisplayAlert("Sin cámara", "No hay cámara disponible", "OK");
-                return;
+                try
+                {
+                    await CrossMedia.Current.Initialize();
+
+                    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        await DisplayAlert("Sin cámara", "No hay cámara disponible", "OK");
+                        return;
+                    }
+
+                    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions { });
+
+                    if (file == null)
+                        return;
+
+                    string fileName = Path.GetFileName(file.Path);
+                    Stream fileStream = file.GetStream();
+                    string fileExtension = fileName.Substring(fileName.Length - 3);
+
+                    App.ImagesNames.Add(fileName);
+                    App.ImagesStreams.Add(fileStream);
+
+                    AddFiles(fileName, fileStream, fileExtension);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Ocurrió un problema al tomar la fotografía", "Aceptar");
+                }
             }
-
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions{ });
-
-            if (file == null)
-                return;
-
-            string fileName = Path.GetFileName(file.Path);
-            Stream fileStream = file.GetStream();
-            string fileExtension = fileName.Substring(fileName.Length - 3);
-
-            App.ImagesNames.Add(fileName);
-            App.ImagesStreams.Add(fileStream);
-
-            AddFiles(fileName, fileStream, fileExtension);
+            else
+            {
+                await DisplayAlert("Fallido", "Activa los permisos de la cámara para continuar", "Aceptar");
+            }
         }
         private async void btnAttach_Clicked(object sender, EventArgs e)
         {
-            await CrossMedia.Current.Initialize();
+            bool isStoragePermited = await _permissions.CheckStoragePermissionsStatus();
 
-            if (!CrossMedia.Current.IsPickVideoSupported)
+            if (isStoragePermited)
             {
-                await DisplayAlert("Error", "Tu dispositivo no soporta seleccionar archivos", "OK");
-                return;
+                try
+                {
+                    await CrossMedia.Current.Initialize();
+
+                    if (!CrossMedia.Current.IsPickVideoSupported)
+                    {
+                        await DisplayAlert("Error", "Tu dispositivo no soporta seleccionar archivos", "OK");
+                        return;
+                    }
+
+                    var file = await CrossMedia.Current.PickVideoAsync();
+
+                    if (file == null)
+                        return;
+
+                    string fileName = Path.GetFileName(file.Path);
+                    Stream fileStream = file.GetStream();
+                    string fileExtension = fileName.Substring(fileName.Length - 3);
+
+                    App.ImagesNames.Add(fileName);
+                    App.ImagesStreams.Add(fileStream);
+
+                    AddFiles(fileName, fileStream, fileExtension);
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Ocurrió un problema al obtener el archivo", "Aceptar");
+                }
             }
-
-            var file = await CrossMedia.Current.PickVideoAsync();
-
-            if (file == null)
-                return;
-
-            string fileName = Path.GetFileName(file.Path);
-            Stream fileStream = file.GetStream();
-            string fileExtension = fileName.Substring(fileName.Length - 3);
-
-            App.ImagesNames.Add(fileName);
-            App.ImagesStreams.Add(fileStream);
-
-            AddFiles(fileName, fileStream, fileExtension);
+            else
+            {
+                await DisplayAlert("Fallido", "Activa los permisos de almacenamiento para continuar", "Aceptar");
+            }
         }
         private void btnFaltas_Clicked(object sender, EventArgs e)
         {
@@ -201,7 +235,7 @@ namespace VYRMobile.Views
                 //Do nothing
             }
         }
-        private void btnEnviar_Clicked(object sender, EventArgs e)
+        private async void btnEnviar_Clicked(object sender, EventArgs e)
         {
             if (_switch.IsToggled == true)
             {
@@ -218,8 +252,14 @@ namespace VYRMobile.Views
                     Percentage = slider2.Value
                 });
             }
-
-            ReportViewModel.Instance.CreateEvaluationReportCommand.Execute(null);
+            try
+            {
+                ReportViewModel.Instance.CreateEvaluationReportCommand.Execute(null);
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Ocurrió un problema al procesar la información", "Aceptar");
+            }
         }
         private async void AddFiles(string fileName, Stream fileStream, string fileExtension)
         {

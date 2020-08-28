@@ -23,6 +23,7 @@ namespace VYRMobile.ViewModels
     public class GoogleMapsViewModel : BaseViewModel
     {
         public Stopwatch stopWatch = new Stopwatch();
+        PermissionsHelper _permissions = new PermissionsHelper();
         private RecordsStore _store { get; set; }
         public Command CalculateRouteCommand { get; set; }
         public Command UpdatePositionCommand { get; set; }
@@ -223,8 +224,8 @@ namespace VYRMobile.ViewModels
             }
         }
 
-        private ObservableCollection<Antena> _antennas;
-        public ObservableCollection<Antena> Antennas
+        private ObservableCollection<CompanyLocation> _antennas;
+        public ObservableCollection<CompanyLocation> Antennas
         {
             get { return _antennas; }
             set
@@ -236,7 +237,7 @@ namespace VYRMobile.ViewModels
         public GoogleMapsViewModel()
         {
             _store = new RecordsStore();
-            Antennas = new ObservableCollection<Antena>();
+            Antennas = new ObservableCollection<CompanyLocation>();
             ToggleAccelerometer();
             LoadRouteCommand = new Command(async () => await LoadRoute());
             LoadRouteCommand2 = new Command(async () => await LoadRoute2());
@@ -248,7 +249,7 @@ namespace VYRMobile.ViewModels
         public GoogleMapsViewModel(string param)
         {
             _store = new RecordsStore();
-            Antennas = new ObservableCollection<Antena>();
+            Antennas = new ObservableCollection<CompanyLocation>();
             ToggleAccelerometer();
             LoadRouteCommand = new Command(async () => await LoadRoute());
             LoadRouteCommand2 = new Command(async () => await LoadRoute2());
@@ -293,12 +294,19 @@ namespace VYRMobile.ViewModels
 
         private async void LoadAntennas()
         {
-            var antennas = await ReportsStore.Instance.GetAntenasAsync();
-
-            Antennas.Clear();
-            foreach (var antenna in antennas)
+            try
             {
-                Antennas.Add(antenna);
+                var antennas = await ReportsStore.Instance.GetAntenasAsync();
+
+                Antennas.Clear();
+                foreach (var antenna in antennas)
+                {
+                    Antennas.Add(antenna);
+                }
+            }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "Hubo un problema al procesar la información", "Aceptar");
             }
         }
 
@@ -371,7 +379,7 @@ namespace VYRMobile.ViewModels
             {
                 var positions = (Enumerable.ToList(PolylineHelper.Decode(googleDirection.Routes.First().OverviewPolyline.Points)));
 
-                Mapa2.Instance.CalculateCommand2.Execute(positions);
+                MapPage.Instance.CalculateCommand2.Execute(positions);
 
                 HasRouteRunning = true;
 
@@ -381,7 +389,7 @@ namespace VYRMobile.ViewModels
                     CalculateDistance();
                     if (HasRouteRunning)
                     {
-                        Mapa2.Instance.UpdateCommand.Execute(positions);
+                        MapPage.Instance.UpdateCommand.Execute(positions);
                         return true;
                     }
                     else
@@ -527,7 +535,7 @@ namespace VYRMobile.ViewModels
         }
         private async Task CalculateDistance()
         {
-            PuntoViewModel puntoViewModel = new PuntoViewModel();
+            HomeViewModel puntoViewModel = new HomeViewModel();
             var myLatitude = double.Parse(this._destinationLatitud);
             var myLongitude = double.Parse(this._destinationLongitud);
 
@@ -541,28 +549,37 @@ namespace VYRMobile.ViewModels
             {
                 puntoViewModel.StopCommand.Execute(null);
                 StopRoute();
-                Mapa2.Instance.PolylinesCommand.Execute(null);
+                MapPage.Instance.PolylinesCommand.Execute(null);
                 await App.Current.MainPage.DisplayAlert("Ruta completa", "Has llegado a tu destino", "OK");
             }
         }
         private async Task GetActualLocation()
         {
-            try
-            {
-                var location = await Geolocation.GetLastKnownLocationAsync();
-                Position position = new Position(location.Latitude, location.Longitude);
+            bool isLocationPermited = await _permissions.CheckLocationPermissionsStatus();
 
-                if (location != null)
+            if (isLocationPermited)
+            {
+                try
                 {
-                    _originLatitud = position.Latitude.ToString();
-                    _originLongitud = position.Longitude.ToString();
-                    _destinationLatitud = App.Alarm.Location.Latitude.ToString();
-                    _destinationLongitud = App.Alarm.Location.Longitude.ToString();
+                    var location = await Geolocation.GetLastKnownLocationAsync();
+                    Position position = new Position(location.Latitude, location.Longitude);
+
+                    if (location != null)
+                    {
+                        _originLatitud = position.Latitude.ToString();
+                        _originLongitud = position.Longitude.ToString();
+                        _destinationLatitud = App.Alarm.Location.Latitude.ToString();
+                        _destinationLongitud = App.Alarm.Location.Longitude.ToString();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Aceptar");
                 }
             }
-            catch (Exception ex)
+            else
             {
-                await App.Current.MainPage.DisplayAlert("Error", $"No es posible obtener tu ubicacion {ex.Message}", "Ok");
+                await App.Current.MainPage.DisplayAlert("Fallido", "Por favor activa tu GPS para continuar", "Aceptar");
             }
         }
         private async void StartStopwatch()
@@ -581,7 +598,7 @@ namespace VYRMobile.ViewModels
             TimeSpan timeSpan = new TimeSpan();
             timeSpan = TimeSpan.FromSeconds(60);
 
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new Mapa2(App.Alarm.LocationName, App.Alarm.Location)));
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new MapPage(App.Alarm.LocationName, App.Alarm.Location)));
             //stopWatch.Start();
 
             //ChronoColorChange(timeSpan);

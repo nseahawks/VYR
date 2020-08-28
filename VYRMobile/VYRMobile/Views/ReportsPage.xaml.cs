@@ -12,9 +12,9 @@ using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
 {
-    public partial class Reportes : ContentPage
+    public partial class ReportsPage : ContentPage
     {
-        public Reportes()
+        public ReportsPage()
         {
             InitializeComponent();
 

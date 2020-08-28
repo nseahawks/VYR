@@ -24,11 +24,12 @@ namespace VYRMobile.Views
     {
         private ReportsStore _store { get; set; }
         FirebaseHelper _firebase = new FirebaseHelper();
+        PermissionsHelper _permissions = new PermissionsHelper();
         public SupervisionPage()
         {
             InitializeComponent();
 
-            BindingContext = new SupervisionViewModel();
+            //BindingContext = new SupervisionViewModel();
 
             _store = new ReportsStore();
 
@@ -61,7 +62,14 @@ namespace VYRMobile.Views
         {
             await Navigation.PushPopupAsync(new LoadingPopup("Guardando..."));
 
-            await ExchangeWorker();
+            try
+            {
+                await ExchangeWorker();
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Ocurrió un problema al procesar la información", "Aceptar");
+            }
 
             await Navigation.PopPopupAsync();
         }
@@ -224,33 +232,41 @@ namespace VYRMobile.Views
         }
         private async void GetWorkers()
         {
-            var workers = await ReportsStore.Instance.GetUsersAsync();
-
-            App.Workers.Clear();
-            App.ExchangeableWorkers.Clear();
-
-            foreach (var worker in workers)
+            try
             {
-                var lastEvaluatedDate = await SecureStorage.GetAsync("lastEvaluatedDate");
-                worker.FullName = worker.FirstName + " " + worker.LastName;
+                var workers = await ReportsStore.Instance.GetUsersAsync();
 
-                if (App.ExchangeableWorkers.Contains(worker) == false && worker.Exchange == true)
+                App.Workers.Clear();
+                App.ExchangeableWorkers.Clear();
+
+                foreach (var worker in workers)
                 {
-                    App.ExchangeableWorkers.Add(worker);
+                    var lastEvaluatedDate = await SecureStorage.GetAsync("lastEvaluatedDate");
+                    worker.FullName = worker.FirstName + " " + worker.LastName;
+
+                    if (App.ExchangeableWorkers.Contains(worker) == false && worker.Exchange == true)
+                    {
+                        App.ExchangeableWorkers.Add(worker);
+                    }
+
+                    if (lastEvaluatedDate != DateTime.Now.ToString("dd/MM/yyyy"))
+                    {
+                        worker.IsAssist = false;
+                        App.Workers.Add(worker);
+                    }
+                    else
+                    {
+                        App.Workers.Add(worker);
+                    }
                 }
 
-                if (lastEvaluatedDate != DateTime.Now.ToString("dd/MM/yyyy"))
-                {
-                    worker.IsAssist = false;
-                    App.Workers.Add(worker);
-                }
-                else
-                {
-                    App.Workers.Add(worker);
-                }
+                await SecureStorage.SetAsync("lastEvaluatedDate", DateTime.Now.ToString("dd/MM/yyyy"));
             }
-
-            await SecureStorage.SetAsync("lastEvaluatedDate", DateTime.Now.ToString("dd/MM/yyyy"));
+            catch
+            {
+                await DisplayAlert("Error", "No se puede procesar la informacion en este momento", "Aceptar");
+            }
+            
         }
         private void BtnNext_Clicked(object sender, EventArgs e)
         {
@@ -368,11 +384,18 @@ namespace VYRMobile.Views
 
             indicator.IsRunning = true;
 
-            var photoLink = await UploadPhoto();
-
-            if (string.IsNullOrEmpty(photoLink) == false)
+            try
             {
-                await Validate(photoLink);
+                var photoLink = await UploadPhoto();
+
+                if (string.IsNullOrEmpty(photoLink) == false)
+                {
+                    await Validate(photoLink);
+                }
+            }
+            catch
+            {
+                await DisplayAlert("Error", "Ocurrió un problema al procesar la información", "Aceptar");
             }
 
             indicator.IsRunning = false;
@@ -402,28 +425,36 @@ namespace VYRMobile.Views
             {
                 Command = new Command(async () =>
                 {
-                    await CrossMedia.Current.Initialize();
+                    bool isCameraPermited = await _permissions.CheckCameraPermissionsStatus();
 
-                    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                    if(!isCameraPermited) 
                     {
-                        await DisplayAlert("Sin cámara", "No hay cámara disponible", "OK");
-                        return;
+                        await DisplayAlert("Denegado", "Otorga los permisos de la camara para continuar", "Aceptar");
                     }
+                    else
+                    {
+                        await CrossMedia.Current.Initialize();
 
-                    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions { });
+                        if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                        {
+                            await DisplayAlert("Sin cámara", "No hay cámara disponible", "OK");
+                            return;
+                        }
 
-                    if (file == null)
-                        return;
+                        var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions { });
 
-                    App.ImagesNames.Clear();
-                    App.ImagesStreams.Clear();
+                        if (file == null)
+                            return;
 
-                    App.ImagesNames.Add(Path.GetFileName(file.Path));
-                    App.ImagesStreams.Add(file.GetStream());
+                        App.ImagesNames.Clear();
+                        App.ImagesStreams.Clear();
 
-                    pic.Aspect = Aspect.AspectFill;
-                    pic.Source = ImageSource.FromStream(() => file.GetStream());
+                        App.ImagesNames.Add(Path.GetFileName(file.Path));
+                        App.ImagesStreams.Add(file.GetStream());
 
+                        pic.Aspect = Aspect.AspectFill;
+                        pic.Source = ImageSource.FromStream(() => file.GetStream());
+                    }
                 }),
                 NumberOfTapsRequired = 1
             });

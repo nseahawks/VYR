@@ -8,12 +8,13 @@ using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using VYRMobile.Data;
 using Xamarin.Essentials;
-
+using VYRMobile.Helper;
 
 namespace VYRMobile.Views
 {
     public partial class CreateReportPage : ContentPage
     {
+        PermissionsHelper _permissions = new PermissionsHelper();
         public Command EnableCommand { get; set; }
         public Command DisableCommand { get; set; }
         private Stream imgStream;
@@ -56,50 +57,65 @@ namespace VYRMobile.Views
         }
         private async void BtnAttach_clicked(object sender, EventArgs e)
         {
-            await CrossMedia.Current.Initialize();
+            bool isCameraPermited = await _permissions.CheckCameraPermissionsStatus();
 
-            if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            if (isCameraPermited)
             {
-                await DisplayAlert("Sin cámara", "No hay cámara disponible", "OK");
-                return;
-            } 
+                try
+                {
+                    await CrossMedia.Current.Initialize();
 
-            var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions{ });
+                    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        await DisplayAlert("Sin cámara", "No hay cámara disponible", "OK");
+                        return;
+                    }
+                    
+                    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions { });
 
-            if (file == null)
-                return;
+                    if (file == null)
+                        return;
 
-            imgStream = file.GetStream();
-            imgName = Path.GetFileName(file.Path);
+                    imgStream = file.GetStream();
+                    imgName = Path.GetFileName(file.Path);
 
-            missingLabel.IsVisible = false;
+                    missingLabel.IsVisible = false;
 
-            if (Image1.Source == null)
-            {
-                Image1.Source = ImageSource.FromStream(() => file.GetStream());
-                App.ImagesNames.Add(imgName);
-                App.ImagesStreams.Add(imgStream);
-                await AnimateImage(Image1);
-            }
-            else if (Image2.Source == null)
-            {
-                Image2.Source = ImageSource.FromStream(() => file.GetStream());
-                App.ImagesNames.Add(imgName);
-                App.ImagesStreams.Add(imgStream);
-                await AnimateImage(Image2);
-            }
-            else if (Image3.Source == null)
-            {
-                Image3.Source = ImageSource.FromStream(() => file.GetStream());
-                App.ImagesNames.Add(imgName);
-                App.ImagesStreams.Add(imgStream);
-                await AnimateImage(Image3);
+                    if (Image1.Source == null)
+                    {
+                        Image1.Source = ImageSource.FromStream(() => file.GetStream());
+                        App.ImagesNames.Add(imgName);
+                        App.ImagesStreams.Add(imgStream);
+                        await AnimateImage(Image1);
+                    }
+                    else if (Image2.Source == null)
+                    {
+                        Image2.Source = ImageSource.FromStream(() => file.GetStream());
+                        App.ImagesNames.Add(imgName);
+                        App.ImagesStreams.Add(imgStream);
+                        await AnimateImage(Image2);
+                    }
+                    else if (Image3.Source == null)
+                    {
+                        Image3.Source = ImageSource.FromStream(() => file.GetStream());
+                        App.ImagesNames.Add(imgName);
+                        App.ImagesStreams.Add(imgStream);
+                        await AnimateImage(Image3);
+                    }
+                    else
+                    {
+                        await DisplayAlert("Campo lleno", "Ha alcanzado el numero máximo de imágenes por reporte", "Aceptar");
+                    }
+                }
+                catch
+                {
+                    await DisplayAlert("Error", "Ocurrió un problema al tomar la fotografía", "Aceptar");
+                }
             }
             else
             {
-                await DisplayAlert("Campo lleno", "Ha alcanzado el numero máximo de imágenes por reporte", "Aceptar");
+                await DisplayAlert("Fallido", "Activa los permisos de la cámara para continuar", "Aceptar");
             }
-
         }
 
         private async Task EnableButtons()
