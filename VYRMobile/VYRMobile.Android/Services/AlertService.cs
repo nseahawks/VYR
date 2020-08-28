@@ -33,7 +33,7 @@ namespace VYRMobile.Droid
                 .GetDocument(id)
                 .GetCollection("Alarms");
 
-            bool firstTime = true;
+            //bool firstTime = true;
 
             //document.ObserveModified()
             //.Subscribe(documentChange =>

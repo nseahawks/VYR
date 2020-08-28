@@ -83,8 +83,8 @@ namespace VYRMobile.ViewModels
                 Locations.Add(location);
             }
         }
-        public event PropertyChangedEventHandler PropertyChanged;
-        protected virtual void OnPropertyChanged(string propertyName)
+        public new event PropertyChangedEventHandler PropertyChanged;
+        protected new virtual void OnPropertyChanged(string propertyName)
         {
             var changed = PropertyChanged;
             {
