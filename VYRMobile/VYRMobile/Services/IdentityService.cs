@@ -49,8 +49,8 @@ namespace VYRMobile.Services
                     JWT jwt = JsonConvert.DeserializeObject<JWT>(stringJWT);
                     await SecureStorage.SetAsync("token", jwt.Token);
                     ApiHelper.Token = jwt.Token;
-                    DeserializeToken(jwt.Token);
                     App.IsUserLoggedIn = true;
+                    DeserializeToken(jwt.Token);
 
                     //await CheckRecentCrash();
 
@@ -84,8 +84,6 @@ namespace VYRMobile.Services
                 await SecureStorage.SetAsync(pair.Key.ToString(), pair.Value.ToString());
             }
 
-            var tokenSerializedData = JsonConvert.SerializeObject(App.ApplicationUserToken);
-            await SecureStorage.SetAsync("token", tokenSerializedData);
             await SecureStorage.SetAsync("isLogged", App.IsUserLoggedIn.ToString());
 
             App.ApplicationUserId = await SecureStorage.GetAsync("id");

@@ -412,25 +412,33 @@ namespace VYRMobile.ViewModels
             var antennas = await ReportsStore.Instance.GetAntenasAsync();
 
             var backupLocationsData = await SecureStorage.GetAsync("roundsStateBackup");
-            List<CompanyLocation> backupLocationsList = JsonConvert.DeserializeObject<List<CompanyLocation>>(backupLocationsData);
+
+            if (!string.IsNullOrEmpty(backupLocationsData))
+            {
+                try
+                {
+                    List<CompanyLocation> backupLocationsList = JsonConvert.DeserializeObject<List<CompanyLocation>>(backupLocationsData);
+
+                    foreach (var location in backupLocationsList)
+                    {
+                        BackupLocations.Add(location);
+                    }
+
+                    if (antennas.TrueForAll(isTrueForAllLocationNames))
+                    {
+                        antennas = BackupLocations;
+                    }
+                }
+                catch
+                {
+                    //exit operation
+                }
+            }
             string roundsStateNumber = await SecureStorage.GetAsync("roundsStateNumberBackup");
 
             if(!string.IsNullOrEmpty(roundsStateNumber))
             {
                 RoundNumber = Convert.ToInt32(roundsStateNumber);
-            }
-
-            if(backupLocationsList != null)
-            {
-                foreach (var location in backupLocationsList)
-                {
-                    BackupLocations.Add(location);
-                }
-                
-                if(antennas.TrueForAll(isTrueForAllLocationNames))
-                {
-                    antennas = BackupLocations;
-                }
             }
 
             App.UserLocations = antennas;

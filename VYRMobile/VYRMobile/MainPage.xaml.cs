@@ -1,9 +1,11 @@
 ﻿using Newtonsoft.Json;
 using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.IdentityModel.Tokens.Jwt;
 using System.Threading.Tasks;
 using VYRMobile.Helper;
+using VYRMobile.Styles;
 using VYRMobile.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -47,6 +49,25 @@ namespace VYRMobile
             
             if (App.IsUserLoggedIn)
             {
+                ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
+                if (mergedDictionaries != null)
+                {
+                    mergedDictionaries.Clear();
+
+                    switch (App.ApplicationUserRole)
+                    {
+                        default:
+                            mergedDictionaries.Add(new WorkerTheme());
+                            mergedDictionaries.Add(new Colors());
+                            mergedDictionaries.Add(new Fonts());
+                            break;
+                        case "Supervisor":
+                            mergedDictionaries.Add(new SupervisorTheme());
+                            mergedDictionaries.Add(new Colors());
+                            mergedDictionaries.Add(new Fonts());
+                            break;
+                    }
+                }
                 Application.Current.MainPage = new NavigationPage(new LoadingPage());
             }
             else
@@ -59,9 +80,10 @@ namespace VYRMobile
             var loginStateData = await SecureStorage.GetAsync("isLogged");
             var tokenData = await SecureStorage.GetAsync("token");
 
-            if (loginStateData == "true" && !string.IsNullOrEmpty(tokenData))
+            if (loginStateData == "True" && !string.IsNullOrEmpty(tokenData))
             {
-                JwtSecurityToken token = JsonConvert.DeserializeObject<JwtSecurityToken>(tokenData);
+                var handler = new JwtSecurityTokenHandler();
+                var token = handler.ReadToken(tokenData) as JwtSecurityToken;
 
                 if(token.ValidTo > DateTime.Now)
                 {
@@ -69,7 +91,7 @@ namespace VYRMobile
                     App.ApplicationUserRole = await SecureStorage.GetAsync("role");
                     App.IsUserLoggedIn = Convert.ToBoolean(loginStateData);
                     App.ApplicationUserToken = token;
-                    ApiHelper.Token = token.Id;
+                    ApiHelper.Token = tokenData;
                 }
             }
         }

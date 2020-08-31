@@ -151,7 +151,6 @@ namespace VYRMobile.Views
                 Children.Add(home);
                 Children.Add(user);
 
-
                 var pages = Children.GetEnumerator();
                 pages.MoveNext();
                 pages.MoveNext();
