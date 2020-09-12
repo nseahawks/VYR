@@ -9,6 +9,7 @@
     <Win32Resource />
     <Company>369 Labs</Company>
     <Product>VYR-X</Product>
+    <AssemblyName>`</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>

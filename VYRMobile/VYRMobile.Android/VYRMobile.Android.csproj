@@ -44,7 +44,7 @@
     <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
-    <AndroidLinkTool>proguard</AndroidLinkTool>
+    <AndroidLinkTool>r8</AndroidLinkTool>
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
@@ -484,9 +484,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\vyrxall.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\danielkome.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidAsset Include="Assets\flag.png" />
