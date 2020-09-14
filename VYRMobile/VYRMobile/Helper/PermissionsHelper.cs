@@ -1,8 +1,5 @@
 ﻿using Android.Content;
 using Android.Locations;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 

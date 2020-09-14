@@ -2,7 +2,6 @@
 using Android.Locations;
 using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Extensions;
-using Plugin.DeviceInfo;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;

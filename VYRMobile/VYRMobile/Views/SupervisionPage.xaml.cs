@@ -1,17 +1,14 @@
 ﻿using Plugin.Media;
 using Rg.Plugins.Popup.Extensions;
-using Syncfusion.SfPicker.XForms;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using VYRMobile.Data;
 using VYRMobile.Helper;
 using VYRMobile.Models;
 using VYRMobile.Services;
-using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
 using Xamarin.Forms;

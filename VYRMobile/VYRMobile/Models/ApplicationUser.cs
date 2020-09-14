@@ -1,9 +1,4 @@
 ﻿using MvvmHelpers;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using Xamarin.Essentials;
-using VYRMobile.ViewModels;
 
 
 namespace VYRMobile.Models

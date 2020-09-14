@@ -1,12 +1,9 @@
-﻿using Plugin.CloudFirestore;
-using Plugin.DeviceInfo;
-using Rg.Plugins.Popup.Extensions;
+﻿using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using VYRMobile.Models;
 using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
-using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VYRMobile.Views

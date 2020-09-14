@@ -4,14 +4,10 @@ using Android.Content;
 using Android.OS;
 using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Extensions;
-using Plugin.LocalNotifications;
-using Plugin.PushNotification;
 using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Models;
-using VYRMobile.Services;
 using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace VYRMobile.Droid
 {

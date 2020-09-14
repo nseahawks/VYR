@@ -1,19 +1,12 @@
 ﻿using System;
 using System.Collections.ObjectModel;
 using System.Linq;
-using System.Windows.Input;
 using Xamarin.Forms;
-using VYRMobile.Services;
 using VYRMobile.Models;
 using VYRMobile.Data;
 using System.Threading.Tasks;
 using VYRMobile.Views;
-using static Android.Content.ClipData;
-using System.Collections;
-using System.Reflection;
 using System.IO;
-using Newtonsoft.Json;
-using System.Collections.Generic;
 using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Views.Popups;
 

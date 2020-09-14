@@ -10,7 +10,6 @@ using Xamarin.Essentials;
 using Microsoft.AppCenter.Crashes;
 using System;
 using System.IdentityModel.Tokens.Jwt;
-using VYRMobile.Helper;
 
 namespace VYRMobile
 {

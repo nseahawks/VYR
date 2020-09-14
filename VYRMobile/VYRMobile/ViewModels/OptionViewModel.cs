@@ -1,13 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using VYRMobile.Services;
 using Xamarin.Forms;
 using VYRMobile.Views;
-using Plugin.DeviceInfo;
-using Plugin.CloudFirestore;
 using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Views.Popups;
 

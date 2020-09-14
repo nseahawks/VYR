@@ -1,8 +1,5 @@
 ﻿using Plugin.CloudFirestore;
 using Plugin.CloudFirestore.Attributes;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace VYRMobile.Models
 {

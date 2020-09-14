@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 using Xamarin.Forms;
 using VYRMobile.Models;
-using VYRMobile.Services;
 
 namespace VYRMobile.ViewModels
 {

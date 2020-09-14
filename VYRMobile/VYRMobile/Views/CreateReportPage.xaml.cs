@@ -1,13 +1,9 @@
 ﻿using Plugin.Media;
 using System;
-using System.Collections.ObjectModel;
 using System.IO;
 using System.Threading.Tasks;
-using VYRMobile.Models;
 using VYRMobile.ViewModels;
 using Xamarin.Forms;
-using VYRMobile.Data;
-using Xamarin.Essentials;
 using VYRMobile.Helper;
 
 namespace VYRMobile.Views

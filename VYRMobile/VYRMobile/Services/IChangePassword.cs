@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
-using VYRMobile.Models;
+﻿using System.Threading.Tasks;
 
 namespace VYRMobile.Services
 {

@@ -10,8 +10,6 @@ using Xamarin.Forms;
 using Plugin.CloudFirestore;
 using Newtonsoft.Json;
 using VYRMobile.Data;
-using Rg.Plugins.Popup.Extensions;
-using VYRMobile.Views.Popups;
 
 namespace VYRMobile
 {

@@ -1,15 +1,8 @@
-﻿using Plugin.CloudFirestore;
-using Rg.Plugins.Popup.Extensions;
+﻿using Rg.Plugins.Popup.Extensions;
 using System;
-using System.Net.Http;
-using System.Windows.Input;
-using VYRMobile.Helper;
-using VYRMobile.Models;
 using VYRMobile.ViewModels;
-using VYRMobile.Views;
 using VYRMobile.Views.Popups;
 using Xamarin.Forms;
-using ZXing.Net.Mobile.Forms;
 
 namespace VYRMobile
 {

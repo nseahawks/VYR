@@ -6,7 +6,6 @@
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:cells="clr-namespace:VYRMobile.Views.Cells"
              xmlns:controls="clr-namespace:VYRMobile.Controls"
-             xmlns:cards="clr-namespace:PanCardView;assembly=PanCardView"
              xmlns:ffimage="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
              xmlns:local="clr-namespace:VYRMobile.ViewModels"

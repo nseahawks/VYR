@@ -1,15 +1,10 @@
-﻿using Plugin.FilePicker;
-using Plugin.Media;
-using Rg.Plugins.Popup.Extensions;
+﻿using Plugin.Media;
 using Syncfusion.XForms.Buttons;
 using System;
 using System.Collections.Generic;
 using System.IO;
-using System.Text;
-using System.Threading.Tasks;
 using VYRMobile.Helper;
 using VYRMobile.ViewModels;
-using VYRMobile.Views.Popups;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 

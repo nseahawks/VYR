@@ -9,10 +9,7 @@ using VYRMobile.Models;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using VYRMobile.Services;
-using VYRMobile.Views;
-using System.Reflection;
 using System.IO;
-using VYRMobile.ViewModels;
 
 namespace VYRMobile.Data
 {

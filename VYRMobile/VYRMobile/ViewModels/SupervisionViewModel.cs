@@ -1,9 +1,5 @@
 ﻿using MvvmHelpers;
-using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
-using VYRMobile.Data;
 using VYRMobile.Models;
 using Xamarin.Forms;
 

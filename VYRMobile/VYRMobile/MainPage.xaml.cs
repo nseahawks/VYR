@@ -1,5 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.IdentityModel.Tokens.Jwt;
@@ -37,7 +36,6 @@ namespace VYRMobile
 
             BackgroundColor = Color.FromHex("#FFFFFF");
             Content = sub;
-           
         }
         protected override async void OnAppearing() 
         {

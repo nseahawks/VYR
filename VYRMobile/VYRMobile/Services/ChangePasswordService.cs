@@ -1,13 +1,10 @@
 ﻿using Newtonsoft.Json;
 using System;
-using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using VYRMobile.Helper;
 using VYRMobile.Models;
-using Xamarin.Essentials;
-using Xamarin.Forms;
 
 namespace VYRMobile.Services
 {

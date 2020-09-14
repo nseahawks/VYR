@@ -11,12 +11,10 @@ using Xamarin.Forms;
 using Xamarin.Forms.GoogleMaps;
 using MvvmHelpers;
 using VYRMobile.Data;
-using System.Globalization;
 using VYRMobile.Views;
 using Newtonsoft.Json;
 using System.Windows.Input;
 using Rg.Plugins.Popup.Extensions;
-using System.Collections.Generic;
 
 namespace VYRMobile.ViewModels
 {

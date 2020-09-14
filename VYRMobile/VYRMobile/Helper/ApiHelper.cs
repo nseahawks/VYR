@@ -1,12 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IdentityModel.Tokens.Jwt;
 using System.Net.Http;
 using System.Net.Http.Headers;
-using System.Text;
 using Xamarin.Essentials;
-using Newtonsoft.Json;
-using Android.OS;
 
 namespace VYRMobile.Helper
 {

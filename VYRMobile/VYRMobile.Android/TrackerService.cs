@@ -6,7 +6,6 @@ using Android.Content;
 using Android.OS;
 using Plugin.CloudFirestore;
 using Xamarin.Essentials;
-using Plugin.DeviceInfo;
 
 namespace VYRMobile.Droid
 {

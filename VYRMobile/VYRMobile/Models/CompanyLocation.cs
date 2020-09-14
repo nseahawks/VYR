@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Globalization;
-using MvvmHelpers;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-    
+
 namespace VYRMobile.Models
 {
     public partial class CompanyLocation : INotifyPropertyChanged

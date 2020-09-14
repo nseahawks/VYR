@@ -1,18 +1,7 @@
-﻿using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using Android.App;
-using Android.Content;
+﻿using Android.Content;
 using Android.Net;
-using Android.OS;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using VYRMobile.Droid.Renderers;
-using VYRMobile.Models;
 using VYRMobile.Services;
-using VYRMobile.ViewModels;
-using VYRMobile.Views;
 using Xamarin.Forms;
 
 [assembly: Dependency(typeof(MakePhoneCall))]

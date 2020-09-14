@@ -1,5 +1,4 @@
-﻿using Microsoft.AppCenter.Crashes;
-using Newtonsoft.Json;
+﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
@@ -12,7 +11,6 @@ using VYRMobile.Models;
 using VYRMobile.Styles;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-using static Android.Content.Res.Resources;
 
 namespace VYRMobile.Services
 {

@@ -84,9 +84,6 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="CardsView">
-      <Version>2.4.0</Version>
-    </PackageReference>
     <PackageReference Include="CarouselView.FormsPlugin">
       <Version>5.2.0</Version>
     </PackageReference>
@@ -101,12 +98,6 @@
     </PackageReference>
     <PackageReference Include="MagicGradients">
       <Version>1.0.0</Version>
-    </PackageReference>
-    <PackageReference Include="Microcharts">
-      <Version>0.7.1</Version>
-    </PackageReference>
-    <PackageReference Include="Microcharts.Forms">
-      <Version>0.7.1</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.AppCenter.Analytics">
       <Version>3.2.2</Version>
@@ -234,7 +225,6 @@
     <Compile Include="Services\AlertService.cs" />
     <Compile Include="CachingNativeBitmapDescriptorFactory.cs" />
     <Compile Include="MainActivity.cs" />
-    <Compile Include="MainApplication.cs" />
     <Compile Include="Renderers\CustomMapRenderer.cs" />
     <Compile Include="Renderers\MakePhoneCall.cs" />
     <Compile Include="Renderers\StartAlarmService.cs" />
@@ -297,22 +287,7 @@
     <AndroidResource Include="Resources\drawable\home2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\home3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\home.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\map.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\pause.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\dashboard2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\historial2.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\mapa2.png" />
@@ -324,25 +299,10 @@
     <AndroidResource Include="Resources\drawable\reportes2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\more.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\more2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\more3.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\back.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\back2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\attach.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\send.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\send2.png" />
@@ -351,34 +311,13 @@
     <AndroidResource Include="Resources\drawable\attach2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\usuario.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\xml\file_paths.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\load.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\logout.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\equipo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\config.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\seahawks.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\seahawks2.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\seahawks3.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\solido.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\outer.png" />
@@ -388,9 +327,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\quit.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\solidosh.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\antena.png" />
@@ -426,9 +362,6 @@
     <AndroidResource Include="Resources\drawable\label.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\label2.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\alarma.png" />
   </ItemGroup>
   <ItemGroup>
@@ -442,12 +375,6 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\startRoute.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\tool.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\tool1.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\antenna.png" />
@@ -474,9 +401,6 @@
     <AndroidResource Include="Resources\drawable\key2.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\user.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\user2.png" />
   </ItemGroup>
   <ItemGroup>
@@ -486,27 +410,15 @@
     <AndroidResource Include="Resources\drawable\vyrxall.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\flag.png" />
-    <AndroidAsset Include="Assets\flag2.png" />
     <AndroidAsset Include="Assets\mapAntenna.png" />
-    <AndroidAsset Include="Assets\marker.png" />
     <Content Include="file_paths.xml" />
     <AndroidResource Include="Resources\drawable\defaultimg.png" />
     <AndroidResource Include="Resources\drawable\camera.png" />
-    <AndroidResource Include="Resources\drawable\hooter.png" />
     <AndroidResource Include="Resources\drawable\hooter2.png" />
-    <AndroidResource Include="Resources\drawable\support.png" />
     <AndroidResource Include="Resources\drawable\support2.png" />
-    <AndroidResource Include="Resources\drawable\face.jpg" />
-    <AndroidResource Include="Resources\drawable\face2.jpg" />
     <AndroidResource Include="Resources\drawable\vyr.png" />
-    <AndroidResource Include="Resources\drawable\notifyAlarm.png" />
-    <AndroidResource Include="Resources\drawable\notifyAlarm2.png" />
     <AndroidResource Include="Resources\drawable\language.png" />
-    <AndroidResource Include="Resources\drawable\lock.png" />
-    <AndroidResource Include="Resources\drawable\touch.png" />
     <AndroidResource Include="Resources\drawable\person_outlined.png" />
-    <AndroidResource Include="Resources\drawable\touchWhite.png" />
     <AndroidResource Include="Resources\drawable\qr.png" />
     <AndroidResource Include="Resources\drawable\clear.png" />
     <AndroidResource Include="Resources\drawable\audio.png" />
@@ -516,10 +428,6 @@
     <AndroidResource Include="Resources\drawable\plus2.png" />
     <AndroidResource Include="Resources\drawable\plus3.png" />
     <AndroidResource Include="Resources\drawable\point.png" />
-    <AndroidResource Include="Resources\drawable\undefined.png" />
-    <AndroidResource Include="Resources\drawable\attended.png" />
-    <AndroidResource Include="Resources\drawable\notAttended.png" />
-    <AndroidResource Include="Resources\drawable\camera2.png" />
     <AndroidResource Include="Resources\drawable\closedEye.png" />
     <AndroidResource Include="Resources\drawable\openEye.png" />
     <AndroidResource Include="Resources\drawable\star.png" />

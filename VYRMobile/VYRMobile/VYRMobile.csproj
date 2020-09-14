@@ -9,7 +9,7 @@
     <Win32Resource />
     <Company>369 Labs</Company>
     <Product>VYR-X</Product>
-    <AssemblyName>`</AssemblyName>
+    <AssemblyName></AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -27,14 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CardsView" Version="2.4.0" />
     <PackageReference Include="CarouselView.FormsPlugin" Version="5.2.0" />
     <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie" Version="3.0.3" />
     <PackageReference Include="CoordinateSharp" Version="2.7.1.1" />
     <PackageReference Include="FirebaseStorage.net" Version="1.0.3" />
     <PackageReference Include="MagicGradients" Version="1.0.0" />
-    <PackageReference Include="Microcharts" Version="0.7.1" />
-    <PackageReference Include="Microcharts.Forms" Version="0.7.1" />
     <PackageReference Include="Microsoft.AppCenter.Analytics" Version="3.2.2" />
     <PackageReference Include="Microsoft.AppCenter.Crashes" Version="3.2.2" />
     <PackageReference Include="Microsoft.AppCenter.Push" Version="2.6.4" />
@@ -260,12 +257,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\Templates\TareaItemTemplate.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\Test.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\TestIcon.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\UserPage.xaml">

@@ -13,11 +13,7 @@ using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
 using Plugin.CloudFirestore;
-using Plugin.CloudFirestore.Extensions;
 using VYRMobile.Services;
-using Plugin.Geolocator;
-using Android.Content;
-using Android.Locations;
 
 namespace VYRMobile.Views
 {
@@ -30,6 +26,7 @@ namespace VYRMobile.Views
         private double CData;
         private double TData;
         private double RouteDistance;
+        private bool IsLocationEnabled;
         LineHelper liner = new LineHelper();
         PermissionsHelper _permissions = new PermissionsHelper();
         public Command CalculateCommand2 { get; set; }
@@ -387,22 +384,25 @@ namespace VYRMobile.Views
 
         async Task GetActualLocation()
         {
-            try
+            while (!IsLocationEnabled)
             {
-                var isLocationEnabled = await _permissions.CheckLocationPermissionsStatus();
+                try
+                {
+                    IsLocationEnabled = await _permissions.CheckLocationPermissionsStatus();
 
-                if(isLocationEnabled)
-                {
-                    await GetMyActualLocation();
+                    if (IsLocationEnabled)
+                    {
+                        await GetMyActualLocation();
+                    }
+                    else
+                    {
+                        await App.Current.MainPage.DisplayAlert("Fallido", "Activa el GPS para continuar", "Aceptar");
+                    }
                 }
-                else
+                catch
                 {
-                    await App.Current.MainPage.DisplayAlert("Fallido", "Activa el GPS para continuar", "Aceptar");
+                    //Nothing
                 }
-            }
-            catch
-            {
-                //Nothing
             }
         }
 

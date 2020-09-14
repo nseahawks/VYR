@@ -4803,7 +4803,6 @@ namespace VYRMobile.Droid
 			global::Lottie.Forms.Resource.Styleable.View_paddingEnd = global::VYRMobile.Droid.Resource.Styleable.View_paddingEnd;
 			global::Lottie.Forms.Resource.Styleable.View_paddingStart = global::VYRMobile.Droid.Resource.Styleable.View_paddingStart;
 			global::Lottie.Forms.Resource.Styleable.View_theme = global::VYRMobile.Droid.Resource.Styleable.View_theme;
-			global::Microcharts.Droid.Resource.String.library_name = global::VYRMobile.Droid.Resource.String.library_name;
 			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.alpha = global::VYRMobile.Droid.Resource.Attribute.alpha;
 			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.font = global::VYRMobile.Droid.Resource.Attribute.font;
 			global::Microsoft.AppCenter.Push.Android.Resource.Attribute.fontProviderAuthority = global::VYRMobile.Droid.Resource.Attribute.fontProviderAuthority;
@@ -4967,2907 +4966,6 @@ namespace VYRMobile.Droid
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem;
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_color = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
 			global::Microsoft.AppCenter.Push.Android.Resource.Styleable.GradientColorItem_android_offset = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
-			global::PanCardView.Droid.Resource.Animation.abc_fade_in = global::VYRMobile.Droid.Resource.Animation.abc_fade_in;
-			global::PanCardView.Droid.Resource.Animation.abc_fade_out = global::VYRMobile.Droid.Resource.Animation.abc_fade_out;
-			global::PanCardView.Droid.Resource.Animation.abc_grow_fade_in_from_bottom = global::VYRMobile.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
-			global::PanCardView.Droid.Resource.Animation.abc_popup_enter = global::VYRMobile.Droid.Resource.Animation.abc_popup_enter;
-			global::PanCardView.Droid.Resource.Animation.abc_popup_exit = global::VYRMobile.Droid.Resource.Animation.abc_popup_exit;
-			global::PanCardView.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom = global::VYRMobile.Droid.Resource.Animation.abc_shrink_fade_out_from_bottom;
-			global::PanCardView.Droid.Resource.Animation.abc_slide_in_bottom = global::VYRMobile.Droid.Resource.Animation.abc_slide_in_bottom;
-			global::PanCardView.Droid.Resource.Animation.abc_slide_in_top = global::VYRMobile.Droid.Resource.Animation.abc_slide_in_top;
-			global::PanCardView.Droid.Resource.Animation.abc_slide_out_bottom = global::VYRMobile.Droid.Resource.Animation.abc_slide_out_bottom;
-			global::PanCardView.Droid.Resource.Animation.abc_slide_out_top = global::VYRMobile.Droid.Resource.Animation.abc_slide_out_top;
-			global::PanCardView.Droid.Resource.Animation.abc_tooltip_enter = global::VYRMobile.Droid.Resource.Animation.abc_tooltip_enter;
-			global::PanCardView.Droid.Resource.Animation.abc_tooltip_exit = global::VYRMobile.Droid.Resource.Animation.abc_tooltip_exit;
-			global::PanCardView.Droid.Resource.Animation.design_bottom_sheet_slide_in = global::VYRMobile.Droid.Resource.Animation.design_bottom_sheet_slide_in;
-			global::PanCardView.Droid.Resource.Animation.design_bottom_sheet_slide_out = global::VYRMobile.Droid.Resource.Animation.design_bottom_sheet_slide_out;
-			global::PanCardView.Droid.Resource.Animation.design_snackbar_in = global::VYRMobile.Droid.Resource.Animation.design_snackbar_in;
-			global::PanCardView.Droid.Resource.Animation.design_snackbar_out = global::VYRMobile.Droid.Resource.Animation.design_snackbar_out;
-			global::PanCardView.Droid.Resource.Animation.EnterFromLeft = global::VYRMobile.Droid.Resource.Animation.EnterFromLeft;
-			global::PanCardView.Droid.Resource.Animation.EnterFromRight = global::VYRMobile.Droid.Resource.Animation.EnterFromRight;
-			global::PanCardView.Droid.Resource.Animation.ExitToLeft = global::VYRMobile.Droid.Resource.Animation.ExitToLeft;
-			global::PanCardView.Droid.Resource.Animation.ExitToRight = global::VYRMobile.Droid.Resource.Animation.ExitToRight;
-			global::PanCardView.Droid.Resource.Animator.design_appbar_state_list_animator = global::VYRMobile.Droid.Resource.Animator.design_appbar_state_list_animator;
-			global::PanCardView.Droid.Resource.Animator.design_fab_hide_motion_spec = global::VYRMobile.Droid.Resource.Animator.design_fab_hide_motion_spec;
-			global::PanCardView.Droid.Resource.Animator.design_fab_show_motion_spec = global::VYRMobile.Droid.Resource.Animator.design_fab_show_motion_spec;
-			global::PanCardView.Droid.Resource.Animator.mtrl_btn_state_list_anim = global::VYRMobile.Droid.Resource.Animator.mtrl_btn_state_list_anim;
-			global::PanCardView.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim = global::VYRMobile.Droid.Resource.Animator.mtrl_btn_unelevated_state_list_anim;
-			global::PanCardView.Droid.Resource.Animator.mtrl_chip_state_list_anim = global::VYRMobile.Droid.Resource.Animator.mtrl_chip_state_list_anim;
-			global::PanCardView.Droid.Resource.Animator.mtrl_fab_hide_motion_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_hide_motion_spec;
-			global::PanCardView.Droid.Resource.Animator.mtrl_fab_show_motion_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_show_motion_spec;
-			global::PanCardView.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_transformation_sheet_collapse_spec;
-			global::PanCardView.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec = global::VYRMobile.Droid.Resource.Animator.mtrl_fab_transformation_sheet_expand_spec;
-			global::PanCardView.Droid.Resource.Attribute.actionBarDivider = global::VYRMobile.Droid.Resource.Attribute.actionBarDivider;
-			global::PanCardView.Droid.Resource.Attribute.actionBarItemBackground = global::VYRMobile.Droid.Resource.Attribute.actionBarItemBackground;
-			global::PanCardView.Droid.Resource.Attribute.actionBarPopupTheme = global::VYRMobile.Droid.Resource.Attribute.actionBarPopupTheme;
-			global::PanCardView.Droid.Resource.Attribute.actionBarSize = global::VYRMobile.Droid.Resource.Attribute.actionBarSize;
-			global::PanCardView.Droid.Resource.Attribute.actionBarSplitStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarSplitStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionBarStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionBarTabBarStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarTabBarStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionBarTabStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarTabStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionBarTabTextStyle = global::VYRMobile.Droid.Resource.Attribute.actionBarTabTextStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionBarTheme = global::VYRMobile.Droid.Resource.Attribute.actionBarTheme;
-			global::PanCardView.Droid.Resource.Attribute.actionBarWidgetTheme = global::VYRMobile.Droid.Resource.Attribute.actionBarWidgetTheme;
-			global::PanCardView.Droid.Resource.Attribute.actionButtonStyle = global::VYRMobile.Droid.Resource.Attribute.actionButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionDropDownStyle = global::VYRMobile.Droid.Resource.Attribute.actionDropDownStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionLayout = global::VYRMobile.Droid.Resource.Attribute.actionLayout;
-			global::PanCardView.Droid.Resource.Attribute.actionMenuTextAppearance = global::VYRMobile.Droid.Resource.Attribute.actionMenuTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.actionMenuTextColor = global::VYRMobile.Droid.Resource.Attribute.actionMenuTextColor;
-			global::PanCardView.Droid.Resource.Attribute.actionModeBackground = global::VYRMobile.Droid.Resource.Attribute.actionModeBackground;
-			global::PanCardView.Droid.Resource.Attribute.actionModeCloseButtonStyle = global::VYRMobile.Droid.Resource.Attribute.actionModeCloseButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionModeCloseDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeCloseDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionModeCopyDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeCopyDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionModeCutDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeCutDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionModeFindDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeFindDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionModePasteDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModePasteDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionModePopupWindowStyle = global::VYRMobile.Droid.Resource.Attribute.actionModePopupWindowStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionModeSelectAllDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeSelectAllDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionModeShareDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeShareDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionModeSplitBackground = global::VYRMobile.Droid.Resource.Attribute.actionModeSplitBackground;
-			global::PanCardView.Droid.Resource.Attribute.actionModeStyle = global::VYRMobile.Droid.Resource.Attribute.actionModeStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionModeWebSearchDrawable = global::VYRMobile.Droid.Resource.Attribute.actionModeWebSearchDrawable;
-			global::PanCardView.Droid.Resource.Attribute.actionOverflowButtonStyle = global::VYRMobile.Droid.Resource.Attribute.actionOverflowButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionOverflowMenuStyle = global::VYRMobile.Droid.Resource.Attribute.actionOverflowMenuStyle;
-			global::PanCardView.Droid.Resource.Attribute.actionProviderClass = global::VYRMobile.Droid.Resource.Attribute.actionProviderClass;
-			global::PanCardView.Droid.Resource.Attribute.actionViewClass = global::VYRMobile.Droid.Resource.Attribute.actionViewClass;
-			global::PanCardView.Droid.Resource.Attribute.activityChooserViewStyle = global::VYRMobile.Droid.Resource.Attribute.activityChooserViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.alertDialogButtonGroupStyle = global::VYRMobile.Droid.Resource.Attribute.alertDialogButtonGroupStyle;
-			global::PanCardView.Droid.Resource.Attribute.alertDialogCenterButtons = global::VYRMobile.Droid.Resource.Attribute.alertDialogCenterButtons;
-			global::PanCardView.Droid.Resource.Attribute.alertDialogStyle = global::VYRMobile.Droid.Resource.Attribute.alertDialogStyle;
-			global::PanCardView.Droid.Resource.Attribute.alertDialogTheme = global::VYRMobile.Droid.Resource.Attribute.alertDialogTheme;
-			global::PanCardView.Droid.Resource.Attribute.allowStacking = global::VYRMobile.Droid.Resource.Attribute.allowStacking;
-			global::PanCardView.Droid.Resource.Attribute.alpha = global::VYRMobile.Droid.Resource.Attribute.alpha;
-			global::PanCardView.Droid.Resource.Attribute.alphabeticModifiers = global::VYRMobile.Droid.Resource.Attribute.alphabeticModifiers;
-			global::PanCardView.Droid.Resource.Attribute.arrowHeadLength = global::VYRMobile.Droid.Resource.Attribute.arrowHeadLength;
-			global::PanCardView.Droid.Resource.Attribute.arrowShaftLength = global::VYRMobile.Droid.Resource.Attribute.arrowShaftLength;
-			global::PanCardView.Droid.Resource.Attribute.autoCompleteTextViewStyle = global::VYRMobile.Droid.Resource.Attribute.autoCompleteTextViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.autoSizeMaxTextSize = global::VYRMobile.Droid.Resource.Attribute.autoSizeMaxTextSize;
-			global::PanCardView.Droid.Resource.Attribute.autoSizeMinTextSize = global::VYRMobile.Droid.Resource.Attribute.autoSizeMinTextSize;
-			global::PanCardView.Droid.Resource.Attribute.autoSizePresetSizes = global::VYRMobile.Droid.Resource.Attribute.autoSizePresetSizes;
-			global::PanCardView.Droid.Resource.Attribute.autoSizeStepGranularity = global::VYRMobile.Droid.Resource.Attribute.autoSizeStepGranularity;
-			global::PanCardView.Droid.Resource.Attribute.autoSizeTextType = global::VYRMobile.Droid.Resource.Attribute.autoSizeTextType;
-			global::PanCardView.Droid.Resource.Attribute.background = global::VYRMobile.Droid.Resource.Attribute.background;
-			global::PanCardView.Droid.Resource.Attribute.backgroundSplit = global::VYRMobile.Droid.Resource.Attribute.backgroundSplit;
-			global::PanCardView.Droid.Resource.Attribute.backgroundStacked = global::VYRMobile.Droid.Resource.Attribute.backgroundStacked;
-			global::PanCardView.Droid.Resource.Attribute.backgroundTint = global::VYRMobile.Droid.Resource.Attribute.backgroundTint;
-			global::PanCardView.Droid.Resource.Attribute.backgroundTintMode = global::VYRMobile.Droid.Resource.Attribute.backgroundTintMode;
-			global::PanCardView.Droid.Resource.Attribute.barLength = global::VYRMobile.Droid.Resource.Attribute.barLength;
-			global::PanCardView.Droid.Resource.Attribute.behavior_autoHide = global::VYRMobile.Droid.Resource.Attribute.behavior_autoHide;
-			global::PanCardView.Droid.Resource.Attribute.behavior_fitToContents = global::VYRMobile.Droid.Resource.Attribute.behavior_fitToContents;
-			global::PanCardView.Droid.Resource.Attribute.behavior_hideable = global::VYRMobile.Droid.Resource.Attribute.behavior_hideable;
-			global::PanCardView.Droid.Resource.Attribute.behavior_overlapTop = global::VYRMobile.Droid.Resource.Attribute.behavior_overlapTop;
-			global::PanCardView.Droid.Resource.Attribute.behavior_peekHeight = global::VYRMobile.Droid.Resource.Attribute.behavior_peekHeight;
-			global::PanCardView.Droid.Resource.Attribute.behavior_skipCollapsed = global::VYRMobile.Droid.Resource.Attribute.behavior_skipCollapsed;
-			global::PanCardView.Droid.Resource.Attribute.borderlessButtonStyle = global::VYRMobile.Droid.Resource.Attribute.borderlessButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.borderWidth = global::VYRMobile.Droid.Resource.Attribute.borderWidth;
-			global::PanCardView.Droid.Resource.Attribute.bottomAppBarStyle = global::VYRMobile.Droid.Resource.Attribute.bottomAppBarStyle;
-			global::PanCardView.Droid.Resource.Attribute.bottomNavigationStyle = global::VYRMobile.Droid.Resource.Attribute.bottomNavigationStyle;
-			global::PanCardView.Droid.Resource.Attribute.bottomSheetDialogTheme = global::VYRMobile.Droid.Resource.Attribute.bottomSheetDialogTheme;
-			global::PanCardView.Droid.Resource.Attribute.bottomSheetStyle = global::VYRMobile.Droid.Resource.Attribute.bottomSheetStyle;
-			global::PanCardView.Droid.Resource.Attribute.boxBackgroundColor = global::VYRMobile.Droid.Resource.Attribute.boxBackgroundColor;
-			global::PanCardView.Droid.Resource.Attribute.boxBackgroundMode = global::VYRMobile.Droid.Resource.Attribute.boxBackgroundMode;
-			global::PanCardView.Droid.Resource.Attribute.boxCollapsedPaddingTop = global::VYRMobile.Droid.Resource.Attribute.boxCollapsedPaddingTop;
-			global::PanCardView.Droid.Resource.Attribute.boxCornerRadiusBottomEnd = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusBottomEnd;
-			global::PanCardView.Droid.Resource.Attribute.boxCornerRadiusBottomStart = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusBottomStart;
-			global::PanCardView.Droid.Resource.Attribute.boxCornerRadiusTopEnd = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusTopEnd;
-			global::PanCardView.Droid.Resource.Attribute.boxCornerRadiusTopStart = global::VYRMobile.Droid.Resource.Attribute.boxCornerRadiusTopStart;
-			global::PanCardView.Droid.Resource.Attribute.boxStrokeColor = global::VYRMobile.Droid.Resource.Attribute.boxStrokeColor;
-			global::PanCardView.Droid.Resource.Attribute.boxStrokeWidth = global::VYRMobile.Droid.Resource.Attribute.boxStrokeWidth;
-			global::PanCardView.Droid.Resource.Attribute.buttonBarButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.buttonBarNegativeButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarNegativeButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.buttonBarNeutralButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarNeutralButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.buttonBarPositiveButtonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarPositiveButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.buttonBarStyle = global::VYRMobile.Droid.Resource.Attribute.buttonBarStyle;
-			global::PanCardView.Droid.Resource.Attribute.buttonGravity = global::VYRMobile.Droid.Resource.Attribute.buttonGravity;
-			global::PanCardView.Droid.Resource.Attribute.buttonIconDimen = global::VYRMobile.Droid.Resource.Attribute.buttonIconDimen;
-			global::PanCardView.Droid.Resource.Attribute.buttonPanelSideLayout = global::VYRMobile.Droid.Resource.Attribute.buttonPanelSideLayout;
-			global::PanCardView.Droid.Resource.Attribute.buttonStyle = global::VYRMobile.Droid.Resource.Attribute.buttonStyle;
-			global::PanCardView.Droid.Resource.Attribute.buttonStyleSmall = global::VYRMobile.Droid.Resource.Attribute.buttonStyleSmall;
-			global::PanCardView.Droid.Resource.Attribute.buttonTint = global::VYRMobile.Droid.Resource.Attribute.buttonTint;
-			global::PanCardView.Droid.Resource.Attribute.buttonTintMode = global::VYRMobile.Droid.Resource.Attribute.buttonTintMode;
-			global::PanCardView.Droid.Resource.Attribute.cardBackgroundColor = global::VYRMobile.Droid.Resource.Attribute.cardBackgroundColor;
-			global::PanCardView.Droid.Resource.Attribute.cardCornerRadius = global::VYRMobile.Droid.Resource.Attribute.cardCornerRadius;
-			global::PanCardView.Droid.Resource.Attribute.cardElevation = global::VYRMobile.Droid.Resource.Attribute.cardElevation;
-			global::PanCardView.Droid.Resource.Attribute.cardMaxElevation = global::VYRMobile.Droid.Resource.Attribute.cardMaxElevation;
-			global::PanCardView.Droid.Resource.Attribute.cardPreventCornerOverlap = global::VYRMobile.Droid.Resource.Attribute.cardPreventCornerOverlap;
-			global::PanCardView.Droid.Resource.Attribute.cardUseCompatPadding = global::VYRMobile.Droid.Resource.Attribute.cardUseCompatPadding;
-			global::PanCardView.Droid.Resource.Attribute.cardViewStyle = global::VYRMobile.Droid.Resource.Attribute.cardViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.checkboxStyle = global::VYRMobile.Droid.Resource.Attribute.checkboxStyle;
-			global::PanCardView.Droid.Resource.Attribute.checkedChip = global::VYRMobile.Droid.Resource.Attribute.checkedChip;
-			global::PanCardView.Droid.Resource.Attribute.checkedIcon = global::VYRMobile.Droid.Resource.Attribute.checkedIcon;
-			global::PanCardView.Droid.Resource.Attribute.checkedIconEnabled = global::VYRMobile.Droid.Resource.Attribute.checkedIconEnabled;
-			global::PanCardView.Droid.Resource.Attribute.checkedIconVisible = global::VYRMobile.Droid.Resource.Attribute.checkedIconVisible;
-			global::PanCardView.Droid.Resource.Attribute.checkedTextViewStyle = global::VYRMobile.Droid.Resource.Attribute.checkedTextViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.chipBackgroundColor = global::VYRMobile.Droid.Resource.Attribute.chipBackgroundColor;
-			global::PanCardView.Droid.Resource.Attribute.chipCornerRadius = global::VYRMobile.Droid.Resource.Attribute.chipCornerRadius;
-			global::PanCardView.Droid.Resource.Attribute.chipEndPadding = global::VYRMobile.Droid.Resource.Attribute.chipEndPadding;
-			global::PanCardView.Droid.Resource.Attribute.chipGroupStyle = global::VYRMobile.Droid.Resource.Attribute.chipGroupStyle;
-			global::PanCardView.Droid.Resource.Attribute.chipIcon = global::VYRMobile.Droid.Resource.Attribute.chipIcon;
-			global::PanCardView.Droid.Resource.Attribute.chipIconEnabled = global::VYRMobile.Droid.Resource.Attribute.chipIconEnabled;
-			global::PanCardView.Droid.Resource.Attribute.chipIconSize = global::VYRMobile.Droid.Resource.Attribute.chipIconSize;
-			global::PanCardView.Droid.Resource.Attribute.chipIconTint = global::VYRMobile.Droid.Resource.Attribute.chipIconTint;
-			global::PanCardView.Droid.Resource.Attribute.chipIconVisible = global::VYRMobile.Droid.Resource.Attribute.chipIconVisible;
-			global::PanCardView.Droid.Resource.Attribute.chipMinHeight = global::VYRMobile.Droid.Resource.Attribute.chipMinHeight;
-			global::PanCardView.Droid.Resource.Attribute.chipSpacing = global::VYRMobile.Droid.Resource.Attribute.chipSpacing;
-			global::PanCardView.Droid.Resource.Attribute.chipSpacingHorizontal = global::VYRMobile.Droid.Resource.Attribute.chipSpacingHorizontal;
-			global::PanCardView.Droid.Resource.Attribute.chipSpacingVertical = global::VYRMobile.Droid.Resource.Attribute.chipSpacingVertical;
-			global::PanCardView.Droid.Resource.Attribute.chipStandaloneStyle = global::VYRMobile.Droid.Resource.Attribute.chipStandaloneStyle;
-			global::PanCardView.Droid.Resource.Attribute.chipStartPadding = global::VYRMobile.Droid.Resource.Attribute.chipStartPadding;
-			global::PanCardView.Droid.Resource.Attribute.chipStrokeColor = global::VYRMobile.Droid.Resource.Attribute.chipStrokeColor;
-			global::PanCardView.Droid.Resource.Attribute.chipStrokeWidth = global::VYRMobile.Droid.Resource.Attribute.chipStrokeWidth;
-			global::PanCardView.Droid.Resource.Attribute.chipStyle = global::VYRMobile.Droid.Resource.Attribute.chipStyle;
-			global::PanCardView.Droid.Resource.Attribute.closeIcon = global::VYRMobile.Droid.Resource.Attribute.closeIcon;
-			global::PanCardView.Droid.Resource.Attribute.closeIconEnabled = global::VYRMobile.Droid.Resource.Attribute.closeIconEnabled;
-			global::PanCardView.Droid.Resource.Attribute.closeIconEndPadding = global::VYRMobile.Droid.Resource.Attribute.closeIconEndPadding;
-			global::PanCardView.Droid.Resource.Attribute.closeIconSize = global::VYRMobile.Droid.Resource.Attribute.closeIconSize;
-			global::PanCardView.Droid.Resource.Attribute.closeIconStartPadding = global::VYRMobile.Droid.Resource.Attribute.closeIconStartPadding;
-			global::PanCardView.Droid.Resource.Attribute.closeIconTint = global::VYRMobile.Droid.Resource.Attribute.closeIconTint;
-			global::PanCardView.Droid.Resource.Attribute.closeIconVisible = global::VYRMobile.Droid.Resource.Attribute.closeIconVisible;
-			global::PanCardView.Droid.Resource.Attribute.closeItemLayout = global::VYRMobile.Droid.Resource.Attribute.closeItemLayout;
-			global::PanCardView.Droid.Resource.Attribute.collapseContentDescription = global::VYRMobile.Droid.Resource.Attribute.collapseContentDescription;
-			global::PanCardView.Droid.Resource.Attribute.collapsedTitleGravity = global::VYRMobile.Droid.Resource.Attribute.collapsedTitleGravity;
-			global::PanCardView.Droid.Resource.Attribute.collapsedTitleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.collapsedTitleTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.collapseIcon = global::VYRMobile.Droid.Resource.Attribute.collapseIcon;
-			global::PanCardView.Droid.Resource.Attribute.color = global::VYRMobile.Droid.Resource.Attribute.color;
-			global::PanCardView.Droid.Resource.Attribute.colorAccent = global::VYRMobile.Droid.Resource.Attribute.colorAccent;
-			global::PanCardView.Droid.Resource.Attribute.colorBackgroundFloating = global::VYRMobile.Droid.Resource.Attribute.colorBackgroundFloating;
-			global::PanCardView.Droid.Resource.Attribute.colorButtonNormal = global::VYRMobile.Droid.Resource.Attribute.colorButtonNormal;
-			global::PanCardView.Droid.Resource.Attribute.colorControlActivated = global::VYRMobile.Droid.Resource.Attribute.colorControlActivated;
-			global::PanCardView.Droid.Resource.Attribute.colorControlHighlight = global::VYRMobile.Droid.Resource.Attribute.colorControlHighlight;
-			global::PanCardView.Droid.Resource.Attribute.colorControlNormal = global::VYRMobile.Droid.Resource.Attribute.colorControlNormal;
-			global::PanCardView.Droid.Resource.Attribute.colorError = global::VYRMobile.Droid.Resource.Attribute.colorError;
-			global::PanCardView.Droid.Resource.Attribute.colorPrimary = global::VYRMobile.Droid.Resource.Attribute.colorPrimary;
-			global::PanCardView.Droid.Resource.Attribute.colorPrimaryDark = global::VYRMobile.Droid.Resource.Attribute.colorPrimaryDark;
-			global::PanCardView.Droid.Resource.Attribute.colorSecondary = global::VYRMobile.Droid.Resource.Attribute.colorSecondary;
-			global::PanCardView.Droid.Resource.Attribute.colorSwitchThumbNormal = global::VYRMobile.Droid.Resource.Attribute.colorSwitchThumbNormal;
-			global::PanCardView.Droid.Resource.Attribute.commitIcon = global::VYRMobile.Droid.Resource.Attribute.commitIcon;
-			global::PanCardView.Droid.Resource.Attribute.contentDescription = global::VYRMobile.Droid.Resource.Attribute.contentDescription;
-			global::PanCardView.Droid.Resource.Attribute.contentInsetEnd = global::VYRMobile.Droid.Resource.Attribute.contentInsetEnd;
-			global::PanCardView.Droid.Resource.Attribute.contentInsetEndWithActions = global::VYRMobile.Droid.Resource.Attribute.contentInsetEndWithActions;
-			global::PanCardView.Droid.Resource.Attribute.contentInsetLeft = global::VYRMobile.Droid.Resource.Attribute.contentInsetLeft;
-			global::PanCardView.Droid.Resource.Attribute.contentInsetRight = global::VYRMobile.Droid.Resource.Attribute.contentInsetRight;
-			global::PanCardView.Droid.Resource.Attribute.contentInsetStart = global::VYRMobile.Droid.Resource.Attribute.contentInsetStart;
-			global::PanCardView.Droid.Resource.Attribute.contentInsetStartWithNavigation = global::VYRMobile.Droid.Resource.Attribute.contentInsetStartWithNavigation;
-			global::PanCardView.Droid.Resource.Attribute.contentPadding = global::VYRMobile.Droid.Resource.Attribute.contentPadding;
-			global::PanCardView.Droid.Resource.Attribute.contentPaddingBottom = global::VYRMobile.Droid.Resource.Attribute.contentPaddingBottom;
-			global::PanCardView.Droid.Resource.Attribute.contentPaddingLeft = global::VYRMobile.Droid.Resource.Attribute.contentPaddingLeft;
-			global::PanCardView.Droid.Resource.Attribute.contentPaddingRight = global::VYRMobile.Droid.Resource.Attribute.contentPaddingRight;
-			global::PanCardView.Droid.Resource.Attribute.contentPaddingTop = global::VYRMobile.Droid.Resource.Attribute.contentPaddingTop;
-			global::PanCardView.Droid.Resource.Attribute.contentScrim = global::VYRMobile.Droid.Resource.Attribute.contentScrim;
-			global::PanCardView.Droid.Resource.Attribute.controlBackground = global::VYRMobile.Droid.Resource.Attribute.controlBackground;
-			global::PanCardView.Droid.Resource.Attribute.coordinatorLayoutStyle = global::VYRMobile.Droid.Resource.Attribute.coordinatorLayoutStyle;
-			global::PanCardView.Droid.Resource.Attribute.cornerRadius = global::VYRMobile.Droid.Resource.Attribute.cornerRadius;
-			global::PanCardView.Droid.Resource.Attribute.counterEnabled = global::VYRMobile.Droid.Resource.Attribute.counterEnabled;
-			global::PanCardView.Droid.Resource.Attribute.counterMaxLength = global::VYRMobile.Droid.Resource.Attribute.counterMaxLength;
-			global::PanCardView.Droid.Resource.Attribute.counterOverflowTextAppearance = global::VYRMobile.Droid.Resource.Attribute.counterOverflowTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.counterTextAppearance = global::VYRMobile.Droid.Resource.Attribute.counterTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.customNavigationLayout = global::VYRMobile.Droid.Resource.Attribute.customNavigationLayout;
-			global::PanCardView.Droid.Resource.Attribute.defaultQueryHint = global::VYRMobile.Droid.Resource.Attribute.defaultQueryHint;
-			global::PanCardView.Droid.Resource.Attribute.dialogCornerRadius = global::VYRMobile.Droid.Resource.Attribute.dialogCornerRadius;
-			global::PanCardView.Droid.Resource.Attribute.dialogPreferredPadding = global::VYRMobile.Droid.Resource.Attribute.dialogPreferredPadding;
-			global::PanCardView.Droid.Resource.Attribute.dialogTheme = global::VYRMobile.Droid.Resource.Attribute.dialogTheme;
-			global::PanCardView.Droid.Resource.Attribute.displayOptions = global::VYRMobile.Droid.Resource.Attribute.displayOptions;
-			global::PanCardView.Droid.Resource.Attribute.divider = global::VYRMobile.Droid.Resource.Attribute.divider;
-			global::PanCardView.Droid.Resource.Attribute.dividerHorizontal = global::VYRMobile.Droid.Resource.Attribute.dividerHorizontal;
-			global::PanCardView.Droid.Resource.Attribute.dividerPadding = global::VYRMobile.Droid.Resource.Attribute.dividerPadding;
-			global::PanCardView.Droid.Resource.Attribute.dividerVertical = global::VYRMobile.Droid.Resource.Attribute.dividerVertical;
-			global::PanCardView.Droid.Resource.Attribute.drawableSize = global::VYRMobile.Droid.Resource.Attribute.drawableSize;
-			global::PanCardView.Droid.Resource.Attribute.drawerArrowStyle = global::VYRMobile.Droid.Resource.Attribute.drawerArrowStyle;
-			global::PanCardView.Droid.Resource.Attribute.dropdownListPreferredItemHeight = global::VYRMobile.Droid.Resource.Attribute.dropdownListPreferredItemHeight;
-			global::PanCardView.Droid.Resource.Attribute.dropDownListViewStyle = global::VYRMobile.Droid.Resource.Attribute.dropDownListViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.editTextBackground = global::VYRMobile.Droid.Resource.Attribute.editTextBackground;
-			global::PanCardView.Droid.Resource.Attribute.editTextColor = global::VYRMobile.Droid.Resource.Attribute.editTextColor;
-			global::PanCardView.Droid.Resource.Attribute.editTextStyle = global::VYRMobile.Droid.Resource.Attribute.editTextStyle;
-			global::PanCardView.Droid.Resource.Attribute.elevation = global::VYRMobile.Droid.Resource.Attribute.elevation;
-			global::PanCardView.Droid.Resource.Attribute.enforceMaterialTheme = global::VYRMobile.Droid.Resource.Attribute.enforceMaterialTheme;
-			global::PanCardView.Droid.Resource.Attribute.enforceTextAppearance = global::VYRMobile.Droid.Resource.Attribute.enforceTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.errorEnabled = global::VYRMobile.Droid.Resource.Attribute.errorEnabled;
-			global::PanCardView.Droid.Resource.Attribute.errorTextAppearance = global::VYRMobile.Droid.Resource.Attribute.errorTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable = global::VYRMobile.Droid.Resource.Attribute.expandActivityOverflowButtonDrawable;
-			global::PanCardView.Droid.Resource.Attribute.expanded = global::VYRMobile.Droid.Resource.Attribute.expanded;
-			global::PanCardView.Droid.Resource.Attribute.expandedTitleGravity = global::VYRMobile.Droid.Resource.Attribute.expandedTitleGravity;
-			global::PanCardView.Droid.Resource.Attribute.expandedTitleMargin = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMargin;
-			global::PanCardView.Droid.Resource.Attribute.expandedTitleMarginBottom = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginBottom;
-			global::PanCardView.Droid.Resource.Attribute.expandedTitleMarginEnd = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginEnd;
-			global::PanCardView.Droid.Resource.Attribute.expandedTitleMarginStart = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginStart;
-			global::PanCardView.Droid.Resource.Attribute.expandedTitleMarginTop = global::VYRMobile.Droid.Resource.Attribute.expandedTitleMarginTop;
-			global::PanCardView.Droid.Resource.Attribute.expandedTitleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.expandedTitleTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.externalRouteEnabledDrawable = global::VYRMobile.Droid.Resource.Attribute.externalRouteEnabledDrawable;
-			global::PanCardView.Droid.Resource.Attribute.fabAlignmentMode = global::VYRMobile.Droid.Resource.Attribute.fabAlignmentMode;
-			global::PanCardView.Droid.Resource.Attribute.fabCradleMargin = global::VYRMobile.Droid.Resource.Attribute.fabCradleMargin;
-			global::PanCardView.Droid.Resource.Attribute.fabCradleRoundedCornerRadius = global::VYRMobile.Droid.Resource.Attribute.fabCradleRoundedCornerRadius;
-			global::PanCardView.Droid.Resource.Attribute.fabCradleVerticalOffset = global::VYRMobile.Droid.Resource.Attribute.fabCradleVerticalOffset;
-			global::PanCardView.Droid.Resource.Attribute.fabCustomSize = global::VYRMobile.Droid.Resource.Attribute.fabCustomSize;
-			global::PanCardView.Droid.Resource.Attribute.fabSize = global::VYRMobile.Droid.Resource.Attribute.fabSize;
-			global::PanCardView.Droid.Resource.Attribute.fastScrollEnabled = global::VYRMobile.Droid.Resource.Attribute.fastScrollEnabled;
-			global::PanCardView.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollHorizontalThumbDrawable;
-			global::PanCardView.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollHorizontalTrackDrawable;
-			global::PanCardView.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollVerticalThumbDrawable;
-			global::PanCardView.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable = global::VYRMobile.Droid.Resource.Attribute.fastScrollVerticalTrackDrawable;
-			global::PanCardView.Droid.Resource.Attribute.firstBaselineToTopHeight = global::VYRMobile.Droid.Resource.Attribute.firstBaselineToTopHeight;
-			global::PanCardView.Droid.Resource.Attribute.floatingActionButtonStyle = global::VYRMobile.Droid.Resource.Attribute.floatingActionButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.font = global::VYRMobile.Droid.Resource.Attribute.font;
-			global::PanCardView.Droid.Resource.Attribute.fontFamily = global::VYRMobile.Droid.Resource.Attribute.fontFamily;
-			global::PanCardView.Droid.Resource.Attribute.fontProviderAuthority = global::VYRMobile.Droid.Resource.Attribute.fontProviderAuthority;
-			global::PanCardView.Droid.Resource.Attribute.fontProviderCerts = global::VYRMobile.Droid.Resource.Attribute.fontProviderCerts;
-			global::PanCardView.Droid.Resource.Attribute.fontProviderFetchStrategy = global::VYRMobile.Droid.Resource.Attribute.fontProviderFetchStrategy;
-			global::PanCardView.Droid.Resource.Attribute.fontProviderFetchTimeout = global::VYRMobile.Droid.Resource.Attribute.fontProviderFetchTimeout;
-			global::PanCardView.Droid.Resource.Attribute.fontProviderPackage = global::VYRMobile.Droid.Resource.Attribute.fontProviderPackage;
-			global::PanCardView.Droid.Resource.Attribute.fontProviderQuery = global::VYRMobile.Droid.Resource.Attribute.fontProviderQuery;
-			global::PanCardView.Droid.Resource.Attribute.fontStyle = global::VYRMobile.Droid.Resource.Attribute.fontStyle;
-			global::PanCardView.Droid.Resource.Attribute.fontVariationSettings = global::VYRMobile.Droid.Resource.Attribute.fontVariationSettings;
-			global::PanCardView.Droid.Resource.Attribute.fontWeight = global::VYRMobile.Droid.Resource.Attribute.fontWeight;
-			global::PanCardView.Droid.Resource.Attribute.foregroundInsidePadding = global::VYRMobile.Droid.Resource.Attribute.foregroundInsidePadding;
-			global::PanCardView.Droid.Resource.Attribute.gapBetweenBars = global::VYRMobile.Droid.Resource.Attribute.gapBetweenBars;
-			global::PanCardView.Droid.Resource.Attribute.goIcon = global::VYRMobile.Droid.Resource.Attribute.goIcon;
-			global::PanCardView.Droid.Resource.Attribute.headerLayout = global::VYRMobile.Droid.Resource.Attribute.headerLayout;
-			global::PanCardView.Droid.Resource.Attribute.height = global::VYRMobile.Droid.Resource.Attribute.height;
-			global::PanCardView.Droid.Resource.Attribute.helperText = global::VYRMobile.Droid.Resource.Attribute.helperText;
-			global::PanCardView.Droid.Resource.Attribute.helperTextEnabled = global::VYRMobile.Droid.Resource.Attribute.helperTextEnabled;
-			global::PanCardView.Droid.Resource.Attribute.helperTextTextAppearance = global::VYRMobile.Droid.Resource.Attribute.helperTextTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.hideMotionSpec = global::VYRMobile.Droid.Resource.Attribute.hideMotionSpec;
-			global::PanCardView.Droid.Resource.Attribute.hideOnContentScroll = global::VYRMobile.Droid.Resource.Attribute.hideOnContentScroll;
-			global::PanCardView.Droid.Resource.Attribute.hideOnScroll = global::VYRMobile.Droid.Resource.Attribute.hideOnScroll;
-			global::PanCardView.Droid.Resource.Attribute.hintAnimationEnabled = global::VYRMobile.Droid.Resource.Attribute.hintAnimationEnabled;
-			global::PanCardView.Droid.Resource.Attribute.hintEnabled = global::VYRMobile.Droid.Resource.Attribute.hintEnabled;
-			global::PanCardView.Droid.Resource.Attribute.hintTextAppearance = global::VYRMobile.Droid.Resource.Attribute.hintTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.homeAsUpIndicator = global::VYRMobile.Droid.Resource.Attribute.homeAsUpIndicator;
-			global::PanCardView.Droid.Resource.Attribute.homeLayout = global::VYRMobile.Droid.Resource.Attribute.homeLayout;
-			global::PanCardView.Droid.Resource.Attribute.hoveredFocusedTranslationZ = global::VYRMobile.Droid.Resource.Attribute.hoveredFocusedTranslationZ;
-			global::PanCardView.Droid.Resource.Attribute.icon = global::VYRMobile.Droid.Resource.Attribute.icon;
-			global::PanCardView.Droid.Resource.Attribute.iconEndPadding = global::VYRMobile.Droid.Resource.Attribute.iconEndPadding;
-			global::PanCardView.Droid.Resource.Attribute.iconGravity = global::VYRMobile.Droid.Resource.Attribute.iconGravity;
-			global::PanCardView.Droid.Resource.Attribute.iconifiedByDefault = global::VYRMobile.Droid.Resource.Attribute.iconifiedByDefault;
-			global::PanCardView.Droid.Resource.Attribute.iconPadding = global::VYRMobile.Droid.Resource.Attribute.iconPadding;
-			global::PanCardView.Droid.Resource.Attribute.iconSize = global::VYRMobile.Droid.Resource.Attribute.iconSize;
-			global::PanCardView.Droid.Resource.Attribute.iconStartPadding = global::VYRMobile.Droid.Resource.Attribute.iconStartPadding;
-			global::PanCardView.Droid.Resource.Attribute.iconTint = global::VYRMobile.Droid.Resource.Attribute.iconTint;
-			global::PanCardView.Droid.Resource.Attribute.iconTintMode = global::VYRMobile.Droid.Resource.Attribute.iconTintMode;
-			global::PanCardView.Droid.Resource.Attribute.imageButtonStyle = global::VYRMobile.Droid.Resource.Attribute.imageButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.indeterminateProgressStyle = global::VYRMobile.Droid.Resource.Attribute.indeterminateProgressStyle;
-			global::PanCardView.Droid.Resource.Attribute.initialActivityCount = global::VYRMobile.Droid.Resource.Attribute.initialActivityCount;
-			global::PanCardView.Droid.Resource.Attribute.insetForeground = global::VYRMobile.Droid.Resource.Attribute.insetForeground;
-			global::PanCardView.Droid.Resource.Attribute.isLightTheme = global::VYRMobile.Droid.Resource.Attribute.isLightTheme;
-			global::PanCardView.Droid.Resource.Attribute.itemBackground = global::VYRMobile.Droid.Resource.Attribute.itemBackground;
-			global::PanCardView.Droid.Resource.Attribute.itemHorizontalPadding = global::VYRMobile.Droid.Resource.Attribute.itemHorizontalPadding;
-			global::PanCardView.Droid.Resource.Attribute.itemHorizontalTranslationEnabled = global::VYRMobile.Droid.Resource.Attribute.itemHorizontalTranslationEnabled;
-			global::PanCardView.Droid.Resource.Attribute.itemIconPadding = global::VYRMobile.Droid.Resource.Attribute.itemIconPadding;
-			global::PanCardView.Droid.Resource.Attribute.itemIconSize = global::VYRMobile.Droid.Resource.Attribute.itemIconSize;
-			global::PanCardView.Droid.Resource.Attribute.itemIconTint = global::VYRMobile.Droid.Resource.Attribute.itemIconTint;
-			global::PanCardView.Droid.Resource.Attribute.itemPadding = global::VYRMobile.Droid.Resource.Attribute.itemPadding;
-			global::PanCardView.Droid.Resource.Attribute.itemSpacing = global::VYRMobile.Droid.Resource.Attribute.itemSpacing;
-			global::PanCardView.Droid.Resource.Attribute.itemTextAppearance = global::VYRMobile.Droid.Resource.Attribute.itemTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.itemTextAppearanceActive = global::VYRMobile.Droid.Resource.Attribute.itemTextAppearanceActive;
-			global::PanCardView.Droid.Resource.Attribute.itemTextAppearanceInactive = global::VYRMobile.Droid.Resource.Attribute.itemTextAppearanceInactive;
-			global::PanCardView.Droid.Resource.Attribute.itemTextColor = global::VYRMobile.Droid.Resource.Attribute.itemTextColor;
-			global::PanCardView.Droid.Resource.Attribute.keylines = global::VYRMobile.Droid.Resource.Attribute.keylines;
-			global::PanCardView.Droid.Resource.Attribute.labelVisibilityMode = global::VYRMobile.Droid.Resource.Attribute.labelVisibilityMode;
-			global::PanCardView.Droid.Resource.Attribute.lastBaselineToBottomHeight = global::VYRMobile.Droid.Resource.Attribute.lastBaselineToBottomHeight;
-			global::PanCardView.Droid.Resource.Attribute.layout = global::VYRMobile.Droid.Resource.Attribute.layout;
-			global::PanCardView.Droid.Resource.Attribute.layoutManager = global::VYRMobile.Droid.Resource.Attribute.layoutManager;
-			global::PanCardView.Droid.Resource.Attribute.layout_anchor = global::VYRMobile.Droid.Resource.Attribute.layout_anchor;
-			global::PanCardView.Droid.Resource.Attribute.layout_anchorGravity = global::VYRMobile.Droid.Resource.Attribute.layout_anchorGravity;
-			global::PanCardView.Droid.Resource.Attribute.layout_behavior = global::VYRMobile.Droid.Resource.Attribute.layout_behavior;
-			global::PanCardView.Droid.Resource.Attribute.layout_collapseMode = global::VYRMobile.Droid.Resource.Attribute.layout_collapseMode;
-			global::PanCardView.Droid.Resource.Attribute.layout_collapseParallaxMultiplier = global::VYRMobile.Droid.Resource.Attribute.layout_collapseParallaxMultiplier;
-			global::PanCardView.Droid.Resource.Attribute.layout_dodgeInsetEdges = global::VYRMobile.Droid.Resource.Attribute.layout_dodgeInsetEdges;
-			global::PanCardView.Droid.Resource.Attribute.layout_insetEdge = global::VYRMobile.Droid.Resource.Attribute.layout_insetEdge;
-			global::PanCardView.Droid.Resource.Attribute.layout_keyline = global::VYRMobile.Droid.Resource.Attribute.layout_keyline;
-			global::PanCardView.Droid.Resource.Attribute.layout_scrollFlags = global::VYRMobile.Droid.Resource.Attribute.layout_scrollFlags;
-			global::PanCardView.Droid.Resource.Attribute.layout_scrollInterpolator = global::VYRMobile.Droid.Resource.Attribute.layout_scrollInterpolator;
-			global::PanCardView.Droid.Resource.Attribute.liftOnScroll = global::VYRMobile.Droid.Resource.Attribute.liftOnScroll;
-			global::PanCardView.Droid.Resource.Attribute.lineHeight = global::VYRMobile.Droid.Resource.Attribute.lineHeight;
-			global::PanCardView.Droid.Resource.Attribute.lineSpacing = global::VYRMobile.Droid.Resource.Attribute.lineSpacing;
-			global::PanCardView.Droid.Resource.Attribute.listChoiceBackgroundIndicator = global::VYRMobile.Droid.Resource.Attribute.listChoiceBackgroundIndicator;
-			global::PanCardView.Droid.Resource.Attribute.listDividerAlertDialog = global::VYRMobile.Droid.Resource.Attribute.listDividerAlertDialog;
-			global::PanCardView.Droid.Resource.Attribute.listItemLayout = global::VYRMobile.Droid.Resource.Attribute.listItemLayout;
-			global::PanCardView.Droid.Resource.Attribute.listLayout = global::VYRMobile.Droid.Resource.Attribute.listLayout;
-			global::PanCardView.Droid.Resource.Attribute.listMenuViewStyle = global::VYRMobile.Droid.Resource.Attribute.listMenuViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.listPopupWindowStyle = global::VYRMobile.Droid.Resource.Attribute.listPopupWindowStyle;
-			global::PanCardView.Droid.Resource.Attribute.listPreferredItemHeight = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemHeight;
-			global::PanCardView.Droid.Resource.Attribute.listPreferredItemHeightLarge = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemHeightLarge;
-			global::PanCardView.Droid.Resource.Attribute.listPreferredItemHeightSmall = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemHeightSmall;
-			global::PanCardView.Droid.Resource.Attribute.listPreferredItemPaddingLeft = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemPaddingLeft;
-			global::PanCardView.Droid.Resource.Attribute.listPreferredItemPaddingRight = global::VYRMobile.Droid.Resource.Attribute.listPreferredItemPaddingRight;
-			global::PanCardView.Droid.Resource.Attribute.logo = global::VYRMobile.Droid.Resource.Attribute.logo;
-			global::PanCardView.Droid.Resource.Attribute.logoDescription = global::VYRMobile.Droid.Resource.Attribute.logoDescription;
-			global::PanCardView.Droid.Resource.Attribute.materialButtonStyle = global::VYRMobile.Droid.Resource.Attribute.materialButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.materialCardViewStyle = global::VYRMobile.Droid.Resource.Attribute.materialCardViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.maxActionInlineWidth = global::VYRMobile.Droid.Resource.Attribute.maxActionInlineWidth;
-			global::PanCardView.Droid.Resource.Attribute.maxButtonHeight = global::VYRMobile.Droid.Resource.Attribute.maxButtonHeight;
-			global::PanCardView.Droid.Resource.Attribute.maxImageSize = global::VYRMobile.Droid.Resource.Attribute.maxImageSize;
-			global::PanCardView.Droid.Resource.Attribute.measureWithLargestChild = global::VYRMobile.Droid.Resource.Attribute.measureWithLargestChild;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRouteAudioTrackDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteButtonStyle = global::VYRMobile.Droid.Resource.Attribute.mediaRouteButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteButtonTint = global::VYRMobile.Droid.Resource.Attribute.mediaRouteButtonTint;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteCloseDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRouteCloseDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay = global::VYRMobile.Droid.Resource.Attribute.mediaRouteControlPanelThemeOverlay;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRouteDefaultIconDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRoutePauseDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRoutePauseDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRoutePlayDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRoutePlayDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRouteSpeakerGroupIconDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRouteSpeakerIconDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteStopDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRouteStopDrawable;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteTheme = global::VYRMobile.Droid.Resource.Attribute.mediaRouteTheme;
-			global::PanCardView.Droid.Resource.Attribute.mediaRouteTvIconDrawable = global::VYRMobile.Droid.Resource.Attribute.mediaRouteTvIconDrawable;
-			global::PanCardView.Droid.Resource.Attribute.menu = global::VYRMobile.Droid.Resource.Attribute.menu;
-			global::PanCardView.Droid.Resource.Attribute.multiChoiceItemLayout = global::VYRMobile.Droid.Resource.Attribute.multiChoiceItemLayout;
-			global::PanCardView.Droid.Resource.Attribute.navigationContentDescription = global::VYRMobile.Droid.Resource.Attribute.navigationContentDescription;
-			global::PanCardView.Droid.Resource.Attribute.navigationIcon = global::VYRMobile.Droid.Resource.Attribute.navigationIcon;
-			global::PanCardView.Droid.Resource.Attribute.navigationMode = global::VYRMobile.Droid.Resource.Attribute.navigationMode;
-			global::PanCardView.Droid.Resource.Attribute.navigationViewStyle = global::VYRMobile.Droid.Resource.Attribute.navigationViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.numericModifiers = global::VYRMobile.Droid.Resource.Attribute.numericModifiers;
-			global::PanCardView.Droid.Resource.Attribute.overlapAnchor = global::VYRMobile.Droid.Resource.Attribute.overlapAnchor;
-			global::PanCardView.Droid.Resource.Attribute.paddingBottomNoButtons = global::VYRMobile.Droid.Resource.Attribute.paddingBottomNoButtons;
-			global::PanCardView.Droid.Resource.Attribute.paddingEnd = global::VYRMobile.Droid.Resource.Attribute.paddingEnd;
-			global::PanCardView.Droid.Resource.Attribute.paddingStart = global::VYRMobile.Droid.Resource.Attribute.paddingStart;
-			global::PanCardView.Droid.Resource.Attribute.paddingTopNoTitle = global::VYRMobile.Droid.Resource.Attribute.paddingTopNoTitle;
-			global::PanCardView.Droid.Resource.Attribute.panelBackground = global::VYRMobile.Droid.Resource.Attribute.panelBackground;
-			global::PanCardView.Droid.Resource.Attribute.panelMenuListTheme = global::VYRMobile.Droid.Resource.Attribute.panelMenuListTheme;
-			global::PanCardView.Droid.Resource.Attribute.panelMenuListWidth = global::VYRMobile.Droid.Resource.Attribute.panelMenuListWidth;
-			global::PanCardView.Droid.Resource.Attribute.passwordToggleContentDescription = global::VYRMobile.Droid.Resource.Attribute.passwordToggleContentDescription;
-			global::PanCardView.Droid.Resource.Attribute.passwordToggleDrawable = global::VYRMobile.Droid.Resource.Attribute.passwordToggleDrawable;
-			global::PanCardView.Droid.Resource.Attribute.passwordToggleEnabled = global::VYRMobile.Droid.Resource.Attribute.passwordToggleEnabled;
-			global::PanCardView.Droid.Resource.Attribute.passwordToggleTint = global::VYRMobile.Droid.Resource.Attribute.passwordToggleTint;
-			global::PanCardView.Droid.Resource.Attribute.passwordToggleTintMode = global::VYRMobile.Droid.Resource.Attribute.passwordToggleTintMode;
-			global::PanCardView.Droid.Resource.Attribute.popupMenuStyle = global::VYRMobile.Droid.Resource.Attribute.popupMenuStyle;
-			global::PanCardView.Droid.Resource.Attribute.popupTheme = global::VYRMobile.Droid.Resource.Attribute.popupTheme;
-			global::PanCardView.Droid.Resource.Attribute.popupWindowStyle = global::VYRMobile.Droid.Resource.Attribute.popupWindowStyle;
-			global::PanCardView.Droid.Resource.Attribute.preserveIconSpacing = global::VYRMobile.Droid.Resource.Attribute.preserveIconSpacing;
-			global::PanCardView.Droid.Resource.Attribute.pressedTranslationZ = global::VYRMobile.Droid.Resource.Attribute.pressedTranslationZ;
-			global::PanCardView.Droid.Resource.Attribute.progressBarPadding = global::VYRMobile.Droid.Resource.Attribute.progressBarPadding;
-			global::PanCardView.Droid.Resource.Attribute.progressBarStyle = global::VYRMobile.Droid.Resource.Attribute.progressBarStyle;
-			global::PanCardView.Droid.Resource.Attribute.queryBackground = global::VYRMobile.Droid.Resource.Attribute.queryBackground;
-			global::PanCardView.Droid.Resource.Attribute.queryHint = global::VYRMobile.Droid.Resource.Attribute.queryHint;
-			global::PanCardView.Droid.Resource.Attribute.radioButtonStyle = global::VYRMobile.Droid.Resource.Attribute.radioButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.ratingBarStyle = global::VYRMobile.Droid.Resource.Attribute.ratingBarStyle;
-			global::PanCardView.Droid.Resource.Attribute.ratingBarStyleIndicator = global::VYRMobile.Droid.Resource.Attribute.ratingBarStyleIndicator;
-			global::PanCardView.Droid.Resource.Attribute.ratingBarStyleSmall = global::VYRMobile.Droid.Resource.Attribute.ratingBarStyleSmall;
-			global::PanCardView.Droid.Resource.Attribute.reverseLayout = global::VYRMobile.Droid.Resource.Attribute.reverseLayout;
-			global::PanCardView.Droid.Resource.Attribute.rippleColor = global::VYRMobile.Droid.Resource.Attribute.rippleColor;
-			global::PanCardView.Droid.Resource.Attribute.scrimAnimationDuration = global::VYRMobile.Droid.Resource.Attribute.scrimAnimationDuration;
-			global::PanCardView.Droid.Resource.Attribute.scrimBackground = global::VYRMobile.Droid.Resource.Attribute.scrimBackground;
-			global::PanCardView.Droid.Resource.Attribute.scrimVisibleHeightTrigger = global::VYRMobile.Droid.Resource.Attribute.scrimVisibleHeightTrigger;
-			global::PanCardView.Droid.Resource.Attribute.searchHintIcon = global::VYRMobile.Droid.Resource.Attribute.searchHintIcon;
-			global::PanCardView.Droid.Resource.Attribute.searchIcon = global::VYRMobile.Droid.Resource.Attribute.searchIcon;
-			global::PanCardView.Droid.Resource.Attribute.searchViewStyle = global::VYRMobile.Droid.Resource.Attribute.searchViewStyle;
-			global::PanCardView.Droid.Resource.Attribute.seekBarStyle = global::VYRMobile.Droid.Resource.Attribute.seekBarStyle;
-			global::PanCardView.Droid.Resource.Attribute.selectableItemBackground = global::VYRMobile.Droid.Resource.Attribute.selectableItemBackground;
-			global::PanCardView.Droid.Resource.Attribute.selectableItemBackgroundBorderless = global::VYRMobile.Droid.Resource.Attribute.selectableItemBackgroundBorderless;
-			global::PanCardView.Droid.Resource.Attribute.showAsAction = global::VYRMobile.Droid.Resource.Attribute.showAsAction;
-			global::PanCardView.Droid.Resource.Attribute.showDividers = global::VYRMobile.Droid.Resource.Attribute.showDividers;
-			global::PanCardView.Droid.Resource.Attribute.showMotionSpec = global::VYRMobile.Droid.Resource.Attribute.showMotionSpec;
-			global::PanCardView.Droid.Resource.Attribute.showText = global::VYRMobile.Droid.Resource.Attribute.showText;
-			global::PanCardView.Droid.Resource.Attribute.showTitle = global::VYRMobile.Droid.Resource.Attribute.showTitle;
-			global::PanCardView.Droid.Resource.Attribute.singleChoiceItemLayout = global::VYRMobile.Droid.Resource.Attribute.singleChoiceItemLayout;
-			global::PanCardView.Droid.Resource.Attribute.singleLine = global::VYRMobile.Droid.Resource.Attribute.singleLine;
-			global::PanCardView.Droid.Resource.Attribute.singleSelection = global::VYRMobile.Droid.Resource.Attribute.singleSelection;
-			global::PanCardView.Droid.Resource.Attribute.snackbarButtonStyle = global::VYRMobile.Droid.Resource.Attribute.snackbarButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.snackbarStyle = global::VYRMobile.Droid.Resource.Attribute.snackbarStyle;
-			global::PanCardView.Droid.Resource.Attribute.spanCount = global::VYRMobile.Droid.Resource.Attribute.spanCount;
-			global::PanCardView.Droid.Resource.Attribute.spinBars = global::VYRMobile.Droid.Resource.Attribute.spinBars;
-			global::PanCardView.Droid.Resource.Attribute.spinnerDropDownItemStyle = global::VYRMobile.Droid.Resource.Attribute.spinnerDropDownItemStyle;
-			global::PanCardView.Droid.Resource.Attribute.spinnerStyle = global::VYRMobile.Droid.Resource.Attribute.spinnerStyle;
-			global::PanCardView.Droid.Resource.Attribute.splitTrack = global::VYRMobile.Droid.Resource.Attribute.splitTrack;
-			global::PanCardView.Droid.Resource.Attribute.srcCompat = global::VYRMobile.Droid.Resource.Attribute.srcCompat;
-			global::PanCardView.Droid.Resource.Attribute.stackFromEnd = global::VYRMobile.Droid.Resource.Attribute.stackFromEnd;
-			global::PanCardView.Droid.Resource.Attribute.state_above_anchor = global::VYRMobile.Droid.Resource.Attribute.state_above_anchor;
-			global::PanCardView.Droid.Resource.Attribute.state_collapsed = global::VYRMobile.Droid.Resource.Attribute.state_collapsed;
-			global::PanCardView.Droid.Resource.Attribute.state_collapsible = global::VYRMobile.Droid.Resource.Attribute.state_collapsible;
-			global::PanCardView.Droid.Resource.Attribute.state_liftable = global::VYRMobile.Droid.Resource.Attribute.state_liftable;
-			global::PanCardView.Droid.Resource.Attribute.state_lifted = global::VYRMobile.Droid.Resource.Attribute.state_lifted;
-			global::PanCardView.Droid.Resource.Attribute.statusBarBackground = global::VYRMobile.Droid.Resource.Attribute.statusBarBackground;
-			global::PanCardView.Droid.Resource.Attribute.statusBarScrim = global::VYRMobile.Droid.Resource.Attribute.statusBarScrim;
-			global::PanCardView.Droid.Resource.Attribute.strokeColor = global::VYRMobile.Droid.Resource.Attribute.strokeColor;
-			global::PanCardView.Droid.Resource.Attribute.strokeWidth = global::VYRMobile.Droid.Resource.Attribute.strokeWidth;
-			global::PanCardView.Droid.Resource.Attribute.subMenuArrow = global::VYRMobile.Droid.Resource.Attribute.subMenuArrow;
-			global::PanCardView.Droid.Resource.Attribute.submitBackground = global::VYRMobile.Droid.Resource.Attribute.submitBackground;
-			global::PanCardView.Droid.Resource.Attribute.subtitle = global::VYRMobile.Droid.Resource.Attribute.subtitle;
-			global::PanCardView.Droid.Resource.Attribute.subtitleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.subtitleTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.subtitleTextColor = global::VYRMobile.Droid.Resource.Attribute.subtitleTextColor;
-			global::PanCardView.Droid.Resource.Attribute.subtitleTextStyle = global::VYRMobile.Droid.Resource.Attribute.subtitleTextStyle;
-			global::PanCardView.Droid.Resource.Attribute.suggestionRowLayout = global::VYRMobile.Droid.Resource.Attribute.suggestionRowLayout;
-			global::PanCardView.Droid.Resource.Attribute.switchMinWidth = global::VYRMobile.Droid.Resource.Attribute.switchMinWidth;
-			global::PanCardView.Droid.Resource.Attribute.switchPadding = global::VYRMobile.Droid.Resource.Attribute.switchPadding;
-			global::PanCardView.Droid.Resource.Attribute.switchStyle = global::VYRMobile.Droid.Resource.Attribute.switchStyle;
-			global::PanCardView.Droid.Resource.Attribute.switchTextAppearance = global::VYRMobile.Droid.Resource.Attribute.switchTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.tabBackground = global::VYRMobile.Droid.Resource.Attribute.tabBackground;
-			global::PanCardView.Droid.Resource.Attribute.tabContentStart = global::VYRMobile.Droid.Resource.Attribute.tabContentStart;
-			global::PanCardView.Droid.Resource.Attribute.tabGravity = global::VYRMobile.Droid.Resource.Attribute.tabGravity;
-			global::PanCardView.Droid.Resource.Attribute.tabIconTint = global::VYRMobile.Droid.Resource.Attribute.tabIconTint;
-			global::PanCardView.Droid.Resource.Attribute.tabIconTintMode = global::VYRMobile.Droid.Resource.Attribute.tabIconTintMode;
-			global::PanCardView.Droid.Resource.Attribute.tabIndicator = global::VYRMobile.Droid.Resource.Attribute.tabIndicator;
-			global::PanCardView.Droid.Resource.Attribute.tabIndicatorAnimationDuration = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorAnimationDuration;
-			global::PanCardView.Droid.Resource.Attribute.tabIndicatorColor = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorColor;
-			global::PanCardView.Droid.Resource.Attribute.tabIndicatorFullWidth = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorFullWidth;
-			global::PanCardView.Droid.Resource.Attribute.tabIndicatorGravity = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorGravity;
-			global::PanCardView.Droid.Resource.Attribute.tabIndicatorHeight = global::VYRMobile.Droid.Resource.Attribute.tabIndicatorHeight;
-			global::PanCardView.Droid.Resource.Attribute.tabInlineLabel = global::VYRMobile.Droid.Resource.Attribute.tabInlineLabel;
-			global::PanCardView.Droid.Resource.Attribute.tabMaxWidth = global::VYRMobile.Droid.Resource.Attribute.tabMaxWidth;
-			global::PanCardView.Droid.Resource.Attribute.tabMinWidth = global::VYRMobile.Droid.Resource.Attribute.tabMinWidth;
-			global::PanCardView.Droid.Resource.Attribute.tabMode = global::VYRMobile.Droid.Resource.Attribute.tabMode;
-			global::PanCardView.Droid.Resource.Attribute.tabPadding = global::VYRMobile.Droid.Resource.Attribute.tabPadding;
-			global::PanCardView.Droid.Resource.Attribute.tabPaddingBottom = global::VYRMobile.Droid.Resource.Attribute.tabPaddingBottom;
-			global::PanCardView.Droid.Resource.Attribute.tabPaddingEnd = global::VYRMobile.Droid.Resource.Attribute.tabPaddingEnd;
-			global::PanCardView.Droid.Resource.Attribute.tabPaddingStart = global::VYRMobile.Droid.Resource.Attribute.tabPaddingStart;
-			global::PanCardView.Droid.Resource.Attribute.tabPaddingTop = global::VYRMobile.Droid.Resource.Attribute.tabPaddingTop;
-			global::PanCardView.Droid.Resource.Attribute.tabRippleColor = global::VYRMobile.Droid.Resource.Attribute.tabRippleColor;
-			global::PanCardView.Droid.Resource.Attribute.tabSelectedTextColor = global::VYRMobile.Droid.Resource.Attribute.tabSelectedTextColor;
-			global::PanCardView.Droid.Resource.Attribute.tabStyle = global::VYRMobile.Droid.Resource.Attribute.tabStyle;
-			global::PanCardView.Droid.Resource.Attribute.tabTextAppearance = global::VYRMobile.Droid.Resource.Attribute.tabTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.tabTextColor = global::VYRMobile.Droid.Resource.Attribute.tabTextColor;
-			global::PanCardView.Droid.Resource.Attribute.tabUnboundedRipple = global::VYRMobile.Droid.Resource.Attribute.tabUnboundedRipple;
-			global::PanCardView.Droid.Resource.Attribute.textAllCaps = global::VYRMobile.Droid.Resource.Attribute.textAllCaps;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceBody1 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceBody1;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceBody2 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceBody2;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceButton = global::VYRMobile.Droid.Resource.Attribute.textAppearanceButton;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceCaption = global::VYRMobile.Droid.Resource.Attribute.textAppearanceCaption;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceHeadline1 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline1;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceHeadline2 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline2;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceHeadline3 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline3;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceHeadline4 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline4;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceHeadline5 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline5;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceHeadline6 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceHeadline6;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceLargePopupMenu = global::VYRMobile.Droid.Resource.Attribute.textAppearanceLargePopupMenu;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceListItem = global::VYRMobile.Droid.Resource.Attribute.textAppearanceListItem;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceListItemSecondary = global::VYRMobile.Droid.Resource.Attribute.textAppearanceListItemSecondary;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceListItemSmall = global::VYRMobile.Droid.Resource.Attribute.textAppearanceListItemSmall;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceOverline = global::VYRMobile.Droid.Resource.Attribute.textAppearanceOverline;
-			global::PanCardView.Droid.Resource.Attribute.textAppearancePopupMenuHeader = global::VYRMobile.Droid.Resource.Attribute.textAppearancePopupMenuHeader;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSearchResultSubtitle;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceSearchResultTitle = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSearchResultTitle;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceSmallPopupMenu = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSmallPopupMenu;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceSubtitle1 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSubtitle1;
-			global::PanCardView.Droid.Resource.Attribute.textAppearanceSubtitle2 = global::VYRMobile.Droid.Resource.Attribute.textAppearanceSubtitle2;
-			global::PanCardView.Droid.Resource.Attribute.textColorAlertDialogListItem = global::VYRMobile.Droid.Resource.Attribute.textColorAlertDialogListItem;
-			global::PanCardView.Droid.Resource.Attribute.textColorSearchUrl = global::VYRMobile.Droid.Resource.Attribute.textColorSearchUrl;
-			global::PanCardView.Droid.Resource.Attribute.textEndPadding = global::VYRMobile.Droid.Resource.Attribute.textEndPadding;
-			global::PanCardView.Droid.Resource.Attribute.textInputStyle = global::VYRMobile.Droid.Resource.Attribute.textInputStyle;
-			global::PanCardView.Droid.Resource.Attribute.textStartPadding = global::VYRMobile.Droid.Resource.Attribute.textStartPadding;
-			global::PanCardView.Droid.Resource.Attribute.theme = global::VYRMobile.Droid.Resource.Attribute.theme;
-			global::PanCardView.Droid.Resource.Attribute.thickness = global::VYRMobile.Droid.Resource.Attribute.thickness;
-			global::PanCardView.Droid.Resource.Attribute.thumbTextPadding = global::VYRMobile.Droid.Resource.Attribute.thumbTextPadding;
-			global::PanCardView.Droid.Resource.Attribute.thumbTint = global::VYRMobile.Droid.Resource.Attribute.thumbTint;
-			global::PanCardView.Droid.Resource.Attribute.thumbTintMode = global::VYRMobile.Droid.Resource.Attribute.thumbTintMode;
-			global::PanCardView.Droid.Resource.Attribute.tickMark = global::VYRMobile.Droid.Resource.Attribute.tickMark;
-			global::PanCardView.Droid.Resource.Attribute.tickMarkTint = global::VYRMobile.Droid.Resource.Attribute.tickMarkTint;
-			global::PanCardView.Droid.Resource.Attribute.tickMarkTintMode = global::VYRMobile.Droid.Resource.Attribute.tickMarkTintMode;
-			global::PanCardView.Droid.Resource.Attribute.tint = global::VYRMobile.Droid.Resource.Attribute.tint;
-			global::PanCardView.Droid.Resource.Attribute.tintMode = global::VYRMobile.Droid.Resource.Attribute.tintMode;
-			global::PanCardView.Droid.Resource.Attribute.title = global::VYRMobile.Droid.Resource.Attribute.title;
-			global::PanCardView.Droid.Resource.Attribute.titleEnabled = global::VYRMobile.Droid.Resource.Attribute.titleEnabled;
-			global::PanCardView.Droid.Resource.Attribute.titleMargin = global::VYRMobile.Droid.Resource.Attribute.titleMargin;
-			global::PanCardView.Droid.Resource.Attribute.titleMarginBottom = global::VYRMobile.Droid.Resource.Attribute.titleMarginBottom;
-			global::PanCardView.Droid.Resource.Attribute.titleMarginEnd = global::VYRMobile.Droid.Resource.Attribute.titleMarginEnd;
-			global::PanCardView.Droid.Resource.Attribute.titleMargins = global::VYRMobile.Droid.Resource.Attribute.titleMargins;
-			global::PanCardView.Droid.Resource.Attribute.titleMarginStart = global::VYRMobile.Droid.Resource.Attribute.titleMarginStart;
-			global::PanCardView.Droid.Resource.Attribute.titleMarginTop = global::VYRMobile.Droid.Resource.Attribute.titleMarginTop;
-			global::PanCardView.Droid.Resource.Attribute.titleTextAppearance = global::VYRMobile.Droid.Resource.Attribute.titleTextAppearance;
-			global::PanCardView.Droid.Resource.Attribute.titleTextColor = global::VYRMobile.Droid.Resource.Attribute.titleTextColor;
-			global::PanCardView.Droid.Resource.Attribute.titleTextStyle = global::VYRMobile.Droid.Resource.Attribute.titleTextStyle;
-			global::PanCardView.Droid.Resource.Attribute.toolbarId = global::VYRMobile.Droid.Resource.Attribute.toolbarId;
-			global::PanCardView.Droid.Resource.Attribute.toolbarNavigationButtonStyle = global::VYRMobile.Droid.Resource.Attribute.toolbarNavigationButtonStyle;
-			global::PanCardView.Droid.Resource.Attribute.toolbarStyle = global::VYRMobile.Droid.Resource.Attribute.toolbarStyle;
-			global::PanCardView.Droid.Resource.Attribute.tooltipForegroundColor = global::VYRMobile.Droid.Resource.Attribute.tooltipForegroundColor;
-			global::PanCardView.Droid.Resource.Attribute.tooltipFrameBackground = global::VYRMobile.Droid.Resource.Attribute.tooltipFrameBackground;
-			global::PanCardView.Droid.Resource.Attribute.tooltipText = global::VYRMobile.Droid.Resource.Attribute.tooltipText;
-			global::PanCardView.Droid.Resource.Attribute.track = global::VYRMobile.Droid.Resource.Attribute.track;
-			global::PanCardView.Droid.Resource.Attribute.trackTint = global::VYRMobile.Droid.Resource.Attribute.trackTint;
-			global::PanCardView.Droid.Resource.Attribute.trackTintMode = global::VYRMobile.Droid.Resource.Attribute.trackTintMode;
-			global::PanCardView.Droid.Resource.Attribute.ttcIndex = global::VYRMobile.Droid.Resource.Attribute.ttcIndex;
-			global::PanCardView.Droid.Resource.Attribute.useCompatPadding = global::VYRMobile.Droid.Resource.Attribute.useCompatPadding;
-			global::PanCardView.Droid.Resource.Attribute.viewInflaterClass = global::VYRMobile.Droid.Resource.Attribute.viewInflaterClass;
-			global::PanCardView.Droid.Resource.Attribute.voiceIcon = global::VYRMobile.Droid.Resource.Attribute.voiceIcon;
-			global::PanCardView.Droid.Resource.Attribute.windowActionBar = global::VYRMobile.Droid.Resource.Attribute.windowActionBar;
-			global::PanCardView.Droid.Resource.Attribute.windowActionBarOverlay = global::VYRMobile.Droid.Resource.Attribute.windowActionBarOverlay;
-			global::PanCardView.Droid.Resource.Attribute.windowActionModeOverlay = global::VYRMobile.Droid.Resource.Attribute.windowActionModeOverlay;
-			global::PanCardView.Droid.Resource.Attribute.windowFixedHeightMajor = global::VYRMobile.Droid.Resource.Attribute.windowFixedHeightMajor;
-			global::PanCardView.Droid.Resource.Attribute.windowFixedHeightMinor = global::VYRMobile.Droid.Resource.Attribute.windowFixedHeightMinor;
-			global::PanCardView.Droid.Resource.Attribute.windowFixedWidthMajor = global::VYRMobile.Droid.Resource.Attribute.windowFixedWidthMajor;
-			global::PanCardView.Droid.Resource.Attribute.windowFixedWidthMinor = global::VYRMobile.Droid.Resource.Attribute.windowFixedWidthMinor;
-			global::PanCardView.Droid.Resource.Attribute.windowMinWidthMajor = global::VYRMobile.Droid.Resource.Attribute.windowMinWidthMajor;
-			global::PanCardView.Droid.Resource.Attribute.windowMinWidthMinor = global::VYRMobile.Droid.Resource.Attribute.windowMinWidthMinor;
-			global::PanCardView.Droid.Resource.Attribute.windowNoTitle = global::VYRMobile.Droid.Resource.Attribute.windowNoTitle;
-			global::PanCardView.Droid.Resource.Boolean.abc_action_bar_embed_tabs = global::VYRMobile.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
-			global::PanCardView.Droid.Resource.Boolean.abc_allow_stacked_button_bar = global::VYRMobile.Droid.Resource.Boolean.abc_allow_stacked_button_bar;
-			global::PanCardView.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps = global::VYRMobile.Droid.Resource.Boolean.abc_config_actionMenuItemAllCaps;
-			global::PanCardView.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps = global::VYRMobile.Droid.Resource.Boolean.mtrl_btn_textappearance_all_caps;
-			global::PanCardView.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark = global::VYRMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_dark;
-			global::PanCardView.Droid.Resource.Color.abc_background_cache_hint_selector_material_light = global::VYRMobile.Droid.Resource.Color.abc_background_cache_hint_selector_material_light;
-			global::PanCardView.Droid.Resource.Color.abc_btn_colored_borderless_text_material = global::VYRMobile.Droid.Resource.Color.abc_btn_colored_borderless_text_material;
-			global::PanCardView.Droid.Resource.Color.abc_btn_colored_text_material = global::VYRMobile.Droid.Resource.Color.abc_btn_colored_text_material;
-			global::PanCardView.Droid.Resource.Color.abc_color_highlight_material = global::VYRMobile.Droid.Resource.Color.abc_color_highlight_material;
-			global::PanCardView.Droid.Resource.Color.abc_hint_foreground_material_dark = global::VYRMobile.Droid.Resource.Color.abc_hint_foreground_material_dark;
-			global::PanCardView.Droid.Resource.Color.abc_hint_foreground_material_light = global::VYRMobile.Droid.Resource.Color.abc_hint_foreground_material_light;
-			global::PanCardView.Droid.Resource.Color.abc_input_method_navigation_guard = global::VYRMobile.Droid.Resource.Color.abc_input_method_navigation_guard;
-			global::PanCardView.Droid.Resource.Color.abc_primary_text_disable_only_material_dark = global::VYRMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_dark;
-			global::PanCardView.Droid.Resource.Color.abc_primary_text_disable_only_material_light = global::VYRMobile.Droid.Resource.Color.abc_primary_text_disable_only_material_light;
-			global::PanCardView.Droid.Resource.Color.abc_primary_text_material_dark = global::VYRMobile.Droid.Resource.Color.abc_primary_text_material_dark;
-			global::PanCardView.Droid.Resource.Color.abc_primary_text_material_light = global::VYRMobile.Droid.Resource.Color.abc_primary_text_material_light;
-			global::PanCardView.Droid.Resource.Color.abc_search_url_text = global::VYRMobile.Droid.Resource.Color.abc_search_url_text;
-			global::PanCardView.Droid.Resource.Color.abc_search_url_text_normal = global::VYRMobile.Droid.Resource.Color.abc_search_url_text_normal;
-			global::PanCardView.Droid.Resource.Color.abc_search_url_text_pressed = global::VYRMobile.Droid.Resource.Color.abc_search_url_text_pressed;
-			global::PanCardView.Droid.Resource.Color.abc_search_url_text_selected = global::VYRMobile.Droid.Resource.Color.abc_search_url_text_selected;
-			global::PanCardView.Droid.Resource.Color.abc_secondary_text_material_dark = global::VYRMobile.Droid.Resource.Color.abc_secondary_text_material_dark;
-			global::PanCardView.Droid.Resource.Color.abc_secondary_text_material_light = global::VYRMobile.Droid.Resource.Color.abc_secondary_text_material_light;
-			global::PanCardView.Droid.Resource.Color.abc_tint_btn_checkable = global::VYRMobile.Droid.Resource.Color.abc_tint_btn_checkable;
-			global::PanCardView.Droid.Resource.Color.abc_tint_default = global::VYRMobile.Droid.Resource.Color.abc_tint_default;
-			global::PanCardView.Droid.Resource.Color.abc_tint_edittext = global::VYRMobile.Droid.Resource.Color.abc_tint_edittext;
-			global::PanCardView.Droid.Resource.Color.abc_tint_seek_thumb = global::VYRMobile.Droid.Resource.Color.abc_tint_seek_thumb;
-			global::PanCardView.Droid.Resource.Color.abc_tint_spinner = global::VYRMobile.Droid.Resource.Color.abc_tint_spinner;
-			global::PanCardView.Droid.Resource.Color.abc_tint_switch_track = global::VYRMobile.Droid.Resource.Color.abc_tint_switch_track;
-			global::PanCardView.Droid.Resource.Color.accent_material_dark = global::VYRMobile.Droid.Resource.Color.accent_material_dark;
-			global::PanCardView.Droid.Resource.Color.accent_material_light = global::VYRMobile.Droid.Resource.Color.accent_material_light;
-			global::PanCardView.Droid.Resource.Color.background_floating_material_dark = global::VYRMobile.Droid.Resource.Color.background_floating_material_dark;
-			global::PanCardView.Droid.Resource.Color.background_floating_material_light = global::VYRMobile.Droid.Resource.Color.background_floating_material_light;
-			global::PanCardView.Droid.Resource.Color.background_material_dark = global::VYRMobile.Droid.Resource.Color.background_material_dark;
-			global::PanCardView.Droid.Resource.Color.background_material_light = global::VYRMobile.Droid.Resource.Color.background_material_light;
-			global::PanCardView.Droid.Resource.Color.bright_foreground_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.bright_foreground_disabled_material_dark;
-			global::PanCardView.Droid.Resource.Color.bright_foreground_disabled_material_light = global::VYRMobile.Droid.Resource.Color.bright_foreground_disabled_material_light;
-			global::PanCardView.Droid.Resource.Color.bright_foreground_inverse_material_dark = global::VYRMobile.Droid.Resource.Color.bright_foreground_inverse_material_dark;
-			global::PanCardView.Droid.Resource.Color.bright_foreground_inverse_material_light = global::VYRMobile.Droid.Resource.Color.bright_foreground_inverse_material_light;
-			global::PanCardView.Droid.Resource.Color.bright_foreground_material_dark = global::VYRMobile.Droid.Resource.Color.bright_foreground_material_dark;
-			global::PanCardView.Droid.Resource.Color.bright_foreground_material_light = global::VYRMobile.Droid.Resource.Color.bright_foreground_material_light;
-			global::PanCardView.Droid.Resource.Color.browser_actions_bg_grey = global::VYRMobile.Droid.Resource.Color.browser_actions_bg_grey;
-			global::PanCardView.Droid.Resource.Color.browser_actions_divider_color = global::VYRMobile.Droid.Resource.Color.browser_actions_divider_color;
-			global::PanCardView.Droid.Resource.Color.browser_actions_text_color = global::VYRMobile.Droid.Resource.Color.browser_actions_text_color;
-			global::PanCardView.Droid.Resource.Color.browser_actions_title_color = global::VYRMobile.Droid.Resource.Color.browser_actions_title_color;
-			global::PanCardView.Droid.Resource.Color.button_material_dark = global::VYRMobile.Droid.Resource.Color.button_material_dark;
-			global::PanCardView.Droid.Resource.Color.button_material_light = global::VYRMobile.Droid.Resource.Color.button_material_light;
-			global::PanCardView.Droid.Resource.Color.cardview_dark_background = global::VYRMobile.Droid.Resource.Color.cardview_dark_background;
-			global::PanCardView.Droid.Resource.Color.cardview_light_background = global::VYRMobile.Droid.Resource.Color.cardview_light_background;
-			global::PanCardView.Droid.Resource.Color.cardview_shadow_end_color = global::VYRMobile.Droid.Resource.Color.cardview_shadow_end_color;
-			global::PanCardView.Droid.Resource.Color.cardview_shadow_start_color = global::VYRMobile.Droid.Resource.Color.cardview_shadow_start_color;
-			global::PanCardView.Droid.Resource.Color.design_bottom_navigation_shadow_color = global::VYRMobile.Droid.Resource.Color.design_bottom_navigation_shadow_color;
-			global::PanCardView.Droid.Resource.Color.design_default_color_primary = global::VYRMobile.Droid.Resource.Color.design_default_color_primary;
-			global::PanCardView.Droid.Resource.Color.design_default_color_primary_dark = global::VYRMobile.Droid.Resource.Color.design_default_color_primary_dark;
-			global::PanCardView.Droid.Resource.Color.design_error = global::VYRMobile.Droid.Resource.Color.design_error;
-			global::PanCardView.Droid.Resource.Color.design_fab_shadow_end_color = global::VYRMobile.Droid.Resource.Color.design_fab_shadow_end_color;
-			global::PanCardView.Droid.Resource.Color.design_fab_shadow_mid_color = global::VYRMobile.Droid.Resource.Color.design_fab_shadow_mid_color;
-			global::PanCardView.Droid.Resource.Color.design_fab_shadow_start_color = global::VYRMobile.Droid.Resource.Color.design_fab_shadow_start_color;
-			global::PanCardView.Droid.Resource.Color.design_fab_stroke_end_inner_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_end_inner_color;
-			global::PanCardView.Droid.Resource.Color.design_fab_stroke_end_outer_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_end_outer_color;
-			global::PanCardView.Droid.Resource.Color.design_fab_stroke_top_inner_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_top_inner_color;
-			global::PanCardView.Droid.Resource.Color.design_fab_stroke_top_outer_color = global::VYRMobile.Droid.Resource.Color.design_fab_stroke_top_outer_color;
-			global::PanCardView.Droid.Resource.Color.design_snackbar_background_color = global::VYRMobile.Droid.Resource.Color.design_snackbar_background_color;
-			global::PanCardView.Droid.Resource.Color.design_tint_password_toggle = global::VYRMobile.Droid.Resource.Color.design_tint_password_toggle;
-			global::PanCardView.Droid.Resource.Color.dim_foreground_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.dim_foreground_disabled_material_dark;
-			global::PanCardView.Droid.Resource.Color.dim_foreground_disabled_material_light = global::VYRMobile.Droid.Resource.Color.dim_foreground_disabled_material_light;
-			global::PanCardView.Droid.Resource.Color.dim_foreground_material_dark = global::VYRMobile.Droid.Resource.Color.dim_foreground_material_dark;
-			global::PanCardView.Droid.Resource.Color.dim_foreground_material_light = global::VYRMobile.Droid.Resource.Color.dim_foreground_material_light;
-			global::PanCardView.Droid.Resource.Color.error_color_material_dark = global::VYRMobile.Droid.Resource.Color.error_color_material_dark;
-			global::PanCardView.Droid.Resource.Color.error_color_material_light = global::VYRMobile.Droid.Resource.Color.error_color_material_light;
-			global::PanCardView.Droid.Resource.Color.foreground_material_dark = global::VYRMobile.Droid.Resource.Color.foreground_material_dark;
-			global::PanCardView.Droid.Resource.Color.foreground_material_light = global::VYRMobile.Droid.Resource.Color.foreground_material_light;
-			global::PanCardView.Droid.Resource.Color.highlighted_text_material_dark = global::VYRMobile.Droid.Resource.Color.highlighted_text_material_dark;
-			global::PanCardView.Droid.Resource.Color.highlighted_text_material_light = global::VYRMobile.Droid.Resource.Color.highlighted_text_material_light;
-			global::PanCardView.Droid.Resource.Color.material_blue_grey_800 = global::VYRMobile.Droid.Resource.Color.material_blue_grey_800;
-			global::PanCardView.Droid.Resource.Color.material_blue_grey_900 = global::VYRMobile.Droid.Resource.Color.material_blue_grey_900;
-			global::PanCardView.Droid.Resource.Color.material_blue_grey_950 = global::VYRMobile.Droid.Resource.Color.material_blue_grey_950;
-			global::PanCardView.Droid.Resource.Color.material_deep_teal_200 = global::VYRMobile.Droid.Resource.Color.material_deep_teal_200;
-			global::PanCardView.Droid.Resource.Color.material_deep_teal_500 = global::VYRMobile.Droid.Resource.Color.material_deep_teal_500;
-			global::PanCardView.Droid.Resource.Color.material_grey_100 = global::VYRMobile.Droid.Resource.Color.material_grey_100;
-			global::PanCardView.Droid.Resource.Color.material_grey_300 = global::VYRMobile.Droid.Resource.Color.material_grey_300;
-			global::PanCardView.Droid.Resource.Color.material_grey_50 = global::VYRMobile.Droid.Resource.Color.material_grey_50;
-			global::PanCardView.Droid.Resource.Color.material_grey_600 = global::VYRMobile.Droid.Resource.Color.material_grey_600;
-			global::PanCardView.Droid.Resource.Color.material_grey_800 = global::VYRMobile.Droid.Resource.Color.material_grey_800;
-			global::PanCardView.Droid.Resource.Color.material_grey_850 = global::VYRMobile.Droid.Resource.Color.material_grey_850;
-			global::PanCardView.Droid.Resource.Color.material_grey_900 = global::VYRMobile.Droid.Resource.Color.material_grey_900;
-			global::PanCardView.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint = global::VYRMobile.Droid.Resource.Color.mtrl_bottom_nav_colored_item_tint;
-			global::PanCardView.Droid.Resource.Color.mtrl_bottom_nav_item_tint = global::VYRMobile.Droid.Resource.Color.mtrl_bottom_nav_item_tint;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_bg_color_disabled = global::VYRMobile.Droid.Resource.Color.mtrl_btn_bg_color_disabled;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_bg_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_btn_bg_color_selector;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_btn_ripple_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_stroke_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_btn_stroke_color_selector;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_btn_text_btn_ripple_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_text_color_disabled = global::VYRMobile.Droid.Resource.Color.mtrl_btn_text_color_disabled;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_text_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_btn_text_color_selector;
-			global::PanCardView.Droid.Resource.Color.mtrl_btn_transparent_bg_color = global::VYRMobile.Droid.Resource.Color.mtrl_btn_transparent_bg_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_chip_background_color = global::VYRMobile.Droid.Resource.Color.mtrl_chip_background_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_chip_close_icon_tint = global::VYRMobile.Droid.Resource.Color.mtrl_chip_close_icon_tint;
-			global::PanCardView.Droid.Resource.Color.mtrl_chip_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_chip_ripple_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_chip_text_color = global::VYRMobile.Droid.Resource.Color.mtrl_chip_text_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_fab_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_fab_ripple_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_scrim_color = global::VYRMobile.Droid.Resource.Color.mtrl_scrim_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_tabs_colored_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_colored_ripple_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_tabs_icon_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_icon_color_selector;
-			global::PanCardView.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_icon_color_selector_colored;
-			global::PanCardView.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_legacy_text_color_selector;
-			global::PanCardView.Droid.Resource.Color.mtrl_tabs_ripple_color = global::VYRMobile.Droid.Resource.Color.mtrl_tabs_ripple_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_default_box_stroke_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_textinput_disabled_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_disabled_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_filled_box_default_background_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color = global::VYRMobile.Droid.Resource.Color.mtrl_textinput_hovered_box_stroke_color;
-			global::PanCardView.Droid.Resource.Color.mtrl_text_btn_text_color_selector = global::VYRMobile.Droid.Resource.Color.mtrl_text_btn_text_color_selector;
-			global::PanCardView.Droid.Resource.Color.notification_action_color_filter = global::VYRMobile.Droid.Resource.Color.notification_action_color_filter;
-			global::PanCardView.Droid.Resource.Color.notification_icon_bg_color = global::VYRMobile.Droid.Resource.Color.notification_icon_bg_color;
-			global::PanCardView.Droid.Resource.Color.notification_material_background_media_default_color = global::VYRMobile.Droid.Resource.Color.notification_material_background_media_default_color;
-			global::PanCardView.Droid.Resource.Color.primary_dark_material_dark = global::VYRMobile.Droid.Resource.Color.primary_dark_material_dark;
-			global::PanCardView.Droid.Resource.Color.primary_dark_material_light = global::VYRMobile.Droid.Resource.Color.primary_dark_material_light;
-			global::PanCardView.Droid.Resource.Color.primary_material_dark = global::VYRMobile.Droid.Resource.Color.primary_material_dark;
-			global::PanCardView.Droid.Resource.Color.primary_material_light = global::VYRMobile.Droid.Resource.Color.primary_material_light;
-			global::PanCardView.Droid.Resource.Color.primary_text_default_material_dark = global::VYRMobile.Droid.Resource.Color.primary_text_default_material_dark;
-			global::PanCardView.Droid.Resource.Color.primary_text_default_material_light = global::VYRMobile.Droid.Resource.Color.primary_text_default_material_light;
-			global::PanCardView.Droid.Resource.Color.primary_text_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.primary_text_disabled_material_dark;
-			global::PanCardView.Droid.Resource.Color.primary_text_disabled_material_light = global::VYRMobile.Droid.Resource.Color.primary_text_disabled_material_light;
-			global::PanCardView.Droid.Resource.Color.ripple_material_dark = global::VYRMobile.Droid.Resource.Color.ripple_material_dark;
-			global::PanCardView.Droid.Resource.Color.ripple_material_light = global::VYRMobile.Droid.Resource.Color.ripple_material_light;
-			global::PanCardView.Droid.Resource.Color.secondary_text_default_material_dark = global::VYRMobile.Droid.Resource.Color.secondary_text_default_material_dark;
-			global::PanCardView.Droid.Resource.Color.secondary_text_default_material_light = global::VYRMobile.Droid.Resource.Color.secondary_text_default_material_light;
-			global::PanCardView.Droid.Resource.Color.secondary_text_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.secondary_text_disabled_material_dark;
-			global::PanCardView.Droid.Resource.Color.secondary_text_disabled_material_light = global::VYRMobile.Droid.Resource.Color.secondary_text_disabled_material_light;
-			global::PanCardView.Droid.Resource.Color.switch_thumb_disabled_material_dark = global::VYRMobile.Droid.Resource.Color.switch_thumb_disabled_material_dark;
-			global::PanCardView.Droid.Resource.Color.switch_thumb_disabled_material_light = global::VYRMobile.Droid.Resource.Color.switch_thumb_disabled_material_light;
-			global::PanCardView.Droid.Resource.Color.switch_thumb_material_dark = global::VYRMobile.Droid.Resource.Color.switch_thumb_material_dark;
-			global::PanCardView.Droid.Resource.Color.switch_thumb_material_light = global::VYRMobile.Droid.Resource.Color.switch_thumb_material_light;
-			global::PanCardView.Droid.Resource.Color.switch_thumb_normal_material_dark = global::VYRMobile.Droid.Resource.Color.switch_thumb_normal_material_dark;
-			global::PanCardView.Droid.Resource.Color.switch_thumb_normal_material_light = global::VYRMobile.Droid.Resource.Color.switch_thumb_normal_material_light;
-			global::PanCardView.Droid.Resource.Color.tooltip_background_dark = global::VYRMobile.Droid.Resource.Color.tooltip_background_dark;
-			global::PanCardView.Droid.Resource.Color.tooltip_background_light = global::VYRMobile.Droid.Resource.Color.tooltip_background_light;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_content_inset_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_content_inset_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_content_inset_with_nav;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_default_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_default_height_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_end_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_default_padding_start_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_elevation_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_elevation_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_icon_vertical_padding_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_end_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_overflow_padding_start_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_stacked_max_height = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_stacked_max_height;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_stacked_tab_max_width;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_bottom_margin_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_bar_subtitle_top_margin_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_button_min_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_button_min_height_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_button_min_width_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_button_min_width_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material = global::VYRMobile.Droid.Resource.Dimension.abc_action_button_min_width_overflow_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height = global::VYRMobile.Droid.Resource.Dimension.abc_alert_dialog_button_bar_height;
-			global::PanCardView.Droid.Resource.Dimension.abc_alert_dialog_button_dimen = global::VYRMobile.Droid.Resource.Dimension.abc_alert_dialog_button_dimen;
-			global::PanCardView.Droid.Resource.Dimension.abc_button_inset_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_inset_horizontal_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_button_inset_vertical_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_inset_vertical_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_button_padding_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_padding_horizontal_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_button_padding_vertical_material = global::VYRMobile.Droid.Resource.Dimension.abc_button_padding_vertical_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width = global::VYRMobile.Droid.Resource.Dimension.abc_cascading_menus_min_smallest_width;
-			global::PanCardView.Droid.Resource.Dimension.abc_config_prefDialogWidth = global::VYRMobile.Droid.Resource.Dimension.abc_config_prefDialogWidth;
-			global::PanCardView.Droid.Resource.Dimension.abc_control_corner_material = global::VYRMobile.Droid.Resource.Dimension.abc_control_corner_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_control_inset_material = global::VYRMobile.Droid.Resource.Dimension.abc_control_inset_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_control_padding_material = global::VYRMobile.Droid.Resource.Dimension.abc_control_padding_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_corner_radius_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_corner_radius_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_fixed_height_major = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_major;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_fixed_height_minor = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_height_minor;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_fixed_width_major = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_major;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_fixed_width_minor = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_fixed_width_minor;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_list_padding_bottom_no_buttons;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_list_padding_top_no_title;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_min_width_major = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_min_width_major;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_min_width_minor = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_min_width_minor;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_padding_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_padding_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_padding_top_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_padding_top_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_dialog_title_divider_material = global::VYRMobile.Droid.Resource.Dimension.abc_dialog_title_divider_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_disabled_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_dark;
-			global::PanCardView.Droid.Resource.Dimension.abc_disabled_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.abc_disabled_alpha_material_light;
-			global::PanCardView.Droid.Resource.Dimension.abc_dropdownitem_icon_width = global::VYRMobile.Droid.Resource.Dimension.abc_dropdownitem_icon_width;
-			global::PanCardView.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left = global::VYRMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_left;
-			global::PanCardView.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right = global::VYRMobile.Droid.Resource.Dimension.abc_dropdownitem_text_padding_right;
-			global::PanCardView.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material = global::VYRMobile.Droid.Resource.Dimension.abc_edit_text_inset_bottom_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_edit_text_inset_horizontal_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_edit_text_inset_top_material = global::VYRMobile.Droid.Resource.Dimension.abc_edit_text_inset_top_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_floating_window_z = global::VYRMobile.Droid.Resource.Dimension.abc_floating_window_z;
-			global::PanCardView.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.abc_list_item_padding_horizontal_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_panel_menu_list_width = global::VYRMobile.Droid.Resource.Dimension.abc_panel_menu_list_width;
-			global::PanCardView.Droid.Resource.Dimension.abc_progress_bar_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_progress_bar_height_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_search_view_preferred_height = global::VYRMobile.Droid.Resource.Dimension.abc_search_view_preferred_height;
-			global::PanCardView.Droid.Resource.Dimension.abc_search_view_preferred_width = global::VYRMobile.Droid.Resource.Dimension.abc_search_view_preferred_width;
-			global::PanCardView.Droid.Resource.Dimension.abc_seekbar_track_background_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_seekbar_track_background_height_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material = global::VYRMobile.Droid.Resource.Dimension.abc_seekbar_track_progress_height_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_select_dialog_padding_start_material = global::VYRMobile.Droid.Resource.Dimension.abc_select_dialog_padding_start_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_switch_padding = global::VYRMobile.Droid.Resource.Dimension.abc_switch_padding;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_body_1_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_body_1_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_body_2_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_body_2_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_button_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_button_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_caption_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_caption_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_display_1_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_1_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_display_2_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_2_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_display_3_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_3_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_display_4_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_display_4_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_headline_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_headline_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_large_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_large_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_medium_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_medium_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_menu_header_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_menu_header_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_menu_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_menu_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_small_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_small_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_subhead_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_subhead_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_subtitle_material_toolbar;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_title_material = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_title_material;
-			global::PanCardView.Droid.Resource.Dimension.abc_text_size_title_material_toolbar = global::VYRMobile.Droid.Resource.Dimension.abc_text_size_title_material_toolbar;
-			global::PanCardView.Droid.Resource.Dimension.browser_actions_context_menu_max_width = global::VYRMobile.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
-			global::PanCardView.Droid.Resource.Dimension.browser_actions_context_menu_min_padding = global::VYRMobile.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
-			global::PanCardView.Droid.Resource.Dimension.cardview_compat_inset_shadow = global::VYRMobile.Droid.Resource.Dimension.cardview_compat_inset_shadow;
-			global::PanCardView.Droid.Resource.Dimension.cardview_default_elevation = global::VYRMobile.Droid.Resource.Dimension.cardview_default_elevation;
-			global::PanCardView.Droid.Resource.Dimension.cardview_default_radius = global::VYRMobile.Droid.Resource.Dimension.cardview_default_radius;
-			global::PanCardView.Droid.Resource.Dimension.compat_button_inset_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::PanCardView.Droid.Resource.Dimension.compat_button_inset_vertical_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_inset_vertical_material;
-			global::PanCardView.Droid.Resource.Dimension.compat_button_padding_horizontal_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::PanCardView.Droid.Resource.Dimension.compat_button_padding_vertical_material = global::VYRMobile.Droid.Resource.Dimension.compat_button_padding_vertical_material;
-			global::PanCardView.Droid.Resource.Dimension.compat_control_corner_material = global::VYRMobile.Droid.Resource.Dimension.compat_control_corner_material;
-			global::PanCardView.Droid.Resource.Dimension.compat_notification_large_icon_max_height = global::VYRMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
-			global::PanCardView.Droid.Resource.Dimension.compat_notification_large_icon_max_width = global::VYRMobile.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
-			global::PanCardView.Droid.Resource.Dimension.design_appbar_elevation = global::VYRMobile.Droid.Resource.Dimension.design_appbar_elevation;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_active_item_max_width;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_active_item_min_width;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_active_text_size = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_active_text_size;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_elevation = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_elevation;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_height = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_height;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_icon_size = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_icon_size;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_item_max_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_item_max_width;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_item_min_width = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_item_min_width;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_margin = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_margin;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_shadow_height = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_shadow_height;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_navigation_text_size = global::VYRMobile.Droid.Resource.Dimension.design_bottom_navigation_text_size;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation = global::VYRMobile.Droid.Resource.Dimension.design_bottom_sheet_modal_elevation;
-			global::PanCardView.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min = global::VYRMobile.Droid.Resource.Dimension.design_bottom_sheet_peek_height_min;
-			global::PanCardView.Droid.Resource.Dimension.design_fab_border_width = global::VYRMobile.Droid.Resource.Dimension.design_fab_border_width;
-			global::PanCardView.Droid.Resource.Dimension.design_fab_elevation = global::VYRMobile.Droid.Resource.Dimension.design_fab_elevation;
-			global::PanCardView.Droid.Resource.Dimension.design_fab_image_size = global::VYRMobile.Droid.Resource.Dimension.design_fab_image_size;
-			global::PanCardView.Droid.Resource.Dimension.design_fab_size_mini = global::VYRMobile.Droid.Resource.Dimension.design_fab_size_mini;
-			global::PanCardView.Droid.Resource.Dimension.design_fab_size_normal = global::VYRMobile.Droid.Resource.Dimension.design_fab_size_normal;
-			global::PanCardView.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused = global::VYRMobile.Droid.Resource.Dimension.design_fab_translation_z_hovered_focused;
-			global::PanCardView.Droid.Resource.Dimension.design_fab_translation_z_pressed = global::VYRMobile.Droid.Resource.Dimension.design_fab_translation_z_pressed;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_elevation = global::VYRMobile.Droid.Resource.Dimension.design_navigation_elevation;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_icon_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_icon_padding;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_icon_size = global::VYRMobile.Droid.Resource.Dimension.design_navigation_icon_size;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_item_horizontal_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_item_horizontal_padding;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_item_icon_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_item_icon_padding;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_max_width = global::VYRMobile.Droid.Resource.Dimension.design_navigation_max_width;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_padding_bottom = global::VYRMobile.Droid.Resource.Dimension.design_navigation_padding_bottom;
-			global::PanCardView.Droid.Resource.Dimension.design_navigation_separator_vertical_padding = global::VYRMobile.Droid.Resource.Dimension.design_navigation_separator_vertical_padding;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_action_inline_max_width = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_action_inline_max_width;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_background_corner_radius = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_background_corner_radius;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_elevation = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_elevation;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_extra_spacing_horizontal;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_max_width = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_max_width;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_min_width = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_min_width;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_padding_horizontal = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_padding_horizontal;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_padding_vertical = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_padding_vertical;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_padding_vertical_2lines;
-			global::PanCardView.Droid.Resource.Dimension.design_snackbar_text_size = global::VYRMobile.Droid.Resource.Dimension.design_snackbar_text_size;
-			global::PanCardView.Droid.Resource.Dimension.design_tab_max_width = global::VYRMobile.Droid.Resource.Dimension.design_tab_max_width;
-			global::PanCardView.Droid.Resource.Dimension.design_tab_scrollable_min_width = global::VYRMobile.Droid.Resource.Dimension.design_tab_scrollable_min_width;
-			global::PanCardView.Droid.Resource.Dimension.design_tab_text_size = global::VYRMobile.Droid.Resource.Dimension.design_tab_text_size;
-			global::PanCardView.Droid.Resource.Dimension.design_tab_text_size_2line = global::VYRMobile.Droid.Resource.Dimension.design_tab_text_size_2line;
-			global::PanCardView.Droid.Resource.Dimension.design_textinput_caption_translate_y = global::VYRMobile.Droid.Resource.Dimension.design_textinput_caption_translate_y;
-			global::PanCardView.Droid.Resource.Dimension.disabled_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.disabled_alpha_material_dark;
-			global::PanCardView.Droid.Resource.Dimension.disabled_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.disabled_alpha_material_light;
-			global::PanCardView.Droid.Resource.Dimension.fastscroll_default_thickness = global::VYRMobile.Droid.Resource.Dimension.fastscroll_default_thickness;
-			global::PanCardView.Droid.Resource.Dimension.fastscroll_margin = global::VYRMobile.Droid.Resource.Dimension.fastscroll_margin;
-			global::PanCardView.Droid.Resource.Dimension.fastscroll_minimum_range = global::VYRMobile.Droid.Resource.Dimension.fastscroll_minimum_range;
-			global::PanCardView.Droid.Resource.Dimension.highlight_alpha_material_colored = global::VYRMobile.Droid.Resource.Dimension.highlight_alpha_material_colored;
-			global::PanCardView.Droid.Resource.Dimension.highlight_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.highlight_alpha_material_dark;
-			global::PanCardView.Droid.Resource.Dimension.highlight_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.highlight_alpha_material_light;
-			global::PanCardView.Droid.Resource.Dimension.hint_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.hint_alpha_material_dark;
-			global::PanCardView.Droid.Resource.Dimension.hint_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.hint_alpha_material_light;
-			global::PanCardView.Droid.Resource.Dimension.hint_pressed_alpha_material_dark = global::VYRMobile.Droid.Resource.Dimension.hint_pressed_alpha_material_dark;
-			global::PanCardView.Droid.Resource.Dimension.hint_pressed_alpha_material_light = global::VYRMobile.Droid.Resource.Dimension.hint_pressed_alpha_material_light;
-			global::PanCardView.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame = global::VYRMobile.Droid.Resource.Dimension.item_touch_helper_max_drag_scroll_per_frame;
-			global::PanCardView.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity = global::VYRMobile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_max_velocity;
-			global::PanCardView.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity = global::VYRMobile.Droid.Resource.Dimension.item_touch_helper_swipe_escape_velocity;
-			global::PanCardView.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height = global::VYRMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_item_height;
-			global::PanCardView.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size = global::VYRMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_item_icon_size;
-			global::PanCardView.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height = global::VYRMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_max_height;
-			global::PanCardView.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top = global::VYRMobile.Droid.Resource.Dimension.mr_controller_volume_group_list_padding_top;
-			global::PanCardView.Droid.Resource.Dimension.mr_dialog_fixed_width_major = global::VYRMobile.Droid.Resource.Dimension.mr_dialog_fixed_width_major;
-			global::PanCardView.Droid.Resource.Dimension.mr_dialog_fixed_width_minor = global::VYRMobile.Droid.Resource.Dimension.mr_dialog_fixed_width_minor;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fabOffsetEndMode;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_margin;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_rounded_corner_radius;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_fab_cradle_vertical_offset;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_bottomappbar_height = global::VYRMobile.Droid.Resource.Dimension.mtrl_bottomappbar_height;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_corner_radius = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_corner_radius;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_dialog_btn_min_width;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_disabled_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_disabled_elevation;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_disabled_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_disabled_z;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_elevation;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_focused_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_focused_z;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_hovered_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_hovered_z;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_icon_btn_padding_left;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_icon_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_icon_padding;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_inset = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_inset;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_letter_spacing = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_letter_spacing;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_padding_bottom = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_bottom;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_padding_left = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_left;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_padding_right = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_right;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_padding_top = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_padding_top;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_pressed_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_pressed_z;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_stroke_size = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_stroke_size;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_btn_icon_padding;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_left;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_btn_padding_right;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_text_size = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_text_size;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_btn_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_btn_z;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_card_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_card_elevation;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_card_spacing = global::VYRMobile.Droid.Resource.Dimension.mtrl_card_spacing;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z = global::VYRMobile.Droid.Resource.Dimension.mtrl_chip_pressed_translation_z;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_chip_text_size = global::VYRMobile.Droid.Resource.Dimension.mtrl_chip_text_size;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_fab_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_fab_elevation;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused = global::VYRMobile.Droid.Resource.Dimension.mtrl_fab_translation_z_hovered_focused;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed = global::VYRMobile.Droid.Resource.Dimension.mtrl_fab_translation_z_pressed;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_navigation_elevation = global::VYRMobile.Droid.Resource.Dimension.mtrl_navigation_elevation;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_navigation_item_horizontal_padding;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_navigation_item_icon_padding;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius = global::VYRMobile.Droid.Resource.Dimension.mtrl_snackbar_background_corner_radius;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_snackbar_margin = global::VYRMobile.Droid.Resource.Dimension.mtrl_snackbar_margin;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_bottom_offset;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_medium;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_corner_radius_small;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_label_cutout_padding;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_box_padding_end = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_padding_end;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_default;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_box_stroke_width_focused;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding = global::VYRMobile.Droid.Resource.Dimension.mtrl_textinput_outline_box_expanded_padding;
-			global::PanCardView.Droid.Resource.Dimension.mtrl_toolbar_default_height = global::VYRMobile.Droid.Resource.Dimension.mtrl_toolbar_default_height;
-			global::PanCardView.Droid.Resource.Dimension.notification_action_icon_size = global::VYRMobile.Droid.Resource.Dimension.notification_action_icon_size;
-			global::PanCardView.Droid.Resource.Dimension.notification_action_text_size = global::VYRMobile.Droid.Resource.Dimension.notification_action_text_size;
-			global::PanCardView.Droid.Resource.Dimension.notification_big_circle_margin = global::VYRMobile.Droid.Resource.Dimension.notification_big_circle_margin;
-			global::PanCardView.Droid.Resource.Dimension.notification_content_margin_start = global::VYRMobile.Droid.Resource.Dimension.notification_content_margin_start;
-			global::PanCardView.Droid.Resource.Dimension.notification_large_icon_height = global::VYRMobile.Droid.Resource.Dimension.notification_large_icon_height;
-			global::PanCardView.Droid.Resource.Dimension.notification_large_icon_width = global::VYRMobile.Droid.Resource.Dimension.notification_large_icon_width;
-			global::PanCardView.Droid.Resource.Dimension.notification_main_column_padding_top = global::VYRMobile.Droid.Resource.Dimension.notification_main_column_padding_top;
-			global::PanCardView.Droid.Resource.Dimension.notification_media_narrow_margin = global::VYRMobile.Droid.Resource.Dimension.notification_media_narrow_margin;
-			global::PanCardView.Droid.Resource.Dimension.notification_right_icon_size = global::VYRMobile.Droid.Resource.Dimension.notification_right_icon_size;
-			global::PanCardView.Droid.Resource.Dimension.notification_right_side_padding_top = global::VYRMobile.Droid.Resource.Dimension.notification_right_side_padding_top;
-			global::PanCardView.Droid.Resource.Dimension.notification_small_icon_background_padding = global::VYRMobile.Droid.Resource.Dimension.notification_small_icon_background_padding;
-			global::PanCardView.Droid.Resource.Dimension.notification_small_icon_size_as_large = global::VYRMobile.Droid.Resource.Dimension.notification_small_icon_size_as_large;
-			global::PanCardView.Droid.Resource.Dimension.notification_subtext_size = global::VYRMobile.Droid.Resource.Dimension.notification_subtext_size;
-			global::PanCardView.Droid.Resource.Dimension.notification_top_pad = global::VYRMobile.Droid.Resource.Dimension.notification_top_pad;
-			global::PanCardView.Droid.Resource.Dimension.notification_top_pad_large_text = global::VYRMobile.Droid.Resource.Dimension.notification_top_pad_large_text;
-			global::PanCardView.Droid.Resource.Dimension.subtitle_corner_radius = global::VYRMobile.Droid.Resource.Dimension.subtitle_corner_radius;
-			global::PanCardView.Droid.Resource.Dimension.subtitle_outline_width = global::VYRMobile.Droid.Resource.Dimension.subtitle_outline_width;
-			global::PanCardView.Droid.Resource.Dimension.subtitle_shadow_offset = global::VYRMobile.Droid.Resource.Dimension.subtitle_shadow_offset;
-			global::PanCardView.Droid.Resource.Dimension.subtitle_shadow_radius = global::VYRMobile.Droid.Resource.Dimension.subtitle_shadow_radius;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_corner_radius = global::VYRMobile.Droid.Resource.Dimension.tooltip_corner_radius;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_horizontal_padding = global::VYRMobile.Droid.Resource.Dimension.tooltip_horizontal_padding;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_margin = global::VYRMobile.Droid.Resource.Dimension.tooltip_margin;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset = global::VYRMobile.Droid.Resource.Dimension.tooltip_precise_anchor_extra_offset;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_precise_anchor_threshold = global::VYRMobile.Droid.Resource.Dimension.tooltip_precise_anchor_threshold;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_vertical_padding = global::VYRMobile.Droid.Resource.Dimension.tooltip_vertical_padding;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_y_offset_non_touch = global::VYRMobile.Droid.Resource.Dimension.tooltip_y_offset_non_touch;
-			global::PanCardView.Droid.Resource.Dimension.tooltip_y_offset_touch = global::VYRMobile.Droid.Resource.Dimension.tooltip_y_offset_touch;
-			global::PanCardView.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ab_share_pack_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_action_bar_item_background_material = global::VYRMobile.Droid.Resource.Drawable.abc_action_bar_item_background_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_borderless_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_borderless_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_check_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_check_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_000;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_check_to_on_mtrl_015;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_colored_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_colored_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_default_mtrl_shape = global::VYRMobile.Droid.Resource.Drawable.abc_btn_default_mtrl_shape;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_radio_material = global::VYRMobile.Droid.Resource.Drawable.abc_btn_radio_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_000;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_radio_to_on_mtrl_015;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00001;
-			global::PanCardView.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012 = global::VYRMobile.Droid.Resource.Drawable.abc_btn_switch_to_on_mtrl_00012;
-			global::PanCardView.Droid.Resource.Drawable.abc_cab_background_internal_bg = global::VYRMobile.Droid.Resource.Drawable.abc_cab_background_internal_bg;
-			global::PanCardView.Droid.Resource.Drawable.abc_cab_background_top_material = global::VYRMobile.Droid.Resource.Drawable.abc_cab_background_top_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_cab_background_top_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_control_background_material = global::VYRMobile.Droid.Resource.Drawable.abc_control_background_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_dialog_material_background = global::VYRMobile.Droid.Resource.Drawable.abc_dialog_material_background;
-			global::PanCardView.Droid.Resource.Drawable.abc_edit_text_material = global::VYRMobile.Droid.Resource.Drawable.abc_edit_text_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_ab_back_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_ab_back_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_arrow_drop_right_black_24dp;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_clear_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_clear_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_commit_search_api_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_go_search_api_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_go_search_api_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_copy_mtrl_am_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_cut_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_menu_overflow_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_overflow_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_paste_mtrl_am_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_selectall_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_ic_menu_share_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_search_api_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_search_api_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_star_black_16dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_black_16dp;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_star_black_36dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_black_36dp;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_star_black_48dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_black_48dp;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_star_half_black_16dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_half_black_16dp;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_star_half_black_36dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_half_black_36dp;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_star_half_black_48dp = global::VYRMobile.Droid.Resource.Drawable.abc_ic_star_half_black_48dp;
-			global::PanCardView.Droid.Resource.Drawable.abc_ic_voice_search_api_material = global::VYRMobile.Droid.Resource.Drawable.abc_ic_voice_search_api_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_item_background_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_item_background_holo_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_item_background_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_item_background_holo_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_divider_material = global::VYRMobile.Droid.Resource.Drawable.abc_list_divider_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_list_divider_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_focused_holo = global::VYRMobile.Droid.Resource.Drawable.abc_list_focused_holo;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_longpressed_holo = global::VYRMobile.Droid.Resource.Drawable.abc_list_longpressed_holo;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_pressed_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_pressed_holo_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_pressed_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_pressed_holo_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_background_transition_holo_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_disabled_holo_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_selector_holo_dark = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_holo_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_list_selector_holo_light = global::VYRMobile.Droid.Resource.Drawable.abc_list_selector_holo_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult = global::VYRMobile.Droid.Resource.Drawable.abc_menu_hardkey_panel_mtrl_mult;
-			global::PanCardView.Droid.Resource.Drawable.abc_popup_background_mtrl_mult = global::VYRMobile.Droid.Resource.Drawable.abc_popup_background_mtrl_mult;
-			global::PanCardView.Droid.Resource.Drawable.abc_ratingbar_indicator_material = global::VYRMobile.Droid.Resource.Drawable.abc_ratingbar_indicator_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ratingbar_material = global::VYRMobile.Droid.Resource.Drawable.abc_ratingbar_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_ratingbar_small_material = global::VYRMobile.Droid.Resource.Drawable.abc_ratingbar_small_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_control_off_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000 = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_000;
-			global::PanCardView.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005 = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_control_to_pressed_mtrl_005;
-			global::PanCardView.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_primary_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_scrubber_track_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_seekbar_thumb_material = global::VYRMobile.Droid.Resource.Drawable.abc_seekbar_thumb_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_seekbar_tick_mark_material = global::VYRMobile.Droid.Resource.Drawable.abc_seekbar_tick_mark_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_seekbar_track_material = global::VYRMobile.Droid.Resource.Drawable.abc_seekbar_track_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_spinner_mtrl_am_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_spinner_textfield_background_material = global::VYRMobile.Droid.Resource.Drawable.abc_spinner_textfield_background_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_switch_thumb_material = global::VYRMobile.Droid.Resource.Drawable.abc_switch_thumb_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_switch_track_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_tab_indicator_material = global::VYRMobile.Droid.Resource.Drawable.abc_tab_indicator_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_tab_indicator_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_activated_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_default_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_search_activated_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_search_default_mtrl_alpha;
-			global::PanCardView.Droid.Resource.Drawable.abc_textfield_search_material = global::VYRMobile.Droid.Resource.Drawable.abc_textfield_search_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_text_cursor_material = global::VYRMobile.Droid.Resource.Drawable.abc_text_cursor_material;
-			global::PanCardView.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_left_mtrl_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_middle_mtrl_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_dark;
-			global::PanCardView.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light = global::VYRMobile.Droid.Resource.Drawable.abc_text_select_handle_right_mtrl_light;
-			global::PanCardView.Droid.Resource.Drawable.abc_vector_test = global::VYRMobile.Droid.Resource.Drawable.abc_vector_test;
-			global::PanCardView.Droid.Resource.Drawable.avd_hide_password = global::VYRMobile.Droid.Resource.Drawable.avd_hide_password;
-			global::PanCardView.Droid.Resource.Drawable.avd_show_password = global::VYRMobile.Droid.Resource.Drawable.avd_show_password;
-			global::PanCardView.Droid.Resource.Drawable.design_bottom_navigation_item_background = global::VYRMobile.Droid.Resource.Drawable.design_bottom_navigation_item_background;
-			global::PanCardView.Droid.Resource.Drawable.design_fab_background = global::VYRMobile.Droid.Resource.Drawable.design_fab_background;
-			global::PanCardView.Droid.Resource.Drawable.design_ic_visibility = global::VYRMobile.Droid.Resource.Drawable.design_ic_visibility;
-			global::PanCardView.Droid.Resource.Drawable.design_ic_visibility_off = global::VYRMobile.Droid.Resource.Drawable.design_ic_visibility_off;
-			global::PanCardView.Droid.Resource.Drawable.design_password_eye = global::VYRMobile.Droid.Resource.Drawable.design_password_eye;
-			global::PanCardView.Droid.Resource.Drawable.design_snackbar_background = global::VYRMobile.Droid.Resource.Drawable.design_snackbar_background;
-			global::PanCardView.Droid.Resource.Drawable.ic_audiotrack_dark = global::VYRMobile.Droid.Resource.Drawable.ic_audiotrack_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_audiotrack_light = global::VYRMobile.Droid.Resource.Drawable.ic_audiotrack_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_dialog_close_dark = global::VYRMobile.Droid.Resource.Drawable.ic_dialog_close_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_dialog_close_light = global::VYRMobile.Droid.Resource.Drawable.ic_dialog_close_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_00 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_00;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_01 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_01;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_02 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_02;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_03 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_03;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_04 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_04;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_05 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_05;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_06 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_06;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_07 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_07;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_08 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_08;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_09 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_09;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_10 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_10;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_11 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_11;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_12 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_12;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_13 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_13;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_14 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_14;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_collapse_15 = global::VYRMobile.Droid.Resource.Drawable.ic_group_collapse_15;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_00 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_00;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_01 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_01;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_02 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_02;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_03 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_03;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_04 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_04;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_05 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_05;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_06 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_06;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_07 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_07;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_08 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_08;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_09 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_09;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_10 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_10;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_11 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_11;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_12 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_12;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_13 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_13;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_14 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_14;
-			global::PanCardView.Droid.Resource.Drawable.ic_group_expand_15 = global::VYRMobile.Droid.Resource.Drawable.ic_group_expand_15;
-			global::PanCardView.Droid.Resource.Drawable.ic_media_pause_dark = global::VYRMobile.Droid.Resource.Drawable.ic_media_pause_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_media_pause_light = global::VYRMobile.Droid.Resource.Drawable.ic_media_pause_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_media_play_dark = global::VYRMobile.Droid.Resource.Drawable.ic_media_play_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_media_play_light = global::VYRMobile.Droid.Resource.Drawable.ic_media_play_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_media_stop_dark = global::VYRMobile.Droid.Resource.Drawable.ic_media_stop_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_media_stop_light = global::VYRMobile.Droid.Resource.Drawable.ic_media_stop_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_00_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_00_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_00_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_00_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_01_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_01_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_01_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_01_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_02_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_02_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_02_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_02_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_03_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_03_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_03_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_03_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_04_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_04_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_04_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_04_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_05_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_05_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_05_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_05_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_06_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_06_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_06_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_06_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_07_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_07_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_07_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_07_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_08_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_08_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_08_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_08_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_09_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_09_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_09_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_09_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_10_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_10_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_10_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_10_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_11_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_11_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_11_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_11_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_12_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_12_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_12_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_12_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_13_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_13_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_13_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_13_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_14_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_14_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_14_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_14_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_15_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_15_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_15_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_15_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_16_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_16_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_16_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_16_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_17_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_17_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_17_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_17_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_18_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_18_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_18_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_18_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_19_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_19_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_19_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_19_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_20_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_20_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_20_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_20_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_21_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_21_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_21_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_21_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_22_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_22_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_22_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_22_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_23_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_23_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_23_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_23_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_24_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_24_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_24_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_24_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_25_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_25_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_25_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_25_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_26_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_26_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_26_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_26_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_27_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_27_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_27_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_27_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_28_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_28_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_28_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_28_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_29_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_29_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_29_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_29_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_30_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_30_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connected_30_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connected_30_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_00_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_00_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_00_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_01_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_01_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_01_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_02_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_02_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_02_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_03_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_03_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_03_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_04_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_04_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_04_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_05_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_05_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_05_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_06_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_06_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_06_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_07_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_07_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_07_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_08_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_08_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_08_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_09_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_09_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_09_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_10_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_10_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_10_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_11_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_11_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_11_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_12_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_12_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_12_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_13_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_13_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_13_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_14_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_14_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_14_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_15_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_15_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_15_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_16_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_16_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_16_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_17_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_17_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_17_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_18_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_18_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_18_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_19_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_19_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_19_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_20_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_20_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_20_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_21_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_21_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_21_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_22_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_22_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_22_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_23_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_23_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_23_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_24_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_24_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_24_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_25_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_25_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_25_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_26_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_26_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_26_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_27_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_27_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_27_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_28_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_28_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_28_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_29_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_29_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_29_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_30_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_connecting_30_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_connecting_30_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_disabled_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_disabled_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_disabled_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_disabled_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_disconnected_dark = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_disconnected_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_disconnected_light = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_disconnected_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_mr_button_grey = global::VYRMobile.Droid.Resource.Drawable.ic_mr_button_grey;
-			global::PanCardView.Droid.Resource.Drawable.ic_mtrl_chip_checked_black = global::VYRMobile.Droid.Resource.Drawable.ic_mtrl_chip_checked_black;
-			global::PanCardView.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle = global::VYRMobile.Droid.Resource.Drawable.ic_mtrl_chip_checked_circle;
-			global::PanCardView.Droid.Resource.Drawable.ic_mtrl_chip_close_circle = global::VYRMobile.Droid.Resource.Drawable.ic_mtrl_chip_close_circle;
-			global::PanCardView.Droid.Resource.Drawable.ic_vol_type_speaker_dark = global::VYRMobile.Droid.Resource.Drawable.ic_vol_type_speaker_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark = global::VYRMobile.Droid.Resource.Drawable.ic_vol_type_speaker_group_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_vol_type_speaker_group_light = global::VYRMobile.Droid.Resource.Drawable.ic_vol_type_speaker_group_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_vol_type_speaker_light = global::VYRMobile.Droid.Resource.Drawable.ic_vol_type_speaker_light;
-			global::PanCardView.Droid.Resource.Drawable.ic_vol_type_tv_dark = global::VYRMobile.Droid.Resource.Drawable.ic_vol_type_tv_dark;
-			global::PanCardView.Droid.Resource.Drawable.ic_vol_type_tv_light = global::VYRMobile.Droid.Resource.Drawable.ic_vol_type_tv_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_button_connected_dark = global::VYRMobile.Droid.Resource.Drawable.mr_button_connected_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_button_connected_light = global::VYRMobile.Droid.Resource.Drawable.mr_button_connected_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_button_connecting_dark = global::VYRMobile.Droid.Resource.Drawable.mr_button_connecting_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_button_connecting_light = global::VYRMobile.Droid.Resource.Drawable.mr_button_connecting_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_button_dark = global::VYRMobile.Droid.Resource.Drawable.mr_button_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_button_light = global::VYRMobile.Droid.Resource.Drawable.mr_button_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_dialog_close_dark = global::VYRMobile.Droid.Resource.Drawable.mr_dialog_close_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_dialog_close_light = global::VYRMobile.Droid.Resource.Drawable.mr_dialog_close_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_dialog_material_background_dark = global::VYRMobile.Droid.Resource.Drawable.mr_dialog_material_background_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_dialog_material_background_light = global::VYRMobile.Droid.Resource.Drawable.mr_dialog_material_background_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_group_collapse = global::VYRMobile.Droid.Resource.Drawable.mr_group_collapse;
-			global::PanCardView.Droid.Resource.Drawable.mr_group_expand = global::VYRMobile.Droid.Resource.Drawable.mr_group_expand;
-			global::PanCardView.Droid.Resource.Drawable.mr_media_pause_dark = global::VYRMobile.Droid.Resource.Drawable.mr_media_pause_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_media_pause_light = global::VYRMobile.Droid.Resource.Drawable.mr_media_pause_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_media_play_dark = global::VYRMobile.Droid.Resource.Drawable.mr_media_play_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_media_play_light = global::VYRMobile.Droid.Resource.Drawable.mr_media_play_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_media_stop_dark = global::VYRMobile.Droid.Resource.Drawable.mr_media_stop_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_media_stop_light = global::VYRMobile.Droid.Resource.Drawable.mr_media_stop_light;
-			global::PanCardView.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark = global::VYRMobile.Droid.Resource.Drawable.mr_vol_type_audiotrack_dark;
-			global::PanCardView.Droid.Resource.Drawable.mr_vol_type_audiotrack_light = global::VYRMobile.Droid.Resource.Drawable.mr_vol_type_audiotrack_light;
-			global::PanCardView.Droid.Resource.Drawable.mtrl_snackbar_background = global::VYRMobile.Droid.Resource.Drawable.mtrl_snackbar_background;
-			global::PanCardView.Droid.Resource.Drawable.mtrl_tabs_default_indicator = global::VYRMobile.Droid.Resource.Drawable.mtrl_tabs_default_indicator;
-			global::PanCardView.Droid.Resource.Drawable.navigation_empty_icon = global::VYRMobile.Droid.Resource.Drawable.navigation_empty_icon;
-			global::PanCardView.Droid.Resource.Drawable.notification_action_background = global::VYRMobile.Droid.Resource.Drawable.notification_action_background;
-			global::PanCardView.Droid.Resource.Drawable.notification_bg = global::VYRMobile.Droid.Resource.Drawable.notification_bg;
-			global::PanCardView.Droid.Resource.Drawable.notification_bg_low = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low;
-			global::PanCardView.Droid.Resource.Drawable.notification_bg_low_normal = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low_normal;
-			global::PanCardView.Droid.Resource.Drawable.notification_bg_low_pressed = global::VYRMobile.Droid.Resource.Drawable.notification_bg_low_pressed;
-			global::PanCardView.Droid.Resource.Drawable.notification_bg_normal = global::VYRMobile.Droid.Resource.Drawable.notification_bg_normal;
-			global::PanCardView.Droid.Resource.Drawable.notification_bg_normal_pressed = global::VYRMobile.Droid.Resource.Drawable.notification_bg_normal_pressed;
-			global::PanCardView.Droid.Resource.Drawable.notification_icon_background = global::VYRMobile.Droid.Resource.Drawable.notification_icon_background;
-			global::PanCardView.Droid.Resource.Drawable.notification_template_icon_bg = global::VYRMobile.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::PanCardView.Droid.Resource.Drawable.notification_template_icon_low_bg = global::VYRMobile.Droid.Resource.Drawable.notification_template_icon_low_bg;
-			global::PanCardView.Droid.Resource.Drawable.notification_tile_bg = global::VYRMobile.Droid.Resource.Drawable.notification_tile_bg;
-			global::PanCardView.Droid.Resource.Drawable.notify_panel_notification_icon_bg = global::VYRMobile.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
-			global::PanCardView.Droid.Resource.Drawable.tooltip_frame_dark = global::VYRMobile.Droid.Resource.Drawable.tooltip_frame_dark;
-			global::PanCardView.Droid.Resource.Drawable.tooltip_frame_light = global::VYRMobile.Droid.Resource.Drawable.tooltip_frame_light;
-			global::PanCardView.Droid.Resource.Id.action0 = global::VYRMobile.Droid.Resource.Id.action0;
-			global::PanCardView.Droid.Resource.Id.actions = global::VYRMobile.Droid.Resource.Id.actions;
-			global::PanCardView.Droid.Resource.Id.action_bar = global::VYRMobile.Droid.Resource.Id.action_bar;
-			global::PanCardView.Droid.Resource.Id.action_bar_activity_content = global::VYRMobile.Droid.Resource.Id.action_bar_activity_content;
-			global::PanCardView.Droid.Resource.Id.action_bar_container = global::VYRMobile.Droid.Resource.Id.action_bar_container;
-			global::PanCardView.Droid.Resource.Id.action_bar_root = global::VYRMobile.Droid.Resource.Id.action_bar_root;
-			global::PanCardView.Droid.Resource.Id.action_bar_spinner = global::VYRMobile.Droid.Resource.Id.action_bar_spinner;
-			global::PanCardView.Droid.Resource.Id.action_bar_subtitle = global::VYRMobile.Droid.Resource.Id.action_bar_subtitle;
-			global::PanCardView.Droid.Resource.Id.action_bar_title = global::VYRMobile.Droid.Resource.Id.action_bar_title;
-			global::PanCardView.Droid.Resource.Id.action_container = global::VYRMobile.Droid.Resource.Id.action_container;
-			global::PanCardView.Droid.Resource.Id.action_context_bar = global::VYRMobile.Droid.Resource.Id.action_context_bar;
-			global::PanCardView.Droid.Resource.Id.action_divider = global::VYRMobile.Droid.Resource.Id.action_divider;
-			global::PanCardView.Droid.Resource.Id.action_image = global::VYRMobile.Droid.Resource.Id.action_image;
-			global::PanCardView.Droid.Resource.Id.action_menu_divider = global::VYRMobile.Droid.Resource.Id.action_menu_divider;
-			global::PanCardView.Droid.Resource.Id.action_menu_presenter = global::VYRMobile.Droid.Resource.Id.action_menu_presenter;
-			global::PanCardView.Droid.Resource.Id.action_mode_bar = global::VYRMobile.Droid.Resource.Id.action_mode_bar;
-			global::PanCardView.Droid.Resource.Id.action_mode_bar_stub = global::VYRMobile.Droid.Resource.Id.action_mode_bar_stub;
-			global::PanCardView.Droid.Resource.Id.action_mode_close_button = global::VYRMobile.Droid.Resource.Id.action_mode_close_button;
-			global::PanCardView.Droid.Resource.Id.action_text = global::VYRMobile.Droid.Resource.Id.action_text;
-			global::PanCardView.Droid.Resource.Id.activity_chooser_view_content = global::VYRMobile.Droid.Resource.Id.activity_chooser_view_content;
-			global::PanCardView.Droid.Resource.Id.add = global::VYRMobile.Droid.Resource.Id.add;
-			global::PanCardView.Droid.Resource.Id.alertTitle = global::VYRMobile.Droid.Resource.Id.alertTitle;
-			global::PanCardView.Droid.Resource.Id.all = global::VYRMobile.Droid.Resource.Id.all;
-			global::PanCardView.Droid.Resource.Id.ALT = global::VYRMobile.Droid.Resource.Id.ALT;
-			global::PanCardView.Droid.Resource.Id.always = global::VYRMobile.Droid.Resource.Id.always;
-			global::PanCardView.Droid.Resource.Id.async = global::VYRMobile.Droid.Resource.Id.async;
-			global::PanCardView.Droid.Resource.Id.auto = global::VYRMobile.Droid.Resource.Id.auto;
-			global::PanCardView.Droid.Resource.Id.beginning = global::VYRMobile.Droid.Resource.Id.beginning;
-			global::PanCardView.Droid.Resource.Id.blocking = global::VYRMobile.Droid.Resource.Id.blocking;
-			global::PanCardView.Droid.Resource.Id.bottom = global::VYRMobile.Droid.Resource.Id.bottom;
-			global::PanCardView.Droid.Resource.Id.bottomtab_navarea = global::VYRMobile.Droid.Resource.Id.bottomtab_navarea;
-			global::PanCardView.Droid.Resource.Id.bottomtab_tabbar = global::VYRMobile.Droid.Resource.Id.bottomtab_tabbar;
-			global::PanCardView.Droid.Resource.Id.browser_actions_header_text = global::VYRMobile.Droid.Resource.Id.browser_actions_header_text;
-			global::PanCardView.Droid.Resource.Id.browser_actions_menu_items = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_items;
-			global::PanCardView.Droid.Resource.Id.browser_actions_menu_item_icon = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_item_icon;
-			global::PanCardView.Droid.Resource.Id.browser_actions_menu_item_text = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_item_text;
-			global::PanCardView.Droid.Resource.Id.browser_actions_menu_view = global::VYRMobile.Droid.Resource.Id.browser_actions_menu_view;
-			global::PanCardView.Droid.Resource.Id.buttonPanel = global::VYRMobile.Droid.Resource.Id.buttonPanel;
-			global::PanCardView.Droid.Resource.Id.cancel_action = global::VYRMobile.Droid.Resource.Id.cancel_action;
-			global::PanCardView.Droid.Resource.Id.center = global::VYRMobile.Droid.Resource.Id.center;
-			global::PanCardView.Droid.Resource.Id.center_horizontal = global::VYRMobile.Droid.Resource.Id.center_horizontal;
-			global::PanCardView.Droid.Resource.Id.center_vertical = global::VYRMobile.Droid.Resource.Id.center_vertical;
-			global::PanCardView.Droid.Resource.Id.checkbox = global::VYRMobile.Droid.Resource.Id.checkbox;
-			global::PanCardView.Droid.Resource.Id.chronometer = global::VYRMobile.Droid.Resource.Id.chronometer;
-			global::PanCardView.Droid.Resource.Id.clip_horizontal = global::VYRMobile.Droid.Resource.Id.clip_horizontal;
-			global::PanCardView.Droid.Resource.Id.clip_vertical = global::VYRMobile.Droid.Resource.Id.clip_vertical;
-			global::PanCardView.Droid.Resource.Id.collapseActionView = global::VYRMobile.Droid.Resource.Id.collapseActionView;
-			global::PanCardView.Droid.Resource.Id.container = global::VYRMobile.Droid.Resource.Id.container;
-			global::PanCardView.Droid.Resource.Id.content = global::VYRMobile.Droid.Resource.Id.content;
-			global::PanCardView.Droid.Resource.Id.contentPanel = global::VYRMobile.Droid.Resource.Id.contentPanel;
-			global::PanCardView.Droid.Resource.Id.coordinator = global::VYRMobile.Droid.Resource.Id.coordinator;
-			global::PanCardView.Droid.Resource.Id.CTRL = global::VYRMobile.Droid.Resource.Id.CTRL;
-			global::PanCardView.Droid.Resource.Id.custom = global::VYRMobile.Droid.Resource.Id.custom;
-			global::PanCardView.Droid.Resource.Id.customPanel = global::VYRMobile.Droid.Resource.Id.customPanel;
-			global::PanCardView.Droid.Resource.Id.decor_content_parent = global::VYRMobile.Droid.Resource.Id.decor_content_parent;
-			global::PanCardView.Droid.Resource.Id.default_activity_button = global::VYRMobile.Droid.Resource.Id.default_activity_button;
-			global::PanCardView.Droid.Resource.Id.design_bottom_sheet = global::VYRMobile.Droid.Resource.Id.design_bottom_sheet;
-			global::PanCardView.Droid.Resource.Id.design_menu_item_action_area = global::VYRMobile.Droid.Resource.Id.design_menu_item_action_area;
-			global::PanCardView.Droid.Resource.Id.design_menu_item_action_area_stub = global::VYRMobile.Droid.Resource.Id.design_menu_item_action_area_stub;
-			global::PanCardView.Droid.Resource.Id.design_menu_item_text = global::VYRMobile.Droid.Resource.Id.design_menu_item_text;
-			global::PanCardView.Droid.Resource.Id.design_navigation_view = global::VYRMobile.Droid.Resource.Id.design_navigation_view;
-			global::PanCardView.Droid.Resource.Id.disableHome = global::VYRMobile.Droid.Resource.Id.disableHome;
-			global::PanCardView.Droid.Resource.Id.edit_query = global::VYRMobile.Droid.Resource.Id.edit_query;
-			global::PanCardView.Droid.Resource.Id.end = global::VYRMobile.Droid.Resource.Id.end;
-			global::PanCardView.Droid.Resource.Id.end_padder = global::VYRMobile.Droid.Resource.Id.end_padder;
-			global::PanCardView.Droid.Resource.Id.enterAlways = global::VYRMobile.Droid.Resource.Id.enterAlways;
-			global::PanCardView.Droid.Resource.Id.enterAlwaysCollapsed = global::VYRMobile.Droid.Resource.Id.enterAlwaysCollapsed;
-			global::PanCardView.Droid.Resource.Id.exitUntilCollapsed = global::VYRMobile.Droid.Resource.Id.exitUntilCollapsed;
-			global::PanCardView.Droid.Resource.Id.expanded_menu = global::VYRMobile.Droid.Resource.Id.expanded_menu;
-			global::PanCardView.Droid.Resource.Id.expand_activities_button = global::VYRMobile.Droid.Resource.Id.expand_activities_button;
-			global::PanCardView.Droid.Resource.Id.fill = global::VYRMobile.Droid.Resource.Id.fill;
-			global::PanCardView.Droid.Resource.Id.filled = global::VYRMobile.Droid.Resource.Id.filled;
-			global::PanCardView.Droid.Resource.Id.fill_horizontal = global::VYRMobile.Droid.Resource.Id.fill_horizontal;
-			global::PanCardView.Droid.Resource.Id.fill_vertical = global::VYRMobile.Droid.Resource.Id.fill_vertical;
-			global::PanCardView.Droid.Resource.Id.@fixed = global::VYRMobile.Droid.Resource.Id.@fixed;
-			global::PanCardView.Droid.Resource.Id.flyoutcontent_appbar = global::VYRMobile.Droid.Resource.Id.flyoutcontent_appbar;
-			global::PanCardView.Droid.Resource.Id.flyoutcontent_recycler = global::VYRMobile.Droid.Resource.Id.flyoutcontent_recycler;
-			global::PanCardView.Droid.Resource.Id.forever = global::VYRMobile.Droid.Resource.Id.forever;
-			global::PanCardView.Droid.Resource.Id.FUNCTION = global::VYRMobile.Droid.Resource.Id.FUNCTION;
-			global::PanCardView.Droid.Resource.Id.ghost_view = global::VYRMobile.Droid.Resource.Id.ghost_view;
-			global::PanCardView.Droid.Resource.Id.group_divider = global::VYRMobile.Droid.Resource.Id.group_divider;
-			global::PanCardView.Droid.Resource.Id.home = global::VYRMobile.Droid.Resource.Id.home;
-			global::PanCardView.Droid.Resource.Id.homeAsUp = global::VYRMobile.Droid.Resource.Id.homeAsUp;
-			global::PanCardView.Droid.Resource.Id.icon = global::VYRMobile.Droid.Resource.Id.icon;
-			global::PanCardView.Droid.Resource.Id.icon_group = global::VYRMobile.Droid.Resource.Id.icon_group;
-			global::PanCardView.Droid.Resource.Id.ifRoom = global::VYRMobile.Droid.Resource.Id.ifRoom;
-			global::PanCardView.Droid.Resource.Id.image = global::VYRMobile.Droid.Resource.Id.image;
-			global::PanCardView.Droid.Resource.Id.info = global::VYRMobile.Droid.Resource.Id.info;
-			global::PanCardView.Droid.Resource.Id.italic = global::VYRMobile.Droid.Resource.Id.italic;
-			global::PanCardView.Droid.Resource.Id.item_touch_helper_previous_elevation = global::VYRMobile.Droid.Resource.Id.item_touch_helper_previous_elevation;
-			global::PanCardView.Droid.Resource.Id.labeled = global::VYRMobile.Droid.Resource.Id.labeled;
-			global::PanCardView.Droid.Resource.Id.largeLabel = global::VYRMobile.Droid.Resource.Id.largeLabel;
-			global::PanCardView.Droid.Resource.Id.left = global::VYRMobile.Droid.Resource.Id.left;
-			global::PanCardView.Droid.Resource.Id.line1 = global::VYRMobile.Droid.Resource.Id.line1;
-			global::PanCardView.Droid.Resource.Id.line3 = global::VYRMobile.Droid.Resource.Id.line3;
-			global::PanCardView.Droid.Resource.Id.listMode = global::VYRMobile.Droid.Resource.Id.listMode;
-			global::PanCardView.Droid.Resource.Id.list_item = global::VYRMobile.Droid.Resource.Id.list_item;
-			global::PanCardView.Droid.Resource.Id.main_appbar = global::VYRMobile.Droid.Resource.Id.main_appbar;
-			global::PanCardView.Droid.Resource.Id.main_tablayout = global::VYRMobile.Droid.Resource.Id.main_tablayout;
-			global::PanCardView.Droid.Resource.Id.main_toolbar = global::VYRMobile.Droid.Resource.Id.main_toolbar;
-			global::PanCardView.Droid.Resource.Id.main_viewpager = global::VYRMobile.Droid.Resource.Id.main_viewpager;
-			global::PanCardView.Droid.Resource.Id.masked = global::VYRMobile.Droid.Resource.Id.masked;
-			global::PanCardView.Droid.Resource.Id.media_actions = global::VYRMobile.Droid.Resource.Id.media_actions;
-			global::PanCardView.Droid.Resource.Id.message = global::VYRMobile.Droid.Resource.Id.message;
-			global::PanCardView.Droid.Resource.Id.META = global::VYRMobile.Droid.Resource.Id.META;
-			global::PanCardView.Droid.Resource.Id.middle = global::VYRMobile.Droid.Resource.Id.middle;
-			global::PanCardView.Droid.Resource.Id.mini = global::VYRMobile.Droid.Resource.Id.mini;
-			global::PanCardView.Droid.Resource.Id.mr_art = global::VYRMobile.Droid.Resource.Id.mr_art;
-			global::PanCardView.Droid.Resource.Id.mr_cast_checkbox = global::VYRMobile.Droid.Resource.Id.mr_cast_checkbox;
-			global::PanCardView.Droid.Resource.Id.mr_cast_close_button = global::VYRMobile.Droid.Resource.Id.mr_cast_close_button;
-			global::PanCardView.Droid.Resource.Id.mr_cast_group_icon = global::VYRMobile.Droid.Resource.Id.mr_cast_group_icon;
-			global::PanCardView.Droid.Resource.Id.mr_cast_group_name = global::VYRMobile.Droid.Resource.Id.mr_cast_group_name;
-			global::PanCardView.Droid.Resource.Id.mr_cast_list = global::VYRMobile.Droid.Resource.Id.mr_cast_list;
-			global::PanCardView.Droid.Resource.Id.mr_cast_meta = global::VYRMobile.Droid.Resource.Id.mr_cast_meta;
-			global::PanCardView.Droid.Resource.Id.mr_cast_meta_art = global::VYRMobile.Droid.Resource.Id.mr_cast_meta_art;
-			global::PanCardView.Droid.Resource.Id.mr_cast_meta_subtitle = global::VYRMobile.Droid.Resource.Id.mr_cast_meta_subtitle;
-			global::PanCardView.Droid.Resource.Id.mr_cast_meta_title = global::VYRMobile.Droid.Resource.Id.mr_cast_meta_title;
-			global::PanCardView.Droid.Resource.Id.mr_cast_route_icon = global::VYRMobile.Droid.Resource.Id.mr_cast_route_icon;
-			global::PanCardView.Droid.Resource.Id.mr_cast_route_name = global::VYRMobile.Droid.Resource.Id.mr_cast_route_name;
-			global::PanCardView.Droid.Resource.Id.mr_cast_stop_button = global::VYRMobile.Droid.Resource.Id.mr_cast_stop_button;
-			global::PanCardView.Droid.Resource.Id.mr_cast_volume_layout = global::VYRMobile.Droid.Resource.Id.mr_cast_volume_layout;
-			global::PanCardView.Droid.Resource.Id.mr_cast_volume_slider = global::VYRMobile.Droid.Resource.Id.mr_cast_volume_slider;
-			global::PanCardView.Droid.Resource.Id.mr_chooser_list = global::VYRMobile.Droid.Resource.Id.mr_chooser_list;
-			global::PanCardView.Droid.Resource.Id.mr_chooser_route_desc = global::VYRMobile.Droid.Resource.Id.mr_chooser_route_desc;
-			global::PanCardView.Droid.Resource.Id.mr_chooser_route_icon = global::VYRMobile.Droid.Resource.Id.mr_chooser_route_icon;
-			global::PanCardView.Droid.Resource.Id.mr_chooser_route_name = global::VYRMobile.Droid.Resource.Id.mr_chooser_route_name;
-			global::PanCardView.Droid.Resource.Id.mr_chooser_title = global::VYRMobile.Droid.Resource.Id.mr_chooser_title;
-			global::PanCardView.Droid.Resource.Id.mr_close = global::VYRMobile.Droid.Resource.Id.mr_close;
-			global::PanCardView.Droid.Resource.Id.mr_control_divider = global::VYRMobile.Droid.Resource.Id.mr_control_divider;
-			global::PanCardView.Droid.Resource.Id.mr_control_playback_ctrl = global::VYRMobile.Droid.Resource.Id.mr_control_playback_ctrl;
-			global::PanCardView.Droid.Resource.Id.mr_control_subtitle = global::VYRMobile.Droid.Resource.Id.mr_control_subtitle;
-			global::PanCardView.Droid.Resource.Id.mr_control_title = global::VYRMobile.Droid.Resource.Id.mr_control_title;
-			global::PanCardView.Droid.Resource.Id.mr_control_title_container = global::VYRMobile.Droid.Resource.Id.mr_control_title_container;
-			global::PanCardView.Droid.Resource.Id.mr_custom_control = global::VYRMobile.Droid.Resource.Id.mr_custom_control;
-			global::PanCardView.Droid.Resource.Id.mr_default_control = global::VYRMobile.Droid.Resource.Id.mr_default_control;
-			global::PanCardView.Droid.Resource.Id.mr_dialog_area = global::VYRMobile.Droid.Resource.Id.mr_dialog_area;
-			global::PanCardView.Droid.Resource.Id.mr_dialog_header_name = global::VYRMobile.Droid.Resource.Id.mr_dialog_header_name;
-			global::PanCardView.Droid.Resource.Id.mr_expandable_area = global::VYRMobile.Droid.Resource.Id.mr_expandable_area;
-			global::PanCardView.Droid.Resource.Id.mr_group_expand_collapse = global::VYRMobile.Droid.Resource.Id.mr_group_expand_collapse;
-			global::PanCardView.Droid.Resource.Id.mr_group_volume_route_name = global::VYRMobile.Droid.Resource.Id.mr_group_volume_route_name;
-			global::PanCardView.Droid.Resource.Id.mr_group_volume_slider = global::VYRMobile.Droid.Resource.Id.mr_group_volume_slider;
-			global::PanCardView.Droid.Resource.Id.mr_media_main_control = global::VYRMobile.Droid.Resource.Id.mr_media_main_control;
-			global::PanCardView.Droid.Resource.Id.mr_name = global::VYRMobile.Droid.Resource.Id.mr_name;
-			global::PanCardView.Droid.Resource.Id.mr_picker_close_button = global::VYRMobile.Droid.Resource.Id.mr_picker_close_button;
-			global::PanCardView.Droid.Resource.Id.mr_picker_list = global::VYRMobile.Droid.Resource.Id.mr_picker_list;
-			global::PanCardView.Droid.Resource.Id.mr_picker_route_icon = global::VYRMobile.Droid.Resource.Id.mr_picker_route_icon;
-			global::PanCardView.Droid.Resource.Id.mr_picker_route_name = global::VYRMobile.Droid.Resource.Id.mr_picker_route_name;
-			global::PanCardView.Droid.Resource.Id.mr_playback_control = global::VYRMobile.Droid.Resource.Id.mr_playback_control;
-			global::PanCardView.Droid.Resource.Id.mr_title_bar = global::VYRMobile.Droid.Resource.Id.mr_title_bar;
-			global::PanCardView.Droid.Resource.Id.mr_volume_control = global::VYRMobile.Droid.Resource.Id.mr_volume_control;
-			global::PanCardView.Droid.Resource.Id.mr_volume_group_list = global::VYRMobile.Droid.Resource.Id.mr_volume_group_list;
-			global::PanCardView.Droid.Resource.Id.mr_volume_item_icon = global::VYRMobile.Droid.Resource.Id.mr_volume_item_icon;
-			global::PanCardView.Droid.Resource.Id.mr_volume_slider = global::VYRMobile.Droid.Resource.Id.mr_volume_slider;
-			global::PanCardView.Droid.Resource.Id.mtrl_child_content_container = global::VYRMobile.Droid.Resource.Id.mtrl_child_content_container;
-			global::PanCardView.Droid.Resource.Id.mtrl_internal_children_alpha_tag = global::VYRMobile.Droid.Resource.Id.mtrl_internal_children_alpha_tag;
-			global::PanCardView.Droid.Resource.Id.multiply = global::VYRMobile.Droid.Resource.Id.multiply;
-			global::PanCardView.Droid.Resource.Id.navigation_header_container = global::VYRMobile.Droid.Resource.Id.navigation_header_container;
-			global::PanCardView.Droid.Resource.Id.never = global::VYRMobile.Droid.Resource.Id.never;
-			global::PanCardView.Droid.Resource.Id.none = global::VYRMobile.Droid.Resource.Id.none;
-			global::PanCardView.Droid.Resource.Id.normal = global::VYRMobile.Droid.Resource.Id.normal;
-			global::PanCardView.Droid.Resource.Id.notification_background = global::VYRMobile.Droid.Resource.Id.notification_background;
-			global::PanCardView.Droid.Resource.Id.notification_main_column = global::VYRMobile.Droid.Resource.Id.notification_main_column;
-			global::PanCardView.Droid.Resource.Id.notification_main_column_container = global::VYRMobile.Droid.Resource.Id.notification_main_column_container;
-			global::PanCardView.Droid.Resource.Id.outline = global::VYRMobile.Droid.Resource.Id.outline;
-			global::PanCardView.Droid.Resource.Id.parallax = global::VYRMobile.Droid.Resource.Id.parallax;
-			global::PanCardView.Droid.Resource.Id.parentPanel = global::VYRMobile.Droid.Resource.Id.parentPanel;
-			global::PanCardView.Droid.Resource.Id.parent_matrix = global::VYRMobile.Droid.Resource.Id.parent_matrix;
-			global::PanCardView.Droid.Resource.Id.pin = global::VYRMobile.Droid.Resource.Id.pin;
-			global::PanCardView.Droid.Resource.Id.progress_circular = global::VYRMobile.Droid.Resource.Id.progress_circular;
-			global::PanCardView.Droid.Resource.Id.progress_horizontal = global::VYRMobile.Droid.Resource.Id.progress_horizontal;
-			global::PanCardView.Droid.Resource.Id.radio = global::VYRMobile.Droid.Resource.Id.radio;
-			global::PanCardView.Droid.Resource.Id.right = global::VYRMobile.Droid.Resource.Id.right;
-			global::PanCardView.Droid.Resource.Id.right_icon = global::VYRMobile.Droid.Resource.Id.right_icon;
-			global::PanCardView.Droid.Resource.Id.right_side = global::VYRMobile.Droid.Resource.Id.right_side;
-			global::PanCardView.Droid.Resource.Id.save_image_matrix = global::VYRMobile.Droid.Resource.Id.save_image_matrix;
-			global::PanCardView.Droid.Resource.Id.save_non_transition_alpha = global::VYRMobile.Droid.Resource.Id.save_non_transition_alpha;
-			global::PanCardView.Droid.Resource.Id.save_scale_type = global::VYRMobile.Droid.Resource.Id.save_scale_type;
-			global::PanCardView.Droid.Resource.Id.screen = global::VYRMobile.Droid.Resource.Id.screen;
-			global::PanCardView.Droid.Resource.Id.scroll = global::VYRMobile.Droid.Resource.Id.scroll;
-			global::PanCardView.Droid.Resource.Id.scrollable = global::VYRMobile.Droid.Resource.Id.scrollable;
-			global::PanCardView.Droid.Resource.Id.scrollIndicatorDown = global::VYRMobile.Droid.Resource.Id.scrollIndicatorDown;
-			global::PanCardView.Droid.Resource.Id.scrollIndicatorUp = global::VYRMobile.Droid.Resource.Id.scrollIndicatorUp;
-			global::PanCardView.Droid.Resource.Id.scrollView = global::VYRMobile.Droid.Resource.Id.scrollView;
-			global::PanCardView.Droid.Resource.Id.search_badge = global::VYRMobile.Droid.Resource.Id.search_badge;
-			global::PanCardView.Droid.Resource.Id.search_bar = global::VYRMobile.Droid.Resource.Id.search_bar;
-			global::PanCardView.Droid.Resource.Id.search_button = global::VYRMobile.Droid.Resource.Id.search_button;
-			global::PanCardView.Droid.Resource.Id.search_close_btn = global::VYRMobile.Droid.Resource.Id.search_close_btn;
-			global::PanCardView.Droid.Resource.Id.search_edit_frame = global::VYRMobile.Droid.Resource.Id.search_edit_frame;
-			global::PanCardView.Droid.Resource.Id.search_go_btn = global::VYRMobile.Droid.Resource.Id.search_go_btn;
-			global::PanCardView.Droid.Resource.Id.search_mag_icon = global::VYRMobile.Droid.Resource.Id.search_mag_icon;
-			global::PanCardView.Droid.Resource.Id.search_plate = global::VYRMobile.Droid.Resource.Id.search_plate;
-			global::PanCardView.Droid.Resource.Id.search_src_text = global::VYRMobile.Droid.Resource.Id.search_src_text;
-			global::PanCardView.Droid.Resource.Id.search_voice_btn = global::VYRMobile.Droid.Resource.Id.search_voice_btn;
-			global::PanCardView.Droid.Resource.Id.selected = global::VYRMobile.Droid.Resource.Id.selected;
-			global::PanCardView.Droid.Resource.Id.select_dialog_listview = global::VYRMobile.Droid.Resource.Id.select_dialog_listview;
-			global::PanCardView.Droid.Resource.Id.shellcontent_appbar = global::VYRMobile.Droid.Resource.Id.shellcontent_appbar;
-			global::PanCardView.Droid.Resource.Id.shellcontent_toolbar = global::VYRMobile.Droid.Resource.Id.shellcontent_toolbar;
-			global::PanCardView.Droid.Resource.Id.SHIFT = global::VYRMobile.Droid.Resource.Id.SHIFT;
-			global::PanCardView.Droid.Resource.Id.shortcut = global::VYRMobile.Droid.Resource.Id.shortcut;
-			global::PanCardView.Droid.Resource.Id.showCustom = global::VYRMobile.Droid.Resource.Id.showCustom;
-			global::PanCardView.Droid.Resource.Id.showHome = global::VYRMobile.Droid.Resource.Id.showHome;
-			global::PanCardView.Droid.Resource.Id.showTitle = global::VYRMobile.Droid.Resource.Id.showTitle;
-			global::PanCardView.Droid.Resource.Id.smallLabel = global::VYRMobile.Droid.Resource.Id.smallLabel;
-			global::PanCardView.Droid.Resource.Id.snackbar_action = global::VYRMobile.Droid.Resource.Id.snackbar_action;
-			global::PanCardView.Droid.Resource.Id.snackbar_text = global::VYRMobile.Droid.Resource.Id.snackbar_text;
-			global::PanCardView.Droid.Resource.Id.snap = global::VYRMobile.Droid.Resource.Id.snap;
-			global::PanCardView.Droid.Resource.Id.snapMargins = global::VYRMobile.Droid.Resource.Id.snapMargins;
-			global::PanCardView.Droid.Resource.Id.spacer = global::VYRMobile.Droid.Resource.Id.spacer;
-			global::PanCardView.Droid.Resource.Id.split_action_bar = global::VYRMobile.Droid.Resource.Id.split_action_bar;
-			global::PanCardView.Droid.Resource.Id.src_atop = global::VYRMobile.Droid.Resource.Id.src_atop;
-			global::PanCardView.Droid.Resource.Id.src_in = global::VYRMobile.Droid.Resource.Id.src_in;
-			global::PanCardView.Droid.Resource.Id.src_over = global::VYRMobile.Droid.Resource.Id.src_over;
-			global::PanCardView.Droid.Resource.Id.start = global::VYRMobile.Droid.Resource.Id.start;
-			global::PanCardView.Droid.Resource.Id.status_bar_latest_event_content = global::VYRMobile.Droid.Resource.Id.status_bar_latest_event_content;
-			global::PanCardView.Droid.Resource.Id.stretch = global::VYRMobile.Droid.Resource.Id.stretch;
-			global::PanCardView.Droid.Resource.Id.submenuarrow = global::VYRMobile.Droid.Resource.Id.submenuarrow;
-			global::PanCardView.Droid.Resource.Id.submit_area = global::VYRMobile.Droid.Resource.Id.submit_area;
-			global::PanCardView.Droid.Resource.Id.SYM = global::VYRMobile.Droid.Resource.Id.SYM;
-			global::PanCardView.Droid.Resource.Id.tabMode = global::VYRMobile.Droid.Resource.Id.tabMode;
-			global::PanCardView.Droid.Resource.Id.tag_transition_group = global::VYRMobile.Droid.Resource.Id.tag_transition_group;
-			global::PanCardView.Droid.Resource.Id.tag_unhandled_key_event_manager = global::VYRMobile.Droid.Resource.Id.tag_unhandled_key_event_manager;
-			global::PanCardView.Droid.Resource.Id.tag_unhandled_key_listeners = global::VYRMobile.Droid.Resource.Id.tag_unhandled_key_listeners;
-			global::PanCardView.Droid.Resource.Id.text = global::VYRMobile.Droid.Resource.Id.text;
-			global::PanCardView.Droid.Resource.Id.text2 = global::VYRMobile.Droid.Resource.Id.text2;
-			global::PanCardView.Droid.Resource.Id.textinput_counter = global::VYRMobile.Droid.Resource.Id.textinput_counter;
-			global::PanCardView.Droid.Resource.Id.textinput_error = global::VYRMobile.Droid.Resource.Id.textinput_error;
-			global::PanCardView.Droid.Resource.Id.textinput_helper_text = global::VYRMobile.Droid.Resource.Id.textinput_helper_text;
-			global::PanCardView.Droid.Resource.Id.textSpacerNoButtons = global::VYRMobile.Droid.Resource.Id.textSpacerNoButtons;
-			global::PanCardView.Droid.Resource.Id.textSpacerNoTitle = global::VYRMobile.Droid.Resource.Id.textSpacerNoTitle;
-			global::PanCardView.Droid.Resource.Id.textStart = global::VYRMobile.Droid.Resource.Id.textStart;
-			global::PanCardView.Droid.Resource.Id.text_input_password_toggle = global::VYRMobile.Droid.Resource.Id.text_input_password_toggle;
-			global::PanCardView.Droid.Resource.Id.time = global::VYRMobile.Droid.Resource.Id.time;
-			global::PanCardView.Droid.Resource.Id.title = global::VYRMobile.Droid.Resource.Id.title;
-			global::PanCardView.Droid.Resource.Id.titleDividerNoCustom = global::VYRMobile.Droid.Resource.Id.titleDividerNoCustom;
-			global::PanCardView.Droid.Resource.Id.title_template = global::VYRMobile.Droid.Resource.Id.title_template;
-			global::PanCardView.Droid.Resource.Id.top = global::VYRMobile.Droid.Resource.Id.top;
-			global::PanCardView.Droid.Resource.Id.topPanel = global::VYRMobile.Droid.Resource.Id.topPanel;
-			global::PanCardView.Droid.Resource.Id.touch_outside = global::VYRMobile.Droid.Resource.Id.touch_outside;
-			global::PanCardView.Droid.Resource.Id.transition_current_scene = global::VYRMobile.Droid.Resource.Id.transition_current_scene;
-			global::PanCardView.Droid.Resource.Id.transition_layout_save = global::VYRMobile.Droid.Resource.Id.transition_layout_save;
-			global::PanCardView.Droid.Resource.Id.transition_position = global::VYRMobile.Droid.Resource.Id.transition_position;
-			global::PanCardView.Droid.Resource.Id.transition_scene_layoutid_cache = global::VYRMobile.Droid.Resource.Id.transition_scene_layoutid_cache;
-			global::PanCardView.Droid.Resource.Id.transition_transform = global::VYRMobile.Droid.Resource.Id.transition_transform;
-			global::PanCardView.Droid.Resource.Id.uniform = global::VYRMobile.Droid.Resource.Id.uniform;
-			global::PanCardView.Droid.Resource.Id.unlabeled = global::VYRMobile.Droid.Resource.Id.unlabeled;
-			global::PanCardView.Droid.Resource.Id.up = global::VYRMobile.Droid.Resource.Id.up;
-			global::PanCardView.Droid.Resource.Id.useLogo = global::VYRMobile.Droid.Resource.Id.useLogo;
-			global::PanCardView.Droid.Resource.Id.view_offset_helper = global::VYRMobile.Droid.Resource.Id.view_offset_helper;
-			global::PanCardView.Droid.Resource.Id.visible = global::VYRMobile.Droid.Resource.Id.visible;
-			global::PanCardView.Droid.Resource.Id.volume_item_container = global::VYRMobile.Droid.Resource.Id.volume_item_container;
-			global::PanCardView.Droid.Resource.Id.withText = global::VYRMobile.Droid.Resource.Id.withText;
-			global::PanCardView.Droid.Resource.Id.wrap_content = global::VYRMobile.Droid.Resource.Id.wrap_content;
-			global::PanCardView.Droid.Resource.Integer.abc_config_activityDefaultDur = global::VYRMobile.Droid.Resource.Integer.abc_config_activityDefaultDur;
-			global::PanCardView.Droid.Resource.Integer.abc_config_activityShortDur = global::VYRMobile.Droid.Resource.Integer.abc_config_activityShortDur;
-			global::PanCardView.Droid.Resource.Integer.app_bar_elevation_anim_duration = global::VYRMobile.Droid.Resource.Integer.app_bar_elevation_anim_duration;
-			global::PanCardView.Droid.Resource.Integer.bottom_sheet_slide_duration = global::VYRMobile.Droid.Resource.Integer.bottom_sheet_slide_duration;
-			global::PanCardView.Droid.Resource.Integer.cancel_button_image_alpha = global::VYRMobile.Droid.Resource.Integer.cancel_button_image_alpha;
-			global::PanCardView.Droid.Resource.Integer.config_tooltipAnimTime = global::VYRMobile.Droid.Resource.Integer.config_tooltipAnimTime;
-			global::PanCardView.Droid.Resource.Integer.design_snackbar_text_max_lines = global::VYRMobile.Droid.Resource.Integer.design_snackbar_text_max_lines;
-			global::PanCardView.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms = global::VYRMobile.Droid.Resource.Integer.design_tab_indicator_anim_duration_ms;
-			global::PanCardView.Droid.Resource.Integer.hide_password_duration = global::VYRMobile.Droid.Resource.Integer.hide_password_duration;
-			global::PanCardView.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms = global::VYRMobile.Droid.Resource.Integer.mr_controller_volume_group_list_animation_duration_ms;
-			global::PanCardView.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms = global::VYRMobile.Droid.Resource.Integer.mr_controller_volume_group_list_fade_in_duration_ms;
-			global::PanCardView.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms = global::VYRMobile.Droid.Resource.Integer.mr_controller_volume_group_list_fade_out_duration_ms;
-			global::PanCardView.Droid.Resource.Integer.mr_update_routes_delay_ms = global::VYRMobile.Droid.Resource.Integer.mr_update_routes_delay_ms;
-			global::PanCardView.Droid.Resource.Integer.mtrl_btn_anim_delay_ms = global::VYRMobile.Droid.Resource.Integer.mtrl_btn_anim_delay_ms;
-			global::PanCardView.Droid.Resource.Integer.mtrl_btn_anim_duration_ms = global::VYRMobile.Droid.Resource.Integer.mtrl_btn_anim_duration_ms;
-			global::PanCardView.Droid.Resource.Integer.mtrl_chip_anim_duration = global::VYRMobile.Droid.Resource.Integer.mtrl_chip_anim_duration;
-			global::PanCardView.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms = global::VYRMobile.Droid.Resource.Integer.mtrl_tab_indicator_anim_duration_ms;
-			global::PanCardView.Droid.Resource.Integer.show_password_duration = global::VYRMobile.Droid.Resource.Integer.show_password_duration;
-			global::PanCardView.Droid.Resource.Integer.status_bar_notification_info_maxnum = global::VYRMobile.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::PanCardView.Droid.Resource.Interpolator.mr_fast_out_slow_in = global::VYRMobile.Droid.Resource.Interpolator.mr_fast_out_slow_in;
-			global::PanCardView.Droid.Resource.Interpolator.mr_linear_out_slow_in = global::VYRMobile.Droid.Resource.Interpolator.mr_linear_out_slow_in;
-			global::PanCardView.Droid.Resource.Interpolator.mtrl_fast_out_linear_in = global::VYRMobile.Droid.Resource.Interpolator.mtrl_fast_out_linear_in;
-			global::PanCardView.Droid.Resource.Interpolator.mtrl_fast_out_slow_in = global::VYRMobile.Droid.Resource.Interpolator.mtrl_fast_out_slow_in;
-			global::PanCardView.Droid.Resource.Interpolator.mtrl_linear = global::VYRMobile.Droid.Resource.Interpolator.mtrl_linear;
-			global::PanCardView.Droid.Resource.Interpolator.mtrl_linear_out_slow_in = global::VYRMobile.Droid.Resource.Interpolator.mtrl_linear_out_slow_in;
-			global::PanCardView.Droid.Resource.Layout.abc_action_bar_title_item = global::VYRMobile.Droid.Resource.Layout.abc_action_bar_title_item;
-			global::PanCardView.Droid.Resource.Layout.abc_action_bar_up_container = global::VYRMobile.Droid.Resource.Layout.abc_action_bar_up_container;
-			global::PanCardView.Droid.Resource.Layout.abc_action_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_action_menu_item_layout;
-			global::PanCardView.Droid.Resource.Layout.abc_action_menu_layout = global::VYRMobile.Droid.Resource.Layout.abc_action_menu_layout;
-			global::PanCardView.Droid.Resource.Layout.abc_action_mode_bar = global::VYRMobile.Droid.Resource.Layout.abc_action_mode_bar;
-			global::PanCardView.Droid.Resource.Layout.abc_action_mode_close_item_material = global::VYRMobile.Droid.Resource.Layout.abc_action_mode_close_item_material;
-			global::PanCardView.Droid.Resource.Layout.abc_activity_chooser_view = global::VYRMobile.Droid.Resource.Layout.abc_activity_chooser_view;
-			global::PanCardView.Droid.Resource.Layout.abc_activity_chooser_view_list_item = global::VYRMobile.Droid.Resource.Layout.abc_activity_chooser_view_list_item;
-			global::PanCardView.Droid.Resource.Layout.abc_alert_dialog_button_bar_material = global::VYRMobile.Droid.Resource.Layout.abc_alert_dialog_button_bar_material;
-			global::PanCardView.Droid.Resource.Layout.abc_alert_dialog_material = global::VYRMobile.Droid.Resource.Layout.abc_alert_dialog_material;
-			global::PanCardView.Droid.Resource.Layout.abc_alert_dialog_title_material = global::VYRMobile.Droid.Resource.Layout.abc_alert_dialog_title_material;
-			global::PanCardView.Droid.Resource.Layout.abc_cascading_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_cascading_menu_item_layout;
-			global::PanCardView.Droid.Resource.Layout.abc_dialog_title_material = global::VYRMobile.Droid.Resource.Layout.abc_dialog_title_material;
-			global::PanCardView.Droid.Resource.Layout.abc_expanded_menu_layout = global::VYRMobile.Droid.Resource.Layout.abc_expanded_menu_layout;
-			global::PanCardView.Droid.Resource.Layout.abc_list_menu_item_checkbox = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_checkbox;
-			global::PanCardView.Droid.Resource.Layout.abc_list_menu_item_icon = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_icon;
-			global::PanCardView.Droid.Resource.Layout.abc_list_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_layout;
-			global::PanCardView.Droid.Resource.Layout.abc_list_menu_item_radio = global::VYRMobile.Droid.Resource.Layout.abc_list_menu_item_radio;
-			global::PanCardView.Droid.Resource.Layout.abc_popup_menu_header_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_popup_menu_header_item_layout;
-			global::PanCardView.Droid.Resource.Layout.abc_popup_menu_item_layout = global::VYRMobile.Droid.Resource.Layout.abc_popup_menu_item_layout;
-			global::PanCardView.Droid.Resource.Layout.abc_screen_content_include = global::VYRMobile.Droid.Resource.Layout.abc_screen_content_include;
-			global::PanCardView.Droid.Resource.Layout.abc_screen_simple = global::VYRMobile.Droid.Resource.Layout.abc_screen_simple;
-			global::PanCardView.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode = global::VYRMobile.Droid.Resource.Layout.abc_screen_simple_overlay_action_mode;
-			global::PanCardView.Droid.Resource.Layout.abc_screen_toolbar = global::VYRMobile.Droid.Resource.Layout.abc_screen_toolbar;
-			global::PanCardView.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line = global::VYRMobile.Droid.Resource.Layout.abc_search_dropdown_item_icons_2line;
-			global::PanCardView.Droid.Resource.Layout.abc_search_view = global::VYRMobile.Droid.Resource.Layout.abc_search_view;
-			global::PanCardView.Droid.Resource.Layout.abc_select_dialog_material = global::VYRMobile.Droid.Resource.Layout.abc_select_dialog_material;
-			global::PanCardView.Droid.Resource.Layout.abc_tooltip = global::VYRMobile.Droid.Resource.Layout.abc_tooltip;
-			global::PanCardView.Droid.Resource.Layout.BottomTabLayout = global::VYRMobile.Droid.Resource.Layout.BottomTabLayout;
-			global::PanCardView.Droid.Resource.Layout.browser_actions_context_menu_page = global::VYRMobile.Droid.Resource.Layout.browser_actions_context_menu_page;
-			global::PanCardView.Droid.Resource.Layout.browser_actions_context_menu_row = global::VYRMobile.Droid.Resource.Layout.browser_actions_context_menu_row;
-			global::PanCardView.Droid.Resource.Layout.design_bottom_navigation_item = global::VYRMobile.Droid.Resource.Layout.design_bottom_navigation_item;
-			global::PanCardView.Droid.Resource.Layout.design_bottom_sheet_dialog = global::VYRMobile.Droid.Resource.Layout.design_bottom_sheet_dialog;
-			global::PanCardView.Droid.Resource.Layout.design_layout_snackbar = global::VYRMobile.Droid.Resource.Layout.design_layout_snackbar;
-			global::PanCardView.Droid.Resource.Layout.design_layout_snackbar_include = global::VYRMobile.Droid.Resource.Layout.design_layout_snackbar_include;
-			global::PanCardView.Droid.Resource.Layout.design_layout_tab_icon = global::VYRMobile.Droid.Resource.Layout.design_layout_tab_icon;
-			global::PanCardView.Droid.Resource.Layout.design_layout_tab_text = global::VYRMobile.Droid.Resource.Layout.design_layout_tab_text;
-			global::PanCardView.Droid.Resource.Layout.design_menu_item_action_area = global::VYRMobile.Droid.Resource.Layout.design_menu_item_action_area;
-			global::PanCardView.Droid.Resource.Layout.design_navigation_item = global::VYRMobile.Droid.Resource.Layout.design_navigation_item;
-			global::PanCardView.Droid.Resource.Layout.design_navigation_item_header = global::VYRMobile.Droid.Resource.Layout.design_navigation_item_header;
-			global::PanCardView.Droid.Resource.Layout.design_navigation_item_separator = global::VYRMobile.Droid.Resource.Layout.design_navigation_item_separator;
-			global::PanCardView.Droid.Resource.Layout.design_navigation_item_subheader = global::VYRMobile.Droid.Resource.Layout.design_navigation_item_subheader;
-			global::PanCardView.Droid.Resource.Layout.design_navigation_menu = global::VYRMobile.Droid.Resource.Layout.design_navigation_menu;
-			global::PanCardView.Droid.Resource.Layout.design_navigation_menu_item = global::VYRMobile.Droid.Resource.Layout.design_navigation_menu_item;
-			global::PanCardView.Droid.Resource.Layout.design_text_input_password_icon = global::VYRMobile.Droid.Resource.Layout.design_text_input_password_icon;
-			global::PanCardView.Droid.Resource.Layout.FlyoutContent = global::VYRMobile.Droid.Resource.Layout.FlyoutContent;
-			global::PanCardView.Droid.Resource.Layout.mr_cast_dialog = global::VYRMobile.Droid.Resource.Layout.mr_cast_dialog;
-			global::PanCardView.Droid.Resource.Layout.mr_cast_group_item = global::VYRMobile.Droid.Resource.Layout.mr_cast_group_item;
-			global::PanCardView.Droid.Resource.Layout.mr_cast_group_volume_item = global::VYRMobile.Droid.Resource.Layout.mr_cast_group_volume_item;
-			global::PanCardView.Droid.Resource.Layout.mr_cast_media_metadata = global::VYRMobile.Droid.Resource.Layout.mr_cast_media_metadata;
-			global::PanCardView.Droid.Resource.Layout.mr_cast_route_item = global::VYRMobile.Droid.Resource.Layout.mr_cast_route_item;
-			global::PanCardView.Droid.Resource.Layout.mr_chooser_dialog = global::VYRMobile.Droid.Resource.Layout.mr_chooser_dialog;
-			global::PanCardView.Droid.Resource.Layout.mr_chooser_list_item = global::VYRMobile.Droid.Resource.Layout.mr_chooser_list_item;
-			global::PanCardView.Droid.Resource.Layout.mr_controller_material_dialog_b = global::VYRMobile.Droid.Resource.Layout.mr_controller_material_dialog_b;
-			global::PanCardView.Droid.Resource.Layout.mr_controller_volume_item = global::VYRMobile.Droid.Resource.Layout.mr_controller_volume_item;
-			global::PanCardView.Droid.Resource.Layout.mr_dialog_header_item = global::VYRMobile.Droid.Resource.Layout.mr_dialog_header_item;
-			global::PanCardView.Droid.Resource.Layout.mr_picker_dialog = global::VYRMobile.Droid.Resource.Layout.mr_picker_dialog;
-			global::PanCardView.Droid.Resource.Layout.mr_picker_route_item = global::VYRMobile.Droid.Resource.Layout.mr_picker_route_item;
-			global::PanCardView.Droid.Resource.Layout.mr_playback_control = global::VYRMobile.Droid.Resource.Layout.mr_playback_control;
-			global::PanCardView.Droid.Resource.Layout.mr_volume_control = global::VYRMobile.Droid.Resource.Layout.mr_volume_control;
-			global::PanCardView.Droid.Resource.Layout.mtrl_layout_snackbar = global::VYRMobile.Droid.Resource.Layout.mtrl_layout_snackbar;
-			global::PanCardView.Droid.Resource.Layout.mtrl_layout_snackbar_include = global::VYRMobile.Droid.Resource.Layout.mtrl_layout_snackbar_include;
-			global::PanCardView.Droid.Resource.Layout.notification_action = global::VYRMobile.Droid.Resource.Layout.notification_action;
-			global::PanCardView.Droid.Resource.Layout.notification_action_tombstone = global::VYRMobile.Droid.Resource.Layout.notification_action_tombstone;
-			global::PanCardView.Droid.Resource.Layout.notification_media_action = global::VYRMobile.Droid.Resource.Layout.notification_media_action;
-			global::PanCardView.Droid.Resource.Layout.notification_media_cancel_action = global::VYRMobile.Droid.Resource.Layout.notification_media_cancel_action;
-			global::PanCardView.Droid.Resource.Layout.notification_template_big_media = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media;
-			global::PanCardView.Droid.Resource.Layout.notification_template_big_media_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_custom;
-			global::PanCardView.Droid.Resource.Layout.notification_template_big_media_narrow = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_narrow;
-			global::PanCardView.Droid.Resource.Layout.notification_template_big_media_narrow_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_big_media_narrow_custom;
-			global::PanCardView.Droid.Resource.Layout.notification_template_custom_big = global::VYRMobile.Droid.Resource.Layout.notification_template_custom_big;
-			global::PanCardView.Droid.Resource.Layout.notification_template_icon_group = global::VYRMobile.Droid.Resource.Layout.notification_template_icon_group;
-			global::PanCardView.Droid.Resource.Layout.notification_template_lines_media = global::VYRMobile.Droid.Resource.Layout.notification_template_lines_media;
-			global::PanCardView.Droid.Resource.Layout.notification_template_media = global::VYRMobile.Droid.Resource.Layout.notification_template_media;
-			global::PanCardView.Droid.Resource.Layout.notification_template_media_custom = global::VYRMobile.Droid.Resource.Layout.notification_template_media_custom;
-			global::PanCardView.Droid.Resource.Layout.notification_template_part_chronometer = global::VYRMobile.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::PanCardView.Droid.Resource.Layout.notification_template_part_time = global::VYRMobile.Droid.Resource.Layout.notification_template_part_time;
-			global::PanCardView.Droid.Resource.Layout.RootLayout = global::VYRMobile.Droid.Resource.Layout.RootLayout;
-			global::PanCardView.Droid.Resource.Layout.select_dialog_item_material = global::VYRMobile.Droid.Resource.Layout.select_dialog_item_material;
-			global::PanCardView.Droid.Resource.Layout.select_dialog_multichoice_material = global::VYRMobile.Droid.Resource.Layout.select_dialog_multichoice_material;
-			global::PanCardView.Droid.Resource.Layout.select_dialog_singlechoice_material = global::VYRMobile.Droid.Resource.Layout.select_dialog_singlechoice_material;
-			global::PanCardView.Droid.Resource.Layout.ShellContent = global::VYRMobile.Droid.Resource.Layout.ShellContent;
-			global::PanCardView.Droid.Resource.Layout.support_simple_spinner_dropdown_item = global::VYRMobile.Droid.Resource.Layout.support_simple_spinner_dropdown_item;
-			global::PanCardView.Droid.Resource.String.abc_action_bar_home_description = global::VYRMobile.Droid.Resource.String.abc_action_bar_home_description;
-			global::PanCardView.Droid.Resource.String.abc_action_bar_up_description = global::VYRMobile.Droid.Resource.String.abc_action_bar_up_description;
-			global::PanCardView.Droid.Resource.String.abc_action_menu_overflow_description = global::VYRMobile.Droid.Resource.String.abc_action_menu_overflow_description;
-			global::PanCardView.Droid.Resource.String.abc_action_mode_done = global::VYRMobile.Droid.Resource.String.abc_action_mode_done;
-			global::PanCardView.Droid.Resource.String.abc_activitychooserview_choose_application = global::VYRMobile.Droid.Resource.String.abc_activitychooserview_choose_application;
-			global::PanCardView.Droid.Resource.String.abc_activity_chooser_view_see_all = global::VYRMobile.Droid.Resource.String.abc_activity_chooser_view_see_all;
-			global::PanCardView.Droid.Resource.String.abc_capital_off = global::VYRMobile.Droid.Resource.String.abc_capital_off;
-			global::PanCardView.Droid.Resource.String.abc_capital_on = global::VYRMobile.Droid.Resource.String.abc_capital_on;
-			global::PanCardView.Droid.Resource.String.abc_font_family_body_1_material = global::VYRMobile.Droid.Resource.String.abc_font_family_body_1_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_body_2_material = global::VYRMobile.Droid.Resource.String.abc_font_family_body_2_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_button_material = global::VYRMobile.Droid.Resource.String.abc_font_family_button_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_caption_material = global::VYRMobile.Droid.Resource.String.abc_font_family_caption_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_display_1_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_1_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_display_2_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_2_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_display_3_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_3_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_display_4_material = global::VYRMobile.Droid.Resource.String.abc_font_family_display_4_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_headline_material = global::VYRMobile.Droid.Resource.String.abc_font_family_headline_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_menu_material = global::VYRMobile.Droid.Resource.String.abc_font_family_menu_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_subhead_material = global::VYRMobile.Droid.Resource.String.abc_font_family_subhead_material;
-			global::PanCardView.Droid.Resource.String.abc_font_family_title_material = global::VYRMobile.Droid.Resource.String.abc_font_family_title_material;
-			global::PanCardView.Droid.Resource.String.abc_menu_alt_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_alt_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_ctrl_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_ctrl_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_delete_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_delete_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_enter_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_enter_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_function_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_function_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_meta_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_meta_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_shift_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_shift_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_space_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_space_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_menu_sym_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_menu_sym_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_prepend_shortcut_label = global::VYRMobile.Droid.Resource.String.abc_prepend_shortcut_label;
-			global::PanCardView.Droid.Resource.String.abc_searchview_description_clear = global::VYRMobile.Droid.Resource.String.abc_searchview_description_clear;
-			global::PanCardView.Droid.Resource.String.abc_searchview_description_query = global::VYRMobile.Droid.Resource.String.abc_searchview_description_query;
-			global::PanCardView.Droid.Resource.String.abc_searchview_description_search = global::VYRMobile.Droid.Resource.String.abc_searchview_description_search;
-			global::PanCardView.Droid.Resource.String.abc_searchview_description_submit = global::VYRMobile.Droid.Resource.String.abc_searchview_description_submit;
-			global::PanCardView.Droid.Resource.String.abc_searchview_description_voice = global::VYRMobile.Droid.Resource.String.abc_searchview_description_voice;
-			global::PanCardView.Droid.Resource.String.abc_search_hint = global::VYRMobile.Droid.Resource.String.abc_search_hint;
-			global::PanCardView.Droid.Resource.String.abc_shareactionprovider_share_with = global::VYRMobile.Droid.Resource.String.abc_shareactionprovider_share_with;
-			global::PanCardView.Droid.Resource.String.abc_shareactionprovider_share_with_application = global::VYRMobile.Droid.Resource.String.abc_shareactionprovider_share_with_application;
-			global::PanCardView.Droid.Resource.String.abc_toolbar_collapse_description = global::VYRMobile.Droid.Resource.String.abc_toolbar_collapse_description;
-			global::PanCardView.Droid.Resource.String.appbar_scrolling_view_behavior = global::VYRMobile.Droid.Resource.String.appbar_scrolling_view_behavior;
-			global::PanCardView.Droid.Resource.String.bottom_sheet_behavior = global::VYRMobile.Droid.Resource.String.bottom_sheet_behavior;
-			global::PanCardView.Droid.Resource.String.character_counter_content_description = global::VYRMobile.Droid.Resource.String.character_counter_content_description;
-			global::PanCardView.Droid.Resource.String.character_counter_pattern = global::VYRMobile.Droid.Resource.String.character_counter_pattern;
-			global::PanCardView.Droid.Resource.String.fab_transformation_scrim_behavior = global::VYRMobile.Droid.Resource.String.fab_transformation_scrim_behavior;
-			global::PanCardView.Droid.Resource.String.fab_transformation_sheet_behavior = global::VYRMobile.Droid.Resource.String.fab_transformation_sheet_behavior;
-			global::PanCardView.Droid.Resource.String.hide_bottom_view_on_scroll_behavior = global::VYRMobile.Droid.Resource.String.hide_bottom_view_on_scroll_behavior;
-			global::PanCardView.Droid.Resource.String.library_name = global::VYRMobile.Droid.Resource.String.library_name;
-			global::PanCardView.Droid.Resource.String.mr_button_content_description = global::VYRMobile.Droid.Resource.String.mr_button_content_description;
-			global::PanCardView.Droid.Resource.String.mr_cast_button_connected = global::VYRMobile.Droid.Resource.String.mr_cast_button_connected;
-			global::PanCardView.Droid.Resource.String.mr_cast_button_connecting = global::VYRMobile.Droid.Resource.String.mr_cast_button_connecting;
-			global::PanCardView.Droid.Resource.String.mr_cast_button_disconnected = global::VYRMobile.Droid.Resource.String.mr_cast_button_disconnected;
-			global::PanCardView.Droid.Resource.String.mr_cast_dialog_title_view_placeholder = global::VYRMobile.Droid.Resource.String.mr_cast_dialog_title_view_placeholder;
-			global::PanCardView.Droid.Resource.String.mr_chooser_searching = global::VYRMobile.Droid.Resource.String.mr_chooser_searching;
-			global::PanCardView.Droid.Resource.String.mr_chooser_title = global::VYRMobile.Droid.Resource.String.mr_chooser_title;
-			global::PanCardView.Droid.Resource.String.mr_controller_album_art = global::VYRMobile.Droid.Resource.String.mr_controller_album_art;
-			global::PanCardView.Droid.Resource.String.mr_controller_casting_screen = global::VYRMobile.Droid.Resource.String.mr_controller_casting_screen;
-			global::PanCardView.Droid.Resource.String.mr_controller_close_description = global::VYRMobile.Droid.Resource.String.mr_controller_close_description;
-			global::PanCardView.Droid.Resource.String.mr_controller_collapse_group = global::VYRMobile.Droid.Resource.String.mr_controller_collapse_group;
-			global::PanCardView.Droid.Resource.String.mr_controller_disconnect = global::VYRMobile.Droid.Resource.String.mr_controller_disconnect;
-			global::PanCardView.Droid.Resource.String.mr_controller_expand_group = global::VYRMobile.Droid.Resource.String.mr_controller_expand_group;
-			global::PanCardView.Droid.Resource.String.mr_controller_no_info_available = global::VYRMobile.Droid.Resource.String.mr_controller_no_info_available;
-			global::PanCardView.Droid.Resource.String.mr_controller_no_media_selected = global::VYRMobile.Droid.Resource.String.mr_controller_no_media_selected;
-			global::PanCardView.Droid.Resource.String.mr_controller_pause = global::VYRMobile.Droid.Resource.String.mr_controller_pause;
-			global::PanCardView.Droid.Resource.String.mr_controller_play = global::VYRMobile.Droid.Resource.String.mr_controller_play;
-			global::PanCardView.Droid.Resource.String.mr_controller_stop = global::VYRMobile.Droid.Resource.String.mr_controller_stop;
-			global::PanCardView.Droid.Resource.String.mr_controller_stop_casting = global::VYRMobile.Droid.Resource.String.mr_controller_stop_casting;
-			global::PanCardView.Droid.Resource.String.mr_controller_volume_slider = global::VYRMobile.Droid.Resource.String.mr_controller_volume_slider;
-			global::PanCardView.Droid.Resource.String.mr_dialog_device_header = global::VYRMobile.Droid.Resource.String.mr_dialog_device_header;
-			global::PanCardView.Droid.Resource.String.mr_dialog_route_header = global::VYRMobile.Droid.Resource.String.mr_dialog_route_header;
-			global::PanCardView.Droid.Resource.String.mr_system_route_name = global::VYRMobile.Droid.Resource.String.mr_system_route_name;
-			global::PanCardView.Droid.Resource.String.mr_user_route_category_name = global::VYRMobile.Droid.Resource.String.mr_user_route_category_name;
-			global::PanCardView.Droid.Resource.String.mtrl_chip_close_icon_content_description = global::VYRMobile.Droid.Resource.String.mtrl_chip_close_icon_content_description;
-			global::PanCardView.Droid.Resource.String.password_toggle_content_description = global::VYRMobile.Droid.Resource.String.password_toggle_content_description;
-			global::PanCardView.Droid.Resource.String.path_password_eye = global::VYRMobile.Droid.Resource.String.path_password_eye;
-			global::PanCardView.Droid.Resource.String.path_password_eye_mask_strike_through = global::VYRMobile.Droid.Resource.String.path_password_eye_mask_strike_through;
-			global::PanCardView.Droid.Resource.String.path_password_eye_mask_visible = global::VYRMobile.Droid.Resource.String.path_password_eye_mask_visible;
-			global::PanCardView.Droid.Resource.String.path_password_strike_through = global::VYRMobile.Droid.Resource.String.path_password_strike_through;
-			global::PanCardView.Droid.Resource.String.search_menu_title = global::VYRMobile.Droid.Resource.String.search_menu_title;
-			global::PanCardView.Droid.Resource.String.status_bar_notification_info_overflow = global::VYRMobile.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::PanCardView.Droid.Resource.Style.AlertDialog_AppCompat = global::VYRMobile.Droid.Resource.Style.AlertDialog_AppCompat;
-			global::PanCardView.Droid.Resource.Style.AlertDialog_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.AlertDialog_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Animation_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Animation_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Animation_AppCompat_DropDownUp = global::VYRMobile.Droid.Resource.Style.Animation_AppCompat_DropDownUp;
-			global::PanCardView.Droid.Resource.Style.Animation_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.Animation_AppCompat_Tooltip;
-			global::PanCardView.Droid.Resource.Style.Animation_Design_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Animation_Design_BottomSheetDialog;
-			global::PanCardView.Droid.Resource.Style.Base_AlertDialog_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_AlertDialog_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_Animation_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Animation_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp = global::VYRMobile.Droid.Resource.Style.Base_Animation_AppCompat_DropDownUp;
-			global::PanCardView.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.Base_Animation_AppCompat_Tooltip;
-			global::PanCardView.Droid.Resource.Style.Base_CardView = global::VYRMobile.Droid.Resource.Style.Base_CardView;
-			global::PanCardView.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_DialogWindowTitleBackground_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_DialogWindowTitle_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body1;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Body2;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Button;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Caption;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display1;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display2;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display3;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4 = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Display4;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Headline;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Large_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Medium_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Menu;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_SearchResult_Title;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Small_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Subhead_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Title_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Tooltip;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Colored;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_DropDownItem;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_Switch;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::PanCardView.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title = global::VYRMobile.Droid.Resource.Style.Base_TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_ThemeOverlay_MaterialComponents_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_CompactMenu;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_FixedSize;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DarkActionBar;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_FixedSize;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_AppCompat_Light_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Bridge;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_CompactMenu;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_FixedSize;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Bridge;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_FixedSize;
-			global::PanCardView.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Base_Theme_MaterialComponents_Light_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Base_V14_ThemeOverlay_MaterialComponents_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Base_V14_Theme_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents;
-			global::PanCardView.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Bridge;
-			global::PanCardView.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light;
-			global::PanCardView.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Bridge;
-			global::PanCardView.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_DarkActionBar_Bridge;
-			global::PanCardView.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V14_Theme_MaterialComponents_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V21_ThemeOverlay_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V21_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V21_Theme_AppCompat_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V22_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V22_Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_V23_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V23_Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_V26_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V26_Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V26_Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Base_V26_Widget_AppCompat_Toolbar;
-			global::PanCardView.Droid.Resource.Style.Base_V28_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V28_Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V28_Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V7_ThemeOverlay_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V7_Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Base_V7_Theme_AppCompat_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_AutoCompleteTextView;
-			global::PanCardView.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText = global::VYRMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_EditText;
-			global::PanCardView.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Base_V7_Widget_AppCompat_Toolbar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_Solid;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabText;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionBar_TabView;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_CloseMode;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionButton_Overflow;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActionMode;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ActivityChooserView;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_AutoCompleteTextView;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ButtonBar_AlertDialog;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Borderless_Colored;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Colored;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Button_Small;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_CheckBox;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_RadioButton;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_CompoundButton_Switch;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_DrawerArrowToggle_Common;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_DropDownItem_Spinner;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_EditText = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_EditText;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ImageButton;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_Solid;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_ActionBar_TabView;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListMenuView;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListPopupWindow;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ListView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_DropDown;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ListView_Menu;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupMenu_Overflow;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_PopupWindow;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_ProgressBar_Horizontal;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Indicator;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_RatingBar_Small;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_SearchView = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SearchView_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_SeekBar_Discrete;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Spinner = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Spinner_Underlined;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_TextView_SpinnerItem;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation = global::VYRMobile.Droid.Resource.Style.Base_Widget_AppCompat_Toolbar_Button_Navigation;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_Design_TabLayout = global::VYRMobile.Droid.Resource.Style.Base_Widget_Design_TabLayout;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip = global::VYRMobile.Droid.Resource.Style.Base_Widget_MaterialComponents_Chip;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText = global::VYRMobile.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputEditText;
-			global::PanCardView.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout = global::VYRMobile.Droid.Resource.Style.Base_Widget_MaterialComponents_TextInputLayout;
-			global::PanCardView.Droid.Resource.Style.CardView = global::VYRMobile.Droid.Resource.Style.CardView;
-			global::PanCardView.Droid.Resource.Style.CardView_Dark = global::VYRMobile.Droid.Resource.Style.CardView_Dark;
-			global::PanCardView.Droid.Resource.Style.CardView_Light = global::VYRMobile.Droid.Resource.Style.CardView_Light;
-			global::PanCardView.Droid.Resource.Style.collectionViewStyle = global::VYRMobile.Droid.Resource.Style.collectionViewStyle;
-			global::PanCardView.Droid.Resource.Style.NestedScrollBarStyle = global::VYRMobile.Droid.Resource.Style.NestedScrollBarStyle;
-			global::PanCardView.Droid.Resource.Style.Platform_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Platform_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Platform_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents;
-			global::PanCardView.Droid.Resource.Style.Platform_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents_Dialog;
-			global::PanCardView.Droid.Resource.Style.Platform_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents_Light;
-			global::PanCardView.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Platform_MaterialComponents_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark = global::VYRMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Dark;
-			global::PanCardView.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_ThemeOverlay_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Platform_V21_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_V21_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Platform_V21_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_V21_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Platform_V25_AppCompat = global::VYRMobile.Droid.Resource.Style.Platform_V25_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Platform_V25_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Platform_V25_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner = global::VYRMobile.Droid.Resource.Style.Platform_Widget_AppCompat_Spinner;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat = global::VYRMobile.Droid.Resource.Style.RtlOverlay_DialogWindowTitle_AppCompat;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_ActionBar_TitleItem;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_DialogTitle_Icon;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_InternalGroup;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Shortcut;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_SubmenuArrow;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Text;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_PopupMenuItem_Title;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_SearchView_MagIcon;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1 = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon1;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2 = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Icon2;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Query;
-			global::PanCardView.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text = global::VYRMobile.Droid.Resource.Style.RtlOverlay_Widget_AppCompat_Search_DropDown_Text;
-			global::PanCardView.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton = global::VYRMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton;
-			global::PanCardView.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.RtlUnderlay_Widget_AppCompat_ActionButton_Overflow;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Body1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body1;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Body2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Body2;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Button;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Caption = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Caption;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Display1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display1;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Display2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display2;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Display3 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display3;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Display4 = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Display4;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Headline = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Headline;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Large = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Large_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Subtitle;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_SearchResult_Title;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Large;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Light_Widget_PopupMenu_Small;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Medium = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Medium_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Menu = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Menu;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Subtitle;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_SearchResult_Title;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Small = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Small_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Subhead = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Subhead_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Title_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Tooltip;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Menu;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Subtitle_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionBar_Title_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Subtitle_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_ActionMode_Title_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Borderless_Colored;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Colored;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Button_Inverse;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_DropDownItem;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Header;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Large;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_PopupMenu_Small;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_Switch;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.TextAppearance_AppCompat_Widget_TextView_SpinnerItem;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Info = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Info_Media;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2_Media;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Media;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Time = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Time_Media;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media = global::VYRMobile.Droid.Resource.Style.TextAppearance_Compat_Notification_Title_Media;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_CollapsingToolbar_Expanded;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_Counter = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Counter;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Counter_Overflow;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_Error = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Error;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_HelperText = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_HelperText;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_Hint = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Hint;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Snackbar_Message;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Design_Tab = global::VYRMobile.Droid.Resource.Style.TextAppearance_Design_Tab;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Body1;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Body2;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Button = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Button;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Caption;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Chip;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline1;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline2;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline3;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline4;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline5;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Headline6;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Overline;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle1;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2 = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Subtitle2;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab = global::VYRMobile.Droid.Resource.Style.TextAppearance_MaterialComponents_Tab;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText = global::VYRMobile.Droid.Resource.Style.TextAppearance_MediaRouter_PrimaryText;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText = global::VYRMobile.Droid.Resource.Style.TextAppearance_MediaRouter_SecondaryText;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_MediaRouter_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_MediaRouter_Title;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item = global::VYRMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_ExpandedMenu_Item;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle = global::VYRMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Subtitle;
-			global::PanCardView.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title = global::VYRMobile.Droid.Resource.Style.TextAppearance_Widget_AppCompat_Toolbar_Title;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_AppCompat = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_ActionBar;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dark_ActionBar;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_ActionBar;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dark_ActionBar;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_Light;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_FilledBox_Dense;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MediaRouter_Dark;
-			global::PanCardView.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light = global::VYRMobile.Droid.Resource.Style.ThemeOverlay_MediaRouter_Light;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_CompactMenu = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_CompactMenu;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DayNight = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DarkActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DayNight_NoActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Dialog;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Light = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_DarkActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_Light_NoActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_AppCompat_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_AppCompat_NoActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_Design = global::VYRMobile.Droid.Resource.Style.Theme_Design;
-			global::PanCardView.Droid.Resource.Style.Theme_Design_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_Design_BottomSheetDialog;
-			global::PanCardView.Droid.Resource.Style.Theme_Design_Light = global::VYRMobile.Droid.Resource.Style.Theme_Design_Light;
-			global::PanCardView.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_Design_Light_BottomSheetDialog;
-			global::PanCardView.Droid.Resource.Style.Theme_Design_Light_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_Design_Light_NoActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_Design_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_Design_NoActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_BottomSheetDialog;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Bridge;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_CompactMenu;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Dialog;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_BottomSheetDialog;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Bridge;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_DarkActionBar_Bridge;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_DialogWhenLarge;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_Alert;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_Dialog_MinWidth;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_Light_NoActionBar_Bridge;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar;
-			global::PanCardView.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge = global::VYRMobile.Droid.Resource.Style.Theme_MaterialComponents_NoActionBar_Bridge;
-			global::PanCardView.Droid.Resource.Style.Theme_MediaRouter = global::VYRMobile.Droid.Resource.Style.Theme_MediaRouter;
-			global::PanCardView.Droid.Resource.Style.Theme_MediaRouter_Light = global::VYRMobile.Droid.Resource.Style.Theme_MediaRouter_Light;
-			global::PanCardView.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel = global::VYRMobile.Droid.Resource.Style.Theme_MediaRouter_LightControlPanel;
-			global::PanCardView.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel = global::VYRMobile.Droid.Resource.Style.Theme_MediaRouter_Light_DarkControlPanel;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_Solid;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabText;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionBar_TabView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_CloseMode;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionButton_Overflow;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActionMode = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActionMode;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ActivityChooserView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_AutoCompleteTextView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Button = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ButtonBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ButtonBar_AlertDialog;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Button_Borderless = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Borderless_Colored;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_ButtonBar_AlertDialog;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Button_Colored = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Colored;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Button_Small = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Button_Small;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_CheckBox;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_RadioButton;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_CompoundButton_Switch;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_DrawerArrowToggle;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_DropDownItem_Spinner;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_EditText = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_EditText;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ImageButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ImageButton;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_Solid_Inverse;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabBar_Inverse;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabText_Inverse;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionBar_TabView_Inverse;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_CloseMode;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionButton_Overflow;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActionMode_Inverse;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ActivityChooserView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_AutoCompleteTextView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_DropDownItem_Spinner;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListPopupWindow;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_ListView_DropDown;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_PopupMenu_Overflow;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_SearchView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_SearchView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Light_Spinner_DropDown_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ListMenuView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListMenuView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListPopupWindow;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ListView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListView_DropDown;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ListView_Menu = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ListView_Menu;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_PopupMenu = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_PopupMenu_Overflow;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_PopupWindow = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_PopupWindow;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ProgressBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_ProgressBar_Horizontal;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_RatingBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Indicator;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_RatingBar_Small;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_SearchView = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SearchView;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SearchView_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_SeekBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SeekBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_SeekBar_Discrete;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Spinner = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_DropDown_ActionBar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Spinner_Underlined;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_TextView_SpinnerItem;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Toolbar = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar;
-			global::PanCardView.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation = global::VYRMobile.Droid.Resource.Style.Widget_AppCompat_Toolbar_Button_Navigation;
-			global::PanCardView.Droid.Resource.Style.Widget_Compat_NotificationActionContainer = global::VYRMobile.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::PanCardView.Droid.Resource.Style.Widget_Compat_NotificationActionText = global::VYRMobile.Droid.Resource.Style.Widget_Compat_NotificationActionText;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_AppBarLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_AppBarLayout;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_BottomNavigationView = global::VYRMobile.Droid.Resource.Style.Widget_Design_BottomNavigationView;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_BottomSheet_Modal = global::VYRMobile.Droid.Resource.Style.Widget_Design_BottomSheet_Modal;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_CollapsingToolbar = global::VYRMobile.Droid.Resource.Style.Widget_Design_CollapsingToolbar;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_FloatingActionButton = global::VYRMobile.Droid.Resource.Style.Widget_Design_FloatingActionButton;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_NavigationView = global::VYRMobile.Droid.Resource.Style.Widget_Design_NavigationView;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_ScrimInsetsFrameLayout;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_Snackbar = global::VYRMobile.Droid.Resource.Style.Widget_Design_Snackbar;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_TabLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_TabLayout;
-			global::PanCardView.Droid.Resource.Style.Widget_Design_TextInputLayout = global::VYRMobile.Droid.Resource.Style.Widget_Design_TextInputLayout;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomAppBar_Colored;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomNavigationView_Colored;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_BottomSheet_Modal;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_Icon;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_OutlinedButton_Icon;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Dialog_Icon;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_TextButton_Icon;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Button_UnelevatedButton_Icon;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_CardView = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_CardView;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_ChipGroup;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Action;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Choice;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Entry;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Chip_Filter;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_FloatingActionButton;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_NavigationView = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_NavigationView;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Snackbar = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Snackbar;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Snackbar_FullWidth;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TabLayout = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TabLayout;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TabLayout_Colored;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_FilledBox_Dense;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputEditText_OutlinedBox_Dense;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_FilledBox_Dense;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense;
-			global::PanCardView.Droid.Resource.Style.Widget_MaterialComponents_Toolbar = global::VYRMobile.Droid.Resource.Style.Widget_MaterialComponents_Toolbar;
-			global::PanCardView.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton = global::VYRMobile.Droid.Resource.Style.Widget_MediaRouter_Light_MediaRouteButton;
-			global::PanCardView.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton = global::VYRMobile.Droid.Resource.Style.Widget_MediaRouter_MediaRouteButton;
-			global::PanCardView.Droid.Resource.Style.Widget_Support_CoordinatorLayout = global::VYRMobile.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar = global::VYRMobile.Droid.Resource.Styleable.ActionBar;
-			global::PanCardView.Droid.Resource.Styleable.ActionBarLayout = global::VYRMobile.Droid.Resource.Styleable.ActionBarLayout;
-			global::PanCardView.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity = global::VYRMobile.Droid.Resource.Styleable.ActionBarLayout_android_layout_gravity;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_background = global::VYRMobile.Droid.Resource.Styleable.ActionBar_background;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_backgroundSplit = global::VYRMobile.Droid.Resource.Styleable.ActionBar_backgroundSplit;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_backgroundStacked = global::VYRMobile.Droid.Resource.Styleable.ActionBar_backgroundStacked;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_contentInsetEnd = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetEnd;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetEndWithActions;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_contentInsetLeft = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetLeft;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_contentInsetRight = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetRight;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_contentInsetStart = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetStart;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation = global::VYRMobile.Droid.Resource.Styleable.ActionBar_contentInsetStartWithNavigation;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_customNavigationLayout = global::VYRMobile.Droid.Resource.Styleable.ActionBar_customNavigationLayout;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_displayOptions = global::VYRMobile.Droid.Resource.Styleable.ActionBar_displayOptions;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_divider = global::VYRMobile.Droid.Resource.Styleable.ActionBar_divider;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_elevation = global::VYRMobile.Droid.Resource.Styleable.ActionBar_elevation;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_height = global::VYRMobile.Droid.Resource.Styleable.ActionBar_height;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_hideOnContentScroll = global::VYRMobile.Droid.Resource.Styleable.ActionBar_hideOnContentScroll;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator = global::VYRMobile.Droid.Resource.Styleable.ActionBar_homeAsUpIndicator;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_homeLayout = global::VYRMobile.Droid.Resource.Styleable.ActionBar_homeLayout;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_icon = global::VYRMobile.Droid.Resource.Styleable.ActionBar_icon;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_indeterminateProgressStyle;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_itemPadding = global::VYRMobile.Droid.Resource.Styleable.ActionBar_itemPadding;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_logo = global::VYRMobile.Droid.Resource.Styleable.ActionBar_logo;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_navigationMode = global::VYRMobile.Droid.Resource.Styleable.ActionBar_navigationMode;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_popupTheme = global::VYRMobile.Droid.Resource.Styleable.ActionBar_popupTheme;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_progressBarPadding = global::VYRMobile.Droid.Resource.Styleable.ActionBar_progressBarPadding;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_progressBarStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_progressBarStyle;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_subtitle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_subtitle;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_subtitleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_subtitleTextStyle;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_title = global::VYRMobile.Droid.Resource.Styleable.ActionBar_title;
-			global::PanCardView.Droid.Resource.Styleable.ActionBar_titleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionBar_titleTextStyle;
-			global::PanCardView.Droid.Resource.Styleable.ActionMenuItemView = global::VYRMobile.Droid.Resource.Styleable.ActionMenuItemView;
-			global::PanCardView.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth = global::VYRMobile.Droid.Resource.Styleable.ActionMenuItemView_android_minWidth;
-			global::PanCardView.Droid.Resource.Styleable.ActionMenuView = global::VYRMobile.Droid.Resource.Styleable.ActionMenuView;
-			global::PanCardView.Droid.Resource.Styleable.ActionMode = global::VYRMobile.Droid.Resource.Styleable.ActionMode;
-			global::PanCardView.Droid.Resource.Styleable.ActionMode_background = global::VYRMobile.Droid.Resource.Styleable.ActionMode_background;
-			global::PanCardView.Droid.Resource.Styleable.ActionMode_backgroundSplit = global::VYRMobile.Droid.Resource.Styleable.ActionMode_backgroundSplit;
-			global::PanCardView.Droid.Resource.Styleable.ActionMode_closeItemLayout = global::VYRMobile.Droid.Resource.Styleable.ActionMode_closeItemLayout;
-			global::PanCardView.Droid.Resource.Styleable.ActionMode_height = global::VYRMobile.Droid.Resource.Styleable.ActionMode_height;
-			global::PanCardView.Droid.Resource.Styleable.ActionMode_subtitleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionMode_subtitleTextStyle;
-			global::PanCardView.Droid.Resource.Styleable.ActionMode_titleTextStyle = global::VYRMobile.Droid.Resource.Styleable.ActionMode_titleTextStyle;
-			global::PanCardView.Droid.Resource.Styleable.ActivityChooserView = global::VYRMobile.Droid.Resource.Styleable.ActivityChooserView;
-			global::PanCardView.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable = global::VYRMobile.Droid.Resource.Styleable.ActivityChooserView_expandActivityOverflowButtonDrawable;
-			global::PanCardView.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount = global::VYRMobile.Droid.Resource.Styleable.ActivityChooserView_initialActivityCount;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog = global::VYRMobile.Droid.Resource.Styleable.AlertDialog;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_android_layout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_android_layout;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_buttonIconDimen = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_buttonIconDimen;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_buttonPanelSideLayout;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_listItemLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_listItemLayout;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_listLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_listLayout;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_multiChoiceItemLayout;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_showTitle = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_showTitle;
-			global::PanCardView.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout = global::VYRMobile.Droid.Resource.Styleable.AlertDialog_singleChoiceItemLayout;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableCompat = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_constantSize;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_dither;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_enterFadeDuration;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_exitFadeDuration;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_variablePadding;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableCompat_android_visible;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableItem = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_drawable;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableItem_android_id;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableTransition = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_drawable;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_fromId;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_reversible;
-			global::PanCardView.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId = global::VYRMobile.Droid.Resource.Styleable.AnimatedStateListDrawableTransition_android_toId;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayoutStates = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsed;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_collapsible;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_liftable;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted = global::VYRMobile.Droid.Resource.Styleable.AppBarLayoutStates_state_lifted;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_android_background = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_android_background;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_android_keyboardNavigationCluster;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_android_touchscreenBlocksFocus;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_elevation = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_elevation;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_expanded = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_expanded;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_Layout = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_Layout;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollFlags;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_Layout_layout_scrollInterpolator;
-			global::PanCardView.Droid.Resource.Styleable.AppBarLayout_liftOnScroll = global::VYRMobile.Droid.Resource.Styleable.AppBarLayout_liftOnScroll;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatImageView = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatImageView_android_src = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_android_src;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatImageView_srcCompat = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_srcCompat;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatImageView_tint = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_tint;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatImageView_tintMode = global::VYRMobile.Droid.Resource.Styleable.AppCompatImageView_tintMode;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatSeekBar = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_android_thumb;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatSeekBar_tickMark = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMark;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTint;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode = global::VYRMobile.Droid.Resource.Styleable.AppCompatSeekBar_tickMarkTintMode;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableBottom;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableEnd;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableLeft;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableRight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableStart;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_drawableTop;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextHelper_android_textAppearance;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_android_textAppearance;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeMaxTextSize;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeMinTextSize;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizePresetSizes;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeStepGranularity;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_autoSizeTextType;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_firstBaselineToTopHeight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_fontFamily = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_fontFamily;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_lastBaselineToBottomHeight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_lineHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_lineHeight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTextView_textAllCaps = global::VYRMobile.Droid.Resource.Styleable.AppCompatTextView_textAllCaps;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarDivider;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarItemBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarPopupTheme;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarSize = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSize;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarSplitStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabBarStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTabTextStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarTheme;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionBarWidgetTheme;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionDropDownStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionMenuTextColor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCloseDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCopyDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeCutDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeFindDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePasteDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModePopupWindowStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSelectAllDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeShareDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeSplitBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionModeWebSearchDrawable;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_actionOverflowMenuStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_activityChooserViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogButtonGroupStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogCenterButtons;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_alertDialogTheme;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowAnimationStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_android_windowIsFloating;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_autoCompleteTextViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_borderlessButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNegativeButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarNeutralButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarPositiveButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonBarStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_buttonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_buttonStyleSmall;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_checkboxStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_checkedTextViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorAccent = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorAccent;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorBackgroundFloating;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorButtonNormal;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlActivated;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlHighlight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorControlNormal;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorError = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorError;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorPrimary = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimary;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorPrimaryDark;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_colorSwitchThumbNormal;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_controlBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_controlBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dialogCornerRadius;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dialogPreferredPadding;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_dialogTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dialogTheme;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dividerHorizontal;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_dividerVertical = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dividerVertical;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dropdownListPreferredItemHeight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_dropDownListViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_editTextBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_editTextBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_editTextColor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_editTextColor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_editTextStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_editTextStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_homeAsUpIndicator;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_imageButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listChoiceBackgroundIndicator;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listDividerAlertDialog;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listMenuViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPopupWindowStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightLarge;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemHeightSmall;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingLeft;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_listPreferredItemPaddingRight;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_panelBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_panelBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListTheme;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_panelMenuListWidth;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_popupMenuStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_popupWindowStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_radioButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleIndicator;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_ratingBarStyleSmall;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_searchViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_seekBarStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_selectableItemBackgroundBorderless;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerDropDownItemStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_spinnerStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_switchStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_switchStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceLargePopupMenu;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItem;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSecondary;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceListItemSmall;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearancePopupMenuHeader;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultSubtitle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSearchResultTitle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textAppearanceSmallPopupMenu;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textColorAlertDialogListItem;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_textColorSearchUrl;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarNavigationButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_toolbarStyle;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_tooltipForegroundColor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_tooltipFrameBackground;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_viewInflaterClass;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowActionBar = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBar;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionBarOverlay;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowActionModeOverlay;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMajor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedHeightMinor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMajor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowFixedWidthMinor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMajor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowMinWidthMinor;
-			global::PanCardView.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle = global::VYRMobile.Droid.Resource.Styleable.AppCompatTheme_windowNoTitle;
-			global::PanCardView.Droid.Resource.Styleable.BottomAppBar = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar;
-			global::PanCardView.Droid.Resource.Styleable.BottomAppBar_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_backgroundTint;
-			global::PanCardView.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabAlignmentMode;
-			global::PanCardView.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabCradleMargin;
-			global::PanCardView.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabCradleRoundedCornerRadius;
-			global::PanCardView.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_fabCradleVerticalOffset;
-			global::PanCardView.Droid.Resource.Styleable.BottomAppBar_hideOnScroll = global::VYRMobile.Droid.Resource.Styleable.BottomAppBar_hideOnScroll;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_elevation = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_elevation;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_itemBackground = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemBackground;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemHorizontalTranslationEnabled;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_itemIconSize = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemIconSize;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_itemIconTint = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemIconTint;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceActive;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemTextAppearanceInactive;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_itemTextColor = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_itemTextColor;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_labelVisibilityMode;
-			global::PanCardView.Droid.Resource.Styleable.BottomNavigationView_menu = global::VYRMobile.Droid.Resource.Styleable.BottomNavigationView_menu;
-			global::PanCardView.Droid.Resource.Styleable.BottomSheetBehavior_Layout = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout;
-			global::PanCardView.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_fitToContents;
-			global::PanCardView.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_hideable;
-			global::PanCardView.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_peekHeight;
-			global::PanCardView.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed = global::VYRMobile.Droid.Resource.Styleable.BottomSheetBehavior_Layout_behavior_skipCollapsed;
-			global::PanCardView.Droid.Resource.Styleable.ButtonBarLayout = global::VYRMobile.Droid.Resource.Styleable.ButtonBarLayout;
-			global::PanCardView.Droid.Resource.Styleable.ButtonBarLayout_allowStacking = global::VYRMobile.Droid.Resource.Styleable.ButtonBarLayout_allowStacking;
-			global::PanCardView.Droid.Resource.Styleable.CardView = global::VYRMobile.Droid.Resource.Styleable.CardView;
-			global::PanCardView.Droid.Resource.Styleable.CardView_android_minHeight = global::VYRMobile.Droid.Resource.Styleable.CardView_android_minHeight;
-			global::PanCardView.Droid.Resource.Styleable.CardView_android_minWidth = global::VYRMobile.Droid.Resource.Styleable.CardView_android_minWidth;
-			global::PanCardView.Droid.Resource.Styleable.CardView_cardBackgroundColor = global::VYRMobile.Droid.Resource.Styleable.CardView_cardBackgroundColor;
-			global::PanCardView.Droid.Resource.Styleable.CardView_cardCornerRadius = global::VYRMobile.Droid.Resource.Styleable.CardView_cardCornerRadius;
-			global::PanCardView.Droid.Resource.Styleable.CardView_cardElevation = global::VYRMobile.Droid.Resource.Styleable.CardView_cardElevation;
-			global::PanCardView.Droid.Resource.Styleable.CardView_cardMaxElevation = global::VYRMobile.Droid.Resource.Styleable.CardView_cardMaxElevation;
-			global::PanCardView.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap = global::VYRMobile.Droid.Resource.Styleable.CardView_cardPreventCornerOverlap;
-			global::PanCardView.Droid.Resource.Styleable.CardView_cardUseCompatPadding = global::VYRMobile.Droid.Resource.Styleable.CardView_cardUseCompatPadding;
-			global::PanCardView.Droid.Resource.Styleable.CardView_contentPadding = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPadding;
-			global::PanCardView.Droid.Resource.Styleable.CardView_contentPaddingBottom = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingBottom;
-			global::PanCardView.Droid.Resource.Styleable.CardView_contentPaddingLeft = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingLeft;
-			global::PanCardView.Droid.Resource.Styleable.CardView_contentPaddingRight = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingRight;
-			global::PanCardView.Droid.Resource.Styleable.CardView_contentPaddingTop = global::VYRMobile.Droid.Resource.Styleable.CardView_contentPaddingTop;
-			global::PanCardView.Droid.Resource.Styleable.Chip = global::VYRMobile.Droid.Resource.Styleable.Chip;
-			global::PanCardView.Droid.Resource.Styleable.ChipGroup = global::VYRMobile.Droid.Resource.Styleable.ChipGroup;
-			global::PanCardView.Droid.Resource.Styleable.ChipGroup_checkedChip = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_checkedChip;
-			global::PanCardView.Droid.Resource.Styleable.ChipGroup_chipSpacing = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_chipSpacing;
-			global::PanCardView.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_chipSpacingHorizontal;
-			global::PanCardView.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_chipSpacingVertical;
-			global::PanCardView.Droid.Resource.Styleable.ChipGroup_singleLine = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_singleLine;
-			global::PanCardView.Droid.Resource.Styleable.ChipGroup_singleSelection = global::VYRMobile.Droid.Resource.Styleable.ChipGroup_singleSelection;
-			global::PanCardView.Droid.Resource.Styleable.Chip_android_checkable = global::VYRMobile.Droid.Resource.Styleable.Chip_android_checkable;
-			global::PanCardView.Droid.Resource.Styleable.Chip_android_ellipsize = global::VYRMobile.Droid.Resource.Styleable.Chip_android_ellipsize;
-			global::PanCardView.Droid.Resource.Styleable.Chip_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.Chip_android_maxWidth;
-			global::PanCardView.Droid.Resource.Styleable.Chip_android_text = global::VYRMobile.Droid.Resource.Styleable.Chip_android_text;
-			global::PanCardView.Droid.Resource.Styleable.Chip_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.Chip_android_textAppearance;
-			global::PanCardView.Droid.Resource.Styleable.Chip_checkedIcon = global::VYRMobile.Droid.Resource.Styleable.Chip_checkedIcon;
-			global::PanCardView.Droid.Resource.Styleable.Chip_checkedIconEnabled = global::VYRMobile.Droid.Resource.Styleable.Chip_checkedIconEnabled;
-			global::PanCardView.Droid.Resource.Styleable.Chip_checkedIconVisible = global::VYRMobile.Droid.Resource.Styleable.Chip_checkedIconVisible;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipBackgroundColor = global::VYRMobile.Droid.Resource.Styleable.Chip_chipBackgroundColor;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipCornerRadius = global::VYRMobile.Droid.Resource.Styleable.Chip_chipCornerRadius;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_chipEndPadding;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipIcon = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIcon;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipIconEnabled = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconEnabled;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipIconSize = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconSize;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipIconTint = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconTint;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipIconVisible = global::VYRMobile.Droid.Resource.Styleable.Chip_chipIconVisible;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipMinHeight = global::VYRMobile.Droid.Resource.Styleable.Chip_chipMinHeight;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_chipStartPadding;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipStrokeColor = global::VYRMobile.Droid.Resource.Styleable.Chip_chipStrokeColor;
-			global::PanCardView.Droid.Resource.Styleable.Chip_chipStrokeWidth = global::VYRMobile.Droid.Resource.Styleable.Chip_chipStrokeWidth;
-			global::PanCardView.Droid.Resource.Styleable.Chip_closeIcon = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIcon;
-			global::PanCardView.Droid.Resource.Styleable.Chip_closeIconEnabled = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconEnabled;
-			global::PanCardView.Droid.Resource.Styleable.Chip_closeIconEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconEndPadding;
-			global::PanCardView.Droid.Resource.Styleable.Chip_closeIconSize = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconSize;
-			global::PanCardView.Droid.Resource.Styleable.Chip_closeIconStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconStartPadding;
-			global::PanCardView.Droid.Resource.Styleable.Chip_closeIconTint = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconTint;
-			global::PanCardView.Droid.Resource.Styleable.Chip_closeIconVisible = global::VYRMobile.Droid.Resource.Styleable.Chip_closeIconVisible;
-			global::PanCardView.Droid.Resource.Styleable.Chip_hideMotionSpec = global::VYRMobile.Droid.Resource.Styleable.Chip_hideMotionSpec;
-			global::PanCardView.Droid.Resource.Styleable.Chip_iconEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_iconEndPadding;
-			global::PanCardView.Droid.Resource.Styleable.Chip_iconStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_iconStartPadding;
-			global::PanCardView.Droid.Resource.Styleable.Chip_rippleColor = global::VYRMobile.Droid.Resource.Styleable.Chip_rippleColor;
-			global::PanCardView.Droid.Resource.Styleable.Chip_showMotionSpec = global::VYRMobile.Droid.Resource.Styleable.Chip_showMotionSpec;
-			global::PanCardView.Droid.Resource.Styleable.Chip_textEndPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_textEndPadding;
-			global::PanCardView.Droid.Resource.Styleable.Chip_textStartPadding = global::VYRMobile.Droid.Resource.Styleable.Chip_textStartPadding;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleGravity;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_collapsedTitleTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_contentScrim;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleGravity;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMargin;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginBottom;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginEnd;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginStart;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleMarginTop;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_expandedTitleTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseMode;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_Layout_layout_collapseParallaxMultiplier;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimAnimationDuration;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_scrimVisibleHeightTrigger;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_statusBarScrim;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_title = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_title;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_titleEnabled;
-			global::PanCardView.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId = global::VYRMobile.Droid.Resource.Styleable.CollapsingToolbarLayout_toolbarId;
-			global::PanCardView.Droid.Resource.Styleable.ColorStateListItem = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem;
-			global::PanCardView.Droid.Resource.Styleable.ColorStateListItem_alpha = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_alpha;
-			global::PanCardView.Droid.Resource.Styleable.ColorStateListItem_android_alpha = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
-			global::PanCardView.Droid.Resource.Styleable.ColorStateListItem_android_color = global::VYRMobile.Droid.Resource.Styleable.ColorStateListItem_android_color;
-			global::PanCardView.Droid.Resource.Styleable.CompoundButton = global::VYRMobile.Droid.Resource.Styleable.CompoundButton;
-			global::PanCardView.Droid.Resource.Styleable.CompoundButton_android_button = global::VYRMobile.Droid.Resource.Styleable.CompoundButton_android_button;
-			global::PanCardView.Droid.Resource.Styleable.CompoundButton_buttonTint = global::VYRMobile.Droid.Resource.Styleable.CompoundButton_buttonTint;
-			global::PanCardView.Droid.Resource.Styleable.CompoundButton_buttonTintMode = global::VYRMobile.Droid.Resource.Styleable.CompoundButton_buttonTintMode;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_keylines = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_keylines;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
-			global::PanCardView.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::VYRMobile.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
-			global::PanCardView.Droid.Resource.Styleable.DesignTheme = global::VYRMobile.Droid.Resource.Styleable.DesignTheme;
-			global::PanCardView.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme = global::VYRMobile.Droid.Resource.Styleable.DesignTheme_bottomSheetDialogTheme;
-			global::PanCardView.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle = global::VYRMobile.Droid.Resource.Styleable.DesignTheme_bottomSheetStyle;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowHeadLength;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_arrowShaftLength;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_barLength = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_barLength;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_color = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_color;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_drawableSize;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_gapBetweenBars;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_spinBars = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_spinBars;
-			global::PanCardView.Droid.Resource.Styleable.DrawerArrowToggle_thickness = global::VYRMobile.Droid.Resource.Styleable.DrawerArrowToggle_thickness;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_backgroundTint;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_backgroundTintMode;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_Behavior_Layout_behavior_autoHide;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_borderWidth = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_borderWidth;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_elevation = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_elevation;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_fabCustomSize;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_fabSize = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_fabSize;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_hideMotionSpec;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_hoveredFocusedTranslationZ;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_maxImageSize = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_maxImageSize;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_pressedTranslationZ;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_rippleColor = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_rippleColor;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_showMotionSpec;
-			global::PanCardView.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding = global::VYRMobile.Droid.Resource.Styleable.FloatingActionButton_useCompatPadding;
-			global::PanCardView.Droid.Resource.Styleable.FlowLayout = global::VYRMobile.Droid.Resource.Styleable.FlowLayout;
-			global::PanCardView.Droid.Resource.Styleable.FlowLayout_itemSpacing = global::VYRMobile.Droid.Resource.Styleable.FlowLayout_itemSpacing;
-			global::PanCardView.Droid.Resource.Styleable.FlowLayout_lineSpacing = global::VYRMobile.Droid.Resource.Styleable.FlowLayout_lineSpacing;
-			global::PanCardView.Droid.Resource.Styleable.FontFamily = global::VYRMobile.Droid.Resource.Styleable.FontFamily;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_android_font = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_font;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_font = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_font;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_fontStyle = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_fontWeight = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
-			global::PanCardView.Droid.Resource.Styleable.FontFamilyFont_ttcIndex = global::VYRMobile.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
-			global::PanCardView.Droid.Resource.Styleable.FontFamily_fontProviderAuthority = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::PanCardView.Droid.Resource.Styleable.FontFamily_fontProviderCerts = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::PanCardView.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::PanCardView.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::PanCardView.Droid.Resource.Styleable.FontFamily_fontProviderPackage = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::PanCardView.Droid.Resource.Styleable.FontFamily_fontProviderQuery = global::VYRMobile.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::PanCardView.Droid.Resource.Styleable.ForegroundLinearLayout = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout;
-			global::PanCardView.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout_android_foreground;
-			global::PanCardView.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout_android_foregroundGravity;
-			global::PanCardView.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding = global::VYRMobile.Droid.Resource.Styleable.ForegroundLinearLayout_foregroundInsidePadding;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor;
-			global::PanCardView.Droid.Resource.Styleable.GradientColorItem = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem;
-			global::PanCardView.Droid.Resource.Styleable.GradientColorItem_android_color = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_color;
-			global::PanCardView.Droid.Resource.Styleable.GradientColorItem_android_offset = global::VYRMobile.Droid.Resource.Styleable.GradientColorItem_android_offset;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_centerColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerColor;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_centerX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerX;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_centerY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_centerY;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_endColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endColor;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_endX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endX;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_endY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_endY;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_gradientRadius = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_startColor = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startColor;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_startX = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startX;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_startY = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_startY;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_tileMode = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_tileMode;
-			global::PanCardView.Droid.Resource.Styleable.GradientColor_android_type = global::VYRMobile.Droid.Resource.Styleable.GradientColor_android_type;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAligned;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_baselineAlignedChildIndex;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_gravity;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_orientation;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_android_weightSum;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_divider = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_divider;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_dividerPadding;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_Layout = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_gravity;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_height;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_weight;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_Layout_android_layout_width;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_measureWithLargestChild;
-			global::PanCardView.Droid.Resource.Styleable.LinearLayoutCompat_showDividers = global::VYRMobile.Droid.Resource.Styleable.LinearLayoutCompat_showDividers;
-			global::PanCardView.Droid.Resource.Styleable.ListPopupWindow = global::VYRMobile.Droid.Resource.Styleable.ListPopupWindow;
-			global::PanCardView.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset = global::VYRMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownHorizontalOffset;
-			global::PanCardView.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset = global::VYRMobile.Droid.Resource.Styleable.ListPopupWindow_android_dropDownVerticalOffset;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton = global::VYRMobile.Droid.Resource.Styleable.MaterialButton;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_android_insetBottom = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetBottom;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_android_insetLeft = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetLeft;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_android_insetRight = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetRight;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_android_insetTop = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_android_insetTop;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_backgroundTint;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_backgroundTintMode = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_backgroundTintMode;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_cornerRadius = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_cornerRadius;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_icon = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_icon;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_iconGravity = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconGravity;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_iconPadding = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconPadding;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_iconSize = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconSize;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_iconTint = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconTint;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_iconTintMode = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_iconTintMode;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_rippleColor = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_rippleColor;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_strokeColor = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_strokeColor;
-			global::PanCardView.Droid.Resource.Styleable.MaterialButton_strokeWidth = global::VYRMobile.Droid.Resource.Styleable.MaterialButton_strokeWidth;
-			global::PanCardView.Droid.Resource.Styleable.MaterialCardView = global::VYRMobile.Droid.Resource.Styleable.MaterialCardView;
-			global::PanCardView.Droid.Resource.Styleable.MaterialCardView_strokeColor = global::VYRMobile.Droid.Resource.Styleable.MaterialCardView_strokeColor;
-			global::PanCardView.Droid.Resource.Styleable.MaterialCardView_strokeWidth = global::VYRMobile.Droid.Resource.Styleable.MaterialCardView_strokeWidth;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetDialogTheme;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_bottomSheetStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_chipGroupStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_chipStandaloneStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_chipStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorAccent;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorBackgroundFloating;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimary;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorPrimaryDark;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_colorSecondary;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_editTextStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_floatingActionButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_materialButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_materialCardViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_navigationViewStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_scrimBackground;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_snackbarButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_tabStyle;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody1;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceBody2;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceButton;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceCaption;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline1;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline2;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline3;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline4;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline5;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceHeadline6;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceOverline;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle1;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2 = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textAppearanceSubtitle2;
-			global::PanCardView.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle = global::VYRMobile.Droid.Resource.Styleable.MaterialComponentsTheme_textInputStyle;
-			global::PanCardView.Droid.Resource.Styleable.MediaRouteButton = global::VYRMobile.Droid.Resource.Styleable.MediaRouteButton;
-			global::PanCardView.Droid.Resource.Styleable.MediaRouteButton_android_minHeight = global::VYRMobile.Droid.Resource.Styleable.MediaRouteButton_android_minHeight;
-			global::PanCardView.Droid.Resource.Styleable.MediaRouteButton_android_minWidth = global::VYRMobile.Droid.Resource.Styleable.MediaRouteButton_android_minWidth;
-			global::PanCardView.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable = global::VYRMobile.Droid.Resource.Styleable.MediaRouteButton_externalRouteEnabledDrawable;
-			global::PanCardView.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint = global::VYRMobile.Droid.Resource.Styleable.MediaRouteButton_mediaRouteButtonTint;
-			global::PanCardView.Droid.Resource.Styleable.MenuGroup = global::VYRMobile.Droid.Resource.Styleable.MenuGroup;
-			global::PanCardView.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_checkableBehavior;
-			global::PanCardView.Droid.Resource.Styleable.MenuGroup_android_enabled = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_enabled;
-			global::PanCardView.Droid.Resource.Styleable.MenuGroup_android_id = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_id;
-			global::PanCardView.Droid.Resource.Styleable.MenuGroup_android_menuCategory = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_menuCategory;
-			global::PanCardView.Droid.Resource.Styleable.MenuGroup_android_orderInCategory = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_orderInCategory;
-			global::PanCardView.Droid.Resource.Styleable.MenuGroup_android_visible = global::VYRMobile.Droid.Resource.Styleable.MenuGroup_android_visible;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem = global::VYRMobile.Droid.Resource.Styleable.MenuItem;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_actionLayout = global::VYRMobile.Droid.Resource.Styleable.MenuItem_actionLayout;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_actionProviderClass = global::VYRMobile.Droid.Resource.Styleable.MenuItem_actionProviderClass;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_actionViewClass = global::VYRMobile.Droid.Resource.Styleable.MenuItem_actionViewClass;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_alphabeticModifiers = global::VYRMobile.Droid.Resource.Styleable.MenuItem_alphabeticModifiers;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_alphabeticShortcut;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_checkable = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_checkable;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_checked = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_checked;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_enabled = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_enabled;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_icon = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_icon;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_id = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_id;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_menuCategory = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_menuCategory;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_numericShortcut = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_numericShortcut;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_onClick = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_onClick;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_orderInCategory = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_orderInCategory;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_title = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_title;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_titleCondensed = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_titleCondensed;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_android_visible = global::VYRMobile.Droid.Resource.Styleable.MenuItem_android_visible;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_contentDescription = global::VYRMobile.Droid.Resource.Styleable.MenuItem_contentDescription;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_iconTint = global::VYRMobile.Droid.Resource.Styleable.MenuItem_iconTint;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_iconTintMode = global::VYRMobile.Droid.Resource.Styleable.MenuItem_iconTintMode;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_numericModifiers = global::VYRMobile.Droid.Resource.Styleable.MenuItem_numericModifiers;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_showAsAction = global::VYRMobile.Droid.Resource.Styleable.MenuItem_showAsAction;
-			global::PanCardView.Droid.Resource.Styleable.MenuItem_tooltipText = global::VYRMobile.Droid.Resource.Styleable.MenuItem_tooltipText;
-			global::PanCardView.Droid.Resource.Styleable.MenuView = global::VYRMobile.Droid.Resource.Styleable.MenuView;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_android_headerBackground = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_headerBackground;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_android_horizontalDivider = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_horizontalDivider;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_android_itemBackground = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_itemBackground;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_itemIconDisabledAlpha;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_android_itemTextAppearance = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_itemTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_android_verticalDivider = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_verticalDivider;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle = global::VYRMobile.Droid.Resource.Styleable.MenuView_android_windowAnimationStyle;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_preserveIconSpacing = global::VYRMobile.Droid.Resource.Styleable.MenuView_preserveIconSpacing;
-			global::PanCardView.Droid.Resource.Styleable.MenuView_subMenuArrow = global::VYRMobile.Droid.Resource.Styleable.MenuView_subMenuArrow;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView = global::VYRMobile.Droid.Resource.Styleable.NavigationView;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_android_background = global::VYRMobile.Droid.Resource.Styleable.NavigationView_android_background;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows = global::VYRMobile.Droid.Resource.Styleable.NavigationView_android_fitsSystemWindows;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.NavigationView_android_maxWidth;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_elevation = global::VYRMobile.Droid.Resource.Styleable.NavigationView_elevation;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_headerLayout = global::VYRMobile.Droid.Resource.Styleable.NavigationView_headerLayout;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_itemBackground = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemBackground;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemHorizontalPadding;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_itemIconPadding = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemIconPadding;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_itemIconTint = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemIconTint;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_itemTextAppearance = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_itemTextColor = global::VYRMobile.Droid.Resource.Styleable.NavigationView_itemTextColor;
-			global::PanCardView.Droid.Resource.Styleable.NavigationView_menu = global::VYRMobile.Droid.Resource.Styleable.NavigationView_menu;
-			global::PanCardView.Droid.Resource.Styleable.PopupWindow = global::VYRMobile.Droid.Resource.Styleable.PopupWindow;
-			global::PanCardView.Droid.Resource.Styleable.PopupWindowBackgroundState = global::VYRMobile.Droid.Resource.Styleable.PopupWindowBackgroundState;
-			global::PanCardView.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor = global::VYRMobile.Droid.Resource.Styleable.PopupWindowBackgroundState_state_above_anchor;
-			global::PanCardView.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle = global::VYRMobile.Droid.Resource.Styleable.PopupWindow_android_popupAnimationStyle;
-			global::PanCardView.Droid.Resource.Styleable.PopupWindow_android_popupBackground = global::VYRMobile.Droid.Resource.Styleable.PopupWindow_android_popupBackground;
-			global::PanCardView.Droid.Resource.Styleable.PopupWindow_overlapAnchor = global::VYRMobile.Droid.Resource.Styleable.PopupWindow_overlapAnchor;
-			global::PanCardView.Droid.Resource.Styleable.RecycleListView = global::VYRMobile.Droid.Resource.Styleable.RecycleListView;
-			global::PanCardView.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons = global::VYRMobile.Droid.Resource.Styleable.RecycleListView_paddingBottomNoButtons;
-			global::PanCardView.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle = global::VYRMobile.Droid.Resource.Styleable.RecycleListView_paddingTopNoTitle;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView = global::VYRMobile.Droid.Resource.Styleable.RecyclerView;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_android_descendantFocusability;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_android_orientation = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_android_orientation;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollEnabled;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalThumbDrawable;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollHorizontalTrackDrawable;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalThumbDrawable;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_fastScrollVerticalTrackDrawable;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_layoutManager = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_layoutManager;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_reverseLayout = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_reverseLayout;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_spanCount = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_spanCount;
-			global::PanCardView.Droid.Resource.Styleable.RecyclerView_stackFromEnd = global::VYRMobile.Droid.Resource.Styleable.RecyclerView_stackFromEnd;
-			global::PanCardView.Droid.Resource.Styleable.ScrimInsetsFrameLayout = global::VYRMobile.Droid.Resource.Styleable.ScrimInsetsFrameLayout;
-			global::PanCardView.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground = global::VYRMobile.Droid.Resource.Styleable.ScrimInsetsFrameLayout_insetForeground;
-			global::PanCardView.Droid.Resource.Styleable.ScrollingViewBehavior_Layout = global::VYRMobile.Droid.Resource.Styleable.ScrollingViewBehavior_Layout;
-			global::PanCardView.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop = global::VYRMobile.Droid.Resource.Styleable.ScrollingViewBehavior_Layout_behavior_overlapTop;
-			global::PanCardView.Droid.Resource.Styleable.SearchView = global::VYRMobile.Droid.Resource.Styleable.SearchView;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_android_focusable = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_focusable;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_android_imeOptions = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_imeOptions;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_android_inputType = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_inputType;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.SearchView_android_maxWidth;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_closeIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_closeIcon;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_commitIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_commitIcon;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_defaultQueryHint = global::VYRMobile.Droid.Resource.Styleable.SearchView_defaultQueryHint;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_goIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_goIcon;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_iconifiedByDefault = global::VYRMobile.Droid.Resource.Styleable.SearchView_iconifiedByDefault;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_layout = global::VYRMobile.Droid.Resource.Styleable.SearchView_layout;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_queryBackground = global::VYRMobile.Droid.Resource.Styleable.SearchView_queryBackground;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_queryHint = global::VYRMobile.Droid.Resource.Styleable.SearchView_queryHint;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_searchHintIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_searchHintIcon;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_searchIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_searchIcon;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_submitBackground = global::VYRMobile.Droid.Resource.Styleable.SearchView_submitBackground;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_suggestionRowLayout = global::VYRMobile.Droid.Resource.Styleable.SearchView_suggestionRowLayout;
-			global::PanCardView.Droid.Resource.Styleable.SearchView_voiceIcon = global::VYRMobile.Droid.Resource.Styleable.SearchView_voiceIcon;
-			global::PanCardView.Droid.Resource.Styleable.Snackbar = global::VYRMobile.Droid.Resource.Styleable.Snackbar;
-			global::PanCardView.Droid.Resource.Styleable.SnackbarLayout = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout;
-			global::PanCardView.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout_android_maxWidth;
-			global::PanCardView.Droid.Resource.Styleable.SnackbarLayout_elevation = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout_elevation;
-			global::PanCardView.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth = global::VYRMobile.Droid.Resource.Styleable.SnackbarLayout_maxActionInlineWidth;
-			global::PanCardView.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle = global::VYRMobile.Droid.Resource.Styleable.Snackbar_snackbarButtonStyle;
-			global::PanCardView.Droid.Resource.Styleable.Snackbar_snackbarStyle = global::VYRMobile.Droid.Resource.Styleable.Snackbar_snackbarStyle;
-			global::PanCardView.Droid.Resource.Styleable.Spinner = global::VYRMobile.Droid.Resource.Styleable.Spinner;
-			global::PanCardView.Droid.Resource.Styleable.Spinner_android_dropDownWidth = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_dropDownWidth;
-			global::PanCardView.Droid.Resource.Styleable.Spinner_android_entries = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_entries;
-			global::PanCardView.Droid.Resource.Styleable.Spinner_android_popupBackground = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_popupBackground;
-			global::PanCardView.Droid.Resource.Styleable.Spinner_android_prompt = global::VYRMobile.Droid.Resource.Styleable.Spinner_android_prompt;
-			global::PanCardView.Droid.Resource.Styleable.Spinner_popupTheme = global::VYRMobile.Droid.Resource.Styleable.Spinner_popupTheme;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawable = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawableItem = global::VYRMobile.Droid.Resource.Styleable.StateListDrawableItem;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawableItem_android_drawable = global::VYRMobile.Droid.Resource.Styleable.StateListDrawableItem_android_drawable;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawable_android_constantSize = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_constantSize;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawable_android_dither = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_dither;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_enterFadeDuration;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_exitFadeDuration;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawable_android_variablePadding = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_variablePadding;
-			global::PanCardView.Droid.Resource.Styleable.StateListDrawable_android_visible = global::VYRMobile.Droid.Resource.Styleable.StateListDrawable_android_visible;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_android_textOff = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_android_textOff;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_android_textOn = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_android_textOn;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_android_thumb = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_android_thumb;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_showText = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_showText;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_splitTrack = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_splitTrack;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_switchMinWidth = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_switchMinWidth;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_switchPadding = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_switchPadding;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_switchTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_thumbTextPadding;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_thumbTint = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_thumbTint;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_thumbTintMode = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_thumbTintMode;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_track = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_track;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_trackTint = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_trackTint;
-			global::PanCardView.Droid.Resource.Styleable.SwitchCompat_trackTintMode = global::VYRMobile.Droid.Resource.Styleable.SwitchCompat_trackTintMode;
-			global::PanCardView.Droid.Resource.Styleable.TabItem = global::VYRMobile.Droid.Resource.Styleable.TabItem;
-			global::PanCardView.Droid.Resource.Styleable.TabItem_android_icon = global::VYRMobile.Droid.Resource.Styleable.TabItem_android_icon;
-			global::PanCardView.Droid.Resource.Styleable.TabItem_android_layout = global::VYRMobile.Droid.Resource.Styleable.TabItem_android_layout;
-			global::PanCardView.Droid.Resource.Styleable.TabItem_android_text = global::VYRMobile.Droid.Resource.Styleable.TabItem_android_text;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout = global::VYRMobile.Droid.Resource.Styleable.TabLayout;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabBackground = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabBackground;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabContentStart = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabContentStart;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabGravity = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabGravity;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIconTint = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIconTint;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIconTintMode = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIconTintMode;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIndicator = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicator;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorAnimationDuration;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIndicatorColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorColor;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorFullWidth;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorGravity;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabIndicatorHeight;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabInlineLabel = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabInlineLabel;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabMaxWidth = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabMaxWidth;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabMinWidth = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabMinWidth;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabMode = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabMode;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabPadding = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPadding;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabPaddingBottom = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingBottom;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabPaddingEnd = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingEnd;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabPaddingStart = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingStart;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabPaddingTop = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabPaddingTop;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabRippleColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabRippleColor;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabSelectedTextColor;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabTextColor = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabTextColor;
-			global::PanCardView.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple = global::VYRMobile.Droid.Resource.Styleable.TabLayout_tabUnboundedRipple;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_fontFamily = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_fontFamily;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_shadowColor = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowColor;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_shadowDx = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDx;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_shadowDy = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowDy;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_shadowRadius = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_shadowRadius;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_textColor = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textColor;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_textColorHint = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textColorHint;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_textColorLink = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textColorLink;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_textSize = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textSize;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_textStyle = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_textStyle;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_android_typeface = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_android_typeface;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_fontFamily = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_fontFamily;
-			global::PanCardView.Droid.Resource.Styleable.TextAppearance_textAllCaps = global::VYRMobile.Droid.Resource.Styleable.TextAppearance_textAllCaps;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_android_hint = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_android_hint;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_android_textColorHint = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_android_textColorHint;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxBackgroundColor;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxBackgroundMode;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCollapsedPaddingTop;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomEnd;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusBottomStart;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopEnd;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxCornerRadiusTopStart;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxStrokeColor;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_boxStrokeWidth;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_counterEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterEnabled;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_counterMaxLength = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterMaxLength;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterOverflowTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_counterTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_errorEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_errorEnabled;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_errorTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_helperText = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_helperText;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_helperTextEnabled;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_helperTextTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_hintAnimationEnabled;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_hintEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_hintEnabled;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_hintTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleContentDescription;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleDrawable;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleEnabled;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleTint;
-			global::PanCardView.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode = global::VYRMobile.Droid.Resource.Styleable.TextInputLayout_passwordToggleTintMode;
-			global::PanCardView.Droid.Resource.Styleable.ThemeEnforcement = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement;
-			global::PanCardView.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement_android_textAppearance;
-			global::PanCardView.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement_enforceMaterialTheme;
-			global::PanCardView.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance = global::VYRMobile.Droid.Resource.Styleable.ThemeEnforcement_enforceTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar = global::VYRMobile.Droid.Resource.Styleable.Toolbar;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_android_gravity = global::VYRMobile.Droid.Resource.Styleable.Toolbar_android_gravity;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_android_minHeight = global::VYRMobile.Droid.Resource.Styleable.Toolbar_android_minHeight;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_buttonGravity = global::VYRMobile.Droid.Resource.Styleable.Toolbar_buttonGravity;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_collapseContentDescription = global::VYRMobile.Droid.Resource.Styleable.Toolbar_collapseContentDescription;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_collapseIcon = global::VYRMobile.Droid.Resource.Styleable.Toolbar_collapseIcon;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_contentInsetEnd = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetEnd;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetEndWithActions;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_contentInsetLeft = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetLeft;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_contentInsetRight = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetRight;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_contentInsetStart = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetStart;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation = global::VYRMobile.Droid.Resource.Styleable.Toolbar_contentInsetStartWithNavigation;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_logo = global::VYRMobile.Droid.Resource.Styleable.Toolbar_logo;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_logoDescription = global::VYRMobile.Droid.Resource.Styleable.Toolbar_logoDescription;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_maxButtonHeight = global::VYRMobile.Droid.Resource.Styleable.Toolbar_maxButtonHeight;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_navigationContentDescription = global::VYRMobile.Droid.Resource.Styleable.Toolbar_navigationContentDescription;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_navigationIcon = global::VYRMobile.Droid.Resource.Styleable.Toolbar_navigationIcon;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_popupTheme = global::VYRMobile.Droid.Resource.Styleable.Toolbar_popupTheme;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_subtitle = global::VYRMobile.Droid.Resource.Styleable.Toolbar_subtitle;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.Toolbar_subtitleTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_subtitleTextColor = global::VYRMobile.Droid.Resource.Styleable.Toolbar_subtitleTextColor;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_title = global::VYRMobile.Droid.Resource.Styleable.Toolbar_title;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleMargin = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMargin;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleMarginBottom = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginBottom;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleMarginEnd = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginEnd;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleMargins = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMargins;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleMarginStart = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginStart;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleMarginTop = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleMarginTop;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleTextAppearance = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleTextAppearance;
-			global::PanCardView.Droid.Resource.Styleable.Toolbar_titleTextColor = global::VYRMobile.Droid.Resource.Styleable.Toolbar_titleTextColor;
-			global::PanCardView.Droid.Resource.Styleable.View = global::VYRMobile.Droid.Resource.Styleable.View;
-			global::PanCardView.Droid.Resource.Styleable.ViewBackgroundHelper = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper;
-			global::PanCardView.Droid.Resource.Styleable.ViewBackgroundHelper_android_background = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper_android_background;
-			global::PanCardView.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTint;
-			global::PanCardView.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode = global::VYRMobile.Droid.Resource.Styleable.ViewBackgroundHelper_backgroundTintMode;
-			global::PanCardView.Droid.Resource.Styleable.ViewStubCompat = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat;
-			global::PanCardView.Droid.Resource.Styleable.ViewStubCompat_android_id = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat_android_id;
-			global::PanCardView.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat_android_inflatedId;
-			global::PanCardView.Droid.Resource.Styleable.ViewStubCompat_android_layout = global::VYRMobile.Droid.Resource.Styleable.ViewStubCompat_android_layout;
-			global::PanCardView.Droid.Resource.Styleable.View_android_focusable = global::VYRMobile.Droid.Resource.Styleable.View_android_focusable;
-			global::PanCardView.Droid.Resource.Styleable.View_android_theme = global::VYRMobile.Droid.Resource.Styleable.View_android_theme;
-			global::PanCardView.Droid.Resource.Styleable.View_paddingEnd = global::VYRMobile.Droid.Resource.Styleable.View_paddingEnd;
-			global::PanCardView.Droid.Resource.Styleable.View_paddingStart = global::VYRMobile.Droid.Resource.Styleable.View_paddingStart;
-			global::PanCardView.Droid.Resource.Styleable.View_theme = global::VYRMobile.Droid.Resource.Styleable.View_theme;
 			global::PCLStorage.Resource.String.ApplicationName = global::VYRMobile.Droid.Resource.String.ApplicationName;
 			global::PCLStorage.Resource.String.Hello = global::VYRMobile.Droid.Resource.String.Hello;
 			global::Plugin.LocalNotifications.Resource.Drawable.plugin_lc_smallicon = global::VYRMobile.Droid.Resource.Drawable.plugin_lc_smallicon;
@@ -17194,1210 +14292,1105 @@ namespace VYRMobile.Droid
 			public const int asistencia = 2131165279;
 			
 			// aapt resource value: 0x7F070060
-			public const int attach = 2131165280;
+			public const int attach2 = 2131165280;
 			
 			// aapt resource value: 0x7F070061
-			public const int attach2 = 2131165281;
+			public const int audio = 2131165281;
 			
 			// aapt resource value: 0x7F070062
-			public const int attended = 2131165282;
+			public const int Avatar1 = 2131165282;
 			
 			// aapt resource value: 0x7F070063
-			public const int audio = 2131165283;
+			public const int Avatar10 = 2131165283;
 			
 			// aapt resource value: 0x7F070064
-			public const int Avatar1 = 2131165284;
+			public const int Avatar11 = 2131165284;
 			
 			// aapt resource value: 0x7F070065
-			public const int Avatar10 = 2131165285;
+			public const int Avatar12 = 2131165285;
 			
 			// aapt resource value: 0x7F070066
-			public const int Avatar11 = 2131165286;
+			public const int Avatar13 = 2131165286;
 			
 			// aapt resource value: 0x7F070067
-			public const int Avatar12 = 2131165287;
+			public const int Avatar14 = 2131165287;
 			
 			// aapt resource value: 0x7F070068
-			public const int Avatar13 = 2131165288;
+			public const int Avatar15 = 2131165288;
 			
 			// aapt resource value: 0x7F070069
-			public const int Avatar14 = 2131165289;
+			public const int Avatar16 = 2131165289;
 			
 			// aapt resource value: 0x7F07006A
-			public const int Avatar15 = 2131165290;
+			public const int Avatar17 = 2131165290;
 			
 			// aapt resource value: 0x7F07006B
-			public const int Avatar16 = 2131165291;
+			public const int Avatar18 = 2131165291;
 			
 			// aapt resource value: 0x7F07006C
-			public const int Avatar17 = 2131165292;
+			public const int Avatar19 = 2131165292;
 			
 			// aapt resource value: 0x7F07006D
-			public const int Avatar18 = 2131165293;
+			public const int Avatar2 = 2131165293;
 			
 			// aapt resource value: 0x7F07006E
-			public const int Avatar19 = 2131165294;
+			public const int Avatar20 = 2131165294;
 			
 			// aapt resource value: 0x7F07006F
-			public const int Avatar2 = 2131165295;
+			public const int Avatar21 = 2131165295;
 			
 			// aapt resource value: 0x7F070070
-			public const int Avatar20 = 2131165296;
+			public const int Avatar22 = 2131165296;
 			
 			// aapt resource value: 0x7F070071
-			public const int Avatar21 = 2131165297;
+			public const int Avatar23 = 2131165297;
 			
 			// aapt resource value: 0x7F070072
-			public const int Avatar22 = 2131165298;
+			public const int Avatar24 = 2131165298;
 			
 			// aapt resource value: 0x7F070073
-			public const int Avatar23 = 2131165299;
+			public const int Avatar25 = 2131165299;
 			
 			// aapt resource value: 0x7F070074
-			public const int Avatar24 = 2131165300;
+			public const int Avatar26 = 2131165300;
 			
 			// aapt resource value: 0x7F070075
-			public const int Avatar25 = 2131165301;
+			public const int Avatar27 = 2131165301;
 			
 			// aapt resource value: 0x7F070076
-			public const int Avatar26 = 2131165302;
+			public const int Avatar28 = 2131165302;
 			
 			// aapt resource value: 0x7F070077
-			public const int Avatar27 = 2131165303;
+			public const int Avatar29 = 2131165303;
 			
 			// aapt resource value: 0x7F070078
-			public const int Avatar28 = 2131165304;
+			public const int Avatar3 = 2131165304;
 			
 			// aapt resource value: 0x7F070079
-			public const int Avatar29 = 2131165305;
+			public const int Avatar30 = 2131165305;
 			
 			// aapt resource value: 0x7F07007A
-			public const int Avatar3 = 2131165306;
+			public const int Avatar4 = 2131165306;
 			
 			// aapt resource value: 0x7F07007B
-			public const int Avatar30 = 2131165307;
+			public const int Avatar5 = 2131165307;
 			
 			// aapt resource value: 0x7F07007C
-			public const int Avatar4 = 2131165308;
+			public const int Avatar6 = 2131165308;
 			
 			// aapt resource value: 0x7F07007D
-			public const int Avatar5 = 2131165309;
+			public const int Avatar7 = 2131165309;
 			
 			// aapt resource value: 0x7F07007E
-			public const int Avatar6 = 2131165310;
+			public const int Avatar8 = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int Avatar7 = 2131165311;
+			public const int Avatar9 = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int Avatar8 = 2131165312;
+			public const int avd_hide_password = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int Avatar9 = 2131165313;
+			public const int avd_show_password = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int avd_hide_password = 2131165314;
+			public const int back = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int avd_show_password = 2131165315;
+			public const int back2 = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int back = 2131165316;
+			public const int @base = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int back2 = 2131165317;
+			public const int btn_checkbox = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int @base = 2131165318;
+			public const int btn_checkbox_checked = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int btn_checkbox = 2131165319;
+			public const int btn_checkbox_checked_to_indeterminate_animation = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int btn_checkbox_checked = 2131165320;
+			public const int btn_checkbox_checked_to_unchecked_animation = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int btn_checkbox_checked_to_indeterminate_animation = 2131165321;
+			public const int btn_checkbox_indeterminate = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int btn_checkbox_checked_to_unchecked_animation = 2131165322;
+			public const int btn_checkbox_indeterminate_to_checked_animation = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int btn_checkbox_indeterminate = 2131165323;
+			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int btn_checkbox_indeterminate_to_checked_animation = 2131165324;
+			public const int btn_checkbox_unchecked = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int btn_checkbox_indeterminate_to_unchecked_animation = 2131165325;
+			public const int btn_checkbox_unchecked_to_checked_animation = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int btn_checkbox_unchecked = 2131165326;
+			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int btn_checkbox_unchecked_to_checked_animation = 2131165327;
+			public const int call = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int btn_checkbox_unchecked_to_indeterminate_animation = 2131165328;
+			public const int call2 = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int call = 2131165329;
+			public const int call3 = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int call2 = 2131165330;
+			public const int callM = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int call3 = 2131165331;
+			public const int camera = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int callM = 2131165332;
+			public const int chrono = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int camera = 2131165333;
+			public const int clear = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int camera2 = 2131165334;
+			public const int clock = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int chrono = 2131165335;
-			
-			// aapt resource value: 0x7F070098
-			public const int clear = 2131165336;
+			public const int close = 2131165335;
 			
 			// aapt resource value: 0x7F070099
-			public const int clock = 2131165337;
+			public const int closedEye = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int close = 2131165338;
-			
-			// aapt resource value: 0x7F07009C
-			public const int closedEye = 2131165340;
-			
-			// aapt resource value: 0x7F07009D
-			public const int closeplano = 2131165341;
-			
-			// aapt resource value: 0x7F07009E
-			public const int closeplano2 = 2131165342;
-			
-			// aapt resource value: 0x7F07009F
-			public const int closeplano3 = 2131165343;
+			public const int closeplano = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int close_circle = 2131165339;
+			public const int closeplano2 = 2131165339;
+			
+			// aapt resource value: 0x7F07009C
+			public const int closeplano3 = 2131165340;
+			
+			// aapt resource value: 0x7F070098
+			public const int close_circle = 2131165336;
+			
+			// aapt resource value: 0x7F07009D
+			public const int common_full_open_on_phone = 2131165341;
+			
+			// aapt resource value: 0x7F07009E
+			public const int common_google_signin_btn_icon_dark = 2131165342;
+			
+			// aapt resource value: 0x7F07009F
+			public const int common_google_signin_btn_icon_dark_focused = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int common_full_open_on_phone = 2131165344;
+			public const int common_google_signin_btn_icon_dark_normal = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int common_google_signin_btn_icon_dark = 2131165345;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int common_google_signin_btn_icon_dark_focused = 2131165346;
+			public const int common_google_signin_btn_icon_disabled = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int common_google_signin_btn_icon_dark_normal = 2131165347;
+			public const int common_google_signin_btn_icon_light = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int common_google_signin_btn_icon_dark_normal_background = 2131165348;
+			public const int common_google_signin_btn_icon_light_focused = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int common_google_signin_btn_icon_disabled = 2131165349;
+			public const int common_google_signin_btn_icon_light_normal = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int common_google_signin_btn_icon_light = 2131165350;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int common_google_signin_btn_icon_light_focused = 2131165351;
+			public const int common_google_signin_btn_text_dark = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int common_google_signin_btn_icon_light_normal = 2131165352;
+			public const int common_google_signin_btn_text_dark_focused = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int common_google_signin_btn_icon_light_normal_background = 2131165353;
+			public const int common_google_signin_btn_text_dark_normal = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int common_google_signin_btn_text_dark = 2131165354;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int common_google_signin_btn_text_dark_focused = 2131165355;
+			public const int common_google_signin_btn_text_disabled = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int common_google_signin_btn_text_dark_normal = 2131165356;
+			public const int common_google_signin_btn_text_light = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int common_google_signin_btn_text_dark_normal_background = 2131165357;
+			public const int common_google_signin_btn_text_light_focused = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int common_google_signin_btn_text_disabled = 2131165358;
+			public const int common_google_signin_btn_text_light_normal = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int common_google_signin_btn_text_light = 2131165359;
+			public const int common_google_signin_btn_text_light_normal_background = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int common_google_signin_btn_text_light_focused = 2131165360;
+			public const int configuracion = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int common_google_signin_btn_text_light_normal = 2131165361;
+			public const int dano = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int common_google_signin_btn_text_light_normal_background = 2131165362;
+			public const int dashboard2 = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int config = 2131165363;
+			public const int defaultimg = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int configuracion = 2131165364;
+			public const int design_bottom_navigation_item_background = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int dano = 2131165365;
+			public const int design_fab_background = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int dashboard2 = 2131165366;
+			public const int design_ic_visibility = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int defaultimg = 2131165367;
+			public const int design_ic_visibility_off = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int design_bottom_navigation_item_background = 2131165368;
+			public const int design_password_eye = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int design_fab_background = 2131165369;
+			public const int design_snackbar_background = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int design_ic_visibility = 2131165370;
+			public const int Down = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int design_ic_visibility_off = 2131165371;
+			public const int dropdownbuttonimage = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int design_password_eye = 2131165372;
+			public const int endRoute = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int design_snackbar_background = 2131165373;
+			public const int equipo = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int Down = 2131165374;
+			public const int estadisticas = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int dropdownbuttonimage = 2131165375;
+			public const int fab_shadow = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int endRoute = 2131165376;
+			public const int fab_shadow_mini = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int equipo = 2131165377;
+			public const int face3 = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int estadisticas = 2131165378;
+			public const int formacion = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int fab_shadow = 2131165379;
+			public const int googleg_disabled_color_18 = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int fab_shadow_mini = 2131165380;
+			public const int googleg_standard_color_18 = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int face = 2131165381;
+			public const int historial = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int face2 = 2131165382;
+			public const int home2 = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int face3 = 2131165383;
+			public const int hooter2 = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int formacion = 2131165384;
+			public const int ic_audiotrack_dark = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int googleg_disabled_color_18 = 2131165385;
+			public const int ic_audiotrack_light = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int googleg_standard_color_18 = 2131165386;
+			public const int ic_dialog_close_dark = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int historial = 2131165387;
+			public const int ic_dialog_close_light = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int historial2 = 2131165388;
+			public const int ic_group_collapse_00 = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int home = 2131165389;
+			public const int ic_group_collapse_01 = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int home2 = 2131165390;
+			public const int ic_group_collapse_02 = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int home3 = 2131165391;
+			public const int ic_group_collapse_03 = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int hooter = 2131165392;
+			public const int ic_group_collapse_04 = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int hooter2 = 2131165393;
+			public const int ic_group_collapse_05 = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int ic_audiotrack_dark = 2131165394;
+			public const int ic_group_collapse_06 = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int ic_audiotrack_light = 2131165395;
+			public const int ic_group_collapse_07 = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int ic_dialog_close_dark = 2131165396;
+			public const int ic_group_collapse_08 = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int ic_dialog_close_light = 2131165397;
+			public const int ic_group_collapse_09 = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int ic_group_collapse_00 = 2131165398;
+			public const int ic_group_collapse_10 = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int ic_group_collapse_01 = 2131165399;
+			public const int ic_group_collapse_11 = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int ic_group_collapse_02 = 2131165400;
+			public const int ic_group_collapse_12 = 2131165400;
 			
 			// aapt resource value: 0x7F0700D9
-			public const int ic_group_collapse_03 = 2131165401;
+			public const int ic_group_collapse_13 = 2131165401;
 			
 			// aapt resource value: 0x7F0700DA
-			public const int ic_group_collapse_04 = 2131165402;
+			public const int ic_group_collapse_14 = 2131165402;
 			
 			// aapt resource value: 0x7F0700DB
-			public const int ic_group_collapse_05 = 2131165403;
+			public const int ic_group_collapse_15 = 2131165403;
 			
 			// aapt resource value: 0x7F0700DC
-			public const int ic_group_collapse_06 = 2131165404;
+			public const int ic_group_expand_00 = 2131165404;
 			
 			// aapt resource value: 0x7F0700DD
-			public const int ic_group_collapse_07 = 2131165405;
+			public const int ic_group_expand_01 = 2131165405;
 			
 			// aapt resource value: 0x7F0700DE
-			public const int ic_group_collapse_08 = 2131165406;
+			public const int ic_group_expand_02 = 2131165406;
 			
 			// aapt resource value: 0x7F0700DF
-			public const int ic_group_collapse_09 = 2131165407;
+			public const int ic_group_expand_03 = 2131165407;
 			
 			// aapt resource value: 0x7F0700E0
-			public const int ic_group_collapse_10 = 2131165408;
+			public const int ic_group_expand_04 = 2131165408;
 			
 			// aapt resource value: 0x7F0700E1
-			public const int ic_group_collapse_11 = 2131165409;
+			public const int ic_group_expand_05 = 2131165409;
 			
 			// aapt resource value: 0x7F0700E2
-			public const int ic_group_collapse_12 = 2131165410;
+			public const int ic_group_expand_06 = 2131165410;
 			
 			// aapt resource value: 0x7F0700E3
-			public const int ic_group_collapse_13 = 2131165411;
+			public const int ic_group_expand_07 = 2131165411;
 			
 			// aapt resource value: 0x7F0700E4
-			public const int ic_group_collapse_14 = 2131165412;
+			public const int ic_group_expand_08 = 2131165412;
 			
 			// aapt resource value: 0x7F0700E5
-			public const int ic_group_collapse_15 = 2131165413;
+			public const int ic_group_expand_09 = 2131165413;
 			
 			// aapt resource value: 0x7F0700E6
-			public const int ic_group_expand_00 = 2131165414;
+			public const int ic_group_expand_10 = 2131165414;
 			
 			// aapt resource value: 0x7F0700E7
-			public const int ic_group_expand_01 = 2131165415;
+			public const int ic_group_expand_11 = 2131165415;
 			
 			// aapt resource value: 0x7F0700E8
-			public const int ic_group_expand_02 = 2131165416;
+			public const int ic_group_expand_12 = 2131165416;
 			
 			// aapt resource value: 0x7F0700E9
-			public const int ic_group_expand_03 = 2131165417;
+			public const int ic_group_expand_13 = 2131165417;
 			
 			// aapt resource value: 0x7F0700EA
-			public const int ic_group_expand_04 = 2131165418;
+			public const int ic_group_expand_14 = 2131165418;
 			
 			// aapt resource value: 0x7F0700EB
-			public const int ic_group_expand_05 = 2131165419;
+			public const int ic_group_expand_15 = 2131165419;
 			
 			// aapt resource value: 0x7F0700EC
-			public const int ic_group_expand_06 = 2131165420;
+			public const int ic_media_pause_dark = 2131165420;
 			
 			// aapt resource value: 0x7F0700ED
-			public const int ic_group_expand_07 = 2131165421;
+			public const int ic_media_pause_light = 2131165421;
 			
 			// aapt resource value: 0x7F0700EE
-			public const int ic_group_expand_08 = 2131165422;
+			public const int ic_media_play_dark = 2131165422;
 			
 			// aapt resource value: 0x7F0700EF
-			public const int ic_group_expand_09 = 2131165423;
+			public const int ic_media_play_light = 2131165423;
 			
 			// aapt resource value: 0x7F0700F0
-			public const int ic_group_expand_10 = 2131165424;
+			public const int ic_media_stop_dark = 2131165424;
 			
 			// aapt resource value: 0x7F0700F1
-			public const int ic_group_expand_11 = 2131165425;
+			public const int ic_media_stop_light = 2131165425;
 			
 			// aapt resource value: 0x7F0700F2
-			public const int ic_group_expand_12 = 2131165426;
+			public const int ic_mr_button_connected_00_dark = 2131165426;
 			
 			// aapt resource value: 0x7F0700F3
-			public const int ic_group_expand_13 = 2131165427;
+			public const int ic_mr_button_connected_00_light = 2131165427;
 			
 			// aapt resource value: 0x7F0700F4
-			public const int ic_group_expand_14 = 2131165428;
+			public const int ic_mr_button_connected_01_dark = 2131165428;
 			
 			// aapt resource value: 0x7F0700F5
-			public const int ic_group_expand_15 = 2131165429;
+			public const int ic_mr_button_connected_01_light = 2131165429;
 			
 			// aapt resource value: 0x7F0700F6
-			public const int ic_media_pause_dark = 2131165430;
+			public const int ic_mr_button_connected_02_dark = 2131165430;
 			
 			// aapt resource value: 0x7F0700F7
-			public const int ic_media_pause_light = 2131165431;
+			public const int ic_mr_button_connected_02_light = 2131165431;
 			
 			// aapt resource value: 0x7F0700F8
-			public const int ic_media_play_dark = 2131165432;
+			public const int ic_mr_button_connected_03_dark = 2131165432;
 			
 			// aapt resource value: 0x7F0700F9
-			public const int ic_media_play_light = 2131165433;
+			public const int ic_mr_button_connected_03_light = 2131165433;
 			
 			// aapt resource value: 0x7F0700FA
-			public const int ic_media_stop_dark = 2131165434;
+			public const int ic_mr_button_connected_04_dark = 2131165434;
 			
 			// aapt resource value: 0x7F0700FB
-			public const int ic_media_stop_light = 2131165435;
+			public const int ic_mr_button_connected_04_light = 2131165435;
 			
 			// aapt resource value: 0x7F0700FC
-			public const int ic_mr_button_connected_00_dark = 2131165436;
+			public const int ic_mr_button_connected_05_dark = 2131165436;
 			
 			// aapt resource value: 0x7F0700FD
-			public const int ic_mr_button_connected_00_light = 2131165437;
+			public const int ic_mr_button_connected_05_light = 2131165437;
 			
 			// aapt resource value: 0x7F0700FE
-			public const int ic_mr_button_connected_01_dark = 2131165438;
+			public const int ic_mr_button_connected_06_dark = 2131165438;
 			
 			// aapt resource value: 0x7F0700FF
-			public const int ic_mr_button_connected_01_light = 2131165439;
+			public const int ic_mr_button_connected_06_light = 2131165439;
 			
 			// aapt resource value: 0x7F070100
-			public const int ic_mr_button_connected_02_dark = 2131165440;
+			public const int ic_mr_button_connected_07_dark = 2131165440;
 			
 			// aapt resource value: 0x7F070101
-			public const int ic_mr_button_connected_02_light = 2131165441;
+			public const int ic_mr_button_connected_07_light = 2131165441;
 			
 			// aapt resource value: 0x7F070102
-			public const int ic_mr_button_connected_03_dark = 2131165442;
+			public const int ic_mr_button_connected_08_dark = 2131165442;
 			
 			// aapt resource value: 0x7F070103
-			public const int ic_mr_button_connected_03_light = 2131165443;
+			public const int ic_mr_button_connected_08_light = 2131165443;
 			
 			// aapt resource value: 0x7F070104
-			public const int ic_mr_button_connected_04_dark = 2131165444;
+			public const int ic_mr_button_connected_09_dark = 2131165444;
 			
 			// aapt resource value: 0x7F070105
-			public const int ic_mr_button_connected_04_light = 2131165445;
+			public const int ic_mr_button_connected_09_light = 2131165445;
 			
 			// aapt resource value: 0x7F070106
-			public const int ic_mr_button_connected_05_dark = 2131165446;
+			public const int ic_mr_button_connected_10_dark = 2131165446;
 			
 			// aapt resource value: 0x7F070107
-			public const int ic_mr_button_connected_05_light = 2131165447;
+			public const int ic_mr_button_connected_10_light = 2131165447;
 			
 			// aapt resource value: 0x7F070108
-			public const int ic_mr_button_connected_06_dark = 2131165448;
+			public const int ic_mr_button_connected_11_dark = 2131165448;
 			
 			// aapt resource value: 0x7F070109
-			public const int ic_mr_button_connected_06_light = 2131165449;
+			public const int ic_mr_button_connected_11_light = 2131165449;
 			
 			// aapt resource value: 0x7F07010A
-			public const int ic_mr_button_connected_07_dark = 2131165450;
+			public const int ic_mr_button_connected_12_dark = 2131165450;
 			
 			// aapt resource value: 0x7F07010B
-			public const int ic_mr_button_connected_07_light = 2131165451;
+			public const int ic_mr_button_connected_12_light = 2131165451;
 			
 			// aapt resource value: 0x7F07010C
-			public const int ic_mr_button_connected_08_dark = 2131165452;
+			public const int ic_mr_button_connected_13_dark = 2131165452;
 			
 			// aapt resource value: 0x7F07010D
-			public const int ic_mr_button_connected_08_light = 2131165453;
+			public const int ic_mr_button_connected_13_light = 2131165453;
 			
 			// aapt resource value: 0x7F07010E
-			public const int ic_mr_button_connected_09_dark = 2131165454;
+			public const int ic_mr_button_connected_14_dark = 2131165454;
 			
 			// aapt resource value: 0x7F07010F
-			public const int ic_mr_button_connected_09_light = 2131165455;
+			public const int ic_mr_button_connected_14_light = 2131165455;
 			
 			// aapt resource value: 0x7F070110
-			public const int ic_mr_button_connected_10_dark = 2131165456;
+			public const int ic_mr_button_connected_15_dark = 2131165456;
 			
 			// aapt resource value: 0x7F070111
-			public const int ic_mr_button_connected_10_light = 2131165457;
+			public const int ic_mr_button_connected_15_light = 2131165457;
 			
 			// aapt resource value: 0x7F070112
-			public const int ic_mr_button_connected_11_dark = 2131165458;
+			public const int ic_mr_button_connected_16_dark = 2131165458;
 			
 			// aapt resource value: 0x7F070113
-			public const int ic_mr_button_connected_11_light = 2131165459;
+			public const int ic_mr_button_connected_16_light = 2131165459;
 			
 			// aapt resource value: 0x7F070114
-			public const int ic_mr_button_connected_12_dark = 2131165460;
+			public const int ic_mr_button_connected_17_dark = 2131165460;
 			
 			// aapt resource value: 0x7F070115
-			public const int ic_mr_button_connected_12_light = 2131165461;
+			public const int ic_mr_button_connected_17_light = 2131165461;
 			
 			// aapt resource value: 0x7F070116
-			public const int ic_mr_button_connected_13_dark = 2131165462;
+			public const int ic_mr_button_connected_18_dark = 2131165462;
 			
 			// aapt resource value: 0x7F070117
-			public const int ic_mr_button_connected_13_light = 2131165463;
+			public const int ic_mr_button_connected_18_light = 2131165463;
 			
 			// aapt resource value: 0x7F070118
-			public const int ic_mr_button_connected_14_dark = 2131165464;
+			public const int ic_mr_button_connected_19_dark = 2131165464;
 			
 			// aapt resource value: 0x7F070119
-			public const int ic_mr_button_connected_14_light = 2131165465;
+			public const int ic_mr_button_connected_19_light = 2131165465;
 			
 			// aapt resource value: 0x7F07011A
-			public const int ic_mr_button_connected_15_dark = 2131165466;
+			public const int ic_mr_button_connected_20_dark = 2131165466;
 			
 			// aapt resource value: 0x7F07011B
-			public const int ic_mr_button_connected_15_light = 2131165467;
+			public const int ic_mr_button_connected_20_light = 2131165467;
 			
 			// aapt resource value: 0x7F07011C
-			public const int ic_mr_button_connected_16_dark = 2131165468;
+			public const int ic_mr_button_connected_21_dark = 2131165468;
 			
 			// aapt resource value: 0x7F07011D
-			public const int ic_mr_button_connected_16_light = 2131165469;
+			public const int ic_mr_button_connected_21_light = 2131165469;
 			
 			// aapt resource value: 0x7F07011E
-			public const int ic_mr_button_connected_17_dark = 2131165470;
+			public const int ic_mr_button_connected_22_dark = 2131165470;
 			
 			// aapt resource value: 0x7F07011F
-			public const int ic_mr_button_connected_17_light = 2131165471;
+			public const int ic_mr_button_connected_22_light = 2131165471;
 			
 			// aapt resource value: 0x7F070120
-			public const int ic_mr_button_connected_18_dark = 2131165472;
+			public const int ic_mr_button_connected_23_dark = 2131165472;
 			
 			// aapt resource value: 0x7F070121
-			public const int ic_mr_button_connected_18_light = 2131165473;
+			public const int ic_mr_button_connected_23_light = 2131165473;
 			
 			// aapt resource value: 0x7F070122
-			public const int ic_mr_button_connected_19_dark = 2131165474;
+			public const int ic_mr_button_connected_24_dark = 2131165474;
 			
 			// aapt resource value: 0x7F070123
-			public const int ic_mr_button_connected_19_light = 2131165475;
+			public const int ic_mr_button_connected_24_light = 2131165475;
 			
 			// aapt resource value: 0x7F070124
-			public const int ic_mr_button_connected_20_dark = 2131165476;
+			public const int ic_mr_button_connected_25_dark = 2131165476;
 			
 			// aapt resource value: 0x7F070125
-			public const int ic_mr_button_connected_20_light = 2131165477;
+			public const int ic_mr_button_connected_25_light = 2131165477;
 			
 			// aapt resource value: 0x7F070126
-			public const int ic_mr_button_connected_21_dark = 2131165478;
+			public const int ic_mr_button_connected_26_dark = 2131165478;
 			
 			// aapt resource value: 0x7F070127
-			public const int ic_mr_button_connected_21_light = 2131165479;
+			public const int ic_mr_button_connected_26_light = 2131165479;
 			
 			// aapt resource value: 0x7F070128
-			public const int ic_mr_button_connected_22_dark = 2131165480;
+			public const int ic_mr_button_connected_27_dark = 2131165480;
 			
 			// aapt resource value: 0x7F070129
-			public const int ic_mr_button_connected_22_light = 2131165481;
+			public const int ic_mr_button_connected_27_light = 2131165481;
 			
 			// aapt resource value: 0x7F07012A
-			public const int ic_mr_button_connected_23_dark = 2131165482;
+			public const int ic_mr_button_connected_28_dark = 2131165482;
 			
 			// aapt resource value: 0x7F07012B
-			public const int ic_mr_button_connected_23_light = 2131165483;
+			public const int ic_mr_button_connected_28_light = 2131165483;
 			
 			// aapt resource value: 0x7F07012C
-			public const int ic_mr_button_connected_24_dark = 2131165484;
+			public const int ic_mr_button_connected_29_dark = 2131165484;
 			
 			// aapt resource value: 0x7F07012D
-			public const int ic_mr_button_connected_24_light = 2131165485;
+			public const int ic_mr_button_connected_29_light = 2131165485;
 			
 			// aapt resource value: 0x7F07012E
-			public const int ic_mr_button_connected_25_dark = 2131165486;
+			public const int ic_mr_button_connected_30_dark = 2131165486;
 			
 			// aapt resource value: 0x7F07012F
-			public const int ic_mr_button_connected_25_light = 2131165487;
+			public const int ic_mr_button_connected_30_light = 2131165487;
 			
 			// aapt resource value: 0x7F070130
-			public const int ic_mr_button_connected_26_dark = 2131165488;
+			public const int ic_mr_button_connecting_00_dark = 2131165488;
 			
 			// aapt resource value: 0x7F070131
-			public const int ic_mr_button_connected_26_light = 2131165489;
+			public const int ic_mr_button_connecting_00_light = 2131165489;
 			
 			// aapt resource value: 0x7F070132
-			public const int ic_mr_button_connected_27_dark = 2131165490;
+			public const int ic_mr_button_connecting_01_dark = 2131165490;
 			
 			// aapt resource value: 0x7F070133
-			public const int ic_mr_button_connected_27_light = 2131165491;
+			public const int ic_mr_button_connecting_01_light = 2131165491;
 			
 			// aapt resource value: 0x7F070134
-			public const int ic_mr_button_connected_28_dark = 2131165492;
+			public const int ic_mr_button_connecting_02_dark = 2131165492;
 			
 			// aapt resource value: 0x7F070135
-			public const int ic_mr_button_connected_28_light = 2131165493;
+			public const int ic_mr_button_connecting_02_light = 2131165493;
 			
 			// aapt resource value: 0x7F070136
-			public const int ic_mr_button_connected_29_dark = 2131165494;
+			public const int ic_mr_button_connecting_03_dark = 2131165494;
 			
 			// aapt resource value: 0x7F070137
-			public const int ic_mr_button_connected_29_light = 2131165495;
+			public const int ic_mr_button_connecting_03_light = 2131165495;
 			
 			// aapt resource value: 0x7F070138
-			public const int ic_mr_button_connected_30_dark = 2131165496;
+			public const int ic_mr_button_connecting_04_dark = 2131165496;
 			
 			// aapt resource value: 0x7F070139
-			public const int ic_mr_button_connected_30_light = 2131165497;
+			public const int ic_mr_button_connecting_04_light = 2131165497;
 			
 			// aapt resource value: 0x7F07013A
-			public const int ic_mr_button_connecting_00_dark = 2131165498;
+			public const int ic_mr_button_connecting_05_dark = 2131165498;
 			
 			// aapt resource value: 0x7F07013B
-			public const int ic_mr_button_connecting_00_light = 2131165499;
+			public const int ic_mr_button_connecting_05_light = 2131165499;
 			
 			// aapt resource value: 0x7F07013C
-			public const int ic_mr_button_connecting_01_dark = 2131165500;
+			public const int ic_mr_button_connecting_06_dark = 2131165500;
 			
 			// aapt resource value: 0x7F07013D
-			public const int ic_mr_button_connecting_01_light = 2131165501;
+			public const int ic_mr_button_connecting_06_light = 2131165501;
 			
 			// aapt resource value: 0x7F07013E
-			public const int ic_mr_button_connecting_02_dark = 2131165502;
+			public const int ic_mr_button_connecting_07_dark = 2131165502;
 			
 			// aapt resource value: 0x7F07013F
-			public const int ic_mr_button_connecting_02_light = 2131165503;
+			public const int ic_mr_button_connecting_07_light = 2131165503;
 			
 			// aapt resource value: 0x7F070140
-			public const int ic_mr_button_connecting_03_dark = 2131165504;
+			public const int ic_mr_button_connecting_08_dark = 2131165504;
 			
 			// aapt resource value: 0x7F070141
-			public const int ic_mr_button_connecting_03_light = 2131165505;
+			public const int ic_mr_button_connecting_08_light = 2131165505;
 			
 			// aapt resource value: 0x7F070142
-			public const int ic_mr_button_connecting_04_dark = 2131165506;
+			public const int ic_mr_button_connecting_09_dark = 2131165506;
 			
 			// aapt resource value: 0x7F070143
-			public const int ic_mr_button_connecting_04_light = 2131165507;
+			public const int ic_mr_button_connecting_09_light = 2131165507;
 			
 			// aapt resource value: 0x7F070144
-			public const int ic_mr_button_connecting_05_dark = 2131165508;
+			public const int ic_mr_button_connecting_10_dark = 2131165508;
 			
 			// aapt resource value: 0x7F070145
-			public const int ic_mr_button_connecting_05_light = 2131165509;
+			public const int ic_mr_button_connecting_10_light = 2131165509;
 			
 			// aapt resource value: 0x7F070146
-			public const int ic_mr_button_connecting_06_dark = 2131165510;
+			public const int ic_mr_button_connecting_11_dark = 2131165510;
 			
 			// aapt resource value: 0x7F070147
-			public const int ic_mr_button_connecting_06_light = 2131165511;
+			public const int ic_mr_button_connecting_11_light = 2131165511;
 			
 			// aapt resource value: 0x7F070148
-			public const int ic_mr_button_connecting_07_dark = 2131165512;
+			public const int ic_mr_button_connecting_12_dark = 2131165512;
 			
 			// aapt resource value: 0x7F070149
-			public const int ic_mr_button_connecting_07_light = 2131165513;
+			public const int ic_mr_button_connecting_12_light = 2131165513;
 			
 			// aapt resource value: 0x7F07014A
-			public const int ic_mr_button_connecting_08_dark = 2131165514;
+			public const int ic_mr_button_connecting_13_dark = 2131165514;
 			
 			// aapt resource value: 0x7F07014B
-			public const int ic_mr_button_connecting_08_light = 2131165515;
+			public const int ic_mr_button_connecting_13_light = 2131165515;
 			
 			// aapt resource value: 0x7F07014C
-			public const int ic_mr_button_connecting_09_dark = 2131165516;
+			public const int ic_mr_button_connecting_14_dark = 2131165516;
 			
 			// aapt resource value: 0x7F07014D
-			public const int ic_mr_button_connecting_09_light = 2131165517;
+			public const int ic_mr_button_connecting_14_light = 2131165517;
 			
 			// aapt resource value: 0x7F07014E
-			public const int ic_mr_button_connecting_10_dark = 2131165518;
+			public const int ic_mr_button_connecting_15_dark = 2131165518;
 			
 			// aapt resource value: 0x7F07014F
-			public const int ic_mr_button_connecting_10_light = 2131165519;
+			public const int ic_mr_button_connecting_15_light = 2131165519;
 			
 			// aapt resource value: 0x7F070150
-			public const int ic_mr_button_connecting_11_dark = 2131165520;
+			public const int ic_mr_button_connecting_16_dark = 2131165520;
 			
 			// aapt resource value: 0x7F070151
-			public const int ic_mr_button_connecting_11_light = 2131165521;
+			public const int ic_mr_button_connecting_16_light = 2131165521;
 			
 			// aapt resource value: 0x7F070152
-			public const int ic_mr_button_connecting_12_dark = 2131165522;
+			public const int ic_mr_button_connecting_17_dark = 2131165522;
 			
 			// aapt resource value: 0x7F070153
-			public const int ic_mr_button_connecting_12_light = 2131165523;
+			public const int ic_mr_button_connecting_17_light = 2131165523;
 			
 			// aapt resource value: 0x7F070154
-			public const int ic_mr_button_connecting_13_dark = 2131165524;
+			public const int ic_mr_button_connecting_18_dark = 2131165524;
 			
 			// aapt resource value: 0x7F070155
-			public const int ic_mr_button_connecting_13_light = 2131165525;
+			public const int ic_mr_button_connecting_18_light = 2131165525;
 			
 			// aapt resource value: 0x7F070156
-			public const int ic_mr_button_connecting_14_dark = 2131165526;
+			public const int ic_mr_button_connecting_19_dark = 2131165526;
 			
 			// aapt resource value: 0x7F070157
-			public const int ic_mr_button_connecting_14_light = 2131165527;
+			public const int ic_mr_button_connecting_19_light = 2131165527;
 			
 			// aapt resource value: 0x7F070158
-			public const int ic_mr_button_connecting_15_dark = 2131165528;
+			public const int ic_mr_button_connecting_20_dark = 2131165528;
 			
 			// aapt resource value: 0x7F070159
-			public const int ic_mr_button_connecting_15_light = 2131165529;
+			public const int ic_mr_button_connecting_20_light = 2131165529;
 			
 			// aapt resource value: 0x7F07015A
-			public const int ic_mr_button_connecting_16_dark = 2131165530;
+			public const int ic_mr_button_connecting_21_dark = 2131165530;
 			
 			// aapt resource value: 0x7F07015B
-			public const int ic_mr_button_connecting_16_light = 2131165531;
+			public const int ic_mr_button_connecting_21_light = 2131165531;
 			
 			// aapt resource value: 0x7F07015C
-			public const int ic_mr_button_connecting_17_dark = 2131165532;
+			public const int ic_mr_button_connecting_22_dark = 2131165532;
 			
 			// aapt resource value: 0x7F07015D
-			public const int ic_mr_button_connecting_17_light = 2131165533;
+			public const int ic_mr_button_connecting_22_light = 2131165533;
 			
 			// aapt resource value: 0x7F07015E
-			public const int ic_mr_button_connecting_18_dark = 2131165534;
+			public const int ic_mr_button_connecting_23_dark = 2131165534;
 			
 			// aapt resource value: 0x7F07015F
-			public const int ic_mr_button_connecting_18_light = 2131165535;
+			public const int ic_mr_button_connecting_23_light = 2131165535;
 			
 			// aapt resource value: 0x7F070160
-			public const int ic_mr_button_connecting_19_dark = 2131165536;
+			public const int ic_mr_button_connecting_24_dark = 2131165536;
 			
 			// aapt resource value: 0x7F070161
-			public const int ic_mr_button_connecting_19_light = 2131165537;
+			public const int ic_mr_button_connecting_24_light = 2131165537;
 			
 			// aapt resource value: 0x7F070162
-			public const int ic_mr_button_connecting_20_dark = 2131165538;
+			public const int ic_mr_button_connecting_25_dark = 2131165538;
 			
 			// aapt resource value: 0x7F070163
-			public const int ic_mr_button_connecting_20_light = 2131165539;
+			public const int ic_mr_button_connecting_25_light = 2131165539;
 			
 			// aapt resource value: 0x7F070164
-			public const int ic_mr_button_connecting_21_dark = 2131165540;
+			public const int ic_mr_button_connecting_26_dark = 2131165540;
 			
 			// aapt resource value: 0x7F070165
-			public const int ic_mr_button_connecting_21_light = 2131165541;
+			public const int ic_mr_button_connecting_26_light = 2131165541;
 			
 			// aapt resource value: 0x7F070166
-			public const int ic_mr_button_connecting_22_dark = 2131165542;
+			public const int ic_mr_button_connecting_27_dark = 2131165542;
 			
 			// aapt resource value: 0x7F070167
-			public const int ic_mr_button_connecting_22_light = 2131165543;
+			public const int ic_mr_button_connecting_27_light = 2131165543;
 			
 			// aapt resource value: 0x7F070168
-			public const int ic_mr_button_connecting_23_dark = 2131165544;
+			public const int ic_mr_button_connecting_28_dark = 2131165544;
 			
 			// aapt resource value: 0x7F070169
-			public const int ic_mr_button_connecting_23_light = 2131165545;
+			public const int ic_mr_button_connecting_28_light = 2131165545;
 			
 			// aapt resource value: 0x7F07016A
-			public const int ic_mr_button_connecting_24_dark = 2131165546;
+			public const int ic_mr_button_connecting_29_dark = 2131165546;
 			
 			// aapt resource value: 0x7F07016B
-			public const int ic_mr_button_connecting_24_light = 2131165547;
+			public const int ic_mr_button_connecting_29_light = 2131165547;
 			
 			// aapt resource value: 0x7F07016C
-			public const int ic_mr_button_connecting_25_dark = 2131165548;
+			public const int ic_mr_button_connecting_30_dark = 2131165548;
 			
 			// aapt resource value: 0x7F07016D
-			public const int ic_mr_button_connecting_25_light = 2131165549;
+			public const int ic_mr_button_connecting_30_light = 2131165549;
 			
 			// aapt resource value: 0x7F07016E
-			public const int ic_mr_button_connecting_26_dark = 2131165550;
+			public const int ic_mr_button_disabled_dark = 2131165550;
 			
 			// aapt resource value: 0x7F07016F
-			public const int ic_mr_button_connecting_26_light = 2131165551;
+			public const int ic_mr_button_disabled_light = 2131165551;
 			
 			// aapt resource value: 0x7F070170
-			public const int ic_mr_button_connecting_27_dark = 2131165552;
+			public const int ic_mr_button_disconnected_dark = 2131165552;
 			
 			// aapt resource value: 0x7F070171
-			public const int ic_mr_button_connecting_27_light = 2131165553;
+			public const int ic_mr_button_disconnected_light = 2131165553;
 			
 			// aapt resource value: 0x7F070172
-			public const int ic_mr_button_connecting_28_dark = 2131165554;
+			public const int ic_mr_button_grey = 2131165554;
 			
 			// aapt resource value: 0x7F070173
-			public const int ic_mr_button_connecting_28_light = 2131165555;
+			public const int ic_mtrl_chip_checked_black = 2131165555;
 			
 			// aapt resource value: 0x7F070174
-			public const int ic_mr_button_connecting_29_dark = 2131165556;
+			public const int ic_mtrl_chip_checked_circle = 2131165556;
 			
 			// aapt resource value: 0x7F070175
-			public const int ic_mr_button_connecting_29_light = 2131165557;
+			public const int ic_mtrl_chip_close_circle = 2131165557;
 			
 			// aapt resource value: 0x7F070176
-			public const int ic_mr_button_connecting_30_dark = 2131165558;
+			public const int ic_stat_notify_dot = 2131165558;
 			
 			// aapt resource value: 0x7F070177
-			public const int ic_mr_button_connecting_30_light = 2131165559;
+			public const int ic_vol_type_speaker_dark = 2131165559;
 			
 			// aapt resource value: 0x7F070178
-			public const int ic_mr_button_disabled_dark = 2131165560;
+			public const int ic_vol_type_speaker_group_dark = 2131165560;
 			
 			// aapt resource value: 0x7F070179
-			public const int ic_mr_button_disabled_light = 2131165561;
+			public const int ic_vol_type_speaker_group_light = 2131165561;
 			
 			// aapt resource value: 0x7F07017A
-			public const int ic_mr_button_disconnected_dark = 2131165562;
+			public const int ic_vol_type_speaker_light = 2131165562;
 			
 			// aapt resource value: 0x7F07017B
-			public const int ic_mr_button_disconnected_light = 2131165563;
+			public const int ic_vol_type_tv_dark = 2131165563;
 			
 			// aapt resource value: 0x7F07017C
-			public const int ic_mr_button_grey = 2131165564;
-			
-			// aapt resource value: 0x7F07017D
-			public const int ic_mtrl_chip_checked_black = 2131165565;
+			public const int ic_vol_type_tv_light = 2131165564;
 			
 			// aapt resource value: 0x7F07017E
-			public const int ic_mtrl_chip_checked_circle = 2131165566;
+			public const int inputlayout_togglecollapseicon = 2131165566;
 			
 			// aapt resource value: 0x7F07017F
-			public const int ic_mtrl_chip_close_circle = 2131165567;
+			public const int inputlayout_togglevisibleicon = 2131165567;
+			
+			// aapt resource value: 0x7F07017D
+			public const int input_layout_drop_down_icon = 2131165565;
 			
 			// aapt resource value: 0x7F070180
-			public const int ic_stat_notify_dot = 2131165568;
+			public const int key = 2131165568;
 			
 			// aapt resource value: 0x7F070181
-			public const int ic_vol_type_speaker_dark = 2131165569;
+			public const int key2 = 2131165569;
 			
 			// aapt resource value: 0x7F070182
-			public const int ic_vol_type_speaker_group_dark = 2131165570;
+			public const int label = 2131165570;
 			
 			// aapt resource value: 0x7F070183
-			public const int ic_vol_type_speaker_group_light = 2131165571;
+			public const int language = 2131165571;
 			
 			// aapt resource value: 0x7F070184
-			public const int ic_vol_type_speaker_light = 2131165572;
+			public const int logout = 2131165572;
 			
 			// aapt resource value: 0x7F070185
-			public const int ic_vol_type_tv_dark = 2131165573;
+			public const int mapa2 = 2131165573;
 			
 			// aapt resource value: 0x7F070186
-			public const int ic_vol_type_tv_light = 2131165574;
-			
-			// aapt resource value: 0x7F070188
-			public const int inputlayout_togglecollapseicon = 2131165576;
-			
-			// aapt resource value: 0x7F070189
-			public const int inputlayout_togglevisibleicon = 2131165577;
+			public const int mr_button_connected_dark = 2131165574;
 			
 			// aapt resource value: 0x7F070187
-			public const int input_layout_drop_down_icon = 2131165575;
+			public const int mr_button_connected_light = 2131165575;
+			
+			// aapt resource value: 0x7F070188
+			public const int mr_button_connecting_dark = 2131165576;
+			
+			// aapt resource value: 0x7F070189
+			public const int mr_button_connecting_light = 2131165577;
 			
 			// aapt resource value: 0x7F07018A
-			public const int key = 2131165578;
+			public const int mr_button_dark = 2131165578;
 			
 			// aapt resource value: 0x7F07018B
-			public const int key2 = 2131165579;
+			public const int mr_button_light = 2131165579;
 			
 			// aapt resource value: 0x7F07018C
-			public const int label = 2131165580;
+			public const int mr_dialog_close_dark = 2131165580;
 			
 			// aapt resource value: 0x7F07018D
-			public const int label2 = 2131165581;
+			public const int mr_dialog_close_light = 2131165581;
 			
 			// aapt resource value: 0x7F07018E
-			public const int language = 2131165582;
+			public const int mr_dialog_material_background_dark = 2131165582;
 			
 			// aapt resource value: 0x7F07018F
-			public const int load = 2131165583;
+			public const int mr_dialog_material_background_light = 2131165583;
 			
 			// aapt resource value: 0x7F070190
-			public const int @lock = 2131165584;
+			public const int mr_group_collapse = 2131165584;
 			
 			// aapt resource value: 0x7F070191
-			public const int logout = 2131165585;
+			public const int mr_group_expand = 2131165585;
 			
 			// aapt resource value: 0x7F070192
-			public const int map = 2131165586;
+			public const int mr_media_pause_dark = 2131165586;
 			
 			// aapt resource value: 0x7F070193
-			public const int mapa2 = 2131165587;
+			public const int mr_media_pause_light = 2131165587;
 			
 			// aapt resource value: 0x7F070194
-			public const int more = 2131165588;
+			public const int mr_media_play_dark = 2131165588;
 			
 			// aapt resource value: 0x7F070195
-			public const int more2 = 2131165589;
+			public const int mr_media_play_light = 2131165589;
 			
 			// aapt resource value: 0x7F070196
-			public const int more3 = 2131165590;
+			public const int mr_media_stop_dark = 2131165590;
 			
 			// aapt resource value: 0x7F070197
-			public const int mr_button_connected_dark = 2131165591;
+			public const int mr_media_stop_light = 2131165591;
 			
 			// aapt resource value: 0x7F070198
-			public const int mr_button_connected_light = 2131165592;
+			public const int mr_vol_type_audiotrack_dark = 2131165592;
 			
 			// aapt resource value: 0x7F070199
-			public const int mr_button_connecting_dark = 2131165593;
+			public const int mr_vol_type_audiotrack_light = 2131165593;
 			
 			// aapt resource value: 0x7F07019A
-			public const int mr_button_connecting_light = 2131165594;
+			public const int mtrl_snackbar_background = 2131165594;
 			
 			// aapt resource value: 0x7F07019B
-			public const int mr_button_dark = 2131165595;
+			public const int mtrl_tabs_default_indicator = 2131165595;
 			
 			// aapt resource value: 0x7F07019C
-			public const int mr_button_light = 2131165596;
+			public const int navigation_empty_icon = 2131165596;
 			
 			// aapt resource value: 0x7F07019D
-			public const int mr_dialog_close_dark = 2131165597;
+			public const int Next = 2131165597;
 			
 			// aapt resource value: 0x7F07019E
-			public const int mr_dialog_close_light = 2131165598;
+			public const int notification_action_background = 2131165598;
 			
 			// aapt resource value: 0x7F07019F
-			public const int mr_dialog_material_background_dark = 2131165599;
+			public const int notification_bg = 2131165599;
 			
 			// aapt resource value: 0x7F0701A0
-			public const int mr_dialog_material_background_light = 2131165600;
+			public const int notification_bg_low = 2131165600;
 			
 			// aapt resource value: 0x7F0701A1
-			public const int mr_group_collapse = 2131165601;
+			public const int notification_bg_low_normal = 2131165601;
 			
 			// aapt resource value: 0x7F0701A2
-			public const int mr_group_expand = 2131165602;
+			public const int notification_bg_low_pressed = 2131165602;
 			
 			// aapt resource value: 0x7F0701A3
-			public const int mr_media_pause_dark = 2131165603;
+			public const int notification_bg_normal = 2131165603;
 			
 			// aapt resource value: 0x7F0701A4
-			public const int mr_media_pause_light = 2131165604;
+			public const int notification_bg_normal_pressed = 2131165604;
 			
 			// aapt resource value: 0x7F0701A5
-			public const int mr_media_play_dark = 2131165605;
+			public const int notification_icon_background = 2131165605;
 			
 			// aapt resource value: 0x7F0701A6
-			public const int mr_media_play_light = 2131165606;
+			public const int notification_template_icon_bg = 2131165606;
 			
 			// aapt resource value: 0x7F0701A7
-			public const int mr_media_stop_dark = 2131165607;
+			public const int notification_template_icon_low_bg = 2131165607;
 			
 			// aapt resource value: 0x7F0701A8
-			public const int mr_media_stop_light = 2131165608;
+			public const int notification_tile_bg = 2131165608;
 			
 			// aapt resource value: 0x7F0701A9
-			public const int mr_vol_type_audiotrack_dark = 2131165609;
+			public const int notify_panel_notification_icon_bg = 2131165609;
 			
 			// aapt resource value: 0x7F0701AA
-			public const int mr_vol_type_audiotrack_light = 2131165610;
+			public const int openEye = 2131165610;
 			
 			// aapt resource value: 0x7F0701AB
-			public const int mtrl_snackbar_background = 2131165611;
+			public const int outer = 2131165611;
 			
 			// aapt resource value: 0x7F0701AC
-			public const int mtrl_tabs_default_indicator = 2131165612;
+			public const int person_outlined = 2131165612;
 			
 			// aapt resource value: 0x7F0701AD
-			public const int navigation_empty_icon = 2131165613;
+			public const int photo = 2131165613;
 			
 			// aapt resource value: 0x7F0701AE
-			public const int Next = 2131165614;
+			public const int plugin_lc_smallicon = 2131165614;
 			
 			// aapt resource value: 0x7F0701AF
-			public const int notAttended = 2131165615;
+			public const int plus = 2131165615;
 			
 			// aapt resource value: 0x7F0701B0
-			public const int notification_action_background = 2131165616;
+			public const int plus2 = 2131165616;
 			
 			// aapt resource value: 0x7F0701B1
-			public const int notification_bg = 2131165617;
+			public const int plus3 = 2131165617;
 			
 			// aapt resource value: 0x7F0701B2
-			public const int notification_bg_low = 2131165618;
+			public const int point = 2131165618;
 			
 			// aapt resource value: 0x7F0701B3
-			public const int notification_bg_low_normal = 2131165619;
+			public const int popup_forms_android_close_icon = 2131165619;
 			
 			// aapt resource value: 0x7F0701B4
-			public const int notification_bg_low_pressed = 2131165620;
+			public const int popup_forms_android_shadow = 2131165620;
 			
 			// aapt resource value: 0x7F0701B5
-			public const int notification_bg_normal = 2131165621;
+			public const int popup_forms_dark_theme_close_icon = 2131165621;
 			
 			// aapt resource value: 0x7F0701B6
-			public const int notification_bg_normal_pressed = 2131165622;
+			public const int popup_forms_light_theme_close_icon = 2131165622;
 			
 			// aapt resource value: 0x7F0701B7
-			public const int notification_icon_background = 2131165623;
+			public const int Prev = 2131165623;
 			
 			// aapt resource value: 0x7F0701B8
-			public const int notification_template_icon_bg = 2131165624;
+			public const int qr = 2131165624;
 			
 			// aapt resource value: 0x7F0701B9
-			public const int notification_template_icon_low_bg = 2131165625;
+			public const int quit = 2131165625;
 			
 			// aapt resource value: 0x7F0701BA
-			public const int notification_tile_bg = 2131165626;
-			
-			// aapt resource value: 0x7F0701BC
-			public const int notifyAlarm = 2131165628;
-			
-			// aapt resource value: 0x7F0701BD
-			public const int notifyAlarm2 = 2131165629;
+			public const int reportes2 = 2131165626;
 			
 			// aapt resource value: 0x7F0701BB
-			public const int notify_panel_notification_icon_bg = 2131165627;
+			public const int robo = 2131165627;
+			
+			// aapt resource value: 0x7F0701BC
+			public const int save = 2131165628;
+			
+			// aapt resource value: 0x7F0701BD
+			public const int send2 = 2131165629;
 			
 			// aapt resource value: 0x7F0701BE
-			public const int openEye = 2131165630;
+			public const int sfprogressbar_determinate_linear = 2131165630;
 			
 			// aapt resource value: 0x7F0701BF
-			public const int outer = 2131165631;
+			public const int sfprogressbar_indeterminate_circular = 2131165631;
 			
 			// aapt resource value: 0x7F0701C0
-			public const int pause = 2131165632;
+			public const int sfprogressbar_indeterminate_linear = 2131165632;
 			
 			// aapt resource value: 0x7F0701C1
-			public const int person_outlined = 2131165633;
+			public const int star = 2131165633;
 			
 			// aapt resource value: 0x7F0701C2
-			public const int photo = 2131165634;
+			public const int startRoute = 2131165634;
 			
 			// aapt resource value: 0x7F0701C3
-			public const int plugin_lc_smallicon = 2131165635;
+			public const int supervision = 2131165635;
 			
 			// aapt resource value: 0x7F0701C4
-			public const int plus = 2131165636;
+			public const int support2 = 2131165636;
 			
 			// aapt resource value: 0x7F0701C5
-			public const int plus2 = 2131165637;
+			public const int tooltip_frame_dark = 2131165637;
 			
 			// aapt resource value: 0x7F0701C6
-			public const int plus3 = 2131165638;
+			public const int tooltip_frame_light = 2131165638;
 			
 			// aapt resource value: 0x7F0701C7
-			public const int point = 2131165639;
+			public const int Up = 2131165639;
 			
 			// aapt resource value: 0x7F0701C8
-			public const int popup_forms_android_close_icon = 2131165640;
+			public const int user2 = 2131165640;
 			
 			// aapt resource value: 0x7F0701C9
-			public const int popup_forms_android_shadow = 2131165641;
+			public const int usuario2 = 2131165641;
 			
 			// aapt resource value: 0x7F0701CA
-			public const int popup_forms_dark_theme_close_icon = 2131165642;
+			public const int video = 2131165642;
 			
 			// aapt resource value: 0x7F0701CB
-			public const int popup_forms_light_theme_close_icon = 2131165643;
+			public const int vigilante = 2131165643;
 			
 			// aapt resource value: 0x7F0701CC
-			public const int Prev = 2131165644;
+			public const int vyr = 2131165644;
 			
 			// aapt resource value: 0x7F0701CD
-			public const int qr = 2131165645;
+			public const int vyrx = 2131165645;
 			
 			// aapt resource value: 0x7F0701CE
-			public const int quit = 2131165646;
-			
-			// aapt resource value: 0x7F0701CF
-			public const int reportes2 = 2131165647;
-			
-			// aapt resource value: 0x7F0701D0
-			public const int robo = 2131165648;
-			
-			// aapt resource value: 0x7F0701D1
-			public const int save = 2131165649;
-			
-			// aapt resource value: 0x7F0701D2
-			public const int seahawks = 2131165650;
-			
-			// aapt resource value: 0x7F0701D3
-			public const int seahawks2 = 2131165651;
-			
-			// aapt resource value: 0x7F0701D4
-			public const int seahawks3 = 2131165652;
-			
-			// aapt resource value: 0x7F0701D5
-			public const int send = 2131165653;
-			
-			// aapt resource value: 0x7F0701D6
-			public const int send2 = 2131165654;
-			
-			// aapt resource value: 0x7F0701D7
-			public const int sfprogressbar_determinate_linear = 2131165655;
-			
-			// aapt resource value: 0x7F0701D8
-			public const int sfprogressbar_indeterminate_circular = 2131165656;
-			
-			// aapt resource value: 0x7F0701D9
-			public const int sfprogressbar_indeterminate_linear = 2131165657;
-			
-			// aapt resource value: 0x7F0701DA
-			public const int solido = 2131165658;
-			
-			// aapt resource value: 0x7F0701DB
-			public const int solidosh = 2131165659;
-			
-			// aapt resource value: 0x7F0701DC
-			public const int star = 2131165660;
-			
-			// aapt resource value: 0x7F0701DD
-			public const int startRoute = 2131165661;
-			
-			// aapt resource value: 0x7F0701DE
-			public const int supervision = 2131165662;
-			
-			// aapt resource value: 0x7F0701DF
-			public const int support = 2131165663;
-			
-			// aapt resource value: 0x7F0701E0
-			public const int support2 = 2131165664;
-			
-			// aapt resource value: 0x7F0701E1
-			public const int tool = 2131165665;
-			
-			// aapt resource value: 0x7F0701E2
-			public const int tool1 = 2131165666;
-			
-			// aapt resource value: 0x7F0701E3
-			public const int tooltip_frame_dark = 2131165667;
-			
-			// aapt resource value: 0x7F0701E4
-			public const int tooltip_frame_light = 2131165668;
-			
-			// aapt resource value: 0x7F0701E5
-			public const int touch = 2131165669;
-			
-			// aapt resource value: 0x7F0701E6
-			public const int touchWhite = 2131165670;
-			
-			// aapt resource value: 0x7F0701E7
-			public const int undefined = 2131165671;
-			
-			// aapt resource value: 0x7F0701E8
-			public const int Up = 2131165672;
-			
-			// aapt resource value: 0x7F0701E9
-			public const int user = 2131165673;
-			
-			// aapt resource value: 0x7F0701EA
-			public const int user2 = 2131165674;
-			
-			// aapt resource value: 0x7F0701EB
-			public const int usuario = 2131165675;
-			
-			// aapt resource value: 0x7F0701EC
-			public const int usuario2 = 2131165676;
-			
-			// aapt resource value: 0x7F0701ED
-			public const int video = 2131165677;
-			
-			// aapt resource value: 0x7F0701EE
-			public const int vigilante = 2131165678;
-			
-			// aapt resource value: 0x7F0701EF
-			public const int vyr = 2131165679;
-			
-			// aapt resource value: 0x7F0701F0
-			public const int vyrx = 2131165680;
-			
-			// aapt resource value: 0x7F0701F1
-			public const int vyrxall = 2131165681;
+			public const int vyrxall = 2131165646;
 			
 			static Drawable()
 			{

@@ -1,11 +1,4 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.IO;
-using System.Text;
-using VYRMobile.Models;
-using VYRMobile.Services;
+﻿using System.IO;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 
