@@ -1,13 +1,10 @@
-﻿using Plugin.CloudFirestore;
-using Plugin.DeviceInfo;
+﻿using Newtonsoft.Json;
+using Plugin.CloudFirestore;
 using Rg.Plugins.Popup.Extensions;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using VYRMobile.Data;
+using VYRMobile.Models;
 using Xamarin.Essentials;
-using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views.Popups
@@ -15,6 +12,7 @@ namespace VYRMobile.Views.Popups
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class LogingOutPopup : Rg.Plugins.Popup.Pages.PopupPage
     {
+        private RecordsStore _store { get; set; }
         public LogingOutPopup()
         {
             InitializeComponent();
@@ -32,6 +30,23 @@ namespace VYRMobile.Views.Popups
         {
             try
             {
+                var record = new Record()
+                {
+                    UserId = await SecureStorage.GetAsync("id"),
+                    Type = "Cierre de sesión",
+                    RecordType = Record.RecordTypes.LogOut,
+                    Owner = "Usuario",
+                    Date = DateTime.Now,
+                    Icon = "logout_colored.png"
+                };
+
+                App.Records.Add(record);
+                var Records = App.Records;
+                var json = JsonConvert.SerializeObject(Records);
+                await SecureStorage.SetAsync("records", json);
+
+                await _store.AddRecordAsync(record);
+
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("Users")
                                           .GetDocument(App.ApplicationUserId)

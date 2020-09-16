@@ -36,6 +36,16 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged(nameof(IsEmpty));
             }
         }
+        private Color toggleColor;
+        public Color ToggleColor
+        {
+            get { return toggleColor; }
+            set
+            {
+                toggleColor = value;
+                OnPropertyChanged(nameof(ToggleColor));
+            }
+        }
         private static bool isTrueForAll(EquipmentItem equipo)
         {
             return (equipo.Toggle == true);
@@ -44,6 +54,8 @@ namespace VYRMobile.ViewModels
         {
             Equipment = new ObservableCollection<EquipmentItem>();
             LoadData();
+
+            ToggleColor = Color.FromHex("#01BD00");
         }
         private async void LoadData()
         {

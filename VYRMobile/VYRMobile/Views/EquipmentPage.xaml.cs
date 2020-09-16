@@ -59,5 +59,19 @@ namespace VYRMobile.Views
             }
         }
 
+        private void optionSwitch_Toggled(object sender, ToggledEventArgs e)
+        {
+            var switchObject = sender as Switch;
+
+            switch (switchObject.IsToggled)
+            {
+                case true:
+                    EquipmentViewModel.Instance.ToggleColor = Color.FromHex("#01BD00");
+                    break;
+                case false:
+                    EquipmentViewModel.Instance.ToggleColor = Color.FromHex("#DD0808");
+                    break;
+            }
+        }
     }
 }

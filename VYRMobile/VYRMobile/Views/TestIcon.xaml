@@ -11,41 +11,35 @@
              BackgroundColor="White">
 
     <ContentPage.Content>
-        <StackLayout>
-            <ListView
-                x:Name="antenasView"
-                ItemsSource="{Binding Antenas}"
-                SelectionMode="None"
-                HasUnevenRows="True" 
-                SeparatorVisibility="None">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <CheckBox
-                                IsEnabled="False"
-                                IsChecked="{Binding PointChecked}"
-                                HeightRequest="25"
-                                Color="{StaticResource BaseColor}"
-                                VerticalOptions="Center"
-                                HorizontalOptions="Center"/>
-                        </ViewCell>
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-            <Button
-                Text="Change"
-                Command="{Binding ChangeStateCommand}"
-                TextColor="Black"
-                HorizontalOptions="Center"/>
-            <button:SfButton 
-                x:Name="btnReporte"
-                BackgroundImage="plus.png"
+        <StackLayout
+                VerticalOptions="Center"
+                HorizontalOptions="Center">
+            <Frame
+                VerticalOptions="Fill"
+                HorizontalOptions="Fill"
                 HasShadow="True"
-                HeightRequest="60"
-                WidthRequest="60"
-                CornerRadius="60"
-                HorizontalOptions="Center"
-                Clicked="btnReporte_Clicked"/>
+                BorderColor="#AAB5B6"
+                CornerRadius="4"
+                Padding="0">
+                <Entry
+                    Placeholder="Escriba aquí"
+                    HeightRequest="55"
+                    WidthRequest="200"
+                    VerticalOptions="Center"
+                    HorizontalOptions="Center"/>
+            </Frame>
+            <Frame
+                HeightRequest="200"
+                WidthRequest="320"
+                HasShadow="True"
+                BorderColor="#AAB5B6"
+                CornerRadius="4"
+                Padding="0">
+                <Editor
+                    Placeholder="Escriba aquí"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

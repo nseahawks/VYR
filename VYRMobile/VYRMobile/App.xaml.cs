@@ -10,6 +10,7 @@ using Xamarin.Essentials;
 using Microsoft.AppCenter.Crashes;
 using System;
 using System.IdentityModel.Tokens.Jwt;
+using VYRMobile.Views;
 
 namespace VYRMobile
 {
@@ -43,7 +44,6 @@ namespace VYRMobile
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
             CreateDirectory();
-            //SaveCrashReport();
             MainPage = new MainPage();
         }
         protected override void OnStart()
@@ -67,32 +67,6 @@ namespace VYRMobile
             if (json != null)
             {
                 Records = JsonConvert.DeserializeObject<List<Record>>(json);
-            }
-        }
-        private async void SaveCrashReport()
-        {
-            try
-            {
-                /*bool hasStopped = await Crashes.HasCrashedInLastSessionAsync();
-
-                if (hasStopped)
-                {*/
-                    ErrorReport crashReport = await Crashes.GetLastSessionCrashReportAsync();
-
-                    Report crashDetails = new Report()
-                    {
-                        Title = "Reporte de error",
-                        Description = crashReport.AndroidDetails.ToString(),
-                        Created = DateTime.Now
-                    };
-
-                    await SecureStorage.SetAsync("crashReportData", JsonConvert.SerializeObject(crashDetails));
-                    HasAppCrashed = true;
-                //}
-            }
-            catch (Exception ex)
-            {
-                ex.ToString();
             }
         }
     }

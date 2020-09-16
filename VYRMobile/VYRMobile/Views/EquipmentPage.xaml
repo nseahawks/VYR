@@ -118,9 +118,10 @@
                                     <Switch 
                                         Grid.Column="2"
                                         x:Name="optionSwitch"
+                                        Toggled="optionSwitch_Toggled"
                                         IsToggled="{Binding Toggle, Mode=TwoWay}"
-                                        ThumbColor="{StaticResource GreenColor}"
-                                        OnColor="{StaticResource GreenColor}"/> 
+                                        ThumbColor="{Binding ToggleColor}"
+                                        OnColor="{Binding ToggleColor}"/> 
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

@@ -371,9 +371,6 @@
     <AndroidResource Include="Resources\drawable\callM.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\endRoute.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\startRoute.png" />
   </ItemGroup>
   <ItemGroup>
@@ -439,6 +436,8 @@
     <AndroidResource Include="Resources\drawable\historial.png" />
     <AndroidResource Include="Resources\drawable\face3.png" />
     <AndroidResource Include="Resources\drawable\clock.png" />
+    <AndroidResource Include="Resources\drawable\logout_colored.png" />
+    <AndroidResource Include="Resources\drawable\endRoute.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

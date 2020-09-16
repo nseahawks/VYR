@@ -29,13 +29,6 @@ namespace VYRMobile.Views
         public TestIcon()
         {
             InitializeComponent();
-
-            BindingContext = new SupervisionViewModel();
-        }
-
-        private async void btnReporte_Clicked(object sender, EventArgs e)
-        {
-            await Navigation.PushModalAsync(new NavigationPage(new CreateReportPage()));
         }
     }
 }

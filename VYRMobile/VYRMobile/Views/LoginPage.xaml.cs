@@ -60,7 +60,7 @@ namespace VYRMobile
                     UserId = await SecureStorage.GetAsync("id"),
                     Type = "Inicio de sesión",
                     RecordType = Record.RecordTypes.LogIn,
-                    Owner = "Yo",
+                    Owner = "Usuario",
                     Date = DateTime.Now,
                     Icon = "outer.png"
                 };
