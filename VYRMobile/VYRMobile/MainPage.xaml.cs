@@ -27,12 +27,33 @@ namespace VYRMobile
                 HeightRequest = 100
             };
 
+            var companyNameLayout = new StackLayout()
+            {
+                Orientation = StackOrientation.Vertical,
+                Spacing = 0
+            };
+            var logoLayout = new StackLayout()
+            {
+                Orientation = StackOrientation.Horizontal,
+                Spacing = 0
+            };
+
             AbsoluteLayout.SetLayoutFlags(splashImage,
                 AbsoluteLayoutFlags.PositionProportional);
             AbsoluteLayout.SetLayoutBounds(splashImage,
                 new Rectangle(0.5, 0.5, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
 
+            AbsoluteLayout.SetLayoutFlags(companyNameLayout, 
+                AbsoluteLayoutFlags.PositionProportional);
+            AbsoluteLayout.SetLayoutBounds(companyNameLayout, 
+                new Rectangle(0.5, 0.95, AbsoluteLayout.AutoSize, AbsoluteLayout.AutoSize));
+
+            logoLayout.Children.Add(label369);
+            logoLayout.Children.Add(labelLabs);
+            companyNameLayout.Children.Add(labelCaption);
+            companyNameLayout.Children.Add(logoLayout);
             sub.Children.Add(splashImage);
+            sub.Children.Add(companyNameLayout);
 
             BackgroundColor = Color.FromHex("#FFFFFF");
             Content = sub;

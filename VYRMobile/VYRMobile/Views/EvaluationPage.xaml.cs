@@ -1,8 +1,10 @@
-﻿using Plugin.Media;
+﻿using Java.Security.Cert;
+using Plugin.Media;
 using Syncfusion.XForms.Buttons;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using VYRMobile.Controls;
 using VYRMobile.Helper;
 using VYRMobile.ViewModels;
 using Xamarin.Forms;
@@ -14,6 +16,7 @@ namespace VYRMobile.Views
     public partial class EvaluationPage : ContentPage
     {
         PermissionsHelper _permissions = new PermissionsHelper();
+        List<CustomSfButton> QualificationButtons;
         public Command AddFaultsCommand { get; set; }
         private static EvaluationPage _instance;
         public static EvaluationPage Instance
@@ -34,6 +37,11 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
             BindingContext = new ReportViewModel();
+            QualificationButtons = new List<CustomSfButton>();
+            QualificationButtons.Add(veryGoodButton);
+            QualificationButtons.Add(goodButton);
+            QualificationButtons.Add(regularButton);
+            QualificationButtons.Add(badButton);
             userLabel.Text = User;
             datePicker.Date = DateTime.Today;
             OkLabelClicked();
@@ -137,6 +145,24 @@ namespace VYRMobile.Views
             faultsView.IsVisible = true;
             faultsView.IsEnabled = true;
         }
+        private void qualificationButton_Clicked(object sender, EventArgs e)
+        {
+            var button = sender as CustomSfButton;
+
+            button.IsEnabled = false;
+
+            foreach (var qualificatonButton in QualificationButtons)
+            {
+                if (button == qualificatonButton)
+                {
+                    qualificatonButton.IsEnabled = false;
+                }
+                else if (qualificatonButton.IsEnabled == false)
+                {
+                    qualificatonButton.IsEnabled = true;
+                }
+            }
+        }
         private async void AddFaults(List<SfCheckBox> checkBoxes)
         {
             foreach (var checkBox in checkBoxes)
@@ -234,7 +260,20 @@ namespace VYRMobile.Views
         {
             if (_switch.IsToggled == true)
             {
-                App.Calculations.Add(new Models.Calculation
+                foreach(var qualificationButton in QualificationButtons)
+                {
+                    if (!qualificationButton.IsEnabled)
+                    {
+                        App.Calculations.Add(new Models.Calculation()
+                        {
+                            Name = "Comportamiento",
+                            Commentary = qualificationEditor.Text,
+                            Percentage = qualificationButton.Percentage
+                        });
+                            
+                    }
+                }
+                /*App.Calculations.Add(new Models.Calculation
                 {
                     Name = "Respeto",
                     Commentary = editor1.Text,
@@ -245,7 +284,7 @@ namespace VYRMobile.Views
                     Name = "Educación",
                     Commentary = editor2.Text,
                     Percentage = slider2.Value
-                });
+                });*/
             }
             try
             {

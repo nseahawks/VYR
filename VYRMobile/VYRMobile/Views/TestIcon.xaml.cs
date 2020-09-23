@@ -1,24 +1,5 @@
-﻿using Plugin.CloudFirestore;
-using Plugin.Media;
-using Rg.Plugins.Popup.Extensions;
-using Syncfusion.XForms.Buttons;
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
-using VYRMobile.Controls;
-using VYRMobile.Data;
-using VYRMobile.Helper;
-using VYRMobile.Models;
-using VYRMobile.Services;
-using VYRMobile.ViewModels;
-using VYRMobile.Views.Popups;
-using Xamarin.Essentials;
+﻿using VYRMobile.ViewModels;
 using Xamarin.Forms;
-using Xamarin.Forms.GoogleMaps;
 using Xamarin.Forms.Xaml;
 
 namespace VYRMobile.Views
@@ -26,9 +7,24 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class TestIcon : ContentPage
     {
+        private static TestIcon _instance;
+        public static TestIcon Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new TestIcon();
+
+                return _instance;
+            }
+        }
         public TestIcon()
         {
             InitializeComponent();
+
+            BindingContext = EquipmentViewModel.CustomInstance;
+            var workerIdLabel = SupervisionPage.Instance.FindByName<Label>("workerIdLabel");
+            EquipmentViewModel.CustomInstance.LoadData(workerIdLabel.Text);
         }
     }
 }

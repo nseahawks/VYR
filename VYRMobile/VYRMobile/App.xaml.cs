@@ -7,8 +7,6 @@ using Newtonsoft.Json;
 using Syncfusion.XForms.Buttons;
 using System.Collections.ObjectModel;
 using Xamarin.Essentials;
-using Microsoft.AppCenter.Crashes;
-using System;
 using System.IdentityModel.Tokens.Jwt;
 using VYRMobile.Views;
 
@@ -44,7 +42,7 @@ namespace VYRMobile
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
             CreateDirectory();
-            MainPage = new MainPage();
+            MainPage = new Test();
         }
         protected override void OnStart()
         {

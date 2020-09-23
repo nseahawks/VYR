@@ -21,7 +21,18 @@ namespace VYRMobile.Views
     {
         private ReportsStore _store { get; set; }
         FirebaseHelper _firebase = new FirebaseHelper();
-        PermissionsHelper _permissions = new PermissionsHelper();
+        PermissionsHelper _permissions = new PermissionsHelper(); 
+        private static SupervisionPage _instance;
+        public static SupervisionPage Instance
+        {
+            get
+            {
+                if (_instance == null)
+                    _instance = new SupervisionPage();
+
+                return _instance;
+            }
+        }
         public SupervisionPage()
         {
             InitializeComponent();

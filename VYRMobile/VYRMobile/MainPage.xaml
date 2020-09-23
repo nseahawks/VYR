@@ -7,5 +7,25 @@
              xmlns:local="clr-namespace:VYRMobile"
              x:Class="VYRMobile.MainPage"
              NavigationPage.HasNavigationBar="False">
-  
+
+    <Grid>
+        <Label
+            x:Name="labelCaption"
+            HorizontalOptions="Center"
+            Text="Un producto de:"
+            TextColor="Black"
+            FontSize="12"/>
+        <Label
+            x:Name="label369"
+            Text="369"
+            TextColor="#FF7E20"
+            FontFamily="{StaticResource PoppinsMedium}"
+            FontSize="24"/>
+        <Label
+            x:Name="labelLabs"
+            Text="labs"
+            TextColor="Black"
+            FontFamily="{StaticResource PoppinsMedium}"
+            FontSize="24"/>
+    </Grid>
 </ContentPage>

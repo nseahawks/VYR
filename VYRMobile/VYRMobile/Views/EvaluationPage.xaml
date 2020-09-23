@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:custombutton="clr-namespace:VYRMobile.Controls"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              xmlns:syncfusion="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
              mc:Ignorable="d"
@@ -105,56 +106,86 @@
                         IsEnabled="False"
                         Margin="15, 0, 15, 0">
                         <Label
-                            Text="Rellene los siguientes campos según su porcentaje:"
+                            Text="Seleccione una calificación para el comportamiento y manejo del trabajador en el panel debajo:"
                             TextColor="{StaticResource GrayColor}"
                             FontFamily="{StaticResource PoppinsMedium}"
+                            HorizontalOptions="Center"
                             FontSize="18"/>
-                        <Label
-                            Text="Respeto hacia los compañeros y superiores"
-                            TextColor="{StaticResource GrayColor}"
-                            FontFamily="{StaticResource PoppinsMedium}"
-                            FontSize="16"
-                            Margin="0, 20, 0, 0"/>
-                        <Slider
-                            x:Name="slider1"
-                            MinimumTrackColor="{StaticResource BaseColor}"
-                            ThumbColor="{StaticResource BaseColor}"
-                            Maximum="100"/>
-                        <Label
-                            x:Name="lbl1"
-                            Text="{Binding Source={x:Reference slider1}, Path=Value, StringFormat='{0:F0}%'}"
-                            TextColor="Black"
+                        <Frame
+                            VerticalOptions="Center"
                             HorizontalOptions="Center"
-                            FontFamily="{StaticResource PoppinsMedium}"
-                            FontSize="16"/>
+                            HeightRequest="50"
+                            WidthRequest="340"
+                            CornerRadius="10"
+                            Padding="0"
+                            HasShadow="True">
+                            <StackLayout
+                                Orientation="Horizontal"
+                                Spacing="0">
+                                <custombutton:CustomSfButton
+                                    x:Name="veryGoodButton"
+                                    HeightRequest="50"
+                                    WidthRequest="85"
+                                    HasShadow="True"
+                                    BackgroundColor="SeaGreen"
+                                    Text="EXCELENTE"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    FontFamily="{StaticResource PoppinsBold}"
+                                    FontSize="12"
+                                    Padding="0"
+                                    Percentage="100"
+                                    Clicked="qualificationButton_Clicked"/>
+                                <custombutton:CustomSfButton
+                                    x:Name="goodButton"
+                                    HeightRequest="50"
+                                    WidthRequest="85"
+                                    HasShadow="True"
+                                    BackgroundColor="#06C17C"
+                                    Text="BUENO"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    FontFamily="{StaticResource PoppinsBold}"
+                                    FontSize="12"
+                                    Padding="0"
+                                    Percentage="75"
+                                    Clicked="qualificationButton_Clicked"/>
+                                <custombutton:CustomSfButton
+                                    x:Name="regularButton"
+                                    HeightRequest="50"
+                                    WidthRequest="85"
+                                    HasShadow="True"
+                                    BackgroundColor="Orange"
+                                    Text="REGULAR"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    FontFamily="{StaticResource PoppinsBold}"
+                                    FontSize="12"
+                                    Padding="0"
+                                    Percentage="50"
+                                    Clicked="qualificationButton_Clicked"/>
+                                <custombutton:CustomSfButton
+                                    x:Name="badButton"
+                                    HeightRequest="50"
+                                    WidthRequest="85"
+                                    HasShadow="True"
+                                    BackgroundColor="#DD0808"
+                                    Text="MALO"
+                                    TextColor="White"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                    FontFamily="{StaticResource PoppinsBold}"
+                                    FontSize="12"
+                                    Padding="0"
+                                    Percentage="25"
+                                    Clicked="qualificationButton_Clicked"/>
+                            </StackLayout>
+                        </Frame>
                         <Editor
-                            x:Name="editor1"
-                            Keyboard="Text"
-                            Placeholder="Comentarios..."
-                            PlaceholderColor="DarkGray"
-                            BackgroundColor="#F9F8F8"
-                            FontFamily="{StaticResource PoppinsMedium}"
-                            HeightRequest="100"
-                            HorizontalOptions="FillAndExpand"/>
-                        <Label
-                            Text="Educación mostrada por el trabajador"
-                            TextColor="{StaticResource GrayColor}"
-                            FontFamily="{StaticResource PoppinsMedium}"
-                            FontSize="16"/>
-                        <Slider
-                            x:Name="slider2"
-                            MinimumTrackColor="{StaticResource BaseColor}"
-                            ThumbColor="{StaticResource BaseColor}"
-                            Maximum="100"/>
-                        <Label
-                            x:Name="lbl2"
-                            Text="{Binding Source={x:Reference slider2}, Path=Value, StringFormat='{0:F0}%'}"
-                            TextColor="Black"
-                            HorizontalOptions="Center"
-                            FontFamily="{StaticResource PoppinsMedium}"
-                            FontSize="16"/>
-                        <Editor
-                            x:Name="editor2"
+                            x:Name="qualificationEditor"
                             Keyboard="Text"
                             Placeholder="Comentarios..."
                             PlaceholderColor="DarkGray"

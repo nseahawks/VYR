@@ -11,205 +11,22 @@
              xmlns:local="clr-namespace:VYRMobile.ViewModels"
              xmlns:magic="clr-namespace:MagicGradients;assembly=MagicGradients"
              xmlns:stepBar="clr-namespace:Syncfusion.XForms.ProgressBar;assembly=Syncfusion.SfProgressBar.XForms"
+             xmlns:autocomplete="clr-namespace:Syncfusion.SfAutoComplete.XForms;assembly=Syncfusion.SfAutoComplete.XForms"
              mc:Ignorable="d"
              x:Class="VYRMobile.Views.Test"
              NavigationPage.HasBackButton="False"
              Title="Validación de Asistencia"
              BackgroundColor="White">
-    <ContentPage.Resources>
-        <ResourceDictionary>
-            <Style x:Key="ButtonStyle" TargetType="button:SfButton">
-                <Setter Property="BackgroundColor" Value="{DynamicResource PrimaryColor}"/>
-                <Setter Property="FontFamily" Value="{StaticResource PoppinsMedium}"/>
-                <Setter Property="FontSize" Value="{StaticResource FontSize14}" />
-                <Setter Property="TextColor" Value="{StaticResource SecondaryColor}" />
-                <Setter Property="HeightRequest" Value="40" />
-                <Setter Property="WidthRequest" Value="120" />
-                <Setter Property="CornerRadius" Value="5" />
-            </Style>
-        </ResourceDictionary>
-    </ContentPage.Resources>
-    <Grid>
+
+    <ContentPage.Content>
         <StackLayout>
-            <stepBar:SfStepProgressBar
-                x:Name="progressBar"
-                HorizontalOptions="Center"
-                Orientation="Horizontal"
-                TitleSpace="10"
-                TitleAlignment="Center" 
-                BackgroundColor="Transparent"
-                HeightRequest="60"
-                Margin="0, 20, 0, 0">
-                <stepBar:SfStepProgressBar.NotStartedStepStyle>
-                    <stepBar:StepStyle
-                        x:TypeArguments="stepBar:NotStartedStepState"
-                        MarkerShapeType="Circle" 
-                        MarkerStrokeColor="{DynamicResource PrimaryColor}"
-                        MarkerStrokeWidth="3" 
-                        MarkerContentType="Dot" 
-                        MarkerContentFillColor="Transparent"
-                        MarkerSize="25"
-                        MarkerContentSize="10"/>
-                </stepBar:SfStepProgressBar.NotStartedStepStyle>
-                <stepBar:SfStepProgressBar.InProgressStepStyle>
-                    <stepBar:StepStyle
-                        x:TypeArguments="stepBar:InProgressStepState"
-                        MarkerShapeType="Circle" 
-                        MarkerStrokeColor="{DynamicResource PrimaryColor}" 
-                        MarkerStrokeWidth="3"
-                        MarkerContentType="None" 
-                        MarkerContentFillColor="White"
-                        MarkerSize="25"
-                        MarkerContentSize="10"/>
-                </stepBar:SfStepProgressBar.InProgressStepStyle>
-                <stepBar:SfStepProgressBar.CompletedStepStyle>
-                    <stepBar:StepStyle
-                        x:TypeArguments="stepBar:CompletedStepState"
-                        MarkerShapeType="Circle" 
-                        MarkerStrokeColor="{DynamicResource PrimaryColor}" 
-                        MarkerStrokeWidth="3"
-                        MarkerContentType="Tick" 
-                        MarkerContentFillColor="{DynamicResource PrimaryColor}"
-                        MarkerSize="25"
-                        MarkerContentSize="10"/>
-                </stepBar:SfStepProgressBar.CompletedStepStyle>
-                <stepBar:StepView 
-                    x:Name="step1"
-                    Status="InProgress"
-                    HorizontalOptions="Center">
-                    <stepBar:StepView.PrimaryFormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="Paso 1" 
-                                FontSize="14" 
-                                TextColor="Black"
-                                FontAttributes="Bold"/>
-                        </FormattedString>
-                    </stepBar:StepView.PrimaryFormattedText>
-                    <stepBar:StepView.SecondaryFormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="Codigo" 
-                                FontSize="12" 
-                                TextColor="Black"/>
-                        </FormattedString>
-                    </stepBar:StepView.SecondaryFormattedText>
-                </stepBar:StepView>
-                <stepBar:StepView 
-                    x:Name="step2"
-                    Status="NotStarted"
-                    HorizontalOptions="Center">
-                    <stepBar:StepView.PrimaryFormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="Paso 2" 
-                                FontSize="14" 
-                                TextColor="Black"
-                                FontAttributes="Bold"/>
-                        </FormattedString>
-                    </stepBar:StepView.PrimaryFormattedText>
-                    <stepBar:StepView.SecondaryFormattedText>
-                        <FormattedString>
-                            <Span 
-                                Text="Archivo de imagen" 
-                                FontSize="12" 
-                                TextColor="Black"/>
-                        </FormattedString>
-                    </stepBar:StepView.SecondaryFormattedText>
-                </stepBar:StepView>
-            </stepBar:SfStepProgressBar>
+            <autocomplete:SfAutoComplete
+                HeightRequest="40"
+                DataSource="{Binding talCosa}"
+                DisplayMemberPath="FullName"
+                SuggestionMode="Contains">
+                
+            </autocomplete:SfAutoComplete>
         </StackLayout>
-        <StackLayout
-            x:Name="loadingLayout"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Opacity="0">
-            <Label
-                Text="Validando..."
-                TextColor="Black"
-                FontAttributes="Bold"
-                FontSize="18"/>
-            <ActivityIndicator
-                x:Name="indicator"
-                Color="{DynamicResource PrimaryColor}"
-                HeightRequest="80"
-                WidthRequest="80"
-                IsRunning="False"
-                VerticalOptions="Center"
-                HorizontalOptions="Center"/>
-        </StackLayout>
-        <StackLayout
-            x:Name="imageLayout"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            Opacity="0">
-            <Label
-                Text="Adjunte una foto"
-                TextColor="Black"
-                FontSize="18"
-                FontAttributes="Bold"
-                HorizontalOptions="Center"/>
-            <Frame
-                x:Name="photoFrame"
-                BackgroundColor="{DynamicResource PrimaryColor}"
-                HeightRequest="100"
-                WidthRequest="200"
-                CornerRadius="20"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"
-                IsClippedToBounds="True"
-                Padding="0"
-                HasShadow="True">
-                <Image
-                    x:Name="pic"
-                    Source="camera2.png"
-                    Aspect="AspectFit"/>
-            </Frame>
-            <Label
-                Text="(presione la imagen)"
-                TextColor="Black"
-                FontSize="12"
-                FontAttributes="None"
-                HorizontalOptions="Center"/>
-        </StackLayout>
-        <StackLayout
-            x:Name="codeLayout"
-            VerticalOptions="Center"
-            HorizontalOptions="Center">
-            <Label
-                Text="Introduzca el codigo del vigilante"
-                TextColor="Black"
-                FontAttributes="Bold"
-                FontSize="18"/>
-            <Entry
-                x:Name="codeEntry"
-                Keyboard="Numeric"
-                HorizontalTextAlignment="Center"
-                ClearButtonVisibility="WhileEditing"
-                FontSize="22"
-                FontAttributes="Bold"
-                BackgroundColor="White"
-                TextColor="Black"
-                HeightRequest="60" 
-                WidthRequest="150"/>
-        </StackLayout>
-        <button:SfButton
-            x:Name="btnNext"
-            Text="Siguiente"
-            Style="{StaticResource ButtonStyle}"
-            VerticalOptions="End"
-            HorizontalOptions="End"
-            HasShadow="True"
-            Margin="0, 0, 35, 70"/>
-        <button:SfButton
-            x:Name="btnBack"
-            Text="Atras"
-            Style="{StaticResource ButtonStyle}"
-            VerticalOptions="End"
-            HorizontalOptions="Start"
-            HasShadow="True"
-            Opacity="0"
-            IsEnabled="False"
-            Margin="35, 0, 0, 70"/>
-    </Grid>
+    </ContentPage.Content>
 </ContentPage>

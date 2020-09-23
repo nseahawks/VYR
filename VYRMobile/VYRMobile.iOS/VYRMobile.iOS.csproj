@@ -166,28 +166,31 @@
       <Version>1.2.0.223</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Licensing">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.Buttons">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete">
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfComboBox">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPicker">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfPopupLayout">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfProgressBar">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfTabView">
-      <Version>17.4.0.46</Version>
+      <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="WindowsAzure.Storage">
       <Version>9.3.3</Version>

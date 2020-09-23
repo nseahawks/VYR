@@ -16,6 +16,14 @@ namespace VYRMobile.ViewModels
                 return _instance;
             }
         }
+        private readonly static EquipmentViewModel _customInstance = new EquipmentViewModel("");
+        public static EquipmentViewModel CustomInstance
+        {
+            get
+            {
+                return _customInstance;
+            }
+        }
         private ObservableCollection<EquipmentItem> _equipment;
         public ObservableCollection<EquipmentItem> Equipment
         {
@@ -53,15 +61,21 @@ namespace VYRMobile.ViewModels
         public EquipmentViewModel()
         {
             Equipment = new ObservableCollection<EquipmentItem>();
-            LoadData();
+            LoadData(App.ApplicationUserId);
 
             ToggleColor = Color.FromHex("#01BD00");
         }
-        private async void LoadData()
+        public EquipmentViewModel(string param)
+        {
+            Equipment = new ObservableCollection<EquipmentItem>();
+
+            ToggleColor = Color.FromHex("#01BD00");
+        }
+        public async void LoadData(string _userId)
         {
             try
             {
-                var equipos = await EquipmentService.Instance.GetEquipos();
+                var equipos = await EquipmentService.Instance.GetEquipos(_userId);
                 Equipment.Clear();
                 foreach (var equipo in equipos)
                 {

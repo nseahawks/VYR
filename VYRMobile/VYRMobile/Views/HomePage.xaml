@@ -226,6 +226,16 @@
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
                 <!--BOTON PARA ESCANEAR QR-->
+                <button:SfButton
+                    x:Name="sosButton"
+                    Style="{DynamicResource CallIcon}"
+                    HasShadow="True"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    CornerRadius="60"
+                    VerticalOptions="Start"
+                    HorizontalOptions="Start"
+                    Margin="8, 15, 0, 0"/>
                 <button:SfButton 
                     x:Name="QR"
                     FontFamily="{StaticResource PoppinsMedium}"
@@ -241,7 +251,7 @@
                     HasShadow="True"
                     Margin="0,15,0,0"/>
                 <!--BOTON DE LA LLAMADA-->
-                <button:SfButton 
+                <button:SfButton
                     x:Name="btnCall"
                     Style="{DynamicResource CallIcon}"
                     HasShadow="True"

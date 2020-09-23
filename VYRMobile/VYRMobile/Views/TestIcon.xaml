@@ -12,22 +12,75 @@
 
     <ContentPage.Content>
         <StackLayout
-                VerticalOptions="Center"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Label
+                Text="Confirmación de equipo"
+                TextColor="Black"
+                FontFamily="{StaticResource PoppinsMedium}"
+                FontSize="16"
+                HorizontalOptions="Center"/>
+            <StackLayout
+                Orientation="Horizontal"
                 HorizontalOptions="Center">
-            <Frame
-                VerticalOptions="Fill"
-                HorizontalOptions="Fill"
-                HasShadow="True"
-                BorderColor="#AAB5B6"
-                CornerRadius="4"
-                Padding="0">
-                <Entry
-                    Placeholder="Escriba aquí"
-                    HeightRequest="55"
-                    WidthRequest="200"
+                <Image
+                    Source="user2.png"
+                    HeightRequest="25"
+                    WidthRequest="25"/>
+                <Label
+                    x:Name="userFullnameLabel"
+                    TextColor="{DynamicResource PrimaryColor}"
+                    FontFamily="{StaticResource PoppinsMedium}"
+                    FontSize="16"
                     VerticalOptions="Center"
-                    HorizontalOptions="Center"/>
-            </Frame>
+                    HorizontalOptions="Start"/>
+            </StackLayout>
+            <ListView 
+                x:Name="itemsList"
+                ItemsSource="{Binding Equipment, Mode=TwoWay}"
+                SelectionMode="None"
+                HasUnevenRows="True"
+                SeparatorVisibility="Default">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid   
+                                ColumnSpacing="0"
+                                RowSpacing="1">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="60" />
+                                    <ColumnDefinition Width="200" />
+                                    <ColumnDefinition Width="60" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="40" />
+                                </Grid.RowDefinitions>
+                                <Image  
+                                    Source="label.png"
+                                    Grid.Column="0"
+                                    VerticalOptions="Center"
+                                    HorizontalOptions="Center"
+                                    HeightRequest="15"
+                                    WidthRequest="15"
+                                    Margin="5,0,0,0"/>
+                                <Label  
+                                    Grid.Column="1"
+                                    Text="{Binding Name}"
+                                    TextColor="Black"
+                                    FontFamily="{StaticResource PoppinsMedium}"
+                                    FontSize="20"
+                                    Margin="10,5,0,0"/>
+                                <Switch 
+                                    Grid.Column="2"
+                                    x:Name="optionSwitch"
+                                    IsToggled="{Binding Toggle, Mode=TwoWay}"
+                                    ThumbColor="{Binding ToggleColor}"
+                                    OnColor="{Binding ToggleColor}"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
             <Frame
                 HeightRequest="200"
                 WidthRequest="320"
