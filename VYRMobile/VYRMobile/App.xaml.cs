@@ -42,7 +42,7 @@ namespace VYRMobile
             InitializeComponent();
             GoogleMapsApiService.Initialize(Constants.GoogleMapsApiKey);
             CreateDirectory();
-            MainPage = new Test();
+            MainPage = new MainPage();
         }
         protected override void OnStart()
         {

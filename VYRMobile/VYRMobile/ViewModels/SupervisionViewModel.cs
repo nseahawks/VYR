@@ -1,46 +1,76 @@
 ﻿using MvvmHelpers;
+using System;
 using System.Collections.ObjectModel;
+using VYRMobile.Data;
 using VYRMobile.Models;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace VYRMobile.ViewModels
 {
     public class SupervisionViewModel : ObservableObject
     {
-        public Command ChangeStateCommand { get; set; }
-        private ObservableCollection<CompanyLocation> antenas;
-        public ObservableCollection<CompanyLocation> Antenas
+        private readonly static SupervisionViewModel _instance = new SupervisionViewModel();
+        public static SupervisionViewModel Instance
         {
-            get { return antenas; }
+            get
+            {
+                return _instance;
+            }
+        }
+        private ObservableCollection<ApplicationUser> _workers;
+        public ObservableCollection<ApplicationUser> Workers
+        {
+            get { return _workers; }
             set
             {
-                antenas = value;
+                _workers = value;
                 OnPropertyChanged();
             }
         }
         public SupervisionViewModel()
         {
-            Antenas = new ObservableCollection<CompanyLocation>()
-            {
-                new CompanyLocation{PointChecked = false},
-                new CompanyLocation{PointChecked = true},
-                new CompanyLocation{PointChecked = false}
-            };
+            Workers = new ObservableCollection<ApplicationUser>();
 
-            ChangeStateCommand = new Command(ChangeAntennaState);
+            GetWorkers();
         }
-        private void ChangeAntennaState()
+        private async void GetWorkers()
         {
-            foreach(var antena in Antenas)
+            try
             {
-                if(antena.PointChecked == false)
+                var workers = await ReportsStore.Instance.GetUsersAsync();
+
+                App.Workers.Clear();
+                App.ExchangeableWorkers.Clear();
+
+                foreach (var worker in workers)
                 {
-                    antena.PointChecked = true;
+                    var lastEvaluatedDate = await SecureStorage.GetAsync("lastEvaluatedDate");
+                    worker.FullName = worker.FirstName + " " + worker.LastName;
+
+                    if (App.ExchangeableWorkers.Contains(worker) == false && worker.Exchange == true)
+                    {
+                        App.ExchangeableWorkers.Add(worker);
+                    }
+
+                    if (lastEvaluatedDate != DateTime.Now.ToString("dd/MM/yyyy"))
+                    {
+                        worker.IsAssist = false;
+                        App.Workers.Add(worker);
+                        Workers.Add(worker);
+                    }
+                    else
+                    {
+                        App.Workers.Add(worker);
+                        Workers.Add(worker);
+                    }
                 }
-                else
-                {
-                    antena.PointChecked = false;
-                }
+
+                await SecureStorage.SetAsync("lastEvaluatedDate", DateTime.Now.ToString("dd/MM/yyyy"));
+            }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "No se puede procesar la informacion en este momento", "Aceptar");
             }
         }
     }

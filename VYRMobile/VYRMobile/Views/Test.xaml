@@ -19,14 +19,19 @@
              BackgroundColor="White">
 
     <ContentPage.Content>
-        <StackLayout>
-            <autocomplete:SfAutoComplete
-                HeightRequest="40"
-                DataSource="{Binding talCosa}"
-                DisplayMemberPath="FullName"
-                SuggestionMode="Contains">
-                
-            </autocomplete:SfAutoComplete>
+        <StackLayout
+            Orientation="Horizontal"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Label
+                Text="Ver equipo"
+                TextColor="#006bcd"
+                FontSize="18"
+                TextDecorations="Underline"/>
+            <Image
+                Source="linkBlue.png"
+                HeightRequest="15"
+                WidthRequest="15"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

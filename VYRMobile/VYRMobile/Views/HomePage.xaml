@@ -228,7 +228,10 @@
                 <!--BOTON PARA ESCANEAR QR-->
                 <button:SfButton
                     x:Name="sosButton"
-                    Style="{DynamicResource CallIcon}"
+                    BackgroundColor="#DD0808"
+                    Clicked="sosButton_Clicked"
+                    Text="SOS"
+                    FontSize="20"
                     HasShadow="True"
                     HeightRequest="60"
                     WidthRequest="60"

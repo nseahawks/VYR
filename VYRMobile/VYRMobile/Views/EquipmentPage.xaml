@@ -120,8 +120,8 @@
                                         x:Name="optionSwitch"
                                         Toggled="optionSwitch_Toggled"
                                         IsToggled="{Binding Toggle, Mode=TwoWay}"
-                                        ThumbColor="{Binding ToggleColor}"
-                                        OnColor="{Binding ToggleColor}"/> 
+                                        ThumbColor="#01BD00"
+                                        OnColor="#01BD00"/> 
                                 </Grid>
                             </ViewCell>
                         </DataTemplate>

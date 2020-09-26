@@ -21,10 +21,9 @@ namespace VYRMobile.Services
 
         public async Task<IEnumerable<EquipmentItem>> GetEquipos(string _userId)
         {
-
                 var items = await CrossCloudFirestore.Current.Instance
                                             .GetCollection("Items")
-                                            .GetDocument(App.ApplicationUserId)
+                                            .GetDocument(_userId)
                                             .GetCollection("Item")
                                             .GetDocumentsAsync();
                 IEnumerable<EquipmentItem> itemslist = items.ToObjects<EquipmentItem>();

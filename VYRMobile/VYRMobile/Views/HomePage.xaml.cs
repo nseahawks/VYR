@@ -1,5 +1,8 @@
 ﻿using Rg.Plugins.Popup.Extensions;
 using System;
+using VYRMobile.Data;
+using VYRMobile.Models;
+using VYRMobile.Services;
 using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
 using Xamarin.Forms;
@@ -68,6 +71,30 @@ namespace VYRMobile
         private void LocationChecking()
         {
             locationChecking.Command.Execute(null);
+        }
+
+        private async void sosButton_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushPopupAsync(new LoadingPopup("Enviando informe..."));
+            Report sosReport = new Report()
+            {
+                Title = "Emergencia",
+                Description = "El trabajador requiere de ayuda urgente",
+                Created = DateTime.Now
+            };
+
+            var isSuccess = await ReportsStore.Instance.SendEventualityReportAsync(sosReport);
+
+            await Navigation.PopPopupAsync();
+
+            if(isSuccess)
+            {
+                DependencyService.Get<IToast>().LongToast("Informe enviado");
+            }
+            else
+            {
+                await DisplayAlert("Error", "No se pudo conectar, intente de nuevo", "Aceptar");
+            }
         }
     }
 }

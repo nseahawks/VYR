@@ -107,7 +107,7 @@ namespace VYRMobile
                 }
                 else
                 {
-                    Application.Current.MainPage = new NavigationPage(new TabMenuPage());
+                    Application.Current.MainPage = new NavigationPage(new EquipmentPage());
                 }
             }
             else

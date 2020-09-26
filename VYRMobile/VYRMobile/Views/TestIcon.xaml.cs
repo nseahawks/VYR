@@ -13,18 +13,16 @@ namespace VYRMobile.Views
             get
             {
                 if (_instance == null)
-                    _instance = new TestIcon();
+                    _instance = new TestIcon("");
 
                 return _instance;
             }
         }
-        public TestIcon()
+        public TestIcon(string workerId)
         {
             InitializeComponent();
 
-            BindingContext = EquipmentViewModel.CustomInstance;
-            var workerIdLabel = SupervisionPage.Instance.FindByName<Label>("workerIdLabel");
-            EquipmentViewModel.CustomInstance.LoadData(workerIdLabel.Text);
+            BindingContext = new EquipmentViewModel(workerId);
         }
     }
 }

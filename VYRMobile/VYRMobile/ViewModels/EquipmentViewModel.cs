@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Runtime.InteropServices;
 using VYRMobile.Models;
 using VYRMobile.Services;
 using Xamarin.Forms;
@@ -61,21 +62,30 @@ namespace VYRMobile.ViewModels
         public EquipmentViewModel()
         {
             Equipment = new ObservableCollection<EquipmentItem>();
-            LoadData(App.ApplicationUserId);
+            LoadData();
 
             ToggleColor = Color.FromHex("#01BD00");
         }
-        public EquipmentViewModel(string param)
+        public EquipmentViewModel(string _userId)
         {
             Equipment = new ObservableCollection<EquipmentItem>();
-
+            LoadData(_userId);
             ToggleColor = Color.FromHex("#01BD00");
         }
-        public async void LoadData(string _userId)
+        public async void LoadData([Optional] string _workerId)
         {
             try
             {
-                var equipos = await EquipmentService.Instance.GetEquipos(_userId);
+                string id;
+                if(_workerId != null)
+                {
+                    id = _workerId;
+                }
+                else 
+                {
+                    id = App.ApplicationUserId;
+                }
+                var equipos = await EquipmentService.Instance.GetEquipos(id);
                 Equipment.Clear();
                 foreach (var equipo in equipos)
                 {

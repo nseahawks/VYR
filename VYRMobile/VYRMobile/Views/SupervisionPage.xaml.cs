@@ -9,6 +9,7 @@ using VYRMobile.Data;
 using VYRMobile.Helper;
 using VYRMobile.Models;
 using VYRMobile.Services;
+using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -37,13 +38,13 @@ namespace VYRMobile.Views
         {
             InitializeComponent();
 
-            //BindingContext = new SupervisionViewModel();
+            BindingContext = SupervisionViewModel.Instance;
 
             _store = new ReportsStore();
 
             saveChangesButton.IsEnabled = false;
             TakePhoto();
-            GetWorkers();
+            EquipmentLink();
 
             btnNext.Clicked += BtnNext_Clicked;
             btnBack.Clicked += BtnBack_Clicked;
@@ -85,29 +86,6 @@ namespace VYRMobile.Views
         {
             base.OnAppearing();
         }
-        IEnumerable<ApplicationUser> GetWorkers(string searchText = null)
-        {
-            if (string.IsNullOrEmpty(searchText))
-            {
-                workersList.IsVisible = false;
-                workersList.IsEnabled = false;
-            }
-            return App.Workers.Where(p => p.FullName.Contains(searchText, StringComparison.OrdinalIgnoreCase));
-        }
-        private void SearchBar_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            if (workersList.IsVisible == false)
-            {
-                workersList.IsVisible = true;
-                workersList.IsEnabled = true;
-                workersList.ItemsSource = GetWorkers(e.NewTextValue);
-            }
-            else
-            {
-                workersList.ItemsSource = GetWorkers(e.NewTextValue);
-            }
-        }
-
         private void exchangeCheckbox_CheckedChanged(object sender, Xamarin.Forms.CheckedChangedEventArgs e)
         {
             saveChangesButton.IsEnabled = true;
@@ -124,13 +102,11 @@ namespace VYRMobile.Views
                 NumberOfTapsRequired = 1
             });
         }
-        private async void workersList_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void searchBar_SelectionChanged(object sender, Syncfusion.SfAutoComplete.XForms.SelectionChangedEventArgs e)
         {
-            var sel = e.Item as ApplicationUser;
-            App.WorkerOnReview = sel;
+            var worker = searchBar.SelectedItem as ApplicationUser;
+            App.WorkerOnReview = worker;
 
-            workersList.IsVisible = false;
-            workersList.IsEnabled = false;
             isEmptyLabel.IsVisible = false;
             saveChangesButton.IsEnabled = false;
             notSavedLabel.IsVisible = false;
@@ -147,12 +123,12 @@ namespace VYRMobile.Views
             await Task.Delay(1000);
 
             activityIndicator.IsVisible = false;
-            workerNameLabel.Text = sel.FullName;
+            workerNameLabel.Text = worker.FullName;
             dateLabel.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
-            workerIdLabel.Text = sel.Id;
-            workerScheduleLabel.Text = "Turno:" + sel.Schedule;
+            workerIdLabel.Text = worker.Id;
+            workerScheduleLabel.Text = "Turno:" + worker.Schedule;
 
-            if (sel.IsAssist == true)
+            if (worker.IsAssist == true)
             {
                 isValidatedLabel.Text = "(validado)";
                 isValidatedLabel.TextColor = Color.FromHex("#06C17C");
@@ -165,7 +141,7 @@ namespace VYRMobile.Views
                 validateButton.IsEnabled = true;
             }
 
-            if (sel.Capacitated == true)
+            if (worker.Capacitated == true)
             {
                 capacitatedImg.IsVisible = true;
             }
@@ -174,7 +150,7 @@ namespace VYRMobile.Views
                 capacitatedImg.IsVisible = false;
             }
 
-            if (sel.Exchange == true)
+            if (worker.Exchange == true)
             {
                 exchangeCheckbox.IsChecked = true;
             }
@@ -184,7 +160,6 @@ namespace VYRMobile.Views
             }
 
             OnWorkerInfoAppearing();
-
         }
         private void OnWorkerInfoAppearing()
         {
@@ -237,44 +212,6 @@ namespace VYRMobile.Views
             validationView.IsEnabled = false;
 
             validationView.Animate("FadeOut", animation, 16, Convert.ToUInt32(duration));
-        }
-        private async void GetWorkers()
-        {
-            try
-            {
-                var workers = await ReportsStore.Instance.GetUsersAsync();
-
-                App.Workers.Clear();
-                App.ExchangeableWorkers.Clear();
-
-                foreach (var worker in workers)
-                {
-                    var lastEvaluatedDate = await SecureStorage.GetAsync("lastEvaluatedDate");
-                    worker.FullName = worker.FirstName + " " + worker.LastName;
-
-                    if (App.ExchangeableWorkers.Contains(worker) == false && worker.Exchange == true)
-                    {
-                        App.ExchangeableWorkers.Add(worker);
-                    }
-
-                    if (lastEvaluatedDate != DateTime.Now.ToString("dd/MM/yyyy"))
-                    {
-                        worker.IsAssist = false;
-                        App.Workers.Add(worker);
-                    }
-                    else
-                    {
-                        App.Workers.Add(worker);
-                    }
-                }
-
-                await SecureStorage.SetAsync("lastEvaluatedDate", DateTime.Now.ToString("dd/MM/yyyy"));
-            }
-            catch
-            {
-                await DisplayAlert("Error", "No se puede procesar la informacion en este momento", "Aceptar");
-            }
-            
         }
         private void BtnNext_Clicked(object sender, EventArgs e)
         {
@@ -467,6 +404,17 @@ namespace VYRMobile.Views
                 NumberOfTapsRequired = 1
             });
         }
+        private void EquipmentLink()
+        {
+            equipmentLinkLayout.GestureRecognizers.Add(new TapGestureRecognizer()
+            {
+                Command = new Command(async () =>
+                {
+                    await Navigation.PushPopupAsync(new EditEquipmentPopup());
+                }),
+                NumberOfTapsRequired = 1
+            });
+        }
         private async Task<string> UploadPhoto()
         {
             var UserId = await SecureStorage.GetAsync("id");
@@ -500,7 +448,10 @@ namespace VYRMobile.Views
                 newUser.IsAssist = true;
 
                 App.Workers[App.Workers.FindIndex(ind => ind.Equals(oldUser))] = newUser;
-                workersList.ItemsSource = App.Workers;
+
+                SupervisionViewModel.Instance.Workers.Remove(SupervisionViewModel.Instance.Workers.Where(user => user.Id == oldUser.Id).FirstOrDefault());
+
+                SupervisionViewModel.Instance.Workers.Add(newUser);
 
 
                 return IsValidated;
@@ -521,10 +472,12 @@ namespace VYRMobile.Views
                 newUser.Exchange = exchangeCheckbox.IsChecked;
 
                 App.Workers[App.Workers.FindIndex(ind => ind.Equals(oldUser))] = newUser;
-
-                workersList.ItemsSource = App.Workers;
-
-
+                SupervisionViewModel.Instance.Workers
+                                    .Remove(SupervisionViewModel.Instance.Workers
+                                    .Where(user => user.Id == oldUser.Id)
+                                    .FirstOrDefault());
+                SupervisionViewModel.Instance.Workers.Add(newUser);
+                    
                 if (App.ExchangeableWorkers.Contains(oldUser) || newUser.Exchange == false)
                 {
                     App.ExchangeableWorkers.Remove(oldUser);
@@ -535,7 +488,6 @@ namespace VYRMobile.Views
                 }
 
                 App.ExchangeableWorkers = new System.Collections.ObjectModel.ObservableCollection<ApplicationUser>(App.ExchangeableWorkers.OrderByDescending(workers => workers.FullName));
-
 
                 DependencyService.Get<IToast>().LongToast("Hecho");
 
