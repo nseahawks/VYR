@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using VYRMobile.Models;
 using VYRMobile.Services;
 using Xamarin.Forms;
@@ -9,6 +10,7 @@ namespace VYRMobile.ViewModels
 {
     public class EquipmentViewModel : BindableObject
     {
+        public Command SetEquipmentCommand { get; set; }
         private readonly static EquipmentViewModel _instance = new EquipmentViewModel();
         public static EquipmentViewModel Instance
         {
@@ -35,6 +37,16 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
+        private List<EquipmentItem> _equipmentList;
+        public List<EquipmentItem> EquipmentList
+        {
+            get { return _equipmentList; }
+            set
+            {
+                _equipmentList = value;
+                OnPropertyChanged();
+            }
+        }
         private bool _isEmpty;
         public bool IsEmpty
         {
@@ -43,6 +55,16 @@ namespace VYRMobile.ViewModels
             {
                 _isEmpty = value;
                 OnPropertyChanged(nameof(IsEmpty));
+            }
+        }
+        private bool needsJustification;
+        public bool NeedsJustification
+        {
+            get { return needsJustification; }
+            set
+            {
+                needsJustification = value;
+                OnPropertyChanged(nameof(NeedsJustification));
             }
         }
         private Color toggleColor;
@@ -62,22 +84,22 @@ namespace VYRMobile.ViewModels
         public EquipmentViewModel()
         {
             Equipment = new ObservableCollection<EquipmentItem>();
-            LoadData();
+            LoadData("");
 
             ToggleColor = Color.FromHex("#01BD00");
         }
         public EquipmentViewModel(string _userId)
         {
             Equipment = new ObservableCollection<EquipmentItem>();
-            LoadData(_userId);
+            //LoadData(_userId);
             ToggleColor = Color.FromHex("#01BD00");
         }
-        public async void LoadData([Optional] string _workerId)
+        public async void LoadData(string _workerId)
         {
             try
             {
                 string id;
-                if(_workerId != null)
+                if(string.IsNullOrEmpty(_workerId))
                 {
                     id = _workerId;
                 }
@@ -85,11 +107,12 @@ namespace VYRMobile.ViewModels
                 {
                     id = App.ApplicationUserId;
                 }
-                var equipos = await EquipmentService.Instance.GetEquipos(id);
+                var equipos = await EquipmentService.Instance.GetEquipment(id);
                 Equipment.Clear();
                 foreach (var equipo in equipos)
                 {
                     Equipment.Add(equipo);
+                    EquipmentList.Add(equipo);
                 }
 
                 if (Equipment.Count == 0)
@@ -104,20 +127,13 @@ namespace VYRMobile.ViewModels
             catch
             {
                 await App.Current.MainPage.DisplayAlert("Error", "No es posible conectar con el servidor", "Aceptar");
-                await App.Current.MainPage.Navigation.PopAsync();
+                await App.Current.MainPage.Navigation.PopToRootAsync();
                 return;
             }
         }
-        public bool getEquipos()
+        public bool getEquipment()
         {
-            List<EquipmentItem> items = new List<EquipmentItem>();
-
-            foreach(var item in Equipment)
-            {
-                items.Add(item);
-            }
-
-            var isEquipmentReady = items.TrueForAll(isTrueForAll);
+            var isEquipmentReady = EquipmentList.TrueForAll(isTrueForAll);
 
             if(isEquipmentReady)
             {
@@ -142,6 +158,25 @@ namespace VYRMobile.ViewModels
             }
 
             return items;
+        }
+        public async Task<bool> UpdateEquipment(string userId)
+        {
+            var isSuccess = await EquipmentService.Instance.SetEquipment(Equipment, userId);
+
+            return isSuccess;
+        }
+        public void EnableOrDisableCommentaryBox()
+        {
+            var isEquipmentReady = EquipmentList.TrueForAll(isTrueForAll);
+
+            if (isEquipmentReady)
+            {
+                NeedsJustification = false;
+            }
+            else
+            {
+                NeedsJustification = true;
+            }
         }
     }
 }

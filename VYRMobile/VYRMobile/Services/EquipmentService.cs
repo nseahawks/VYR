@@ -1,7 +1,9 @@
 ﻿using Plugin.CloudFirestore;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using VYRMobile.Models;
+using Xamarin.Forms;
 
 namespace VYRMobile.Services
 {
@@ -19,7 +21,7 @@ namespace VYRMobile.Services
             }
         }
 
-        public async Task<IEnumerable<EquipmentItem>> GetEquipos(string _userId)
+        public async Task<IEnumerable<EquipmentItem>> GetEquipment(string _userId)
         {
                 var items = await CrossCloudFirestore.Current.Instance
                                             .GetCollection("Items")
@@ -28,6 +30,29 @@ namespace VYRMobile.Services
                                             .GetDocumentsAsync();
                 IEnumerable<EquipmentItem> itemslist = items.ToObjects<EquipmentItem>();
                 return itemslist;
+        }
+        public async Task<bool> SetEquipment(ObservableCollection<EquipmentItem> equipmentCollection, string _userId)
+        {
+            try
+            {
+                foreach (var equipmentItem in equipmentCollection)
+                {
+                    await CrossCloudFirestore.Current.Instance
+                        .GetCollection("Items")
+                        .GetDocument(_userId)
+                        .GetCollection("Item")
+                        .GetDocument(equipmentItem.Name)
+                        .UpdateDataAsync(new { Toggle = equipmentItem.Toggle });
+                }
+
+                DependencyService.Get<IToast>().LongToast("Actualizado exitosamente");
+                return true;
+            }
+            catch
+            {
+                await App.Current.MainPage.DisplayAlert("Error", "No se pudo conectar con el servidor", "Aceptar");
+                return false;
+            }
         }
     }
 }

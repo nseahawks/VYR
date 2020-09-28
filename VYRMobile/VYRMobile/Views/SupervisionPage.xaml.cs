@@ -410,7 +410,7 @@ namespace VYRMobile.Views
             {
                 Command = new Command(async () =>
                 {
-                    await Navigation.PushPopupAsync(new EditEquipmentPopup());
+                    //await Navigation.PushPopupAsync(new EditEquipmentPopup());
                 }),
                 NumberOfTapsRequired = 1
             });

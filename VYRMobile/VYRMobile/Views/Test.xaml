@@ -23,15 +23,12 @@
             Orientation="Horizontal"
             VerticalOptions="Center"
             HorizontalOptions="Center">
-            <Label
-                Text="Ver equipo"
-                TextColor="#006bcd"
-                FontSize="18"
-                TextDecorations="Underline"/>
-            <Image
-                Source="linkBlue.png"
-                HeightRequest="15"
-                WidthRequest="15"/>
+            <Button
+                x:Name="viewButton"
+                Text="Ver"
+                Clicked="viewButton_Clicked"
+                HeightRequest="50"
+                WidthRequest="125"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

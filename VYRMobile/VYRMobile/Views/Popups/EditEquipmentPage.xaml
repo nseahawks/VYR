@@ -1,35 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="VYRMobile.Views.Popups.EditEquipmentPopup"
-             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
-             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
-    <pages:PopupPage.Animation>
-        <animations:ScaleAnimation 
-            PositionIn="Center"
-            PositionOut="Center"
-            ScaleIn="1.2"
-            ScaleOut="0.8"
-            DurationIn="100"
-            DurationOut="100"
-            EasingIn="SinOut"
-            EasingOut="SinIn"
-            HasBackgroundAnimation="True"/>
-    </pages:PopupPage.Animation>
-    <ScrollView>
-        <Frame
-            HeightRequest="500"
-            WidthRequest="340"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            CornerRadius="15"
-            Padding="0">
+             x:Class="VYRMobile.Views.Popups.EditEquipmentPage">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem
+            x:Name="saveChangesButton"
+            IconImageSource="save.png"
+            Clicked="saveChangesButton_Clicked">
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView
+            Margin="0, 20, 0, 0">
             <StackLayout>
                 <Label
                     Text="Confirmación de equipo"
                     TextColor="Black"
                     FontFamily="{StaticResource PoppinsMedium}"
                     FontSize="16"
+                    VerticalOptions="Center"
                     HorizontalOptions="Center"/>
                 <StackLayout
                     Orientation="Horizontal"
@@ -84,6 +73,7 @@
                                     <Switch 
                                         Grid.Column="2"
                                         x:Name="optionSwitch"
+                                        Toggled="optionSwitch_Toggled"
                                         IsToggled="{Binding Toggle, Mode=TwoWay}"
                                         ThumbColor="{Binding ToggleColor}"
                                         OnColor="{Binding ToggleColor}"/>
@@ -92,19 +82,30 @@
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Frame
-                    HeightRequest="200"
-                    WidthRequest="320"
-                    HasShadow="True"
-                    BorderColor="#AAB5B6"
-                    CornerRadius="4"
-                    Padding="0">
-                    <Editor
-                        Placeholder="Escriba aquí"
-                        VerticalOptions="FillAndExpand"
-                        HorizontalOptions="FillAndExpand"/>
-                </Frame>
+                <StackLayout
+                    x:Name="commentaryBox"
+                    HorizontalOptions="Center"
+                    IsEnabled="{Binding NeedsJustification}"
+                    Margin="0, 15, 0, 0">
+                    <Label
+                        Text="Comentarios (opcional)"
+                        TextColor="Black"
+                        FontFamily="{StaticResource PoppinsMedium}"
+                        FontSize="16"/>
+                    <Frame
+                        HeightRequest="200"
+                        WidthRequest="320"
+                        HasShadow="True"
+                        BorderColor="#AAB5B6"
+                        CornerRadius="4"
+                        Padding="0">
+                        <Editor
+                            Placeholder="Escriba aquí"
+                            VerticalOptions="FillAndExpand"
+                            HorizontalOptions="FillAndExpand"/>
+                    </Frame>
+                </StackLayout>
             </StackLayout>
-        </Frame>
-    </ScrollView>
-</pages:PopupPage>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -104,6 +104,9 @@
     <Compile Update="Views\MapPage.xaml.cs">
       <DependentUpon>MapPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\Popups\EditEquipmentPage.xaml.cs">
+      <DependentUpon>EditEquipmentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\TabMenuPage.xaml.cs">
       <DependentUpon>TabMenuPage.xaml</DependentUpon>
     </Compile>
@@ -188,7 +191,7 @@
     <EmbeddedResource Update="Views\MapPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Popups\EditEquipmentPopup.xaml">
+    <EmbeddedResource Update="Views\Popups\EditEquipmentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\TabMenuPage.xaml">

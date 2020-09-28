@@ -45,7 +45,7 @@ namespace VYRMobile.Views
                 }
                 var isEquipmentReady = isTrueForAll(itemsList.ItemsSource);*/
             
-                bool isEquipmentReady = EquipmentViewModel.Instance.getEquipos();
+                bool isEquipmentReady = EquipmentViewModel.Instance.getEquipment();
 
                 if(isEquipmentReady)
                 {
