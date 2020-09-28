@@ -410,7 +410,12 @@ namespace VYRMobile.Views
             {
                 Command = new Command(async () =>
                 {
-                    //await Navigation.PushPopupAsync(new EditEquipmentPopup());
+                    ApplicationUser user = new ApplicationUser()
+                    {
+                        FullName = workerNameLabel.Text,
+                        Id = workerIdLabel.Text
+                    };
+                    await Navigation.PushModalAsync(new EditEquipmentPage(user));
                 }),
                 NumberOfTapsRequired = 1
             });

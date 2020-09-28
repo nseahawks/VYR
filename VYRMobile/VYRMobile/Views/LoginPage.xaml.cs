@@ -109,13 +109,6 @@ namespace VYRMobile
                 }
                 else
                 {
-                    /*ApplicationUser user = new ApplicationUser() 
-                    { 
-                        FullName = "Ashby Hernandez",
-                        Id = "311f87d5-3aa9-4895-85d0-af3c8bd56f96"
-                    };
-
-                    await Navigation.PushPopupAsync(new EditEquipmentPopup(user));*/
                     Application.Current.MainPage = new NavigationPage(new EquipmentPage());
                 }
             }
