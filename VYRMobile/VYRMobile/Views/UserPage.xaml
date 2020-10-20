@@ -43,7 +43,7 @@
                             WidthRequest="150"/>
                         <Label  
                             x:Name="userLbl"
-                            Text="Trabajador"
+                            Text="Trabajador demo"
                             FontFamily="{StaticResource PoppinsMedium}"
                             TextColor="Black"
                             FontSize="14"
