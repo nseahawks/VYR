@@ -1,5 +1,6 @@
 ﻿using Rg.Plugins.Popup.Extensions;
 using System;
+using System.Threading.Tasks;
 using VYRMobile.Data;
 using VYRMobile.Models;
 using VYRMobile.Services;
@@ -29,6 +30,8 @@ namespace VYRMobile
             InitializeComponent();
             BindingContext = HomeViewModel.Instance;
             LocationCheckingCommand = new Command(LocationChecking);
+
+            FilterRole();
 
             QR.Clicked += QR_Clicked;
             btnCall.Clicked += btnCall_Clicked;
@@ -102,24 +105,41 @@ namespace VYRMobile
         private async void sosButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushPopupAsync(new LoadingPopup("Enviando informe..."));
-            Report sosReport = new Report()
+
+            await Task.Delay(500);
+            /*Report sosReport = new Report()
             {
                 Title = "Emergencia",
                 Description = "El trabajador requiere de ayuda urgente",
                 Created = DateTime.Now
             };
 
-            var isSuccess = await ReportsStore.Instance.SendEventualityReportAsync(sosReport);
+            var isSuccess = await ReportsStore.Instance.SendEventualityReportAsync(sosReport);*/
 
+            DependencyService.Get<IToast>().LongToast("Informe enviado");
             await Navigation.PopPopupAsync();
 
-            if(isSuccess)
+            /*if(isSuccess)
             {
-                DependencyService.Get<IToast>().LongToast("Informe enviado");
             }
             else
             {
                 await DisplayAlert("Error", "No se pudo conectar, intente de nuevo", "Aceptar");
+            }*/
+        }
+        private void FilterRole()
+        {
+            if(App.ApplicationUserRole == "Vigilant")
+            {
+                QR.Text = "No disponible";
+            }
+            else if(App.ApplicationUserRole == "User")
+            {
+                QR.Text = "Reportar puntos";
+            }
+            else
+            {
+                QR.Text = "Escanear puntos QR";
             }
         }
     }

@@ -26,10 +26,7 @@ namespace VYRMobile
                 Records.Clear();
                 foreach(var record in App.Records)
                 {
-                    if (record.UserId == App.ApplicationUserId)
-                    {
-                        Records.Add(record);
-                    }
+                    Records.Add(record);
                 }
                 Records = new List<Record>(Records.OrderByDescending(records => records.Date).ToList());
                 recordList.ItemsSource = Records;

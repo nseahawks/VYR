@@ -1,6 +1,7 @@
 ﻿using Rg.Plugins.Popup.Extensions;
 using Syncfusion.XForms.Buttons;
 using System;
+using System.Threading.Tasks;
 using VYRMobile.Models;
 using VYRMobile.Services;
 using Xamarin.Essentials;
@@ -277,8 +278,13 @@ namespace VYRMobile.Views.Popups
 
                 indicator.IsRunning = true;
 
+                await Task.Delay(500);
 
-                ChangePassword password = new ChangePassword()
+                indicator.IsRunning = false;
+                DependencyService.Get<IToast>().LongToast("Contraseña actualizada exitosamente");
+                await Navigation.PopPopupAsync();
+
+                /*ChangePassword password = new ChangePassword()
                 {
                     OldPassword = oldPass.Text,
                     NewPassword = newPass.Text
@@ -287,7 +293,6 @@ namespace VYRMobile.Views.Popups
 
                 bool IsSuccess = await _service.ChangePasswordAsync(password);
 
-                indicator.IsRunning = false;
                 if (IsSuccess == true)
                 {
                     DependencyService.Get<IToast>().LongToast("Contraseña actualizada exitosamente");
@@ -305,7 +310,7 @@ namespace VYRMobile.Views.Popups
                     animation2.WithConcurrent((f) => newPassLayout.Opacity = f, 0, 1, Easing.Linear);
 
                     newPassLayout.Animate("FadeIn", animation2, 16, Convert.ToUInt32(duration));
-                }
+                }*/
             }
             catch
             {

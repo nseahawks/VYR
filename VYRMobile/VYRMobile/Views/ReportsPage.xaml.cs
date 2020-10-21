@@ -15,7 +15,7 @@ namespace VYRMobile.Views
             btnReporte.Clicked += btnReporte_Clicked;
             reportsView.ItemTapped += ReportsView_ItemTapped;
 
-            BindingContext = new ReportViewModel();
+            BindingContext = ReportViewModel.Instance;
         }
         private async void ReportsView_ItemTapped(object sender, ItemTappedEventArgs e)
         {

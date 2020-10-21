@@ -283,17 +283,17 @@ namespace VYRMobile.ViewModels
             IsBusy = true;
 
 
-            IsSuccess = await _store.AddReportAsync(CReport);
+            /*IsSuccess = await _store.AddReportAsync(CReport);
 
             if (IsSuccess == false)
             {
                 await App.Current.MainPage.DisplayAlert("Error", "No se pudo hacer el reporte", "Aceptar");
             }
             else
-            {
-                await AddReport(CReport);
-                await App.Current.MainPage.Navigation.PopModalAsync();
-            }
+            {*/
+            await AddReport(CReport);
+            await App.Current.MainPage.Navigation.PopModalAsync();
+            //}
 
             IsBusy = false;
         }
@@ -305,7 +305,8 @@ namespace VYRMobile.ViewModels
             await App.Current.MainPage.Navigation.PushPopupAsync(new LoadingPopup());
 
             IsBusy = true;
-            IsSuccess = await _store.AddEvaluationReportAsync(EReport, App.Calculations);
+            await Task.Delay(500);
+            //IsSuccess = await _store.AddEvaluationReportAsync(EReport, App.Calculations);
             IsBusy = false;
 
             await App.Current.MainPage.Navigation.PopPopupAsync();
@@ -321,6 +322,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "Naco"
                     },
+                    Title = "Naco",
                     Description = "Tengo una puerta dañada",
                     ReportStatus = Report.ReportStatuses.Abierto,
                     ReportType = Report.ReportTypes.Daño,
@@ -332,6 +334,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "Jarabacoa"
                     },
+                    Title = "Jarabacoa",
                     Description = "Se robaron las baterias",
                     ReportStatus = Report.ReportStatuses.Abierto,
                     ReportType = Report.ReportTypes.Robo,
@@ -343,6 +346,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "Bahia de Ocoa"
                     },
+                    Title = "Bahia de Ocoa",
                     Description = "Alarma asistida con exito, fueron unos animales que la detonaron",
                     ReportStatus = Report.ReportStatuses.Cerrado,
                     ReportType = Report.ReportTypes.Alarma,
@@ -354,6 +358,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "Gurabo Arriba, Santiago"
                     },
+                    Title = "Bahia de Ocoa",
                     Description = "El compañero necesita gasolina",
                     ReportStatus = Report.ReportStatuses.Abierto,
                     ReportType = Report.ReportTypes.Asistencia,
@@ -365,6 +370,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "Sabana Yegua"
                     },
+                    Title = "Sabana Yegua",
                     Description = "Tengo una puerta dañada",
                     ReportStatus = Report.ReportStatuses.Abierto,
                     ReportType = Report.ReportTypes.Daño,
@@ -376,6 +382,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "San Jose de las Matas"
                     },
+                    Title = "San Jose de las Matas",
                     Description = "Se robaron las baterias",
                     ReportStatus = Report.ReportStatuses.Abierto,
                     ReportType = Report.ReportTypes.Robo,
@@ -387,6 +394,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "Los Alcarrizos"
                     },
+                    Title = "Los Alcarrizos",
                     Description = "Alarma asistida con exito, fueron unos animales que la detonaron",
                     ReportStatus = Report.ReportStatuses.Cerrado,
                     ReportType = Report.ReportTypes.Alarma,
@@ -398,6 +406,7 @@ namespace VYRMobile.ViewModels
                     {
                         LocationName = "Bani"
                     },
+                    Title = "Bani",
                     Description = "El compañero necesita gasolina",
                     ReportStatus = Report.ReportStatuses.Abierto,
                     ReportType = Report.ReportTypes.Asistencia,
@@ -408,40 +417,39 @@ namespace VYRMobile.ViewModels
             Reports.Clear();
             foreach (var report in reports)
             {
-                int type = report.ReportType.GetHashCode();
                 int status = report.ReportStatus.GetHashCode();
 
-                switch (type)
+                switch (report.ReportType)
                 {
                     default:
                         report.TypeIcon = "base.png";
                         break;
-                    case 1:
+                    case Report.ReportTypes.Alarma:
                         report.TypeIcon = "alarma.png";
                         break;
-                    case 2:
+                    case Report.ReportTypes.Robo:
                         report.TypeIcon = "robo.png";
                         break;
-                    case 3:
+                    case Report.ReportTypes.Asistencia:
                         report.TypeIcon = "asistencia.png";
                         break;
-                    case 4:
+                    case Report.ReportTypes.Daño:
                         report.TypeIcon = "dano.png";
                         break;
                 }
 
-                switch (status)
+                switch (report.ReportStatus)
                 {
                     default:
                         report.StatusColor = Color.FromHex("#938A8A");
                         break;
-                    case 1:
+                    case Report.ReportStatuses.Abierto:
                         report.StatusColor = Color.FromHex("#13FF8F");
                         break;
-                    case 2:
+                    case Report.ReportStatuses.Cerrado:
                         report.StatusColor = Color.FromHex("#DD0808");
                         break;
-                    case 3:
+                    case Report.ReportStatuses.PorAsignar:
                         report.StatusColor = Color.FromHex("#FF9D13");
                         break;
                 }
@@ -467,7 +475,7 @@ namespace VYRMobile.ViewModels
 
             var reports = Reports;
             
-            Reports.Clear();
+            /*Reports.Clear();
             foreach (var report in reports)
             {
                 int type = report.ReportType.GetHashCode();
@@ -490,7 +498,7 @@ namespace VYRMobile.ViewModels
                         break;
                 }
                 Reports.Add(report);
-            }
+            }*/
             
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
@@ -515,9 +523,29 @@ namespace VYRMobile.ViewModels
         }
         private async Task AddReport(Report report)
         {
-            Reports.Add(report); 
+            switch (report.ReportType)
+            {
+                default:
+                    report.TypeIcon = "base.png";
+                    break;
+                case Report.ReportTypes.Alarma:
+                    report.TypeIcon = "alarma.png";
+                    break;
+                case Report.ReportTypes.Robo:
+                    report.TypeIcon = "robo.png";
+                    break;
+                case Report.ReportTypes.Asistencia:
+                    report.TypeIcon = "asistencia.png";
+                    break;
+                case Report.ReportTypes.Daño:
+                    report.TypeIcon = "dano.png";
+                    break;
+            }
 
-            Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
+            report.Title = report.Location.LocationName;
+            report.Created = DateTime.Now;
+            Instance.Reports.Add(report);
+            Instance.Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
         }
     }
 }
