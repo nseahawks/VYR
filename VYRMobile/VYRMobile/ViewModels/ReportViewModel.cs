@@ -545,7 +545,7 @@ namespace VYRMobile.ViewModels
             report.Title = report.Location.LocationName;
             report.Created = DateTime.Now;
             Instance.Reports.Add(report);
-            Instance.Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
+            Instance.Reports = new ObservableCollection<Report>(Instance.Reports.OrderByDescending(reports => reports.Created).ToList());
         }
     }
 }

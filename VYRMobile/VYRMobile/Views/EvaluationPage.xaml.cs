@@ -148,9 +148,7 @@ namespace VYRMobile.Views
         private void qualificationButton_Clicked(object sender, EventArgs e)
         {
             var button = sender as CustomSfButton;
-
-            button.IsEnabled = false;
-
+            
             foreach (var qualificatonButton in QualificationButtons)
             {
                 if (button == qualificatonButton)
