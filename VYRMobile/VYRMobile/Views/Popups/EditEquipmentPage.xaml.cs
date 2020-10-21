@@ -23,21 +23,21 @@ namespace VYRMobile.Views.Popups
             EquipmentViewModel.CustomInstance.LoadData(user.Id);
 
             userFullnameLabel.Text = user.FullName;
-            userId = user.Id;
+            userId = "Id-4646464";
         }
 
         private async void saveChangesButton_Clicked(object sender, EventArgs e)
         {
             await Navigation.PushPopupAsync(new LoadingPopup("Guardando"));
 
-            var isSuccess = await EquipmentViewModel.CustomInstance.UpdateEquipment(userId);
+            await Task.Delay(1000);
+
+            //var isSuccess = await EquipmentViewModel.CustomInstance.UpdateEquipment(userId);
 
             await Navigation.PopPopupAsync();
 
-            if (isSuccess)
-            {
-                await Navigation.PopAsync();
-            }
+            await Navigation.PopAsync();
+            
         }
 
         private void optionSwitch_Toggled(object sender, ToggledEventArgs e)

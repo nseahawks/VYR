@@ -444,6 +444,7 @@
     <AndroidResource Include="Resources\drawable\happy.png" />
     <AndroidResource Include="Resources\drawable\sad.png" />
     <AndroidResource Include="Resources\drawable\linkBlue.png" />
+    <AndroidResource Include="Resources\drawable\login.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

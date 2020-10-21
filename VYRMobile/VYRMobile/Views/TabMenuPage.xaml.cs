@@ -120,7 +120,7 @@ namespace VYRMobile.Views
                 pages.MoveNext();
                 CurrentPage = pages.Current;
             }
-            else if(App.ApplicationUserRole == "Vigilant")
+            else if(App.ApplicationUserRole == "Vigilant" || App.ApplicationUserRole == "Qr" || App.ApplicationUserRole == "User")
             {
                 NavigationPage home = new NavigationPage(new HomePage())
                 {

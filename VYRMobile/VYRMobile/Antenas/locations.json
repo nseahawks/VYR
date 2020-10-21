@@ -1,0 +1,112 @@
+[
+  {
+    "id": "93030dda-cef6-4091-acbf-0000ffa981d5",
+    "locationName": "Paso bajito- Carretera Jarabacoa-Constanza",
+    "cellId": "N3446",
+    "address": null,
+    "latitude": 19.0691,
+    "longitude": -70.6117,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "d220e657-3ff3-4158-9c72-00277f1efbae",
+    "locationName": "Otra Banda-Nisibón 1",
+    "cellId": "E6145",
+    "address": null,
+    "latitude": 18.82011111,
+    "longitude": -68.61708333,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "adb6ca8d-f95c-4c2f-97f7-00c1e84accbb",
+    "locationName": "Plaza Universitaria",
+    "cellId": "M1147",
+    "address": null,
+    "latitude": 18.45874,
+    "longitude": -69.93191,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "3b686ebf-f242-450c-87e2-0118fb1999f7",
+    "locationName": "Cruce de Contrabas(Jima abajo)",
+    "cellId": "N3194",
+    "address": null,
+    "latitude": 19.14336,
+    "longitude": -70.43346,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "7dce4992-8ed8-4ef9-bbea-011ee63eafe3",
+    "locationName": "Villa Aida",
+    "cellId": "S5127",
+    "address": null,
+    "latitude": 18.28975677,
+    "longitude": -71.71533966,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "2c83c9ca-3ab2-418f-9437-0124793f8ba4",
+    "locationName": "Bahia de Ocoa",
+    "cellId": "S5003",
+    "address": null,
+    "latitude": 18.4106,
+    "longitude": -70.5853,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "95228923-e222-42b3-8344-013c1814fabf",
+    "locationName": "Haras Nacionales",
+    "cellId": "M1345",
+    "address": null,
+    "latitude": 18.56744194,
+    "longitude": -69.8855896,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "04ff3c68-fbdc-4e69-b021-015203c25234",
+    "locationName": "Gurabo Arriba, Santiago",
+    "cellId": "N3234",
+    "address": null,
+    "latitude": 19.495831,
+    "longitude": -70.653198,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "8fbd20fa-af0f-4009-8d29-0169b46be4d4",
+    "locationName": "Prado Oriental",
+    "cellId": "M1417",
+    "address": null,
+    "latitude": 18.484606,
+    "longitude": -69.778916,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
+    "id": "9cca66e3-ac83-4a52-8690-019618ab105b",
+    "locationName": "Sabana Yegua",
+    "cellId": "S5072",
+    "address": null,
+    "latitude": 18.458956,
+    "longitude": -70.834553,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  }
+]

@@ -2,6 +2,7 @@
 using Plugin.CloudFirestore;
 using Rg.Plugins.Popup.Extensions;
 using System;
+using System.Threading.Tasks;
 using VYRMobile.Data;
 using VYRMobile.Models;
 using Xamarin.Essentials;
@@ -45,12 +46,14 @@ namespace VYRMobile.Views.Popups
                 var json = JsonConvert.SerializeObject(Records);
                 await SecureStorage.SetAsync("records", json);
 
-                await _store.AddRecordAsync(record);
+                await Task.Delay(500);
+
+                /*await _store.AddRecordAsync(record);
 
                 await CrossCloudFirestore.Current.Instance
                                           .GetCollection("Users")
                                           .GetDocument(App.ApplicationUserId)
-                                          .UpdateDataAsync(new { LoggedIn = false });
+                                          .UpdateDataAsync(new { LoggedIn = false });*/
 
                 Navigation.InsertPageBefore(new LoginPage(), Navigation.NavigationStack[0]);
                 await SecureStorage.SetAsync("isLogged", App.IsUserLoggedIn.ToString());

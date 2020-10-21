@@ -84,6 +84,7 @@ namespace VYRMobile.ViewModels
         public EquipmentViewModel()
         {
             Equipment = new ObservableCollection<EquipmentItem>();
+            EquipmentList = new List<EquipmentItem>();
             LoadData("");
 
             ToggleColor = Color.FromHex("#01BD00");
@@ -95,40 +96,85 @@ namespace VYRMobile.ViewModels
             ToggleColor = Color.FromHex("#01BD00");
         }
         public async void LoadData(string _workerId)
-        {
-            try
+        { 
+            string id;
+            if (string.IsNullOrEmpty(_workerId))
             {
-                string id;
-                if(string.IsNullOrEmpty(_workerId))
-                {
-                    id = _workerId;
-                }
-                else 
-                {
-                    id = App.ApplicationUserId;
-                }
-                var equipos = await EquipmentService.Instance.GetEquipment(id);
-                Equipment.Clear();
-                foreach (var equipo in equipos)
-                {
-                    Equipment.Add(equipo);
-                    EquipmentList.Add(equipo);
-                }
-
-                if (Equipment.Count == 0)
-                {
-                    IsEmpty = true;
-                }
-                else
-                {
-                    IsEmpty = false;
-                }
+                id = _workerId;
             }
-            catch
+            else
             {
-                await App.Current.MainPage.DisplayAlert("Error", "No es posible conectar con el servidor", "Aceptar");
-                await App.Current.MainPage.Navigation.PopToRootAsync();
-                return;
+                id = App.ApplicationUserId;
+            }
+                //var equipos = await EquipmentService.Instance.GetEquipment(id);
+
+            List<EquipmentItem> equipos = new List<EquipmentItem>()
+            {
+                new EquipmentItem()
+                {
+                    EquipmentId = "0",
+                    Icon = "label.png",
+                    Name = "Arma",
+                    Toggle = true
+                },
+                new EquipmentItem()
+                {
+                    EquipmentId = "1",
+                    Icon = "label.png",
+                    Name = "Gorra",
+                    Toggle = true
+                },
+                new EquipmentItem()
+                {
+                    EquipmentId = "2",
+                    Icon = "label.png",
+                    Name = "Camisa",
+                    Toggle = true
+                },
+                new EquipmentItem()
+                {
+                    EquipmentId = "3",
+                    Icon = "label.png",
+                    Name = "Pantalones",
+                    Toggle = true
+                },
+                new EquipmentItem()
+                {
+                    EquipmentId = "4",
+                    Icon = "label.png",
+                    Name = "Zapatos",
+                    Toggle = true
+                },
+                new EquipmentItem()
+                {
+                    EquipmentId = "5",
+                    Icon = "label.png",
+                    Name = "Radio",
+                    Toggle = true
+                },
+                new EquipmentItem()
+                {
+                    EquipmentId = "6",
+                    Icon = "label.png",
+                    Name = "Flota",
+                    Toggle = true
+                }
+            };
+            Equipment.Clear();
+            EquipmentList.Clear();
+            foreach (var equipo in equipos)
+            {
+                Equipment.Add(equipo);
+                EquipmentList.Add(equipo);
+            }
+
+            if (Equipment.Count == 0)
+            {
+                IsEmpty = true;
+            }
+            else
+            {
+                IsEmpty = false;
             }
         }
         public bool getEquipment()

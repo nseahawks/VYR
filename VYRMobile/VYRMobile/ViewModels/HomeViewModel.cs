@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Diagnostics;
+using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using VYRMobile.Data;
@@ -217,9 +218,19 @@ namespace VYRMobile.ViewModels
 
         public HomeViewModel()
         {
-            IsList = true;
-            IsDoneMessage = false;
-            IsButton = true;
+            if(App.ApplicationUserRole == "Vigilant")
+            {
+                IsList = false;
+                IsDoneMessage = true;
+                IsButton = false;
+            }
+            else
+            {
+                IsList = true;
+                IsDoneMessage = false;
+                IsButton = true;
+            }
+
             ChronoColor = Color.Black;
 
             _store = new RecordsStore();
@@ -377,7 +388,7 @@ namespace VYRMobile.ViewModels
                                 await SecureStorage.SetAsync("records", json);
 
 
-                                await _store.AddRecordAsync(record);
+                                //await _store.AddRecordAsync(record);
 
                                 await App.Current.MainPage.DisplayAlert("Completado", "Punto verificado correctamente", "Aceptar");
 
@@ -409,7 +420,17 @@ namespace VYRMobile.ViewModels
         }
         private async void LoadData()
         {
-            var antennas = await ReportsStore.Instance.GetAntenasAsync();
+            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream($"VYRMobile.Antenas.locations.json");
+            string locationsData;
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                locationsData = reader.ReadToEnd();
+            }
+
+            var locations = JsonConvert.DeserializeObject<List<CompanyLocation>>(locationsData);
+
+            //var antennas = await ReportsStore.Instance.GetAntenasAsync();
 
             var backupLocationsData = await SecureStorage.GetAsync("roundsStateBackup");
 
@@ -424,9 +445,9 @@ namespace VYRMobile.ViewModels
                         BackupLocations.Add(location);
                     }
 
-                    if (antennas.TrueForAll(isTrueForAllLocationNames))
+                    if (locations.TrueForAll(isTrueForAllLocationNames))
                     {
-                        antennas = BackupLocations;
+                        locations = BackupLocations;
                     }
                 }
                 catch
@@ -441,12 +462,12 @@ namespace VYRMobile.ViewModels
                 RoundNumber = Convert.ToInt32(roundsStateNumber);
             }
 
-            App.UserLocations = antennas;
+            App.UserLocations = locations;
             Antenas.Clear();
 
-            foreach (var antenna in antennas)
+            foreach (var location in locations)
             {
-                Antenas.Add(antenna);
+                Antenas.Add(location);
             }
 
             if (Antenas.Count == 0)

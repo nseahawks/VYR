@@ -31,7 +31,7 @@ namespace VYRMobile.Views.Popups
                 return;
             }
 
-            string description = "";
+            /*string description = "";
 
             foreach(var itemName in App.ChipsNames)
             {                
@@ -42,9 +42,15 @@ namespace VYRMobile.Views.Popups
                 Title = "Equipo incompleto",
                 Description = "Articulos marcados como faltantes: " + description + Environment.NewLine + "Justificacion del trabajador: " + Environment.NewLine + justificacionEditor.Text,
                 Created = DateTime.Now
-            };
+            };*/
             await Navigation.PushPopupAsync(new LoadingPopup("Cargando..."));
-            bool isSuccess = await ReportsStore.Instance.SendEventualityReportAsync(reporte);
+
+            await Task.Delay(1000);
+
+            await Navigation.PopAllPopupAsync();
+            Application.Current.MainPage = new NavigationPage(new LoadingPage());
+
+            /*bool isSuccess = await ReportsStore.Instance.SendEventualityReportAsync(reporte);
 
             if (isSuccess)
             {
@@ -55,7 +61,7 @@ namespace VYRMobile.Views.Popups
             {
                 await Navigation.PopAllPopupAsync();
                 await DisplayAlert("Fallido", "Hubo un problema al conectar con el servidor", "Aceptar");
-            }
+            }*/
         }
 
         private void GenerateChips(List<EquipmentItem> items)

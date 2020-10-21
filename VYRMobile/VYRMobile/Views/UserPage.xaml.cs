@@ -16,7 +16,7 @@ namespace VYRMobile.Views
         }
         private async void GetUserInfo()
         {
-            idLbl.Text = await SecureStorage.GetAsync("email");
+            idLbl.Text = "example@gmail.com";
         }
 
         private void configuracionCell_Tapped(object sender, EventArgs e)

@@ -56,8 +56,9 @@ namespace VYRMobile.Views.Popups
         }
         private async Task SustituteWorker(ApplicationUser OldWorker, ApplicationUser NewWorker)
         {
-            bool WasOldWorkerSuccess = await _store.SetWorkerScheduleAsync(OldWorker, "Sustituido");
-            bool WasNewWorkerSuccess = await _store.SetWorkerScheduleAsync(NewWorker, OldWorker.Schedule);
+            bool WasOldWorkerSuccess = true;
+            bool WasNewWorkerSuccess = true; 
+            await _store.SetWorkerScheduleAsync();
 
             if (WasOldWorkerSuccess == true || WasNewWorkerSuccess == true)
             {

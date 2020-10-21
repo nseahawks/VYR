@@ -9,6 +9,9 @@ using VYRMobile.Views;
 using System.IO;
 using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Views.Popups;
+using System.Reflection;
+using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace VYRMobile.ViewModels
 {
@@ -256,7 +259,15 @@ namespace VYRMobile.ViewModels
 
         private async void LoadLocations()
         {
-            var locations = await ReportsStore.Instance.GetAntenasAsync();
+            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream($"VYRMobile.Antenas.locations.json");
+            string locationsData;
+            using (var reader = new StreamReader(stream))
+            {
+                locationsData = reader.ReadToEnd();
+            }
+
+            var locations = JsonConvert.DeserializeObject<List<CompanyLocation>>(locationsData);
 
             Locations.Clear();
             foreach (var location in locations)
@@ -269,21 +280,18 @@ namespace VYRMobile.ViewModels
             if (IsBusy)
                 return;
 
-            CreateReportPage crp = new CreateReportPage();
-
             IsBusy = true;
 
-            crp.DisableCommand.Execute(null);
 
             IsSuccess = await _store.AddReportAsync(CReport);
 
             if (IsSuccess == false)
             {
-                crp.EnableCommand.Execute(null);
+                await App.Current.MainPage.DisplayAlert("Error", "No se pudo hacer el reporte", "Aceptar");
             }
             else
             {
-                await LoadData2();
+                await AddReport(CReport);
                 await App.Current.MainPage.Navigation.PopModalAsync();
             }
 
@@ -305,7 +313,97 @@ namespace VYRMobile.ViewModels
         }
         private async void LoadData()
         {
-            var reports = await ReportsStore.Instance.GetReportsAsync();
+            var reports = new List<Report>()
+            {
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "Naco"
+                    },
+                    Description = "Tengo una puerta dañada",
+                    ReportStatus = Report.ReportStatuses.Abierto,
+                    ReportType = Report.ReportTypes.Daño,
+                    Created = DateTime.Now
+                },
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "Jarabacoa"
+                    },
+                    Description = "Se robaron las baterias",
+                    ReportStatus = Report.ReportStatuses.Abierto,
+                    ReportType = Report.ReportTypes.Robo,
+                    Created = DateTime.Now
+                },
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "Bahia de Ocoa"
+                    },
+                    Description = "Alarma asistida con exito, fueron unos animales que la detonaron",
+                    ReportStatus = Report.ReportStatuses.Cerrado,
+                    ReportType = Report.ReportTypes.Alarma,
+                    Created = DateTime.Now
+                },
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "Gurabo Arriba, Santiago"
+                    },
+                    Description = "El compañero necesita gasolina",
+                    ReportStatus = Report.ReportStatuses.Abierto,
+                    ReportType = Report.ReportTypes.Asistencia,
+                    Created = DateTime.Now
+                },
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "Sabana Yegua"
+                    },
+                    Description = "Tengo una puerta dañada",
+                    ReportStatus = Report.ReportStatuses.Abierto,
+                    ReportType = Report.ReportTypes.Daño,
+                    Created = DateTime.Now
+                },
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "San Jose de las Matas"
+                    },
+                    Description = "Se robaron las baterias",
+                    ReportStatus = Report.ReportStatuses.Abierto,
+                    ReportType = Report.ReportTypes.Robo,
+                    Created = DateTime.Now
+                },
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "Los Alcarrizos"
+                    },
+                    Description = "Alarma asistida con exito, fueron unos animales que la detonaron",
+                    ReportStatus = Report.ReportStatuses.Cerrado,
+                    ReportType = Report.ReportTypes.Alarma,
+                    Created = DateTime.Now
+                },
+                new Report()
+                {
+                    Location = new CompanyLocation()
+                    {
+                        LocationName = "Bani"
+                    },
+                    Description = "El compañero necesita gasolina",
+                    ReportStatus = Report.ReportStatuses.Abierto,
+                    ReportType = Report.ReportTypes.Asistencia,
+                    Created = DateTime.Now
+                }
+            };
 
             Reports.Clear();
             foreach (var report in reports)
@@ -367,7 +465,7 @@ namespace VYRMobile.ViewModels
 
             IsBusy = true;
 
-            var reports = await ReportsStore.Instance.GetReportsAsync();
+            var reports = Reports;
             
             Reports.Clear();
             foreach (var report in reports)
@@ -393,7 +491,7 @@ namespace VYRMobile.ViewModels
                 }
                 Reports.Add(report);
             }
-
+            
             IsBusy = false;
             Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
 
@@ -414,6 +512,12 @@ namespace VYRMobile.ViewModels
             {
                 ReportImages.Add(new Models.Image { Source = image });
             }
+        }
+        private async Task AddReport(Report report)
+        {
+            Reports.Add(report); 
+
+            Reports = new ObservableCollection<Report>(Reports.OrderByDescending(reports => reports.Created).ToList());
         }
     }
 }

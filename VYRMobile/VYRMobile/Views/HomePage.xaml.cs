@@ -6,6 +6,7 @@ using VYRMobile.Services;
 using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
 using Xamarin.Forms;
+using ZXing.Net.Mobile.Forms;
 
 namespace VYRMobile
 {
@@ -47,6 +48,31 @@ namespace VYRMobile
         }
         private async void Escaner()
         {
+            if(App.ApplicationUserRole == "Qr" || App.ApplicationUserRole == "Patrol" || App.ApplicationUserRole == "Supervisor" || App.ApplicationUserRole == "Master")
+            {
+                var scannerPage = new ZXingScannerPage();
+
+                scannerPage.Title = "Lector de QR";
+
+                scannerPage.OnScanResult += (result) =>
+                {
+                    scannerPage.IsScanning = false;
+
+                    App.AntennaId = result.ToString();
+
+                    LocationChecking();
+                };
+
+                await Navigation.PushModalAsync(scannerPage);
+            }
+            else if(App.ApplicationUserRole == "User")
+            {
+                await Navigation.PushPopupAsync(new LocationReportPopup());
+            }
+            else
+            {
+                await DisplayAlert("Denegado", "Tu usuario no tiene rondas", "Aceptar");
+            }
             /*var scannerPage = new ZXingScannerPage();
             
             scannerPage.Title = "Lector de QR";

@@ -14,6 +14,8 @@ using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
 using Plugin.CloudFirestore;
 using VYRMobile.Services;
+using Newtonsoft.Json;
+using VYRMobile.Models;
 
 namespace VYRMobile.Views
 {
@@ -211,18 +213,26 @@ namespace VYRMobile.Views
         
         private async void AddLocations()
         {
-            var antennas = await ReportsStore.Instance.GetAntenasAsync();
+            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream($"VYRMobile.Antenas.locations.json");
+            string locationsData;
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                locationsData = reader.ReadToEnd();
+            }
 
-            foreach (var antenna in antennas)
+            var locations = JsonConvert.DeserializeObject<List<CompanyLocation>>(locationsData);
+
+            foreach (var location in locations)
             {
                 Pin antennaPin = new Pin
                 {
                     Type = PinType.SavedPin,
-                    Label = antenna.LocationName,
+                    Label = location.LocationName,
                     Icon = BitmapDescriptorFactory.FromBundle("mapAntenna.png"),
-                    Address = antenna.Address,
-                    Position = new Position(antenna.Latitude, antenna.Longitude),
-                    Tag = antenna.Id
+                    Address = location.Address,
+                    Position = new Position(location.Latitude, location.Longitude),
+                    Tag = location.Id
                 };
 
                 map.Pins.Add(antennaPin);
@@ -498,7 +508,7 @@ namespace VYRMobile.Views
         async void Calculate(List<Position> list)
         {
             map.Polylines.Clear();
-            var polyline = new Polyline() {
+            var polyline = new Xamarin.Forms.GoogleMaps.Polyline() {
                 StrokeWidth = 12,
                 StrokeColor = Color.Orange
             };
@@ -520,7 +530,7 @@ namespace VYRMobile.Views
         {
 
             map.Polylines.Clear();
-            var polyline = new Polyline()
+            var polyline = new Xamarin.Forms.GoogleMaps.Polyline()
             {
                 StrokeWidth = 12,
                 StrokeColor = Color.Orange

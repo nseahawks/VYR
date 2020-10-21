@@ -14,7 +14,7 @@ namespace VYRMobile.Data
         bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         public RecordsStore()
         {
-            _client = new ApiHelper();
+            //_client = new ApiHelper();
         }
         public async Task<bool> AddRecordAsync(Record record)
         {

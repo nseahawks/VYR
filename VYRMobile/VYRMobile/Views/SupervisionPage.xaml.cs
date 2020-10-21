@@ -104,62 +104,69 @@ namespace VYRMobile.Views
         }
         private async void searchBar_SelectionChanged(object sender, Syncfusion.SfAutoComplete.XForms.SelectionChangedEventArgs e)
         {
-            var worker = searchBar.SelectedItem as ApplicationUser;
-            App.WorkerOnReview = worker;
-
-            isEmptyLabel.IsVisible = false;
-            saveChangesButton.IsEnabled = false;
-            notSavedLabel.IsVisible = false;
-
-            activityIndicator.IsVisible = true;
-
-            if (workerInfo.Opacity == 1)
+            try
             {
-                workerInfo.IsVisible = false;
-                workerInfo.IsEnabled = false;
-                workerInfo.Opacity = 0;
-            }
+                var worker = searchBar.SelectedItem as ApplicationUser;
+                App.WorkerOnReview = worker;
 
-            await Task.Delay(1000);
+                isEmptyLabel.IsVisible = false;
+                saveChangesButton.IsEnabled = false;
+                notSavedLabel.IsVisible = false;
 
-            activityIndicator.IsVisible = false;
-            workerNameLabel.Text = worker.FullName;
-            dateLabel.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
-            workerIdLabel.Text = worker.Id;
-            workerScheduleLabel.Text = "Turno:" + worker.Schedule;
+                activityIndicator.IsVisible = true;
 
-            if (worker.IsAssist == true)
-            {
-                isValidatedLabel.Text = "(validado)";
-                isValidatedLabel.TextColor = Color.FromHex("#06C17C");
-                validateButton.IsEnabled = false;
-            }
-            else
-            {
-                isValidatedLabel.Text = "(por validar)";
-                isValidatedLabel.TextColor = Color.FromHex("#DD0808");
-                validateButton.IsEnabled = true;
-            }
+                if (workerInfo.Opacity == 1)
+                {
+                    workerInfo.IsVisible = false;
+                    workerInfo.IsEnabled = false;
+                    workerInfo.Opacity = 0;
+                }
 
-            if (worker.Capacitated == true)
-            {
-                capacitatedImg.IsVisible = true;
-            }
-            else
-            {
-                capacitatedImg.IsVisible = false;
-            }
+                await Task.Delay(1000);
 
-            if (worker.Exchange == true)
-            {
-                exchangeCheckbox.IsChecked = true;
-            }
-            else
-            {
-                exchangeCheckbox.IsChecked = false;
-            }
+                activityIndicator.IsVisible = false;
+                workerNameLabel.Text = worker.FullName;
+                dateLabel.Text = "Fecha: " + DateTime.Now.ToString("dd/MM/yyyy");
+                workerIdLabel.Text = worker.Id;
+                workerScheduleLabel.Text = "Turno:" + worker.Schedule;
 
-            OnWorkerInfoAppearing();
+                if (worker.IsAssist == true)
+                {
+                    isValidatedLabel.Text = "(validado)";
+                    isValidatedLabel.TextColor = Color.FromHex("#06C17C");
+                    validateButton.IsEnabled = false;
+                }
+                else
+                {
+                    isValidatedLabel.Text = "(por validar)";
+                    isValidatedLabel.TextColor = Color.FromHex("#DD0808");
+                    validateButton.IsEnabled = true;
+                }
+
+                if (worker.Capacitated == true)
+                {
+                    capacitatedImg.IsVisible = true;
+                }
+                else
+                {
+                    capacitatedImg.IsVisible = false;
+                }
+
+                if (worker.Exchange == true)
+                {
+                    exchangeCheckbox.IsChecked = true;
+                }
+                else
+                {
+                    exchangeCheckbox.IsChecked = false;
+                }
+
+                OnWorkerInfoAppearing();
+            }
+            catch
+            {
+                //nothing
+            }
         }
         private void OnWorkerInfoAppearing()
         {
@@ -413,7 +420,7 @@ namespace VYRMobile.Views
                     ApplicationUser user = new ApplicationUser()
                     {
                         FullName = workerNameLabel.Text,
-                        Id = workerIdLabel.Text
+                        //Id = workerIdLabel.Text
                     };
                     await Navigation.PushModalAsync(new EditEquipmentPage(user));
                 }),
@@ -422,7 +429,10 @@ namespace VYRMobile.Views
         }
         private async Task<string> UploadPhoto()
         {
-            var UserId = await SecureStorage.GetAsync("id");
+            await Task.Delay(500);
+
+            return "link";
+            /*var UserId = await SecureStorage.GetAsync("id");
 
             if (App.ImagesStreams.Count != 0 && App.ImagesNames.Count != 0)
             {
@@ -434,13 +444,13 @@ namespace VYRMobile.Views
             {
                 await DisplayAlert("Incompleto", "Falta imagen de comprobación", "OK");
                 return null;
-            }
+            }*/
         }
         private async Task<bool> Validate(string photoLink)
         {
-            string workerCode = codeEntry.Text;
-            string workerId = workerIdLabel.Text;
-            var IsValidated = await _store.ValidateWorkerAsync(workerId, workerCode, photoLink);
+            /*string workerCode = codeEntry.Text;
+            string workerId = workerIdLabel.Text;*/
+            var IsValidated = await _store.ValidateWorkerAsync();
 
             if (IsValidated == true)
             {
@@ -468,7 +478,7 @@ namespace VYRMobile.Views
         }
         private async Task ExchangeWorker()
         {
-            bool IsExchanged = await _store.ExchangeWorkerAsync(App.WorkerOnReview.Id, exchangeCheckbox.IsChecked);
+            bool IsExchanged = await _store.ExchangeWorkerAsync();
 
             if (IsExchanged == true)
             {

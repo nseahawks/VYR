@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <None Remove="antenas.json" />
+    <None Remove="Antenas\locations.json" />
+    <None Remove="Antenas\response.json" />
     <None Remove="Data\images.json" />
     <None Remove="MapStyle.json" />
     <None Remove="Places.json" />
@@ -21,6 +23,8 @@
 
   <ItemGroup>
     <EmbeddedResource Include="antenas.json" />
+    <EmbeddedResource Include="Antenas\locations.json" />
+    <EmbeddedResource Include="Antenas\response.json" />
     <EmbeddedResource Include="Controllers\Places.json" />
     <EmbeddedResource Include="Data\images.json" />
     <EmbeddedResource Include="MapStyle.json" />

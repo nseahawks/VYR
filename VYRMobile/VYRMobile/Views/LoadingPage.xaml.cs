@@ -91,7 +91,7 @@ namespace VYRMobile.Views
         {
             //while(isWaiting == true)
             //{
-                await Task.Delay(10);
+                await Task.Delay(1000);
                 Application.Current.MainPage = new NavigationPage(new TabMenuPage());
             //}
         }

@@ -22,7 +22,7 @@ namespace VYRMobile.Data
         string Image;
         public ReportsStore()
         {
-            _client = new ApiHelper();
+            //_client = new ApiHelper();
         }
 
         private static ReportsStore _instance;
@@ -260,9 +260,13 @@ namespace VYRMobile.Data
 
             return response.IsSuccessStatusCode;
         }
-        public async Task<bool> ValidateWorkerAsync(string id, string userCode, string photoLink)
+        public async Task<bool> ValidateWorkerAsync()
         {
-            if (App.IsUserLoggedIn && IsConnected)
+            await Task.Delay(500);
+
+            DependencyService.Get<IToast>().LongToast("Trabajador validado");
+            return true;
+            /*if (App.IsUserLoggedIn && IsConnected)
             {
                 var request = new ValidateRequest()
                 {
@@ -288,11 +292,14 @@ namespace VYRMobile.Data
                     return false;
                 }
             }
-            return false;
+            return false;*/
         }
-        public async Task<bool> SetWorkerScheduleAsync(ApplicationUser worker, string schedule)
+        public async Task<bool> SetWorkerScheduleAsync()
         {
-            if (App.IsUserLoggedIn && IsConnected)
+            await Task.Delay(1000);
+
+            return true;
+            /*if (App.IsUserLoggedIn && IsConnected)
             {
                 var request = new SustituteRequest()
                 {
@@ -311,11 +318,14 @@ namespace VYRMobile.Data
                     return false;
                 }
             }
-            return false;
+            return false;*/
         }
-        public async Task<bool> ExchangeWorkerAsync(string workerId, bool exchange)
+        public async Task<bool> ExchangeWorkerAsync()
         {
-            if (App.IsUserLoggedIn && IsConnected)
+            await Task.Delay(1000);
+
+            return true;
+            /*if (App.IsUserLoggedIn && IsConnected)
             {
                 var request = new ExchangeRequest()
                 {
@@ -334,7 +344,7 @@ namespace VYRMobile.Data
                     return false;
                 }
             }
-            return false;
+            return false;*/
         }
     }
 }

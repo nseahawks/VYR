@@ -20,20 +20,74 @@ namespace VYRMobile.Services
 
         public IdentityService()
         {
-            _client = new ApiHelper();
+            //_client = new ApiHelper();
         }
         //bool IsConnected => Connectivity.NetworkAccess == NetworkAccess.Internet;
         public async Task<bool> LoginAsync(ApplicationUser user)
         {
-            if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password) || !App.isUserConnected)
-                return false;
+            /*if (string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password) || !App.isUserConnected)
+                return false;*/
 
             var request = new ApplicationUser()
             {
-                Email = user.Email,
-                Password = user.Password
+                Email = user.Email.ToLower()
             };
 
+            App.ApplicationUserId = "example";
+
+            if(request.Email == "supervisor")
+            {
+                App.ApplicationUserRole = "Supervisor";
+            }
+            else if(request.Email == "master")
+            {
+                App.ApplicationUserRole = "Master";
+            }
+            else if(request.Email == "patrol")
+            {
+                App.ApplicationUserRole = "Patrol";
+            }
+            else if(request.Email == "vigilant")
+            {
+                App.ApplicationUserRole = "Vigilant";
+            }
+            else if(request.Email == "vigilantqr")
+            {
+                App.ApplicationUserRole = "Qr";
+            }
+            else if(request.Email == "vigilantrounds")
+            {
+                App.ApplicationUserRole = "User";
+            }
+            else
+            {
+                return false;
+            }
+
+            ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
+            if (mergedDictionaries != null)
+            {
+                mergedDictionaries.Clear();
+
+                switch (App.ApplicationUserRole)
+                {
+                    default:
+                        mergedDictionaries.Add(new WorkerTheme());
+                        mergedDictionaries.Add(new Colors());
+                        mergedDictionaries.Add(new Fonts());
+                        break;
+                    case "Supervisor":
+                        mergedDictionaries.Add(new SupervisorTheme());
+                        mergedDictionaries.Add(new Colors());
+                        mergedDictionaries.Add(new Fonts());
+                        break;
+                }
+            }
+
+            await Task.Delay(2500);
+
+            return true;
+            /*
             string serializedData = JsonConvert.SerializeObject(request);
             var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
 
@@ -63,7 +117,7 @@ namespace VYRMobile.Services
             {
                 await App.Current.MainPage.DisplayAlert("Error", "No es posible conectar con el servidor", "Aceptar");
                 return false;
-            }
+            }*/
         }
 
         public Task<bool> RefreshTokenAsync(string token, string refreshToken)
@@ -87,7 +141,7 @@ namespace VYRMobile.Services
             App.ApplicationUserId = await SecureStorage.GetAsync("id");
             App.ApplicationUserRole = await SecureStorage.GetAsync("role");
 
-            if (App.ApplicationUserRole != "User" && App.ApplicationUserRole != "Patrol" && App.ApplicationUserRole != "Vigilant" && App.ApplicationUserRole != "Supervisor" && App.ApplicationUserRole != "Master")
+            if (App.ApplicationUserRole != "Qr" &&  App.ApplicationUserRole != "User" && App.ApplicationUserRole != "Patrol" && App.ApplicationUserRole != "Vigilant" && App.ApplicationUserRole != "Supervisor" && App.ApplicationUserRole != "Master")
             {
                 await Application.Current.MainPage.DisplayAlert("Denegado", "La cuenta ingresada no tiene un rol válido para empezar a usar la aplicación", "OK");
                 return;

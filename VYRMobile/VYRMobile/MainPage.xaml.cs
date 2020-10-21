@@ -64,7 +64,7 @@ namespace VYRMobile
 
             await splashImage.ScaleTo(2.0, 1000, Easing.CubicOut);
 
-            await RecoverLoginState();
+            /*await RecoverLoginState();
             
             if (App.IsUserLoggedIn)
             {
@@ -92,7 +92,9 @@ namespace VYRMobile
             else
             {
                 Application.Current.MainPage = new NavigationPage(new LoginPage());
-            }
+            }*/
+
+            Application.Current.MainPage = new NavigationPage(new LoginPage());
         }
         private async Task RecoverLoginState()
         {

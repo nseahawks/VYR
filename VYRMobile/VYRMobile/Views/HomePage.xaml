@@ -169,6 +169,7 @@
                                                                     Text="{Binding LocationName}"
                                                                     Style="{StaticResource NameTextStyle}"
                                                                     HorizontalOptions="FillAndExpand"
+                                                                    LineBreakMode="TailTruncation"
                                                                     Margin="0,0,0,0"/>
                                                                 <CheckBox
                                                                     Grid.Column="1"

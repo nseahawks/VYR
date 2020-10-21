@@ -49,7 +49,7 @@ namespace VYRMobile.Views.Popups
                     var json = JsonConvert.SerializeObject(Records);
                     await SecureStorage.SetAsync("records", json);
 
-                    await _store.AddRecordAsync(record);
+                    //await _store.AddRecordAsync(record);
                 }
                 catch
                 {
@@ -87,7 +87,7 @@ namespace VYRMobile.Views.Popups
                     var json = JsonConvert.SerializeObject(Records);
                     await SecureStorage.SetAsync("records", json);
 
-                    await _store.AddRecordAsync(record);
+                    //await _store.AddRecordAsync(record);
                 }
                 catch
                 {

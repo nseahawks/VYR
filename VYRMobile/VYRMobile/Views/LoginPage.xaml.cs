@@ -64,10 +64,10 @@ namespace VYRMobile
                     RecordType = Record.RecordTypes.LogIn,
                     Owner = "Usuario",
                     Date = DateTime.Now,
-                    Icon = "outer.png"
+                    Icon = "login.png"
                 };
 
-                try
+                /*try
                 {
                     await _store.AddRecordAsync(record);
                     await CrossCloudFirestore.Current.Instance
@@ -84,7 +84,7 @@ namespace VYRMobile
                     Loginbtn.Text = "Iniciar sesión";
 
                     return;
-                }
+                }*/
 
                 App.Records.Add(record);
                 var Records = App.Records;

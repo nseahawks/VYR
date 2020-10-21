@@ -15,6 +15,8 @@ using VYRMobile.Views;
 using Newtonsoft.Json;
 using System.Windows.Input;
 using Rg.Plugins.Popup.Extensions;
+using System.Reflection;
+using System.Collections.Generic;
 
 namespace VYRMobile.ViewModels
 {
@@ -62,7 +64,6 @@ namespace VYRMobile.ViewModels
                         OnPropertyChanged("AccelerometerData");
                     }
                 }
-                
             }
         }
 
@@ -292,7 +293,25 @@ namespace VYRMobile.ViewModels
 
         private async void LoadAntennas()
         {
-            try
+            var assembly = typeof(MainPage).GetTypeInfo().Assembly;
+            var stream = assembly.GetManifestResourceStream($"VYRMobile.Antenas.locations.json");
+            string locationsData;
+            using (var reader = new System.IO.StreamReader(stream))
+            {
+                locationsData = reader.ReadToEnd();
+            }
+
+            var locations = JsonConvert.DeserializeObject<List<CompanyLocation>>(locationsData);
+
+            Antennas.Clear();
+
+
+            foreach (var location in locations)
+            {
+                Antennas.Add(location);
+            }
+
+            /*try
             {
                 var antennas = await ReportsStore.Instance.GetAntenasAsync();
 
@@ -305,7 +324,7 @@ namespace VYRMobile.ViewModels
             catch
             {
                 await App.Current.MainPage.DisplayAlert("Error", "Hubo un problema al procesar la información", "Aceptar");
-            }
+            }*/
         }
 
         public async Task LoadRoute()
@@ -335,7 +354,7 @@ namespace VYRMobile.ViewModels
                 var json = JsonConvert.SerializeObject(Records);
                 await SecureStorage.SetAsync("records", json);
 
-                await _store.AddRecordAsync(record);
+                //await _store.AddRecordAsync(record);
 
                 //Location tracking simulation
                 Device.StartTimer(TimeSpan.FromSeconds(1), () =>
@@ -422,7 +441,7 @@ namespace VYRMobile.ViewModels
 
             stopWatch.Stop();
 
-            await _store.AddRecordAsync(record);
+            //await _store.AddRecordAsync(record);
         }
 
         public async Task GetPlacesByName(string placeText)

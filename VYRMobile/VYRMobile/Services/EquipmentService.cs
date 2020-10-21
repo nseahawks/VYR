@@ -33,7 +33,10 @@ namespace VYRMobile.Services
         }
         public async Task<bool> SetEquipment(ObservableCollection<EquipmentItem> equipmentCollection, string _userId)
         {
-            try
+            await Task.Delay(1000);
+
+            return true;
+            /*try
             {
                 foreach (var equipmentItem in equipmentCollection)
                 {
@@ -52,7 +55,7 @@ namespace VYRMobile.Services
             {
                 await App.Current.MainPage.DisplayAlert("Error", "No se pudo conectar con el servidor", "Aceptar");
                 return false;
-            }
+            }*/
         }
     }
 }
