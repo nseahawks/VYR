@@ -117,7 +117,7 @@
             Command="{Binding StopRouteCommand}"
             Clicked="ClearPolylines"
             Text="STOP ROUTE"
-            IsVisible="False"
+            IsVisible="{Binding HasRouteRunning}"
             BackgroundColor="#AE220E"
             TextColor="White"
             HeightRequest="50"

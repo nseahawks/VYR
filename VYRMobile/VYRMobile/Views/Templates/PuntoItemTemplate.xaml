@@ -37,6 +37,7 @@
     </ContentView.Resources>
     <ContentView.Content>
         <Grid   
+            Grid.ColumnSpan="2"
             ColumnSpacing="0"
             RowSpacing="1">
             <Grid.ColumnDefinitions>

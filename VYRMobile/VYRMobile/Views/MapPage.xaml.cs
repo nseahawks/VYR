@@ -394,26 +394,14 @@ namespace VYRMobile.Views
 
         async Task GetActualLocation()
         {
-            while (!IsLocationEnabled)
-            {
                 try
                 {
-                    IsLocationEnabled = await _permissions.CheckLocationPermissionsStatus();
-
-                    if (IsLocationEnabled)
-                    {
                         await GetMyActualLocation();
-                    }
-                    else
-                    {
-                        await App.Current.MainPage.DisplayAlert("Fallido", "Activa el GPS para continuar", "Aceptar");
-                    }
                 }
                 catch
                 {
                     //Nothing
                 }
-            }
         }
 
         private async void Update(List<Position> list)

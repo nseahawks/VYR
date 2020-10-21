@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VYRMobile.Data;
+using VYRMobile.Helper;
 using VYRMobile.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -18,7 +19,9 @@ namespace VYRMobile.Views
     public partial class LoadingPage : ContentPage
     {
         bool isWaiting;
+        bool isLocationPermited;
         string _userId;
+        PermissionsHelper _permissions = new PermissionsHelper();
         public LoadingPage()
         {
             InitializeComponent();
@@ -91,8 +94,16 @@ namespace VYRMobile.Views
         {
             //while(isWaiting == true)
             //{
-                await Task.Delay(1000);
-                Application.Current.MainPage = new NavigationPage(new TabMenuPage());
+            isLocationPermited = await _permissions.CheckLocationPermissionsStatus();
+
+            while (!isLocationPermited)
+            {
+                await Task.Delay(500);
+                isLocationPermited = await _permissions.CheckLocationPermissionsStatus();
+            }
+            
+            await Task.Delay(1000);
+            Application.Current.MainPage = new NavigationPage(new TabMenuPage());
             //}
         }
         private async void StartGeofence() 

@@ -24,7 +24,7 @@ namespace VYRMobile
         internal static string ReviewedUserId;
         internal static string AlarmDocumentId;
         internal static ApplicationUser WorkerOnReview;
-        internal static FirestoreAlarm Alarm;
+        internal static FirestoreAlarm Alarm = new FirestoreAlarm();
         internal static JwtSecurityToken ApplicationUserToken;
         internal static List<CompanyLocation> UserLocations = new List<CompanyLocation>();
         internal static List<Stream> ImagesStreams = new List<Stream>();

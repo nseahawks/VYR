@@ -110,7 +110,6 @@
                 Grid.Row="0"
                 Text="{Binding Created}"
                 Style="{StaticResource TimeTextStyle}"/>
-            
         </Grid>
     </ContentView.Content>
 </ContentView>

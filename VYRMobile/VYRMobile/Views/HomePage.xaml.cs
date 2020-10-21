@@ -90,7 +90,6 @@ namespace VYRMobile
             };
 
             await Navigation.PushModalAsync(scannerPage);*/
-            await Navigation.PushPopupAsync(new LocationReportPopup());
         }
 
         private async void btnCall_Clicked(object sender, EventArgs e)

@@ -10,6 +10,7 @@ xmlns:popuplayout="clr-namespace:Syncfusion.XForms.PopupLayout;assembly=Syncfusi
              mc:Ignorable="d"
              x:Class="VYRMobile.HistoryPage"
              Title="Historial"
+             BackgroundColor="White"
              NavigationPage.HasBackButton="False">
     <!--<ContentPage.ToolbarItems>
         <ToolbarItem IconImageSource="outer.png"/>
