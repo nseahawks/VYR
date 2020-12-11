@@ -57,7 +57,7 @@
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
                 <button:SfRadioGroup
-                        Margin="15,15,0,0">
+                    Margin="15,15,0,0">
                     <button:SfRadioButton
                         HeightRequest="35"
                         WidthRequest="300"

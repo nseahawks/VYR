@@ -26,18 +26,11 @@ namespace VYRMobile.Views
         public Test()
         {
             InitializeComponent();
+            BindingContext = new TestViewModel();
         }
 
-        private void viewButton_Clicked(object sender, EventArgs e)
+        private void testing()
         {
-            ApplicationUser user = new ApplicationUser()
-            {
-                FullName = "Ashby Hernandez",
-                Id = "311f87d5-3aa9-4895-85d0-af3c8bd56f96"
-            };
-
-            App.Current.MainPage = new NavigationPage(new EditEquipmentPage(user));
-            //await Navigation.PushModalAsync(new EditEquipmentPopup(user));
         }
     }
 }
