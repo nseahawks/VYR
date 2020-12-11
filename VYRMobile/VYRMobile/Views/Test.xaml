@@ -48,10 +48,6 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <Frame
-                                    HorizontalOptions="FillAndExpand">
-                                    
-                                </Frame>
                                 <Grid
                                     Grid.RowSpan="2">
                                     <Grid.RowDefinitions>
