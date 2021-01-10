@@ -17,12 +17,23 @@ namespace VYRMobile.ViewModels
                 OnPropertyChanged();
             }
         }
+        private ObservableCollection<InspectionItem> inspectionItems2;
+        public ObservableCollection<InspectionItem> InspectionItems2
+        {
+            get { return inspectionItems2; }
+            set
+            {
+                inspectionItems2 = value;
+                OnPropertyChanged();
+            }
+        }
         private Models.Image _currentPost;
         private string imgTotal;
         
         public TestViewModel()
         {
             InspectionItems = new ObservableCollection<InspectionItem>();
+            InspectionItems2 = new ObservableCollection<InspectionItem>();
 
             LoadItems();
             //LoadPosts();
@@ -72,22 +83,52 @@ namespace VYRMobile.ViewModels
             InspectionItem one = new InspectionItem()
             {
                 Id = "0",
-                Name = "El arma de fuego funciona correctamente",
+                Name = "En buen estado",
                 IsDone = true
             };
             InspectionItem two = new InspectionItem()
             {
                 Id = "1",
-                Name = "Tiene cartuchos/capsulas",
+                Name = "Limpios",
                 IsDone = false
             };
             InspectionItem three = new InspectionItem()
             {
                 Id = "2",
-                Name = "Tiene capa",
+                Name = "Completo ( camisa, pantalon, gorra, botas)",
                 IsDone = true
             };
             InspectionItem four = new InspectionItem()
+            {
+                Id = "3",
+                Name = "Carnet de la empresa",
+                IsDone = false
+            };
+
+            InspectionItems.Add(one);
+            InspectionItems.Add(two);
+            InspectionItems.Add(three);
+            InspectionItems.Add(four);
+
+            InspectionItem onee = new InspectionItem()
+            {
+                Id = "0",
+                Name = "El arma de fuego funciona correctamente",
+                IsDone = true
+            };
+            InspectionItem twoo = new InspectionItem()
+            {
+                Id = "1",
+                Name = "Tiene cartuchos/capsulas",
+                IsDone = false
+            };
+            InspectionItem threee = new InspectionItem()
+            {
+                Id = "2",
+                Name = "Tiene capa",
+                IsDone = true
+            };
+            InspectionItem fourr = new InspectionItem()
             {
                 Id = "3",
                 Name = "Foco o linterna",
@@ -100,11 +141,11 @@ namespace VYRMobile.ViewModels
                 IsDone = false
             };
 
-            InspectionItems.Add(one);
-            InspectionItems.Add(two);
-            InspectionItems.Add(three);
-            InspectionItems.Add(four);
-            InspectionItems.Add(five);
+            InspectionItems2.Add(one);
+            InspectionItems2.Add(two);
+            InspectionItems2.Add(three);
+            InspectionItems2.Add(four);
+            InspectionItems2.Add(five);
         }
     }
 }

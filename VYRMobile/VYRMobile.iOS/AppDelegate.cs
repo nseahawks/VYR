@@ -10,6 +10,7 @@ using System.Linq;
 
 using Foundation;
 using UIKit;
+using Xamarin.Forms;
 
 namespace VYRMobile.iOS
 {
@@ -35,6 +36,7 @@ namespace VYRMobile.iOS
             SfTabViewRenderer.Init();
             SfPickerRenderer.Init();
             SfComboBoxRenderer.Init();
+            Forms.SetFlags("Shapes_Experimental");
             LoadApplication(new App());
 
             return base.FinishedLaunching(app, options);

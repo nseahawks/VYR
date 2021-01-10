@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+             xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             x:Class="VYRMobile.Views.Popups.CommentaryPopup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+    <Frame
+        BackgroundColor="White"
+        HeightRequest="200"
+        WidthRequest="275"
+        HasShadow="True"
+        CornerRadius="15"
+        IsClippedToBounds="True"
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        Padding="0">
+        <StackLayout
+            VerticalOptions="Center">
+            <Label
+                Text="Comentarios:"
+                TextColor="Black"
+                FontFamily="{StaticResource PoppinsMedium}"
+                FontSize="16"
+                HorizontalOptions="Center"/>
+            <Editor
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                HeightRequest="70"
+                WidthRequest="250"
+                BackgroundColor="Transparent"
+                Keyboard="Default"
+                Placeholder="Escriba aquí..."
+                PlaceholderColor="Gray"/>
+            <button:SfButton
+                        x:Name="btnNext"
+                BackgroundColor="{StaticResource BaseColor}"
+                FontFamily="{StaticResource PoppinsMedium}"
+                FontSize="14"
+                TextColor="White"
+                HeightRequest="40"
+                WidthRequest="110"
+                CornerRadius="5"
+                Clicked="btnNext_Clicked"
+                        Text="Hecho"
+                        VerticalOptions="End"
+                        HorizontalOptions="End"
+                        HasShadow="True"
+                Margin="10, 0, 15, 15"/>
+        </StackLayout>
+    </Frame>
+</pages:PopupPage>

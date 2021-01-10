@@ -44,7 +44,8 @@ namespace VYRMobile.Droid
             base.OnCreate(savedInstanceState);
             //Forms.SetFlags("FastRenderers_Experimental");
             Forms.SetFlags("CarouselView_Experimental");
-            Forms.SetFlags("CollectionView_Experimental");
+            Forms.SetFlags("CollectionView_Experimental"); 
+            Forms.SetFlags("Shapes_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             FirebaseApp.InitializeApp(Application.ApplicationContext);
 
@@ -65,9 +66,9 @@ namespace VYRMobile.Droid
             //global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
-            FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
-            FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
-            firestore.FirestoreSettings = settings;
+            /*FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
+            FirebaseFirestoreSettings.Builder settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
+            firestore.FirestoreSettings = settings;*/
             //this.activity = Instance;
 
             LoadApplication(new App());

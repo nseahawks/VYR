@@ -21,16 +21,25 @@ using VYRMobile.Views.Popups;
 
 namespace VYRMobile.Views
 {
-    public partial class Test : ContentPage
+    public partial class Test : TabbedPage
     {
         public Test()
         {
             InitializeComponent();
-            BindingContext = new TestViewModel();
+            //BindingContext = new TestViewModel();
         }
 
         private void testing()
         {
+        }
+
+        private void Button_Clicked(object sender, EventArgs e)
+        {
+            App.Current.MainPage = new NavigationPage(new Page1()) 
+            {
+                BarBackgroundColor = Color.FromHex("#005EB2"),
+                BarTextColor = Color.FromHex("#FFFFFF")
+            };
         }
     }
 }
