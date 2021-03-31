@@ -141,5 +141,10 @@ namespace VYRMobile
                 QR.Text = "Escanear puntos QR";
             }
         }
+
+        private void SfButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushPopupAsync(new NotificationPopup());
+        }
     }
 }

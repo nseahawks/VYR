@@ -1,5 +1,16 @@
 [
   {
+    "id": "10b01efd-66fa-4cd5-a9f3-87b501d5c076",
+    "locationName": "Negocios Seahawks",
+    "cellId": "N3566",
+    "address": null,
+    "latitude": 18.4610,
+    "longitude": -69.9488,
+    "userId": null,
+    "getRoutes": [],
+    "getAlarm": null
+  },
+  {
     "id": "93030dda-cef6-4091-acbf-0000ffa981d5",
     "locationName": "Paso bajito- Carretera Jarabacoa-Constanza",
     "cellId": "N3446",

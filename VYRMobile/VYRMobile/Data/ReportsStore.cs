@@ -56,8 +56,8 @@ namespace VYRMobile.Data
 
             if (ImagesStreams != null & ImagesNames != null)
             {
-                await _firebase.RunList(ImagesStreams, ImagesNames, App.ApplicationUserId, date);
-                report.Img = await _firebase.GetLink(ImagesNames, App.ApplicationUserId, date);
+                /*await _firebase.RunList(ImagesStreams, ImagesNames, App.ApplicationUserId, date);
+                report.Img = await _firebase.GetLink(ImagesNames, App.ApplicationUserId, date);*/
             }
 
             var responseReport = new Report()
@@ -73,7 +73,7 @@ namespace VYRMobile.Data
 
             string serializedData = JsonConvert.SerializeObject(responseReport);
             var contentData = new StringContent(serializedData, Encoding.UTF8, "application/json");
-            var response = await _client.PostAsync("/api/v1/reports", contentData);
+            var response = await _client.PostAsync("/reports", contentData);
             DependencyService.Get<IToast>().LongToast(response.StatusCode.ToString());
 
             App.ImagesStreams.Clear();
@@ -99,8 +99,8 @@ namespace VYRMobile.Data
             {
                 try
                 {
-                    await _firebase.Upload(imageStream, App.ApplicationUserId, imageName, date);
-                    Image = await _firebase.GetFile(imageName, App.ApplicationUserId, date);
+                    /*await _firebase.Upload(imageStream, App.ApplicationUserId, imageName, date);
+                    Image = await _firebase.GetFile(imageName, App.ApplicationUserId, date);*/
                 }
                 catch
                 {
@@ -225,8 +225,8 @@ namespace VYRMobile.Data
 
             if (ImagesStreams != null & ImagesNames != null)
             {
-                await _firebase.RunList(ImagesStreams, ImagesNames, App.ApplicationUserId, date);
-                evaluationReport.Files = await _firebase.GetLink(ImagesNames, App.ApplicationUserId, date);
+                /*await _firebase.RunList(ImagesStreams, ImagesNames, App.ApplicationUserId, date);
+                evaluationReport.Files = await _firebase.GetLink(ImagesNames, App.ApplicationUserId, date);*/
             }
 
             List<Fault> faults = new List<Fault>();

@@ -12,7 +12,6 @@ using VYRMobile.ViewModels;
 using VYRMobile.Helper;
 using Location = Xamarin.Essentials.Location;
 using VYRMobile.Data;
-using Plugin.CloudFirestore;
 using VYRMobile.Services;
 using Newtonsoft.Json;
 using VYRMobile.Models;
@@ -81,7 +80,7 @@ namespace VYRMobile.Views
             }
         }
 
-        public MapPage(string locationName, GeoPoint geoPoint)
+        public MapPage(string locationName)
         {
             InitializeComponent();
             string param = "";
@@ -92,8 +91,8 @@ namespace VYRMobile.Views
             startRoute.IsVisible = false;
             //animation.IsVisible = true;
             AlarmMode = true;
-            DestinationLocationlat = geoPoint.Latitude.ToString();
-            DestinationLocationlng = geoPoint.Longitude.ToString();
+            /*DestinationLocationlat = geoPoint.Latitude.ToString();
+            DestinationLocationlng = geoPoint.Longitude.ToString();*/
 
             CalculateCommand = new Command<List<Position>>(Calculate);
             CalculateCommand2 = new Command<List<Position>>(Calculate2);
@@ -106,8 +105,8 @@ namespace VYRMobile.Views
             {
                 Type = PinType.SavedPin,
                 Icon = BitmapDescriptorFactory.FromBundle("mapAntenna.png"),
-                Label = locationName,
-                Position = new Position(geoPoint.Latitude, geoPoint.Longitude)
+                Label = locationName
+                //Position = new Position(geoPoint.Latitude, geoPoint.Longitude)
             };
 
             map.Circles = new List<CustomCircle>
@@ -611,15 +610,15 @@ namespace VYRMobile.Views
                 {
                     var id = await SecureStorage.GetAsync("id");
 
-                    await CrossCloudFirestore.Current.Instance
+                    /*await CrossCloudFirestore.Current.Instance
                         .GetCollection("usersApp")
                         .GetDocument(id)
                         .GetCollection("Alarms")
                         .GetDocument(App.AlarmDocumentId)
-                        .DeleteDocumentAsync();
+                        .DeleteDocumentAsync();*/
 
                     GoogleMapsViewModel.Instance.StopCommand.Execute(null);
-                    App.Alarm = null;
+                    /*App.Alarm = null;*/
                     App.AlarmDocumentId = null;
                 }
                 StopRoute();
@@ -694,7 +693,7 @@ namespace VYRMobile.Views
             var location = await Geolocation.GetLastKnownLocationAsync();
             Position position = new Position(location.Latitude, location.Longitude);
 
-            if (App.Alarm.Location != null)
+            /*if (App.Alarm.Location != null)
             {
                 OriginLocationlat = position.Latitude.ToString();
                 OriginLocationlng = position.Longitude.ToString();
@@ -702,14 +701,14 @@ namespace VYRMobile.Views
                 DestinationLocationlng = App.Alarm.Location.Longitude.ToString();
             }
             else if (location != null)
-            {
+            {*/
                 OriginLocationlat = position.Latitude.ToString();
                 OriginLocationlng = position.Longitude.ToString();
-            }
+            /*}
             else
             {
                 throw new Exception("No se pudo obtener la ubicación");
-            }
+            }*/
         }
     }
 }

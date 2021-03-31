@@ -4,7 +4,6 @@ using System.Threading.Tasks;
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Plugin.CloudFirestore;
 using Xamarin.Essentials;
 
 namespace VYRMobile.Droid
@@ -126,13 +125,13 @@ namespace VYRMobile.Droid
                     //        deviceId = _appId;
                     //}
 
-                        await CrossCloudFirestore.Current
+                        /*await CrossCloudFirestore.Current
                         .Instance
                         .GetCollection("usersApp")
                         .GetDocument(id)
                         .GetCollection("Devices")
                         .GetDocument(deviceId)
-                        .GetCollection("Locations").AddDocumentAsync(location);
+                        .GetCollection("Locations").AddDocumentAsync(location);*/
 
                     //await CrossCloudFirestore.Current
                     //    .Instance.RunTransactionAsync((transaction) =>

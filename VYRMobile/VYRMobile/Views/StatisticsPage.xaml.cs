@@ -21,7 +21,7 @@ namespace VYRMobile.Views
 
         private void BtnCalificar_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushModalAsync(new NavigationPage(new EvaluationPage(User))
+            Navigation.PushModalAsync(new NavigationPage(new Page1(User))
             {
                 BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
                 BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],

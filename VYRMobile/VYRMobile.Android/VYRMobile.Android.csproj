@@ -16,7 +16,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v9.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v10.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -41,7 +41,7 @@
     <AndroidLinkSkip>
     </AndroidLinkSkip>
     <AndroidEnableMultiDex>false</AndroidEnableMultiDex>
-    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
+    <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidLinkTool>r8</AndroidLinkTool>
@@ -52,7 +52,7 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>portable</DebugType>
-    <Optimize>true</Optimize>
+    <Optimize>false</Optimize>
     <OutputPath>bin\Release</OutputPath>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
@@ -70,10 +70,12 @@
     <AndroidSigningStorePass>eyeSeed.4727</AndroidSigningStorePass>
     <AndroidLinkMode>None</AndroidLinkMode>
     <AndroidUseAapt2>true</AndroidUseAapt2>
-    <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
+    <AndroidCreatePackagePerAbi>false</AndroidCreatePackagePerAbi>
     <AndroidSupportedAbis>armeabi-v7a;x86;x86_64;arm64-v8a</AndroidSupportedAbis>
     <MandroidI18n />
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
+    <AndroidEnableMultiDex>true</AndroidEnableMultiDex>
+    <DefineConstants>DEBUG</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -85,6 +87,21 @@
     <Reference Include="System.Numerics.Vectors" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Amazon.Extensions.CognitoAuthentication">
+      <Version>2.0.3</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.CognitoIdentity">
+      <Version>3.5.2.6</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.CognitoIdentityProvider">
+      <Version>3.5.1.23</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.Core">
+      <Version>3.5.2.5</Version>
+    </PackageReference>
+    <PackageReference Include="AWSSDK.S3">
+      <Version>3.5.7.12</Version>
+    </PackageReference>
     <PackageReference Include="CarouselView.FormsPlugin">
       <Version>5.2.0</Version>
     </PackageReference>
@@ -94,8 +111,14 @@
     <PackageReference Include="CoordinateSharp">
       <Version>2.7.1.1</Version>
     </PackageReference>
-    <PackageReference Include="FirebaseStorage.net">
-      <Version>1.0.3</Version>
+    <PackageReference Include="GraphQL">
+      <Version>3.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.Client">
+      <Version>3.2.2</Version>
+    </PackageReference>
+    <PackageReference Include="GraphQL.Client.Serializer.Newtonsoft">
+      <Version>3.2.2</Version>
     </PackageReference>
     <PackageReference Include="MagicGradients">
       <Version>1.0.0</Version>
@@ -118,11 +141,8 @@
     <PackageReference Include="PCLStorage">
       <Version>1.0.2</Version>
     </PackageReference>
-    <PackageReference Include="Plugin.CloudFirestore">
-      <Version>2.0.0</Version>
-    </PackageReference>
-    <PackageReference Include="Plugin.FirebaseStorage">
-      <Version>2.0.0</Version>
+    <PackageReference Include="Plugin.Badge">
+      <Version>2.3.1</Version>
     </PackageReference>
     <PackageReference Include="Plugin.PushNotification">
       <Version>3.3.3</Version>
@@ -143,6 +163,9 @@
       <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfAutoComplete">
+      <Version>18.2.0.59</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfBadgeView">
       <Version>18.2.0.59</Version>
     </PackageReference>
     <PackageReference Include="Syncfusion.Xamarin.SfChart">
@@ -193,11 +216,17 @@
     <PackageReference Include="Xam.Plugins.Settings">
       <Version>3.1.1</Version>
     </PackageReference>
+    <PackageReference Include="Xamarin.Android.Support.Core.Utils">
+      <Version>28.0.0.3</Version>
+    </PackageReference>
     <PackageReference Include="Xamarin.Android.Support.Media.Compat">
       <Version>28.0.0.3</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Browser">
       <Version>1.3.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.AndroidX.Legacy.Support.Core.Utils">
+      <Version>1.0.0.6</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4">
       <Version>1.0.0.6</Version>
@@ -214,26 +243,25 @@
     <PackageReference Include="Xamarin.FFImageLoading.Forms">
       <Version>2.4.11.982</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Firebase.Firestore">
-      <Version>122.0.1</Version>
+    <PackageReference Include="Xamarin.Firebase.Messaging">
+      <Version>121.0.1</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Forms" Version="4.8.0.1821" />
-    <PackageReference Include="Xamarin.Android.Support.Core.Utils" Version="28.0.0.3" />
+    <PackageReference Include="Xamarin.Forms" Version="5.0.0.1874" />
     <PackageReference Include="Xamarin.Essentials" Version="1.6.0" />
     <PackageReference Include="Xamarin.Forms.GoogleMaps">
       <Version>3.3.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.Maps">
-      <Version>4.8.0.1821</Version>
+      <Version>5.0.0.1874</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Forms.PancakeView">
       <Version>2.3.0.759</Version>
     </PackageReference>
-    <PackageReference Include="Xamarin.Google.Android.Material">
-      <Version>1.2.1.1</Version>
+    <PackageReference Include="Xamarin.Google.Dagger">
+      <Version>2.27.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.Google.Guava">
-      <Version>23.2.0</Version>
+      <Version>28.2.0</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.GooglePlayServices.Location">
       <Version>117.1.0</Version>
@@ -249,6 +277,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Renderers\BadgedTabbedPageRenderer.cs" />
+    <Compile Include="Renderers\BadgeView.cs" />
+    <Compile Include="Renderers\BadgeViewExtensions.cs" />
     <Compile Include="Services\AccelerometerService.cs" />
     <Compile Include="Services\AlertService.cs" />
     <Compile Include="CachingNativeBitmapDescriptorFactory.cs" />
@@ -260,6 +291,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\GeofenceBroadcastReceiver.cs" />
     <Compile Include="Services\GeofenceService.cs" />
+    <Compile Include="Services\MyFirebaseIIDService.cs" />
     <Compile Include="Services\NotificationsService.cs" />
     <Compile Include="ToastDroid.cs" />
     <Compile Include="TrackerService.cs" />
@@ -480,6 +512,7 @@
     <AndroidResource Include="Resources\drawable\user.png" />
     <AndroidResource Include="Resources\drawable\commentary.png" />
     <AndroidResource Include="Resources\drawable\next.png" />
+    <AndroidResource Include="Resources\drawable\notification_colored.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

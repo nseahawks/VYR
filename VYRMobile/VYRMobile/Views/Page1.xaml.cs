@@ -1,10 +1,10 @@
 ﻿using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
+using VYRMobile.ViewModels;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using VYRMobile.ViewModels;
 using VYRMobile.Views.Popups;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -14,10 +14,11 @@ namespace VYRMobile.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Page1 : ContentPage
     {
-        public Page1()
+        public Page1(string userName)
         {
             InitializeComponent();
             BindingContext = new TestViewModel();
+            nameLbl.Text = userName;
         }
 
         protected override void OnAppearing()
@@ -40,7 +41,6 @@ namespace VYRMobile.Views
         }
         private void AnimateLayoutToLeft(StackLayout stackLayout)
         {
-
             uint duration = 500;
 
             var animation = new Animation();

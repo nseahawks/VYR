@@ -5,6 +5,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
              xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+             xmlns:badge ="clr-namespace:Syncfusion.XForms.BadgeView;assembly=Syncfusion.SfBadgeView.XForms"
              mc:Ignorable="d"
              x:Class="VYRMobile.HomePage"
              NavigationPage.HasNavigationBar="False"
@@ -86,54 +87,75 @@
     </ContentPage.Resources>
     
     <ContentPage.Content>
-        <Grid 
+        <Grid>
+            <Grid 
             Grid.RowSpan="2"
             RowSpacing="2">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="120"/>
-                <RowDefinition Height="300"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <!--LOGO EN LA PANTALLA HOME-->
-            <Frame 
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="120"/>
+                    <RowDefinition Height="300"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--LOGO EN LA PANTALLA HOME-->
+                <Frame 
                 Style="{StaticResource FrameStyle}"
                 Grid.Row="0">
-                <StackLayout
-                    VerticalOptions="Center">
-                    <Image
+                    <Grid
+                    VerticalOptions="Center"
+                    HorizontalOptions="FillAndExpand">
+                        <Image
                         Source="vyrx.png"
                         IsVisible="True"
                         HeightRequest="95"
                         Aspect="AspectFit"
                         VerticalOptions="Center"/>
-                </StackLayout>
-            </Frame>
-            <!--LISTA DE LOCACIONES ASIGNADAS-->
-            <Frame 
+                        <badge:SfBadgeView 
+                        HorizontalOptions="End" 
+                        VerticalOptions="Center" 
+                        BadgeText="2">
+                            <badge:SfBadgeView.Content>
+                                <button:SfButton
+                                HeightRequest="60"
+                                WidthRequest="60"
+                                BackgroundImage="notification_colored.png"
+                                HasShadow="True"
+                                Clicked="SfButton_Clicked"
+                                CornerRadius="6"/>
+                            </badge:SfBadgeView.Content>
+                            <badge:SfBadgeView.BadgeSettings>
+                                <badge:BadgeSetting 
+                                BadgeType="None" 
+                                BackgroundColor="Orange" />
+                            </badge:SfBadgeView.BadgeSettings>
+                        </badge:SfBadgeView>
+                    </Grid>
+                </Frame>
+                <!--LISTA DE LOCACIONES ASIGNADAS-->
+                <Frame 
                 HeightRequest="350"
                 Grid.Row="1">
-                <Grid Grid.RowSpan="2"
+                    <Grid Grid.RowSpan="2"
                       HorizontalOptions="FillAndExpand">
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="255"/>
-                    </Grid.RowDefinitions>
-                    <StackLayout>
-                        <tabview:SfTabView 
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="255"/>
+                        </Grid.RowDefinitions>
+                        <StackLayout>
+                            <tabview:SfTabView 
                             x:Name="tabView" 
                             VerticalOptions="FillAndExpand"
                             HorizontalOptions="FillAndExpand"
                             VisibleHeaderCount="1" 
                             Grid.Row="0">
-                            <tabview:SfTabView.Items>
-                                <tabview:SfTabItem 
+                                <tabview:SfTabView.Items>
+                                    <tabview:SfTabItem 
                                     Title="{Binding RoundsDisplay, StringFormat='Ronda: {0}'}"
                                     TitleFontFamily="{StaticResource PoppinsBold}"
                                     SelectionColor="{StaticResource BaseColor}"
                                     TitleFontSize="{StaticResource FontSize16}">
-                                    <tabview:SfTabItem.Content>
-                                        <Grid
+                                        <tabview:SfTabItem.Content>
+                                            <Grid
                                             HorizontalOptions="FillAndExpand">
-                                            <ListView
+                                                <ListView
                                                 x:Name="antenasView"
                                                 ItemsSource="{Binding Antenas}"
                                                 IsVisible="{Binding IsList}"
@@ -141,25 +163,25 @@
                                                 SelectionMode="None"
                                                 HasUnevenRows="True" 
                                                 SeparatorVisibility="None">
-                                                <ListView.ItemTemplate>
-                                                    <DataTemplate>
-                                                        <ViewCell>
-                                                            <Grid   
+                                                    <ListView.ItemTemplate>
+                                                        <DataTemplate>
+                                                            <ViewCell>
+                                                                <Grid   
                                                                 ColumnSpacing="0"
                                                                 RowSpacing="1">
-                                                                <Grid.ColumnDefinitions>
-                                                                    <ColumnDefinition Width="35" />
-                                                                    <ColumnDefinition Width="*" />
-                                                                </Grid.ColumnDefinitions>
-                                                                <Grid.RowDefinitions>
-                                                                    <RowDefinition Height="35" />
-                                                                </Grid.RowDefinitions>
-                                                                <Image
+                                                                    <Grid.ColumnDefinitions>
+                                                                        <ColumnDefinition Width="35" />
+                                                                        <ColumnDefinition Width="*" />
+                                                                    </Grid.ColumnDefinitions>
+                                                                    <Grid.RowDefinitions>
+                                                                        <RowDefinition Height="35" />
+                                                                    </Grid.RowDefinitions>
+                                                                    <Image
                                                                     Source="antenna.png"
                                                                     Grid.Column="0"
                                                                     Style="{StaticResource PhotoStyle}"
                                                                     Margin="5,0,0,0"/>
-                                                                <Label
+                                                                    <Label
                                                                     Grid.Column="1"
                                                                     TextColor="{StaticResource BlackColor}"
                                                                     Text="{Binding LocationName}"
@@ -167,18 +189,18 @@
                                                                     HorizontalOptions="FillAndExpand"
                                                                     LineBreakMode="TailTruncation"
                                                                     Margin="0,0,0,0"/>
-                                                                <CheckBox
+                                                                    <CheckBox
                                                                     Grid.Column="1"
                                                                     IsEnabled="False"
                                                                     IsChecked="{Binding PointChecked}"
                                                                     HeightRequest="25"
                                                                     Style="{StaticResource CheckBoxStyle}"/>
-                                                            </Grid>
-                                                        </ViewCell>
-                                                    </DataTemplate>
-                                                </ListView.ItemTemplate>
-                                            </ListView>
-                                            <Label
+                                                                </Grid>
+                                                            </ViewCell>
+                                                        </DataTemplate>
+                                                    </ListView.ItemTemplate>
+                                                </ListView>
+                                                <Label
                                                 x:Name="isEmptyLabel"
                                                 IsVisible="{Binding IsEmpty}"
                                                 IsEnabled="{Binding IsEmpty}"
@@ -188,42 +210,42 @@
                                                 FontSize="14"
                                                 HorizontalOptions="Center"
                                                 VerticalOptions="Center"/>
-                                            <StackLayout
+                                                <StackLayout
                                                 VerticalOptions="Center"
                                                 HorizontalOptions="Center"
                                                 Orientation="Horizontal"
                                                 IsVisible="{Binding IsDoneMessage}"
                                                 IsEnabled="{Binding IsDoneMessage}">
-                                                <Image
+                                                    <Image
                                                     Source="clock.png"
                                                     HeightRequest="15"
                                                     WidthRequest="15"
                                                     VerticalOptions="Center"/>
-                                                <Label
+                                                    <Label
                                                     x:Name="isDoneMessageLabel"
                                                     Text="Rondas del dia terminadas"
                                                     TextColor="Black"
                                                     FontAttributes="Bold"
                                                     FontSize="18"
                                                     VerticalOptions="Center"/>
-                                            </StackLayout>
-                                        </Grid>
-                                    </tabview:SfTabItem.Content>
-                                </tabview:SfTabItem>
-                            </tabview:SfTabView.Items>
-                        </tabview:SfTabView>
-                    </StackLayout>
-                </Grid>
-            </Frame>
-            <Grid   
+                                                </StackLayout>
+                                            </Grid>
+                                        </tabview:SfTabItem.Content>
+                                    </tabview:SfTabItem>
+                                </tabview:SfTabView.Items>
+                            </tabview:SfTabView>
+                        </StackLayout>
+                    </Grid>
+                </Frame>
+                <Grid   
                 Grid.Row="2"
                 Grid.RowSpan="1"
                 Grid.ColumnSpan="1">
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"/>
-                </Grid.RowDefinitions>
-                <!--BOTON PARA ESCANEAR QR-->
-                <button:SfButton
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <!--BOTON PARA ESCANEAR QR-->
+                    <button:SfButton
                     x:Name="sosButton"
                     BackgroundColor="#DD0808"
                     Clicked="sosButton_Clicked"
@@ -236,7 +258,7 @@
                     VerticalOptions="Start"
                     HorizontalOptions="Start"
                     Margin="8, 15, 0, 0"/>
-                <button:SfButton 
+                    <button:SfButton 
                     x:Name="QR"
                     FontFamily="{StaticResource PoppinsMedium}"
                     Text="Reportar puntos"
@@ -250,8 +272,8 @@
                     HeightRequest="60"
                     HasShadow="True"
                     Margin="0,15,0,0"/>
-                <!--BOTON DE LA LLAMADA-->
-                <button:SfButton
+                    <!--BOTON DE LA LLAMADA-->
+                    <button:SfButton
                     x:Name="btnCall"
                     Style="{DynamicResource CallIcon}"
                     HasShadow="True"
@@ -261,13 +283,14 @@
                     VerticalOptions="Start"
                     HorizontalOptions="End"
                     Margin="0,15,8,0"/>
-                <!--BOTON FANTASMA PARA CHEQUEAR LA ANTENA EN XAML.CS ATRAVES DEL COMANDO-->
-                <Button
+                    <!--BOTON FANTASMA PARA CHEQUEAR LA ANTENA EN XAML.CS ATRAVES DEL COMANDO-->
+                    <Button
                     x:Name="locationChecking"
                     Command="{Binding CheckAntenna}"
                     IsVisible="False"
                     IsEnabled="False"
                     Opacity="0"/>
+                </Grid>
             </Grid>
         </Grid>
     </ContentPage.Content>

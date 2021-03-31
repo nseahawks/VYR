@@ -1,9 +1,8 @@
-﻿using Plugin.CloudFirestore;
-using Plugin.CloudFirestore.Attributes;
+﻿
 
 namespace VYRMobile.Models
 {
-    public class FirestoreAlarm
+    /*public class FirestoreAlarm
     {
         [MapTo("LocationName")]
         public string LocationName { get; set; }
@@ -13,5 +12,5 @@ namespace VYRMobile.Models
 
         [MapTo("Location")]
         public GeoPoint Location { get; set; }
-    }
+    }*/
 }

@@ -1,5 +1,4 @@
 ﻿using Newtonsoft.Json;
-using Plugin.CloudFirestore;
 using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Threading.Tasks;

@@ -17,10 +17,10 @@ namespace VYRMobile.Helper
         {
             //string fing = Build.Fingerprint;
             //BaseAddress = new Uri("http://10.0.0.13:5000");
-            BaseAddress = new Uri("https://vyr-x-270115.appspot.com");
+            BaseAddress = new Uri("https://bs63mnhyr7.execute-api.us-east-2.amazonaws.com");
             //BaseAddress = new Uri("https://10.0.2.2:5001");
             DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
-            DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
+            //DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", Token);
         }
     }
 }

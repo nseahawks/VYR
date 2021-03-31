@@ -8,11 +8,10 @@ using Android.Content;
 using FFImageLoading.Forms.Platform;
 using Xamarin.Forms;
 using CarouselView.FormsPlugin.Android;
-using Firebase;
-using Firebase.Firestore;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Firebase.Iid;
 
 namespace VYRMobile.Droid
 {
@@ -47,7 +46,7 @@ namespace VYRMobile.Droid
             Forms.SetFlags("CollectionView_Experimental"); 
             Forms.SetFlags("Shapes_Experimental");
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-            FirebaseApp.InitializeApp(Application.ApplicationContext);
+            //FirebaseApp.InitializeApp(Application.ApplicationContext);
 
             var platformConfig = new PlatformConfig
             {
@@ -66,6 +65,7 @@ namespace VYRMobile.Droid
             //global::Xamarin.FormsMaps.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this, savedInstanceState);
 
+            var token = FirebaseInstanceId.Instance.Token;
             /*FirebaseFirestore firestore = FirebaseFirestore.GetInstance(FirebaseApp.Instance);
             FirebaseFirestoreSettings.Builder settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
             firestore.FirestoreSettings = settings;*/

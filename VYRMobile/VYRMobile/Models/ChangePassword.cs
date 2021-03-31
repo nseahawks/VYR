@@ -5,7 +5,7 @@ using System.Text;
 
 namespace VYRMobile.Models
 {
-    class ChangePassword : ObservableObject
+    public class ChangePassword : ObservableObject
     {
         string oldPassword;
         public string OldPassword

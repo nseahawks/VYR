@@ -5,9 +5,6 @@ using VYRMobile.Models;
 using VYRMobile.Views;
 using Xamarin.Essentials;
 using Xamarin.Forms;
-
-
-using Plugin.CloudFirestore;
 using Newtonsoft.Json;
 using VYRMobile.Data;
 using Rg.Plugins.Popup.Extensions;
@@ -59,7 +56,6 @@ namespace VYRMobile
             {
                 var record = new Record()
                 {
-                    UserId = await SecureStorage.GetAsync("id"),
                     Type = "Inicio de sesión",
                     RecordType = Record.RecordTypes.LogIn,
                     Owner = "Usuario",

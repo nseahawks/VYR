@@ -585,8 +585,8 @@ namespace VYRMobile.ViewModels
                     {
                         _originLatitud = position.Latitude.ToString();
                         _originLongitud = position.Longitude.ToString();
-                        _destinationLatitud = App.Alarm.Location.Latitude.ToString();
-                        _destinationLongitud = App.Alarm.Location.Longitude.ToString();
+                        /*_destinationLatitud = App.Alarm.Location.Latitude.ToString();
+                        _destinationLongitud = App.Alarm.Location.Longitude.ToString();*/
                     }
                 }
                 catch (Exception ex)
@@ -615,7 +615,7 @@ namespace VYRMobile.ViewModels
             TimeSpan timeSpan = new TimeSpan();
             timeSpan = TimeSpan.FromSeconds(60);
 
-            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new MapPage(App.Alarm.LocationName, App.Alarm.Location)));
+            await App.Current.MainPage.Navigation.PushModalAsync(new NavigationPage(new MapPage("" /*App.Alarm.LocationName, App.Alarm.Location*/)));
             //stopWatch.Start();
 
             //ChronoColorChange(timeSpan);

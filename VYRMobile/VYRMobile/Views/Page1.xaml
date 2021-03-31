@@ -46,8 +46,8 @@
                     WidthRequest="15"
                     HorizontalOptions="Center"/>
                     <Label
+                        x:Name ="nameLbl"
                         VerticalOptions="Center"
-                    Text="Ramón Báez"
                     TextColor="Black"
                     FontFamily="{StaticResource PoppinsMedium}"
                     FontSize="14"/>

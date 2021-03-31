@@ -2,8 +2,6 @@
 using Android.App;
 using Android.Content;
 using Android.OS;
-using Plugin.CloudFirestore;
-using Plugin.CloudFirestore.Extensions;
 using Rg.Plugins.Popup.Extensions;
 using VYRMobile.Models;
 using VYRMobile.Views.Popups;
@@ -23,11 +21,11 @@ namespace VYRMobile.Droid
             //{
             //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
             //});
-            var id = await SecureStorage.GetAsync("id");
+            /*var id = await SecureStorage.GetAsync("id");
             var document = CrossCloudFirestore.Current.Instance
                 .GetCollection("usersApp")
                 .GetDocument(id)
-                .GetCollection("Alarms");
+                .GetCollection("Alarms");*/
 
             //bool firstTime = true;
 
@@ -38,7 +36,7 @@ namespace VYRMobile.Droid
             //    //var message = $"{document.Data["Latitude"].ToString()}, {document.Data["Longitude"].ToString()}";
             //    CrossLocalNotifications.Current.Show("NUEVA ALARMA", "Seahawks");
             //});
-            document
+            /*document
                 .ObserveAdded()
                 .Subscribe(documentChange =>
                 {
@@ -60,9 +58,9 @@ namespace VYRMobile.Droid
                     alarmPopupService.ShowDialog(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type);*/
 
                     //DependencyService.Get<IAlarmPopup>().ShowDialog(alarmDocument.LocationName, alarmDocument.Location, alarmDocument.Type);
-                });
+                /*});
             
-            base.OnCreate();
+            base.OnCreate();*/
         }
         public override IBinder OnBind(Intent intent)
         {

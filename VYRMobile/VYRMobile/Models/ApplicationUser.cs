@@ -103,5 +103,11 @@ namespace VYRMobile.Models
             get => capacitated;
             set => SetProperty(ref capacitated, value);
         }
+        private string company;
+        public string Company
+        {
+            get => company;
+            set => SetProperty(ref company, value);
+        }
     }
 }

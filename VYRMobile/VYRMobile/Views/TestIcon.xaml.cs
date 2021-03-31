@@ -1,4 +1,6 @@
-﻿using VYRMobile.ViewModels;
+﻿using Rg.Plugins.Popup.Extensions;
+using VYRMobile.ViewModels;
+using VYRMobile.Views.Popups;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -18,11 +20,20 @@ namespace VYRMobile.Views
                 return _instance;
             }
         }
+        public TestIcon()
+        {
+            InitializeComponent();
+        }
         public TestIcon(string workerId)
         {
             InitializeComponent();
 
             BindingContext = new EquipmentViewModel(workerId);
+        }
+
+        private async void Button_Clicked(object sender, System.EventArgs e)
+        {
+            await Navigation.PushPopupAsync(new NewPasswordPopup());
         }
     }
 }

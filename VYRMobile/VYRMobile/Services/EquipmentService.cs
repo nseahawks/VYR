@@ -1,5 +1,4 @@
-﻿using Plugin.CloudFirestore;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
 using VYRMobile.Models;
@@ -21,15 +20,16 @@ namespace VYRMobile.Services
             }
         }
 
-        public async Task<IEnumerable<EquipmentItem>> GetEquipment(string _userId)
+        public async Task<List<EquipmentItem>> GetEquipment(string _userId)
         {
-                var items = await CrossCloudFirestore.Current.Instance
+                /*var items = await CrossCloudFirestore.Current.Instance
                                             .GetCollection("Items")
                                             .GetDocument(_userId)
                                             .GetCollection("Item")
-                                            .GetDocumentsAsync();
-                IEnumerable<EquipmentItem> itemslist = items.ToObjects<EquipmentItem>();
-                return itemslist;
+                                            .GetDocumentsAsync();*/
+                //IEnumerable<EquipmentItem> itemslist = items.ToObjects<EquipmentItem>();
+            List<EquipmentItem> items = new List<EquipmentItem>();
+                return items;
         }
         public async Task<bool> SetEquipment(ObservableCollection<EquipmentItem> equipmentCollection, string _userId)
         {

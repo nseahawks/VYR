@@ -132,7 +132,7 @@
             Orientation="Horizontal"
             IsVisible="False"
             IsEnabled="False">
-            <StackLayout
+            <!--<StackLayout
                 HorizontalOptions="FillAndExpand">
                 <magic:GradientView
                     x:Name="lateral1"
@@ -173,7 +173,7 @@
                         </magic:LinearGradient>
                     </magic:GradientView.GradientSource>
                 </magic:GradientView>
-            </StackLayout>
+            </StackLayout>-->
         </StackLayout>
         <!--PANEL CON EL TIEMPO ESTIMADO DE LA RUTA-->
         <Frame

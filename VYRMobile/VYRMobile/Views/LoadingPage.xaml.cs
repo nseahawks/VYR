@@ -1,12 +1,12 @@
 ﻿using Android.Content;
 using Android.Locations;
-using Plugin.CloudFirestore;
-using Plugin.CloudFirestore.Extensions;
+using GraphQL;
 using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using VYRMobile.Data;
 using VYRMobile.Helper;
+using VYRMobile.Models;
 using VYRMobile.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
@@ -22,12 +22,14 @@ namespace VYRMobile.Views
         bool isLocationPermited;
         string _userId;
         PermissionsHelper _permissions = new PermissionsHelper();
+        private GraphQLHelper qLHelper;
         public LoadingPage()
         {
             InitializeComponent();
 
             //StartGeofence();
             isWaiting = true;
+            qLHelper = new GraphQLHelper();
         }
         protected override void OnAppearing()
         {
@@ -57,7 +59,7 @@ namespace VYRMobile.Views
                 repository = "usersApp";
             }
 
-            var document = CrossCloudFirestore.Current.Instance
+            /*var document = CrossCloudFirestore.Current.Instance
             .GetCollection(repository)
             .GetDocument(_userId)
             .AsObservable()
@@ -88,7 +90,7 @@ namespace VYRMobile.Views
                 {
                     isWaiting = true;
                 }
-            });
+            });*/
         }
         private async void Charge()
         {
@@ -158,6 +160,30 @@ namespace VYRMobile.Views
                     }
                 }
             }
+        }
+        private void createLog()
+        {
+            var request = new GraphQLRequest()
+            {
+                Query = @"mutation MyMutation {
+                    createLog(input: { apiLog: $apiLogVar, company: $userCompanyVar, date: $dateVar, status: ACCESS_REQUEST, user: { firstname: $firstNameVar, id: $idVar, lastname: $lastNameVar}
+                    }) {
+                    apiLog
+                    }
+                }",
+                Variables = new
+                {
+                    apiLogVar = "",
+                    userCompanyVar = "",
+                    dateVar = "",
+                    firstNameVar = "",
+                    idVar = "",
+                    lastNameVar = ""
+                }
+            };
+
+            var response = qLHelper.graphQLClient.SendMutationAsync<LogGraphQL>(request);
+
         }
     }
 }

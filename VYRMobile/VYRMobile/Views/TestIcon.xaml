@@ -14,7 +14,10 @@
         <StackLayout
             VerticalOptions="Center"
             HorizontalOptions="Center">
-            <Label
+            <Button
+                Text="Start"
+                Clicked="Button_Clicked"/>
+            <!--<Label
                 Text="Confirmación de equipo"
                 TextColor="Black"
                 FontFamily="{StaticResource PoppinsMedium}"
@@ -92,7 +95,7 @@
                     Placeholder="Escriba aquí"
                     VerticalOptions="FillAndExpand"
                     HorizontalOptions="FillAndExpand"/>
-            </Frame>
+            </Frame>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

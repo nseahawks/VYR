@@ -13,5 +13,11 @@ namespace VYRMobile
         public const string ApplicationUserTokenId = "ApplicationUserTokenId";
         public const string ApplicationUserId = "ApplicationUserId";
         public const string ApplicationUserRole = "ApplicationUserRole";
+        public const string CognitoUserPoolId = "us-east-2_Gt7zBfS8O";
+        public const string CognitoClientId = "64cl6stca36paailte3ch83i46";
+        public const string CognitoClientSecretHash = "1h18nt5g69vak6ov07f7ctekhug1e1l98g5lseeb8l5k3uqr0ft0";
+        public const string AppSyncEndpoint = "https://7g2r6a42b5cvxpxtpe5ygsmsbi.appsync-api.us-east-2.amazonaws.com/graphql";
+        public const string AppSyncApiKey = "da2-2nixs33ip5auvlny764m6phvyq";
+        public const string AppSyncHost = "7g2r6a42b5cvxpxtpe5ygsmsbi.appsync-api.us-east-2.amazonaws.com";
     }
 }

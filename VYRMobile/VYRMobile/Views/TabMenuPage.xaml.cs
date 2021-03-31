@@ -1,4 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using Plugin.Badge.Abstractions;
+using System;
+using System.Collections.Generic;
+using VYRMobile.ViewModels;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Application = Xamarin.Forms.Application;
@@ -23,140 +26,160 @@ namespace VYRMobile.Views
         public TabMenuPage()
         {
             InitializeComponent();
+
+            BindingContext = new TabViewModel();
+
             On<Xamarin.Forms.PlatformConfiguration.Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
 
             ICollection<ResourceDictionary> mergedDictionaries = Application.Current.Resources.MergedDictionaries;
-
-            if(App.ApplicationUserRole == "Supervisor" || App.ApplicationUserRole == "Master")
+            try
             {
-                NavigationPage supervision = new NavigationPage(new SupervisionPage())
+                if (App.ApplicationUserRole == "Supervisor" || App.ApplicationUserRole == "Master")
                 {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "supervision.png",
-                    Title = "Supervision"
-                };
-                NavigationPage home = new NavigationPage(new HomePage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "home2.png",
-                    Title = "Home"
-                };
-                NavigationPage map = new NavigationPage(new MapPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "mapa2.png",
-                    Title = "Mapa"
-                };
-                NavigationPage report = new NavigationPage(new ReportsPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "reportes2.png",
-                    Title = "Reportes"
-                };
-                NavigationPage user = new NavigationPage(new UserPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "usuario2.png",
-                    Title = "Perfil"
-                };
+                    NavigationPage supervision = new NavigationPage(new SupervisionPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "supervision.png",
+                        Title = "Supervision"
+                    };
+                    NavigationPage home = new NavigationPage(new HomePage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "home2.png",
+                        Title = "Home"
+                    };
+                    NavigationPage map = new NavigationPage(new MapPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "mapa2.png",
+                        Title = "Mapa"
+                    };
+                    NavigationPage report = new NavigationPage(new ReportsPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "reportes2.png",
+                        Title = "Reportes"
+                    };
+                    NavigationPage user = new NavigationPage(new UserPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "usuario2.png",
+                        Title = "Perfil"
+                    };
 
-                Children.Add(supervision);
-                Children.Add(map);
-                Children.Add(home);
-                Children.Add(report);
-                Children.Add(user);
+                    home.SetBinding(TabBadge.BadgeTextProperty, new Binding("Count"));
+                    home.SetBinding(TabBadge.BadgeColorProperty, new Binding("Color"));
+
+                    Children.Add(supervision);
+                    Children.Add(map);
+                    Children.Add(home);
+                    Children.Add(report);
+                    Children.Add(user);
 
 
-                var pages = Children.GetEnumerator();
-                pages.MoveNext();
-                pages.MoveNext();
-                pages.MoveNext();
-                CurrentPage = pages.Current;
+                    var pages = Children.GetEnumerator();
+                    pages.MoveNext();
+                    pages.MoveNext();
+                    pages.MoveNext();
+                    CurrentPage = pages.Current;
+                }
+                else if (App.ApplicationUserRole == "Patrol")
+                {
+                    NavigationPage home = new NavigationPage(new HomePage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "home2.png",
+                        Title = "Home"
+                    };
+                    NavigationPage map = new NavigationPage(new MapPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "mapa2.png",
+                        Title = "Mapa"
+                    };
+                    NavigationPage report = new NavigationPage(new ReportsPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "reportes2.png",
+                        Title = "Reportes"
+                    };
+                    NavigationPage user = new NavigationPage(new UserPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "usuario2.png",
+                        Title = "Perfil"
+                    };
+
+                    home.SetBinding(TabBadge.BadgeTextProperty, new Binding("Count"));
+                    home.SetBinding(TabBadge.BadgeColorProperty, new Binding("Color"));
+
+                    Children.Add(map);
+                    Children.Add(home);
+                    Children.Add(report);
+                    Children.Add(user);
+
+
+                    var pages = Children.GetEnumerator();
+                    pages.MoveNext();
+                    pages.MoveNext();
+                    CurrentPage = pages.Current;
+                }
+                else if (App.ApplicationUserRole == "Vigilant" || App.ApplicationUserRole == "Qr" || App.ApplicationUserRole == "User")
+                {
+                    NavigationPage home = new NavigationPage(new HomePage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "home2.png",
+                        Title = "Home"
+                    };
+                    NavigationPage report = new NavigationPage(new ReportsPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "reportes2.png",
+                        Title = "Reportes"
+                    };
+                    NavigationPage user = new NavigationPage(new UserPage())
+                    {
+                        BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
+                        BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
+                        IconImageSource = "usuario2.png",
+                        Title = "Perfil"
+                    };
+
+                    home.SetBinding(TabBadge.BadgeTextProperty, new Binding("Count"));
+                    home.SetBinding(TabBadge.BadgeColorProperty, new Binding("Color"));
+
+                    Children.Add(report);
+                    Children.Add(home);
+                    Children.Add(user);
+
+                    var pages = Children.GetEnumerator();
+                    pages.MoveNext();
+                    pages.MoveNext();
+                    CurrentPage = pages.Current;
+                }
+                else
+                {
+                    DisplayAlert("Denegado", "Tu cuenta no tiene permitido ingresar a VYR-X App", "Aceptar");
+                }
             }
-            else if(App.ApplicationUserRole == "Patrol")
+            catch(Exception ex)
             {
-                NavigationPage home = new NavigationPage(new HomePage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "home2.png",
-                    Title = "Home"
-                };
-                NavigationPage map = new NavigationPage(new MapPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "mapa2.png",
-                    Title = "Mapa"
-                };
-                NavigationPage report = new NavigationPage(new ReportsPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "reportes2.png",
-                    Title = "Reportes"
-                };
-                NavigationPage user = new NavigationPage(new UserPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "usuario2.png",
-                    Title = "Perfil"
-                };
-
-                Children.Add(map);
-                Children.Add(home);
-                Children.Add(report);
-                Children.Add(user);
-
-
-                var pages = Children.GetEnumerator();
-                pages.MoveNext();
-                pages.MoveNext();
-                CurrentPage = pages.Current;
+                string text = ex.Message;
             }
-            else if(App.ApplicationUserRole == "Vigilant" || App.ApplicationUserRole == "Qr" || App.ApplicationUserRole == "User")
-            {
-                NavigationPage home = new NavigationPage(new HomePage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "home2.png",
-                    Title = "Home"
-                };
-                NavigationPage report = new NavigationPage(new ReportsPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "reportes2.png",
-                    Title = "Reportes"
-                };
-                NavigationPage user = new NavigationPage(new UserPage())
-                {
-                    BarBackgroundColor = (Color)Application.Current.Resources["PrimaryColor"],
-                    BarTextColor = (Color)Application.Current.Resources["SecondaryColor"],
-                    IconImageSource = "usuario2.png",
-                    Title = "Perfil"
-                };
 
-                Children.Add(report);
-                Children.Add(home);
-                Children.Add(user);
-
-                var pages = Children.GetEnumerator();
-                pages.MoveNext();
-                pages.MoveNext();
-                CurrentPage = pages.Current;
-            }
-            else
-            {
-                DisplayAlert("Denegado", "Tu cuenta no tiene permitido ingresar a VYR-X App", "Aceptar");
-            }
+            
 
             ShowMapCommand = new Command(ShowMap);
         }
