@@ -13,6 +13,7 @@ using Firebase.Firestore;
 using Microsoft.AppCenter;
 using Microsoft.AppCenter.Analytics;
 using Microsoft.AppCenter.Crashes;
+using Firebase.Iid;
 
 namespace VYRMobile.Droid
 {
@@ -69,6 +70,8 @@ namespace VYRMobile.Droid
             FirebaseFirestoreSettings settings = new FirebaseFirestoreSettings.Builder().SetTimestampsInSnapshotsEnabled(true).Build();
             firestore.FirestoreSettings = settings;
             //this.activity = Instance;
+
+            var refreshedToken = FirebaseInstanceId.Instance.Token;
 
             LoadApplication(new App());
         }

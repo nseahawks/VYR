@@ -57,7 +57,7 @@ namespace VYRMobile.Services
                 else
                 {
                     return response.IsSuccessStatusCode;
-                } 
+                }
             }
             catch (Exception)
             {

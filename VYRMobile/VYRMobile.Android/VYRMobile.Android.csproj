@@ -224,6 +224,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MyFirebaseMessagingService.cs" />
     <Compile Include="Services\AccelerometerService.cs" />
     <Compile Include="Services\AlertService.cs" />
     <Compile Include="CachingNativeBitmapDescriptorFactory.cs" />
@@ -447,4 +448,9 @@
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties TriggeredFromHotReload="False" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

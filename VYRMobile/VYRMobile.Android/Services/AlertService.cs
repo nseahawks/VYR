@@ -45,7 +45,7 @@ namespace VYRMobile.Droid
                     var documentC = documentChange.Document;
                     var alarmDocument = documentC.ToObject<FirestoreAlarm>();
                     
-                    Xamarin.Forms.Application.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument, documentC.Id.ToString()));
+                   // Xamarin.Forms.Application.Current.MainPage.Navigation.PushPopupAsync(new AlarmPopup(alarmDocument, documentC.Id.ToString()));
                     /*FirestoreAlarm alarmDocument = new FirestoreAlarm()
                     {
                         LocationName = "Seahawks",

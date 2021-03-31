@@ -18,32 +18,35 @@ namespace VYRMobile.Views.Popups
     public partial class AlarmPopup : Rg.Plugins.Popup.Pages.PopupPage
     {
         bool IsFading = true;
-        GeoPoint destination;
-        public AlarmPopup(FirestoreAlarm alarm, string alarmDocumentId)
+        string destinationName;
+        double destinationLatitude;
+        double destinationLongitude;
+        public AlarmPopup(string locationName, string type, double latitude, double longitude)
         {
             InitializeComponent();
 
             string param = "";
             BindingContext = new GoogleMapsViewModel(param);
 
-            typeLbl.Text = alarm.Type;
-            destination = alarm.Location;
-            App.Alarm = alarm;
+            typeLbl.Text = type;
+            destinationName = locationName;
+            destinationLatitude = latitude;
+            destinationLongitude = longitude;
 
-            AddPin(alarm);
+            AddPin(destinationName, destinationLatitude, destinationLongitude);
 
             AddMapStyle();
             shakeImage();
         }
-        private void AddPin(FirestoreAlarm alarm)
+        private void AddPin(string name, double latitude, double longitude)
         {
 
             Pin locationPin = new Pin
             {
                 Type = PinType.SavedPin,
-                Label = alarm.LocationName,
+                Label = name,
                 Icon = BitmapDescriptorFactory.FromBundle("mapAntenna.png"),
-                Position = new Position(alarm.Location.Latitude, alarm.Location.Longitude)
+                Position = new Position(latitude, longitude)
             };
 
             map.Pins.Add(locationPin);
@@ -56,7 +59,7 @@ namespace VYRMobile.Views.Popups
         protected override void OnAppearing()
         {
             base.OnAppearing();
-            MoveCamera(destination);
+            MoveCamera(destinationLatitude, destinationLongitude);
         }
         void AddMapStyle()
         {
@@ -80,9 +83,9 @@ namespace VYRMobile.Views.Popups
                 await gradient.FadeTo(0.8, 500, Easing.Linear);
             }
         }
-        private void MoveCamera(GeoPoint geoPoint)
+        private void MoveCamera(double latitude, double longitude)
         {
-            Position myPosition = new Position(geoPoint.Latitude, geoPoint.Longitude);
+            Position myPosition = new Position(latitude, longitude);
             map.MoveToRegion(MapSpan.FromCenterAndRadius(myPosition, Distance.FromMeters(500)));
         }
     }
